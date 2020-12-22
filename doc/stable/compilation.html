@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Compilation &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="01 - Parse and manipulate formats" href="tutorials/01_play_with_formats.html" />
+    <link rel="prev" title="Getting started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Compilation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#libraries-only-sdk">Libraries only (SDK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library-and-python-bindings">Library and Python bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cmake-options">CMake Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Compilation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/compilation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="compilation">
+<h1>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h1>
+<p>To be compiled <strong>LIEF</strong> needs at least the following requirements:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>C++11 compiler (GCC, Clang, MSVC..)</p></li>
+<li><p>CMake</p></li>
+<li><p>Python (for bindings)</p></li>
+</ul>
+</div></blockquote>
+<p>To build the documentation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Doxygen (= <code class="docutils literal notranslate"><span class="pre">1.8.10</span></code>)</p></li>
+<li><p>Sphinx (with <code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme</span></code> module)</p></li>
+<li><p>breathe (&gt;= <code class="docutils literal notranslate"><span class="pre">4.5.0</span></code>)</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="libraries-only-sdk">
+<h2>Libraries only (SDK)<a class="headerlink" href="#libraries-only-sdk" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/lief-project/LIEF.git
+<span class="gp">$</span> <span class="nb">cd</span> LIEF
+<span class="gp">$</span> mkdir build
+<span class="gp">$</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DLIEF_PYTHON_API<span class="o">=</span>off -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
+<span class="gp">$</span> cmake --build . --target LIB_LIEF --config Release
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On Windows one can choose the CRT to use by setting the <code class="docutils literal notranslate"><span class="pre">LIEF_USE_CRT_&lt;RELEASE;DEBUG;..&gt;</span></code> variable:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DLIEF_USE_CRT_RELEASE<span class="o">=</span>MT ..
+</pre></div>
+</div>
+<p>For Debug, you should set the CRT to <strong>MTd</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cmake -DCMAKE_BUILD_TYPE=Debug -DLIEF_USE_CRT_DEBUG=MTd ..
+$ cmake --build . --target LIB_LIEF --config Debug
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="library-and-python-bindings">
+<h2>Library and Python bindings<a class="headerlink" href="#library-and-python-bindings" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/lief-project/LIEF.git
+<span class="gp">$</span> <span class="nb">cd</span> LIEF
+<span class="gp">$</span> mkdir build
+<span class="gp">$</span> <span class="nb">cd</span> build
+<span class="gp">$</span> cmake -DLIEF_PYTHON_API<span class="o">=</span>on -DPYTHON_VERSION<span class="o">=</span><span class="m">3</span>.6 -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
+<span class="gp">$</span> cmake --build . --target LIB_LIEF --config Release
+<span class="gp">$</span> cmake --build . --target pyLIEF --config Release
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Depending on your Python version, CMake could not
+find the right Python library to link against.</p>
+<p>We suggest to explicitly define path to the Python library,
+Python include directory and Python executable.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cmake .. <span class="se">\</span>
+  -DPYTHON_VERSION<span class="o">=</span><span class="m">3</span>.5 <span class="se">\</span>
+  -DPYTHON_INCLUDE_DIR:PATH<span class="o">=</span>/usr/include/python3.5m <span class="se">\</span>
+  -DPYTHON_LIBRARY:FILEPATH<span class="o">=</span>/usr/lib/libpython3.so <span class="se">\</span>
+  -DPYTHON_BINARY:FILEPATH<span class="o">=</span>/usr/bin/python3.5
+</pre></div>
+</div>
+</div>
+<p>If you want to enable tests, add <code class="docutils literal notranslate"><span class="pre">-DLIEF_TESTS=on</span></code> during the CMake configuration step.</p>
+<p>The Doxygen documentation will be located at <code class="docutils literal notranslate"><span class="pre">build/doc/doxygen/html</span></code> and the sphinx documentation at <code class="docutils literal notranslate"><span class="pre">build/doc/sphinx-doc</span></code></p>
+</div>
+<div class="section" id="cmake-options">
+<h2>CMake Options<a class="headerlink" href="#cmake-options" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">__add_lief_options</span><span class="p">)</span>
+	<span class="k">return</span><span class="p">()</span>
+<span class="n">endif</span><span class="p">()</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">__add_lief_options</span> <span class="n">ON</span><span class="p">)</span>
+
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_TESTS</span>          <span class="s2">&quot;Enable tests&quot;</span>                               <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_DOC</span>            <span class="s2">&quot;Enable documentation&quot;</span>                       <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_PYTHON_API</span>     <span class="s2">&quot;Enable Python API&quot;</span>                          <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_INSTALL_PYTHON</span> <span class="s2">&quot;Install Python bindings&quot;</span>                    <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_C_API</span>          <span class="s2">&quot;C API&quot;</span>                                      <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_EXAMPLES</span>       <span class="s2">&quot;Build LIEF C++ examples&quot;</span>                    <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_FORCE32</span>        <span class="s2">&quot;Force build LIEF 32 bits version&quot;</span>           <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_COVERAGE</span>       <span class="s2">&quot;Perform code coverage&quot;</span>                      <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_USE_CCACHE</span>     <span class="s2">&quot;Use ccache to speed up compilation&quot;</span>         <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_EXTRA_WARNINGS</span> <span class="s2">&quot;Enable extra warning from the compiler&quot;</span>     <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_LOGGING</span>        <span class="s2">&quot;Enable logging&quot;</span>                             <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_ENABLE_JSON</span>    <span class="s2">&quot;Enable JSON-related APIs&quot;</span>                   <span class="n">ON</span><span class="p">)</span>
+
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_DISABLE_FROZEN</span> <span class="s2">&quot;Disable Frozen even if it is supported&quot;</span>     <span class="n">OFF</span><span class="p">)</span>
+
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_ELF</span>            <span class="s2">&quot;Build LIEF with ELF module&quot;</span>                 <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_PE</span>             <span class="s2">&quot;Build LIEF with PE  module&quot;</span>                 <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_MACHO</span>          <span class="s2">&quot;Build LIEF with MachO module&quot;</span>               <span class="n">ON</span><span class="p">)</span>
+
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_OAT</span>            <span class="s2">&quot;Build LIEF with OAT module&quot;</span>                 <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_DEX</span>            <span class="s2">&quot;Build LIEF with DEX module&quot;</span>                 <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_VDEX</span>           <span class="s2">&quot;Build LIEF with VDEX module&quot;</span>                <span class="n">ON</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_ART</span>            <span class="s2">&quot;Build LIEF with ART module&quot;</span>                 <span class="n">ON</span><span class="p">)</span>
+
+<span class="c1"># Sanitizer</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_ASAN</span> <span class="s2">&quot;Enable Address sanitizer&quot;</span>   <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_LSAN</span> <span class="s2">&quot;Enable Leak sanitizer&quot;</span>      <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_TSAN</span> <span class="s2">&quot;Enable Thread sanitizer&quot;</span>    <span class="n">OFF</span><span class="p">)</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_USAN</span> <span class="s2">&quot;Enable undefined sanitizer&quot;</span> <span class="n">OFF</span><span class="p">)</span>
+
+<span class="c1"># Fuzzer</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_FUZZING</span> <span class="s2">&quot;Fuzz LIEF&quot;</span> <span class="n">OFF</span><span class="p">)</span>
+
+<span class="c1"># Profiling</span>
+<span class="n">option</span><span class="p">(</span><span class="n">LIEF_PROFILING</span> <span class="s2">&quot;Enable performance profiling&quot;</span> <span class="n">OFF</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_ELF_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_PE_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_MACHO_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_OAT_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_DEX_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_VDEX_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_ART_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_JSON_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_LOGGING_SUPPORT</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">LIEF_FROZEN_ENABLED</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_ELF</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_ELF_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_PE</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_PE_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_MACHO</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_MACHO_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_OAT</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_OAT_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_DEX</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_DEX_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_VDEX</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_VDEX_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_ART</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_ART_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_ENABLE_JSON</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_JSON_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">LIEF_LOGGING</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_LOGGING_SUPPORT</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">NOT</span> <span class="n">LIEF_DISABLE_FROZEN</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">LIEF_FROZEN_ENABLED</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference external" href="https://github.com/lief-project/Dockerlief">Dockerlief</a> repo.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorials/01_play_with_formats.html" class="btn btn-neutral float-right" title="01 - Parse and manipulate formats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

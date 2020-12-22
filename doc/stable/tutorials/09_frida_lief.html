@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>09 - How to use frida on a non-rooted device &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10 - Android formats" href="10_android_formats.html" />
+    <link rel="prev" title="08 - Transforming an ELF executable into a library" href="08_elf_bin2lib.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">09 - How to use frida on a non-rooted device</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#frida-gadget">Frida Gadget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frida-lief">Frida &amp; LIEF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#telegram">Telegram</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#injection-with-lief">Injection with LIEF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-of-frida-gadget">Configuration of Frida Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run">Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>09 - How to use frida on a non-rooted device</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/09_frida_lief.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-use-frida-on-a-non-rooted-device">
+<h1>09 - How to use frida on a non-rooted device<a class="headerlink" href="#how-to-use-frida-on-a-non-rooted-device" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we will see how to use Frida gadget on a non-rooted device.</p>
+<p>Scripts and materials are available here: <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/09_Frida_LIEF">materials</a></p>
+<p>By Romain Thomas - <a class="reference external" href="https://twitter.com/rh0main">&#64;rh0main</a></p>
+<hr class="docutils" />
+<p>From the last few years, Frida became the tool of the trade to perform hooking. It supports various platforms and
+enables to write hooks quickly and dynamically.</p>
+<p>Most of the time there are no constraints to use Frida on a rooted device but in some scenario the application to analyze could
+check its environment.</p>
+<p>A technique based on modifying the Dalvik bytecode has been well described by <a class="reference external" href="https://twitter.com/ikoz">&#64;ikoz</a> in the post “<a class="reference external" href="https://koz.io/using-frida-on-android-without-root/">Using Frida on Android without root</a>”. In this tutorial we propose a new technique without modifying the Dalvik Bytecode (i.e. <code class="docutils literal notranslate"><span class="pre">classes.dex</span></code>).</p>
+<div class="section" id="frida-gadget">
+<h2>Frida Gadget<a class="headerlink" href="#frida-gadget" title="Permalink to this headline">¶</a></h2>
+<p>In the default mode, Frida needs in a first step to inject an <em>agent</em> in the targeted application so that it is in the memory space of the process.</p>
+<p>On Android and Linux such injection is done with <code class="docutils literal notranslate"><span class="pre">ptrace</span></code> by attaching or spawning a process and then injecting the agent.
+Once the agent is injected, it communicates with its server through a pipe.</p>
+<p>Some kind of injection require privileges. For example, we can’t use <code class="docutils literal notranslate"><span class="pre">ptrace</span></code> as a <em>normal</em> user. To address this constraint, Frida provides another
+mode of operation called “embedded”. In this mode the user is responsible to inject the <em>frida-gadget</em> library.</p>
+<p>Such injection could be done with:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Environment variables: <code class="docutils literal notranslate"><span class="pre">LD_PRELOAD</span></code>, <code class="docutils literal notranslate"><span class="pre">DYLD_INSERT_LIBRARIES</span></code> …</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">dlopen</span></code></p></li>
+<li><p>In an open-source target, use the linker to link with frida-gadget.</p></li>
+<li><p>…</p></li>
+</ul>
+</div></blockquote>
+<p>For more information about Frida gadget, here is the documentation: <a class="reference external" href="https://www.frida.re/docs/gadget/">frida-gadget</a></p>
+</div>
+<div class="section" id="frida-lief">
+<h2>Frida &amp; LIEF<a class="headerlink" href="#frida-lief" title="Permalink to this headline">¶</a></h2>
+<p>One less known injection technique but quite old is based on modifying the ELF format. It has been well explained by Mayhem in <a class="reference external" href="http://phrack.org/issues/61/8.html">Phrack</a> <a class="footnote-reference brackets" href="#id6" id="id2">1</a> and LIEF provides a user-friendly API <a class="footnote-reference brackets" href="#id7" id="id3">2</a> to do it.</p>
+<p>To summarize, executable formats include libraries that are linked with executable. We can have list of linked libraries with
+<code class="docutils literal notranslate"><span class="pre">ldd</span></code> or <code class="docutils literal notranslate"><span class="pre">readelf</span></code> (Unix) or with <a class="reference external" href="https://github.com/lief-project/LIEF/blob/master/examples/python/elf_reader.py">elf_reader.py</a> (Linux, Windows, OSX):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python ./elf_reader.py -d /bin/ls
+
+<span class="go">== Dynamic entries ==</span>
+
+<span class="go">|Tag    | Value | Info        |</span>
+<span class="go">|NEEDED | 0x1   | libcap.so.2 |</span>
+<span class="go">|NEEDED | 0x80  | libc.so.6   |</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">/bin/ls</span></code> has two dependencies:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">libcap.so.2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libc.so.6</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>In the loading phase of the executable, the loader iterates over these libraries and map them in the memory space of the process. Once mapped it calls its constructor <a class="footnote-reference brackets" href="#id8" id="id4">3</a>.</p>
+<p>The idea is to add <code class="docutils literal notranslate"><span class="pre">frida-agent.so</span></code> as a dependency of native libraries embedded in the APK.</p>
+<p>Adding such dependencies is as simple as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">libnative</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;libnative.so&quot;</span><span class="p">)</span>
+<span class="n">libnative</span><span class="o">.</span><span class="n">add_library</span><span class="p">(</span><span class="s2">&quot;libgadget.so&quot;</span><span class="p">)</span> <span class="c1"># Injection!</span>
+<span class="n">libnative</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;libnative.so&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="telegram">
+<h2>Telegram<a class="headerlink" href="#telegram" title="Permalink to this headline">¶</a></h2>
+<p>To explain the process, we will inject frida gadget in the Telegram application. It’s an interesting target because:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It contains only one native library so the library should be loaded early.</p></li>
+<li><p>It shows the reliability of LIEF to modify ELF files</p></li>
+<li><p>It’s a real app</p></li>
+</ul>
+</div></blockquote>
+<p>Regarding the environment, we will use the version <code class="docutils literal notranslate"><span class="pre">4.8.4-12207</span></code> of Telegram (February 18, 2018) on an Android 6.0.1 device with an AArch64 architecture (Samsung Galaxy S6)</p>
+<div class="section" id="injection-with-lief">
+<h3>Injection with LIEF<a class="headerlink" href="#injection-with-lief" title="Permalink to this headline">¶</a></h3>
+<p>As explained above, the injection is just a call to the <a class="reference internal" href="../api/python/elf.html#lief.ELF.Binary.add_library" title="lief.ELF.Binary.add_library"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.ELF.Binary.add_library()</span></code></a> on the <code class="docutils literal notranslate"><span class="pre">libtmessages.28.so</span></code> library.</p>
+<p>Prior to the injection <code class="docutils literal notranslate"><span class="pre">libtmessages.28.so</span></code> is linked against the following libraries</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ readelf -d ./libtmessages.28.so<span class="p">|</span>grep NEEDED
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libjnigraphics.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>liblog.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libz.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libOpenSLES.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libEGL.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libGLESv2.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libdl.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libstdc++.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libm.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libc.so<span class="o">]</span>
+</pre></div>
+</div>
+<p>After <code class="docutils literal notranslate"><span class="pre">telegram.add_library(&quot;libgadget.so&quot;)</span></code> we have the new dependency at the first position:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ readelf -d ./libtmessages.28.so<span class="p">|</span>grep NEEDED
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libgadget.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libjnigraphics.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>liblog.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libz.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libOpenSLES.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libEGL.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libGLESv2.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libdl.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libstdc++.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libm.so<span class="o">]</span>
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libc.so<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration-of-frida-gadget">
+<h3>Configuration of Frida Gadget<a class="headerlink" href="#configuration-of-frida-gadget" title="Permalink to this headline">¶</a></h3>
+<p>From the documentation, Frida gadget enables to use a configuration file to parametrize the interaction:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Listing</strong>: Interaction is the same as frida-server</p></li>
+<li><p><strong>Script</strong>: Direct interaction with a JS script whose path is specified in the configuration</p></li>
+<li><p><strong>ScriptDirectory</strong>: Same as <em>Script</em> but for multiple applications and multiple scripts</p></li>
+</ul>
+</div></blockquote>
+<p><em>Listing</em> interaction would require <code class="docutils literal notranslate"><span class="pre">android.permission.INTERNET</span></code> permission. We can add such permission by modifying the manifest. Instead, we will use the <em>Script</em> interaction which does not require permission.</p>
+<p>The Frida payload will be located in <code class="docutils literal notranslate"><span class="pre">/data/local/tmp/myscript.js</span></code> file. The gadget configuration associated with context is given below</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;interaction&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;script&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/data/local/tmp/myscript.js&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;on_change&quot;</span><span class="p">:</span> <span class="s2">&quot;reload&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Use of configuration file must follow two requirements:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>File must have the same name as the gadget library name (e.g. <code class="docutils literal notranslate"><span class="pre">libgadget.so</span></code> and <code class="docutils literal notranslate"><span class="pre">libgadget.conf</span></code>)</p></li>
+<li><p>The configuration file must be located in the <strong>same</strong> directory as the gadget library</p></li>
+</ol>
+</div></blockquote>
+<p>The second requirement means that after the installation on the device, the gadget library will look for the config file in the <code class="docutils literal notranslate"><span class="pre">/data/app/org.telegram.messenger-1/lib</span></code> directory.</p>
+<p>When installing an application, the Android package manager will copy files from the <code class="docutils literal notranslate"><span class="pre">lib/</span></code> directory of the APK only if <a class="footnote-reference brackets" href="#id9" id="id5">4</a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It starts with the prefix <code class="docutils literal notranslate"><span class="pre">lib</span></code></p></li>
+<li><p>It ends with the suffix <code class="docutils literal notranslate"><span class="pre">.so</span></code></p></li>
+<li><p>It’s <code class="docutils literal notranslate"><span class="pre">gdbserver</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>Frida is aware of these requirements as illustrated in listing below. Hence we can simply add the suffix <code class="docutils literal notranslate"><span class="pre">.so</span></code> to <code class="docutils literal notranslate"><span class="pre">libgadget.conf</span></code></p>
+<div class="highlight-vapi notranslate"><div class="highlight"><pre><span></span>#if ANDROID
+  if (!FileUtils.test (config_path, FileTest.EXISTS)) {
+    var ext_index = config_path.last_index_of_char (&#39;.&#39;);
+      if (ext_index != -1) {
+        config_path = config_path[0:ext_index] + &quot;.config.so&quot;;
+      } else {
+        config_path = config_path + &quot;.config.so&quot;;
+      }
+  }
+#endif
+</pre></div>
+</div>
+<p class="center"><a class="reference external" href="https://github.com/frida/frida-core/blob/289a08b237eeab1fb8ec3e2f41ed726de44b5d66/lib/gadget/gadget.vala#L500-L509">lib/gadget/gadget.vala</a></p>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">lib</span></code> directory of the new Telegram <code class="docutils literal notranslate"><span class="pre">.apk</span></code> has the following structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tree lib
+.
+└── arm64-v8a
+    ├── libgadget.config.so
+    ├── libgadget.so
+    └── libtmessages.28.so
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">libtmessages.28.so</span></code> linked with <code class="docutils literal notranslate"><span class="pre">libgadget.so</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ readelf -d ./arm64-v8a/libtmessages.28.so
+  0x0000000000000001 <span class="o">(</span>NEEDED<span class="o">)</span> Shared library: <span class="o">[</span>libgadget.so<span class="o">]</span>
+  ...
+</pre></div>
+</div>
+</div>
+<div class="section" id="run">
+<h3>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h3>
+<p>Once:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The injection done in <code class="docutils literal notranslate"><span class="pre">libtmessages.28.so</span></code></p></li>
+<li><p>The gadget library and its configuration placed in the <code class="docutils literal notranslate"><span class="pre">/lib/ABI</span></code> directory</p></li>
+<li><p>The application resigned</p></li>
+</ol>
+</div></blockquote>
+<p>We can install the repackaged APK <code class="docutils literal notranslate"><span class="pre">new.apk</span></code> and push <code class="docutils literal notranslate"><span class="pre">myscript.js</span></code> in <code class="docutils literal notranslate"><span class="pre">/data/local/tmp</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> adb shell install new.apk
+<span class="gp">$</span> adb push myscript.js /data/local/tmp
+<span class="gp">$</span> adb shell chmod <span class="m">777</span> /data/local/tmp/myscript.js
+</pre></div>
+</div>
+<p>The Frida script <code class="docutils literal notranslate"><span class="pre">myscript.js</span></code> used in this tutorial is just a call to the Android log function:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Waiting for Java..&quot;</span><span class="p">);</span>
+
+<span class="nx">Java</span><span class="p">.</span><span class="nx">perform</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">Log</span> <span class="o">=</span> <span class="nx">Java</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s2">&quot;android.util.Log&quot;</span><span class="p">);</span>
+  <span class="nx">Log</span><span class="p">.</span><span class="nx">v</span><span class="p">(</span><span class="s2">&quot;frida-lief&quot;</span><span class="p">,</span> <span class="s2">&quot;Have fun!&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p class="center">myscript.js</p>
+<p>Lastly, we can run the telegram application and observe the Android logs:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/telegram.png"><img alt="../_images/telegram.png" src="../_images/telegram.png" style="width: 360.0px; height: 640.0px;" /></a>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> adb logcat -s <span class="s2">&quot;frida-lief:V&quot;</span>
+<span class="go">--------- beginning of system</span>
+<span class="go">--------- beginning of main</span>
+<span class="go">03-24 17:23:51.908 10243 10243 V frida-lief: Have Fun!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>With this tutorial we demonstrated how format instrumentation and dynamic instrumentation can be combined.</p>
+<p>Here is a quick summary of advantages/disadvantages of this technique</p>
+<dl class="field-list simple">
+<dt class="field-odd">Advantages</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Doesn’t require rooted device</p></li>
+<li><p>Doesn’t depend of frida-server</p></li>
+<li><p>Can be used to bypass some anti-frida</p></li>
+<li><p>Doesn’t modify <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> and DEX file(s)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Disadvantages</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Require to add files in the APK</p></li>
+<li><p>Require that the application have at least one native library</p></li>
+<li><p>Hope that the library is loaded early in the application</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Note that LIEF <strong>does not</strong> modify the <a class="reference internal" href="../api/python/elf.html#lief.ELF.DYNAMIC_TAGS.DEBUG" title="lief.ELF.DYNAMIC_TAGS.DEBUG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DEBUG</span></code></a> entry …</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Modification of the ELF Dynamic section is not as easy as the API looks like.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>In the ELF format they are located in the <a class="reference internal" href="../api/python/elf.html#lief.ELF.DYNAMIC_TAGS.INIT_ARRAY" title="lief.ELF.DYNAMIC_TAGS.INIT_ARRAY"><code class="xref py py-attr docutils literal notranslate"><span class="pre">INIT_ARRAY</span></code></a> or <a class="reference internal" href="../api/python/elf.html#lief.ELF.DYNAMIC_TAGS.INIT" title="lief.ELF.DYNAMIC_TAGS.INIT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">INIT</span></code></a> entries</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>For those who are interested, checks are done in the <code class="docutils literal notranslate"><span class="pre">framework_base/core/jni/com_android_internal_content_NativeLibraryHelper.cpp</span></code> file.
+Actually these checks on the prefix and suffix are only done if the application is not <em>debuggable</em>.</p>
+</dd>
+</dl>
+<p class="rubric">API</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.Binary.add_library" title="lief.ELF.Binary.add_library"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.ELF.Binary.add_library()</span></code></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="10_android_formats.html" class="btn btn-neutral float-right" title="10 - Android formats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="08_elf_bin2lib.html" class="btn btn-neutral float-left" title="08 - Transforming an ELF executable into a library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

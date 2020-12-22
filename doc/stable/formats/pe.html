@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PE Format &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References" href="../references.html" />
+    <link rel="prev" title="ELF Format" href="elf.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Formats</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elf.html">ELF Format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PE Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rebuilding-import-table">Rebuilding Import Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Formats</a> &raquo;</li>
+        
+      <li>PE Format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/formats/pe.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pe-format">
+<h1>PE Format<a class="headerlink" href="#pe-format" title="Permalink to this headline">¶</a></h1>
+<p>In this part we won’t describe PE format totally but some parts that are tricky.</p>
+<div class="section" id="rebuilding-import-table">
+<h2>Rebuilding Import Table<a class="headerlink" href="#rebuilding-import-table" title="Permalink to this headline">¶</a></h2>
+<p>When a PE binary uses external library, it usually has an import table stored in the .idata section. This table has the following structure:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/iat4.png"><img alt="alternate text" class="align-center" src="../_images/iat4.png" style="width: 325.5px; height: 560.0px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The lookup table holds offset to imported function’s name. In the example, we import functions <cite>Sleep</cite> and <cite>GetTickCount</cite> from the <cite>kernel32.dll</cite>.</p>
+<p>The address table is identical (in most cases) to the lookup table but at runtime it will hold the imported function’s address. The first entry will hold the address of <cite>Sleep</cite> and the second one the address of <cite>GetTickCount</cite>.</p>
+<p>If the program need to call <cite>Sleep</cite> function the assembly code should look like this:</p>
+<div class="highlight-nasm notranslate"><div class="highlight"><pre><span></span><span class="nf">call</span> <span class="nv">address_table</span><span class="p">[</span><span class="nv">entry1</span><span class="p">]</span> <span class="c1">; call to sleep</span>
+</pre></div>
+</div>
+<p>When rebuilding binary in <code class="docutils literal notranslate"><span class="pre">LIEF</span></code> we don’t patch at any moment the assembly code which is a strong constraint for rebuilding import table. As we don’t know exact structure of import table in the original binary (address table could be before lookup table…).
+`
+The reconstructed import table is built in another section named <code class="docutils literal notranslate"><span class="pre">.idata</span></code>. To keep a consistent binary we patch the original binary in the following way:</p>
+<p>Each entry in the address table is replaced with the address of the entry in the trampoline section. (see figure 2)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/iat3.png"><img alt="alternate text" class="align-center" src="../_images/iat3.png" style="width: 371.20000000000005px; height: 734.0px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>So if we have a call to an imported function we will have the following sequence of instructions:</p>
+<div class="highlight-nasm notranslate"><div class="highlight"><pre><span></span><span class="nf">call</span> <span class="nv">address_table_original</span><span class="p">[</span><span class="nv">entry1</span><span class="p">]</span> <span class="c1">; call to trampoline[0]</span>
+<span class="nf">jmp</span> <span class="o">*</span><span class="nv">address_table</span><span class="p">[</span><span class="nv">entry1</span><span class="p">]</span>          <span class="c1">; jump to Sleep address</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../references.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="elf.html" class="btn btn-neutral float-left" title="ELF Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

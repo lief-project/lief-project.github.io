@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>12 - ELF Coredump &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python" href="../api/python/index.html" />
+    <link rel="prev" title="11 - Mach-O Modification" href="11_macho_modification.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12 - ELF Coredump</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coredump-analysis">Coredump Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coredump-manipulation">Coredump manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-word">Final word</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>12 - ELF Coredump</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/12_elf_coredump.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elf-coredump">
+<h1>12 - ELF Coredump<a class="headerlink" href="#elf-coredump" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial introduces the API to analyze and manipulate ELF coredump</p>
+<p>Files and scripts used in this tutorial are available on the <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/12_elf_coredump">tutorials repository</a></p>
+<hr class="docutils" />
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>ELF core files provide information about the CPU state and the memory state of a program when the coredump
+has been generated. The memory state embeds
+a <em>snapshot</em> of all segments mapped in the memory space of the program. The CPU state contains register values
+when the core dump has been generated.</p>
+<p>Coredump files use a subset of the ELF structures to register these information. <strong>Segments</strong> are used for
+the memory state of the process while ELF notes (<a class="reference internal" href="../api/python/elf.html#lief.ELF.Note" title="lief.ELF.Note"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.Note</span></code></a>) are used for process metadata (pid, signal, …)
+Especially, the CPU state is stored in a note with a special type.</p>
+<p>Here is an overview of coredump layout :</p>
+<div class="figure align-center">
+<img alt="../_images/elf_notes.png" src="../_images/elf_notes.png" />
+</div>
+<p>For more details about coredump internal structure, one can look at the following blog post: <a class="reference external" href="https://www.gabriel.urdhr.fr/2015/05/29/core-file/">Anatomy of an ELF core file</a></p>
+</div>
+<div class="section" id="coredump-analysis">
+<h2>Coredump Analysis<a class="headerlink" href="#coredump-analysis" title="Permalink to this headline">¶</a></h2>
+<p>As corefiles are effectively ELF, we can open these files using the <a class="reference internal" href="../api/python/abstract.html#lief.parse" title="lief.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.parse()</span></code></a> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">core</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;ELF64_AArch64_core_hello.core&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can iterate over the <a class="reference internal" href="../api/python/elf.html#lief.ELF.Segment" title="lief.ELF.Segment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Segment</span></code></a> objects to inspect the memory state of the program:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">segments</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">segments</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Number of segments {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">)))</span>
+
+<span class="k">for</span> <span class="n">segment</span> <span class="ow">in</span> <span class="n">segments</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">segment</span><span class="o">.</span><span class="n">virtual_address</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>To resolve the relationship between libraries and segments, we can look at the special note <a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreFile" title="lief.ELF.CoreFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreFile</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">note_file</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">core</span><span class="o">.</span><span class="n">notes</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">type_core</span> <span class="o">==</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">NOTE_TYPES_CORE</span><span class="o">.</span><span class="n">FILE</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">note_file</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="n">note_file</span> <span class="o">=</span> <span class="n">note_file</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to enum conflict between <a class="reference internal" href="../api/python/elf.html#lief.ELF.NOTE_TYPES" title="lief.ELF.NOTE_TYPES"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.NOTE_TYPES</span></code></a> and <a class="reference internal" href="../api/python/elf.html#lief.ELF.NOTE_TYPES_CORE" title="lief.ELF.NOTE_TYPES_CORE"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.NOTE_TYPES_CORE</span></code></a>,
+scripts must use <a class="reference internal" href="../api/python/elf.html#lief.ELF.Note.type_core" title="lief.ELF.Note.type_core"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Note.type_core</span></code></a> on ELF corefile instead of <a class="reference internal" href="../api/python/elf.html#lief.ELF.Note.type" title="lief.ELF.Note.type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Note.type</span></code></a></p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">note_file</span></code> variable is basically an object <a class="reference internal" href="../api/python/elf.html#lief.ELF.Note" title="lief.ELF.Note"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.Note</span></code></a> on which the attribute
+<a class="reference internal" href="../api/python/elf.html#lief.ELF.Note.details" title="lief.ELF.Note.details"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Note.details</span></code></a> can be access to have the underlying specialization of the note.
+In the case of a note type <a class="reference internal" href="../api/python/elf.html#lief.ELF.NOTE_TYPES_CORE.FILE" title="lief.ELF.NOTE_TYPES_CORE.FILE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.NOTE_TYPES_CORE.FILE</span></code></a>, the attribute <a class="reference internal" href="../api/python/elf.html#lief.ELF.Note.details" title="lief.ELF.Note.details"><code class="xref py py-attr docutils literal notranslate"><span class="pre">details</span></code></a> returns an
+instance of <a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreFile" title="lief.ELF.CoreFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreFile</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All note details inherit from the base class <a class="reference internal" href="../api/python/elf.html#lief.ELF.NoteDetails" title="lief.ELF.NoteDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.NoteDetails</span></code></a> (or <a class="reference internal" href="../api/cpp/elf.html#_CPPv4N4LIEF3ELF11NoteDetailsE" title="LIEF::ELF::NoteDetails"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">LIEF::ELF::NoteDetails</span></code></a>)</p>
+<p>Especially, in C++ we must downcast the reference returned by <a class="reference internal" href="../api/cpp/elf.html#_CPPv4NK4LIEF3ELF4Note7detailsEv" title="LIEF::ELF::Note::details"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">LIEF::ELF::Note::details()</span></code></a>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">note</span> <span class="o">=</span> <span class="p">...</span>
+<span class="c1">// Check Type</span>
+<span class="c1">// ...</span>
+<span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="n">note_file</span> <span class="o">=</span> <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">CoreFile</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">note</span><span class="p">.</span><span class="n">details</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<p>We can eventually use the attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.CoreFile.file</span></code> or directly iterate on
+the <a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreFile" title="lief.ELF.CoreFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreFile</span></code></a> object. Both give access to the <a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreFileEntry" title="lief.ELF.CoreFileEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreFileEntry</span></code></a>: objects</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">file_entry</span> <span class="ow">in</span> <span class="n">note_file</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">file_entry</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/data/local/tmp/hello-exe: [0x5580b86000, 0x5580b88000]@0
+/data/local/tmp/hello-exe: [0x5580b97000, 0x5580b98000]@0x1000
+/data/local/tmp/hello-exe: [0x5580b98000, 0x5580b99000]@0x2000
+/system/lib64/libcutils.so: [0x7fb7593000, 0x7fb7595000]@0xf000
+/system/lib64/libcutils.so: [0x7fb7595000, 0x7fb7596000]@0x11000
+/system/lib64/libnetd_client.so: [0x7fb75fb000, 0x7fb75fc000]@0x2000
+/system/lib64/libnetd_client.so: [0x7fb75fc000, 0x7fb75fd000]@0x3000
+/system/lib64/libdl.so: [0x7fb7a2e000, 0x7fb7a2f000]@0x1000
+/system/lib64/libdl.so: [0x7fb7a2f000, 0x7fb7a30000]@0x2000
+/data/local/tmp/liblibhello.so: [0x7fb7b22000, 0x7fb7b2a000]@0xcb000
+/data/local/tmp/liblibhello.so: [0x7fb7b2a000, 0x7fb7b2b000]@0xd3000
+/system/lib64/libc.so: [0x7fb7c0e000, 0x7fb7c14000]@0xc5000
+/system/lib64/libc.so: [0x7fb7c14000, 0x7fb7c16000]@0xcb000
+/system/lib64/liblog.so: [0x7fb7c6c000, 0x7fb7c6d000]@0x16000
+/system/lib64/liblog.so: [0x7fb7c6d000, 0x7fb7c6e000]@0x17000
+/system/lib64/libc++.so: [0x7fb7d6f000, 0x7fb7d77000]@0xe2000
+/system/lib64/libc++.so: [0x7fb7d77000, 0x7fb7d78000]@0xea000
+/system/lib64/libm.so: [0x7fb7db8000, 0x7fb7db9000]@0x36000
+/system/lib64/libm.so: [0x7fb7db9000, 0x7fb7dba000]@0x37000
+/system/bin/linker64: [0x7fb7e93000, 0x7fb7f87000]@0
+/system/bin/linker64: [0x7fb7f88000, 0x7fb7f8c000]@0xf4000
+/system/bin/linker64: [0x7fb7f8c000, 0x7fb7f8d000]@0xf8000
+</pre></div>
+</div>
+<p>From this output, we can see that the <a class="reference internal" href="../api/python/elf.html#lief.ELF.Segment" title="lief.ELF.Segment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Segment</span></code></a> of the main executable
+(<code class="docutils literal notranslate"><span class="pre">/data/local/tmp/hello-exe</span></code>), are mapped from address <code class="docutils literal notranslate"><span class="pre">0x5580b86000</span></code> to address <code class="docutils literal notranslate"><span class="pre">0x5580b99000</span></code>.</p>
+<p>One can also access to the registers state by using the note whose the <a class="reference internal" href="../api/python/elf.html#lief.ELF.Note.type_core" title="lief.ELF.Note.type_core"><code class="xref py py-attr docutils literal notranslate"><span class="pre">type_core</span></code></a>
+is <a class="reference internal" href="../api/python/elf.html#lief.ELF.CorePrStatus" title="lief.ELF.CorePrStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CorePrStatus</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">core</span><span class="o">.</span><span class="n">notes</span><span class="p">:</span>
+   <span class="k">if</span> <span class="n">note</span><span class="o">.</span><span class="n">type_core</span> <span class="o">==</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">NOTE_TYPES_CORE</span><span class="o">.</span><span class="n">PRSTATUS</span><span class="p">:</span>
+      <span class="n">details</span> <span class="o">=</span> <span class="n">note</span><span class="o">.</span><span class="n">details</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+
+      <span class="c1"># Print instruction pointer</span>
+      <span class="k">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">details</span><span class="p">[</span><span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">CorePrStatus</span><span class="o">.</span><span class="n">REGISTERS</span><span class="o">.</span><span class="n">AARCH64_PC</span><span class="p">]))</span>
+      <span class="c1"># or</span>
+      <span class="k">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">CorePrStatus</span><span class="o">.</span><span class="n">REGISTERS</span><span class="o">.</span><span class="n">AARCH64_PC</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0x5580b86f50
+0x5580b86f50
+</pre></div>
+</div>
+</div>
+<div class="section" id="coredump-manipulation">
+<h2>Coredump manipulation<a class="headerlink" href="#coredump-manipulation" title="Permalink to this headline">¶</a></h2>
+<p>LIEF enables, to a certain extent, to modify coredump. For instance,
+we can update the register values as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">note_prstatus</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">core</span><span class="o">.</span><span class="n">notes</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">type_core</span> <span class="o">==</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">NOTE_TYPES_CORE</span><span class="o">.</span><span class="n">PRSTATUS</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">note_prstatus</span><span class="o">.</span><span class="n">details</span><span class="p">[</span><span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">CorePrStatus</span><span class="o">.</span><span class="n">REGISTERS</span><span class="o">.</span><span class="n">AARCH64_PC</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xDEADC0DE</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;/tmp/new.core&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When opening <code class="docutils literal notranslate"><span class="pre">/tmp/new.core</span></code> in GDB, we can observe the modification:</p>
+<div class="figure align-center">
+<img alt="../_images/gdb.png" src="../_images/gdb.png" />
+</div>
+</div>
+<div class="section" id="final-word">
+<h2>Final word<a class="headerlink" href="#final-word" title="Permalink to this headline">¶</a></h2>
+<p>One advantage of the coredump over the raw binary
+is that <strong>relocations</strong> and <strong>dependencies</strong> are resolved inside the coredump.</p>
+<p>This API could be used in association with other tools. For instance, we could use <a class="reference external" href="https://triton.quarkslab.com/">Triton</a> API:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://triton.quarkslab.com/documentation/doxygen/classtriton_1_1arch_1_1aarch64_1_1AArch64Cpu.html#a98b6639d3e563099d41338bc01a3a852">AArch64Cpu::setConcreteRegisterValue()</a></p></li>
+<li><p><a class="reference external" href="https://triton.quarkslab.com/documentation/doxygen/classtriton_1_1arch_1_1aarch64_1_1AArch64Cpu.html#a595a86dd9d606ea2b0ca3d3a3438f452">AArch64Cpu::setConcreteMemoryAreaValue()</a></p></li>
+</ul>
+</div></blockquote>
+<p>to map the coredump in Triton and then use its engines: Taint analysis, symbolic execution.</p>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets">1</span></dt>
+<dd><p><a class="reference external" href="https://www.gabriel.urdhr.fr/2015/05/29/core-file/">https://www.gabriel.urdhr.fr/2015/05/29/core-file/</a></p>
+</dd>
+</dl>
+<p class="rubric">API</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../api/python/abstract.html#lief.parse" title="lief.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.parse()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.Note.details" title="lief.ELF.Note.details"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Note.details</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.CorePrPsInfo" title="lief.ELF.CorePrPsInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CorePrPsInfo</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.CorePrStatus" title="lief.ELF.CorePrStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CorePrStatus</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreFile" title="lief.ELF.CoreFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreFile</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreFileEntry" title="lief.ELF.CoreFileEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreFileEntry</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreSigInfo" title="lief.ELF.CoreSigInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreSigInfo</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.CoreAuxv" title="lief.ELF.CoreAuxv"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.CoreAuxv</span></code></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api/python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="11_macho_modification.html" class="btn btn-neutral float-left" title="11 - Mach-O Modification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

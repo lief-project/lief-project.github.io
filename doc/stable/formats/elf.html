@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ELF Format &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PE Format" href="pe.html" />
+    <link rel="prev" title="Formats" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Formats</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ELF Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#duality-sections-segments">Duality sections/segments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html">PE Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Formats</a> &raquo;</li>
+        
+      <li>ELF Format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/formats/elf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elf-format">
+<h1>ELF Format<a class="headerlink" href="#elf-format" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="duality-sections-segments">
+<h2>Duality sections/segments<a class="headerlink" href="#duality-sections-segments" title="Permalink to this headline">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">ELF</span></code> format we have two kinds of containers:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Sections</p></li>
+<li><p>Segments</p></li>
+</ul>
+</div></blockquote>
+<p>A first sight it’s a bit disturbing because it’s two representations of the same data. In fact these two representations are used differently.</p>
+<p><strong>Sections</strong> are usually used at <strong>link</strong> time by the linker (e.g. <code class="docutils literal notranslate"><span class="pre">/bin/ld</span></code>) whereas <strong>segments</strong> are usually used at <strong>load</strong> time by kernel and loader (e.g. <code class="docutils literal notranslate"><span class="pre">/lib/ld-linux.so</span></code>).</p>
+<p>Sections header table is not mandatory so you can execute an ELF binary without sections header table. Let’s take an example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> readelf -Sh /bin/ls
+<span class="go">ELF Header:</span>
+<span class="go">  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00</span>
+<span class="go">  Class:                             ELF64</span>
+<span class="go">  Data:                              2&#39;s complement, little endian</span>
+<span class="go">  Version:                           1 (current)</span>
+<span class="go">  OS/ABI:                            UNIX - System V</span>
+<span class="go">  ABI Version:                       0</span>
+<span class="go">  Type:                              EXEC (Executable file)</span>
+<span class="go">  Machine:                           Advanced Micro Devices X86-64</span>
+<span class="go">  Version:                           0x1</span>
+<span class="go">  Entry point address:               0x4022f0</span>
+<span class="go">  Start of program headers:          64 (bytes into file)</span>
+<span class="go">  Start of section headers:          37840 (bytes into file)</span>
+<span class="go">  Flags:                             0x0</span>
+<span class="go">  Size of this header:               64 (bytes)</span>
+<span class="go">  Size of program headers:           56 (bytes)</span>
+<span class="go">  Number of program headers:         9</span>
+<span class="go">  Size of section headers:           64 (bytes)</span>
+<span class="go">  Number of section headers:         28</span>
+<span class="go">  Section header string table index: 27</span>
+
+<span class="go">Section Headers:</span>
+<span class="go">  [Nr] Name              Type             Address           Offset</span>
+<span class="go">       Size              EntSize          Flags  Link  Info  Align</span>
+<span class="go">  [ 0]                   NULL             0000000000000000  00000000</span>
+<span class="go">       0000000000000000  0000000000000000           0     0     0</span>
+<span class="go">  [ 1] .interp           PROGBITS         0000000000400238  00000238</span>
+<span class="go">       000000000000001c  0000000000000000   A       0     0     1</span>
+<span class="go">  [ 2] .note.ABI-tag     NOTE             0000000000400254  00000254</span>
+<span class="go">       0000000000000020  0000000000000000   A       0     0     4</span>
+<span class="go">  [ 3] .note.gnu.build-i NOTE             0000000000400274  00000274</span>
+<span class="go">       0000000000000024  0000000000000000   A       0     0     4</span>
+<span class="go">  [ 4] .gnu.hash         GNU_HASH         0000000000400298  00000298</span>
+<span class="go">       0000000000000060  0000000000000000   A       5     0     8</span>
+<span class="go">  [ 5] .dynsym           DYNSYM           00000000004002f8  000002f8</span>
+<span class="go">       00000000000006d8  0000000000000018   A       6     1     8</span>
+<span class="go">  [ 6] .dynstr           STRTAB           00000000004009d0  000009d0</span>
+<span class="go">       00000000000002f1  0000000000000000   A       0     0     1</span>
+<span class="go">  [ 7] .gnu.version      VERSYM           0000000000400cc2  00000cc2</span>
+<span class="go">       0000000000000092  0000000000000002   A       5     0     2</span>
+<span class="go"> ...</span>
+
+<span class="go">  [27] .shstrtab         STRTAB           0000000000000000  000092d6</span>
+<span class="go">       00000000000000f8  0000000000000000           0     0     1</span>
+<span class="go">Key to Flags:</span>
+<span class="go">  W (write), A (alloc), X (execute), M (merge), S (strings), l (large)</span>
+<span class="go">  I (info), L (link order), G (group), T (TLS), E (exclude), x (unknown)</span>
+<span class="go">  O (extra OS processing required) o (OS specific), p (processor specific)</span>
+</pre></div>
+</div>
+<p>Now we remove sections header with <strong>LIEF</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lief</span> <span class="kn">import</span> <span class="n">ELF</span>
+<span class="n">binary</span>  <span class="o">=</span> <span class="n">ELF</span><span class="o">.</span><span class="n">Parse</span><span class="p">(</span><span class="s2">&quot;/bin/ls&quot;</span><span class="p">)</span> <span class="c1"># Build an ELF binary</span>
+<span class="n">header</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">header</span>
+<span class="n">header</span><span class="o">.</span><span class="n">section_header_offset</span>    <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">header</span> <span class="n">numberof_section_headers</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">binary</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;out.bin&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Now if we run <code class="docutils literal notranslate"><span class="pre">out.bin</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ./out.bin
+<span class="go">elf_reader.py   elf_remove_section_table.py  library_symbols_obfuscation  out.bin</span>
+<span class="go">elf_rebuilder.py  elf_symbol_obfuscation.py    nm.py                      pe_reader.py</span>
+</pre></div>
+</div>
+<p>We can check that sections header table has been removed:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> readelf -Sh ./out.bin
+<span class="go">ELF Header:</span>
+<span class="go">  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00</span>
+<span class="go">  Class:                             ELF64</span>
+<span class="go">  Data:                              2&#39;s complement, little endian</span>
+<span class="go">  Version:                           1 (current)</span>
+<span class="go">  OS/ABI:                            UNIX - System V</span>
+<span class="go">  ABI Version:                       0</span>
+<span class="go">  Type:                              EXEC (Executable file)</span>
+<span class="go">  Machine:                           Advanced Micro Devices X86-64</span>
+<span class="go">  Version:                           0x1</span>
+<span class="go">  Entry point address:               0x4022f0</span>
+<span class="go">  Start of program headers:          64 (bytes into file)</span>
+<span class="go">  Start of section headers:          0 (bytes into file)</span>
+<span class="go">  Flags:                             0x0</span>
+<span class="go">  Size of this header:               64 (bytes)</span>
+<span class="go">  Size of program headers:           56 (bytes)</span>
+<span class="go">  Number of program headers:         9</span>
+<span class="go">  Size of section headers:           64 (bytes)</span>
+<span class="go">  Number of section headers:         0</span>
+<span class="go">  Section header string table index: 27 &lt;corrupt: out of range&gt;</span>
+
+<span class="go">There are no sections in this file.</span>
+</pre></div>
+</div>
+<p>As content can be used and updated by both sections and segments we can’t store it in sections/segments. Instead we use an interface to manage content. The manager interface looks like this:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/data_handler.png"><img alt="alternate text" class="align-center" src="../_images/data_handler.png" style="width: 432.0px; height: 215.60000000000002px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The manager is implemented in the <code class="docutils literal notranslate"><span class="pre">ELF::DataHandler::Handler</span></code> classe.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pe.html" class="btn btn-neutral float-right" title="PE Format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Formats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

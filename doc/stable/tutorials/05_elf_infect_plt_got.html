@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>05 - Infecting the plt/got &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="06 - PE Hooking" href="06_pe_hooking.html" />
+    <link rel="prev" title="04 - ELF Hooking" href="04_elf_hooking.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">05 - Infecting the plt/got</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#injecting-the-hook">Injecting the hook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#patching-the-got">Patching the <code class="docutils literal notranslate"><span class="pre">got</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run">Run</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>05 - Infecting the plt/got</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/05_elf_infect_plt_got.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="infecting-the-plt-got">
+<h1>05 - Infecting the plt/got<a class="headerlink" href="#infecting-the-plt-got" title="Permalink to this headline">¶</a></h1>
+<p>The objective of this tutorial is to hook an imported function in an ELF binary.</p>
+<p>Scripts and materials are available here: <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/05_ELF_infect_plt-got">materials</a></p>
+<p>By Romain Thomas - <a class="reference external" href="https://twitter.com/rh0main">&#64;rh0main</a></p>
+<hr class="docutils" />
+<p>Hooking imported functions by infecting the <code class="docutils literal notranslate"><span class="pre">.got</span></code> section is a well-known technique <a class="footnote-reference brackets" href="#f1" id="id1">1</a> <a class="footnote-reference brackets" href="#f2" id="id2">2</a> and this tutorial will be focused
+on its implementation using LIEF.</p>
+<p>These figures illustrate the <code class="docutils literal notranslate"><span class="pre">plt/got</span></code> mechanism:</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/pltgot.png"><img alt="../_images/pltgot.png" src="../_images/pltgot.png" style="width: 389.20000000000005px; height: 320.0px;" /></a>
+<p class="caption"><span class="caption-text">With lazy binding, the first time that the function is called the <code class="docutils literal notranslate"><span class="pre">got</span></code> entry redirects to the plt instruction.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/pltgot3.png"><img alt="../_images/pltgot3.png" src="../_images/pltgot3.png" style="width: 380.8px; height: 320.0px;" /></a>
+<p class="caption"><span class="caption-text">The Second time, <code class="docutils literal notranslate"><span class="pre">got</span></code> entry holds the address in the shared library.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Basically the infection is done in two steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Firstly, we inject our hook</p></li>
+<li><p>Secondly, we redirect the targeted function to our hook by patching the <code class="docutils literal notranslate"><span class="pre">got</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>It can be summed up by the following figure:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/pltgot2.png"><img alt="../_images/pltgot2.png" src="../_images/pltgot2.png" style="width: 359.5px; height: 400.0px;" /></a>
+</div>
+<p>As example, we will use a basic <em>crackme</em> which performs a <em class="manpage">memcmp(3)</em> on the flag and user’s input.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// Damn_YoU_Got_The_Flag</span>
+<span class="kt">char</span> <span class="n">password</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\x18\x3d\x31\x32\x03\x05\x33\x09\x03\x1b\x33\x28\x03\x08\x34\x39\x03\x1a\x30\x3d\x3b</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">check</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">input</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">check</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">password</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^=</span> <span class="mh">0x5c</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">memcmp</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">input</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: %s &lt;password&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="n">EXIT_FAILURE</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">check</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;You got it !!&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">puts</span><span class="p">(</span><span class="s">&quot;Wrong&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">EXIT_FAILURE</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The flag is <em>xored</em> with <code class="docutils literal notranslate"><span class="pre">0x5C</span></code>. To validate the <em>crackme</em>, the user has to enter <code class="docutils literal notranslate"><span class="pre">Damn_YoU_Got_The_Flag</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> crackme.bin foo
+<span class="go">Wrong</span>
+<span class="gp">$</span> crackme.bin Damn_YoU_Got_The_Flag
+<span class="go">You got it !!</span>
+</pre></div>
+</div>
+<p>The hook will consist in printing arguments of <code class="docutils literal notranslate"><span class="pre">memcmp</span></code> and returning <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;arch/x86_64/syscall.c&quot;</span><span class="cp"></span>
+<span class="cp">#define stdout 1</span>
+
+<span class="kt">int</span> <span class="nf">my_memcmp</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">rhs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="kt">char</span> <span class="n">msg</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Hook memcmp</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">_write</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+  <span class="n">_write</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">lhs</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+  <span class="n">_write</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="n">_write</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">rhs</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+  <span class="n">_write</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As the hook is going to be injected into the crackme, it must have the following requirements:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Assembly code must be <em>position independant</em> (compiled with <code class="docutils literal notranslate"><span class="pre">-fPIC</span></code> or <code class="docutils literal notranslate"><span class="pre">-pie/-fPIE</span></code> flags)</p></li>
+<li><p>Don’t use external libraries such as <code class="docutils literal notranslate"><span class="pre">libc.so</span></code> (<code class="docutils literal notranslate"><span class="pre">-nostdlib</span> <span class="pre">-nodefaultlibs</span></code> flags)</p></li>
+</ul>
+</div></blockquote>
+<p>Due to the requirements, the hook is compiled with: <code class="code docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">-nostdlib</span> <span class="pre">-nodefaultlibs</span> <span class="pre">-fPIC</span> <span class="pre">-Wl,-shared</span> <span class="pre">hook.c</span> <span class="pre">-o</span> <span class="pre">hook</span></code>.</p>
+<div class="section" id="injecting-the-hook">
+<h2>Injecting the hook<a class="headerlink" href="#injecting-the-hook" title="Permalink to this headline">¶</a></h2>
+<p>The first step is to inject the hook into the binary. To do so we will add a <a class="reference internal" href="../api/python/elf.html#lief.ELF.Segment" title="lief.ELF.Segment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Segment</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">crackme</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;crackme.bin&quot;</span><span class="p">)</span>
+<span class="n">hook</span>    <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;hook&quot;</span><span class="p">)</span>
+
+<span class="n">segment_added</span>  <span class="o">=</span> <span class="n">crackme</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hook</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>All assembly code of the hook stands in the first <a class="reference internal" href="../api/python/elf.html#lief.ELF.SEGMENT_TYPES.LOAD" title="lief.ELF.SEGMENT_TYPES.LOAD"><code class="xref py py-attr docutils literal notranslate"><span class="pre">LOAD</span></code></a> segment of <code class="docutils literal notranslate"><span class="pre">hook</span></code>.</p>
+<p>Once the hook added, its virtual address is <a class="reference internal" href="../api/python/elf.html#lief.ELF.Segment.virtual_address" title="lief.ELF.Segment.virtual_address"><code class="xref py py-attr docutils literal notranslate"><span class="pre">virtual_address</span></code></a> of <code class="docutils literal notranslate"><span class="pre">segment_added</span></code>  and we can processed to the <code class="docutils literal notranslate"><span class="pre">got</span></code> patching.</p>
+</div>
+<div class="section" id="patching-the-got">
+<h2>Patching the <code class="docutils literal notranslate"><span class="pre">got</span></code><a class="headerlink" href="#patching-the-got" title="Permalink to this headline">¶</a></h2>
+<p>LIEF provides a function to easily patch the <code class="docutils literal notranslate"><span class="pre">got</span></code> entry associated with a <a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol" title="lief.ELF.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Symbol</span></code></a>:</p>
+<dl class="method">
+<dt>
+<code class="sig-prename descclassname">Binary.</code><code class="sig-name descname">patch_pltgot</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>patch_pltgot(self: lief.ELF.Binary, symbol_name: str, address: int) -&gt; None</p></li>
+</ol>
+<p>Patch the imported symbol’s name with the <code class="docutils literal notranslate"><span class="pre">address</span></code></p>
+<ol class="arabic simple" start="2">
+<li><p>patch_pltgot(self: lief.ELF.Binary, symbol: LIEF::ELF::Symbol, address: int) -&gt; None</p></li>
+</ol>
+<p>Patch the imported <a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol" title="lief.ELF.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Symbol</span></code></a> with the <code class="docutils literal notranslate"><span class="pre">address</span></code></p>
+</dd></dl>
+
+<p>The offset of the <code class="docutils literal notranslate"><span class="pre">memcmp</span></code> function is stored in the <a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol.value" title="lief.ELF.Symbol.value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">value</span></code></a> attribute of the associated dynamic symbol. Thus its virtual address will be:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">my_memcpy</span></code>: <a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol.value" title="lief.ELF.Symbol.value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">value</span></code></a> + <code class="docutils literal notranslate"><span class="pre">segment_added.virtual_address</span></code></p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_memcmp</span>      <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">get_symbol</span><span class="p">(</span><span class="s2">&quot;my_memcmp&quot;</span><span class="p">)</span>
+<span class="n">my_memcmp_addr</span> <span class="o">=</span> <span class="n">segment_added</span><span class="o">.</span><span class="n">virtual_address</span> <span class="o">+</span> <span class="n">my_memcmp</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+<p>Finally we can patch the <code class="docutils literal notranslate"><span class="pre">memcmp</span></code> from the crakme with this value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crackme</span><span class="o">.</span><span class="n">patch_pltgot</span><span class="p">(</span><span class="s1">&#39;memcmp&#39;</span><span class="p">,</span> <span class="n">my_memcmp_addr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And rebuild it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crackme</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;crackme.hooked&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run">
+<h2>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
+<p>As a check on the input size is performed before checking the flag value, we have to provide an input with the correct length (no matter its content):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> crackme.hooked XXXXXXXXXXXXXXXXXXXXX
+<span class="go">Hook add</span>
+<span class="go">Damn_YoU_Got_The_Flag</span>
+<span class="go">XXXXXXXXXXXXXXXXXXXXX</span>
+<span class="go">You got it !!</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="http://vxheaven.org/lib/vrn00.html">http://vxheaven.org/lib/vrn00.html</a></p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="http://phrack.org/issues/56/7.html">http://phrack.org/issues/56/7.html</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="06_pe_hooking.html" class="btn btn-neutral float-right" title="06 - PE Hooking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="04_elf_hooking.html" class="btn btn-neutral float-left" title="04 - ELF Hooking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1015 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Changelog &mdash; LIEF 0.10.0-845f675 documentation</title>
+
+
+
+
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+
+
+
+
+
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="References" href="references.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="index.html" class="icon icon-home"> LIEF
+
+
+
+
+            <img src="_static/logo_blue.png" class="logo" alt="Logo"/>
+
+          </a>
+
+
+
+
+              <div class="version">
+                0.10.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#not-released-yet">0.10.0 - November 24, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#june-11-2018">0.9.0 - June 11, 2018</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#misc">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.8.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.8.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#october-18-2017">0.8.1 - October 18, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#october-16-2017">0.8.0 - October 16, 2017</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-system">Build system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#july-3-2017">0.7.0 - July 3, 2017</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#april-6-2017">0.6.1 - April 6, 2017</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#march-30-2017">0.6.0 - March 30, 2017</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LIEF</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="index.html">Docs</a> &raquo;</li>
+
+      <li>Changelog</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="not-released-yet">
+<h2>0.10.0 - November 24, 2019<a class="headerlink" href="#not-released-yet" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list">
+<dt class="field-odd">ELF</dt>
+<dd class="field-odd"><ul>
+<li><p>Add build support for ELF notes</p></li>
+<li><p>Add coredump support (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/9fc3a8a43358f608cf18ddbe341e1d94b13cb9e0">9fc3a8a</a>)</p></li>
+<li><p>Enable to bind a relocation with a symbol (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/a9f3cb8f9b4a1f2cdaa95eee4568ff0b162f77cd">a9f3cb8</a>)</p>
+<dl class="field-list">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">relocation</span> <span class="o">=</span> <span class="s2">&quot;...&quot;</span>
+
+<span class="n">symbol</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">Symbol</span><span class="p">()</span>
+<span class="n">symbol</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;printf123&quot;</span>
+<span class="n">relocation</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Add constructors  (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/67d924a2206c36cb9979d8b1b194b03b2d592e71">67d924a</a>)</p></li>
+<li><p>Expose ELF destructors (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/957384cd361c4a485470f877658af2bf052dbe0a">957384c</a>)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">remove_static_symbol</span></code> (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/c6779702b1fec3c67b0c19a36576830fe18bd9d9">c677970</a>)</p></li>
+<li><p>Add support for static relocation writing (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/d1b98d69ade662e2471ce2905bf3fb247dfc3143">d1b98d6</a>)</p></li>
+<li><p>Expose function to get strings located in the <code class="docutils literal notranslate"><span class="pre">.rodata</span></code> section (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/02f4851c9f0c2bfa6fb4f51dab393a1db83b4851">02f4851</a>)</p></li>
+<li><p>Export ELF ABI version (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/8d7ec26a93800b0729c2c05be8c55c8318ba3b20">8d7ec26</a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">PE</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Improve PE Authenticode parsing (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/535623de3aa4f8ddc34536331b802e2cbdc44faf">535623d</a>)</p></li>
+<li><p>Fix alignment issue when removing a PE section (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/04dddd371080d731fab965b127cb15a91c57d53c">04dddd3</a>)</p></li>
+<li><p>Parse PE debug data directory as a list of debug entries (by <a class="reference external" href="https://github.com/1orenz0">1orenz0</a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/fcc75dd87982e52d77a1c7ee7e674741a199e41b">fcc75dd</a>)</p></li>
+<li><p>Add support to parse POGO debug entries (by <a class="reference external" href="https://github.com/1orenz0">1orenz0</a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/3537440b8d0da6c9c3d00c25f7da8a04f29154d2">3537440</a>)</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Mach-O</dt>
+<dd class="field-odd"><ul>
+<li><p>Enhance Mach-O modifications by exposing an API to:</p>
+<ul class="simple">
+<li><p>Add load commands</p></li>
+<li><p>Add sections</p></li>
+<li><p>Add segments</p></li>
+</ul>
+<p>See: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/406115c8d097da0b61f00b2bb7b2442322ffc5d1">406115c</a></p>
+</li>
+<li><p>Enable <code class="docutils literal notranslate"><span class="pre">write()</span></code> on FAT Mach-O (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/16595316fd588619ea39b942817d6527e0601fbd">1659531</a>)</p></li>
+<li><p>Introduce Mach-O Build Version command (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/6f967238fcd369210839605ab08c30d647a09a65">6f96723</a>)</p></li>
+<li><p>Enable to remove Mach-O symbols (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/616d739da513092e9ab7446654414b0929d5d5cf">616d739</a>)</p></li>
+<li><p>Add support for adding <code class="docutils literal notranslate"><span class="pre">LC_UNIXTHREAD</span></code> commands in a MachO (by <a class="reference external" href="https://github.com/nezetic">nezetic</a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/64d2597284149441fc734b251648ca917cd816e3">64d2597</a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Abstract Layer</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Expose <code class="docutils literal notranslate"><span class="pre">remove_section()</span></code> in the abstract layer (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/918438c6bee52c8421d809bc3b42974165e5fa0b">918438c</a>)</p></li>
+<li><p>Expose <code class="docutils literal notranslate"><span class="pre">write()</span></code> in the abstract layer (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/af4d48ed2e1f1b96687644f2fc4661fcbdb979a6">af4d48e</a>)</p></li>
+<li><p>Expose API to list functions found in a binary (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/b5a08463ad63811e9e9432812406aadd74ab8c09">b5a0846</a>)</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Android</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Add partial support for Android 9 (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/bce9ebe17064b1ca16b00dc14eebb5d5dd440184">bce9ebe</a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Misc</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/lkollar">lkollar</a> added support for Python 3.8 in CI (Linux &amp; OSX only)</p></li>
+<li><p>Update Pybind11 dependency to <code class="docutils literal notranslate"><span class="pre">v2.4.3</span></code></p></li>
+<li><p>Enhance Python install (see: <a class="reference internal" href="installation.html#v10-label"><span class="std std-ref">Since 0.10.0</span></a>)</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/lkollar">lkollar</a>, Linux CI now produces <strong>manylinux1-compliant wheels</strong></p></li>
+</ul>
+</dd>
+</dl>
+<p>Many thanks to the contributors: <a class="reference external" href="https://github.com/recvfrom">recvfrom</a>, <a class="reference external" href="https://github.com/pbrunet">pbrunet</a>,
+<a class="reference external" href="https://github.com/mackncheesiest">mackncheesiest</a>, <a class="reference external" href="https://github.com/wisk">wisk</a>, <a class="reference external" href="https://github.com/nezetic">nezetic</a>,
+<a class="reference external" href="https://github.com/lkollar">lkollar</a>, <a class="reference external" href="https://github.com/jbremer">jbremer</a>, <a class="reference external" href="https://github.com/DaLynX">DaLynX</a>, <a class="reference external" href="https://github.com/1orenz0">1orenz0</a>,
+<a class="reference external" href="https://github.com/breadchris">breadchris</a>, <a class="reference external" href="https://github.com/0xbf00">0xbf00</a>, <a class="reference external" href="https://github.com/unratito">unratito</a>, <a class="reference external" href="https://github.com/strazzere">strazzere</a>,
+<a class="reference external" href="https://github.com/aguinetqb">aguinetqb</a>, <a class="reference external" href="https://github.com/mingwandroid">mingwandroid</a>, <a class="reference external" href="https://github.com/serge-sans-paille-qb">serge-sans-paille-qb</a>, <a class="reference external" href="https://github.com/yrp604">yrp604</a>,
+<a class="reference external" href="https://github.com/majin42">majin42</a>, <a class="reference external" href="https://github.com/KOLANICH">KOLANICH</a></p>
+</div>
+<div class="section" id="june-11-2018">
+<h2>0.9.0 - June 11, 2018<a class="headerlink" href="#june-11-2018" title="Permalink to this headline">¶</a></h2>
+<p>LIEF 0.9 comes with new formats related to Android: OAT, DEX, VDEX and ART. It also fixes bugs and thanks to
+<a class="reference external" href="https://github.com/yd0b0N">yd0b0N</a>, ELF parser now supports big and little endian binaries. We also completed the JSON serialization of LIEF objects.</p>
+<div class="section" id="features">
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">MachO</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Enable to configure the Mach-O parser for quick parsing: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/880b99aeef825786dd65aed286d7c4d23b62f564">880b99a</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/macho.html#lief.MachO.EncryptionInfo" title="lief.MachO.EncryptionInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.EncryptionInfo</span></code></a> command: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/f4e2d81bfe84238d463bdb65297c296635e783b1">f4e2d81</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/macho.html#lief.MachO.RPathCommand" title="lief.MachO.RPathCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.RPathCommand</span></code></a> command: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/196994dc089885ff2f1268e51f5514f7fcbc5cff">196994d</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/macho.html#lief.MachO.DataInCode" title="lief.MachO.DataInCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.DataInCode</span></code></a> command: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/a16e1c4d13c7071fabe6a5a46b6d6c0fd9565b72">a16e1c4</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/macho.html#lief.MachO.SubFramework" title="lief.MachO.SubFramework"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.SubFramework</span></code></a> command: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9e3b5b45f78cc075f2192c245247af00b88b5e3c">9e3b5b4</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/macho.html#lief.MachO.SegmentSplitInfo" title="lief.MachO.SegmentSplitInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.SegmentSplitInfo</span></code></a> command: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9e3b5b45f78cc075f2192c245247af00b88b5e3c">9e3b5b4</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/macho.html#lief.MachO.DyldEnvironment" title="lief.MachO.DyldEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.DyldEnvironment</span></code></a> command: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9e3b5b45f78cc075f2192c245247af00b88b5e3c">9e3b5b4</a></p></li>
+<li><p>API to show export-trie, rebase and binding opcodes: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/5d56141061bfc27e3c971e9e474dc86fdaf0c6a9">5d56141</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">PE</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Add PE Code View: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/eab4a7614fdf6e9a180b1c638903310da0b83118">eab4a76</a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">ELF</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">.note.android.ident</span></code> section: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/d13db18214006ce654b723a882f70c3d7eabd20d">d13db18</a></p></li>
+<li><p>Enable to add unlimited number of dynamic entries: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/a40da3e3b4b985b18a6e6026d594f524b7bae963">a40da3e</a></p></li>
+<li><p>Add support for PPC relocations: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/08b514191f661eeabbdf8ecacd1d7dd35a67ca54">08b5141</a></p></li>
+<li><p>Endianness support: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/e794ac1502ee7636755bd441923368f88525a7d0">e794ac1</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="api/python/utilities.html#lief.breakp" title="lief.breakp"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.breakp()</span></code></a> and <a class="reference internal" href="api/python/utilities.html#lief.shell" title="lief.shell"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.shell()</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.parse" title="lief.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.parse()</span></code></a> now support <code class="docutils literal notranslate"><span class="pre">io</span></code> streams as input</p></li>
+<li><p>Parser now returns a <code class="docutils literal notranslate"><span class="pre">std::unique_ptr</span></code> instead of a raw pointer: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/cd1cc457cf3d63cfc5faa945657887200cedb8b3">cd1cc45</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="misc">
+<h3>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use <a class="reference external" href="https://github.com/serge-sans-paille/frozen">frozen</a> for some internal <code class="docutils literal notranslate"><span class="pre">std::map</span></code> (If C++14 is supported by the compiler)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="acknowledgements">
+<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/yd0b0N">yd0b0N</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/162">#162</a> and <a class="reference external" href="https://github.com/lief-project/LIEF/pull/166">#166</a> (Endianness support and PPC relocations)</p></li>
+<li><p><a class="reference external" href="https://github.com/0xbf00">0xbf00</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/128">#128</a> (<code class="docutils literal notranslate"><span class="pre">LC_RPATH</span></code> command)</p></li>
+<li><p><a class="reference external" href="https://github.com/illera88">illera88</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/118">#118</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>0.8.3<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>[Mach-O] Fix typo on comparison operator - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/abbc264833894973f601f700b3abcc109904f722">abbc264</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>0.8.2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>[ELF] Increase the upper limit of relocation number - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/077bc329bdcc249cb8ed0b8bcb9630e1c9eede94">077bc32</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="october-18-2017">
+<h2>0.8.1 - October 18, 2017<a class="headerlink" href="#october-18-2017" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix an alignment issue in the ELF builder. See <a class="reference external" href="https://github.com/lief-project/LIEF/commit/8db199c04e9e6bcdbda165ab5c42d88218a0beb6">8db199c</a></p></li>
+<li><p>Add assertion on the setuptools version: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/62e5825e27bb637c2f42f4d05690a100213beb03">62e5825</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="october-16-2017">
+<h2>0.8.0 - October 16, 2017<a class="headerlink" href="#october-16-2017" title="Permalink to this headline">¶</a></h2>
+<p>LIEF 0.8.0 mainly improves the MachO parser and the ELF builder. It comes with <a class="reference external" href="https://github.com/lief-project/Dockerlief">Dockerfiles</a> for <a class="reference external" href="https://github.com/lief-project/Dockerlief/blob/v0.1.0/dockerlief/dockerfiles/centos.docker">CentOS</a> and <a class="reference external" href="https://github.com/lief-project/Dockerlief/blob/v0.1.0/dockerlief/dockerfiles/android.docker">Android</a>.</p>
+<p><a class="reference external" href="https://llvm.org/docs/LibFuzzer.html">LibFuzzer</a> has also been integrated in the project to enhance the parsers</p>
+<div class="section" id="id3">
+<h3>Features<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">Abstract Layer</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.Relocation" title="lief.Relocation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Relocation</span></code></a> are now abstracted from the 3 formats - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9503f2fc7b6c14bebd4c220bda4a243d87f14bd1">9503f2f</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PIE</span></code> and <code class="docutils literal notranslate"><span class="pre">NX</span></code> are abstracted through the <a class="reference internal" href="api/python/abstract.html#lief.Binary.is_pie" title="lief.Binary.is_pie"><code class="xref py py-attr docutils literal notranslate"><span class="pre">is_pie</span></code></a> and <a class="reference internal" href="api/python/abstract.html#lief.Binary.has_nx" title="lief.Binary.has_nx"><code class="xref py py-attr docutils literal notranslate"><span class="pre">has_nx</span></code></a> properties</p></li>
+<li><p>Add the <a class="reference internal" href="api/python/abstract.html#lief.Section.search" title="lief.Section.search"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.Section.search()</span></code></a> and <a class="reference internal" href="api/python/abstract.html#lief.Section.search_all" title="lief.Section.search_all"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.Section.search_all()</span></code></a> methods to look for patterns in the section’s content.</p></li>
+</ul>
+</dd>
+<dt class="field-even">ELF</dt>
+<dd class="field-even"><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">DT_FLAGS</span></code> and <code class="docutils literal notranslate"><span class="pre">DT_FLAGS_1</span></code> are now parsed into <a class="reference internal" href="api/python/elf.html#lief.ELF.DynamicEntryFlags" title="lief.ELF.DynamicEntryFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynamicEntryFlags</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/754b8afa2b41993e6c37d2d9003cebdccc641d23">754b8af</a></p></li>
+<li><p>Handle relocations of object files (<code class="docutils literal notranslate"><span class="pre">.o</span></code>) - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/483b8dc2eabee3da29ce5e5ff2e25c2a3c9ca297">483b8dc</a></p></li>
+<li><p>Global enhancement of the ELF builder:</p>
+<p>One can now add <strong>multiple</strong> <a class="reference internal" href="api/python/elf.html#lief.ELF.Section" title="lief.ELF.Section"><code class="xref py py-class docutils literal notranslate"><span class="pre">Section</span></code></a> or <a class="reference internal" href="api/python/elf.html#lief.ELF.Segment" title="lief.ELF.Segment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Segment</span></code></a> into an ELF:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">elf</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/bin/cat&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+  <span class="n">segment</span> <span class="o">=</span> <span class="n">Segment</span><span class="p">()</span>
+  <span class="n">segment</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">SEGMENT_TYPES</span><span class="o">.</span><span class="n">LOAD</span>
+  <span class="n">segment</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">]</span> <span class="o">*</span> <span class="mh">0x1000</span>
+  <span class="n">elf</span> <span class="o">+=</span> <span class="n">segment</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+  <span class="n">section</span> <span class="o">=</span> <span class="n">Section</span><span class="p">(</span><span class="s2">&quot;lief_{:02d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+  <span class="n">section</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">]</span> <span class="o">*</span> <span class="mh">0x1000</span>
+  <span class="n">elf</span> <span class="o">+=</span> <span class="n">section</span>
+
+<span class="n">elf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> readelf -l ./foo
+<span class="go">PHDR           0x0000000000000040 0x0000000000000040 0x0000000000000040</span>
+<span class="go">               0x00000000000061f8 0x00000000000061f8  R E    0x8</span>
+<span class="go">INTERP         0x0000000000006238 0x0000000000006238 0x0000000000006238</span>
+<span class="go">               0x000000000000001c 0x000000000000001c  R      0x1</span>
+<span class="go">    [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</span>
+<span class="go">LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000</span>
+<span class="go">               0x000000000000d6d4 0x000000000000d6d4  R E    0x200000</span>
+<span class="go">LOAD           0x000000000000da90 0x000000000020da90 0x000000000020da90</span>
+<span class="go">               0x0000000000000630 0x00000000000007d0  RW     0x200000</span>
+<span class="go">LOAD           0x000000000000f000 0x000000000040f000 0x000000000040f000</span>
+<span class="go">               0x0000000000001000 0x0000000000001000         0x1000</span>
+<span class="go">LOAD           0x0000000000010000 0x0000000000810000 0x0000000000810000</span>
+<span class="go">               0x0000000000001000 0x0000000000001000         0x1000</span>
+<span class="go">LOAD           0x0000000000011000 0x0000000001011000 0x0000000001011000</span>
+<span class="go">               0x0000000000001000 0x0000000000001000         0x1000</span>
+<span class="go">....</span>
+
+<span class="gp">$</span> readelf -S ./foo
+<span class="go">...</span>
+<span class="go">[27] lief_00           PROGBITS         0000000002012000  00012000</span>
+<span class="go">     0000000000001000  0000000000000000           0     0     4096</span>
+<span class="go">[28] lief_01           PROGBITS         0000000004013000  00013000</span>
+<span class="go">     0000000000001000  0000000000000000           0     0     4096</span>
+<span class="go">[29] lief_02           PROGBITS         0000000008014000  00014000</span>
+<span class="go">     0000000000001000  0000000000000000           0     0     4096</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There are issues with executables statically linked with libraries that use <code class="docutils literal notranslate"><span class="pre">TLS</span></code></p>
+<p>See: <a class="reference external" href="https://github.com/lief-project/LIEF/issues/98">#98</a></p>
+</div>
+<p>One can now add <strong>multiple</strong> entries in the dynamic table:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">elf</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/bin/cat&quot;</span><span class="p">)</span>
+
+<span class="n">elf</span><span class="o">.</span><span class="n">add_library</span><span class="p">(</span><span class="s2">&quot;libfoo.so&quot;</span><span class="p">)</span>
+<span class="n">elf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">DynamicEntryRunPath</span><span class="p">(</span><span class="s2">&quot;$ORIGIN&quot;</span><span class="p">))</span>
+<span class="n">elf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">DynamicEntry</span><span class="p">(</span><span class="n">DYNAMIC_TAGS</span><span class="o">.</span><span class="n">INIT</span><span class="p">,</span> <span class="mi">123</span><span class="p">))</span>
+<span class="n">elf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">DynamicSharedObject</span><span class="p">(</span><span class="s2">&quot;libbar.so&quot;</span><span class="p">))</span>
+
+<span class="n">elf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> readelf -d foo
+<span class="go">  0x0000000000000001 (NEEDED)  Shared library: [libfoo.so]</span>
+<span class="go">  0x0000000000000001 (NEEDED)  Shared library: [libc.so.6]</span>
+<span class="go">  0x000000000000000c (INIT)    0x7b</span>
+<span class="go">  0x000000000000000c (INIT)    0x3600</span>
+<span class="go">  ...</span>
+<span class="go">  0x000000000000001d (RUNPATH) Bibliothèque runpath:[$ORIGIN]</span>
+<span class="go">  0x000000000000000e (SONAME)  Bibliothèque soname: [libbar.so]</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://github.com/lief-project/LIEF/commit/b94900ca7f500912bfe249cd534055942e28e34b">b94900c</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/1e410e6c950c391f0d1a3f12cb6f8e4c9fb16539">1e410e6</a> for details.</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/lief-project/LIEF/commit/b2d36940f60eacfa602c115cb542e11c70b6841c">b2d3694</a> enables modification of the ELF interpreter without <strong>length restriction</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">elf</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/bin/cat&quot;</span><span class="p">)</span>
+<span class="n">elf</span><span class="o">.</span><span class="n">interpreter</span> <span class="o">=</span> <span class="s2">&quot;/a/very/long/path/to/another/interpreter&quot;</span>
+<span class="n">elf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> readelf -l foo
+<span class="go">Program Headers:</span>
+<span class="go">Type           Offset             VirtAddr           PhysAddr</span>
+<span class="go">               FileSiz            MemSiz              Flags  Align</span>
+<span class="go">PHDR           0x0000000000000040 0x0000000000000040 0x0000000000000040</span>
+<span class="go">               0x00000000000011f8 0x00000000000011f8  R E    0x8</span>
+<span class="go">INTERP         0x000000000000a000 0x000000000040a000 0x000000000040a000</span>
+<span class="go">               0x0000000000001000 0x0000000000001000  R      0x1</span>
+<span class="go">    [Requesting program interpreter: /a/very/long/path/to/another/interpreter]</span>
+<span class="go">....</span>
+</pre></div>
+</div>
+</li>
+<li><p>Enhancement of the dynamic symbols counting - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/985d1249b72494a0e62f34042b3c9cbfa0706e90">985d124</a></p></li>
+<li><p>Enable editing ELF’s notes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">elf</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/bin/ls&quot;</span><span class="p">)</span>
+<span class="n">build_id</span> <span class="o">=</span> <span class="n">elf</span><span class="p">[</span><span class="n">NOTE_TYPES</span><span class="o">.</span><span class="n">BUILD_ID</span><span class="p">]</span>
+<span class="n">build_id</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xFF</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span>
+<span class="n">elf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> readelf -n foo
+<span class="go">Displaying notes found in: .note.gnu.build-id</span>
+<span class="go">Owner                 Data size   Description</span>
+<span class="go">GNU                  0x00000014   NT_GNU_BUILD_ID (unique build ID bitstring)</span>
+<span class="go">  Build ID: ffffffffffffffffffffffffffffffffffffffff</span>
+</pre></div>
+</div>
+<p>See commit <a class="reference external" href="https://github.com/lief-project/LIEF/commit/3be9dd0ff58ec68cb8813e01d6798c16b42dac22">3be9dd0</a> for more details</p>
+</li>
+</ul>
+</dd>
+<dt class="field-odd">PE</dt>
+<dd class="field-odd"><ul>
+<li><p>Add <a class="reference internal" href="api/python/pe.html#lief.PE.get_imphash" title="lief.PE.get_imphash"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_imphash()</span></code></a> and <a class="reference internal" href="api/python/pe.html#lief.PE.resolve_ordinals" title="lief.PE.resolve_ordinals"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve_ordinals()</span></code></a> functions - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/a89bc6df4f242d7641292acdb184927449d14fff">a89bc6d</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/dfa8e985c0561427a20088750693a004de587b1c">dfa8e98</a></p></li>
+<li><p>Parse the <em>Load Config Table</em> into <a class="reference internal" href="api/python/pe.html#lief.PE.LoadConfiguration" title="lief.PE.LoadConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadConfiguration</span></code></a> (up to Windows 10 SDK 15002 with <em>hotpatch_table_offset</em>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lief</span> <span class="kn">import</span> <span class="n">to_json</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">pe</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;some.exe&quot;</span><span class="p">)</span>
+<span class="n">loadconfig</span> <span class="o">=</span> <span class="n">to_json</span><span class="p">(</span><span class="n">pe</span><span class="o">.</span><span class="n">load_configuration</span><span class="p">))</span> <span class="c1"># Using the lief.to_json function</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">to_json</span><span class="p">(</span><span class="n">loadconfig</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;characteristics&#39;</span><span class="o">:</span> <span class="mi">248</span><span class="p">,</span>
+ <span class="s1">&#39;code_integrity&#39;</span><span class="o">:</span> <span class="p">{</span><span class="s1">&#39;catalog&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s1">&#39;catalog_offset&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s1">&#39;flags&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s1">&#39;reserved&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">},</span>
+ <span class="s1">&#39;critical_section_default_timeout&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="s1">&#39;csd_version&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="s1">&#39;editlist&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="p">...</span>
+ <span class="s1">&#39;guard_cf_check_function_pointer&#39;</span><span class="o">:</span> <span class="mi">5368782848</span><span class="p">,</span>
+ <span class="s1">&#39;guard_cf_dispatch_function_pointer&#39;</span><span class="o">:</span> <span class="mi">5368782864</span><span class="p">,</span>
+ <span class="s1">&#39;guard_cf_function_count&#39;</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
+ <span class="s1">&#39;guard_cf_function_table&#39;</span><span class="o">:</span> <span class="mi">5368778752</span><span class="p">,</span>
+ <span class="s1">&#39;guard_flags&#39;</span><span class="o">:</span> <span class="mi">66816</span><span class="p">,</span>
+ <span class="s1">&#39;guard_long_jump_target_count&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="s1">&#39;guard_long_jump_target_table&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="s1">&#39;guard_rf_failure_routine&#39;</span><span class="o">:</span> <span class="mi">5368713280</span><span class="p">,</span>
+ <span class="s1">&#39;guard_rf_failure_routine_function_pointer&#39;</span><span class="o">:</span> <span class="mi">5368782880</span><span class="p">,</span>
+ <span class="p">...</span>
+</pre></div>
+</div>
+<p>For details, see commit: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/0234e3b8bbb6f6f3490392f8c295fde284a99334">0234e3b</a></p>
+</li>
+</ul>
+</dd>
+<dt class="field-even">MachO</dt>
+<dd class="field-even"><ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">dyld</span></code> structure is parsed (deeply) into <a class="reference internal" href="api/python/macho.html#lief.MachO.DyldInfo" title="lief.MachO.DyldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">DyldInfo</span></code></a>. It includes:</p>
+<ul class="simple">
+<li><p>Binding opcodes</p></li>
+<li><p>Rebases opcodes</p></li>
+<li><p>Export trie</p></li>
+</ul>
+<p>See: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/e2b81e0a8e187cae5f0f115241243a84ee7696b6">e2b81e0</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/0e972d69ce35731867d82c047eef7eb9ea58e3ec">0e972d6</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/f7cc518dcfbb0557fd8d396144bf99a222d96705">f7cc518</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/782295bfb86d2a12584c5b16a37a26d56d1ee235">782295b</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/67">#67</a></p>
+</li>
+<li><p>Section relocations are now parsed into <a class="reference internal" href="api/python/macho.html#lief.MachO.Section.relocations" title="lief.MachO.Section.relocations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Section.relocations</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/29c8157ecc3b308bd521cb1daee3c2e3a2cffb28">29c8157</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LC_FUNCTION_STARTS</span></code> is parsed into <a class="reference internal" href="api/python/macho.html#lief.MachO.FunctionStarts" title="lief.MachO.FunctionStarts"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionStarts</span></code></a> (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/18d89198a0cc63ff291ae9110f465354c3b8f1e6">18d8919</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LC_SOURCE_VERSION</span></code>, <code class="docutils literal notranslate"><span class="pre">LC_VERSION_MIN_MACOSX</span></code> and <code class="docutils literal notranslate"><span class="pre">LC_VERSION_MIN_IPHONEOS</span></code> are
+parsed into <a class="reference internal" href="api/python/macho.html#lief.MachO.SourceVersion" title="lief.MachO.SourceVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SourceVersion</span></code></a> and <a class="reference internal" href="api/python/macho.html#lief.MachO.VersionMin" title="lief.MachO.VersionMin"><code class="xref py py-class docutils literal notranslate"><span class="pre">VersionMin</span></code></a> (<a class="reference external" href="https://github.com/lief-project/LIEF/commit/c359778194db874669884aaccb52a4b05546bc07">c359778</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/0b4bb7d56520cd0ea08bbcb9530e5e0c96ac14ae">0b4bb7d</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/5b993117ed391db18ba775cabefa5f3981b2f1cc">5b99311</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/45">#45</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LC_THREAD</span></code> and <code class="docutils literal notranslate"><span class="pre">LC_UNIXTHREAD</span></code> are now parsed into <a class="reference internal" href="api/python/macho.html#lief.MachO.ThreadCommand" title="lief.MachO.ThreadCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThreadCommand</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/23257830b291c40a3aed92360040f2b0b11ffa72">2325783</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="fixes">
+<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
+<p>Fix enums conflicts(<a class="reference external" href="https://github.com/lief-project/LIEF/issues/32">#32</a>) - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/66b4cd4550ecf6cf3adb4900e6ad7ac33f1f7f32">66b4cd4</a></p>
+<p>Fix most of the memory leaks: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/88dafa8db6e752393f69d73f68d295e91963b8da">88dafa8</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/d9b1436730b5d33a753e7dfa4301697a0c676066">d9b1436</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/554fa153af943b97a16fc4a52ab8459a3d0a9bc7">554fa15</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/3602643f5d02a1c78c4de609cc47f193f3a8840f">3602643</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">ELF</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Bug Fix when counting dynamic symbols from the GnuHash Table - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9036a2405dc44726f40cb77cab1bcbf371ab7a70">9036a24</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">PE</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Fix nullptr dereference in resources - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/e90fe1b6c6f6a605390bcd1026435ce7503e7e6a">e90fe1b</a></p></li>
+<li><p>Handle encoding issues in the Python API - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/8c7ceafa823bda508259bf3c7cdc05b865f13d5c">8c7ceaf</a></p></li>
+<li><p>Sanitize DLL names</p></li>
+</ul>
+</dd>
+<dt class="field-odd">MachO</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Fix <a class="reference external" href="https://github.com/lief-project/LIEF/issues/87">#87</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/92">#92</a></p></li>
+<li><p>Fix memory leaks and <em>some</em> performance issues: <a class="reference external" href="https://github.com/lief-project/LIEF/issues/94">#94</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h3>API<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>In the C++ API <code class="docutils literal notranslate"><span class="pre">get_XXX()</span></code> getters have been renamed into <code class="docutils literal notranslate"><span class="pre">XXX()</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">get_header()</span></code> becomes <code class="docutils literal notranslate"><span class="pre">header()</span></code>) - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/a4c69f7868da1de5d09aa26e977dedb720e36cbd">a4c69f7</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/e805669865b130057413f456958a471d8f0ac0b1">e805669</a></p>
+<dl class="field-list">
+<dt class="field-odd">Abstract</dt>
+<dd class="field-odd"><ul>
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.Binary</span></code></a> gains the <a class="reference internal" href="api/python/abstract.html#lief.Binary.format" title="lief.Binary.format"><code class="xref py py-attr docutils literal notranslate"><span class="pre">format</span></code></a> property - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9391238f114fe963890777c2d8b90f2caaa5510c">9391238</a></p></li>
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.parse" title="lief.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.parse()</span></code></a> can now takes a list of integers - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/f330fa887d14d47f0683144430ac9695d3136561">f330fa8</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/abstract.html#lief.Binary.has_symbol" title="lief.Binary.has_symbol"><code class="xref py py-meth docutils literal notranslate"><span class="pre">has_symbol()</span></code></a> and <a class="reference internal" href="api/python/abstract.html#lief.Binary.get_symbol" title="lief.Binary.get_symbol"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_symbol()</span></code></a> to <a class="reference internal" href="api/python/abstract.html#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.Binary</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/f121af5ca61a22fd83acc5c7094b50ed1cda8226">f121af5</a></p></li>
+<li><p>[Python API] Enhance the access to the abstract layer through the <a class="reference internal" href="api/python/abstract.html#lief.Binary.abstract" title="lief.Binary.abstract"><code class="xref py py-attr docutils literal notranslate"><span class="pre">abstract</span></code></a> attribute - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/07138549a46db87c7b924fd072356030b1d5c6bc">0713854</a></p>
+<p>One can now do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">elf</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/bin/ls&quot;</span><span class="p">)</span> <span class="c1"># Could be lief.MachO / lief.PE</span>
+<span class="n">abstract</span> <span class="o">=</span> <span class="n">elf</span><span class="o">.</span><span class="n">abstract</span> <span class="c1"># Return the lief.Binary object</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+<dt class="field-even">ELF</dt>
+<dd class="field-even"><ul>
+<li><p>Relocation gains the <a class="reference internal" href="api/python/elf.html#lief.ELF.Relocation.purpose" title="lief.ELF.Relocation.purpose"><code class="xref py py-attr docutils literal notranslate"><span class="pre">purpose</span></code></a> property - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/b7b0bde4d51c54d8d226e5320b1b0d2cc48137c4">b7b0bde</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.symbols" title="lief.ELF.Binary.symbols"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Binary.symbols</span></code></a> which return an iterator over <strong>all</strong> symbols (static and dynamic) - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/af6ab65dc91169627f4fbb87cda92093eb699a1e">af6ab65</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Header.sizeof_section_header</span></code> has been renamed into <a class="reference internal" href="api/python/elf.html#lief.ELF.Header.section_header_size" title="lief.ELF.Header.section_header_size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">section_header_size</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/d96971b0c3f8ff50add349957f571b8daa00708a">d96971b</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Segment.flag</span></code> has been renamed into <a class="reference internal" href="api/python/elf.html#lief.ELF.Segment.flags" title="lief.ELF.Segment.flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">flags</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/20a5f666deb89b06b79a1c4418ac938497fb658c">20a5f66</a></p></li>
+<li><p>Add:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Header.arm_flags_list" title="lief.ELF.Header.arm_flags_list"><code class="xref py py-attr docutils literal notranslate"><span class="pre">arm_flags_list</span></code></a>,</p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Header.mips_flags_list" title="lief.ELF.Header.mips_flags_list"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mips_flags_list</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Header.ppc64_flags_list" title="lief.ELF.Header.ppc64_flags_list"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ppc64_flags_list</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Header.hexagon_flags_list" title="lief.ELF.Header.hexagon_flags_list"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hexagon_flags_list</span></code></a></p></li>
+</ul>
+<p>to <a class="reference internal" href="api/python/elf.html#lief.ELF.Header" title="lief.ELF.Header"><code class="xref py py-class docutils literal notranslate"><span class="pre">Header</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/730d045e05dca7ef3cd6a51d1175f280be356c70">730d045</a></p>
+<p>To check if a given flag is set, one can do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">ARM_EFLAGS</span><span class="o">.</span><span class="n">EABI_VER5</span> <span class="ow">in</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">Header</span> <span class="s2">&quot;yes&quot;</span> <span class="k">else</span> <span class="s2">&quot;no&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>[Python] Segment flags: <code class="docutils literal notranslate"><span class="pre">PF_X</span></code>, <code class="docutils literal notranslate"><span class="pre">PF_W</span></code>, <code class="docutils literal notranslate"><span class="pre">PF_X</span></code> has been renamed into <a class="reference internal" href="api/python/elf.html#lief.ELF.SEGMENT_FLAGS.X" title="lief.ELF.SEGMENT_FLAGS.X"><code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code></a>, <a class="reference internal" href="api/python/elf.html#lief.ELF.SEGMENT_FLAGS.W" title="lief.ELF.SEGMENT_FLAGS.W"><code class="xref py py-attr docutils literal notranslate"><span class="pre">W</span></code></a>, <a class="reference internal" href="api/python/elf.html#lief.ELF.SEGMENT_FLAGS.X" title="lief.ELF.SEGMENT_FLAGS.X"><code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/d70ef9ec2c42619434352dbd7b74a835ebad7569">d70ef9e</a></p></li>
+<li><p>Add <a class="reference internal" href="api/python/elf.html#lief.ELF.Section.flags_list" title="lief.ELF.Section.flags_list"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Section.flags_list</span></code></a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/4937b7193a5760df85d0ac1567afc011a22cdb98">4937b71</a></p></li>
+<li><p>Enhancement for <a class="reference internal" href="api/python/elf.html#lief.ELF.DynamicEntryRpath" title="lief.ELF.DynamicEntryRpath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DynamicEntryRpath</span></code></a> and <a class="reference internal" href="api/python/elf.html#lief.ELF.DynamicEntryRunPath" title="lief.ELF.DynamicEntryRunPath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DynamicEntryRunPath</span></code></a>: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/c375a47da7c4c524e886f9238f8dd51a44501087">c375a47</a></p></li>
+<li><p>Enhancement for <a class="reference internal" href="api/python/elf.html#lief.ELF.DynamicEntryArray" title="lief.ELF.DynamicEntryArray"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DynamicEntryArray</span></code></a>: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/81440ce00cdfc793161a0dc394ada345307dc24b">81440ce</a></p></li>
+<li><p>Add some <em>operators</em>  <a class="reference external" href="https://github.com/lief-project/LIEF/commit/3b200b30503847be4779447c76f5207d18daf77f">3b200b3</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/43bd06f8f32196454ee2305201f4e27b3a3c8a1e">43bd06f</a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">PE</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Add some <em>operators</em> <a class="reference external" href="https://github.com/lief-project/LIEF/commit/5666351e07b7bf4a9624033f670d02b8806d2663">5666351</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">MachO</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.parse" title="lief.MachO.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.MachO.parse()</span></code></a> can now takes a list of integers - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/f330fa887d14d47f0683144430ac9695d3136561">f330fa8</a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.parse" title="lief.MachO.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.MachO.parse()</span></code></a> now returns a <a class="reference internal" href="api/python/macho.html#lief.MachO.FatBinary" title="lief.MachO.FatBinary"><code class="xref py py-class docutils literal notranslate"><span class="pre">FatBinary</span></code></a> instead of a <code class="docutils literal notranslate"><span class="pre">list</span></code> of <a class="reference internal" href="api/python/macho.html#lief.MachO.Binary" title="lief.MachO.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a>. <a class="reference internal" href="api/python/macho.html#lief.MachO.FatBinary" title="lief.MachO.FatBinary"><code class="xref py py-class docutils literal notranslate"><span class="pre">FatBinary</span></code></a> has a similar API as a list - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/3602643f5d02a1c78c4de609cc47f193f3a8840f">3602643</a></p></li>
+<li><p>Add some <em>operators</em>: <a class="reference external" href="https://github.com/lief-project/LIEF/commit/cbe835484751396daffe7f8d238cbb85d66470ab">cbe8354</a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Logging</dt>
+<dd class="field-odd"><p>Add an API to configure the logger - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/4600c2ba8d7d17b5965c2b74faeb7e4d2128de17">4600c2b</a></p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lief</span> <span class="kn">import</span> <span class="n">Logger</span>
+<span class="n">Logger</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
+<span class="n">Logger</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+<span class="n">Logger</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="n">lief</span><span class="o">.</span><span class="n">LOGGING_LEVEL</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See: <a class="reference internal" href="api/python/index.html#lief.Logger" title="lief.Logger"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.Logger</span></code></a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="build-system">
+<h3>Build system<a class="headerlink" href="#build-system" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add <a class="reference external" href="https://github.com/lief-project/LIEF/blob/e8ac976c994f6612e8dcca994032403c2d6f580f/scripts/FindLIEF.cmake">FindLIEF.cmake</a> - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/6dd8b10325e832a7520bf5ae3a588b9e022d0345">6dd8b10</a></p></li>
+<li><p>Add ASAN, TSAN, USAN, LSAN - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/7f6aeb0d0d74eae886f4b312e12e8f71e1d5da6a">7f6aeb0</a></p></li>
+<li><p>Add LibFuzzer - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/7a0dc28ea29a30209e944ebcde27f7c0ab234651">7a0dc28</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">References</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>recomposer, bearparser, IAT_patcher, PEframe, Manalyze, MachOView, elf-dissector</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h3>Acknowledgements<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/alvarofe">alvarofe</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/47">#47</a></p></li>
+<li><p><a class="reference external" href="https://github.com/aguinet">aguinet</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/55">#55</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/pull/61">#61</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/pull/65">#65</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/pull/77">#77</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jevinskie">jevinskie</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/75">#75</a></p></li>
+<li><p><a class="reference external" href="https://github.com/liumuqing">liumuqing</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/80">#80</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Manouchehri">Manouchehri</a> for <a class="reference external" href="https://github.com/lief-project/LIEF/pull/106">#106</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="july-3-2017">
+<h2>0.7.0 - July 3, 2017<a class="headerlink" href="#july-3-2017" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Features<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Abstract Layer</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Add bitness (32bits / 64bits)  - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/78d1adb41e8b0d21a6f6fe94014753ce68e0ffa1">78d1adb</a></p></li>
+<li><p>Add object type (Library, executable etc)  - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/78d1adb41e8b0d21a6f6fe94014753ce68e0ffa1">78d1adb</a></p></li>
+<li><p>Add <em>mode</em> Thumbs, 16bits etc - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/78d1adb41e8b0d21a6f6fe94014753ce68e0ffa1">78d1adb</a></p></li>
+<li><p>Add endianness - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/7ea08f72c43212f2e3f401b5c2c2614bc9aab8de">7ea08f7</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/29">#29</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">ELF</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Enable dynamic symbols permutation - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/2dea7cb6d631b69995567e056a97e526f588b8ff">2dea7cb</a></p></li>
+<li><p>Fully handle section-less binaries - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/de40c068316b3334e4c8d81ecb3efc177ab24c3b">de40c06</a></p></li>
+<li><p>Parse ELF notes  - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/241aac7bedaf18ab5e3f0c9775a8a51cb0b40a3e">241aac7</a></p></li>
+<li><p>Parse SYSV hash table  - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/afa74cee88f730acef84fe6d9c984455a28463e7">afa74ce</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/36">#36</a></p></li>
+<li><p>Add relocation size - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/f1766f2c297caed636c7f32730cd10b62bfcc757">f1766f2</a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">PE</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Parse PE Overlay - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/e0634c1cf6d12fbdc5bcc1745059005e46e5d805">e0634c1</a></p></li>
+<li><p>Enable PE Hooking - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/24f6b7213647469e269ead9441d78204162d08ec">24f6b72</a></p></li>
+<li><p>Parse and rebuilt dos stub  - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/3f0639712617007e2e0431cb5eeb9be204c5d74b">3f06397</a></p></li>
+<li><p>Add a <em>resources manager</em> to provide an enhanced API over the resources - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/8473c8e126f2a8f14728ad3f8ebb59c45ac55d2d">8473c8e</a></p></li>
+<li><p>Serialize PE objects into JSON - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/673f5a36f0d339ad9390427292fa6e725b8fd907">673f5a3</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/18">#18</a></p></li>
+<li><p>Parse Rich Header - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/0893bd9b08f2248ae8f656ccd81b1be12e8ae57e">0893bd9</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/issues/15">#15</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">ELF</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Bug fix when a GNU hash has empty buckets - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/21a6c3064bceead897392999ad66f14e03e5d530">21a6c30</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">PE</dt>
+<dd class="field-even"><ul class="simple">
+<li><p>Bug fix in the signature parser: <a class="reference external" href="https://github.com/lief-project/LIEF/issues/30">#30</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/commit/4af0256ce7c5577e0b1010c6f9b566634f0a3993">4af0256</a></p></li>
+<li><p>Bug fix in the resources parser: Infinite loop - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/a569cc13d99354ff96932460f5b1fd859378f252">a569cc1</a></p></li>
+<li><p>Add more <em>out-of-bounds</em> checks on relocations and exports - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/9364f644e937a6a5d69c64c2ef4eaa1fbdd2cfad">9364f64</a></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">min(SizeOfRawData,</span> <span class="pre">VirtualSize)</span></code> for the section’s size and truncate the size to the file size - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/61bf14ba1182fe458453599ff014de5d71d25680">61bf14b</a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">MachO</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Bug fix when a binary hasn’t a <code class="docutils literal notranslate"><span class="pre">LC_MAIN</span></code> command - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/957501fe76596e0396c66d08540884876cea049c">957501f</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id7">
+<h3>API<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list">
+<dt class="field-odd">Abstract Layer</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.Header.is_32" title="lief.Header.is_32"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.Header.is_32</span></code></a> and <a class="reference internal" href="api/python/abstract.html#lief.Header.is_64" title="lief.Header.is_64"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.Header.is_64</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.Header.object_type" title="lief.Header.object_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.Header.object_type</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.Header.modes" title="lief.Header.modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.Header.modes</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/abstract.html#lief.Header.endianness" title="lief.Header.endianness"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.Header.endianness</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">ELF</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.permute_dynamic_symbols" title="lief.ELF.Binary.permute_dynamic_symbols"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.ELF.Binary.permute_dynamic_symbols()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lief.ELF.Segment.data</span></code> has been renamed to <a class="reference internal" href="api/python/elf.html#lief.ELF.Segment.content" title="lief.ELF.Segment.content"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Segment.content</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.parse" title="lief.ELF.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.ELF.parse()</span></code></a> takes an optional parameters: symbol counting - <a class="reference internal" href="api/python/elf.html#lief.ELF.DYNSYM_COUNT_METHODS" title="lief.ELF.DYNSYM_COUNT_METHODS"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.DYNSYM_COUNT_METHODS</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Relocation.size" title="lief.ELF.Relocation.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Relocation.size</span></code></a></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Notes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Note" title="lief.ELF.Note"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.Note</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.has_notes" title="lief.ELF.Binary.has_notes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Binary.has_notes</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.notes" title="lief.ELF.Binary.notes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Binary.notes</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Hash Tables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.SysvHash" title="lief.ELF.SysvHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.SysvHash</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.use_gnu_hash" title="lief.ELF.Binary.use_gnu_hash"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Binary.use_gnu_hash</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.use_sysv_hash" title="lief.ELF.Binary.use_sysv_hash"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Binary.use_sysv_hash</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/elf.html#lief.ELF.Binary.sysv_hash" title="lief.ELF.Binary.sysv_hash"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Binary.sysv_hash</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">PE</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Symbol.has_section" title="lief.PE.Symbol.has_section"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Symbol.has_section</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.hook_function" title="lief.PE.Binary.hook_function"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.PE.Binary.hook_function()</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.get_content_from_virtual_address" title="lief.PE.Binary.get_content_from_virtual_address"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.PE.Binary.get_content_from_virtual_address()</span></code></a> takes either an <strong>Absolute</strong> virtual address or a <strong>Relative</strong> virtual address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lief.PE.Binary.section_from_virtual_address</span></code> has been renamed to <a class="reference internal" href="api/python/pe.html#lief.PE.Binary.section_from_rva" title="lief.PE.Binary.section_from_rva"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.PE.Binary.section_from_rva()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lief.PE.parse_from_raw</span></code> has been removed. One can use <a class="reference internal" href="api/python/pe.html#lief.PE.parse" title="lief.PE.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.PE.parse()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lief.PE.Section.data</span></code> has been <strong>removed</strong>. Please use <a class="reference internal" href="api/python/pe.html#lief.PE.Section.content" title="lief.PE.Section.content"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Section.content</span></code></a></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Dos Stub</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.dos_stub" title="lief.PE.Binary.dos_stub"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Binary.dos_stub</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Builder.build_dos_stub" title="lief.PE.Builder.build_dos_stub"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Builder.build_dos_stub</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Rich Header</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.rich_header" title="lief.PE.Binary.rich_header"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Binary.rich_header</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.has_rich_header" title="lief.PE.Binary.has_rich_header"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Binary.has_rich_header</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.RichHeader" title="lief.PE.RichHeader"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.RichHeader</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.RichEntry" title="lief.PE.RichEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.RichEntry</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Overlay</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.overlay" title="lief.PE.Binary.overlay"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Binary.overlay</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Builder.build_overlay" title="lief.PE.Builder.build_overlay"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Builder.build_overlay</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Imports</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.has_import" title="lief.PE.Binary.has_import"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Binary.has_import</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.get_import" title="lief.PE.Binary.get_import"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.PE.Binary.get_import()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Resources</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.Binary.resources" title="lief.PE.Binary.resources"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.Binary.resources</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceData" title="lief.PE.ResourceData"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceData</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceDirectory" title="lief.PE.ResourceDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceDirectory</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceNode" title="lief.PE.ResourceNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceNode</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.LangCodeItem" title="lief.PE.LangCodeItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.LangCodeItem</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceDialog" title="lief.PE.ResourceDialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceDialog</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceDialogItem" title="lief.PE.ResourceDialogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceDialogItem</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceFixedFileInfo" title="lief.PE.ResourceFixedFileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceFixedFileInfo</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceIcon" title="lief.PE.ResourceIcon"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceIcon</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceStringFileInfo" title="lief.PE.ResourceStringFileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceStringFileInfo</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceVarFileInfo" title="lief.PE.ResourceVarFileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceVarFileInfo</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.ResourceVersion" title="lief.PE.ResourceVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceVersion</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">MachO</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.has_entrypoint" title="lief.MachO.Binary.has_entrypoint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.has_entrypoint</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Symbol.demangled_name" title="lief.MachO.Symbol.demangled_name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Symbol.demangled_name</span></code></a></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">UUID</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.has_uuid" title="lief.MachO.Binary.has_uuid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.has_uuid</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.uuid" title="lief.MachO.Binary.uuid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.uuid</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.UUIDCommand" title="lief.MachO.UUIDCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.UUIDCommand</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Main Command</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.has_main_command" title="lief.MachO.Binary.has_main_command"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.has_main_command</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.main_command" title="lief.MachO.Binary.main_command"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.main_command</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.MainCommand" title="lief.MachO.MainCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.MainCommand</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Dylinker</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.has_dylinker" title="lief.MachO.Binary.has_dylinker"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.has_dylinker</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.Binary.dylinker" title="lief.MachO.Binary.dylinker"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.MachO.Binary.dylinker</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/macho.html#lief.MachO.DylinkerCommand" title="lief.MachO.DylinkerCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.DylinkerCommand</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="id8">
+<h3>Documentation<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">References</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>elfsteem, pelook, PortEx, elfsharp, metasm, amoco, Goblin</p></li>
+</ul>
+</dd>
+<dt class="field-even">Tutorials</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="tutorials/06_pe_hooking.html">PE Hooking</a>, <a class="reference external" href="tutorials/07_pe_resource.html">Resources Manipulation</a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Integration</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="installation.html#xcode-integration">XCode</a>, <a class="reference external" href="installation.html#cmake-integration">CMake</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h3>Acknowledgements<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ek0">ek0</a>: <a class="reference external" href="https://github.com/lief-project/LIEF/pull/24">#24</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ACSC-CyberLab">ACSC-CyberLab</a>: <a class="reference external" href="https://github.com/lief-project/LIEF/pull/33">#33</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/pull/34">#34</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/pull/37">#37</a>, <a class="reference external" href="https://github.com/lief-project/LIEF/pull/39">#39</a></p></li>
+<li><p>Hyrum Anderson who pointed bugs in the PE parser</p></li>
+<li><p>My collegues for the feedbacks and suggestions (Adrien, SebK, Pierrick)</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="april-6-2017">
+<h2>0.6.1 - April 6, 2017<a class="headerlink" href="#april-6-2017" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>Bug Fixes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">ELF</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Don’t rely on <a class="reference internal" href="api/python/elf.html#lief.ELF.Section.entry_size" title="lief.ELF.Section.entry_size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.ELF.Section.entry_size</span></code></a> to count symbols - <a class="reference external" href="https://github.com/lief-project/LIEF/commit/004c6769bec37e303bbe7aaceb49f4b05c8eec84">004c676</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id11">
+<h3>API<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">PE</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.TLS.has_section" title="lief.PE.TLS.has_section"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.TLS.has_section</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/python/pe.html#lief.PE.TLS.has_data_directory" title="lief.PE.TLS.has_data_directory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.PE.TLS.has_data_directory</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id12">
+<h3>Documentation<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Integration</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="installation.html#visual-studio-integration">Visual Studio</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id13">
+<h3>Acknowledgements<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/doegox">Philippe</a> for the proofreading.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="march-30-2017">
+<h2>0.6.0 - March 30, 2017<a class="headerlink" href="#march-30-2017" title="Permalink to this headline">¶</a></h2>
+<p>First public release</p>
+</div>
+</div>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+
+        <a href="references.html" class="btn btn-neutral float-left" title="References" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

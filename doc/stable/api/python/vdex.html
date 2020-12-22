@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>VDEX &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ART" href="art.html" />
+    <link rel="prev" title="DEX" href="dex.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract.html">Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html">ELF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html">PE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html">MachO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html">OAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html">DEX</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">VDEX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utilities">Utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parser">Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#header">Header</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="art.html">ART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platforms/android.html">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#logging">Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Python</a> &raquo;</li>
+        
+      <li>VDEX</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/python/vdex.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vdex">
+<h1>VDEX<a class="headerlink" href="#vdex" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lief.VDEX.is_vdex">
+<code class="sig-prename descclassname">lief.VDEX.</code><code class="sig-name descname">is_vdex</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.VDEX.is_vdex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>is_vdex(path: str) -&gt; bool</p></li>
+</ol>
+<p>Check if the <strong>file</strong> given in parameter is an VDEX</p>
+<ol class="arabic simple" start="2">
+<li><p>is_vdex(raw: List[int]) -&gt; bool</p></li>
+</ol>
+<p>Check if the <strong>raw data</strong> given in parameter is a VDEX</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lief.VDEX.version">
+<code class="sig-prename descclassname">lief.VDEX.</code><code class="sig-name descname">version</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.VDEX.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>version(file: str) -&gt; int</p></li>
+</ol>
+<p>Return the VDEX version of the <strong>file</strong> given in parameter</p>
+<ol class="arabic simple" start="2">
+<li><p>version(raw: List[int]) -&gt; int</p></li>
+</ol>
+<p>Return the VDEX version of the <strong>raw data</strong> given in parameter</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lief.VDEX.android_version">
+<code class="sig-prename descclassname">lief.VDEX.</code><code class="sig-name descname">android_version</code><span class="sig-paren">(</span><em class="sig-param">vdex_version: int</em><span class="sig-paren">)</span> &#x2192; LIEF::Android::ANDROID_VERSIONS<a class="headerlink" href="#lief.VDEX.android_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <a class="reference internal" href="platforms/android.html#lief.Android.ANDROID_VERSIONS" title="lief.Android.ANDROID_VERSIONS"><code class="xref py py-class docutils literal notranslate"><span class="pre">ANDROID_VERSIONS</span></code></a> associated with the given VDEX version</p>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="parser">
+<h2>Parser<a class="headerlink" href="#parser" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lief.VDEX.parse">
+<code class="sig-prename descclassname">lief.VDEX.</code><code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.VDEX.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>parse(Parse the given filename and return a <a class="reference internal" href="#lief.VDEX.File" title="lief.VDEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> objectfilename: str) -&gt; LIEF::VDEX::File</p></li>
+<li><p>parse(Parse the given raw data and return a <a class="reference internal" href="#lief.VDEX.File" title="lief.VDEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> object</p></li>
+</ol>
+<p>raw: List[int], name: str = ‘’) -&gt; LIEF::VDEX::File</p>
+<ol class="arabic simple" start="3">
+<li><p>parse(io: object, name: str = ‘’) -&gt; LIEF::VDEX::File</p></li>
+</ol>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="file">
+<h2>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.VDEX.File">
+<em class="property">class </em><code class="sig-prename descclassname">lief.VDEX.</code><code class="sig-name descname">File</code><a class="headerlink" href="#lief.VDEX.File" title="Permalink to this definition">¶</a></dt>
+<dd><p>VDEX File representation</p>
+<dl class="method">
+<dt id="lief.VDEX.File.dex2dex_json_info">
+<em class="property">property </em><code class="sig-name descname">dex2dex_json_info</code><a class="headerlink" href="#lief.VDEX.File.dex2dex_json_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.File.dex_files">
+<em class="property">property </em><code class="sig-name descname">dex_files</code><a class="headerlink" href="#lief.VDEX.File.dex_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an iterator over <a class="reference internal" href="dex.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.File.header">
+<em class="property">property </em><code class="sig-name descname">header</code><a class="headerlink" href="#lief.VDEX.File.header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the VDEX <a class="reference internal" href="#lief.VDEX.Header" title="lief.VDEX.Header"><code class="xref py py-class docutils literal notranslate"><span class="pre">Header</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="header">
+<h2>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.VDEX.Header">
+<em class="property">class </em><code class="sig-prename descclassname">lief.VDEX.</code><code class="sig-name descname">Header</code><a class="headerlink" href="#lief.VDEX.Header" title="Permalink to this definition">¶</a></dt>
+<dd><p>VDEX Header representation</p>
+<dl class="method">
+<dt id="lief.VDEX.Header.dex_size">
+<em class="property">property </em><code class="sig-name descname">dex_size</code><a class="headerlink" href="#lief.VDEX.Header.dex_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of <strong>all</strong> <a class="reference internal" href="dex.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.Header.magic">
+<em class="property">property </em><code class="sig-name descname">magic</code><a class="headerlink" href="#lief.VDEX.Header.magic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Magic value used to identify VDEX</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.Header.nb_dex_files">
+<em class="property">property </em><code class="sig-name descname">nb_dex_files</code><a class="headerlink" href="#lief.VDEX.Header.nb_dex_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of <a class="reference internal" href="dex.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> files registered</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.Header.quickening_info_size">
+<em class="property">property </em><code class="sig-name descname">quickening_info_size</code><a class="headerlink" href="#lief.VDEX.Header.quickening_info_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of quickening info section</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.Header.verifier_deps_size">
+<em class="property">property </em><code class="sig-name descname">verifier_deps_size</code><a class="headerlink" href="#lief.VDEX.Header.verifier_deps_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of verifier deps section</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.VDEX.Header.version">
+<em class="property">property </em><code class="sig-name descname">version</code><a class="headerlink" href="#lief.VDEX.Header.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>VDEX version number</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="art.html" class="btn btn-neutral float-right" title="ART" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dex.html" class="btn btn-neutral float-left" title="DEX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

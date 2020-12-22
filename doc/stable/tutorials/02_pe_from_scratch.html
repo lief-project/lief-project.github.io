@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>02 - Create a PE from scratch &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="03 - Play with ELF symbols" href="03_elf_change_symbols.html" />
+    <link rel="prev" title="01 - Parse and manipulate formats" href="01_play_with_formats.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>02 - Create a PE from scratch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/02_pe_from_scratch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="create-a-pe-from-scratch">
+<span id="pe-from-scratch"></span><h1>02 - Create a PE from scratch<a class="headerlink" href="#create-a-pe-from-scratch" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we introduce LIEF API to create a simple PE executable from scratch</p>
+<p>Scripts and materials are available here: <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/02_PE_from_Scratch">materials</a></p>
+<p>By Romain Thomas - <a class="reference external" href="https://twitter.com/rh0main">&#64;rh0main</a></p>
+<hr class="docutils" />
+<p>LIEF enables to create simple PE from scratch. The aim of this tutorial is to create an executable which pop a <code class="docutils literal notranslate"><span class="pre">MessageBoxA</span></code> with “Hello Word”</p>
+<p>First, we have to create a <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary" title="lief.PE.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lief</span> <span class="kn">import</span> <span class="n">PE</span>
+
+<span class="n">binary32</span> <span class="o">=</span> <span class="n">PE</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="s2">&quot;pe_from_scratch&quot;</span><span class="p">,</span> <span class="n">PE</span><span class="o">.</span><span class="n">PE_TYPE</span><span class="o">.</span><span class="n">PE32</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The first parameter is the binary’s name and the second, the binary’s type: <code class="docutils literal notranslate"><span class="pre">PE32</span></code> or <code class="docutils literal notranslate"><span class="pre">PE32_PLUS</span></code> (see <a class="reference internal" href="../api/python/pe.html#lief.PE.PE_TYPE" title="lief.PE.PE_TYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">PE_TYPE</span></code></a>).
+The <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary" title="lief.PE.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a>’s constructor creates automatically <a class="reference internal" href="../api/python/pe.html#lief.PE.DosHeader" title="lief.PE.DosHeader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DosHeader</span></code></a>, <a class="reference internal" href="../api/python/pe.html#lief.PE.Header" title="lief.PE.Header"><code class="xref py py-class docutils literal notranslate"><span class="pre">Header</span></code></a>, <a class="reference internal" href="../api/python/pe.html#lief.PE.OptionalHeader" title="lief.PE.OptionalHeader"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionalHeader</span></code></a> an empty <a class="reference internal" href="../api/python/pe.html#lief.PE.DataDirectory" title="lief.PE.DataDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataDirectory</span></code></a>.</p>
+<p>Now that we have a minimal binary, we have to add sections. We will have a first section holding assembly code (<code class="docutils literal notranslate"><span class="pre">.text</span></code>) and a second one containing strings (<code class="docutils literal notranslate"><span class="pre">.data</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">section_text</span>                 <span class="o">=</span> <span class="n">PE</span><span class="o">.</span><span class="n">Section</span><span class="p">(</span><span class="s2">&quot;.text&quot;</span><span class="p">)</span>
+<span class="n">section_text</span><span class="o">.</span><span class="n">content</span>         <span class="o">=</span> <span class="n">code</span>
+<span class="n">section_text</span><span class="o">.</span><span class="n">virtual_address</span> <span class="o">=</span> <span class="mh">0x1000</span>
+
+<span class="n">section_data</span>                 <span class="o">=</span> <span class="n">PE</span><span class="o">.</span><span class="n">Section</span><span class="p">(</span><span class="s2">&quot;.data&quot;</span><span class="p">)</span>
+<span class="n">section_data</span><span class="o">.</span><span class="n">content</span>         <span class="o">=</span> <span class="n">data</span>
+<span class="n">section_data</span><span class="o">.</span><span class="n">virtual_address</span> <span class="o">=</span> <span class="mh">0x2000</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">MessageBoxA</span></code> is composed of a title and a message. These two strings can be stored in the <code class="docutils literal notranslate"><span class="pre">.data</span></code> as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">title</span>   <span class="o">=</span> <span class="s2">&quot;LIEF is awesome</span><span class="se">\0</span><span class="s2">&quot;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello World</span><span class="se">\0</span><span class="s2">&quot;</span>
+
+<span class="n">data</span> <span class="o">=</span>  <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span> <span class="n">title</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">+=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The <strong>pseudo</strong> assembly code of the <code class="docutils literal notranslate"><span class="pre">.text</span></code> section is given in next listing:</p>
+<div class="highlight-nasm notranslate"><div class="highlight"><pre><span></span><span class="nf">push</span> <span class="mh">0x00</span>              <span class="c1">; uType</span>
+<span class="nf">push</span> <span class="s">&quot;LIEF is awesome&quot;</span> <span class="c1">; Title</span>
+<span class="nf">push</span> <span class="s">&quot;Hello World&quot;</span>     <span class="c1">; Message</span>
+<span class="nf">push</span> <span class="mi">0</span>                 <span class="c1">; hWnd</span>
+<span class="nf">call</span> <span class="nv">MessageBoxA</span>       <span class="c1">;</span>
+<span class="nf">push</span> <span class="mi">0</span>                 <span class="c1">; uExitCode</span>
+<span class="nf">call</span> <span class="nv">ExitProcess</span>       <span class="c1">;</span>
+</pre></div>
+</div>
+<p>Instead of pushing strings we have to push the <strong>virtual address</strong> of these strings. In the PE format a section’s virtual address is in fact a <strong>relative</strong> virtual address (relative to <code class="xref py py-attr docutils literal notranslate"><span class="pre">OptionalHeader.imagebase</span></code> when the ASLR is not enabled). By default the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary" title="lief.PE.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a>’s constructor sets the <a class="reference internal" href="../api/python/pe.html#lief.PE.OptionalHeader.imagebase" title="lief.PE.OptionalHeader.imagebase"><code class="xref py py-attr docutils literal notranslate"><span class="pre">imagebase</span></code></a> to <code class="docutils literal notranslate"><span class="pre">0x400000</span></code>.</p>
+<p>As a result, the virtual addresses of the strings are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>title</strong>: <a class="reference internal" href="../api/python/pe.html#lief.PE.OptionalHeader.imagebase" title="lief.PE.OptionalHeader.imagebase"><code class="xref py py-attr docutils literal notranslate"><span class="pre">imagebase</span></code></a> + <a class="reference internal" href="../api/python/pe.html#lief.PE.Section.virtual_address" title="lief.PE.Section.virtual_address"><code class="xref py py-attr docutils literal notranslate"><span class="pre">virtual_address</span></code></a> + 0 = <code class="docutils literal notranslate"><span class="pre">0x402000</span></code></p></li>
+<li><p><strong>message</strong>: <a class="reference internal" href="../api/python/pe.html#lief.PE.OptionalHeader.imagebase" title="lief.PE.OptionalHeader.imagebase"><code class="xref py py-attr docutils literal notranslate"><span class="pre">imagebase</span></code></a> + <a class="reference internal" href="../api/python/pe.html#lief.PE.Section.virtual_address" title="lief.PE.Section.virtual_address"><code class="xref py py-attr docutils literal notranslate"><span class="pre">virtual_address</span></code></a> + <code class="docutils literal notranslate"><span class="pre">len(title)</span></code> = <code class="docutils literal notranslate"><span class="pre">0x402010</span></code></p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-nasm notranslate"><div class="highlight"><pre><span></span><span class="nf">push</span> <span class="mh">0x00</span>              <span class="c1">; uType</span>
+<span class="nf">push</span> <span class="mh">0x402000</span>          <span class="c1">; Title</span>
+<span class="nf">push</span> <span class="mh">0x402010</span>          <span class="c1">; Message</span>
+<span class="nf">push</span> <span class="mi">0</span>                 <span class="c1">; hWnd</span>
+<span class="nf">call</span> <span class="nv">MessageBoxA</span>       <span class="c1">;</span>
+<span class="nf">push</span> <span class="mi">0</span>                 <span class="c1">; uExitCode</span>
+<span class="nf">call</span> <span class="nv">ExitProcess</span>       <span class="c1">;</span>
+</pre></div>
+</div>
+<p>As the code uses <code class="docutils literal notranslate"><span class="pre">MessageBoxA</span></code>, we need to import <code class="docutils literal notranslate"><span class="pre">user32.dll</span></code> into the binary’s <a class="reference internal" href="../api/python/pe.html#lief.PE.Import" title="lief.PE.Import"><code class="xref py py-class docutils literal notranslate"><span class="pre">Import</span></code></a>s and the <code class="docutils literal notranslate"><span class="pre">MessageBoxA</span></code> <a class="reference internal" href="../api/python/pe.html#lief.PE.ImportEntry" title="lief.PE.ImportEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImportEntry</span></code></a>.
+To do so, we can use the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary.add_library" title="lief.PE.Binary.add_library"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_library()</span></code></a> method combined with <a class="reference internal" href="../api/python/pe.html#lief.PE.Import.add_entry" title="lief.PE.Import.add_entry"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_entry()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user32</span> <span class="o">=</span> <span class="n">binary32</span><span class="o">.</span><span class="n">add_library</span><span class="p">(</span><span class="s2">&quot;user32.dll&quot;</span><span class="p">)</span>
+<span class="n">user32</span><span class="o">.</span><span class="n">add_entry</span><span class="p">(</span><span class="s2">&quot;MessageBoxA&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Same for <code class="docutils literal notranslate"><span class="pre">ExitProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">kernel32.dll</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kernel32</span> <span class="o">=</span> <span class="n">binary32</span><span class="o">.</span><span class="n">add_library</span><span class="p">(</span><span class="s2">&quot;kernel32.dll&quot;</span><span class="p">)</span>
+<span class="n">kernel32</span><span class="o">.</span><span class="n">add_entry</span><span class="p">(</span><span class="s2">&quot;ExitProcess&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once needed libraries and functions are added to the binary, we have to determine their addresses (<strong>I</strong>mport <strong>A</strong>ddress <strong>T</strong>able).</p>
+<p>For that, we can use the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary.predict_function_rva" title="lief.PE.Binary.predict_function_rva"><code class="xref py py-meth docutils literal notranslate"><span class="pre">predict_function_rva()</span></code></a> method which will return the <code class="docutils literal notranslate"><span class="pre">IAT</span></code> address set by the <a class="reference internal" href="../api/python/pe.html#lief.PE.Builder" title="lief.PE.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a>:</p>
+<dl class="method">
+<dt>
+<code class="sig-prename descclassname">Binary.</code><code class="sig-name descname">predict_function_rva</code><span class="sig-paren">(</span><em class="sig-param">self: lief.PE.Binary</em>, <em class="sig-param">library: str</em>, <em class="sig-param">function: str</em><span class="sig-paren">)</span> &#x2192; int</dt>
+<dd><p>Try to predict the RVA of the given function name in the given import library name</p>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ExitProcess_addr</span> <span class="o">=</span> <span class="n">binary32</span><span class="o">.</span><span class="n">predict_function_rva</span><span class="p">(</span><span class="s2">&quot;kernel32.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;ExitProcess&quot;</span><span class="p">)</span>
+<span class="n">MessageBoxA_addr</span> <span class="o">=</span> <span class="n">binary32</span><span class="o">.</span><span class="n">predict_function_rva</span><span class="p">(</span><span class="s2">&quot;user32.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;MessageBoxA&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Address of &#39;ExitProcess&#39;: 0x{:06x} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ExitProcess_addr</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Address of &#39;MessageBoxA&#39;: 0x{:06x} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">MessageBoxA_addr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Address of &#39;ExitProcess&#39;: 0x00306a</span>
+<span class="go">Address of &#39;MessageBoxA&#39;: 0x00305c</span>
+</pre></div>
+</div>
+<p>Thus, the <strong>absolute</strong> virtual addresses of <code class="docutils literal notranslate"><span class="pre">MessageBoxA</span></code> and <code class="docutils literal notranslate"><span class="pre">ExitProcess</span></code> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MessageBoxA</span></code>: <a class="reference internal" href="../api/python/pe.html#lief.PE.OptionalHeader.imagebase" title="lief.PE.OptionalHeader.imagebase"><code class="xref py py-attr docutils literal notranslate"><span class="pre">imagebase</span></code></a> + <code class="docutils literal notranslate"><span class="pre">0x306a</span></code> = <code class="docutils literal notranslate"><span class="pre">0x40306a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExitProcess</span></code>: <a class="reference internal" href="../api/python/pe.html#lief.PE.OptionalHeader.imagebase" title="lief.PE.OptionalHeader.imagebase"><code class="xref py py-attr docutils literal notranslate"><span class="pre">imagebase</span></code></a> + <code class="docutils literal notranslate"><span class="pre">0x305c</span></code> = <code class="docutils literal notranslate"><span class="pre">0x40305c</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>And the associated assembly code:</p>
+<div class="highlight-nasm notranslate"><div class="highlight"><pre><span></span><span class="nf">push</span> <span class="mh">0x00</span>              <span class="c1">; uType</span>
+<span class="nf">push</span> <span class="mh">0x402000</span>          <span class="c1">; Title</span>
+<span class="nf">push</span> <span class="mh">0x402010</span>          <span class="c1">; Message</span>
+<span class="nf">push</span> <span class="mi">0</span>                 <span class="c1">; hWnd</span>
+<span class="nf">call</span> <span class="mh">0x40306a</span>          <span class="c1">;</span>
+<span class="nf">push</span> <span class="mi">0</span>                 <span class="c1">; uExitCode</span>
+<span class="nf">call</span> <span class="mh">0x40305c</span>          <span class="c1">;</span>
+</pre></div>
+</div>
+<p>The transformation of the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary" title="lief.PE.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> into an executable is performed by the <a class="reference internal" href="../api/python/pe.html#lief.PE.Builder" title="lief.PE.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a> class.</p>
+<p>By default the import table is not rebuilt so we have to configure the builder to rebuild it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">builder</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">Builder</span><span class="p">(</span><span class="n">binary32</span><span class="p">)</span>
+<span class="n">builder</span><span class="o">.</span><span class="n">build_imports</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<span class="n">builder</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;pe_from_scratch.exe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can now enjoy the newly created binary.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="03_elf_change_symbols.html" class="btn btn-neutral float-right" title="03 - Play with ELF symbols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01_play_with_formats.html" class="btn btn-neutral float-left" title="01 - Parse and manipulate formats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

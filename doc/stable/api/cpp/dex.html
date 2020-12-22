@@ -1,0 +1,1694 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DEX &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="VDEX" href="vdex.html" />
+    <link rel="prev" title="OAT" href="oat.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="abstract.html">Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html">ELF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html">PE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html">MachO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html">OAT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DEX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utilities">Utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parser">Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class">Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-info">Code Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prototype">Prototype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maplist">MapList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapitem">MapItem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html">VDEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="art.html">ART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platforms/android.html">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#iterators">Iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#logging">Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++</a> &raquo;</li>
+        
+      <li>DEX</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/cpp/dex.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dex">
+<h1>DEX<a class="headerlink" href="#dex" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6is_dexERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX6is_dexERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX6is_dexERKNSt6stringE"></span><span id="LIEF::DEX::is_dex__ssCR"></span><span class="target" id="namespaceLIEF_1_1DEX_1a1c6b996b5aa1fa99a47bdf16ba798593"></span>bool <code class="sig-prename descclassname">LIEF::DEX<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">is_dex</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>file</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Check if the given file is an DEX one. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6is_dexERKNSt6vectorI7uint8_tEE">
+<span id="_CPPv3N4LIEF3DEX6is_dexERKNSt6vectorI7uint8_tEE"></span><span id="_CPPv2N4LIEF3DEX6is_dexERKNSt6vectorI7uint8_tEE"></span><span id="LIEF::DEX::is_dex__std::vector:uint8_t:CR"></span><span class="target" id="namespaceLIEF_1_1DEX_1a0f76e8b9b7ea174b14b52308b48d1bf7"></span>bool <code class="sig-prename descclassname">LIEF::DEX<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">is_dex</code><span class="sig-paren">(</span><em class="property">const</em> std::vector&lt;uint8_t&gt; &amp;<em>raw</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Check if the given raw data is an DEX one. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7versionERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX7versionERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX7versionERKNSt6stringE"></span><span id="LIEF::DEX::version__ssCR"></span><span class="target" id="namespaceLIEF_1_1DEX_1a2c90fb3d87904f83f09cbe4aca53db9a"></span>dex_version_t <code class="sig-prename descclassname">LIEF::DEX<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">version</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>file</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return the DEX version of the given file. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7versionERKNSt6vectorI7uint8_tEE">
+<span id="_CPPv3N4LIEF3DEX7versionERKNSt6vectorI7uint8_tEE"></span><span id="_CPPv2N4LIEF3DEX7versionERKNSt6vectorI7uint8_tEE"></span><span id="LIEF::DEX::version__std::vector:uint8_t:CR"></span><span class="target" id="namespaceLIEF_1_1DEX_1a9ee06173693df66f747a48cee57f2d07"></span>dex_version_t <code class="sig-prename descclassname">LIEF::DEX<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">version</code><span class="sig-paren">(</span><em class="property">const</em> std::vector&lt;uint8_t&gt; &amp;<em>raw</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return the DEX version of the raw data. </p>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="parser">
+<h2>Parser<a class="headerlink" href="#parser" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX6ParserE">
+<span id="_CPPv3N4LIEF3DEX6ParserE"></span><span id="_CPPv2N4LIEF3DEX6ParserE"></span><span id="LIEF::DEX::Parser"></span><span class="target" id="classLIEF_1_1DEX_1_1Parser"></span><em class="property">class </em><code class="sig-name descname">Parser</code><a class="headerlink" href="#_CPPv4N4LIEF3DEX6ParserE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Class"><span class="std std-ref">Class</span></a> which parse a DEX file and transform into a <a class="reference internal" href="#classLIEF_1_1DEX_1_1File"><span class="std std-ref">DEX::File</span></a> object. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6ParseraSERK6Parser">
+<span id="_CPPv3N4LIEF3DEX6ParseraSERK6Parser"></span><span id="_CPPv2N4LIEF3DEX6ParseraSERK6Parser"></span><span id="LIEF::DEX::Parser::assign-operator__ParserCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Parser_1a37e3b1710e7464091809a6f822cea4e6"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6ParserE" title="LIEF::DEX::Parser">Parser</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6ParserE" title="LIEF::DEX::Parser">Parser</a> &amp;<em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6ParseraSERK6Parser" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Parser6ParserERK6Parser">
+<span id="_CPPv3N4LIEF3DEX6Parser6ParserERK6Parser"></span><span id="_CPPv2N4LIEF3DEX6Parser6ParserERK6Parser"></span><span id="LIEF::DEX::Parser::Parser__ParserCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Parser_1a72a0dcbe74e9457541435e96e43a41ef"></span><code class="sig-name descname">Parser</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6Parser6ParserERK6Parser" title="LIEF::DEX::Parser::Parser">Parser</a> &amp;<em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Parser6ParserERK6Parser" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Parser5parseERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX6Parser5parseERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX6Parser5parseERKNSt6stringE"></span><span id="LIEF::DEX::Parser::parse__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Parser_1ab62c1ca2525f4b1ca753ab0c881f35ec"></span>std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX4FileE" title="LIEF::DEX::File">File</a>&gt; <code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Parser5parseERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Parser5parseERKNSt6vectorI7uint8_tEERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX6Parser5parseERKNSt6vectorI7uint8_tEERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX6Parser5parseERKNSt6vectorI7uint8_tEERKNSt6stringE"></span><span id="LIEF::DEX::Parser::parse__std::vector:uint8_t:CR.ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Parser_1af5d55b9ce6ed0d3dcd5e25e84d359f78"></span>std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX4FileE" title="LIEF::DEX::File">File</a>&gt; <code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="property">const</em> std::vector&lt;uint8_t&gt; &amp;<em>data</em>, <em class="property">const</em> std::string &amp;<em>name</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Parser5parseERKNSt6vectorI7uint8_tEERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="file">
+<h2>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX4FileE">
+<span id="_CPPv3N4LIEF3DEX4FileE"></span><span id="_CPPv2N4LIEF3DEX4FileE"></span><span id="LIEF::DEX::File"></span><span class="target" id="classLIEF_1_1DEX_1_1File"></span><em class="property">class </em><code class="sig-name descname">File</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX4FileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4FileaSERK4File">
+<span id="_CPPv3N4LIEF3DEX4FileaSERK4File"></span><span id="_CPPv2N4LIEF3DEX4FileaSERK4File"></span><span id="LIEF::DEX::File::assign-operator__FileCR"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a07d30c4c24f5e999a083d6f22ccfa05b"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4FileE" title="LIEF::DEX::File">File</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4FileE" title="LIEF::DEX::File">File</a> &amp;<em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4FileaSERK4File" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File4FileERK4File">
+<span id="_CPPv3N4LIEF3DEX4File4FileERK4File"></span><span id="_CPPv2N4LIEF3DEX4File4FileERK4File"></span><span id="LIEF::DEX::File::File__FileCR"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a9d3ed758a1313baf5321de7ea0e32cfd"></span><code class="sig-name descname">File</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4File4FileERK4File" title="LIEF::DEX::File::File">File</a> &amp;<em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File4FileERK4File" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File7versionEv">
+<span id="_CPPv3NK4LIEF3DEX4File7versionEv"></span><span id="_CPPv2NK4LIEF3DEX4File7versionEv"></span><span id="LIEF::DEX::File::version__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a7af9da937f7ebc62adce0b79b9b4971a"></span>dex_version_t <code class="sig-name descname">version</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File7versionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Version of the current DEX file. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File4nameEv">
+<span id="_CPPv3NK4LIEF3DEX4File4nameEv"></span><span id="_CPPv2NK4LIEF3DEX4File4nameEv"></span><span id="LIEF::DEX::File::name__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ab79c3ca20421f09c57886d928791c874"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File4nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Name of this file. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File4nameERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX4File4nameERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX4File4nameERKNSt6stringE"></span><span id="LIEF::DEX::File::name__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ae6bc6f67e701ad6c7b1d607a0628e7c1"></span>void <code class="sig-name descname">name</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File4nameERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File8locationEv">
+<span id="_CPPv3NK4LIEF3DEX4File8locationEv"></span><span id="_CPPv2NK4LIEF3DEX4File8locationEv"></span><span id="LIEF::DEX::File::location__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1abd44535e36febe966760eca9ffbc62e9"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">location</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File8locationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Location of this file. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File8locationERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX4File8locationERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX4File8locationERKNSt6stringE"></span><span id="LIEF::DEX::File::location__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a12c9426e9336ec23a86d66514cab284b"></span>void <code class="sig-name descname">location</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File8locationERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File6headerEv">
+<span id="_CPPv3NK4LIEF3DEX4File6headerEv"></span><span id="_CPPv2NK4LIEF3DEX4File6headerEv"></span><span id="LIEF::DEX::File::header__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a0273481eb426e1763c034f6550c84d65"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a> &amp;<code class="sig-name descname">header</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File6headerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>DEX header. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File6headerEv">
+<span id="_CPPv3N4LIEF3DEX4File6headerEv"></span><span id="_CPPv2N4LIEF3DEX4File6headerEv"></span><span id="LIEF::DEX::File::header__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a3c1b3ceaf4709d005b6da4f526530b2f"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a> &amp;<code class="sig-name descname">header</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File6headerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File7classesEv">
+<span id="_CPPv3NK4LIEF3DEX4File7classesEv"></span><span id="_CPPv2NK4LIEF3DEX4File7classesEv"></span><span id="LIEF::DEX::File::classes__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a4a60bac6dd8c032b81e6b95cbbb1b215"></span>it_const_classes <code class="sig-name descname">classes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File7classesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><strong>All</strong> classes used in the DEX file </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File7classesEv">
+<span id="_CPPv3N4LIEF3DEX4File7classesEv"></span><span id="_CPPv2N4LIEF3DEX4File7classesEv"></span><span id="LIEF::DEX::File::classes__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a57f7e4f94685904db8bbaf8fdf76ceae"></span>it_classes <code class="sig-name descname">classes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File7classesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File9has_classERKNSt6stringE">
+<span id="_CPPv3NK4LIEF3DEX4File9has_classERKNSt6stringE"></span><span id="_CPPv2NK4LIEF3DEX4File9has_classERKNSt6stringE"></span><span id="LIEF::DEX::File::has_class__ssCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a9c6892b7b2f708db0123a2c98dbee197"></span>bool <code class="sig-name descname">has_class</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>class_name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File9has_classERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the given class name exists. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File9get_classERKNSt6stringE">
+<span id="_CPPv3NK4LIEF3DEX4File9get_classERKNSt6stringE"></span><span id="_CPPv2NK4LIEF3DEX4File9get_classERKNSt6stringE"></span><span id="LIEF::DEX::File::get_class__ssCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a5d0fe52a90b1625c072b50739445dca4"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">get_class</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>class_name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File9get_classERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1DEX_1_1Class"><span class="std std-ref">DEX::Class</span></a> object associated with the given name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File9get_classERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX4File9get_classERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX4File9get_classERKNSt6stringE"></span><span id="LIEF::DEX::File::get_class__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a6189f34b0ac047af14736cbffff48687"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">get_class</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>class_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File9get_classERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File9get_classE6size_t">
+<span id="_CPPv3NK4LIEF3DEX4File9get_classE6size_t"></span><span id="_CPPv2NK4LIEF3DEX4File9get_classE6size_t"></span><span id="LIEF::DEX::File::get_class__sC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a45aa22fe32e535f3f035c352d1aabb62"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">get_class</code><span class="sig-paren">(</span>size_t <em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File9get_classE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1DEX_1_1Class"><span class="std std-ref">DEX::Class</span></a> object associated with the given index. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File9get_classE6size_t">
+<span id="_CPPv3N4LIEF3DEX4File9get_classE6size_t"></span><span id="_CPPv2N4LIEF3DEX4File9get_classE6size_t"></span><span id="LIEF::DEX::File::get_class__s"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a0b0260147e24e7a37bc49dbec14f9e8b"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">get_class</code><span class="sig-paren">(</span>size_t <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File9get_classE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File12dex2dex_infoEv">
+<span id="_CPPv3NK4LIEF3DEX4File12dex2dex_infoEv"></span><span id="_CPPv2NK4LIEF3DEX4File12dex2dex_infoEv"></span><span id="LIEF::DEX::File::dex2dex_info__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ae8d2ccd2a767e1359ae1aa7e8476c5c5"></span>dex2dex_info_t <code class="sig-name descname">dex2dex_info</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File12dex2dex_infoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>De-optimize information. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File17dex2dex_json_infoEv">
+<span id="_CPPv3N4LIEF3DEX4File17dex2dex_json_infoEv"></span><span id="_CPPv2N4LIEF3DEX4File17dex2dex_json_infoEv"></span><span id="LIEF::DEX::File::dex2dex_json_info__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ab57207911b27c873d468f95ccf2ba396"></span>std::string <code class="sig-name descname">dex2dex_json_info</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File17dex2dex_json_infoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>De-optimize information as JSON. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File7methodsEv">
+<span id="_CPPv3NK4LIEF3DEX4File7methodsEv"></span><span id="_CPPv2NK4LIEF3DEX4File7methodsEv"></span><span id="LIEF::DEX::File::methods__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a4dffbe28764888691ad1c2855181056a"></span>it_const_methods <code class="sig-name descname">methods</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File7methodsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><strong>All</strong> Methods used in this DEX </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File7methodsEv">
+<span id="_CPPv3N4LIEF3DEX4File7methodsEv"></span><span id="_CPPv2N4LIEF3DEX4File7methodsEv"></span><span id="LIEF::DEX::File::methods__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1aa6644e6505d857b9a50d05ea39b7dc83"></span>it_methods <code class="sig-name descname">methods</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File7methodsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File7stringsEv">
+<span id="_CPPv3NK4LIEF3DEX4File7stringsEv"></span><span id="_CPPv2NK4LIEF3DEX4File7stringsEv"></span><span id="LIEF::DEX::File::strings__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a4098122468b007c06f81edadffa778be"></span>it_const_strings <code class="sig-name descname">strings</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File7stringsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>String pool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File7stringsEv">
+<span id="_CPPv3N4LIEF3DEX4File7stringsEv"></span><span id="_CPPv2N4LIEF3DEX4File7stringsEv"></span><span id="LIEF::DEX::File::strings__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a748e9f99bcfab35ee3fc42ecdf34a414"></span>it_strings <code class="sig-name descname">strings</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File7stringsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File5typesEv">
+<span id="_CPPv3NK4LIEF3DEX4File5typesEv"></span><span id="_CPPv2NK4LIEF3DEX4File5typesEv"></span><span id="LIEF::DEX::File::types__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a3cf4883fff7d4c1443089fa47ade2072"></span>it_const_types <code class="sig-name descname">types</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File5typesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Type"><span class="std std-ref">Type</span></a> pool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File5typesEv">
+<span id="_CPPv3N4LIEF3DEX4File5typesEv"></span><span id="_CPPv2N4LIEF3DEX4File5typesEv"></span><span id="LIEF::DEX::File::types__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a911ce8e263e1c9fb7ba0f0f40cbe14f4"></span>it_types <code class="sig-name descname">types</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File5typesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File10prototypesEv">
+<span id="_CPPv3NK4LIEF3DEX4File10prototypesEv"></span><span id="_CPPv2NK4LIEF3DEX4File10prototypesEv"></span><span id="LIEF::DEX::File::prototypes__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1aa323c6e1bdd70f0c9e1defa71d9b774f"></span>it_const_protypes <code class="sig-name descname">prototypes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File10prototypesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Prototype"><span class="std std-ref">Prototype</span></a> pool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File10prototypesEv">
+<span id="_CPPv3N4LIEF3DEX4File10prototypesEv"></span><span id="_CPPv2N4LIEF3DEX4File10prototypesEv"></span><span id="LIEF::DEX::File::prototypes__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a5644e2f658033d29f95e1d093a2996c4"></span>it_protypes <code class="sig-name descname">prototypes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File10prototypesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File3mapEv">
+<span id="_CPPv3NK4LIEF3DEX4File3mapEv"></span><span id="_CPPv2NK4LIEF3DEX4File3mapEv"></span><span id="LIEF::DEX::File::map__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ab394c6dc912771ad3928394e5732c613"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a> &amp;<code class="sig-name descname">map</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File3mapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>DEX Map. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4File3mapEv">
+<span id="_CPPv3N4LIEF3DEX4File3mapEv"></span><span id="_CPPv2N4LIEF3DEX4File3mapEv"></span><span id="LIEF::DEX::File::map__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ac6d9e6e57d470cf50fb9cc0830c28b99"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a> &amp;<code class="sig-name descname">map</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4File3mapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File4saveEKNSt6stringEb">
+<span id="_CPPv3NK4LIEF3DEX4File4saveEKNSt6stringEb"></span><span id="_CPPv2NK4LIEF3DEX4File4saveEKNSt6stringEb"></span><span id="LIEF::DEX::File::save__ssC.bC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ad2771dd049c8a17a0a7c806936ddbcb7"></span>std::string <code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="property">const</em> std::string <em>path</em> = &quot;&quot;, bool <em>deoptimize</em> = true<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File4saveEKNSt6stringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Extract the current dex file and deoptimize it. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File3rawEb">
+<span id="_CPPv3NK4LIEF3DEX4File3rawEb"></span><span id="_CPPv2NK4LIEF3DEX4File3rawEb"></span><span id="LIEF::DEX::File::raw__bC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a1d3a1f68861d93bb502684306e87db68"></span>std::vector&lt;uint8_t&gt; <code class="sig-name descname">raw</code><span class="sig-paren">(</span>bool <em>deoptimize</em> = true<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File3rawEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4File6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX4File6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX4File6acceptER7Visitor"></span><span id="LIEF::DEX::File::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1a0433b994308da89a43dad750fb7b08a7"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4File6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4FileeqERK4File">
+<span id="_CPPv3NK4LIEF3DEX4FileeqERK4File"></span><span id="_CPPv2NK4LIEF3DEX4FileeqERK4File"></span><span id="LIEF::DEX::File::eq-operator__FileCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ae3f72dc80a7cdf6140cf56cad1925b42"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4FileE" title="LIEF::DEX::File">File</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4FileeqERK4File" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4FileneERK4File">
+<span id="_CPPv3NK4LIEF3DEX4FileneERK4File"></span><span id="_CPPv2NK4LIEF3DEX4FileneERK4File"></span><span id="LIEF::DEX::File::neq-operator__FileCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ad5ee936ad413b1ab032801dbfcd40ffb"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4FileE" title="LIEF::DEX::File">File</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4FileneERK4File" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4FileD0Ev">
+<span id="_CPPv3N4LIEF3DEX4FileD0Ev"></span><span id="_CPPv2N4LIEF3DEX4FileD0Ev"></span><span id="LIEF::DEX::File::~File__void"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ae32e9515cde9e971e0ca2a81ba5393c3"></span><code class="sig-name descname">~File</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4FileD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK4File">
+<span id="_CPPv3lsRNSt7ostreamERK4File"></span><span id="_CPPv2lsRNSt7ostreamERK4File"></span><span id="lshift-operator__osR.FileCR"></span><span class="target" id="classLIEF_1_1DEX_1_1File_1ae6f568929c0b0c2b4e67c3dc9762002b"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> File &amp;<em>file</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="header">
+<h2>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX6HeaderE">
+<span id="_CPPv3N4LIEF3DEX6HeaderE"></span><span id="_CPPv2N4LIEF3DEX6HeaderE"></span><span id="LIEF::DEX::Header"></span><span class="target" id="classLIEF_1_1DEX_1_1Header"></span><em class="property">class </em><code class="sig-name descname">Header</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX6HeaderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX6Header10location_tE">
+<span id="_CPPv3N4LIEF3DEX6Header10location_tE"></span><span id="_CPPv2N4LIEF3DEX6Header10location_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a467c3871b2a113cebc656997cd8c28a0"></span><em class="property">using </em><code class="sig-name descname">location_t</code> = std::pair&lt;uint32_t, uint32_t&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Header6HeaderEv">
+<span id="_CPPv3N4LIEF3DEX6Header6HeaderEv"></span><span id="_CPPv2N4LIEF3DEX6Header6HeaderEv"></span><span id="LIEF::DEX::Header::Header__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a05c5ccba49004c468f53f3b48cbdf163"></span><code class="sig-name descname">Header</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Header6HeaderEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Header6HeaderERK6Header">
+<span id="_CPPv3N4LIEF3DEX6Header6HeaderERK6Header"></span><span id="_CPPv2N4LIEF3DEX6Header6HeaderERK6Header"></span><span id="LIEF::DEX::Header::Header__HeaderCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ad85ed4aefc429962ce313872402fa6e2"></span><code class="sig-name descname">Header</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header6HeaderEv" title="LIEF::DEX::Header::Header">Header</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Header6HeaderERK6Header" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6HeaderaSERK6Header">
+<span id="_CPPv3N4LIEF3DEX6HeaderaSERK6Header"></span><span id="_CPPv2N4LIEF3DEX6HeaderaSERK6Header"></span><span id="LIEF::DEX::Header::assign-operator__HeaderCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ab7567ae1786446b5f694055d3e0be5fc"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6HeaderaSERK6Header" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4I0EN4LIEF3DEX6Header6HeaderEPK1T">
+<span id="_CPPv3I0EN4LIEF3DEX6Header6HeaderEPK1T"></span><span id="_CPPv2I0EN4LIEF3DEX6Header6HeaderEPK1T"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a1fed74ae6e7beac844837ba5c5f7b09e"></span>template&lt;class <code class="sig-name descname">T</code>&gt;<br /><code class="sig-name descname">Header</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4I0EN4LIEF3DEX6Header6HeaderEPK1T" title="LIEF::DEX::Header::Header::T">T</a> *<em>header</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN4LIEF3DEX6Header6HeaderEPK1T" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header5magicEv">
+<span id="_CPPv3NK4LIEF3DEX6Header5magicEv"></span><span id="_CPPv2NK4LIEF3DEX6Header5magicEv"></span><span id="LIEF::DEX::Header::magic__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a66b6eb10ede1343444206100bdc76069"></span>magic_t <code class="sig-name descname">magic</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header5magicEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header8checksumEv">
+<span id="_CPPv3NK4LIEF3DEX6Header8checksumEv"></span><span id="_CPPv2NK4LIEF3DEX6Header8checksumEv"></span><span id="LIEF::DEX::Header::checksum__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a0a86375339ae342c89789641ebdaf76f"></span>uint32_t <code class="sig-name descname">checksum</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header8checksumEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header9signatureEv">
+<span id="_CPPv3NK4LIEF3DEX6Header9signatureEv"></span><span id="_CPPv2NK4LIEF3DEX6Header9signatureEv"></span><span id="LIEF::DEX::Header::signature__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1aba85d6e9e652d71ffda0c26557fe0c72"></span>signature_t <code class="sig-name descname">signature</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header9signatureEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header9file_sizeEv">
+<span id="_CPPv3NK4LIEF3DEX6Header9file_sizeEv"></span><span id="_CPPv2NK4LIEF3DEX6Header9file_sizeEv"></span><span id="LIEF::DEX::Header::file_size__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1afaf99eb8c8560ab1ed0273b211494825"></span>uint32_t <code class="sig-name descname">file_size</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header9file_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header11header_sizeEv">
+<span id="_CPPv3NK4LIEF3DEX6Header11header_sizeEv"></span><span id="_CPPv2NK4LIEF3DEX6Header11header_sizeEv"></span><span id="LIEF::DEX::Header::header_size__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ab5d322a5154d5c4ebcd26c212693d487"></span>uint32_t <code class="sig-name descname">header_size</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header11header_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header10endian_tagEv">
+<span id="_CPPv3NK4LIEF3DEX6Header10endian_tagEv"></span><span id="_CPPv2NK4LIEF3DEX6Header10endian_tagEv"></span><span id="LIEF::DEX::Header::endian_tag__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a8193c900dc8d20b663dceb7bcc106bff"></span>uint32_t <code class="sig-name descname">endian_tag</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header10endian_tagEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header3mapEv">
+<span id="_CPPv3NK4LIEF3DEX6Header3mapEv"></span><span id="_CPPv2NK4LIEF3DEX6Header3mapEv"></span><span id="LIEF::DEX::Header::map__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ae669e67b65e567b0e743d3fcb2becbbc"></span>uint32_t <code class="sig-name descname">map</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header3mapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header7stringsEv">
+<span id="_CPPv3NK4LIEF3DEX6Header7stringsEv"></span><span id="_CPPv2NK4LIEF3DEX6Header7stringsEv"></span><span id="LIEF::DEX::Header::strings__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a6913c3255da08d3c3d13ead9fb60c19c"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">strings</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header7stringsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header4linkEv">
+<span id="_CPPv3NK4LIEF3DEX6Header4linkEv"></span><span id="_CPPv2NK4LIEF3DEX6Header4linkEv"></span><span id="LIEF::DEX::Header::link__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a64a45d56f30aa66da29155bf6f9f5891"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">link</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header4linkEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header5typesEv">
+<span id="_CPPv3NK4LIEF3DEX6Header5typesEv"></span><span id="_CPPv2NK4LIEF3DEX6Header5typesEv"></span><span id="LIEF::DEX::Header::types__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ac761223c29967fc2c15da6e01dc0e1b2"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">types</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header5typesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header10prototypesEv">
+<span id="_CPPv3NK4LIEF3DEX6Header10prototypesEv"></span><span id="_CPPv2NK4LIEF3DEX6Header10prototypesEv"></span><span id="LIEF::DEX::Header::prototypes__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a7c26e231e20e3e97642f45f729f05480"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">prototypes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header10prototypesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header6fieldsEv">
+<span id="_CPPv3NK4LIEF3DEX6Header6fieldsEv"></span><span id="_CPPv2NK4LIEF3DEX6Header6fieldsEv"></span><span id="LIEF::DEX::Header::fields__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ad40598fec06ffa271e1dafb3f5d57f37"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">fields</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header6fieldsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header7methodsEv">
+<span id="_CPPv3NK4LIEF3DEX6Header7methodsEv"></span><span id="_CPPv2NK4LIEF3DEX6Header7methodsEv"></span><span id="LIEF::DEX::Header::methods__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a9d1acef05c42b4b38a9f1e34424c6d2f"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">methods</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header7methodsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header7classesEv">
+<span id="_CPPv3NK4LIEF3DEX6Header7classesEv"></span><span id="_CPPv2NK4LIEF3DEX6Header7classesEv"></span><span id="LIEF::DEX::Header::classes__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a7ab2031ed743d77e1a981d10617625a3"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">classes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header7classesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header4dataEv">
+<span id="_CPPv3NK4LIEF3DEX6Header4dataEv"></span><span id="_CPPv2NK4LIEF3DEX6Header4dataEv"></span><span id="LIEF::DEX::Header::data__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ac6b7415228b10926708217801ef9d94c"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Header10location_tE" title="LIEF::DEX::Header::location_t">location_t</a> <code class="sig-name descname">data</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header4dataEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header10nb_classesEv">
+<span id="_CPPv3NK4LIEF3DEX6Header10nb_classesEv"></span><span id="_CPPv2NK4LIEF3DEX6Header10nb_classesEv"></span><span id="LIEF::DEX::Header::nb_classes__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1afc5105df9303bb21d8318dbc4c13c4fc"></span>uint32_t <code class="sig-name descname">nb_classes</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header10nb_classesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header10nb_methodsEv">
+<span id="_CPPv3NK4LIEF3DEX6Header10nb_methodsEv"></span><span id="_CPPv2NK4LIEF3DEX6Header10nb_methodsEv"></span><span id="LIEF::DEX::Header::nb_methods__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1aa773587abf51e90aae17e456501b2b99"></span>uint32_t <code class="sig-name descname">nb_methods</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header10nb_methodsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Header6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX6Header6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX6Header6acceptER7Visitor"></span><span id="LIEF::DEX::Header::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1ad2a443954abee9eee65892fc7782c6c8"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Header6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6HeadereqERK6Header">
+<span id="_CPPv3NK4LIEF3DEX6HeadereqERK6Header"></span><span id="_CPPv2NK4LIEF3DEX6HeadereqERK6Header"></span><span id="LIEF::DEX::Header::eq-operator__HeaderCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a6dec0e3fea19bffd9c41d181fc2dd0c2"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6HeadereqERK6Header" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6HeaderneERK6Header">
+<span id="_CPPv3NK4LIEF3DEX6HeaderneERK6Header"></span><span id="_CPPv2NK4LIEF3DEX6HeaderneERK6Header"></span><span id="LIEF::DEX::Header::neq-operator__HeaderCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a2b7fc646f61251277cea5ab2c106a8be"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6HeaderE" title="LIEF::DEX::Header">Header</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6HeaderneERK6Header" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6HeaderD0Ev">
+<span id="_CPPv3N4LIEF3DEX6HeaderD0Ev"></span><span id="_CPPv2N4LIEF3DEX6HeaderD0Ev"></span><span id="LIEF::DEX::Header::~Header__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a4a31b6deb38269925ec573f3af758cb7"></span><code class="sig-name descname">~Header</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6HeaderD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK6Header">
+<span id="_CPPv3lsRNSt7ostreamERK6Header"></span><span id="_CPPv2lsRNSt7ostreamERK6Header"></span><span id="lshift-operator__osR.HeaderCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Header_1a431f6e0bc64b3208ecdfb9f6b9207b00"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> Header &amp;<em>hdr</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="method">
+<h2>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX6MethodE">
+<span id="_CPPv3N4LIEF3DEX6MethodE"></span><span id="_CPPv2N4LIEF3DEX6MethodE"></span><span id="LIEF::DEX::Method"></span><span class="target" id="classLIEF_1_1DEX_1_1Method"></span><em class="property">class </em><code class="sig-name descname">Method</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX6MethodE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX6Method19access_flags_list_tE">
+<span id="_CPPv3N4LIEF3DEX6Method19access_flags_list_tE"></span><span id="_CPPv2N4LIEF3DEX6Method19access_flags_list_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a66f19e3db6241f0b9257d2a8affa2e5d"></span><em class="property">using </em><code class="sig-name descname">access_flags_list_t</code> = std::vector&lt;ACCESS_FLAGS&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method19access_flags_list_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX6Method10bytecode_tE">
+<span id="_CPPv3N4LIEF3DEX6Method10bytecode_tE"></span><span id="_CPPv2N4LIEF3DEX6Method10bytecode_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a33a5325fe75c4048582eb8b80d4bf5c0"></span><em class="property">using </em><code class="sig-name descname">bytecode_t</code> = std::vector&lt;uint8_t&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method10bytecode_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Method6MethodEv">
+<span id="_CPPv3N4LIEF3DEX6Method6MethodEv"></span><span id="_CPPv2N4LIEF3DEX6Method6MethodEv"></span><span id="LIEF::DEX::Method::Method__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1af35169d46d39ad5a5713ec2743168418"></span><code class="sig-name descname">Method</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method6MethodEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Method6MethodERKNSt6stringEP5Class">
+<span id="_CPPv3N4LIEF3DEX6Method6MethodERKNSt6stringEP5Class"></span><span id="_CPPv2N4LIEF3DEX6Method6MethodERKNSt6stringEP5Class"></span><span id="LIEF::DEX::Method::Method__ssCR.ClassP"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a65b6983add3a0bf11a0f7af8cdf3e585"></span><code class="sig-name descname">Method</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em>, <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method6MethodERKNSt6stringEP5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Method6MethodERK6Method">
+<span id="_CPPv3N4LIEF3DEX6Method6MethodERK6Method"></span><span id="_CPPv2N4LIEF3DEX6Method6MethodERK6Method"></span><span id="LIEF::DEX::Method::Method__MethodCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a5fb06000f7fad2333d45d97b09693ef7"></span><code class="sig-name descname">Method</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6Method6MethodEv" title="LIEF::DEX::Method::Method">Method</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method6MethodERK6Method" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6MethodaSERK6Method">
+<span id="_CPPv3N4LIEF3DEX6MethodaSERK6Method"></span><span id="_CPPv2N4LIEF3DEX6MethodaSERK6Method"></span><span id="LIEF::DEX::Method::assign-operator__MethodCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1aa5e6d2f25d1f7beb73b46ecd3ddac398"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6MethodE" title="LIEF::DEX::Method">Method</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6MethodE" title="LIEF::DEX::Method">Method</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6MethodaSERK6Method" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method4nameEv">
+<span id="_CPPv3NK4LIEF3DEX6Method4nameEv"></span><span id="_CPPv2NK4LIEF3DEX6Method4nameEv"></span><span id="LIEF::DEX::Method::name__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1ab62396b4035c9a399d3cc91abd8d589b"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method4nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Name of the <a class="reference internal" href="#classLIEF_1_1DEX_1_1Method"><span class="std std-ref">Method</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method9has_classEv">
+<span id="_CPPv3NK4LIEF3DEX6Method9has_classEv"></span><span id="_CPPv2NK4LIEF3DEX6Method9has_classEv"></span><span id="LIEF::DEX::Method::has_class__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a73d0144a7e1ce3566787b2c57cb04867"></span>bool <code class="sig-name descname">has_class</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method9has_classEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if a class is associated with this method. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method3clsEv">
+<span id="_CPPv3NK4LIEF3DEX6Method3clsEv"></span><span id="_CPPv2NK4LIEF3DEX6Method3clsEv"></span><span id="LIEF::DEX::Method::cls__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a414cfaa5ffedfb85dfd3fbf583b53ab1"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">cls</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method3clsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Class"><span class="std std-ref">Class</span></a> associated with this <a class="reference internal" href="#classLIEF_1_1DEX_1_1Method"><span class="std std-ref">Method</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Method3clsEv">
+<span id="_CPPv3N4LIEF3DEX6Method3clsEv"></span><span id="_CPPv2N4LIEF3DEX6Method3clsEv"></span><span id="LIEF::DEX::Method::cls__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a8120e2879741344e3c57ca40328775ef"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">cls</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method3clsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method11code_offsetEv">
+<span id="_CPPv3NK4LIEF3DEX6Method11code_offsetEv"></span><span id="_CPPv2NK4LIEF3DEX6Method11code_offsetEv"></span><span id="LIEF::DEX::Method::code_offset__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a16ab29f825d51304338df4a66d0ac0b5"></span>uint64_t <code class="sig-name descname">code_offset</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method11code_offsetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Offset to the Dalvik Bytecode. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method8bytecodeEv">
+<span id="_CPPv3NK4LIEF3DEX6Method8bytecodeEv"></span><span id="_CPPv2NK4LIEF3DEX6Method8bytecodeEv"></span><span id="LIEF::DEX::Method::bytecode__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a10431ceb326f3e2290f5fde144ed04cb"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6MethodE" title="LIEF::DEX::Method">Method</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Method10bytecode_tE" title="LIEF::DEX::Method::bytecode_t">bytecode_t</a> &amp;<code class="sig-name descname">bytecode</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method8bytecodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dalvik Bytecode. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method5indexEv">
+<span id="_CPPv3NK4LIEF3DEX6Method5indexEv"></span><span id="_CPPv2NK4LIEF3DEX6Method5indexEv"></span><span id="LIEF::DEX::Method::index__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a75d672adbad40d709661c9eb353c204c"></span>size_t <code class="sig-name descname">index</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method5indexEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Index in the DEX Methods pool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method10is_virtualEv">
+<span id="_CPPv3NK4LIEF3DEX6Method10is_virtualEv"></span><span id="_CPPv2NK4LIEF3DEX6Method10is_virtualEv"></span><span id="LIEF::DEX::Method::is_virtual__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1ae0f0cf22eaf6a40c313f97c94278924e"></span>bool <code class="sig-name descname">is_virtual</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method10is_virtualEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if this method is a virtual one. i.e. not <strong>static</strong>, <strong>private</strong>, <strong>finale</strong> or constructor </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method9prototypeEv">
+<span id="_CPPv3NK4LIEF3DEX6Method9prototypeEv"></span><span id="_CPPv2NK4LIEF3DEX6Method9prototypeEv"></span><span id="LIEF::DEX::Method::prototype__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a96dd7bb9fcfe94fc7e2333b4f3699c2a"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="LIEF::DEX::Prototype">Prototype</a> &amp;<code class="sig-name descname">prototype</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method9prototypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Method"><span class="std std-ref">Method</span></a>’s prototype. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Method9prototypeEv">
+<span id="_CPPv3N4LIEF3DEX6Method9prototypeEv"></span><span id="_CPPv2N4LIEF3DEX6Method9prototypeEv"></span><span id="LIEF::DEX::Method::prototype__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1aac514b828b08096d2083a5197ca8a967"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="LIEF::DEX::Prototype">Prototype</a> &amp;<code class="sig-name descname">prototype</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method9prototypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6Method19insert_dex2dex_infoE8uint32_t8uint32_t">
+<span id="_CPPv3N4LIEF3DEX6Method19insert_dex2dex_infoE8uint32_t8uint32_t"></span><span id="_CPPv2N4LIEF3DEX6Method19insert_dex2dex_infoE8uint32_t8uint32_t"></span><span id="LIEF::DEX::Method::insert_dex2dex_info__uint32_t.uint32_t"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a75f00c300381218743b8bcc5fb765182"></span>void <code class="sig-name descname">insert_dex2dex_info</code><span class="sig-paren">(</span>uint32_t <em>pc</em>, uint32_t <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6Method19insert_dex2dex_infoE8uint32_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX6Method6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX6Method6acceptER7Visitor"></span><span id="LIEF::DEX::Method::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a0bcd048fd1977fecf67c3dd40314f941"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method12dex2dex_infoEv">
+<span id="_CPPv3NK4LIEF3DEX6Method12dex2dex_infoEv"></span><span id="_CPPv2NK4LIEF3DEX6Method12dex2dex_infoEv"></span><span id="LIEF::DEX::Method::dex2dex_info__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1ae92514490d1cb6e5fb29d973b4111456"></span><em class="property">const</em> dex2dex_method_info_t &amp;<code class="sig-name descname">dex2dex_info</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method12dex2dex_infoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method3hasE12ACCESS_FLAGS">
+<span id="_CPPv3NK4LIEF3DEX6Method3hasE12ACCESS_FLAGS"></span><span id="_CPPv2NK4LIEF3DEX6Method3hasE12ACCESS_FLAGS"></span><span id="LIEF::DEX::Method::has__ACCESS_FLAGSC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1aacd982e83d969cd223a67319490a9eb7"></span>bool <code class="sig-name descname">has</code><span class="sig-paren">(</span>ACCESS_FLAGS <em>f</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method3hasE12ACCESS_FLAGS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6Method12access_flagsEv">
+<span id="_CPPv3NK4LIEF3DEX6Method12access_flagsEv"></span><span id="_CPPv2NK4LIEF3DEX6Method12access_flagsEv"></span><span id="LIEF::DEX::Method::access_flags__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a6f2fd8dd66d0dd8b39bc127e383a1cac"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX6MethodE" title="LIEF::DEX::Method">Method</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX6Method19access_flags_list_tE" title="LIEF::DEX::Method::access_flags_list_t">access_flags_list_t</a> <code class="sig-name descname">access_flags</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6Method12access_flagsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6MethodeqERK6Method">
+<span id="_CPPv3NK4LIEF3DEX6MethodeqERK6Method"></span><span id="_CPPv2NK4LIEF3DEX6MethodeqERK6Method"></span><span id="LIEF::DEX::Method::eq-operator__MethodCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a95d741ca8fe89b4f31ee90381036879f"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6MethodE" title="LIEF::DEX::Method">Method</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6MethodeqERK6Method" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX6MethodneERK6Method">
+<span id="_CPPv3NK4LIEF3DEX6MethodneERK6Method"></span><span id="_CPPv2NK4LIEF3DEX6MethodneERK6Method"></span><span id="LIEF::DEX::Method::neq-operator__MethodCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a7795a7d2b807f958878e72891b600e7b"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX6MethodE" title="LIEF::DEX::Method">Method</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX6MethodneERK6Method" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX6MethodD0Ev">
+<span id="_CPPv3N4LIEF3DEX6MethodD0Ev"></span><span id="_CPPv2N4LIEF3DEX6MethodD0Ev"></span><span id="LIEF::DEX::Method::~Method__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1a78442898a8372613914df47208b7a5c7"></span><code class="sig-name descname">~Method</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX6MethodD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK6Method">
+<span id="_CPPv3lsRNSt7ostreamERK6Method"></span><span id="_CPPv2lsRNSt7ostreamERK6Method"></span><span id="lshift-operator__osR.MethodCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Method_1ab84f9f32490da78b8d67b54e1cebf974"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> Method &amp;<em>mtd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK6Method" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="class">
+<h2>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX5ClassE">
+<span id="_CPPv3N4LIEF3DEX5ClassE"></span><span id="_CPPv2N4LIEF3DEX5ClassE"></span><span id="LIEF::DEX::Class"></span><span class="target" id="classLIEF_1_1DEX_1_1Class"></span><em class="property">class </em><code class="sig-name descname">Class</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX5ClassE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX5Class19access_flags_list_tE">
+<span id="_CPPv3N4LIEF3DEX5Class19access_flags_list_tE"></span><span id="_CPPv2N4LIEF3DEX5Class19access_flags_list_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a1f8e4fcbd5ee2ff012fe79ca49d03472"></span><em class="property">using </em><code class="sig-name descname">access_flags_list_t</code> = std::vector&lt;ACCESS_FLAGS&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class19access_flags_list_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class5ClassEv">
+<span id="_CPPv3N4LIEF3DEX5Class5ClassEv"></span><span id="_CPPv2N4LIEF3DEX5Class5ClassEv"></span><span id="LIEF::DEX::Class::Class__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1acefff5c4a29903943e572c8237712f58"></span><code class="sig-name descname">Class</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class5ClassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class5ClassERK5Class">
+<span id="_CPPv3N4LIEF3DEX5Class5ClassERK5Class"></span><span id="_CPPv2N4LIEF3DEX5Class5ClassERK5Class"></span><span id="LIEF::DEX::Class::Class__ClassCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1ab1af740055cf1d3e2d0defbdeed9c5f5"></span><code class="sig-name descname">Class</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5Class5ClassEv" title="LIEF::DEX::Class::Class">Class</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class5ClassERK5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5ClassaSERK5Class">
+<span id="_CPPv3N4LIEF3DEX5ClassaSERK5Class"></span><span id="_CPPv2N4LIEF3DEX5ClassaSERK5Class"></span><span id="LIEF::DEX::Class::assign-operator__ClassCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a09b8e76f749e3023426bc0d7b61f8f6c"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5ClassaSERK5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class5ClassERKNSt6stringE8uint32_tP5ClassRKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX5Class5ClassERKNSt6stringE8uint32_tP5ClassRKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX5Class5ClassERKNSt6stringE8uint32_tP5ClassRKNSt6stringE"></span><span id="LIEF::DEX::Class::Class__ssCR.uint32_t.ClassP.ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1ae2ee66af52990e8e966ba71e35a4b295"></span><code class="sig-name descname">Class</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>fullname</em>, uint32_t <em>access_flags</em> = ACCESS_FLAGS::ACC_UNKNOWN, <a class="reference internal" href="#_CPPv4N4LIEF3DEX5Class5ClassEv" title="LIEF::DEX::Class::Class">Class</a> *<em>parent</em> = nullptr, <em class="property">const</em> std::string &amp;<em>source_filename</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class5ClassERKNSt6stringE8uint32_tP5ClassRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class8fullnameEv">
+<span id="_CPPv3NK4LIEF3DEX5Class8fullnameEv"></span><span id="_CPPv2NK4LIEF3DEX5Class8fullnameEv"></span><span id="LIEF::DEX::Class::fullname__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a49e18977a24f1b0d62bdd8a085efde2a"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">fullname</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class8fullnameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mangled class name (e.g. <code class="docutils literal notranslate"><span class="pre">Lcom/example/android/MyActivity;</span></code>) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class12package_nameEv">
+<span id="_CPPv3NK4LIEF3DEX5Class12package_nameEv"></span><span id="_CPPv2NK4LIEF3DEX5Class12package_nameEv"></span><span id="LIEF::DEX::Class::package_name__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a8c9b2904d2c26ea164feb6df09bde1af"></span>std::string <code class="sig-name descname">package_name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class12package_nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Package Name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class4nameEv">
+<span id="_CPPv3NK4LIEF3DEX5Class4nameEv"></span><span id="_CPPv2NK4LIEF3DEX5Class4nameEv"></span><span id="LIEF::DEX::Class::name__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a765b7e9e7be1233603764ff842f62ace"></span>std::string <code class="sig-name descname">name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class4nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Class"><span class="std std-ref">Class</span></a> name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class11pretty_nameEv">
+<span id="_CPPv3NK4LIEF3DEX5Class11pretty_nameEv"></span><span id="_CPPv2NK4LIEF3DEX5Class11pretty_nameEv"></span><span id="LIEF::DEX::Class::pretty_name__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1af430f67ca547a2e1b0d08a4660c8654f"></span>std::string <code class="sig-name descname">pretty_name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class11pretty_nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Demangled class name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class3hasE12ACCESS_FLAGS">
+<span id="_CPPv3NK4LIEF3DEX5Class3hasE12ACCESS_FLAGS"></span><span id="_CPPv2NK4LIEF3DEX5Class3hasE12ACCESS_FLAGS"></span><span id="LIEF::DEX::Class::has__ACCESS_FLAGSC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a5ebd9dea5e330975ca542ef6ab4d3f95"></span>bool <code class="sig-name descname">has</code><span class="sig-paren">(</span>ACCESS_FLAGS <em>f</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class3hasE12ACCESS_FLAGS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the class has the given access flag. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class12access_flagsEv">
+<span id="_CPPv3NK4LIEF3DEX5Class12access_flagsEv"></span><span id="_CPPv2NK4LIEF3DEX5Class12access_flagsEv"></span><span id="LIEF::DEX::Class::access_flags__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a2ee36af7342ed622ec9b319be9e16734"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX5Class19access_flags_list_tE" title="LIEF::DEX::Class::access_flags_list_t">access_flags_list_t</a> <code class="sig-name descname">access_flags</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class12access_flagsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Access flags used by this class. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class15source_filenameEv">
+<span id="_CPPv3NK4LIEF3DEX5Class15source_filenameEv"></span><span id="_CPPv2NK4LIEF3DEX5Class15source_filenameEv"></span><span id="LIEF::DEX::Class::source_filename__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a0019322d7056631b970143bb812409b6"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">source_filename</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class15source_filenameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Filename associated with this class (if any) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class10has_parentEv">
+<span id="_CPPv3NK4LIEF3DEX5Class10has_parentEv"></span><span id="_CPPv2NK4LIEF3DEX5Class10has_parentEv"></span><span id="LIEF::DEX::Class::has_parent__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1aa1dd7422ee5abd6a21fd9527a2b274b5"></span>bool <code class="sig-name descname">has_parent</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class10has_parentEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the current class extends another one. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class6parentEv">
+<span id="_CPPv3NK4LIEF3DEX5Class6parentEv"></span><span id="_CPPv2NK4LIEF3DEX5Class6parentEv"></span><span id="LIEF::DEX::Class::parent__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a8dc70430070f84a3161f783a9b01f95a"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">parent</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class6parentEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parent class. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class6parentEv">
+<span id="_CPPv3N4LIEF3DEX5Class6parentEv"></span><span id="_CPPv2N4LIEF3DEX5Class6parentEv"></span><span id="LIEF::DEX::Class::parent__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1adb3a7899e9798feb179fadcdba758cb6"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">parent</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class6parentEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class7methodsEv">
+<span id="_CPPv3NK4LIEF3DEX5Class7methodsEv"></span><span id="_CPPv2NK4LIEF3DEX5Class7methodsEv"></span><span id="LIEF::DEX::Class::methods__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a270735b110d6a07cbbb1bcad9ec10546"></span>it_const_methods <code class="sig-name descname">methods</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class7methodsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Methods implemented in this class. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class7methodsEv">
+<span id="_CPPv3N4LIEF3DEX5Class7methodsEv"></span><span id="_CPPv2N4LIEF3DEX5Class7methodsEv"></span><span id="LIEF::DEX::Class::methods__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a75073226cee3f45dcbf6f258f96e56d2"></span>it_methods <code class="sig-name descname">methods</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class7methodsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class7methodsERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX5Class7methodsERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX5Class7methodsERKNSt6stringE"></span><span id="LIEF::DEX::Class::methods__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a16a33908927f66871073a67242995ebf"></span>it_methods <code class="sig-name descname">methods</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class7methodsERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return Methods having the given name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class7methodsERKNSt6stringE">
+<span id="_CPPv3NK4LIEF3DEX5Class7methodsERKNSt6stringE"></span><span id="_CPPv2NK4LIEF3DEX5Class7methodsERKNSt6stringE"></span><span id="LIEF::DEX::Class::methods__ssCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a7beefe0666783cec005d31fee1ce2d46"></span>it_const_methods <code class="sig-name descname">methods</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class7methodsERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class12dex2dex_infoEv">
+<span id="_CPPv3NK4LIEF3DEX5Class12dex2dex_infoEv"></span><span id="_CPPv2NK4LIEF3DEX5Class12dex2dex_infoEv"></span><span id="LIEF::DEX::Class::dex2dex_info__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1abddf98510887c3063e5aedd01e81676a"></span>dex2dex_class_info_t <code class="sig-name descname">dex2dex_info</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class12dex2dex_infoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>De-optimize information. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class5indexEv">
+<span id="_CPPv3NK4LIEF3DEX5Class5indexEv"></span><span id="_CPPv2NK4LIEF3DEX5Class5indexEv"></span><span id="LIEF::DEX::Class::index__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1aeff7be1653affd4c8f1310136395188a"></span>size_t <code class="sig-name descname">index</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class5indexEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Original index in the DEX class pool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5Class6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX5Class6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX5Class6acceptER7Visitor"></span><span id="LIEF::DEX::Class::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a19d16e43d65eb0d63813913c740fe155"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5Class6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5ClasseqERK5Class">
+<span id="_CPPv3NK4LIEF3DEX5ClasseqERK5Class"></span><span id="_CPPv2NK4LIEF3DEX5ClasseqERK5Class"></span><span id="LIEF::DEX::Class::eq-operator__ClassCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1ab0159247ec984bce63dd8de55da4ac05"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5ClasseqERK5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX5ClassneERK5Class">
+<span id="_CPPv3NK4LIEF3DEX5ClassneERK5Class"></span><span id="_CPPv2NK4LIEF3DEX5ClassneERK5Class"></span><span id="LIEF::DEX::Class::neq-operator__ClassCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1aa75efbd40933ad521a9c35036c0aa719"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX5ClassneERK5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5ClassD0Ev">
+<span id="_CPPv3N4LIEF3DEX5ClassD0Ev"></span><span id="_CPPv2N4LIEF3DEX5ClassD0Ev"></span><span id="LIEF::DEX::Class::~Class__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1ae36c03540d82ec82aa3873108680a420"></span><code class="sig-name descname">~Class</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5ClassD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class18package_normalizedERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX5Class18package_normalizedERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX5Class18package_normalizedERKNSt6stringE"></span><span id="LIEF::DEX::Class::package_normalized__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a9168cd5af1a917ad73b2cc39a28c5234"></span>std::string <code class="sig-name descname">package_normalized</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>pkg_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class18package_normalizedERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringE"></span><span id="LIEF::DEX::Class::fullname_normalized__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a1068f3dfba32b22dcaf260ac9541491b"></span>std::string <code class="sig-name descname">fullname_normalized</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>pkg_cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringERKNSt6stringE"></span><span id="LIEF::DEX::Class::fullname_normalized__ssCR.ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1ad0b68b77e75b9d9e1b7965d8d07c13b9"></span>std::string <code class="sig-name descname">fullname_normalized</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>pkg</em>, <em class="property">const</em> std::string &amp;<em>cls_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX5Class19fullname_normalizedERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK5Class">
+<span id="_CPPv3lsRNSt7ostreamERK5Class"></span><span id="_CPPv2lsRNSt7ostreamERK5Class"></span><span id="lshift-operator__osR.ClassCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Class_1a1d0515121830a06ac583136f635f2d5b"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> Class &amp;<em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="code-info">
+<h2>Code Info<a class="headerlink" href="#code-info" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX8CodeInfoE">
+<span id="_CPPv3N4LIEF3DEX8CodeInfoE"></span><span id="_CPPv2N4LIEF3DEX8CodeInfoE"></span><span id="LIEF::DEX::CodeInfo"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo"></span><em class="property">class </em><code class="sig-name descname">CodeInfo</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX8CodeInfoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoEv">
+<span id="_CPPv3N4LIEF3DEX8CodeInfo8CodeInfoEv"></span><span id="_CPPv2N4LIEF3DEX8CodeInfo8CodeInfoEv"></span><span id="LIEF::DEX::CodeInfo::CodeInfo__void"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1a09fe92e7c6992fe0ff8d2ad31dfe9785"></span><code class="sig-name descname">CodeInfo</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoEPK9code_item">
+<span id="_CPPv3N4LIEF3DEX8CodeInfo8CodeInfoEPK9code_item"></span><span id="_CPPv2N4LIEF3DEX8CodeInfo8CodeInfoEPK9code_item"></span><span id="LIEF::DEX::CodeInfo::CodeInfo__code_itemCP"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1ae844af6f77296e75e99d371242becd73"></span><code class="sig-name descname">CodeInfo</code><span class="sig-paren">(</span><em class="property">const</em> code_item *<em>codeitem</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoEPK9code_item" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoERK8CodeInfo">
+<span id="_CPPv3N4LIEF3DEX8CodeInfo8CodeInfoERK8CodeInfo"></span><span id="_CPPv2N4LIEF3DEX8CodeInfo8CodeInfoERK8CodeInfo"></span><span id="LIEF::DEX::CodeInfo::CodeInfo__CodeInfoCR"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1a2c2769f7e2e1952fe7c5885ec1a0993f"></span><code class="sig-name descname">CodeInfo</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoEv" title="LIEF::DEX::CodeInfo::CodeInfo">CodeInfo</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX8CodeInfo8CodeInfoERK8CodeInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX8CodeInfoaSERK8CodeInfo">
+<span id="_CPPv3N4LIEF3DEX8CodeInfoaSERK8CodeInfo"></span><span id="_CPPv2N4LIEF3DEX8CodeInfoaSERK8CodeInfo"></span><span id="LIEF::DEX::CodeInfo::assign-operator__CodeInfoCR"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1ad041b2baf864b75e0fffe2ec13c8be4a"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX8CodeInfoE" title="LIEF::DEX::CodeInfo">CodeInfo</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX8CodeInfoE" title="LIEF::DEX::CodeInfo">CodeInfo</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX8CodeInfoaSERK8CodeInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX8CodeInfo6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX8CodeInfo6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX8CodeInfo6acceptER7Visitor"></span><span id="LIEF::DEX::CodeInfo::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1a5630ad0482100d8d89b30d49f937f9ee"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX8CodeInfo6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX8CodeInfoeqERK8CodeInfo">
+<span id="_CPPv3NK4LIEF3DEX8CodeInfoeqERK8CodeInfo"></span><span id="_CPPv2NK4LIEF3DEX8CodeInfoeqERK8CodeInfo"></span><span id="LIEF::DEX::CodeInfo::eq-operator__CodeInfoCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1af48b8f20458ec5b428068a3df94a361a"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX8CodeInfoE" title="LIEF::DEX::CodeInfo">CodeInfo</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX8CodeInfoeqERK8CodeInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX8CodeInfoneERK8CodeInfo">
+<span id="_CPPv3NK4LIEF3DEX8CodeInfoneERK8CodeInfo"></span><span id="_CPPv2NK4LIEF3DEX8CodeInfoneERK8CodeInfo"></span><span id="LIEF::DEX::CodeInfo::neq-operator__CodeInfoCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1a3706c23bee068c4db732d5560c6c452d"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX8CodeInfoE" title="LIEF::DEX::CodeInfo">CodeInfo</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX8CodeInfoneERK8CodeInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX8CodeInfoD0Ev">
+<span id="_CPPv3N4LIEF3DEX8CodeInfoD0Ev"></span><span id="_CPPv2N4LIEF3DEX8CodeInfoD0Ev"></span><span id="LIEF::DEX::CodeInfo::~CodeInfo__void"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1a8321b013718481ae8ef210c41148d5df"></span><code class="sig-name descname">~CodeInfo</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX8CodeInfoD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK8CodeInfo">
+<span id="_CPPv3lsRNSt7ostreamERK8CodeInfo"></span><span id="_CPPv2lsRNSt7ostreamERK8CodeInfo"></span><span id="lshift-operator__osR.CodeInfoCR"></span><span class="target" id="classLIEF_1_1DEX_1_1CodeInfo_1a5e9cbb59496510a14c6006c243bc13a1"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> CodeInfo &amp;<em>cinfo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK8CodeInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="prototype">
+<h2>Prototype<a class="headerlink" href="#prototype" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX9PrototypeE">
+<span id="_CPPv3N4LIEF3DEX9PrototypeE"></span><span id="_CPPv2N4LIEF3DEX9PrototypeE"></span><span id="LIEF::DEX::Prototype"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype"></span><em class="property">class </em><code class="sig-name descname">Prototype</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX9Prototype17parameters_type_tE">
+<span id="_CPPv3N4LIEF3DEX9Prototype17parameters_type_tE"></span><span id="_CPPv2N4LIEF3DEX9Prototype17parameters_type_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a8f2d61ff25f7a0bf640fe3aea67b4b72"></span><em class="property">using </em><code class="sig-name descname">parameters_type_t</code> = std::vector&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> *&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype17parameters_type_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX9Prototype9it_paramsE">
+<span id="_CPPv3N4LIEF3DEX9Prototype9it_paramsE"></span><span id="_CPPv2N4LIEF3DEX9Prototype9it_paramsE"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a5645b84af3835f849a3621fa11b81a28"></span><em class="property">using </em><code class="sig-name descname">it_params</code> = ref_iterator&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX9Prototype17parameters_type_tE" title="LIEF::DEX::Prototype::parameters_type_t">parameters_type_t</a>&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype9it_paramsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX9Prototype15it_const_paramsE">
+<span id="_CPPv3N4LIEF3DEX9Prototype15it_const_paramsE"></span><span id="_CPPv2N4LIEF3DEX9Prototype15it_const_paramsE"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1ad619ed30421d0fd2496971ddff9a7e97"></span><em class="property">using </em><code class="sig-name descname">it_const_params</code> = const_ref_iterator&lt;<em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX9Prototype17parameters_type_tE" title="LIEF::DEX::Prototype::parameters_type_t">parameters_type_t</a>&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype15it_const_paramsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX9Prototype9PrototypeEv">
+<span id="_CPPv3N4LIEF3DEX9Prototype9PrototypeEv"></span><span id="_CPPv2N4LIEF3DEX9Prototype9PrototypeEv"></span><span id="LIEF::DEX::Prototype::Prototype__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a9095ef258ff112243efdd58924fb2a95"></span><code class="sig-name descname">Prototype</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype9PrototypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX9Prototype9PrototypeERK9Prototype">
+<span id="_CPPv3N4LIEF3DEX9Prototype9PrototypeERK9Prototype"></span><span id="_CPPv2N4LIEF3DEX9Prototype9PrototypeERK9Prototype"></span><span id="LIEF::DEX::Prototype::Prototype__PrototypeCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a3077641a465a610aa5d9b567d464ae75"></span><code class="sig-name descname">Prototype</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX9Prototype9PrototypeEv" title="LIEF::DEX::Prototype::Prototype">Prototype</a> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype9PrototypeERK9Prototype" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX9Prototype11return_typeEv">
+<span id="_CPPv3NK4LIEF3DEX9Prototype11return_typeEv"></span><span id="_CPPv2NK4LIEF3DEX9Prototype11return_typeEv"></span><span id="LIEF::DEX::Prototype::return_type__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1ae1074f7176e755de4013eb66c030b07b"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> &amp;<code class="sig-name descname">return_type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX9Prototype11return_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classLIEF_1_1DEX_1_1Type"><span class="std std-ref">Type</span></a> returned. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX9Prototype11return_typeEv">
+<span id="_CPPv3N4LIEF3DEX9Prototype11return_typeEv"></span><span id="_CPPv2N4LIEF3DEX9Prototype11return_typeEv"></span><span id="LIEF::DEX::Prototype::return_type__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a38aab67f9af5ddf4fdba298cdfd46e98"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> &amp;<code class="sig-name descname">return_type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype11return_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX9Prototype15parameters_typeEv">
+<span id="_CPPv3NK4LIEF3DEX9Prototype15parameters_typeEv"></span><span id="_CPPv2NK4LIEF3DEX9Prototype15parameters_typeEv"></span><span id="LIEF::DEX::Prototype::parameters_type__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1ade75512171a25cf617b8425b4bf92e58"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="LIEF::DEX::Prototype">Prototype</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX9Prototype15it_const_paramsE" title="LIEF::DEX::Prototype::it_const_params">it_const_params</a> <code class="sig-name descname">parameters_type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX9Prototype15parameters_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Types of the parameters. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX9Prototype15parameters_typeEv">
+<span id="_CPPv3N4LIEF3DEX9Prototype15parameters_typeEv"></span><span id="_CPPv2N4LIEF3DEX9Prototype15parameters_typeEv"></span><span id="LIEF::DEX::Prototype::parameters_type__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a526f941d233585e361e0fdc3974795a4"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="LIEF::DEX::Prototype">Prototype</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX9Prototype9it_paramsE" title="LIEF::DEX::Prototype::it_params">it_params</a> <code class="sig-name descname">parameters_type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX9Prototype15parameters_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX9Prototype6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX9Prototype6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX9Prototype6acceptER7Visitor"></span><span id="LIEF::DEX::Prototype::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1adca613d19c34c7d4f81ae8fcda11562b"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX9Prototype6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX9PrototypeeqERK9Prototype">
+<span id="_CPPv3NK4LIEF3DEX9PrototypeeqERK9Prototype"></span><span id="_CPPv2NK4LIEF3DEX9PrototypeeqERK9Prototype"></span><span id="LIEF::DEX::Prototype::eq-operator__PrototypeCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1af21a48c2c21ddc6ba693ee0ac12f0287"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="LIEF::DEX::Prototype">Prototype</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX9PrototypeeqERK9Prototype" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX9PrototypeneERK9Prototype">
+<span id="_CPPv3NK4LIEF3DEX9PrototypeneERK9Prototype"></span><span id="_CPPv2NK4LIEF3DEX9PrototypeneERK9Prototype"></span><span id="LIEF::DEX::Prototype::neq-operator__PrototypeCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a00f3f099cced99b36372b52a6d4be9cd"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX9PrototypeE" title="LIEF::DEX::Prototype">Prototype</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX9PrototypeneERK9Prototype" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX9PrototypeD0Ev">
+<span id="_CPPv3N4LIEF3DEX9PrototypeD0Ev"></span><span id="_CPPv2N4LIEF3DEX9PrototypeD0Ev"></span><span id="LIEF::DEX::Prototype::~Prototype__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1a356fd1a080f910a1c59009b4fd82b41a"></span><code class="sig-name descname">~Prototype</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX9PrototypeD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK9Prototype">
+<span id="_CPPv3lsRNSt7ostreamERK9Prototype"></span><span id="_CPPv2lsRNSt7ostreamERK9Prototype"></span><span id="lshift-operator__osR.PrototypeCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Prototype_1ae8138b224829de78ccde07fd7f16c496"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> Prototype &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK9Prototype" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="type">
+<h2>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX4TypeE">
+<span id="_CPPv3N4LIEF3DEX4TypeE"></span><span id="_CPPv2N4LIEF3DEX4TypeE"></span><span id="LIEF::DEX::Type"></span><span class="target" id="classLIEF_1_1DEX_1_1Type"></span><em class="property">class </em><code class="sig-name descname">Type</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX4TypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="enum">
+<dt id="_CPPv4N4LIEF3DEX4Type5TYPESE">
+<span id="_CPPv3N4LIEF3DEX4Type5TYPESE"></span><span id="_CPPv2N4LIEF3DEX4Type5TYPESE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ae4fe3cf276b8f8171973fdc031941962"></span><em class="property">enum </em><code class="sig-name descname">TYPES</code><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type7UNKNOWNE">
+<span id="_CPPv3N4LIEF3DEX4Type7UNKNOWNE"></span><span id="_CPPv2N4LIEF3DEX4Type7UNKNOWNE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ae4fe3cf276b8f8171973fdc031941962a696b031073e74bf2cb98e5ef201d4aa3"></span><code class="sig-name descname">UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type7UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type9PRIMITIVEE">
+<span id="_CPPv3N4LIEF3DEX4Type9PRIMITIVEE"></span><span id="_CPPv2N4LIEF3DEX4Type9PRIMITIVEE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ae4fe3cf276b8f8171973fdc031941962a9a309e28bf2bba93d9a684d5f5abe257"></span><code class="sig-name descname">PRIMITIVE</code> = 1<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type9PRIMITIVEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type5CLASSE">
+<span id="_CPPv3N4LIEF3DEX4Type5CLASSE"></span><span id="_CPPv2N4LIEF3DEX4Type5CLASSE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ae4fe3cf276b8f8171973fdc031941962ac18e8f1f430ea227dbd63d0d9a2bc5fb"></span><code class="sig-name descname">CLASS</code> = 2<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type5CLASSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type5ARRAYE">
+<span id="_CPPv3N4LIEF3DEX4Type5ARRAYE"></span><span id="_CPPv2N4LIEF3DEX4Type5ARRAYE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ae4fe3cf276b8f8171973fdc031941962acb4fb1757fb37c43cded35d3eb857c43"></span><code class="sig-name descname">ARRAY</code> = 3<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type5ARRAYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N4LIEF3DEX4Type10PRIMITIVESE">
+<span id="_CPPv3N4LIEF3DEX4Type10PRIMITIVESE"></span><span id="_CPPv2N4LIEF3DEX4Type10PRIMITIVESE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88"></span><em class="property">enum </em><code class="sig-name descname">PRIMITIVES</code><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type10PRIMITIVESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type6VOID_TE">
+<span id="_CPPv3N4LIEF3DEX4Type6VOID_TE"></span><span id="_CPPv2N4LIEF3DEX4Type6VOID_TE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88af02f0d79a503d36e350e43598f0c2eb9"></span><code class="sig-name descname">VOID_T</code> = 0x01<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type6VOID_TE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type7BOOLEANE">
+<span id="_CPPv3N4LIEF3DEX4Type7BOOLEANE"></span><span id="_CPPv2N4LIEF3DEX4Type7BOOLEANE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88ac48d5da12d702e73d6966069f2687376"></span><code class="sig-name descname">BOOLEAN</code> = 0x02<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type7BOOLEANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type4BYTEE">
+<span id="_CPPv3N4LIEF3DEX4Type4BYTEE"></span><span id="_CPPv2N4LIEF3DEX4Type4BYTEE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88ae409eb2ba6eb6801f52763ae370c350e"></span><code class="sig-name descname">BYTE</code> = 0x03<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4BYTEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type5SHORTE">
+<span id="_CPPv3N4LIEF3DEX4Type5SHORTE"></span><span id="_CPPv2N4LIEF3DEX4Type5SHORTE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88aa35c2b02966b1563e5bf7b81b8b0cf77"></span><code class="sig-name descname">SHORT</code> = 0x04<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type5SHORTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type4CHARE">
+<span id="_CPPv3N4LIEF3DEX4Type4CHARE"></span><span id="_CPPv2N4LIEF3DEX4Type4CHARE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88a027acd3aa6b1dd7f26119d3cf0f9a063"></span><code class="sig-name descname">CHAR</code> = 0x05<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4CHARE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type3INTE">
+<span id="_CPPv3N4LIEF3DEX4Type3INTE"></span><span id="_CPPv2N4LIEF3DEX4Type3INTE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88a53f93baa3057821107c750323892fa92"></span><code class="sig-name descname">INT</code> = 0x06<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type3INTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type4LONGE">
+<span id="_CPPv3N4LIEF3DEX4Type4LONGE"></span><span id="_CPPv2N4LIEF3DEX4Type4LONGE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88ac1fabfea54ec6011e694f211f3ffebf3"></span><code class="sig-name descname">LONG</code> = 0x07<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4LONGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type5FLOATE">
+<span id="_CPPv3N4LIEF3DEX4Type5FLOATE"></span><span id="_CPPv2N4LIEF3DEX4Type5FLOATE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88ae738c26bf4ce1037fa81b039a915cbf6"></span><code class="sig-name descname">FLOAT</code> = 0x08<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type5FLOATE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX4Type6DOUBLEE">
+<span id="_CPPv3N4LIEF3DEX4Type6DOUBLEE"></span><span id="_CPPv2N4LIEF3DEX4Type6DOUBLEE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a22d167e5b4ee1f74444408a2ce2c3a88afd3e4ece78a7d422280d5ed379482229"></span><code class="sig-name descname">DOUBLE</code> = 0x09<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type6DOUBLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX4Type7array_tE">
+<span id="_CPPv3N4LIEF3DEX4Type7array_tE"></span><span id="_CPPv2N4LIEF3DEX4Type7array_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a3fa3a27a8bb58d3c18c3be9aa1343382"></span><em class="property">using </em><code class="sig-name descname">array_t</code> = std::vector&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a>&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type7array_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type4TypeEv">
+<span id="_CPPv3N4LIEF3DEX4Type4TypeEv"></span><span id="_CPPv2N4LIEF3DEX4Type4TypeEv"></span><span id="LIEF::DEX::Type::Type__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ab5335de16f0f187e2c0c1692631a5fc8"></span><code class="sig-name descname">Type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4TypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type4TypeERKNSt6stringE">
+<span id="_CPPv3N4LIEF3DEX4Type4TypeERKNSt6stringE"></span><span id="_CPPv2N4LIEF3DEX4Type4TypeERKNSt6stringE"></span><span id="LIEF::DEX::Type::Type__ssCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a326e9fcbc05aa5c059b7e32dfb518e4b"></span><code class="sig-name descname">Type</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>mangled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4TypeERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type4TypeERK4Type">
+<span id="_CPPv3N4LIEF3DEX4Type4TypeERK4Type"></span><span id="_CPPv2N4LIEF3DEX4Type4TypeERK4Type"></span><span id="LIEF::DEX::Type::Type__TypeCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a84b25554217b581886750f8dc4f28a80"></span><code class="sig-name descname">Type</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type4TypeEv" title="LIEF::DEX::Type::Type">Type</a> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4TypeERK4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type4typeEv">
+<span id="_CPPv3NK4LIEF3DEX4Type4typeEv"></span><span id="_CPPv2NK4LIEF3DEX4Type4typeEv"></span><span id="LIEF::DEX::Type::type__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a66e0b8942a90c3c277506cd5d03016ec"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type5TYPESE" title="LIEF::DEX::Type::TYPES">TYPES</a> <code class="sig-name descname">type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type4typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type3clsEv">
+<span id="_CPPv3NK4LIEF3DEX4Type3clsEv"></span><span id="_CPPv2NK4LIEF3DEX4Type3clsEv"></span><span id="LIEF::DEX::Type::cls__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a352768a92a49ed6b2b0a63f0bfe3f1f7"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">cls</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type3clsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type5arrayEv">
+<span id="_CPPv3NK4LIEF3DEX4Type5arrayEv"></span><span id="_CPPv2NK4LIEF3DEX4Type5arrayEv"></span><span id="LIEF::DEX::Type::array__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ab0ef4fd9bd2dd8720023813bd0bea8b3"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type7array_tE" title="LIEF::DEX::Type::array_t">array_t</a> &amp;<code class="sig-name descname">array</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type5arrayEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type9primitiveEv">
+<span id="_CPPv3NK4LIEF3DEX4Type9primitiveEv"></span><span id="_CPPv2NK4LIEF3DEX4Type9primitiveEv"></span><span id="LIEF::DEX::Type::primitive__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ab4ee794530a15e8f153a1020827f59b3"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type10PRIMITIVESE" title="LIEF::DEX::Type::PRIMITIVES">PRIMITIVES</a> &amp;<code class="sig-name descname">primitive</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type9primitiveEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type3clsEv">
+<span id="_CPPv3N4LIEF3DEX4Type3clsEv"></span><span id="_CPPv2N4LIEF3DEX4Type3clsEv"></span><span id="LIEF::DEX::Type::cls__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1afacad334c4a046d2875054b6cd4c423e"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> &amp;<code class="sig-name descname">cls</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type3clsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type5arrayEv">
+<span id="_CPPv3N4LIEF3DEX4Type5arrayEv"></span><span id="_CPPv2N4LIEF3DEX4Type5arrayEv"></span><span id="LIEF::DEX::Type::array__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a89d44ff304dc60980e7977cf9c6ccae5"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type7array_tE" title="LIEF::DEX::Type::array_t">array_t</a> &amp;<code class="sig-name descname">array</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type5arrayEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type9primitiveEv">
+<span id="_CPPv3N4LIEF3DEX4Type9primitiveEv"></span><span id="_CPPv2N4LIEF3DEX4Type9primitiveEv"></span><span id="LIEF::DEX::Type::primitive__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ac047033fc753afb13def7313fcb79508"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type10PRIMITIVESE" title="LIEF::DEX::Type::PRIMITIVES">PRIMITIVES</a> &amp;<code class="sig-name descname">primitive</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type9primitiveEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type3dimEv">
+<span id="_CPPv3NK4LIEF3DEX4Type3dimEv"></span><span id="_CPPv2NK4LIEF3DEX4Type3dimEv"></span><span id="LIEF::DEX::Type::dim__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a089eb3de679d74b5b629c0228122aec4"></span>size_t <code class="sig-name descname">dim</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type3dimEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the array dimension if the current is an array. Otherwise it returns 0 </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type21underlying_array_typeEv">
+<span id="_CPPv3NK4LIEF3DEX4Type21underlying_array_typeEv"></span><span id="_CPPv2NK4LIEF3DEX4Type21underlying_array_typeEv"></span><span id="LIEF::DEX::Type::underlying_array_type__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a852eccfa441ab8eab91a60dbb5638972"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> &amp;<code class="sig-name descname">underlying_array_type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type21underlying_array_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type21underlying_array_typeEv">
+<span id="_CPPv3N4LIEF3DEX4Type21underlying_array_typeEv"></span><span id="_CPPv2N4LIEF3DEX4Type21underlying_array_typeEv"></span><span id="LIEF::DEX::Type::underlying_array_type__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a6b228aa138afb896ccd400f2c8f4a7e4"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> &amp;<code class="sig-name descname">underlying_array_type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type21underlying_array_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4Type6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX4Type6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX4Type6acceptER7Visitor"></span><span id="LIEF::DEX::Type::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a2d2d142f93936f41440f680b686975b1"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4Type6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4TypeeqERK4Type">
+<span id="_CPPv3NK4LIEF3DEX4TypeeqERK4Type"></span><span id="_CPPv2NK4LIEF3DEX4TypeeqERK4Type"></span><span id="LIEF::DEX::Type::eq-operator__TypeCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1aa06a3e1d42933aa7bb20611cdb60e22f"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4TypeeqERK4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX4TypeneERK4Type">
+<span id="_CPPv3NK4LIEF3DEX4TypeneERK4Type"></span><span id="_CPPv2NK4LIEF3DEX4TypeneERK4Type"></span><span id="LIEF::DEX::Type::neq-operator__TypeCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1ac32876c71fff8ba833d3d8403cb5ef9f"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX4TypeE" title="LIEF::DEX::Type">Type</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX4TypeneERK4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4TypeD0Ev">
+<span id="_CPPv3N4LIEF3DEX4TypeD0Ev"></span><span id="_CPPv2N4LIEF3DEX4TypeD0Ev"></span><span id="LIEF::DEX::Type::~Type__void"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a1cb56ecae0df1a376c59f321c1c3e6a2"></span><code class="sig-name descname">~Type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4TypeD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N4LIEF3DEX4Type4cls_E">
+<span id="_CPPv3N4LIEF3DEX4Type4cls_E"></span><span id="_CPPv2N4LIEF3DEX4Type4cls_E"></span><span id="LIEF::DEX::Type::cls___ClassP"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a175b1308ed554b74616de4a86e7924bb"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX5ClassE" title="LIEF::DEX::Class">Class</a> *<code class="sig-name descname">cls_</code> = {nullptr}<a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type4cls_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N4LIEF3DEX4Type6array_E">
+<span id="_CPPv3N4LIEF3DEX4Type6array_E"></span><span id="_CPPv2N4LIEF3DEX4Type6array_E"></span><span id="LIEF::DEX::Type::array___array_tP"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a33e80849e898ad55680021d6bdf93ae5"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type7array_tE" title="LIEF::DEX::Type::array_t">array_t</a> *<code class="sig-name descname">array_</code><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type6array_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N4LIEF3DEX4Type6basic_E">
+<span id="_CPPv3N4LIEF3DEX4Type6basic_E"></span><span id="_CPPv2N4LIEF3DEX4Type6basic_E"></span><span id="LIEF::DEX::Type::basic___PRIMITIVESP"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a7f728349156729b93e0bfac044d548a7"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type10PRIMITIVESE" title="LIEF::DEX::Type::PRIMITIVES">PRIMITIVES</a> *<code class="sig-name descname">basic_</code><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type6basic_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX4Type11pretty_nameE10PRIMITIVES">
+<span id="_CPPv3N4LIEF3DEX4Type11pretty_nameE10PRIMITIVES"></span><span id="_CPPv2N4LIEF3DEX4Type11pretty_nameE10PRIMITIVES"></span><span id="LIEF::DEX::Type::pretty_name__PRIMITIVES"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a172164c0b1b45575d02513ab88942c83"></span>std::string <code class="sig-name descname">pretty_name</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX4Type10PRIMITIVESE" title="LIEF::DEX::Type::PRIMITIVES">PRIMITIVES</a> <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX4Type11pretty_nameE10PRIMITIVES" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK4Type">
+<span id="_CPPv3lsRNSt7ostreamERK4Type"></span><span id="_CPPv2lsRNSt7ostreamERK4Type"></span><span id="lshift-operator__osR.TypeCR"></span><span class="target" id="classLIEF_1_1DEX_1_1Type_1a44857387cbf53a1021ddbea8db023f25"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> Type &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="maplist">
+<h2>MapList<a class="headerlink" href="#maplist" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX7MapListE">
+<span id="_CPPv3N4LIEF3DEX7MapListE"></span><span id="_CPPv2N4LIEF3DEX7MapListE"></span><span id="LIEF::DEX::MapList"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList"></span><em class="property">class </em><code class="sig-name descname">MapList</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX7MapList7items_tE">
+<span id="_CPPv3N4LIEF3DEX7MapList7items_tE"></span><span id="_CPPv2N4LIEF3DEX7MapList7items_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a8559c6e9fc02dde25afe77baf89968eb"></span><em class="property">using </em><code class="sig-name descname">items_t</code> = std::map&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a>, <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList7items_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX7MapList10it_items_tE">
+<span id="_CPPv3N4LIEF3DEX7MapList10it_items_tE"></span><span id="_CPPv2N4LIEF3DEX7MapList10it_items_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1ab3c07728707628b8b811a5fa685f66f8"></span><em class="property">using </em><code class="sig-name descname">it_items_t</code> = ref_iterator&lt;std::vector&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> *&gt;&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList10it_items_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N4LIEF3DEX7MapList16it_const_items_tE">
+<span id="_CPPv3N4LIEF3DEX7MapList16it_const_items_tE"></span><span id="_CPPv2N4LIEF3DEX7MapList16it_const_items_tE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a3c83d70d06e7a1638600313c5cb15897"></span><em class="property">using </em><code class="sig-name descname">it_const_items_t</code> = const_ref_iterator&lt;std::vector&lt;<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> *&gt;&gt;<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList16it_const_items_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapList7MapListEv">
+<span id="_CPPv3N4LIEF3DEX7MapList7MapListEv"></span><span id="_CPPv2N4LIEF3DEX7MapList7MapListEv"></span><span id="LIEF::DEX::MapList::MapList__void"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a74ae50f194ac37757cd5cf53c3b45342"></span><code class="sig-name descname">MapList</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList7MapListEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapList7MapListERK7MapList">
+<span id="_CPPv3N4LIEF3DEX7MapList7MapListERK7MapList"></span><span id="_CPPv2N4LIEF3DEX7MapList7MapListERK7MapList"></span><span id="LIEF::DEX::MapList::MapList__MapListCR"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1ab9305eb3bfe03e5116f6924f9e25ecd9"></span><code class="sig-name descname">MapList</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapList7MapListEv" title="LIEF::DEX::MapList::MapList">MapList</a> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList7MapListERK7MapList" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapListaSERK7MapList">
+<span id="_CPPv3N4LIEF3DEX7MapListaSERK7MapList"></span><span id="_CPPv2N4LIEF3DEX7MapListaSERK7MapList"></span><span id="LIEF::DEX::MapList::assign-operator__MapListCR"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a9e309a37a7d458d5ac887d63a7ea16cb"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapListaSERK7MapList" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapList5itemsEv">
+<span id="_CPPv3N4LIEF3DEX7MapList5itemsEv"></span><span id="_CPPv2N4LIEF3DEX7MapList5itemsEv"></span><span id="LIEF::DEX::MapList::items__void"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a157491cf35150ef2543e0cb0a905e9ef"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapList10it_items_tE" title="LIEF::DEX::MapList::it_items_t">it_items_t</a> <code class="sig-name descname">items</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList5itemsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Iterator over <a class="reference internal" href="#classLIEF_1_1DEX_1_1MapItem"><span class="std std-ref">LIEF::DEX::MapItem</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapList5itemsEv">
+<span id="_CPPv3NK4LIEF3DEX7MapList5itemsEv"></span><span id="_CPPv2NK4LIEF3DEX7MapList5itemsEv"></span><span id="LIEF::DEX::MapList::items__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a1241ae7956d2fad6b2fcb96df67e937c"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapList16it_const_items_tE" title="LIEF::DEX::MapList::it_const_items_t">it_const_items_t</a> <code class="sig-name descname">items</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapList5itemsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapList3hasEN7MapItem5TYPESE">
+<span id="_CPPv3NK4LIEF3DEX7MapList3hasEN7MapItem5TYPESE"></span><span id="_CPPv2NK4LIEF3DEX7MapList3hasEN7MapItem5TYPESE"></span><span id="LIEF::DEX::MapList::has__MapItem::TYPESC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1ad5262249d796a4d49a699078867488ae"></span>bool <code class="sig-name descname">has</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <em>type</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapList3hasEN7MapItem5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the given type exists. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapList3getEN7MapItem5TYPESE">
+<span id="_CPPv3NK4LIEF3DEX7MapList3getEN7MapItem5TYPESE"></span><span id="_CPPv2NK4LIEF3DEX7MapList3getEN7MapItem5TYPESE"></span><span id="LIEF::DEX::MapList::get__MapItem::TYPESC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a232933b2d80d5bcf89e806a70d7ed63a"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<code class="sig-name descname">get</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <em>type</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapList3getEN7MapItem5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1DEX_1_1MapItem"><span class="std std-ref">LIEF::DEX::MapItem</span></a> associated with the given type. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapList3getEN7MapItem5TYPESE">
+<span id="_CPPv3N4LIEF3DEX7MapList3getEN7MapItem5TYPESE"></span><span id="_CPPv2N4LIEF3DEX7MapList3getEN7MapItem5TYPESE"></span><span id="LIEF::DEX::MapList::get__MapItem::TYPES"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a6769d0f40bda0f69d35f7c5120be1c04"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<code class="sig-name descname">get</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapList3getEN7MapItem5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1DEX_1_1MapItem"><span class="std std-ref">LIEF::DEX::MapItem</span></a> associated with the given type. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapListixEN7MapItem5TYPESE">
+<span id="_CPPv3NK4LIEF3DEX7MapListixEN7MapItem5TYPESE"></span><span id="_CPPv2NK4LIEF3DEX7MapListixEN7MapItem5TYPESE"></span><span id="LIEF::DEX::MapList::subscript-operator__MapItem::TYPESC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a053406678605e12ceb20afaaf2f91530"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<code class="sig-name descname">operator[]</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <em>type</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapListixEN7MapItem5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1DEX_1_1MapItem"><span class="std std-ref">LIEF::DEX::MapItem</span></a> associated with the given type. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapListixEN7MapItem5TYPESE">
+<span id="_CPPv3N4LIEF3DEX7MapListixEN7MapItem5TYPESE"></span><span id="_CPPv2N4LIEF3DEX7MapListixEN7MapItem5TYPESE"></span><span id="LIEF::DEX::MapList::subscript-operator__MapItem::TYPES"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a882e89a2cfb1f55c33ec9084319d191b"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<code class="sig-name descname">operator[]</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapListixEN7MapItem5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1DEX_1_1MapItem"><span class="std std-ref">LIEF::DEX::MapItem</span></a> associated with the given type. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapList6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX7MapList6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX7MapList6acceptER7Visitor"></span><span id="LIEF::DEX::MapList::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1aece31d3d0b8d1e489b3e8377fc1e5b5f"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapList6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapListeqERK7MapList">
+<span id="_CPPv3NK4LIEF3DEX7MapListeqERK7MapList"></span><span id="_CPPv2NK4LIEF3DEX7MapListeqERK7MapList"></span><span id="LIEF::DEX::MapList::eq-operator__MapListCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1aa148f4377cde86149f5eafcb44490934"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapListeqERK7MapList" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapListneERK7MapList">
+<span id="_CPPv3NK4LIEF3DEX7MapListneERK7MapList"></span><span id="_CPPv2NK4LIEF3DEX7MapListneERK7MapList"></span><span id="LIEF::DEX::MapList::neq-operator__MapListCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1a9036ddd9f14662b984502ca4dd64f58b"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapListE" title="LIEF::DEX::MapList">MapList</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapListneERK7MapList" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapListD0Ev">
+<span id="_CPPv3N4LIEF3DEX7MapListD0Ev"></span><span id="_CPPv2N4LIEF3DEX7MapListD0Ev"></span><span id="LIEF::DEX::MapList::~MapList__void"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1abd326f826e336ae92f2afee6decaf8c4"></span><code class="sig-name descname">~MapList</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapListD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK7MapList">
+<span id="_CPPv3lsRNSt7ostreamERK7MapList"></span><span id="_CPPv2lsRNSt7ostreamERK7MapList"></span><span id="lshift-operator__osR.MapListCR"></span><span class="target" id="classLIEF_1_1DEX_1_1MapList_1ad2d765c50d75ef3554000a31d23fa54a"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> MapList &amp;<em>mtd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK7MapList" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="mapitem">
+<h2>MapItem<a class="headerlink" href="#mapitem" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4LIEF3DEX7MapItemE">
+<span id="_CPPv3N4LIEF3DEX7MapItemE"></span><span id="_CPPv2N4LIEF3DEX7MapItemE"></span><span id="LIEF::DEX::MapItem"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem"></span><em class="property">class </em><code class="sig-name descname">MapItem</code> : <em class="property">public</em> LIEF::Object<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItemE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="enum">
+<dt id="_CPPv4N4LIEF3DEX7MapItem5TYPESE">
+<span id="_CPPv3N4LIEF3DEX7MapItem5TYPESE"></span><span id="_CPPv2N4LIEF3DEX7MapItem5TYPESE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538"></span><em class="property">enum </em><code class="sig-name descname">TYPES</code><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem6HEADERE">
+<span id="_CPPv3N4LIEF3DEX7MapItem6HEADERE"></span><span id="_CPPv2N4LIEF3DEX7MapItem6HEADERE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a7ad4905b4543ab4a1637dd23c50e36ce"></span><code class="sig-name descname">HEADER</code> = 0x0000<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem6HEADERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem9STRING_IDE">
+<span id="_CPPv3N4LIEF3DEX7MapItem9STRING_IDE"></span><span id="_CPPv2N4LIEF3DEX7MapItem9STRING_IDE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538aeb2942e75e97102e4c17f63732d52d49"></span><code class="sig-name descname">STRING_ID</code> = 0x0001<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem9STRING_IDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem7TYPE_IDE">
+<span id="_CPPv3N4LIEF3DEX7MapItem7TYPE_IDE"></span><span id="_CPPv2N4LIEF3DEX7MapItem7TYPE_IDE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a2361e5f609fbf7fce17ffea1825f0fa7"></span><code class="sig-name descname">TYPE_ID</code> = 0x0002<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem7TYPE_IDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem8PROTO_IDE">
+<span id="_CPPv3N4LIEF3DEX7MapItem8PROTO_IDE"></span><span id="_CPPv2N4LIEF3DEX7MapItem8PROTO_IDE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a9dacf5dcdbfb682f6a4d80fe8b88ace5"></span><code class="sig-name descname">PROTO_ID</code> = 0x0003<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem8PROTO_IDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem8FIELD_IDE">
+<span id="_CPPv3N4LIEF3DEX7MapItem8FIELD_IDE"></span><span id="_CPPv2N4LIEF3DEX7MapItem8FIELD_IDE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a12a3506316742d83690101b47df2d142"></span><code class="sig-name descname">FIELD_ID</code> = 0x0004<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem8FIELD_IDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem9METHOD_IDE">
+<span id="_CPPv3N4LIEF3DEX7MapItem9METHOD_IDE"></span><span id="_CPPv2N4LIEF3DEX7MapItem9METHOD_IDE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a52e38fb355fb57cc8e6ebd76dd9a199c"></span><code class="sig-name descname">METHOD_ID</code> = 0x0005<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem9METHOD_IDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem9CLASS_DEFE">
+<span id="_CPPv3N4LIEF3DEX7MapItem9CLASS_DEFE"></span><span id="_CPPv2N4LIEF3DEX7MapItem9CLASS_DEFE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a2e520ebef671b13167700fec9837ec97"></span><code class="sig-name descname">CLASS_DEF</code> = 0x0006<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem9CLASS_DEFE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem12CALL_SITE_IDE">
+<span id="_CPPv3N4LIEF3DEX7MapItem12CALL_SITE_IDE"></span><span id="_CPPv2N4LIEF3DEX7MapItem12CALL_SITE_IDE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538ad99c0b52a69050fa7e1833718e0de293"></span><code class="sig-name descname">CALL_SITE_ID</code> = 0x0007<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem12CALL_SITE_IDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem13METHOD_HANDLEE">
+<span id="_CPPv3N4LIEF3DEX7MapItem13METHOD_HANDLEE"></span><span id="_CPPv2N4LIEF3DEX7MapItem13METHOD_HANDLEE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538aa8fcc60826f9b3ed228c9dfa9468cdc3"></span><code class="sig-name descname">METHOD_HANDLE</code> = 0x0008<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem13METHOD_HANDLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem8MAP_LISTE">
+<span id="_CPPv3N4LIEF3DEX7MapItem8MAP_LISTE"></span><span id="_CPPv2N4LIEF3DEX7MapItem8MAP_LISTE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a65f0ea53c56aa1f81818f2ebcde4d174"></span><code class="sig-name descname">MAP_LIST</code> = 0x1000<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem8MAP_LISTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem9TYPE_LISTE">
+<span id="_CPPv3N4LIEF3DEX7MapItem9TYPE_LISTE"></span><span id="_CPPv2N4LIEF3DEX7MapItem9TYPE_LISTE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a512397af1855a3b1bb4c51c462f9df4b"></span><code class="sig-name descname">TYPE_LIST</code> = 0x1001<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem9TYPE_LISTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem23ANNOTATION_SET_REF_LISTE">
+<span id="_CPPv3N4LIEF3DEX7MapItem23ANNOTATION_SET_REF_LISTE"></span><span id="_CPPv2N4LIEF3DEX7MapItem23ANNOTATION_SET_REF_LISTE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538ac11b2ee05139dcff84f778d48ef296b6"></span><code class="sig-name descname">ANNOTATION_SET_REF_LIST</code> = 0x1002<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem23ANNOTATION_SET_REF_LISTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem14ANNOTATION_SETE">
+<span id="_CPPv3N4LIEF3DEX7MapItem14ANNOTATION_SETE"></span><span id="_CPPv2N4LIEF3DEX7MapItem14ANNOTATION_SETE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538aa269856278bcb16e370cdfbcbd0b29d2"></span><code class="sig-name descname">ANNOTATION_SET</code> = 0x1003<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem14ANNOTATION_SETE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem10CLASS_DATAE">
+<span id="_CPPv3N4LIEF3DEX7MapItem10CLASS_DATAE"></span><span id="_CPPv2N4LIEF3DEX7MapItem10CLASS_DATAE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a9e3ce5a2dfce610848f7f357a9207ba8"></span><code class="sig-name descname">CLASS_DATA</code> = 0x2000<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem10CLASS_DATAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem4CODEE">
+<span id="_CPPv3N4LIEF3DEX7MapItem4CODEE"></span><span id="_CPPv2N4LIEF3DEX7MapItem4CODEE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a08054846bbc9933fd0395f8be516a9f9"></span><code class="sig-name descname">CODE</code> = 0x2001<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem4CODEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem11STRING_DATAE">
+<span id="_CPPv3N4LIEF3DEX7MapItem11STRING_DATAE"></span><span id="_CPPv2N4LIEF3DEX7MapItem11STRING_DATAE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538af7b624b9553e8c58d721552fe794e952"></span><code class="sig-name descname">STRING_DATA</code> = 0x2002<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem11STRING_DATAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem10DEBUG_INFOE">
+<span id="_CPPv3N4LIEF3DEX7MapItem10DEBUG_INFOE"></span><span id="_CPPv2N4LIEF3DEX7MapItem10DEBUG_INFOE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538af048f5b82d6cdf06cfed549c61977a6f"></span><code class="sig-name descname">DEBUG_INFO</code> = 0x2003<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem10DEBUG_INFOE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem10ANNOTATIONE">
+<span id="_CPPv3N4LIEF3DEX7MapItem10ANNOTATIONE"></span><span id="_CPPv2N4LIEF3DEX7MapItem10ANNOTATIONE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538ad2b7fe93e0af4342d2aa893c28f32f1f"></span><code class="sig-name descname">ANNOTATION</code> = 0x2004<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem10ANNOTATIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem13ENCODED_ARRAYE">
+<span id="_CPPv3N4LIEF3DEX7MapItem13ENCODED_ARRAYE"></span><span id="_CPPv2N4LIEF3DEX7MapItem13ENCODED_ARRAYE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a41b3a8d03339ebb93e067b6ecc624390"></span><code class="sig-name descname">ENCODED_ARRAY</code> = 0x2005<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem13ENCODED_ARRAYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4LIEF3DEX7MapItem21ANNOTATIONS_DIRECTORYE">
+<span id="_CPPv3N4LIEF3DEX7MapItem21ANNOTATIONS_DIRECTORYE"></span><span id="_CPPv2N4LIEF3DEX7MapItem21ANNOTATIONS_DIRECTORYE"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad64aa4c8f9654075f53a9940a957f538a57cf53fa5538d68a3d6bd215af716a24"></span><code class="sig-name descname">ANNOTATIONS_DIRECTORY</code> = 0x2006<a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem21ANNOTATIONS_DIRECTORYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapItem7MapItemEv">
+<span id="_CPPv3N4LIEF3DEX7MapItem7MapItemEv"></span><span id="_CPPv2N4LIEF3DEX7MapItem7MapItemEv"></span><span id="LIEF::DEX::MapItem::MapItem__void"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a54d05077bb1e4d4ece4e84ae9bb3592b"></span><code class="sig-name descname">MapItem</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem7MapItemEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapItem7MapItemE5TYPES8uint32_t8uint32_t8uint16_t">
+<span id="_CPPv3N4LIEF3DEX7MapItem7MapItemE5TYPES8uint32_t8uint32_t8uint16_t"></span><span id="_CPPv2N4LIEF3DEX7MapItem7MapItemE5TYPES8uint32_t8uint32_t8uint16_t"></span><span id="LIEF::DEX::MapItem::MapItem__TYPES.uint32_t.uint32_t.uint16_t"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a592f512ed355971a3bba4f7a714cf7ff"></span><code class="sig-name descname">MapItem</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <em>type</em>, uint32_t <em>offset</em>, uint32_t <em>size</em>, uint16_t <em>reserved</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem7MapItemE5TYPES8uint32_t8uint32_t8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapItem7MapItemERK7MapItem">
+<span id="_CPPv3N4LIEF3DEX7MapItem7MapItemERK7MapItem"></span><span id="_CPPv2N4LIEF3DEX7MapItem7MapItemERK7MapItem"></span><span id="LIEF::DEX::MapItem::MapItem__MapItemCR"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a06dea18bfe24338150a5885b9f1881a9"></span><code class="sig-name descname">MapItem</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem7MapItemEv" title="LIEF::DEX::MapItem::MapItem">MapItem</a> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItem7MapItemERK7MapItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapItemaSERK7MapItem">
+<span id="_CPPv3N4LIEF3DEX7MapItemaSERK7MapItem"></span><span id="_CPPv2N4LIEF3DEX7MapItemaSERK7MapItem"></span><span id="LIEF::DEX::MapItem::assign-operator__MapItemCR"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a155b2d75ddbf48721077a0e065328086"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<code class="sig-name descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItemaSERK7MapItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItem4typeEv">
+<span id="_CPPv3NK4LIEF3DEX7MapItem4typeEv"></span><span id="_CPPv2NK4LIEF3DEX7MapItem4typeEv"></span><span id="LIEF::DEX::MapItem::type__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a00ad30c993c88bfe2108a47279d7a9b7"></span><a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a>::<a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItem5TYPESE" title="LIEF::DEX::MapItem::TYPES">TYPES</a> <code class="sig-name descname">type</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItem4typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItem8reservedEv">
+<span id="_CPPv3NK4LIEF3DEX7MapItem8reservedEv"></span><span id="_CPPv2NK4LIEF3DEX7MapItem8reservedEv"></span><span id="LIEF::DEX::MapItem::reserved__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1abc393fd2a4112f0c5fb7aa54de8cd4b0"></span>uint16_t <code class="sig-name descname">reserved</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItem8reservedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItem4sizeEv">
+<span id="_CPPv3NK4LIEF3DEX7MapItem4sizeEv"></span><span id="_CPPv2NK4LIEF3DEX7MapItem4sizeEv"></span><span id="LIEF::DEX::MapItem::size__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1ad868485b1dce08bfc7aaf3dd47b5194b"></span>uint32_t <code class="sig-name descname">size</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItem4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItem6offsetEv">
+<span id="_CPPv3NK4LIEF3DEX7MapItem6offsetEv"></span><span id="_CPPv2NK4LIEF3DEX7MapItem6offsetEv"></span><span id="LIEF::DEX::MapItem::offset__voidC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a7876dc597d09f4bc51c21b0b2a0d8fc6"></span>uint32_t <code class="sig-name descname">offset</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItem6offsetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItem6acceptER7Visitor">
+<span id="_CPPv3NK4LIEF3DEX7MapItem6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF3DEX7MapItem6acceptER7Visitor"></span><span id="LIEF::DEX::MapItem::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1adce5863942549de0c3c316512464d8d7"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItem6acceptER7Visitor" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItemeqERK7MapItem">
+<span id="_CPPv3NK4LIEF3DEX7MapItemeqERK7MapItem"></span><span id="_CPPv2NK4LIEF3DEX7MapItemeqERK7MapItem"></span><span id="LIEF::DEX::MapItem::eq-operator__MapItemCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a3618b7c941095b3c42adf64ce4aa0406"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItemeqERK7MapItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK4LIEF3DEX7MapItemneERK7MapItem">
+<span id="_CPPv3NK4LIEF3DEX7MapItemneERK7MapItem"></span><span id="_CPPv2NK4LIEF3DEX7MapItemneERK7MapItem"></span><span id="LIEF::DEX::MapItem::neq-operator__MapItemCRC"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1abc10f46d258a6a5b8c81740929807a88"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3DEX7MapItemE" title="LIEF::DEX::MapItem">MapItem</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3DEX7MapItemneERK7MapItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N4LIEF3DEX7MapItemD0Ev">
+<span id="_CPPv3N4LIEF3DEX7MapItemD0Ev"></span><span id="_CPPv2N4LIEF3DEX7MapItemD0Ev"></span><span id="LIEF::DEX::MapItem::~MapItem__void"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a9d74d6a5ca2085079a31703a06fd83dd"></span><code class="sig-name descname">~MapItem</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3DEX7MapItemD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="function">
+<dt id="_CPPv4lsRNSt7ostreamERK7MapItem">
+<span id="_CPPv3lsRNSt7ostreamERK7MapItem"></span><span id="_CPPv2lsRNSt7ostreamERK7MapItem"></span><span id="lshift-operator__osR.MapItemCR"></span><span class="target" id="classLIEF_1_1DEX_1_1MapItem_1a4797095ef26442b69f62a99e7578f6d6"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> MapItem &amp;<em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4lsRNSt7ostreamERK7MapItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vdex.html" class="btn btn-neutral float-right" title="VDEX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oat.html" class="btn btn-neutral float-left" title="OAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

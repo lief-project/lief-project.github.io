@@ -1,0 +1,1061 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Abstract &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ELF" href="elf.html" />
+    <link rel="prev" title="Utilities" href="utilities.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Abstract</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parser">Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binary">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#section">Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symbol">Symbol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relocation">Relocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function">Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#executable-formats">Executable formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object-types">Object types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#architectures">Architectures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modes">Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#endianness">Endianness</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html">ELF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html">PE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html">MachO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html">OAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html">DEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html">VDEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="art.html">ART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platforms/android.html">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#logging">Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Python</a> &raquo;</li>
+        
+      <li>Abstract</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/python/abstract.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="abstract">
+<h1>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="parser">
+<h2>Parser<a class="headerlink" href="#parser" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lief.parse">
+<code class="sig-prename descclassname">lief.</code><code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>parse(filepath: str) -&gt; lief.Binary</p></li>
+</ol>
+<p>Parse the given binary and return a <a class="reference internal" href="#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> object</p>
+<ol class="arabic simple" start="2">
+<li><p>parse(raw: List[int], name: str = ‘’) -&gt; lief.Binary</p></li>
+</ol>
+<p>Parse the given binary and return a <a class="reference internal" href="#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> object</p>
+<ol class="arabic simple" start="3">
+<li><p>parse(io: object, name: str = ‘’) -&gt; lief.Binary</p></li>
+</ol>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="binary">
+<h2>Binary<a class="headerlink" href="#binary" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Binary">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Binary</code><a class="headerlink" href="#lief.Binary" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="class">
+<dt id="lief.Binary.VA_TYPES">
+<em class="property">class </em><code class="sig-name descname">VA_TYPES</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary.VA_TYPES</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Binary.VA_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>AUTO</p>
+<p>VA</p>
+<p>RVA</p>
+<dl class="attribute">
+<dt id="lief.Binary.VA_TYPES.AUTO">
+<code class="sig-name descname">AUTO</code><em class="property"> = VA_TYPES.AUTO</em><a class="headerlink" href="#lief.Binary.VA_TYPES.AUTO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.Binary.VA_TYPES.RVA">
+<code class="sig-name descname">RVA</code><em class="property"> = VA_TYPES.RVA</em><a class="headerlink" href="#lief.Binary.VA_TYPES.RVA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.Binary.VA_TYPES.VA">
+<code class="sig-name descname">VA</code><em class="property"> = VA_TYPES.VA</em><a class="headerlink" href="#lief.Binary.VA_TYPES.VA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.VA_TYPES.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.Binary.VA_TYPES.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.abstract">
+<em class="property">property </em><code class="sig-name descname">abstract</code><a class="headerlink" href="#lief.Binary.abstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <a class="reference internal" href="#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a> object</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Getting this property modifies the <code class="docutils literal notranslate"><span class="pre">__class__</span></code> attribute so that the current binary looks like a <a class="reference internal" href="#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a>.</p>
+<p>Use the <a class="reference internal" href="#lief.Binary.concrete" title="lief.Binary.concrete"><code class="xref py py-attr docutils literal notranslate"><span class="pre">concrete</span></code></a> to get back to the original binary.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.concrete">
+<em class="property">property </em><code class="sig-name descname">concrete</code><a class="headerlink" href="#lief.Binary.concrete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return either <a class="reference internal" href="elf.html#lief.ELF.Binary" title="lief.ELF.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.Binary</span></code></a>, <a class="reference internal" href="pe.html#lief.PE.Binary" title="lief.PE.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.Binary</span></code></a>, <a class="reference internal" href="macho.html#lief.MachO.Binary" title="lief.MachO.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.Binary</span></code></a> object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.ctor_functions">
+<em class="property">property </em><code class="sig-name descname">ctor_functions</code><a class="headerlink" href="#lief.Binary.ctor_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor functions that are called prior any other functions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.entrypoint">
+<em class="property">property </em><code class="sig-name descname">entrypoint</code><a class="headerlink" href="#lief.Binary.entrypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary’s entrypoint</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.exported_functions">
+<em class="property">property </em><code class="sig-name descname">exported_functions</code><a class="headerlink" href="#lief.Binary.exported_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return binary’s exported <a class="reference internal" href="#lief.Function" title="lief.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.format">
+<em class="property">property </em><code class="sig-name descname">format</code><a class="headerlink" href="#lief.Binary.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>File format <a class="reference internal" href="#lief.EXE_FORMATS" title="lief.EXE_FORMATS"><code class="xref py py-class docutils literal notranslate"><span class="pre">EXE_FORMATS</span></code></a> of the underlying binary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.get_content_from_virtual_address">
+<code class="sig-name descname">get_content_from_virtual_address</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary</em>, <em class="sig-param">virtual_address: int</em>, <em class="sig-param">size: int</em>, <em class="sig-param">va_type: lief.Binary.VA_TYPES = VA_TYPES.AUTO</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#lief.Binary.get_content_from_virtual_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the content located at virtual address.</p>
+<p>Virtual address is specified in the first argument and size to read (in bytes) in the second.
+If the underlying binary is a PE, one can specify if the virtual address is a <a class="reference internal" href="#lief.Binary.VA_TYPES.RVA" title="lief.Binary.VA_TYPES.RVA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RVA</span></code></a> or a <a class="reference internal" href="#lief.Binary.VA_TYPES.VA" title="lief.Binary.VA_TYPES.VA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VA</span></code></a>. By default it is set to <a class="reference internal" href="#lief.Binary.VA_TYPES.AUTO" title="lief.Binary.VA_TYPES.AUTO"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AUTO</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.get_function_address">
+<code class="sig-name descname">get_function_address</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary</em>, <em class="sig-param">function_name: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#lief.Binary.get_function_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the address of the given function name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.get_symbol">
+<code class="sig-name descname">get_symbol</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary</em>, <em class="sig-param">symbol_name: str</em><span class="sig-paren">)</span> &#x2192; LIEF::Symbol<a class="headerlink" href="#lief.Binary.get_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <a class="reference internal" href="#lief.Symbol" title="lief.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Symbol</span></code></a> with the given <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.has_nx">
+<em class="property">property </em><code class="sig-name descname">has_nx</code><a class="headerlink" href="#lief.Binary.has_nx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the binary uses <code class="docutils literal notranslate"><span class="pre">NX</span></code> protection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.has_symbol">
+<code class="sig-name descname">has_symbol</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary</em>, <em class="sig-param">symbol_name: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#lief.Binary.has_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a <a class="reference internal" href="#lief.Symbol" title="lief.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Symbol</span></code></a> with the given name exists</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.header">
+<em class="property">property </em><code class="sig-name descname">header</code><a class="headerlink" href="#lief.Binary.header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary’s header</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.imported_functions">
+<em class="property">property </em><code class="sig-name descname">imported_functions</code><a class="headerlink" href="#lief.Binary.imported_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return binary’s imported <a class="reference internal" href="#lief.Function" title="lief.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> (name)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.is_pie">
+<em class="property">property </em><code class="sig-name descname">is_pie</code><a class="headerlink" href="#lief.Binary.is_pie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the binary is position independent</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.libraries">
+<em class="property">property </em><code class="sig-name descname">libraries</code><a class="headerlink" href="#lief.Binary.libraries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return binary’s imported libraries (name)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.Binary.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary’s name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.patch_address">
+<code class="sig-name descname">patch_address</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.Binary.patch_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>patch_address(self: lief.Binary, address: int, patch_value: List[int], va_type: lief.Binary.VA_TYPES = VA_TYPES.AUTO) -&gt; None</p></li>
+</ol>
+<p>Virtual address is specified in the first argument and the content in the second (as a list of bytes).
+If the underlying binary is a PE, one can specify if the virtual address is a <a class="reference internal" href="#lief.Binary.VA_TYPES.RVA" title="lief.Binary.VA_TYPES.RVA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RVA</span></code></a> or a <a class="reference internal" href="#lief.Binary.VA_TYPES.VA" title="lief.Binary.VA_TYPES.VA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VA</span></code></a>. By default it is set to <a class="reference internal" href="#lief.Binary.VA_TYPES.AUTO" title="lief.Binary.VA_TYPES.AUTO"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AUTO</span></code></a></p>
+<ol class="arabic simple" start="2">
+<li><p>patch_address(self: lief.Binary, address: int, patch_value: int, size: int = 8, va_type: lief.Binary.VA_TYPES = VA_TYPES.AUTO) -&gt; None</p></li>
+</ol>
+<p>Virtual address is specified in the first argument, integer in the second and sizeof the integer in third one.
+If the underlying binary is a PE, one can specify if the virtual address is a <a class="reference internal" href="#lief.Binary.VA_TYPES.RVA" title="lief.Binary.VA_TYPES.RVA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RVA</span></code></a> or a <a class="reference internal" href="#lief.Binary.VA_TYPES.VA" title="lief.Binary.VA_TYPES.VA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VA</span></code></a>. By default it is set to <a class="reference internal" href="#lief.Binary.VA_TYPES.AUTO" title="lief.Binary.VA_TYPES.AUTO"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AUTO</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.relocations">
+<em class="property">property </em><code class="sig-name descname">relocations</code><a class="headerlink" href="#lief.Binary.relocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an iterator over abstract <a class="reference internal" href="#lief.Relocation" title="lief.Relocation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Relocation</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.remove_section">
+<code class="sig-name descname">remove_section</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary</em>, <em class="sig-param">name: str</em>, <em class="sig-param">clear: bool = False</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Binary.remove_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the section with the given name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.sections">
+<em class="property">property </em><code class="sig-name descname">sections</code><a class="headerlink" href="#lief.Binary.sections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list in <strong>read only</strong> of binary’s abstract <a class="reference internal" href="#lief.Section" title="lief.Section"><code class="xref py py-class docutils literal notranslate"><span class="pre">Section</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.symbols">
+<em class="property">property </em><code class="sig-name descname">symbols</code><a class="headerlink" href="#lief.Binary.symbols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list in <strong>read only</strong> of binary’s abstract <a class="reference internal" href="#lief.Symbol" title="lief.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Symbol</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Binary.xref">
+<code class="sig-name descname">xref</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Binary</em>, <em class="sig-param">Return all **virtual address** that *use* the ``address`` given in parametervirtual_address: int</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#lief.Binary.xref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="header">
+<h2>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Header">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Header</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Header</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Header" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="lief.Header.architecture">
+<em class="property">property </em><code class="sig-name descname">architecture</code><a class="headerlink" href="#lief.Header.architecture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target architecture (<a class="reference internal" href="#lief.ARCHITECTURES" title="lief.ARCHITECTURES"><code class="xref py py-class docutils literal notranslate"><span class="pre">ARCHITECTURES</span></code></a>)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Header.endianness">
+<em class="property">property </em><code class="sig-name descname">endianness</code><a class="headerlink" href="#lief.Header.endianness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary endianness
+See: <a class="reference internal" href="#lief.ENDIANNESS" title="lief.ENDIANNESS"><code class="xref py py-class docutils literal notranslate"><span class="pre">ENDIANNESS</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Header.entrypoint">
+<em class="property">property </em><code class="sig-name descname">entrypoint</code><a class="headerlink" href="#lief.Header.entrypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary entrypoint</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Header.is_32">
+<em class="property">property </em><code class="sig-name descname">is_32</code><a class="headerlink" href="#lief.Header.is_32" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the binary target a <code class="docutils literal notranslate"><span class="pre">32-bits</span></code> architecture</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Header.is_64">
+<em class="property">property </em><code class="sig-name descname">is_64</code><a class="headerlink" href="#lief.Header.is_64" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the binary target a <code class="docutils literal notranslate"><span class="pre">64-bits</span></code> architecture</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Header.modes">
+<em class="property">property </em><code class="sig-name descname">modes</code><a class="headerlink" href="#lief.Header.modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target <a class="reference internal" href="#lief.MODES" title="lief.MODES"><code class="xref py py-class docutils literal notranslate"><span class="pre">MODES</span></code></a> (32-bits, 64-bits…)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Header.object_type">
+<em class="property">property </em><code class="sig-name descname">object_type</code><a class="headerlink" href="#lief.Header.object_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of the binary (executable, library…)
+See: <a class="reference internal" href="#lief.OBJECT_TYPES" title="lief.OBJECT_TYPES"><code class="xref py py-class docutils literal notranslate"><span class="pre">OBJECT_TYPES</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="section">
+<h2>Section<a class="headerlink" href="#section" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Section">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Section</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.Section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: lief.Section) -&gt; None</p></li>
+</ol>
+<p>Default constructor</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: lief.Section, name: str) -&gt; None</p></li>
+</ol>
+<p>Constructor from section name</p>
+<dl class="method">
+<dt id="lief.Section.content">
+<em class="property">property </em><code class="sig-name descname">content</code><a class="headerlink" href="#lief.Section.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section’s content</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.entropy">
+<em class="property">property </em><code class="sig-name descname">entropy</code><a class="headerlink" href="#lief.Section.entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section’s entropy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.Section.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section’s name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.offset">
+<em class="property">property </em><code class="sig-name descname">offset</code><a class="headerlink" href="#lief.Section.offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section’s offset</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.search">
+<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.Section.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>search(self: lief.Section, number: int, pos: int = 0, size: int = 0) -&gt; int</p></li>
+</ol>
+<p>Look for <strong>integer</strong> within the current section</p>
+<ol class="arabic simple" start="2">
+<li><p>search(self: lief.Section, str: str, pos: int = 0) -&gt; int</p></li>
+</ol>
+<p>Look for <strong>string</strong> within the current section</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.search_all">
+<code class="sig-name descname">search_all</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.Section.search_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>search_all(self: lief.Section, number: int, size: int = 0) -&gt; List[int]</p></li>
+</ol>
+<p>Look for <strong>all</strong> integers within the current section</p>
+<ol class="arabic simple" start="2">
+<li><p>search_all(self: lief.Section, str: str) -&gt; List[int]</p></li>
+</ol>
+<p>Look for all <strong>strings</strong> within the current section</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#lief.Section.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section’s size</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Section.virtual_address">
+<em class="property">property </em><code class="sig-name descname">virtual_address</code><a class="headerlink" href="#lief.Section.virtual_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section’s virtual address</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="symbol">
+<h2>Symbol<a class="headerlink" href="#symbol" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Symbol">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Symbol</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Symbol</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Symbol" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="lief.Symbol.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.Symbol.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Symbol.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#lief.Symbol.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s size</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Symbol.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#lief.Symbol.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s value</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="relocation">
+<h2>Relocation<a class="headerlink" href="#relocation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Relocation">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Relocation</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.Relocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: lief.Relocation) -&gt; None</p></li>
+</ol>
+<p>Default constructor</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: lief.Relocation, address: int, size: int) -&gt; None</p></li>
+</ol>
+<p>Constructor from <a class="reference internal" href="#lief.Relocation.address" title="lief.Relocation.address"><code class="xref py py-attr docutils literal notranslate"><span class="pre">address</span></code></a> and <a class="reference internal" href="#lief.Relocation.size" title="lief.Relocation.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a></p>
+<dl class="method">
+<dt id="lief.Relocation.address">
+<em class="property">property </em><code class="sig-name descname">address</code><a class="headerlink" href="#lief.Relocation.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relocation’s address</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Relocation.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#lief.Relocation.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relocation’s size (in <strong>bits</strong>)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="function">
+<h2>Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Function">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lief.Function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: lief.Function) -&gt; None</p></li>
+<li><p>__init__(self: lief.Function, arg0: str) -&gt; None</p></li>
+<li><p>__init__(self: lief.Function, arg0: int) -&gt; None</p></li>
+<li><p>__init__(self: lief.Function, arg0: str, arg1: int) -&gt; None</p></li>
+</ol>
+<dl class="class">
+<dt id="lief.Function.FLAGS">
+<em class="property">class </em><code class="sig-name descname">FLAGS</code><span class="sig-paren">(</span><em class="sig-param">self: lief.Function.FLAGS</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Function.FLAGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>IMPORTED</p>
+<p>EXPORTED</p>
+<p>CONSTRUCTOR</p>
+<p>DESTRUCTOR</p>
+<p>DEBUG</p>
+<dl class="attribute">
+<dt id="lief.Function.FLAGS.CONSTRUCTOR">
+<code class="sig-name descname">CONSTRUCTOR</code><em class="property"> = FLAGS.CONSTRUCTOR</em><a class="headerlink" href="#lief.Function.FLAGS.CONSTRUCTOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.Function.FLAGS.DEBUG">
+<code class="sig-name descname">DEBUG</code><em class="property"> = FLAGS.DEBUG</em><a class="headerlink" href="#lief.Function.FLAGS.DEBUG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.Function.FLAGS.DESTRUCTOR">
+<code class="sig-name descname">DESTRUCTOR</code><em class="property"> = FLAGS.DESTRUCTOR</em><a class="headerlink" href="#lief.Function.FLAGS.DESTRUCTOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.Function.FLAGS.EXPORTED">
+<code class="sig-name descname">EXPORTED</code><em class="property"> = FLAGS.EXPORTED</em><a class="headerlink" href="#lief.Function.FLAGS.EXPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.Function.FLAGS.IMPORTED">
+<code class="sig-name descname">IMPORTED</code><em class="property"> = FLAGS.IMPORTED</em><a class="headerlink" href="#lief.Function.FLAGS.IMPORTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.Function.FLAGS.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.Function.FLAGS.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Function.address">
+<em class="property">property </em><code class="sig-name descname">address</code><a class="headerlink" href="#lief.Function.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Function.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.Function.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Function.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#lief.Function.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s size</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Function.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#lief.Function.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbol’s value</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="executable-formats">
+<h3>Executable formats<a class="headerlink" href="#executable-formats" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.EXE_FORMATS">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">EXE_FORMATS</code><span class="sig-paren">(</span><em class="sig-param">self: lief.EXE_FORMATS</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.EXE_FORMATS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>UNKNOWN</p>
+<p>ELF</p>
+<p>PE</p>
+<p>MACHO</p>
+<dl class="attribute">
+<dt id="lief.EXE_FORMATS.ELF">
+<code class="sig-name descname">ELF</code><em class="property"> = EXE_FORMATS.ELF</em><a class="headerlink" href="#lief.EXE_FORMATS.ELF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.EXE_FORMATS.MACHO">
+<code class="sig-name descname">MACHO</code><em class="property"> = EXE_FORMATS.MACHO</em><a class="headerlink" href="#lief.EXE_FORMATS.MACHO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.EXE_FORMATS.PE">
+<code class="sig-name descname">PE</code><em class="property"> = EXE_FORMATS.PE</em><a class="headerlink" href="#lief.EXE_FORMATS.PE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.EXE_FORMATS.UNKNOWN">
+<code class="sig-name descname">UNKNOWN</code><em class="property"> = EXE_FORMATS.UNKNOWN</em><a class="headerlink" href="#lief.EXE_FORMATS.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.EXE_FORMATS.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.EXE_FORMATS.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="object-types">
+<h3>Object types<a class="headerlink" href="#object-types" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.OBJECT_TYPES">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">OBJECT_TYPES</code><span class="sig-paren">(</span><em class="sig-param">self: lief.OBJECT_TYPES</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.OBJECT_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>NONE</p>
+<p>EXECUTABLE</p>
+<p>LIBRARY</p>
+<p>OBJECT</p>
+<dl class="attribute">
+<dt id="lief.OBJECT_TYPES.EXECUTABLE">
+<code class="sig-name descname">EXECUTABLE</code><em class="property"> = OBJECT_TYPES.EXECUTABLE</em><a class="headerlink" href="#lief.OBJECT_TYPES.EXECUTABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.OBJECT_TYPES.LIBRARY">
+<code class="sig-name descname">LIBRARY</code><em class="property"> = OBJECT_TYPES.LIBRARY</em><a class="headerlink" href="#lief.OBJECT_TYPES.LIBRARY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.OBJECT_TYPES.NONE">
+<code class="sig-name descname">NONE</code><em class="property"> = OBJECT_TYPES.NONE</em><a class="headerlink" href="#lief.OBJECT_TYPES.NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.OBJECT_TYPES.OBJECT">
+<code class="sig-name descname">OBJECT</code><em class="property"> = OBJECT_TYPES.OBJECT</em><a class="headerlink" href="#lief.OBJECT_TYPES.OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.OBJECT_TYPES.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.OBJECT_TYPES.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="architectures">
+<h3>Architectures<a class="headerlink" href="#architectures" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.ARCHITECTURES">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">ARCHITECTURES</code><span class="sig-paren">(</span><em class="sig-param">self: lief.ARCHITECTURES</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.ARCHITECTURES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>NONE</p>
+<p>ARM</p>
+<p>ARM64</p>
+<p>MIPS</p>
+<p>X86</p>
+<p>PPC</p>
+<p>SPARC</p>
+<p>SYSZ</p>
+<p>XCODE</p>
+<p>INTEL</p>
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.ARM">
+<code class="sig-name descname">ARM</code><em class="property"> = ARCHITECTURES.ARM</em><a class="headerlink" href="#lief.ARCHITECTURES.ARM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.ARM64">
+<code class="sig-name descname">ARM64</code><em class="property"> = ARCHITECTURES.ARM64</em><a class="headerlink" href="#lief.ARCHITECTURES.ARM64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.INTEL">
+<code class="sig-name descname">INTEL</code><em class="property"> = ARCHITECTURES.INTEL</em><a class="headerlink" href="#lief.ARCHITECTURES.INTEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.MIPS">
+<code class="sig-name descname">MIPS</code><em class="property"> = ARCHITECTURES.MIPS</em><a class="headerlink" href="#lief.ARCHITECTURES.MIPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.NONE">
+<code class="sig-name descname">NONE</code><em class="property"> = ARCHITECTURES.NONE</em><a class="headerlink" href="#lief.ARCHITECTURES.NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.PPC">
+<code class="sig-name descname">PPC</code><em class="property"> = ARCHITECTURES.PPC</em><a class="headerlink" href="#lief.ARCHITECTURES.PPC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.SPARC">
+<code class="sig-name descname">SPARC</code><em class="property"> = ARCHITECTURES.SPARC</em><a class="headerlink" href="#lief.ARCHITECTURES.SPARC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.SYSZ">
+<code class="sig-name descname">SYSZ</code><em class="property"> = ARCHITECTURES.SYSZ</em><a class="headerlink" href="#lief.ARCHITECTURES.SYSZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.X86">
+<code class="sig-name descname">X86</code><em class="property"> = ARCHITECTURES.X86</em><a class="headerlink" href="#lief.ARCHITECTURES.X86" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ARCHITECTURES.XCODE">
+<code class="sig-name descname">XCODE</code><em class="property"> = ARCHITECTURES.XCODE</em><a class="headerlink" href="#lief.ARCHITECTURES.XCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.ARCHITECTURES.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.ARCHITECTURES.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="modes">
+<h3>Modes<a class="headerlink" href="#modes" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.MODES">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">MODES</code><span class="sig-paren">(</span><em class="sig-param">self: lief.MODES</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.MODES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>NONE</p>
+<p>M16</p>
+<p>M32</p>
+<p>M64</p>
+<p>ARM</p>
+<p>THUMB</p>
+<p>MCLASS</p>
+<p>UNDEFINED</p>
+<p>MIPS3</p>
+<p>MIPS32R6</p>
+<p>MIPSGP64</p>
+<p>V7</p>
+<p>V8</p>
+<p>V9</p>
+<p>MIPS32</p>
+<p>MIPS64</p>
+<dl class="attribute">
+<dt id="lief.MODES.ARM">
+<code class="sig-name descname">ARM</code><em class="property"> = MODES.ARM</em><a class="headerlink" href="#lief.MODES.ARM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.M16">
+<code class="sig-name descname">M16</code><em class="property"> = MODES.M16</em><a class="headerlink" href="#lief.MODES.M16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.M32">
+<code class="sig-name descname">M32</code><em class="property"> = MODES.M32</em><a class="headerlink" href="#lief.MODES.M32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.M64">
+<code class="sig-name descname">M64</code><em class="property"> = MODES.M64</em><a class="headerlink" href="#lief.MODES.M64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.MCLASS">
+<code class="sig-name descname">MCLASS</code><em class="property"> = MODES.MCLASS</em><a class="headerlink" href="#lief.MODES.MCLASS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.MIPS3">
+<code class="sig-name descname">MIPS3</code><em class="property"> = MODES.MIPS3</em><a class="headerlink" href="#lief.MODES.MIPS3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.MIPS32">
+<code class="sig-name descname">MIPS32</code><em class="property"> = MODES.MIPS32</em><a class="headerlink" href="#lief.MODES.MIPS32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.MIPS32R6">
+<code class="sig-name descname">MIPS32R6</code><em class="property"> = MODES.MIPS32R6</em><a class="headerlink" href="#lief.MODES.MIPS32R6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.MIPS64">
+<code class="sig-name descname">MIPS64</code><em class="property"> = MODES.MIPS64</em><a class="headerlink" href="#lief.MODES.MIPS64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.MIPSGP64">
+<code class="sig-name descname">MIPSGP64</code><em class="property"> = MODES.MIPSGP64</em><a class="headerlink" href="#lief.MODES.MIPSGP64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.NONE">
+<code class="sig-name descname">NONE</code><em class="property"> = MODES.NONE</em><a class="headerlink" href="#lief.MODES.NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.THUMB">
+<code class="sig-name descname">THUMB</code><em class="property"> = MODES.THUMB</em><a class="headerlink" href="#lief.MODES.THUMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.UNDEFINED">
+<code class="sig-name descname">UNDEFINED</code><em class="property"> = MODES.UNDEFINED</em><a class="headerlink" href="#lief.MODES.UNDEFINED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.V7">
+<code class="sig-name descname">V7</code><em class="property"> = MODES.V7</em><a class="headerlink" href="#lief.MODES.V7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.V8">
+<code class="sig-name descname">V8</code><em class="property"> = MODES.V8</em><a class="headerlink" href="#lief.MODES.V8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.MODES.V9">
+<code class="sig-name descname">V9</code><em class="property"> = MODES.V9</em><a class="headerlink" href="#lief.MODES.V9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.MODES.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.MODES.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="endianness">
+<h3>Endianness<a class="headerlink" href="#endianness" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.ENDIANNESS">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">ENDIANNESS</code><span class="sig-paren">(</span><em class="sig-param">self: lief.ENDIANNESS</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.ENDIANNESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>NONE</p>
+<p>BIG</p>
+<p>LITTLE</p>
+<dl class="attribute">
+<dt id="lief.ENDIANNESS.BIG">
+<code class="sig-name descname">BIG</code><em class="property"> = ENDIANNESS.BIG</em><a class="headerlink" href="#lief.ENDIANNESS.BIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ENDIANNESS.LITTLE">
+<code class="sig-name descname">LITTLE</code><em class="property"> = ENDIANNESS.LITTLE</em><a class="headerlink" href="#lief.ENDIANNESS.LITTLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.ENDIANNESS.NONE">
+<code class="sig-name descname">NONE</code><em class="property"> = ENDIANNESS.NONE</em><a class="headerlink" href="#lief.ENDIANNESS.NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.ENDIANNESS.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.ENDIANNESS.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="elf.html" class="btn btn-neutral float-right" title="ELF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="utilities.html" class="btn btn-neutral float-left" title="Utilities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>03 - Play with ELF symbols &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="04 - ELF Hooking" href="04_elf_hooking.html" />
+    <link rel="prev" title="02 - Create a PE from scratch" href="02_pe_from_scratch.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>03 - Play with ELF symbols</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/03_elf_change_symbols.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="play-with-elf-symbols">
+<h1>03 - Play with ELF symbols<a class="headerlink" href="#play-with-elf-symbols" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we will see how to modify dynamic symbols in both a binary and a library.</p>
+<p>Scripts and materials are available here: <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/03_ELF_change_symbols">materials</a></p>
+<p>By Romain Thomas - <a class="reference external" href="https://twitter.com/rh0main">&#64;rh0main</a></p>
+<hr class="docutils" />
+<p>When a binary in linked against a library, the library needed is stored in a <code class="docutils literal notranslate"><span class="pre">DT_NEEDED</span></code> entry from the
+dynamic table and the needed functions needed are registered in the dynamic symbols table with the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol.value" title="lief.ELF.Symbol.value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">value</span></code></a> set to <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol.type" title="lief.ELF.Symbol.type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">type</span></code></a> set to <a class="reference internal" href="../api/python/elf.html#lief.ELF.SYMBOL_TYPES.FUNC" title="lief.ELF.SYMBOL_TYPES.FUNC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FUNC</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>Similarly, when a library exports functions it has a <code class="docutils literal notranslate"><span class="pre">DT_SONAME</span></code> entry in the dynamic table and the functions
+exported are registered in the dynamic symbols table with the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol.value" title="lief.ELF.Symbol.value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">value</span></code></a> set to address of the function in the library</p></li>
+<li><p><a class="reference internal" href="../api/python/elf.html#lief.ELF.Symbol.type" title="lief.ELF.Symbol.type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">type</span></code></a> set to <a class="reference internal" href="../api/python/elf.html#lief.ELF.SYMBOL_TYPES.FUNC" title="lief.ELF.SYMBOL_TYPES.FUNC"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FUNC</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>Imported and exported functions are abstracted by LIEF thus you can iterate over these elements with <a class="reference internal" href="../api/python/abstract.html#lief.Binary.exported_functions" title="lief.Binary.exported_functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exported_functions</span></code></a> and <a class="reference internal" href="../api/python/abstract.html#lief.Binary.imported_functions" title="lief.Binary.imported_functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">imported_functions</span></code></a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+<span class="n">binary</span>  <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/usr/bin/ls&quot;</span><span class="p">)</span>
+<span class="n">library</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/usr/lib/libc.so.6&quot;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">binary</span><span class="o">.</span><span class="n">imported_functions</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">library</span><span class="o">.</span><span class="n">exported_functions</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When analyzing a binary, imported function names are very helpful for the reverse engineering. One solution is to link statically the binary and the library.
+Another solution is to blow mind the reverser’s mind by swapping these symbols.</p>
+<p>Take a look at the following code:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+<span class="kt">double</span> <span class="nf">hashme</span><span class="p">(</span><span class="kt">double</span> <span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">pow</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="n">input</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: %s N</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="n">EXIT_FAILURE</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">double</span> <span class="n">N</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="kt">double</span> <span class="n">hash</span> <span class="o">=</span> <span class="n">hashme</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">hash</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Basically, this program takes an integer as argument and performs some computation on this value.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> hasme <span class="m">123</span>
+<span class="go">228886645.836282</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/hashme.png"><img alt="../_images/hashme.png" class="align-center" src="../_images/hashme.png" style="width: 410.4px; height: 325.8px;" /></a>
+<p>The <code class="docutils literal notranslate"><span class="pre">pow</span></code> and <code class="docutils literal notranslate"><span class="pre">log</span></code> functions are located in the <code class="docutils literal notranslate"><span class="pre">libm.so.6</span></code> library. One interesting trick to do with LIEF is
+to swap this function <strong>name</strong> with other functions <strong>name</strong>. In this tutorial we will swap them with <code class="docutils literal notranslate"><span class="pre">cos</span></code> and <code class="docutils literal notranslate"><span class="pre">sin</span></code> functions.</p>
+<p>First we have to load both the library and the binary:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">lief</span>
+
+
+<span class="n">hasme</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;hasme&quot;</span><span class="p">)</span>
+<span class="n">libm</span>  <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/usr/lib/libm.so.6&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then when change the name of the two imported functions in the <strong>binary</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hashme_pow_sym</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;pow&quot;</span><span class="p">,</span> <span class="n">my_binary</span><span class="o">.</span><span class="n">imported_symbols</span><span class="p">))</span>
+<span class="n">hashme_log_sym</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">my_binary</span><span class="o">.</span><span class="n">imported_symbols</span><span class="p">))</span>
+
+<span class="n">hashme_pow_sym</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;cos&quot;</span>
+<span class="n">hashme_log_sym</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;sin&quot;</span>
+</pre></div>
+</div>
+<p>finally we swap <code class="docutils literal notranslate"><span class="pre">log</span></code> with <code class="docutils literal notranslate"><span class="pre">sin</span></code> and <code class="docutils literal notranslate"><span class="pre">pow</span></code> with <code class="docutils literal notranslate"><span class="pre">cos</span></code> in the <strong>library</strong> and we rebuild the two objects:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">lief</span>
+
+
+<span class="n">hasme</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;hasme&quot;</span><span class="p">)</span>
+<span class="n">libm</span>  <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;/usr/lib/libm.so.6&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">symbol_a</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">a</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dynamic_symbols</span><span class="p">))</span>
+    <span class="n">symbol_b</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">b</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dynamic_symbols</span><span class="p">))</span>
+    <span class="n">b_name</span> <span class="o">=</span> <span class="n">symbol_b</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">symbol_b</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">symbol_a</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">symbol_a</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">b_name</span>
+
+<span class="n">hashme_pow_sym</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;pow&quot;</span><span class="p">,</span> <span class="n">my_binary</span><span class="o">.</span><span class="n">imported_symbols</span><span class="p">))</span>
+<span class="n">hashme_log_sym</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">my_binary</span><span class="o">.</span><span class="n">imported_symbols</span><span class="p">))</span>
+
+<span class="n">hashme_pow_sym</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;cos&quot;</span>
+<span class="n">hashme_log_sym</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;sin&quot;</span>
+
+
+<span class="n">swap</span><span class="p">(</span><span class="n">libm</span><span class="p">,</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="s2">&quot;sin&quot;</span><span class="p">)</span>
+<span class="n">swap</span><span class="p">(</span><span class="n">libm</span><span class="p">,</span> <span class="s2">&quot;pow&quot;</span><span class="p">,</span> <span class="s2">&quot;cos&quot;</span><span class="p">)</span>
+
+<span class="n">hashme</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;hashme.obf&quot;</span><span class="p">)</span>
+<span class="n">libm</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;libm.so.6&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/hashme_obf.png"><img alt="../_images/hashme_obf.png" class="align-center" src="../_images/hashme_obf.png" style="width: 434.4px; height: 334.8px;" /></a>
+<p>With this script, we built a modified <code class="docutils literal notranslate"><span class="pre">libm</span></code> in our current directory and we have to force the Linux loader to use this one when executing <code class="docutils literal notranslate"><span class="pre">binary.obf</span></code>.
+To do so we export <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> to the current directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>. hashme.obf <span class="m">123</span>
+<span class="go">228886645.836282</span>
+</pre></div>
+</div>
+<p>If we omit it, it will use the default <code class="docutils literal notranslate"><span class="pre">libm</span></code> and hash computation will be done with <code class="docutils literal notranslate"><span class="pre">sin</span></code> and <code class="docutils literal notranslate"><span class="pre">cos</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> hashme.obf <span class="m">123</span>
+<span class="go">-0.557978</span>
+</pre></div>
+</div>
+<p>One real use case could be to swap symbols in cryptographic libraries like OpenSSL. For example <code class="docutils literal notranslate"><span class="pre">EVP_DecryptInit</span></code> and <code class="docutils literal notranslate"><span class="pre">EVP_EncryptInit</span></code> have the same prototype so we could swap them.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="04_elf_hooking.html" class="btn btn-neutral float-right" title="04 - ELF Hooking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="02_pe_from_scratch.html" class="btn btn-neutral float-left" title="02 - Create a PE from scratch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

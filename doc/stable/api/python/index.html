@@ -1,0 +1,877 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python &mdash; LIEF 0.10.0-845f675 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Utilities" href="utilities.html" />
+    <link rel="prev" title="12 - ELF Coredump" href="../../tutorials/12_elf_coredump.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LIEF
+          
+
+          
+            
+            <img src="../../_static/logo_blue.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compilation.html">Compilation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/04_elf_hooking.html">04 - ELF Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/06_pe_hooking.html">06 - PE Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/07_pe_resource.html">07 - PE Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/10_android_formats.html">10 - Android formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/11_macho_modification.html">11 - Mach-O Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/12_elf_coredump.html">12 - ELF Coredump</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstract.html">Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html">ELF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html">PE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html">MachO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html">OAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html">DEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html">VDEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="art.html">ART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platforms/android.html">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exception">exception</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bad-file">bad_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bad-format">bad_format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#not-implemented">not_implemented</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#not-supported">not_supported</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integrity-error">integrity_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-out-of-bound">read_out_of_bound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#not-found">not_found</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#corrupted">corrupted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-error">conversion_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type-error">type_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#builder-error">builder_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parser-error">parser_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pe-error">pe_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pe-bad-section-name">pe_bad_section_name</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logging">Logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#logging-levels">Logging levels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">C</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LIEF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/python/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python">
+<span id="python-api-ref"></span><h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Common</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abstract.html">Abstract</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Formats specific</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="elf.html">ELF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#binary">Binary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#header">Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#section">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#segment">Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-entry">Dynamic Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-entry-library">Dynamic Entry Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-shared-object">Dynamic Shared Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-entry-run-path">Dynamic Entry Run Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-entry-rpath">Dynamic Entry RPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-entry-array">Dynamic Entry Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#dynamic-entry-flags">Dynamic Entry Flags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#relocations">Relocations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#symbol">Symbol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#symbol-version">Symbol Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#symbol-version-auxiliary">Symbol Version Auxiliary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#symbol-version-definition">Symbol Version Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#symbol-version-requirement">Symbol Version Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#gnu-hash-table">GNU Hash table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#sysv-hash-table">SYSV Hash table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#note">Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#note-details">Note Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#core-prpsinfo">Core PrPsInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#core-prstatus">Core PrStatus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#core-file">Core File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#core-file-entry">Core File Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#core-siginfo">Core Siginfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#core-auxiliary-vector">Core Auxiliary Vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#android-note">Android Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#note-abi">Note ABI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#builder">Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elf.html#enums">Enums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">PE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#binary">Binary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#dos-header">Dos Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#header">Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#optional-header">Optional Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#data-directory">Data Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#section">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#import">Import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#import-entry">Import Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#tls">TLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#symbol">Symbol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#relocation">Relocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#relocation-entry">Relocation Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#export">Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#export-entry">Export Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#signature">Signature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#authenticatedattributes">AuthenticatedAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#x509">x509</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#contentinfo">ContentInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#signerinfo">SignerInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#builder">Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-node">Resource Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-directory">Resource Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-data">Resource Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resources-manager">Resources Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-icon">Resource Icon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-dialog">Resource Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-dialog-item">Resource Dialog Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-version">Resource Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-fixed-file-info">Resource Fixed File Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-var-file-info">Resource Var File Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#resource-string-file-info">Resource String File Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#lang-code-item">Lang code item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#rich-header">Rich Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#rich-entry">Rich Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#debug">Debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#code-view">Code View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#code-view-pdb">Code View PDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#code-integrity">Code Integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#pogo">Pogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#pogo-entry">Pogo Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#load-configuration">Load Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pe.html#enums">Enums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="macho.html">MachO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#fatbinary">FatBinary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#binary">Binary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#header">Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#section">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#segmentcommand">SegmentCommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#loadcommand">LoadCommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#dylibcommand">DylibCommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#dylinkercommand">DylinkerCommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#uuidcommand">UUIDCommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#maincommand">MainCommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#symbol">Symbol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#symbol-command">Symbol Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#dynamic-symbol-command">Dynamic Symbol Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#dyld-info">Dyld Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#function-starts">Function starts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#source-version">Source Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#version-min">Version Min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#relocation">Relocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#relocation-object">Relocation Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#relocation-dyld">Relocation Dyld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#binding-info">Binding Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#export-info">Export Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#thread-command">Thread Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#rpath-command">RPath Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#code-signature">Code Signature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#data-in-code">Data In Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#data-code-entry">Data Code Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#segment-split-info">Segment Split Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#sub-framework">Sub Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#dyld-environment">Dyld Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#encryption-info">Encryption Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#build-version">Build Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#build-tool-version">Build Tool Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macho.html#enums">Enums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oat.html">OAT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#binary">Binary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#header">Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#dexfile">DexFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#class">Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#method">Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oat.html#enums">Enums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dex.html">DEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#file">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#header">Header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#method">Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#class">Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#code-info">Code Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#prototype">Prototype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#type">Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#maplist">MapList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#mapitem">MapItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dex.html#enums">Enums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdex.html">VDEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html#file">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdex.html#header">Header</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="art.html">ART</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="art.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="art.html#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="art.html#file">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="art.html#header">Header</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="platforms/android.html">Android</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="platforms/android.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platforms/android.html#android-versions">Android Versions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exception">
+<h3>exception<a class="headerlink" href="#exception" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.exception">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">exception</code><a class="headerlink" href="#lief.exception" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.exception.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.exception.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.exception.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.exception.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="bad-file">
+<h3>bad_file<a class="headerlink" href="#bad-file" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.bad_file">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">bad_file</code><a class="headerlink" href="#lief.bad_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.bad_file.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.bad_file.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.bad_file.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.bad_file.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="bad-format">
+<h3>bad_format<a class="headerlink" href="#bad-format" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.bad_format">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">bad_format</code><a class="headerlink" href="#lief.bad_format" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.bad_format.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.bad_format.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.bad_format.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.bad_format.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="not-implemented">
+<h3>not_implemented<a class="headerlink" href="#not-implemented" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.not_implemented">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">not_implemented</code><a class="headerlink" href="#lief.not_implemented" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.not_implemented.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.not_implemented.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.not_implemented.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.not_implemented.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="not-supported">
+<h3>not_supported<a class="headerlink" href="#not-supported" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.not_supported">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">not_supported</code><a class="headerlink" href="#lief.not_supported" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.not_supported.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.not_supported.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.not_supported.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.not_supported.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="integrity-error">
+<h3>integrity_error<a class="headerlink" href="#integrity-error" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.integrity_error">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">integrity_error</code><a class="headerlink" href="#lief.integrity_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.integrity_error.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.integrity_error.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.integrity_error.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.integrity_error.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="read-out-of-bound">
+<h3>read_out_of_bound<a class="headerlink" href="#read-out-of-bound" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.read_out_of_bound">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">read_out_of_bound</code><a class="headerlink" href="#lief.read_out_of_bound" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.read_out_of_bound.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.read_out_of_bound.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.read_out_of_bound.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.read_out_of_bound.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="not-found">
+<h3>not_found<a class="headerlink" href="#not-found" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.not_found">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">not_found</code><a class="headerlink" href="#lief.not_found" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.not_found.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.not_found.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.not_found.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.not_found.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="corrupted">
+<h3>corrupted<a class="headerlink" href="#corrupted" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.corrupted">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">corrupted</code><a class="headerlink" href="#lief.corrupted" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.corrupted.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.corrupted.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.corrupted.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.corrupted.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="conversion-error">
+<h3>conversion_error<a class="headerlink" href="#conversion-error" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.conversion_error">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">conversion_error</code><a class="headerlink" href="#lief.conversion_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.conversion_error.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.conversion_error.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.conversion_error.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.conversion_error.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="type-error">
+<h3>type_error<a class="headerlink" href="#type-error" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.type_error">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">type_error</code><a class="headerlink" href="#lief.type_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.type_error.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.type_error.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.type_error.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.type_error.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="builder-error">
+<h3>builder_error<a class="headerlink" href="#builder-error" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.builder_error">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">builder_error</code><a class="headerlink" href="#lief.builder_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.builder_error.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.builder_error.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.builder_error.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.builder_error.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="parser-error">
+<h3>parser_error<a class="headerlink" href="#parser-error" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.parser_error">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">parser_error</code><a class="headerlink" href="#lief.parser_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.parser_error.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.parser_error.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.parser_error.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.parser_error.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="pe-error">
+<h3>pe_error<a class="headerlink" href="#pe-error" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.pe_error">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">pe_error</code><a class="headerlink" href="#lief.pe_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.pe_error.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.pe_error.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.pe_error.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.pe_error.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="pe-bad-section-name">
+<h3>pe_bad_section_name<a class="headerlink" href="#pe-bad-section-name" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.pe_bad_section_name">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">pe_bad_section_name</code><a class="headerlink" href="#lief.pe_bad_section_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="lief.pe_bad_section_name.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#lief.pe_bad_section_name.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.pe_bad_section_name.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lief.pe_bad_section_name.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lief.Logger">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">Logger</code><a class="headerlink" href="#lief.Logger" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="lief.Logger.disable">
+<em class="property">static </em><code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Logger.disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable the logging module</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Logger.enable">
+<em class="property">static </em><code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Logger.enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable the logging module</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Logger.set_level">
+<em class="property">static </em><code class="sig-name descname">set_level</code><span class="sig-paren">(</span><em class="sig-param">level: lief.LOGGING_LEVEL</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Logger.set_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the <a class="reference internal" href="#lief.LOGGING_LEVEL" title="lief.LOGGING_LEVEL"><code class="xref py py-class docutils literal notranslate"><span class="pre">LOGGING_LEVEL</span></code></a> (<strong>hierarchical</strong>)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lief.Logger.set_verbose_level">
+<em class="property">static </em><code class="sig-name descname">set_verbose_level</code><span class="sig-paren">(</span><em class="sig-param">level: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.Logger.set_verbose_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the verbose level</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="logging-levels">
+<h3>Logging levels<a class="headerlink" href="#logging-levels" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="lief.LOGGING_LEVEL">
+<em class="property">class </em><code class="sig-prename descclassname">lief.</code><code class="sig-name descname">LOGGING_LEVEL</code><span class="sig-paren">(</span><em class="sig-param">self: lief.LOGGING_LEVEL</em>, <em class="sig-param">arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lief.LOGGING_LEVEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>GLOBAL</p>
+<p>TRACE</p>
+<p>DEBUG</p>
+<p>FATAL</p>
+<p>ERROR</p>
+<p>WARNING</p>
+<p>INFO</p>
+<p>VERBOSE</p>
+<p>UNKNOWN</p>
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.DEBUG">
+<code class="sig-name descname">DEBUG</code><em class="property"> = LOGGING_LEVEL.DEBUG</em><a class="headerlink" href="#lief.LOGGING_LEVEL.DEBUG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.ERROR">
+<code class="sig-name descname">ERROR</code><em class="property"> = LOGGING_LEVEL.ERROR</em><a class="headerlink" href="#lief.LOGGING_LEVEL.ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.FATAL">
+<code class="sig-name descname">FATAL</code><em class="property"> = LOGGING_LEVEL.FATAL</em><a class="headerlink" href="#lief.LOGGING_LEVEL.FATAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.GLOBAL">
+<code class="sig-name descname">GLOBAL</code><em class="property"> = LOGGING_LEVEL.GLOBAL</em><a class="headerlink" href="#lief.LOGGING_LEVEL.GLOBAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.INFO">
+<code class="sig-name descname">INFO</code><em class="property"> = LOGGING_LEVEL.INFO</em><a class="headerlink" href="#lief.LOGGING_LEVEL.INFO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.TRACE">
+<code class="sig-name descname">TRACE</code><em class="property"> = LOGGING_LEVEL.TRACE</em><a class="headerlink" href="#lief.LOGGING_LEVEL.TRACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.UNKNOWN">
+<code class="sig-name descname">UNKNOWN</code><em class="property"> = LOGGING_LEVEL.UNKNOWN</em><a class="headerlink" href="#lief.LOGGING_LEVEL.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.VERBOSE">
+<code class="sig-name descname">VERBOSE</code><em class="property"> = LOGGING_LEVEL.VERBOSE</em><a class="headerlink" href="#lief.LOGGING_LEVEL.VERBOSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lief.LOGGING_LEVEL.WARNING">
+<code class="sig-name descname">WARNING</code><em class="property"> = LOGGING_LEVEL.WARNING</em><a class="headerlink" href="#lief.LOGGING_LEVEL.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lief.LOGGING_LEVEL.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#lief.LOGGING_LEVEL.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(self: handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="utilities.html" class="btn btn-neutral float-right" title="Utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../tutorials/12_elf_coredump.html" class="btn btn-neutral float-left" title="12 - ELF Coredump" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Quarkslab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
