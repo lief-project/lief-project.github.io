@@ -69,11 +69,17 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classLIEF_1_1PE_1_1x509-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LIEF::PE::x509 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface over a <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate.  
+ <a href="classLIEF_1_1PE_1_1x509.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="x509_8hpp_source.html">x509.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LIEF::PE::x509:</div>
 <div class="dyncontent">
@@ -86,10 +92,73 @@ Inheritance diagram for LIEF::PE::x509:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:af52576da8e6b6e7b2295470883e60000"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000">KEY_TYPES</a> { <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000ab50339a10e1de285ac99d4c3990b8693">KEY_TYPES::NONE</a> = 0, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a445d0434ad7b42aff5bab616ebb41970">KEY_TYPES::RSA</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a3e7b31ceb5af3b10c4c9ac3bf51a09aa">KEY_TYPES::ECKEY</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a16226d8a94d53c9eec05580568827d3d">KEY_TYPES::ECKEY_DH</a>, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000ab1870fa8801941a8b0faddfd614d3493">KEY_TYPES::ECDSA</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a4f3880ea4ab870106199fbdf4b27f9ea">KEY_TYPES::RSA_ALT</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a954cd76ed07e886afc21ab7e276924e8">KEY_TYPES::RSASSA_PSS</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:af52576da8e6b6e7b2295470883e60000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public key scheme.  <a href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000">More...</a><br /></td></tr>
+<tr class="separator:af52576da8e6b6e7b2295470883e60000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6b7f5507eb531957f6b0ce370f05e3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3">VERIFICATION_FLAGS</a> { <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3ae0aa021e21dddbd6d8cecec71e9cf564">VERIFICATION_FLAGS::OK</a> = 0, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3aae14f9261a8a5569fda1041a7ff3f399">VERIFICATION_FLAGS::BADCERT_EXPIRED</a> = 1 &lt;&lt; 0, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3ae05511bc62a5d709be6dbb148ea3465f">VERIFICATION_FLAGS::BADCERT_REVOKED</a> = 1 &lt;&lt; 1, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a8be110f7692cb5e9d390b4a520492195">VERIFICATION_FLAGS::BADCERT_CN_MISMATCH</a> = 1 &lt;&lt; 2, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a969ce64d79f1afc7654556af883006df">VERIFICATION_FLAGS::BADCERT_NOT_TRUSTED</a> = 1 &lt;&lt; 3, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a778488d40a10e5d38ff033f572b23d2c">VERIFICATION_FLAGS::BADCRL_NOT_TRUSTED</a> = 1 &lt;&lt; 4, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3afbefee7e8885ae4a236b8f8b6ba3280f">VERIFICATION_FLAGS::BADCRL_EXPIRED</a> = 1 &lt;&lt; 5, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a876427367f5a136f2d0f4e2c65099eee">VERIFICATION_FLAGS::BADCERT_MISSING</a> = 1 &lt;&lt; 6, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a7c50ae93d3d8c32579a65316a7d19ec1">VERIFICATION_FLAGS::BADCERT_SKIP_VERIFY</a> = 1 &lt;&lt; 7, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a43bfecfd68c73d24234a43b82602551b">VERIFICATION_FLAGS::BADCERT_OTHER</a> = 1 &lt;&lt; 8, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a2442d61361fbf3504b299f76891fd9d8">VERIFICATION_FLAGS::BADCERT_FUTURE</a> = 1 &lt;&lt; 9, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3afc3690db8db0a0b4a35f2be82f960c88">VERIFICATION_FLAGS::BADCRL_FUTURE</a> = 1 &lt;&lt; 10, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a90e569fed87ddf90b5e07e369352a324">VERIFICATION_FLAGS::BADCERT_KEY_USAGE</a> = 1 &lt;&lt; 11, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a69bc14fde9b2758cfba9d5d85d74b53d">VERIFICATION_FLAGS::BADCERT_EXT_KEY_USAGE</a> = 1 &lt;&lt; 12, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a2f54db16748531d1f828e7e90f2adb00">VERIFICATION_FLAGS::BADCERT_NS_CERT_TYPE</a> = 1 &lt;&lt; 13, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a38dbf35d5ef6c24513f919e7796d5168">VERIFICATION_FLAGS::BADCERT_BAD_MD</a> = 1 &lt;&lt; 14, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a66bd78b9a0f8ff963bc7d07323f993a1">VERIFICATION_FLAGS::BADCERT_BAD_PK</a> = 1 &lt;&lt; 15, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a2665065af36e7f4c885f208528cf9547">VERIFICATION_FLAGS::BADCERT_BAD_KEY</a> = 1 &lt;&lt; 16, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a89a6e534dfa0eac9ba11fcd766454379">VERIFICATION_FLAGS::BADCRL_BAD_MD</a> = 1 &lt;&lt; 17, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a702d8df4ff9c9faf4294c80c98749aae">VERIFICATION_FLAGS::BADCRL_BAD_PK</a> = 1 &lt;&lt; 18, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3a2bd3b8faa4274a4cb5ceb0ff7081e759">VERIFICATION_FLAGS::BADCRL_BAD_KEY</a> = 1 &lt;&lt; 19
+<br />
+ }</td></tr>
+<tr class="memdesc:a4a6b7f5507eb531957f6b0ce370f05e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror of mbedtls's X509 Verify codes: MBEDTLS_X509_XX.  <a href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3">More...</a><br /></td></tr>
+<tr class="separator:a4a6b7f5507eb531957f6b0ce370f05e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416e0fe442f88ded41e90d0040a79e66"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66">KEY_USAGE</a> { <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a51d74e483c8885de8ef5a403dab862ce">KEY_USAGE::DIGITAL_SIGNATURE</a> = 0, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a5b40a144bb969d039efb19b62677f071">KEY_USAGE::NON_REPUDIATION</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a14584a4cd206b97cd4554745cfe2b697">KEY_USAGE::KEY_ENCIPHERMENT</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66ae66e5d100bc518e12ba5a32e50b93f54">KEY_USAGE::DATA_ENCIPHERMENT</a>, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66abec212be5542884a6db302f9b22c8171">KEY_USAGE::KEY_AGREEMENT</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66ae08dd63ce9b9bc7669f6f24ae0a0aa1d">KEY_USAGE::KEY_CERT_SIGN</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a23f6f4e39f914ce98879a89b8912d80e">KEY_USAGE::CRL_SIGN</a>, 
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a5a7cf1e37739fae5277ead0b6723b9a0">KEY_USAGE::ENCIPHER_ONLY</a>, 
+<br />
+&#160;&#160;<a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a059068584f8a478572600b0526ecb6bc">KEY_USAGE::DECIPHER_ONLY</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a416e0fe442f88ded41e90d0040a79e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key usage as defined in <a href="https://tools.ietf.org/html/rfc5280#section-4.2.1.3">RFC #5280 - section-4.2.1.3</a>  <a href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66">More...</a><br /></td></tr>
+<tr class="separator:a416e0fe442f88ded41e90d0040a79e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e705b55609a3d3cf4c32ead5f43b9c0"><td class="memItemLeft" align="right" valign="top"><a id="a8e705b55609a3d3cf4c32ead5f43b9c0"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a> = std::array&lt; int32_t, 6 &gt;</td></tr>
 <tr class="memdesc:a8e705b55609a3d3cf4c32ead5f43b9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tuple (Year, Month, Day, Hour, Minute, Second) <br /></td></tr>
 <tr class="separator:a8e705b55609a3d3cf4c32ead5f43b9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7746a25f9e016d7fa669990cfe2776a4"><td class="memItemLeft" align="right" valign="top"><a id="a7746a25f9e016d7fa669990cfe2776a4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>certificates_t</b> = std::vector&lt; <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> &gt;</td></tr>
+<tr class="separator:a7746a25f9e016d7fa669990cfe2776a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
 <tr class="memitem:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memTemplParams" colspan="2"><a id="acd608ff750a7a823174fcdad7be92ec2"></a>
 template&lt;class T &gt; </td></tr>
@@ -124,16 +193,16 @@ std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="separator:a3a31f2e629501bca10442cc2f6fd0373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a555ae826c17b93c3c822ee79193d3116"><td class="memItemLeft" align="right" valign="top"><a id="a555ae826c17b93c3c822ee79193d3116"></a>
 oid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a555ae826c17b93c3c822ee79193d3116">signature_algorithm</a> (void) const</td></tr>
-<tr class="memdesc:a555ae826c17b93c3c822ee79193d3116"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> algorithm (OID) <br /></td></tr>
+<tr class="memdesc:a555ae826c17b93c3c822ee79193d3116"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1PE_1_1Signature.html" title="Main interface for the PKCS #7 signature scheme.">Signature</a> algorithm (OID) <br /></td></tr>
 <tr class="separator:a555ae826c17b93c3c822ee79193d3116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c9c7b8e1fb78ecdb10f71c69cd0dafe"><td class="memItemLeft" align="right" valign="top"><a id="a3c9c7b8e1fb78ecdb10f71c69cd0dafe"></a>
-<a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">x509::date_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a3c9c7b8e1fb78ecdb10f71c69cd0dafe">valid_from</a> (void) const</td></tr>
-<tr class="memdesc:a3c9c7b8e1fb78ecdb10f71c69cd0dafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start time of certificate validity. <br /></td></tr>
-<tr class="separator:a3c9c7b8e1fb78ecdb10f71c69cd0dafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97d8338d89a104dac35c55a2bf844af7"><td class="memItemLeft" align="right" valign="top"><a id="a97d8338d89a104dac35c55a2bf844af7"></a>
-<a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">x509::date_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a97d8338d89a104dac35c55a2bf844af7">valid_to</a> (void) const</td></tr>
-<tr class="memdesc:a97d8338d89a104dac35c55a2bf844af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">End time of certificate validity. <br /></td></tr>
-<tr class="separator:a97d8338d89a104dac35c55a2bf844af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffd22e355c86a969bf66268998a1032"><td class="memItemLeft" align="right" valign="top"><a id="abffd22e355c86a969bf66268998a1032"></a>
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#abffd22e355c86a969bf66268998a1032">valid_from</a> (void) const</td></tr>
+<tr class="memdesc:abffd22e355c86a969bf66268998a1032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start time of certificate validity. <br /></td></tr>
+<tr class="separator:abffd22e355c86a969bf66268998a1032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d8e611e576fbe501961c343edcca90"><td class="memItemLeft" align="right" valign="top"><a id="a75d8e611e576fbe501961c343edcca90"></a>
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a75d8e611e576fbe501961c343edcca90">valid_to</a> (void) const</td></tr>
+<tr class="memdesc:a75d8e611e576fbe501961c343edcca90"><td class="mdescLeft">&#160;</td><td class="mdescRight">End time of certificate validity. <br /></td></tr>
+<tr class="separator:a75d8e611e576fbe501961c343edcca90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f2b8daa7cd7ffae3ea283cd3f051338"><td class="memItemLeft" align="right" valign="top"><a id="a5f2b8daa7cd7ffae3ea283cd3f051338"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a5f2b8daa7cd7ffae3ea283cd3f051338">issuer</a> (void) const</td></tr>
 <tr class="memdesc:a5f2b8daa7cd7ffae3ea283cd3f051338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issuer informations. <br /></td></tr>
@@ -142,10 +211,49 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#adfcfa9c13df39c76a0c3772ad18b98f6">subject</a> (void) const</td></tr>
 <tr class="memdesc:adfcfa9c13df39c76a0c3772ad18b98f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subject informations. <br /></td></tr>
 <tr class="separator:adfcfa9c13df39c76a0c3772ad18b98f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80b18567a3fb1bb2863451f780bd582"><td class="memItemLeft" align="right" valign="top"><a id="ab80b18567a3fb1bb2863451f780bd582"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#ab80b18567a3fb1bb2863451f780bd582">check_signature</a> (const std::vector&lt; uint8_t &gt; &amp;hash, const std::vector&lt; uint8_t &gt; &amp;<a class="el" href="classLIEF_1_1PE_1_1x509.html#acf8b9f0cc63dbd3eb715441bc7534a73">signature</a>, <a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> digest) const</td></tr>
+<tr class="memdesc:ab80b18567a3fb1bb2863451f780bd582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to decrypt the given signature and check if it matches the given hash according to the hash algorithm provided. <br /></td></tr>
+<tr class="separator:ab80b18567a3fb1bb2863451f780bd582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06ec1a5e7dfa5287c2c61a27e38b7ce2"><td class="memItemLeft" align="right" valign="top"><a id="a06ec1a5e7dfa5287c2c61a27e38b7ce2"></a>
 std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a06ec1a5e7dfa5287c2c61a27e38b7ce2">raw</a> (void) const</td></tr>
-<tr class="memdesc:a06ec1a5e7dfa5287c2c61a27e38b7ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> bytes (DER encoded) <br /></td></tr>
+<tr class="memdesc:a06ec1a5e7dfa5287c2c61a27e38b7ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> bytes (DER encoded) <br /></td></tr>
 <tr class="separator:a06ec1a5e7dfa5287c2c61a27e38b7ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d5fd015bb6780b4d8b5568d7f76e84"><td class="memItemLeft" align="right" valign="top"><a id="a85d5fd015bb6780b4d8b5568d7f76e84"></a>
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000">KEY_TYPES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a85d5fd015bb6780b4d8b5568d7f76e84">key_type</a> () const</td></tr>
+<tr class="memdesc:a85d5fd015bb6780b4d8b5568d7f76e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the underlying public-key scheme. <br /></td></tr>
+<tr class="separator:a85d5fd015bb6780b4d8b5568d7f76e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7ed5205385feeba00e5a0a9c759672"><td class="memItemLeft" align="right" valign="top"><a id="a3c7ed5205385feeba00e5a0a9c759672"></a>
+std::unique_ptr&lt; <a class="el" href="classLIEF_1_1PE_1_1RsaInfo.html">RsaInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a3c7ed5205385feeba00e5a0a9c759672">rsa_info</a> () const</td></tr>
+<tr class="memdesc:a3c7ed5205385feeba00e5a0a9c759672"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>If</b> the underlying public-key scheme is RSA, return the RSA information. Otherwise, return a nullptr <br /></td></tr>
+<tr class="separator:a3c7ed5205385feeba00e5a0a9c759672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad51cd26705cae4065893134b010c4dd"><td class="memItemLeft" align="right" valign="top"><a id="aad51cd26705cae4065893134b010c4dd"></a>
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3">VERIFICATION_FLAGS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#aad51cd26705cae4065893134b010c4dd">verify</a> (const <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> &amp;child) const</td></tr>
+<tr class="memdesc:aad51cd26705cae4065893134b010c4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that this certificate has been used <b>to trust</b> the given certificate. <br /></td></tr>
+<tr class="separator:aad51cd26705cae4065893134b010c4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba370edaa52e89b5a1c38f51ad38d9d2"><td class="memItemLeft" align="right" valign="top"><a id="aba370edaa52e89b5a1c38f51ad38d9d2"></a>
+<a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3">VERIFICATION_FLAGS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#aba370edaa52e89b5a1c38f51ad38d9d2">is_trusted_by</a> (const std::vector&lt; <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> &gt; &amp;ca) const</td></tr>
+<tr class="memdesc:aba370edaa52e89b5a1c38f51ad38d9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that this certificate <b>is trusted</b> by the given CA list. <br /></td></tr>
+<tr class="separator:aba370edaa52e89b5a1c38f51ad38d9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e021bf62bfd649f90e2cd6dc1ea9ae1"><td class="memItemLeft" align="right" valign="top"><a id="a3e021bf62bfd649f90e2cd6dc1ea9ae1"></a>
+std::vector&lt; oid_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a3e021bf62bfd649f90e2cd6dc1ea9ae1">certificate_policies</a> () const</td></tr>
+<tr class="memdesc:a3e021bf62bfd649f90e2cd6dc1ea9ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy information terms as OID (see RFC #5280) <br /></td></tr>
+<tr class="separator:a3e021bf62bfd649f90e2cd6dc1ea9ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff5973bfccbf9e4dadf8dcc32a4aa22"><td class="memItemLeft" align="right" valign="top"><a id="a1ff5973bfccbf9e4dadf8dcc32a4aa22"></a>
+std::vector&lt; <a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66">KEY_USAGE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a1ff5973bfccbf9e4dadf8dcc32a4aa22">key_usage</a> () const</td></tr>
+<tr class="memdesc:a1ff5973bfccbf9e4dadf8dcc32a4aa22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purpose of the key contained in the certificate. <br /></td></tr>
+<tr class="separator:a1ff5973bfccbf9e4dadf8dcc32a4aa22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a6fedc0d93e9c47734b9b0ba92bf8d2"><td class="memItemLeft" align="right" valign="top"><a id="a1a6fedc0d93e9c47734b9b0ba92bf8d2"></a>
+std::vector&lt; oid_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a1a6fedc0d93e9c47734b9b0ba92bf8d2">ext_key_usage</a> () const</td></tr>
+<tr class="memdesc:a1a6fedc0d93e9c47734b9b0ba92bf8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates one or more purposes for which the certified public key may be used (OID types) <br /></td></tr>
+<tr class="separator:a1a6fedc0d93e9c47734b9b0ba92bf8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a310b2f0d7f215ed497f80d2aea8d6"><td class="memItemLeft" align="right" valign="top"><a id="a83a310b2f0d7f215ed497f80d2aea8d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_ca</b> () const</td></tr>
+<tr class="separator:a83a310b2f0d7f215ed497f80d2aea8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8b9f0cc63dbd3eb715441bc7534a73"><td class="memItemLeft" align="right" valign="top"><a id="acf8b9f0cc63dbd3eb715441bc7534a73"></a>
+std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#acf8b9f0cc63dbd3eb715441bc7534a73">signature</a> () const</td></tr>
+<tr class="memdesc:acf8b9f0cc63dbd3eb715441bc7534a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature of the certificate. <br /></td></tr>
+<tr class="separator:acf8b9f0cc63dbd3eb715441bc7534a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c93939b1ecae4a38736de8d48fc1ec"><td class="memItemLeft" align="right" valign="top"><a id="a79c93939b1ecae4a38736de8d48fc1ec"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
 <tr class="separator:a79c93939b1ecae4a38736de8d48fc1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,9 +276,189 @@ template&lt;class T &gt; </td></tr>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a9f7da21ae726941ec8d9033896db15a1 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">output_const_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>as</b> (void) const</td></tr>
 <tr class="separator:a9f7da21ae726941ec8d9033896db15a1 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a298309e457a4e36357c7bdcc3def1fa7"><td class="memItemLeft" align="right" valign="top"><a id="a298309e457a4e36357c7bdcc3def1fa7"></a>
+static certificates_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a298309e457a4e36357c7bdcc3def1fa7">parse</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a298309e457a4e36357c7bdcc3def1fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate(s) from file path. <br /></td></tr>
+<tr class="separator:a298309e457a4e36357c7bdcc3def1fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde930bda53d2d38db7315d1dc5bd25a"><td class="memItemLeft" align="right" valign="top"><a id="adde930bda53d2d38db7315d1dc5bd25a"></a>
+static certificates_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#adde930bda53d2d38db7315d1dc5bd25a">parse</a> (const std::vector&lt; uint8_t &gt; &amp;content)</td></tr>
+<tr class="memdesc:adde930bda53d2d38db7315d1dc5bd25a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse x500 certificate(s) from raw blob. <br /></td></tr>
+<tr class="separator:adde930bda53d2d38db7315d1dc5bd25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734da78d09a2506f13b1b6a22f5f7eb0"><td class="memItemLeft" align="right" valign="top"><a id="a734da78d09a2506f13b1b6a22f5f7eb0"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a734da78d09a2506f13b1b6a22f5f7eb0">check_time</a> (const <a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a> &amp;before, const <a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a> &amp;after)</td></tr>
+<tr class="memdesc:a734da78d09a2506f13b1b6a22f5f7eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return True if <code>before</code> is <em>before</em> than <code>after</code>. False otherwise. <br /></td></tr>
+<tr class="separator:a734da78d09a2506f13b1b6a22f5f7eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e80e157995f2e770082d2566f12b11"><td class="memItemLeft" align="right" valign="top"><a id="a72e80e157995f2e770082d2566f12b11"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#a72e80e157995f2e770082d2566f12b11">time_is_past</a> (const <a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a> &amp;to)</td></tr>
+<tr class="memdesc:a72e80e157995f2e770082d2566f12b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the given time is in the <b>past</b> according to the clock's system. <br /></td></tr>
+<tr class="separator:a72e80e157995f2e770082d2566f12b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52b48aaaf0ff3caa051378efb62fbde"><td class="memItemLeft" align="right" valign="top"><a id="ad52b48aaaf0ff3caa051378efb62fbde"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1x509.html#ad52b48aaaf0ff3caa051378efb62fbde">time_is_future</a> (const <a class="el" href="classLIEF_1_1PE_1_1x509.html#a8e705b55609a3d3cf4c32ead5f43b9c0">date_t</a> &amp;from)</td></tr>
+<tr class="memdesc:ad52b48aaaf0ff3caa051378efb62fbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the given time is in the future according to the clock's system. <br /></td></tr>
+<tr class="separator:ad52b48aaaf0ff3caa051378efb62fbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface over a <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="af52576da8e6b6e7b2295470883e60000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af52576da8e6b6e7b2295470883e60000">&#9670;&nbsp;</a></span>KEY_TYPES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000">LIEF::PE::x509::KEY_TYPES</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Public key scheme. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>Unknown scheme. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000a445d0434ad7b42aff5bab616ebb41970"></a>RSA&#160;</td><td class="fielddoc"><p>RSA Scheme. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000a3e7b31ceb5af3b10c4c9ac3bf51a09aa"></a>ECKEY&#160;</td><td class="fielddoc"><p>Elliptic-curve scheme. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000a16226d8a94d53c9eec05580568827d3d"></a>ECKEY_DH&#160;</td><td class="fielddoc"><p>Elliptic-curve Diffie-Hellman. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000ab1870fa8801941a8b0faddfd614d3493"></a>ECDSA&#160;</td><td class="fielddoc"><p>Elliptic-curve Digital <a class="el" href="classLIEF_1_1PE_1_1Signature.html" title="Main interface for the PKCS #7 signature scheme.">Signature</a> Algorithm. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000a4f3880ea4ab870106199fbdf4b27f9ea"></a>RSA_ALT&#160;</td><td class="fielddoc"><p>RSA scheme with an alternative implementation for signing and decrypting. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af52576da8e6b6e7b2295470883e60000a954cd76ed07e886afc21ab7e276924e8"></a>RSASSA_PSS&#160;</td><td class="fielddoc"><p>RSA Probabilistic signature scheme. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a416e0fe442f88ded41e90d0040a79e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416e0fe442f88ded41e90d0040a79e66">&#9670;&nbsp;</a></span>KEY_USAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66">LIEF::PE::x509::KEY_USAGE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Key usage as defined in <a href="https://tools.ietf.org/html/rfc5280#section-4.2.1.3">RFC #5280 - section-4.2.1.3</a> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66a51d74e483c8885de8ef5a403dab862ce"></a>DIGITAL_SIGNATURE&#160;</td><td class="fielddoc"><p>The key is used for digital signature </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66a5b40a144bb969d039efb19b62677f071"></a>NON_REPUDIATION&#160;</td><td class="fielddoc"><p>The key is used for digital signature AND to protects against falsely denying some action </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66a14584a4cd206b97cd4554745cfe2b697"></a>KEY_ENCIPHERMENT&#160;</td><td class="fielddoc"><p>The key is used for enciphering private or secret keys </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66ae66e5d100bc518e12ba5a32e50b93f54"></a>DATA_ENCIPHERMENT&#160;</td><td class="fielddoc"><p>The key is used for directly enciphering raw user data without the use of an intermediate symmetric cipher </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66abec212be5542884a6db302f9b22c8171"></a>KEY_AGREEMENT&#160;</td><td class="fielddoc"><p>The Key is used for key agreement. (e.g. with Diffie-Hellman) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66ae08dd63ce9b9bc7669f6f24ae0a0aa1d"></a>KEY_CERT_SIGN&#160;</td><td class="fielddoc"><p>The key is used for verifying signatures on public key certificates </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66a23f6f4e39f914ce98879a89b8912d80e"></a>CRL_SIGN&#160;</td><td class="fielddoc"><p>The key is used for verifying signatures on certificate revocation lists </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66a5a7cf1e37739fae5277ead0b6723b9a0"></a>ENCIPHER_ONLY&#160;</td><td class="fielddoc"><p>In <b>association with</b> KEY_AGREEMENT (otherwise the meaning is undefined), the key is only used for enciphering data while performing key agreement </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a416e0fe442f88ded41e90d0040a79e66a059068584f8a478572600b0526ecb6bc"></a>DECIPHER_ONLY&#160;</td><td class="fielddoc"><p>In <b>association with</b> KEY_AGREEMENT (otherwise the meaning is undefined), the key is only used for deciphering data while performing key agreement </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4a6b7f5507eb531957f6b0ce370f05e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6b7f5507eb531957f6b0ce370f05e3">&#9670;&nbsp;</a></span>VERIFICATION_FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3">LIEF::PE::x509::VERIFICATION_FLAGS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mirror of mbedtls's X509 Verify codes: MBEDTLS_X509_XX. </p>
+<p>It must be sync with include/mbedtls/x509.h </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3ae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p>The verification succeed <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3aae14f9261a8a5569fda1041a7ff3f399"></a>BADCERT_EXPIRED&#160;</td><td class="fielddoc"><p>The certificate validity has expired. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3ae05511bc62a5d709be6dbb148ea3465f"></a>BADCERT_REVOKED&#160;</td><td class="fielddoc"><p>The certificate has been revoked (is on a CRL). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a8be110f7692cb5e9d390b4a520492195"></a>BADCERT_CN_MISMATCH&#160;</td><td class="fielddoc"><p>The certificate Common Name (CN) does not match with the expected CN. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a969ce64d79f1afc7654556af883006df"></a>BADCERT_NOT_TRUSTED&#160;</td><td class="fielddoc"><p>The certificate is not correctly signed by the trusted CA. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a778488d40a10e5d38ff033f572b23d2c"></a>BADCRL_NOT_TRUSTED&#160;</td><td class="fielddoc"><p>The CRL is not correctly signed by the trusted CA. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3afbefee7e8885ae4a236b8f8b6ba3280f"></a>BADCRL_EXPIRED&#160;</td><td class="fielddoc"><p>The CRL is expired. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a876427367f5a136f2d0f4e2c65099eee"></a>BADCERT_MISSING&#160;</td><td class="fielddoc"><p>Certificate was missing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a7c50ae93d3d8c32579a65316a7d19ec1"></a>BADCERT_SKIP_VERIFY&#160;</td><td class="fielddoc"><p>Certificate verification was skipped. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a43bfecfd68c73d24234a43b82602551b"></a>BADCERT_OTHER&#160;</td><td class="fielddoc"><p>Other reason (can be used by verify callback) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a2442d61361fbf3504b299f76891fd9d8"></a>BADCERT_FUTURE&#160;</td><td class="fielddoc"><p>The certificate validity starts in the future. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3afc3690db8db0a0b4a35f2be82f960c88"></a>BADCRL_FUTURE&#160;</td><td class="fielddoc"><p>The CRL is from the future </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a90e569fed87ddf90b5e07e369352a324"></a>BADCERT_KEY_USAGE&#160;</td><td class="fielddoc"><p>Usage does not match the keyUsage extension. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a69bc14fde9b2758cfba9d5d85d74b53d"></a>BADCERT_EXT_KEY_USAGE&#160;</td><td class="fielddoc"><p>Usage does not match the extendedKeyUsage extension. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a2f54db16748531d1f828e7e90f2adb00"></a>BADCERT_NS_CERT_TYPE&#160;</td><td class="fielddoc"><p>Usage does not match the nsCertType extension. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a38dbf35d5ef6c24513f919e7796d5168"></a>BADCERT_BAD_MD&#160;</td><td class="fielddoc"><p>The certificate is signed with an unacceptable hash. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a66bd78b9a0f8ff963bc7d07323f993a1"></a>BADCERT_BAD_PK&#160;</td><td class="fielddoc"><p>The certificate is signed with an unacceptable PK alg (eg RSA vs ECDSA). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a2665065af36e7f4c885f208528cf9547"></a>BADCERT_BAD_KEY&#160;</td><td class="fielddoc"><p>The certificate is signed with an unacceptable key (eg bad curve, RSA too short). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a89a6e534dfa0eac9ba11fcd766454379"></a>BADCRL_BAD_MD&#160;</td><td class="fielddoc"><p>The CRL is signed with an unacceptable hash. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a702d8df4ff9c9faf4294c80c98749aae"></a>BADCRL_BAD_PK&#160;</td><td class="fielddoc"><p>The CRL is signed with an unacceptable PK alg (eg RSA vs ECDSA). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4a6b7f5507eb531957f6b0ce370f05e3a2bd3b8faa4274a4cb5ceb0ff7081e759"></a>BADCRL_BAD_KEY&#160;</td><td class="fielddoc"><p>The CRL is signed with an unacceptable key (eg bad curve, RSA too short). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/PE/signature/<a class="el" href="x509_8hpp_source.html">x509.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/signature/<a class="el" href="x509_8hpp_source.html">x509.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

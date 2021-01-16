@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['weakexternalcharacteristics_3270',['WeakExternalCharacteristics',['../namespaceLIEF_1_1PE.html#a233c0ec6f2371d864bc57befd836bdb1',1,'LIEF::PE']]],
-  ['window_5fstyles_3271',['WINDOW_STYLES',['../namespaceLIEF_1_1PE.html#a5ea67bae613e4caa48f1b4330613996a',1,'LIEF::PE']]]
+  ['va_5ftypes_3447',['VA_TYPES',['../classLIEF_1_1Binary.html#a63897a975536c5359d2b3ec82208fab3',1,'LIEF::Binary']]],
+  ['verification_5fchecks_3448',['VERIFICATION_CHECKS',['../classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87',1,'LIEF::PE::Signature']]],
+  ['verification_5fflags_3449',['VERIFICATION_FLAGS',['../classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2',1,'LIEF::PE::Signature::VERIFICATION_FLAGS()'],['../classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3',1,'LIEF::PE::x509::VERIFICATION_FLAGS()']]],
+  ['version_3450',['VERSION',['../namespaceLIEF_1_1ELF.html#af7ba395dce87911e8bc784b436383603',1,'LIEF::ELF']]],
+  ['vm_5fprotections_3451',['VM_PROTECTIONS',['../namespaceLIEF_1_1MachO.html#ae5a8ecf6132546b0b5792a6e41998fd0',1,'LIEF::MachO']]]
 ];

@@ -173,10 +173,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a25b9bda0d8346e5a8a855673d4ee7f26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a25b9bda0d8346e5a8a855673d4ee7f26">has_imports</a> (void) const</td></tr>
 <tr class="memdesc:a25b9bda0d8346e5a8a855673d4ee7f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current binary has imports.  <a href="classLIEF_1_1PE_1_1Binary.html#a25b9bda0d8346e5a8a855673d4ee7f26">More...</a><br /></td></tr>
 <tr class="separator:a25b9bda0d8346e5a8a855673d4ee7f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f7101fc2bd662721d09f61112dd2c78"><td class="memItemLeft" align="right" valign="top"><a id="a5f7101fc2bd662721d09f61112dd2c78"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a5f7101fc2bd662721d09f61112dd2c78">has_signature</a> (void) const</td></tr>
-<tr class="memdesc:a5f7101fc2bd662721d09f61112dd2c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current binary is signed. <br /></td></tr>
-<tr class="separator:a5f7101fc2bd662721d09f61112dd2c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98894339b2a1755d4593b4a6f84cdc38"><td class="memItemLeft" align="right" valign="top"><a id="a98894339b2a1755d4593b4a6f84cdc38"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a98894339b2a1755d4593b4a6f84cdc38">has_signatures</a> (void) const</td></tr>
+<tr class="memdesc:a98894339b2a1755d4593b4a6f84cdc38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current binary conatains signatures. <br /></td></tr>
+<tr class="separator:a98894339b2a1755d4593b4a6f84cdc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c16aa8924549dc9526acafb87397694"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a5c16aa8924549dc9526acafb87397694">has_exports</a> (void) const</td></tr>
 <tr class="memdesc:a5c16aa8924549dc9526acafb87397694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current binary has exports.  <a href="classLIEF_1_1PE_1_1Binary.html#a5c16aa8924549dc9526acafb87397694">More...</a><br /></td></tr>
 <tr class="separator:a5c16aa8924549dc9526acafb87397694"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,10 +202,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a3ba9596020d3b8409d32139ac34d0a5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a3ba9596020d3b8409d32139ac34d0a5d">is_reproducible_build</a> (void) const</td></tr>
 <tr class="memdesc:a3ba9596020d3b8409d32139ac34d0a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current binary has been built has reproducible, replacing timestamps by a compile hash.  <a href="classLIEF_1_1PE_1_1Binary.html#a3ba9596020d3b8409d32139ac34d0a5d">More...</a><br /></td></tr>
 <tr class="separator:a3ba9596020d3b8409d32139ac34d0a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680ad3d281a1138078c12954c3757eec"><td class="memItemLeft" align="right" valign="top"><a id="a680ad3d281a1138078c12954c3757eec"></a>
-const <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a680ad3d281a1138078c12954c3757eec">signature</a> (void) const</td></tr>
-<tr class="memdesc:a680ad3d281a1138078c12954c3757eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> object if the bianry is signed. <br /></td></tr>
-<tr class="separator:a680ad3d281a1138078c12954c3757eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b4fe91d33f2dc8bb5b6b913c9589ec"><td class="memItemLeft" align="right" valign="top"><a id="a53b4fe91d33f2dc8bb5b6b913c9589ec"></a>
+<a class="el" href="classLIEF_1_1ref__iterator.html">it_const_signatures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a53b4fe91d33f2dc8bb5b6b913c9589ec">signatures</a> (void) const</td></tr>
+<tr class="memdesc:a53b4fe91d33f2dc8bb5b6b913c9589ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1PE_1_1Signature.html" title="Main interface for the PKCS #7 signature scheme.">Signature</a> object(s) if the bianry is signed. <br /></td></tr>
+<tr class="separator:a53b4fe91d33f2dc8bb5b6b913c9589ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70de3b06144c11a510a313eabd4258a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">Signature::VERIFICATION_FLAGS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a70de3b06144c11a510a313eabd4258a2">verify_signature</a> (<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">Signature::VERIFICATION_CHECKS</a> checks=<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">Signature::VERIFICATION_CHECKS::DEFAULT</a>) const</td></tr>
+<tr class="memdesc:a70de3b06144c11a510a313eabd4258a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the binary against the embedded signature(s) (if any) First, it checks that the embedded signatures are correct (c.f. <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a36c6c94366004eac8bac371eb0aa6ca2" title="Check if this signature is valid according to the Authenticode/PKCS #7 verification scheme.">Signature::check</a>) and then it checks that the authentihash matches <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a69e93eafc8e14dbc4133821f36816b15" title="PE&#39;s authentihash.">ContentInfo::digest</a>.  <a href="classLIEF_1_1PE_1_1Binary.html#a70de3b06144c11a510a313eabd4258a2">More...</a><br /></td></tr>
+<tr class="separator:a70de3b06144c11a510a313eabd4258a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa07b6da5d30a069f8e21c7944cb52c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">Signature::VERIFICATION_FLAGS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a4fa07b6da5d30a069f8e21c7944cb52c">verify_signature</a> (const <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> &amp;sig, <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">Signature::VERIFICATION_CHECKS</a> checks=<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">Signature::VERIFICATION_CHECKS::DEFAULT</a>) const</td></tr>
+<tr class="memdesc:a4fa07b6da5d30a069f8e21c7944cb52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the binary with the <a class="el" href="classLIEF_1_1PE_1_1Signature.html" title="Main interface for the PKCS #7 signature scheme.">Signature</a> object provided in the first parameter It can be used to verify a detached signature:  <a href="classLIEF_1_1PE_1_1Binary.html#a4fa07b6da5d30a069f8e21c7944cb52c">More...</a><br /></td></tr>
+<tr class="separator:a4fa07b6da5d30a069f8e21c7944cb52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcf20d10d41febb7dfdefcaf8b1ca7a"><td class="memItemLeft" align="right" valign="top"><a id="a4fcf20d10d41febb7dfdefcaf8b1ca7a"></a>
+std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a4fcf20d10d41febb7dfdefcaf8b1ca7a">authentihash</a> (<a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> algo) const</td></tr>
+<tr class="memdesc:a4fcf20d10d41febb7dfdefcaf8b1ca7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the authentihash according to the algorithm provided in the first parameter. <br /></td></tr>
+<tr class="separator:a4fcf20d10d41febb7dfdefcaf8b1ca7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a2b892234e6ea5427ddc50b9e402379"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a2a2b892234e6ea5427ddc50b9e402379">predict_function_rva</a> (const std::string &amp;library, const std::string &amp;function)</td></tr>
 <tr class="memdesc:a2a2b892234e6ea5427ddc50b9e402379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to predict the RVA of the function <code>function</code> in the import library <code>library</code>  <a href="classLIEF_1_1PE_1_1Binary.html#a2a2b892234e6ea5427ddc50b9e402379">More...</a><br /></td></tr>
 <tr class="separator:a2a2b892234e6ea5427ddc50b9e402379"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,7 +276,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ae842b962dc8dbacee4ea8fd04df2e291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the given section. <br /></td></tr>
 <tr class="separator:ae842b962dc8dbacee4ea8fd04df2e291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af940e6a534e8c9acd12fbbb2a670b24c"><td class="memItemLeft" align="right" valign="top"><a id="af940e6a534e8c9acd12fbbb2a670b24c"></a>
-<a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#af940e6a534e8c9acd12fbbb2a670b24c">add_section</a> (const <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;section, PE_SECTION_TYPES <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a577f3dbaf32c47edf0da338d9cd0a330">type</a>=PE_SECTION_TYPES::UNKNOWN)</td></tr>
+<a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#af940e6a534e8c9acd12fbbb2a670b24c">add_section</a> (const <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;section, <a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a577f3dbaf32c47edf0da338d9cd0a330">type</a>=PE_SECTION_TYPES::UNKNOWN)</td></tr>
 <tr class="memdesc:af940e6a534e8c9acd12fbbb2a670b24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the binary and return the section added. <br /></td></tr>
 <tr class="separator:af940e6a534e8c9acd12fbbb2a670b24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e86effb8a746307c76ccce66e2e96e9"><td class="memItemLeft" align="right" valign="top"><a id="a4e86effb8a746307c76ccce66e2e96e9"></a>
@@ -449,11 +459,11 @@ EXE_FORMATS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:ac7296f6c1699d76272e7225cb27ee16f inherit pub_methods_classLIEF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the abstract header of the binary. <br /></td></tr>
 <tr class="separator:ac7296f6c1699d76272e7225cb27ee16f inherit pub_methods_classLIEF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a143e6bf9b64520e85abdf866d02d6c3a inherit pub_methods_classLIEF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="a143e6bf9b64520e85abdf866d02d6c3a"></a>
-<a class="el" href="classLIEF_1_1ref__iterator.html">it_symbols</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#a143e6bf9b64520e85abdf866d02d6c3a">symbols</a> (void)</td></tr>
+<a class="el" href="namespaceLIEF.html#aec4c76b70621f6ea99d1f98b26d2b54d">it_symbols</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#a143e6bf9b64520e85abdf866d02d6c3a">symbols</a> (void)</td></tr>
 <tr class="memdesc:a143e6bf9b64520e85abdf866d02d6c3a inherit pub_methods_classLIEF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return list of symbols whose elements <b>can</b> be modified. <br /></td></tr>
 <tr class="separator:a143e6bf9b64520e85abdf866d02d6c3a inherit pub_methods_classLIEF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9df0bd42e6c47f4733dd0aa63ac1945b inherit pub_methods_classLIEF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="a9df0bd42e6c47f4733dd0aa63ac1945b"></a>
-<a class="el" href="classLIEF_1_1ref__iterator.html">it_const_symbols</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#a9df0bd42e6c47f4733dd0aa63ac1945b">symbols</a> (void) const</td></tr>
+<a class="el" href="namespaceLIEF.html#adcaef553796d5a1544754fb96616e858">it_const_symbols</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#a9df0bd42e6c47f4733dd0aa63ac1945b">symbols</a> (void) const</td></tr>
 <tr class="memdesc:a9df0bd42e6c47f4733dd0aa63ac1945b inherit pub_methods_classLIEF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return list of symbols whose elements <b>can't</b> be modified. <br /></td></tr>
 <tr class="separator:a9df0bd42e6c47f4733dd0aa63ac1945b inherit pub_methods_classLIEF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231a51142dd031be6239fbbab436f15a inherit pub_methods_classLIEF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="a231a51142dd031be6239fbbab436f15a"></a>
@@ -468,11 +478,11 @@ const <a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&#160;</td><
 <a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_symbol</b> (const std::string &amp;<a class="el" href="classLIEF_1_1Binary.html#afb336721fbb557d61acdd5eb3e950476">name</a>)</td></tr>
 <tr class="separator:ab134bd1ecb2338c4a95a900a451a6015 inherit pub_methods_classLIEF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67a13c7944d1983cc5c68b99baa7fa2 inherit pub_methods_classLIEF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="af67a13c7944d1983cc5c68b99baa7fa2"></a>
-<a class="el" href="classLIEF_1_1ref__iterator.html">it_sections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#af67a13c7944d1983cc5c68b99baa7fa2">sections</a> (void)</td></tr>
+<a class="el" href="namespaceLIEF.html#a75087aa2ad05a6f19bb464f10d7e19ab">it_sections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#af67a13c7944d1983cc5c68b99baa7fa2">sections</a> (void)</td></tr>
 <tr class="memdesc:af67a13c7944d1983cc5c68b99baa7fa2 inherit pub_methods_classLIEF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns binary's sections. <br /></td></tr>
 <tr class="separator:af67a13c7944d1983cc5c68b99baa7fa2 inherit pub_methods_classLIEF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d96e9a687b5d2ec4ffb1be34882aced inherit pub_methods_classLIEF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="a5d96e9a687b5d2ec4ffb1be34882aced"></a>
-<a class="el" href="classLIEF_1_1ref__iterator.html">it_const_sections</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sections</b> (void) const</td></tr>
+<a class="el" href="namespaceLIEF.html#a9075e33596af5afbcfbd58e7a0c8df20">it_const_sections</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sections</b> (void) const</td></tr>
 <tr class="separator:a5d96e9a687b5d2ec4ffb1be34882aced inherit pub_methods_classLIEF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebcebfdb66a3ed457f07dbf1e681fc15 inherit pub_methods_classLIEF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="aebcebfdb66a3ed457f07dbf1e681fc15"></a>
 <a class="el" href="namespaceLIEF.html#a748a3d01d1f28eb0285c831a9078a9ef">it_relocations</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#aebcebfdb66a3ed457f07dbf1e681fc15">relocations</a> (void)</td></tr>
@@ -1119,6 +1129,62 @@ template&lt;class T &gt; </td></tr>
 
 </div>
 </div>
+<a id="a4fa07b6da5d30a069f8e21c7944cb52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa07b6da5d30a069f8e21c7944cb52c">&#9670;&nbsp;</a></span>verify_signature() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">Signature::VERIFICATION_FLAGS</a> LIEF::PE::Binary::verify_signature </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> &amp;&#160;</td>
+          <td class="paramname"><em>sig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">Signature::VERIFICATION_CHECKS</a>&#160;</td>
+          <td class="paramname"><em>checks</em> = <code><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">Signature::VERIFICATION_CHECKS::DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify the binary with the <a class="el" href="classLIEF_1_1PE_1_1Signature.html" title="Main interface for the PKCS #7 signature scheme.">Signature</a> object provided in the first parameter It can be used to verify a detached signature: </p>
+<div class="fragment"><div class="line">result&lt;Signature&gt; detached = <a class="code" href="classLIEF_1_1PE_1_1SignatureParser.html#a49cf284ef8b95aa1d6f71f713ad03b6c">LIEF::PE::SignatureParser::parse</a>(<span class="stringliteral">&quot;sig.pkcs7&quot;</span>)</div>
+<div class="line">if (detached) {</div>
+<div class="line">  binary-&gt;verify_signature(detached.value());</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a70de3b06144c11a510a313eabd4258a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70de3b06144c11a510a313eabd4258a2">&#9670;&nbsp;</a></span>verify_signature() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">Signature::VERIFICATION_FLAGS</a> LIEF::PE::Binary::verify_signature </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">Signature::VERIFICATION_CHECKS</a>&#160;</td>
+          <td class="paramname"><em>checks</em> = <code><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">Signature::VERIFICATION_CHECKS::DEFAULT</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify the binary against the embedded signature(s) (if any) First, it checks that the embedded signatures are correct (c.f. <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a36c6c94366004eac8bac371eb0aa6ca2" title="Check if this signature is valid according to the Authenticode/PKCS #7 verification scheme.">Signature::check</a>) and then it checks that the authentihash matches <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a69e93eafc8e14dbc4133821f36816b15" title="PE&#39;s authentihash.">ContentInfo::digest</a>. </p>
+<p>One can tweak the verification process with the <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87" title="Flags to tweak the verification process of the signature.">Signature::VERIFICATION_CHECKS</a> flags</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a36c6c94366004eac8bac371eb0aa6ca2" title="Check if this signature is valid according to the Authenticode/PKCS #7 verification scheme.">LIEF::PE::Signature::check</a> </dd></dl>
+
+</div>
+</div>
 <a id="af9606274297f7d88e50eaa503ab4a219"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9606274297f7d88e50eaa503ab4a219">&#9670;&nbsp;</a></span>write()</h2>
 
@@ -1151,9 +1217,10 @@ template&lt;class T &gt; </td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/PE/<a class="el" href="PE_2Binary_8hpp_source.html">Binary.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/<a class="el" href="PE_2Binary_8hpp_source.html">Binary.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclassLIEF_1_1PE_1_1SignatureParser_html_a49cf284ef8b95aa1d6f71f713ad03b6c"><div class="ttname"><a href="classLIEF_1_1PE_1_1SignatureParser.html#a49cf284ef8b95aa1d6f71f713ad03b6c">LIEF::PE::SignatureParser::parse</a></div><div class="ttdeci">static result&lt; Signature &gt; parse(std::vector&lt; uint8_t &gt; data, bool skip_header=false)</div><div class="ttdoc">Parse a PKCS #7 signature given a raw blob.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

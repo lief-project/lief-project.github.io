@@ -67,12 +67,19 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classLIEF_1_1PE_1_1Signature-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LIEF::PE::Signature Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main interface for the PKCS #7 signature scheme.  
+ <a href="classLIEF_1_1PE_1_1Signature.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Signature_8hpp_source.html">Signature.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LIEF::PE::Signature:</div>
 <div class="dyncontent">
@@ -83,6 +90,46 @@ Inheritance diagram for LIEF::PE::Signature:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a372027a6fcc75b5f87923f585e3e96a2"><td class="memItemLeft" align="right" valign="top"><a id="a372027a6fcc75b5f87923f585e3e96a2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">VERIFICATION_FLAGS</a> { <br />
+&#160;&#160;<b>OK</b> = 0, 
+<b>INVALID_SIGNER</b> = 1 &lt;&lt; 0, 
+<b>UNSUPPORTED_ALGORITHM</b> = 1 &lt;&lt; 1, 
+<b>INCONSISTENT_DIGEST_ALGORITHM</b> = 1 &lt;&lt; 2, 
+<br />
+&#160;&#160;<b>CERT_NOT_FOUND</b> = 1 &lt;&lt; 3, 
+<b>CORRUPTED_CONTENT_INFO</b> = 1 &lt;&lt; 4, 
+<b>CORRUPTED_AUTH_DATA</b> = 1 &lt;&lt; 5, 
+<b>MISSING_PKCS9_MESSAGE_DIGEST</b> = 1 &lt;&lt; 6, 
+<br />
+&#160;&#160;<b>BAD_DIGEST</b> = 1 &lt;&lt; 7, 
+<b>BAD_SIGNATURE</b> = 1 &lt;&lt; 8, 
+<b>NO_SIGNATURE</b> = 1 &lt;&lt; 9, 
+<b>CERT_EXPIRED</b> = 1 &lt;&lt; 10, 
+<br />
+&#160;&#160;<b>CERT_FUTURE</b> = 1 &lt;&lt; 11
+<br />
+ }</td></tr>
+<tr class="memdesc:a372027a6fcc75b5f87923f585e3e96a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags returned by verification functions. <br /></td></tr>
+<tr class="separator:a372027a6fcc75b5f87923f585e3e96a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a40460f6b23c0934144bdfb18a2d87"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">VERIFICATION_CHECKS</a> { <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">VERIFICATION_CHECKS::DEFAULT</a> = 1 &lt;&lt; 0, 
+<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87ad74b48f47cd6ddf650f0587445b8d8a2">VERIFICATION_CHECKS::HASH_ONLY</a> = 1 &lt;&lt; 1, 
+<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87acaaa52bde021866c924f2552db321b43">VERIFICATION_CHECKS::LIFETIME_SIGNING</a> = 1 &lt;&lt; 2, 
+<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a89fc990fbef16d7d9c47116ce02b10cb">VERIFICATION_CHECKS::SKIP_CERT_TIME</a> = 1 &lt;&lt; 3
+ }</td></tr>
+<tr class="memdesc:a04a40460f6b23c0934144bdfb18a2d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to tweak the verification process of the signature.  <a href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">More...</a><br /></td></tr>
+<tr class="separator:a04a40460f6b23c0934144bdfb18a2d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
+<tr class="memitem:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memTemplParams" colspan="2"><a id="acd608ff750a7a823174fcdad7be92ec2"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>output_t</b> = add_pointer_t&lt; decay_t&lt; T &gt; &gt;</td></tr>
+<tr class="separator:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memTemplParams" colspan="2"><a id="a13449a73f7eb12a7cef1523c84c8eae3"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>output_const_t</b> = add_pointer_t&lt; add_const_t&lt; decay_t&lt; T &gt; &gt;&gt;</td></tr>
+<tr class="separator:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8408093b802d592b34bcca29b4e24985"><td class="memItemLeft" align="right" valign="top"><a id="a8408093b802d592b34bcca29b4e24985"></a>
@@ -95,26 +142,48 @@ Public Member Functions</h2></td></tr>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a6c0479c5d2d656b9ea37f18985f8605c">version</a> (void) const</td></tr>
 <tr class="memdesc:a6c0479c5d2d656b9ea37f18985f8605c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be 1. <br /></td></tr>
 <tr class="separator:a6c0479c5d2d656b9ea37f18985f8605c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2640ffbc879ff348a48dcd1204242ec"><td class="memItemLeft" align="right" valign="top"><a id="ac2640ffbc879ff348a48dcd1204242ec"></a>
-const oid_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#ac2640ffbc879ff348a48dcd1204242ec">digest_algorithm</a> (void) const</td></tr>
-<tr class="memdesc:ac2640ffbc879ff348a48dcd1204242ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the algorithm (OID) used to sign the content of <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a>. <br /></td></tr>
-<tr class="separator:ac2640ffbc879ff348a48dcd1204242ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede85ccb45c1ea86f50b55aea5fa2dc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#aede85ccb45c1ea86f50b55aea5fa2dc2">digest_algorithm</a> () const</td></tr>
+<tr class="memdesc:aede85ccb45c1ea86f50b55aea5fa2dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm used to <em>digest</em> the file.  <a href="classLIEF_1_1PE_1_1Signature.html#aede85ccb45c1ea86f50b55aea5fa2dc2">More...</a><br /></td></tr>
+<tr class="separator:aede85ccb45c1ea86f50b55aea5fa2dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43a6bf7537b87f40bf1b1e62acef81b"><td class="memItemLeft" align="right" valign="top"><a id="af43a6bf7537b87f40bf1b1e62acef81b"></a>
 const <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#af43a6bf7537b87f40bf1b1e62acef81b">content_info</a> (void) const</td></tr>
 <tr class="memdesc:af43a6bf7537b87f40bf1b1e62acef81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a>. <br /></td></tr>
 <tr class="separator:af43a6bf7537b87f40bf1b1e62acef81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eddee35efe040166438fc86912c96c3"><td class="memItemLeft" align="right" valign="top"><a id="a8eddee35efe040166438fc86912c96c3"></a>
 <a class="el" href="classLIEF_1_1ref__iterator.html">it_const_crt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a8eddee35efe040166438fc86912c96c3">certificates</a> (void) const</td></tr>
-<tr class="memdesc:a8eddee35efe040166438fc86912c96c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator over <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> certificates. <br /></td></tr>
+<tr class="memdesc:a8eddee35efe040166438fc86912c96c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator over <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificates. <br /></td></tr>
 <tr class="separator:a8eddee35efe040166438fc86912c96c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59203becd3dfdaa652f1b3e2673cdb6"><td class="memItemLeft" align="right" valign="top"><a id="aa59203becd3dfdaa652f1b3e2673cdb6"></a>
-const <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html">SignerInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#aa59203becd3dfdaa652f1b3e2673cdb6">signer_info</a> (void) const</td></tr>
-<tr class="memdesc:aa59203becd3dfdaa652f1b3e2673cdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html">SignerInfo</a> object. <br /></td></tr>
-<tr class="separator:aa59203becd3dfdaa652f1b3e2673cdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a910a6e036dddc003f5e03b118492566a"><td class="memItemLeft" align="right" valign="top"><a id="a910a6e036dddc003f5e03b118492566a"></a>
-const std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a910a6e036dddc003f5e03b118492566a">original_signature</a> (void) const</td></tr>
-<tr class="memdesc:a910a6e036dddc003f5e03b118492566a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw original signature. <br /></td></tr>
-<tr class="separator:a910a6e036dddc003f5e03b118492566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae527cb4cbd3e8a2fd22817b0c173afcb"><td class="memItemLeft" align="right" valign="top"><a id="ae527cb4cbd3e8a2fd22817b0c173afcb"></a>
+<a class="el" href="classLIEF_1_1ref__iterator.html">it_const_signers_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#ae527cb4cbd3e8a2fd22817b0c173afcb">signers</a> (void) const</td></tr>
+<tr class="memdesc:ae527cb4cbd3e8a2fd22817b0c173afcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator over the signers (<a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html">SignerInfo</a>) defined in the PKCS #7 signature. <br /></td></tr>
+<tr class="separator:ae527cb4cbd3e8a2fd22817b0c173afcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433298d4c2e43545eedb6d9f30aa0349"><td class="memItemLeft" align="right" valign="top"><a id="a433298d4c2e43545eedb6d9f30aa0349"></a>
+const std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a433298d4c2e43545eedb6d9f30aa0349">raw_der</a> (void) const</td></tr>
+<tr class="memdesc:a433298d4c2e43545eedb6d9f30aa0349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw original PKCS7 signature. <br /></td></tr>
+<tr class="separator:a433298d4c2e43545eedb6d9f30aa0349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca616cb1aca3a2d70140096b7aedab24"><td class="memItemLeft" align="right" valign="top"><a id="aca616cb1aca3a2d70140096b7aedab24"></a>
+const <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#aca616cb1aca3a2d70140096b7aedab24">find_crt</a> (const std::vector&lt; uint8_t &gt; &amp;serialno) const</td></tr>
+<tr class="memdesc:aca616cb1aca3a2d70140096b7aedab24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate according to its serial number. <br /></td></tr>
+<tr class="separator:aca616cb1aca3a2d70140096b7aedab24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c001b6d40ee7916e996493811f43c0c"><td class="memItemLeft" align="right" valign="top"><a id="a2c001b6d40ee7916e996493811f43c0c"></a>
+const <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a2c001b6d40ee7916e996493811f43c0c">find_crt_subject</a> (const std::string &amp;subject) const</td></tr>
+<tr class="memdesc:a2c001b6d40ee7916e996493811f43c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate according to its subject. <br /></td></tr>
+<tr class="separator:a2c001b6d40ee7916e996493811f43c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e75c78d957aa68e850d05e5c69cab2"><td class="memItemLeft" align="right" valign="top"><a id="ae3e75c78d957aa68e850d05e5c69cab2"></a>
+const <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#ae3e75c78d957aa68e850d05e5c69cab2">find_crt_subject</a> (const std::string &amp;subject, const std::vector&lt; uint8_t &gt; &amp;serialno) const</td></tr>
+<tr class="memdesc:ae3e75c78d957aa68e850d05e5c69cab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate according to its subject <b>AND</b> serial number. <br /></td></tr>
+<tr class="separator:ae3e75c78d957aa68e850d05e5c69cab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a9cb2a0366d1d9f88e201da1b94c145"><td class="memItemLeft" align="right" valign="top"><a id="a7a9cb2a0366d1d9f88e201da1b94c145"></a>
+const <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a7a9cb2a0366d1d9f88e201da1b94c145">find_crt_issuer</a> (const std::string &amp;issuer) const</td></tr>
+<tr class="memdesc:a7a9cb2a0366d1d9f88e201da1b94c145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate according to its issuer. <br /></td></tr>
+<tr class="separator:a7a9cb2a0366d1d9f88e201da1b94c145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1038de1c9b693bb04643758dcd6b922d"><td class="memItemLeft" align="right" valign="top"><a id="a1038de1c9b693bb04643758dcd6b922d"></a>
+const <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a1038de1c9b693bb04643758dcd6b922d">find_crt_issuer</a> (const std::string &amp;issuer, const std::vector&lt; uint8_t &gt; &amp;serialno) const</td></tr>
+<tr class="memdesc:a1038de1c9b693bb04643758dcd6b922d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate according to its issuer <b>AND</b> serial number. <br /></td></tr>
+<tr class="separator:a1038de1c9b693bb04643758dcd6b922d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c6c94366004eac8bac371eb0aa6ca2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">VERIFICATION_FLAGS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a36c6c94366004eac8bac371eb0aa6ca2">check</a> (<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">VERIFICATION_CHECKS</a> checks=<a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">VERIFICATION_CHECKS::DEFAULT</a>) const</td></tr>
+<tr class="memdesc:a36c6c94366004eac8bac371eb0aa6ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this signature is valid according to the Authenticode/PKCS #7 verification scheme.  <a href="classLIEF_1_1PE_1_1Signature.html#a36c6c94366004eac8bac371eb0aa6ca2">More...</a><br /></td></tr>
+<tr class="separator:a36c6c94366004eac8bac371eb0aa6ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60e270be613ba470bbdc1f028333186d"><td class="memItemLeft" align="right" valign="top"><a id="a60e270be613ba470bbdc1f028333186d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
 <tr class="separator:a60e270be613ba470bbdc1f028333186d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,20 +207,121 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a9f7da21ae726941ec8d9033896db15a1 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">output_const_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>as</b> (void) const</td></tr>
 <tr class="separator:a9f7da21ae726941ec8d9033896db15a1 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
-<tr class="memitem:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memTemplParams" colspan="2"><a id="acd608ff750a7a823174fcdad7be92ec2"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>output_t</b> = add_pointer_t&lt; decay_t&lt; T &gt; &gt;</td></tr>
-<tr class="separator:acd608ff750a7a823174fcdad7be92ec2 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memTemplParams" colspan="2"><a id="a13449a73f7eb12a7cef1523c84c8eae3"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>output_const_t</b> = add_pointer_t&lt; add_const_t&lt; decay_t&lt; T &gt; &gt;&gt;</td></tr>
-<tr class="separator:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad3345b601438539df022c49598919733"><td class="memItemLeft" align="right" valign="top"><a id="ad3345b601438539df022c49598919733"></a>
+static std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#ad3345b601438539df022c49598919733">hash</a> (const std::vector&lt; uint8_t &gt; &amp;input, <a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> algo)</td></tr>
+<tr class="memdesc:ad3345b601438539df022c49598919733"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1PE_1_1Hash.html">Hash</a> the input given the algorithm. <br /></td></tr>
+<tr class="separator:ad3345b601438539df022c49598919733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main interface for the PKCS #7 signature scheme. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a04a40460f6b23c0934144bdfb18a2d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a40460f6b23c0934144bdfb18a2d87">&#9670;&nbsp;</a></span>VERIFICATION_CHECKS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">LIEF::PE::Signature::VERIFICATION_CHECKS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flags to tweak the verification process of the signature. </p>
+<p>See <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a36c6c94366004eac8bac371eb0aa6ca2" title="Check if this signature is valid according to the Authenticode/PKCS #7 verification scheme.">Signature::check</a> and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a70de3b06144c11a510a313eabd4258a2" title="Verify the binary against the embedded signature(s) (if any) First, it checks that the embedded signa...">LIEF::PE::Binary::verify_signature</a> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee"></a>DEFAULT&#160;</td><td class="fielddoc"><p>Default behavior that tries to follow the Microsoft verification process as close as possible </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04a40460f6b23c0934144bdfb18a2d87ad74b48f47cd6ddf650f0587445b8d8a2"></a>HASH_ONLY&#160;</td><td class="fielddoc"><p>Only check that <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a4fcf20d10d41febb7dfdefcaf8b1ca7a" title="Compute the authentihash according to the algorithm provided in the first parameter.">Binary::authentihash</a> matches <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a69e93eafc8e14dbc4133821f36816b15" title="PE&#39;s authentihash.">ContentInfo::digest</a> regardless of the signature's validity </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04a40460f6b23c0934144bdfb18a2d87acaaa52bde021866c924f2552db321b43"></a>LIFETIME_SIGNING&#160;</td><td class="fielddoc"><p>Same semantic as <a href="https://docs.microsoft.com/en-us/windows/win32/api/wintrust/ns-wintrust-wintrust_data#WTD_LIFETIME_SIGNING_FLAG">WTD_LIFETIME_SIGNING_FLAG</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04a40460f6b23c0934144bdfb18a2d87a89fc990fbef16d7d9c47116ce02b10cb"></a>SKIP_CERT_TIME&#160;</td><td class="fielddoc"><p>Skip the verification of the certificates time validities so that even though a certificate expired, it returns VERIFICATION_FLAGS::OK </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a36c6c94366004eac8bac371eb0aa6ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c6c94366004eac8bac371eb0aa6ca2">&#9670;&nbsp;</a></span>check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2">VERIFICATION_FLAGS</a> LIEF::PE::Signature::check </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87">VERIFICATION_CHECKS</a>&#160;</td>
+          <td class="paramname"><em>checks</em> = <code><a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a5b39c8b553c821e7cddc6da64b5bd2ee">VERIFICATION_CHECKS::DEFAULT</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if this signature is valid according to the Authenticode/PKCS #7 verification scheme. </p>
+<p>By default, it performs the following verifications:</p>
+<ol type="1">
+<li>It must contain only <b>one</b> signer info</li>
+<li><a class="el" href="classLIEF_1_1PE_1_1Signature.html#aede85ccb45c1ea86f50b55aea5fa2dc2" title="Algorithm used to digest the file.">Signature::digest_algorithm</a> must match:<ul>
+<li><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a0cafef41530fb92cdcae310e7dd0bdf9" title="Digest used to hash the file.">ContentInfo::digest_algorithm</a></li>
+<li><a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#a2400853e407764efb12066a6f8c1cef4" title="Algorithm (OID) used to hash the file.">SignerInfo::digest_algorithm</a></li>
+</ul>
+</li>
+<li>The <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate specified by <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#a8483cd1f2bdb60301d00a9775782149b" title="Return the serial number associated with the x509 certificate used by this signer.">SignerInfo::serial_number</a> <b>and</b> <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#a90930ac6caff61d1b6a544bef9b54d09" title="Return the x509::issuer used by this signer.">SignerInfo::issuer</a> must exist within <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a8eddee35efe040166438fc86912c96c3" title="Return an iterator over x509 certificates.">Signature::certificates</a></li>
+<li>Given the <a class="el" href="classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate.">x509</a> certificate, compare <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#a507cd022e556bc90331f90690ede00f1" title="Return the signature created by the signing certificate&#39;s private key.">SignerInfo::encrypted_digest</a> against either:<ul>
+<li>hash of authenticated attributes if present</li>
+<li>hash of <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a></li>
+</ul>
+</li>
+<li>If authenticated attributes are present, check that a PKCS9_MESSAGE_DIGEST attribute exists and that its value matches hash of <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a></li>
+<li>Check the validity of the PKCS #9 counter signature if present</li>
+<li>If the signature doesn't embed a signing-time in the counter signature, check the certificate validity. (See <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87acaaa52bde021866c924f2552db321b43">LIEF::PE::Signature::VERIFICATION_CHECKS::LIFETIME_SIGNING</a> and <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87a89fc990fbef16d7d9c47116ce02b10cb">LIEF::PE::Signature::VERIFICATION_CHECKS::SKIP_CERT_TIME</a>)</li>
+</ol>
+<p>See: <a class="el" href="classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87" title="Flags to tweak the verification process of the signature.">LIEF::PE::Signature::VERIFICATION_CHECKS</a> to tweak the behavior </p>
+
+</div>
+</div>
+<a id="aede85ccb45c1ea86f50b55aea5fa2dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede85ccb45c1ea86f50b55aea5fa2dc2">&#9670;&nbsp;</a></span>digest_algorithm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> LIEF::PE::Signature::digest_algorithm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Algorithm used to <em>digest</em> the file. </p>
+<p>It should match <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#a2400853e407764efb12066a6f8c1cef4" title="Algorithm (OID) used to hash the file.">SignerInfo::digest_algorithm</a> </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/PE/signature/<a class="el" href="Signature_8hpp_source.html">Signature.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/signature/<a class="el" href="Signature_8hpp_source.html">Signature.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

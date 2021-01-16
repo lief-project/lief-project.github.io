@@ -116,6 +116,9 @@ const <a class="el" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a> &amp;&#1
 <tr class="memitem:a208e628146181aff82b28f31036b65c0"><td class="memItemLeft" align="right" valign="top"><a id="a208e628146181aff82b28f31036b65c0"></a>
 const <a class="el" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t index) const</td></tr>
 <tr class="separator:a208e628146181aff82b28f31036b65c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0a70eee8b4f3c4992f30191b70ece6"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1FatBinary.html#a0f0a70eee8b4f3c4992f30191b70ece6">take</a> (size_t index)</td></tr>
+<tr class="memdesc:a0f0a70eee8b4f3c4992f30191b70ece6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a <a class="el" href="classLIEF_1_1MachO_1_1Binary.html" title="Class which represent a MachO binary.">MachO::Binary</a> object. Gives ownership to the caller, and remove it from this <a class="el" href="classLIEF_1_1MachO_1_1FatBinary.html">FatBinary</a> object.  <a href="classLIEF_1_1MachO_1_1FatBinary.html#a0f0a70eee8b4f3c4992f30191b70ece6">More...</a><br /></td></tr>
+<tr class="separator:a0f0a70eee8b4f3c4992f30191b70ece6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b9509b7451d2ee07a7d61aca57f479"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1FatBinary.html#ac0b9509b7451d2ee07a7d61aca57f479">write</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:ac0b9509b7451d2ee07a7d61aca57f479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct the Fat binary object and write it in <code>filename</code>  <a href="classLIEF_1_1MachO_1_1FatBinary.html#ac0b9509b7451d2ee07a7d61aca57f479">More...</a><br /></td></tr>
 <tr class="separator:ac0b9509b7451d2ee07a7d61aca57f479"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,6 +128,27 @@ std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="separator:a6275e714f33a2dbdd850f11dabd768d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0f0a70eee8b4f3c4992f30191b70ece6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f0a70eee8b4f3c4992f30191b70ece6">&#9670;&nbsp;</a></span>take()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a>&gt; LIEF::MachO::FatBinary::take </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract a <a class="el" href="classLIEF_1_1MachO_1_1Binary.html" title="Class which represent a MachO binary.">MachO::Binary</a> object. Gives ownership to the caller, and remove it from this <a class="el" href="classLIEF_1_1MachO_1_1FatBinary.html">FatBinary</a> object. </p>
+<dl class="section warning"><dt>Warning</dt><dd>: this invalidates any previously hold iterator! </dd></dl>
+
+</div>
+</div>
 <a id="ac0b9509b7451d2ee07a7d61aca57f479"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0b9509b7451d2ee07a7d61aca57f479">&#9670;&nbsp;</a></span>write()</h2>
 
@@ -152,7 +176,7 @@ std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/MachO/<a class="el" href="FatBinary_8hpp_source.html">FatBinary.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/MachO/<a class="el" href="FatBinary_8hpp_source.html">FatBinary.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -112,6 +112,10 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>virtual_size</b> 
 virtual std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Section.html#a5c453921057ed439ab09447a62f1b0c2">content</a> (void) const override</td></tr>
 <tr class="memdesc:a5c453921057ed439ab09447a62f1b0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">section's content <br /></td></tr>
 <tr class="separator:a5c453921057ed439ab09447a62f1b0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae6d6fcb8b2b94502ff92c07c3be981"><td class="memItemLeft" align="right" valign="top"><a id="aaae6d6fcb8b2b94502ff92c07c3be981"></a>
+const std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Section.html#aaae6d6fcb8b2b94502ff92c07c3be981">padding</a> () const</td></tr>
+<tr class="memdesc:aaae6d6fcb8b2b94502ff92c07c3be981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Content of the section's padding. <br /></td></tr>
+<tr class="separator:aaae6d6fcb8b2b94502ff92c07c3be981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67bd1c31261ded0598f30230066e6691"><td class="memItemLeft" align="right" valign="top"><a id="a67bd1c31261ded0598f30230066e6691"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>pointerto_raw_data</b> (void) const</td></tr>
 <tr class="separator:a67bd1c31261ded0598f30230066e6691"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,10 +135,10 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>numberof_line_num
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>characteristics</b> (void) const</td></tr>
 <tr class="separator:a69e7e01011f3c4eb4c0b02a3775a754b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb4b2edc966d8e8841568b394759362a"><td class="memItemLeft" align="right" valign="top"><a id="aeb4b2edc966d8e8841568b394759362a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_type</b> (PE_SECTION_TYPES type) const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_type</b> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> type) const</td></tr>
 <tr class="separator:aeb4b2edc966d8e8841568b394759362a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aa1c57c56ce9072a75c05633f31319f"><td class="memItemLeft" align="right" valign="top"><a id="a5aa1c57c56ce9072a75c05633f31319f"></a>
-const std::set&lt; PE_SECTION_TYPES &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>types</b> (void) const</td></tr>
+const std::set&lt; <a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>types</b> (void) const</td></tr>
 <tr class="separator:a5aa1c57c56ce9072a75c05633f31319f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e876c856b40e26f453f3379c7e19897"><td class="memItemLeft" align="right" valign="top"><a id="a7e876c856b40e26f453f3379c7e19897"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_characteristic</b> (SECTION_CHARACTERISTICS c) const</td></tr>
@@ -178,13 +182,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sizeof_raw_data</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>characteristics</b> (uint32_t characteristics)</td></tr>
 <tr class="separator:abaebbddd6f52d1791810f0051b39807b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00796614fbcb37aa68343e3cdbc81a57"><td class="memItemLeft" align="right" valign="top"><a id="a00796614fbcb37aa68343e3cdbc81a57"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> (PE_SECTION_TYPES type)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> type)</td></tr>
 <tr class="separator:a00796614fbcb37aa68343e3cdbc81a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6210a4fd7e3a56ae295946b73784d12"><td class="memItemLeft" align="right" valign="top"><a id="ac6210a4fd7e3a56ae295946b73784d12"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_type</b> (PE_SECTION_TYPES type)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_type</b> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> type)</td></tr>
 <tr class="separator:ac6210a4fd7e3a56ae295946b73784d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9d2fbe67d3d57875a143179f751159"><td class="memItemLeft" align="right" valign="top"><a id="acf9d2fbe67d3d57875a143179f751159"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove_type</b> (PE_SECTION_TYPES type)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>remove_type</b> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> type)</td></tr>
 <tr class="separator:acf9d2fbe67d3d57875a143179f751159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a8a7d35f92e170e0fb0da3974f4d4b"><td class="memItemLeft" align="right" valign="top"><a id="a47a8a7d35f92e170e0fb0da3974f4d4b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_characteristic</b> (SECTION_CHARACTERISTICS characteristic)</td></tr>
@@ -306,7 +310,7 @@ static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>np
 <tr class="separator:a0c9c4f80498dc0d950a39dc034e901f1 inherit pub_static_attribs_classLIEF_1_1Section"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/PE/<a class="el" href="PE_2Section_8hpp_source.html">Section.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/<a class="el" href="PE_2Section_8hpp_source.html">Section.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux/include/LIEF/PE/signature/types.hpp Source File</title>
+<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/signature/types.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_731cd7084368180f7ed2f012ad1a1e53.html">LIEF-0.11.0-Linux</a></li><li class="navelem"><a class="el" href="dir_23a7dd625aa501f68e0ff76113659718.html">include</a></li><li class="navelem"><a class="el" href="dir_7054063bae06b9b23cdf2938acc2007e.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_25004186b9bb47132e9ad8409d69e68a.html">PE</a></li><li class="navelem"><a class="el" href="dir_d5da70d4bc0bea24f03ba3a5800edc7a.html">signature</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b311a8464debf2b001d997b85ac53400.html">LIEF-0.11.0-Linux-x86_64</a></li><li class="navelem"><a class="el" href="dir_34cb7207f2a04a3b98c40eed726bbd03.html">include</a></li><li class="navelem"><a class="el" href="dir_0ab2c57e7b0f9b2375a439c4dcc81bbb.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_a4a561ed700b15c020bff57e3a8ed9d0.html">PE</a></li><li class="navelem"><a class="el" href="dir_61443a151cf30d45ca3c26112fbdc73d.html">signature</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,14 +96,17 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceLIEF.html">LIEF</a> {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>PE {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span>x509;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using</span> oid_t        = std::string;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> issuer_t     = std::pair&lt;std::string, std::vector&lt;uint8_t&gt;&gt;;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> it_const_crt = const_ref_iterator&lt;const std::vector&lt;x509&gt;&amp;&gt;;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>SignerInfo;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>Attribute;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> oid_t                 = std::string;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> it_const_crt          = const_ref_iterator&lt;const std::vector&lt;x509&gt;&amp;&gt;;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using</span> it_const_signers_t    = const_ref_iterator&lt;const std::vector&lt;SignerInfo&gt;&amp;&gt;;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using</span> it_const_attributes_t = const_ref_iterator&lt;std::vector&lt;Attribute*&gt;&gt;;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:34</div></div>
 <!-- start footer part -->

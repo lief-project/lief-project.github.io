@@ -167,7 +167,7 @@ Since we have exported a function we can now use ``dlopen`` on ``libcrackme101.s
 ``dlsym`` on ``check_found``
 
 .. code-block:: cpp
-  :emphasize-lines: 8,14
+  :emphasize-lines: 9,14
 
   #include <dlfcn.h>
   #include <stdio.h>
@@ -211,10 +211,10 @@ The transformation of the execution flow can be represented as follow:
 
 .. _glic229:
 
-Warning for glic >= 2.29 users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Warning for glibc >= 2.29 users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are using glibc >= 2.29 (or a close version depending on your Linux
+If you are using ``glibc >= 2.29`` (or a close version depending on your Linux
 distribution), you might have encountered this error while using the `dlopen`
 function:
 
@@ -237,7 +237,7 @@ to deny calls to ``dlopen`` with PIE binaries. This is done by verifying the
 In order to circumvent this test, LIEF can be used to remove this ``DF_1_PIE`` flag:
 
 .. code-block:: python
-  :emphasize-lines: 4
+  :emphasize-lines: 5
 
   import lief
   import sys

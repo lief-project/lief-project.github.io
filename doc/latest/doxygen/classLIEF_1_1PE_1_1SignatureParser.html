@@ -67,6 +67,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classLIEF_1_1PE_1_1SignatureParser-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -74,14 +76,34 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ad10d51f0b4fe8ab00d695ca37bd93052"><td class="memItemLeft" align="right" valign="top"><a id="ad10d51f0b4fe8ab00d695ca37bd93052"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>attributes_t</b> = std::vector&lt; std::unique_ptr&lt; <a class="el" href="classLIEF_1_1PE_1_1Attribute.html">Attribute</a> &gt; &gt;</td></tr>
+<tr class="separator:ad10d51f0b4fe8ab00d695ca37bd93052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d40c6a2e729922f8e975d79a1e8b05a"><td class="memItemLeft" align="right" valign="top"><a id="a5d40c6a2e729922f8e975d79a1e8b05a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>signer_infos_t</b> = std::vector&lt; <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html">SignerInfo</a> &gt;</td></tr>
+<tr class="separator:a5d40c6a2e729922f8e975d79a1e8b05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab75e9cc05b35c09928ee265d7d8c5a"><td class="memItemLeft" align="right" valign="top"><a id="a3ab75e9cc05b35c09928ee265d7d8c5a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>x509_certificates_t</b> = std::vector&lt; <a class="el" href="classLIEF_1_1PE_1_1x509.html">x509</a> &gt;</td></tr>
+<tr class="separator:a3ab75e9cc05b35c09928ee265d7d8c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d7280734f1df925b12827e6f4282ec"><td class="memItemLeft" align="right" valign="top"><a id="a76d7280734f1df925b12827e6f4282ec"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>time_t</b> = std::array&lt; int32_t, 6 &gt;</td></tr>
+<tr class="separator:a76d7280734f1df925b12827e6f4282ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a42c489aead99078dbbd2732a1adeb21b"><td class="memItemLeft" align="right" valign="top"><a id="a42c489aead99078dbbd2732a1adeb21b"></a>
-static <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const std::vector&lt; uint8_t &gt; &amp;data)</td></tr>
-<tr class="separator:a42c489aead99078dbbd2732a1adeb21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cf284ef8b95aa1d6f71f713ad03b6c"><td class="memItemLeft" align="right" valign="top"><a id="a49cf284ef8b95aa1d6f71f713ad03b6c"></a>
+static <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1SignatureParser.html#a49cf284ef8b95aa1d6f71f713ad03b6c">parse</a> (std::vector&lt; uint8_t &gt; data, bool skip_header=false)</td></tr>
+<tr class="memdesc:a49cf284ef8b95aa1d6f71f713ad03b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a PKCS #7 signature given a raw blob. <br /></td></tr>
+<tr class="separator:a49cf284ef8b95aa1d6f71f713ad03b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77578ab428acf09cdf0da4d4706aa4fe"><td class="memItemLeft" align="right" valign="top"><a id="a77578ab428acf09cdf0da4d4706aa4fe"></a>
+static <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; <a class="el" href="classLIEF_1_1PE_1_1Signature.html">Signature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1SignatureParser.html#a77578ab428acf09cdf0da4d4706aa4fe">parse</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a77578ab428acf09cdf0da4d4706aa4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a PKCS #7 signature from a file path. <br /></td></tr>
+<tr class="separator:a77578ab428acf09cdf0da4d4706aa4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/PE/signature/<a class="el" href="SignatureParser_8hpp_source.html">SignatureParser.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/signature/<a class="el" href="SignatureParser_8hpp_source.html">SignatureParser.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

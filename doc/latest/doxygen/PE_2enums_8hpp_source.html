@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux/include/LIEF/PE/enums.hpp Source File</title>
+<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/enums.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_731cd7084368180f7ed2f012ad1a1e53.html">LIEF-0.11.0-Linux</a></li><li class="navelem"><a class="el" href="dir_23a7dd625aa501f68e0ff76113659718.html">include</a></li><li class="navelem"><a class="el" href="dir_7054063bae06b9b23cdf2938acc2007e.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_25004186b9bb47132e9ad8409d69e68a.html">PE</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b311a8464debf2b001d997b85ac53400.html">LIEF-0.11.0-Linux-x86_64</a></li><li class="navelem"><a class="el" href="dir_34cb7207f2a04a3b98c40eed726bbd03.html">include</a></li><li class="navelem"><a class="el" href="dir_0ab2c57e7b0f9b2375a439c4dcc81bbb.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_a4a561ed700b15c020bff57e3a8ed9d0.html">PE</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -1298,10 +1298,9 @@ $(function() {
 <div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160; </div>
 <div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160; </div>
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160; </div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;<span class="comment">// Common section type</span></div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;<span class="keyword">enum class</span> PE_SECTION_TYPES : uint8_t {</div>
+<div class="line"><a name="l01251"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2"> 1251</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> : uint8_t {</div>
 <div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  TEXT       = 0,</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  TLS        = 1,</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1TLS.html">TLS</a>        = 1,</div>
 <div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  IMPORT     = 2,</div>
 <div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;  DATA       = 3,</div>
 <div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;  BSS        = 4,</div>
@@ -1318,396 +1317,442 @@ $(function() {
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;    <a class="code" href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3a6203090680bd2c85ddca78e044558c66">PE32_PLUS</a> = 0x20b  </div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;};</div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160; </div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160; </div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceLIEF_1_1PE.html#a4e9823f89766dd36adf25c17577e84cb">RESOURCE_TYPES</a> resource_types_array[] = {</div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;  RESOURCE_TYPES::CURSOR,</div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;  RESOURCE_TYPES::BITMAP,</div>
-<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;  RESOURCE_TYPES::ICON,</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;  RESOURCE_TYPES::MENU,</div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;  RESOURCE_TYPES::DIALOG,</div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;  RESOURCE_TYPES::STRING,</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;  RESOURCE_TYPES::FONTDIR,</div>
-<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;  RESOURCE_TYPES::FONT,</div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;  RESOURCE_TYPES::ACCELERATOR,</div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;  RESOURCE_TYPES::RCDATA,</div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;  RESOURCE_TYPES::MESSAGETABLE,</div>
-<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;  RESOURCE_TYPES::GROUP_CURSOR,</div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;  RESOURCE_TYPES::GROUP_ICON,</div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  RESOURCE_TYPES::VERSION,</div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  RESOURCE_TYPES::DLGINCLUDE,</div>
-<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;  RESOURCE_TYPES::PLUGPLAY,</div>
-<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;  RESOURCE_TYPES::VXD,</div>
-<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  RESOURCE_TYPES::ANICURSOR,</div>
-<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  RESOURCE_TYPES::ANIICON,</div>
-<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  RESOURCE_TYPES::HTML,</div>
-<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;  RESOURCE_TYPES::MANIFEST,</div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;};</div>
-<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160; </div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> RESOURCE_LANGS resource_langs_array[] = {</div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  RESOURCE_LANGS::LANG_NEUTRAL,</div>
-<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;  RESOURCE_LANGS::LANG_INVARIANT,</div>
-<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;  RESOURCE_LANGS::LANG_AFRIKAANS,</div>
-<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;  RESOURCE_LANGS::LANG_ALBANIAN,</div>
-<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  RESOURCE_LANGS::LANG_ARABIC,</div>
-<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;  RESOURCE_LANGS::LANG_ARMENIAN,</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;  RESOURCE_LANGS::LANG_ASSAMESE,</div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;  RESOURCE_LANGS::LANG_AZERI,</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;  RESOURCE_LANGS::LANG_BASQUE,</div>
-<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;  RESOURCE_LANGS::LANG_BELARUSIAN,</div>
-<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;  RESOURCE_LANGS::LANG_BANGLA,</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;  RESOURCE_LANGS::LANG_BULGARIAN,</div>
-<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;  RESOURCE_LANGS::LANG_CATALAN,</div>
-<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  RESOURCE_LANGS::LANG_CHINESE,</div>
-<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;  RESOURCE_LANGS::LANG_CROATIAN,</div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  RESOURCE_LANGS::LANG_BOSNIAN,</div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;  RESOURCE_LANGS::LANG_CZECH,</div>
-<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;  RESOURCE_LANGS::LANG_DANISH,</div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;  RESOURCE_LANGS::LANG_DIVEHI,</div>
-<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;  RESOURCE_LANGS::LANG_DUTCH,</div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;  RESOURCE_LANGS::LANG_ENGLISH,</div>
-<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;  RESOURCE_LANGS::LANG_ESTONIAN,</div>
-<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;  RESOURCE_LANGS::LANG_FAEROESE,</div>
-<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;  RESOURCE_LANGS::LANG_FARSI,</div>
-<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;  RESOURCE_LANGS::LANG_FINNISH,</div>
-<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;  RESOURCE_LANGS::LANG_FRENCH,</div>
-<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;  RESOURCE_LANGS::LANG_GALICIAN,</div>
-<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;  RESOURCE_LANGS::LANG_GEORGIAN,</div>
-<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;  RESOURCE_LANGS::LANG_GERMAN,</div>
-<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;  RESOURCE_LANGS::LANG_GREEK,</div>
-<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;  RESOURCE_LANGS::LANG_GUJARATI,</div>
-<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;  RESOURCE_LANGS::LANG_HEBREW,</div>
-<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;  RESOURCE_LANGS::LANG_HINDI,</div>
-<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;  RESOURCE_LANGS::LANG_HUNGARIAN,</div>
-<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;  RESOURCE_LANGS::LANG_ICELANDIC,</div>
-<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;  RESOURCE_LANGS::LANG_INDONESIAN,</div>
-<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;  RESOURCE_LANGS::LANG_ITALIAN,</div>
-<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;  RESOURCE_LANGS::LANG_JAPANESE,</div>
-<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;  RESOURCE_LANGS::LANG_KANNADA,</div>
-<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;  RESOURCE_LANGS::LANG_KASHMIRI,</div>
-<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;  RESOURCE_LANGS::LANG_KAZAK,</div>
-<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;  RESOURCE_LANGS::LANG_KONKANI,</div>
-<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;  RESOURCE_LANGS::LANG_KOREAN,</div>
-<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;  RESOURCE_LANGS::LANG_KYRGYZ,</div>
-<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;  RESOURCE_LANGS::LANG_LATVIAN,</div>
-<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;  RESOURCE_LANGS::LANG_LITHUANIAN,</div>
-<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;  RESOURCE_LANGS::LANG_MACEDONIAN,</div>
-<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;  RESOURCE_LANGS::LANG_MALAY,</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;  RESOURCE_LANGS::LANG_MALAYALAM,</div>
-<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;  RESOURCE_LANGS::LANG_MANIPURI,</div>
-<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;  RESOURCE_LANGS::LANG_MARATHI,</div>
-<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;  RESOURCE_LANGS::LANG_MONGOLIAN,</div>
-<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;  RESOURCE_LANGS::LANG_NEPALI,</div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;  RESOURCE_LANGS::LANG_NORWEGIAN,</div>
-<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;  RESOURCE_LANGS::LANG_ORIYA,</div>
-<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;  RESOURCE_LANGS::LANG_POLISH,</div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;  RESOURCE_LANGS::LANG_PORTUGUESE,</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;  RESOURCE_LANGS::LANG_PUNJABI,</div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;  RESOURCE_LANGS::LANG_ROMANIAN,</div>
-<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;  RESOURCE_LANGS::LANG_RUSSIAN,</div>
-<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;  RESOURCE_LANGS::LANG_SANSKRIT,</div>
-<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;  RESOURCE_LANGS::LANG_SERBIAN,</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;  RESOURCE_LANGS::LANG_SINDHI,</div>
-<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;  RESOURCE_LANGS::LANG_SLOVAK,</div>
-<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;  RESOURCE_LANGS::LANG_SLOVENIAN,</div>
-<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;  RESOURCE_LANGS::LANG_SPANISH,</div>
-<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;  RESOURCE_LANGS::LANG_SWAHILI,</div>
-<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;  RESOURCE_LANGS::LANG_SWEDISH,</div>
-<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;  RESOURCE_LANGS::LANG_SYRIAC,</div>
-<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;  RESOURCE_LANGS::LANG_TAMIL,</div>
-<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;  RESOURCE_LANGS::LANG_TATAR,</div>
-<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;  RESOURCE_LANGS::LANG_TELUGU,</div>
-<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;  RESOURCE_LANGS::LANG_THAI,</div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;  RESOURCE_LANGS::LANG_TURKISH,</div>
-<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;  RESOURCE_LANGS::LANG_UKRAINIAN,</div>
-<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;  RESOURCE_LANGS::LANG_URDU,</div>
-<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;  RESOURCE_LANGS::LANG_UZBEK,</div>
-<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;  RESOURCE_LANGS::LANG_VIETNAMESE,</div>
-<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;  RESOURCE_LANGS::LANG_GAELIC,</div>
-<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;  RESOURCE_LANGS::LANG_MALTESE,</div>
-<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;  RESOURCE_LANGS::LANG_MAORI,</div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;  RESOURCE_LANGS::LANG_RHAETO_ROMANCE,</div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;  RESOURCE_LANGS::LANG_SAMI,</div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;  RESOURCE_LANGS::LANG_SORBIAN,</div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;  RESOURCE_LANGS::LANG_SUTU,</div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;  RESOURCE_LANGS::LANG_TSONGA,</div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;  RESOURCE_LANGS::LANG_TSWANA,</div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;  RESOURCE_LANGS::LANG_VENDA,</div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;  RESOURCE_LANGS::LANG_XHOSA,</div>
-<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;  RESOURCE_LANGS::LANG_ZULU,</div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;  RESOURCE_LANGS::LANG_ESPERANTO,</div>
-<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;  RESOURCE_LANGS::LANG_WALON,</div>
-<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;  RESOURCE_LANGS::LANG_CORNISH,</div>
-<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;  RESOURCE_LANGS::LANG_WELSH,</div>
-<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;  RESOURCE_LANGS::LANG_BRETON,</div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;  RESOURCE_LANGS::LANG_INUKTITUT,</div>
-<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;  RESOURCE_LANGS::LANG_IRISH,</div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;  RESOURCE_LANGS::LANG_LOWER_SORBIAN,</div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;  RESOURCE_LANGS::LANG_PULAR,</div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;  RESOURCE_LANGS::LANG_QUECHUA,</div>
-<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;  RESOURCE_LANGS::LANG_TAMAZIGHT,</div>
-<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;  RESOURCE_LANGS::LANG_TIGRINYA,</div>
-<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;  RESOURCE_LANGS::LANG_VALENCIAN,</div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;};</div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160; </div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160; </div>
-<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> RESOURCE_SUBLANGS resource_sublangs_array[] = {</div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AFRIKAANS_SOUTH_AFRICA,</div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ALBANIAN_ALBANIA,</div>
-<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ALSATIAN_FRANCE,</div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AMHARIC_ETHIOPIA,</div>
-<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_ALGERIA,</div>
-<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_BAHRAIN,</div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_EGYPT,</div>
-<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_IRAQ,</div>
-<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_JORDAN,</div>
-<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_KUWAIT,</div>
-<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_LEBANON,</div>
-<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_LIBYA,</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_MOROCCO,</div>
-<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_OMAN,</div>
-<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_QATAR,</div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_SAUDI_ARABIA,</div>
-<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_SYRIA,</div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_TUNISIA,</div>
-<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_UAE,</div>
-<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_YEMEN,</div>
-<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARMENIAN_ARMENIA,</div>
-<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ASSAMESE_INDIA,</div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AZERI_CYRILLIC,</div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AZERI_LATIN,</div>
-<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BASHKIR_RUSSIA,</div>
-<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BASQUE_BASQUE,</div>
-<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BELARUSIAN_BELARUS,</div>
-<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BANGLA_BANGLADESH,</div>
-<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BANGLA_INDIA,</div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BOSNIAN_BOSNIA_HERZEGOVINA_CYRILLIC,</div>
-<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BOSNIAN_BOSNIA_HERZEGOVINA_LATIN,</div>
-<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BRETON_FRANCE,</div>
-<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BULGARIAN_BULGARIA,</div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CATALAN_CATALAN,</div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_HONGKONG,</div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_MACAU,</div>
-<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_SIMPLIFIED,</div>
-<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_SINGAPORE,</div>
-<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_TRADITIONAL,</div>
-<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CORSICAN_FRANCE,</div>
-<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CROATIAN_BOSNIA_HERZEGOVINA_LATIN,</div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CROATIAN_CROATIA,</div>
-<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CUSTOM_DEFAULT,</div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CUSTOM_UNSPECIFIED,</div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CZECH_CZECH_REPUBLIC,</div>
-<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DANISH_DENMARK,</div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DARI_AFGHANISTAN,</div>
-<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DEFAULT,</div>
-<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DIVEHI_MALDIVES,</div>
-<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DUTCH_BELGIAN,</div>
-<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DUTCH,</div>
-<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_AUS,</div>
-<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_BELIZE,</div>
-<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_CAN,</div>
-<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_CARIBBEAN,</div>
-<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_EIRE,</div>
-<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_INDIA,</div>
-<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_JAMAICA,</div>
-<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_MALAYSIA,</div>
-<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_NZ,</div>
-<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_PHILIPPINES,</div>
-<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_SINGAPORE,</div>
-<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_SOUTH_AFRICA,</div>
-<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_TRINIDAD,</div>
-<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_UK,</div>
-<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_US,</div>
-<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_ZIMBABWE,</div>
-<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_IRELAND,</div>
-<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ESTONIAN_ESTONIA,</div>
-<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FAEROESE_FAROE_ISLANDS,</div>
-<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FILIPINO_PHILIPPINES,</div>
-<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FINNISH_FINLAND,</div>
-<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_BELGIAN,</div>
-<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_CANADIAN,</div>
-<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_LUXEMBOURG,</div>
-<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_MONACO,</div>
-<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_SWISS,</div>
-<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH,</div>
-<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRISIAN_NETHERLANDS,</div>
-<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GALICIAN_GALICIAN,</div>
-<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GEORGIAN_GEORGIA,</div>
-<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_AUSTRIAN,</div>
-<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_LIECHTENSTEIN,</div>
-<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_LUXEMBOURG,</div>
-<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_SWISS,</div>
-<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN,</div>
-<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GREEK_GREECE,</div>
-<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GREENLANDIC_GREENLAND,</div>
-<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GUJARATI_INDIA,</div>
-<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HAUSA_NIGERIA_LATIN,</div>
-<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HEBREW_ISRAEL,</div>
-<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HINDI_INDIA,</div>
-<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HUNGARIAN_HUNGARY,</div>
-<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ICELANDIC_ICELAND,</div>
-<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_IGBO_NIGERIA,</div>
-<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_INDONESIAN_INDONESIA,</div>
-<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_INUKTITUT_CANADA_LATIN,</div>
-<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_INUKTITUT_CANADA,</div>
-<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_IRISH_IRELAND,</div>
-<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ITALIAN_SWISS,</div>
-<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ITALIAN,</div>
-<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_JAPANESE_JAPAN,</div>
-<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KANNADA_INDIA,</div>
-<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KASHMIRI_INDIA,</div>
-<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KASHMIRI_SASIA,</div>
-<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KAZAK_KAZAKHSTAN,</div>
-<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KHMER_CAMBODIA,</div>
-<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KICHE_GUATEMALA,</div>
-<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KINYARWANDA_RWANDA,</div>
-<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KONKANI_INDIA,</div>
-<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KOREAN,</div>
-<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KYRGYZ_KYRGYZSTAN,</div>
-<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LAO_LAO,</div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LATVIAN_LATVIA,</div>
-<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LITHUANIAN_CLASSIC,</div>
-<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LITHUANIAN,</div>
-<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LOWER_SORBIAN_GERMANY,</div>
-<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LUXEMBOURGISH_LUXEMBOURG,</div>
-<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MACEDONIAN_MACEDONIA,</div>
-<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALAY_BRUNEI_DARUSSALAM,</div>
-<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALAY_MALAYSIA,</div>
-<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALAYALAM_INDIA,</div>
-<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALTESE_MALTA,</div>
-<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MAORI_NEW_ZEALAND,</div>
-<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MAPUDUNGUN_CHILE,</div>
-<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MARATHI_INDIA,</div>
-<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MOHAWK_MOHAWK,</div>
-<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MONGOLIAN_CYRILLIC_MONGOLIA,</div>
-<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MONGOLIAN_PRC,</div>
-<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NEPALI_INDIA,</div>
-<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NEPALI_NEPAL,</div>
-<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NEUTRAL,</div>
-<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NORWEGIAN_BOKMAL,</div>
-<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NORWEGIAN_NYNORSK,</div>
-<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_OCCITAN_FRANCE,</div>
-<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ORIYA_INDIA,</div>
-<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PASHTO_AFGHANISTAN,</div>
-<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PERSIAN_IRAN,</div>
-<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_POLISH_POLAND,</div>
-<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PORTUGUESE_BRAZILIAN,</div>
-<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PORTUGUESE,</div>
-<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PUNJABI_INDIA,</div>
-<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_QUECHUA_BOLIVIA,</div>
-<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_QUECHUA_ECUADOR,</div>
-<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_QUECHUA_PERU,</div>
-<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ROMANIAN_ROMANIA,</div>
-<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ROMANSH_SWITZERLAND,</div>
-<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_RUSSIAN_RUSSIA,</div>
-<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_INARI_FINLAND,</div>
-<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_LULE_NORWAY,</div>
-<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_LULE_SWEDEN,</div>
-<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_NORTHERN_FINLAND,</div>
-<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_NORTHERN_NORWAY,</div>
-<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_NORTHERN_SWEDEN,</div>
-<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_SKOLT_FINLAND,</div>
-<div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_SOUTHERN_NORWAY,</div>
-<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_SOUTHERN_SWEDEN,</div>
-<div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SANSKRIT_INDIA,</div>
-<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_CYRILLIC,</div>
-<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_LATIN,</div>
-<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_CROATIA,</div>
-<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_CYRILLIC,</div>
-<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_LATIN,</div>
-<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINDHI_AFGHANISTAN,</div>
-<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINDHI_INDIA,</div>
-<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINDHI_PAKISTAN,</div>
-<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINHALESE_SRI_LANKA,</div>
-<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SLOVAK_SLOVAKIA,</div>
-<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SLOVENIAN_SLOVENIA,</div>
-<div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SOTHO_NORTHERN_SOUTH_AFRICA,</div>
-<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_ARGENTINA,</div>
-<div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_BOLIVIA,</div>
-<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_CHILE,</div>
-<div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_COLOMBIA,</div>
-<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_COSTA_RICA,</div>
-<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_DOMINICAN_REPUBLIC,</div>
-<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_ECUADOR,</div>
-<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_EL_SALVADOR,</div>
-<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_GUATEMALA,</div>
-<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_HONDURAS,</div>
-<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_MEXICAN,</div>
-<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_MODERN,</div>
-<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_NICARAGUA,</div>
-<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PANAMA,</div>
-<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PARAGUAY,</div>
-<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PERU,</div>
-<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PUERTO_RICO,</div>
-<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_URUGUAY,</div>
-<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_US,</div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_VENEZUELA,</div>
-<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH,</div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SWAHILI_KENYA,</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SWEDISH_FINLAND,</div>
-<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SWEDISH,</div>
-<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SYRIAC_SYRIA,</div>
-<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SYS_DEFAULT,</div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TAJIK_TAJIKISTAN,</div>
-<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TAMAZIGHT_ALGERIA_LATIN,</div>
-<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TAMIL_INDIA,</div>
-<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TATAR_RUSSIA,</div>
-<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TELUGU_INDIA,</div>
-<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_THAI_THAILAND,</div>
-<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TIBETAN_PRC,</div>
-<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TIGRIGNA_ERITREA,</div>
-<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TSWANA_SOUTH_AFRICA,</div>
-<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TURKISH_TURKEY,</div>
-<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TURKMEN_TURKMENISTAN,</div>
-<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UI_CUSTOM_DEFAULT,</div>
-<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UIGHUR_PRC,</div>
-<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UKRAINIAN_UKRAINE,</div>
-<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UPPER_SORBIAN_GERMANY,</div>
-<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_URDU_INDIA,</div>
-<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_URDU_PAKISTAN,</div>
-<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UZBEK_CYRILLIC,</div>
-<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UZBEK_LATIN,</div>
-<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_VIETNAMESE_VIETNAM,</div>
-<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_WELSH_UNITED_KINGDOM,</div>
-<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_WOLOF_SENEGAL,</div>
-<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_XHOSA_SOUTH_AFRICA,</div>
-<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_YAKUT_RUSSIA,</div>
-<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_YI_PRC,</div>
-<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_YORUBA_NIGERIA,</div>
-<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ZULU_SOUTH_AFRICA,</div>
-<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;};</div>
-<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160; </div>
-<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160; </div>
-<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceLIEF_1_1PE.html#a60f8e63830752da363fa5eecf7a494f2">GUARD_CF_FLAGS</a> guard_cf_flags_array[] = {</div>
-<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;  GUARD_CF_FLAGS::GCF_INSTRUMENTED,</div>
-<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;  GUARD_CF_FLAGS::GCF_W_INSTRUMENTED,</div>
-<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;  GUARD_CF_FLAGS::GCF_FUNCTION_TABLE_PRESENT,</div>
-<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;  GUARD_CF_FLAGS::GCF_EXPORT_SUPPRESSION_INFO_PRESENT,</div>
-<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;  GUARD_CF_FLAGS::GCF_ENABLE_EXPORT_SUPPRESSION,</div>
-<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;  GUARD_CF_FLAGS::GCF_LONGJUMP_TABLE_PRESENT,</div>
-<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;  GUARD_CF_FLAGS::GRF_INSTRUMENTED,</div>
-<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;  GUARD_CF_FLAGS::GRF_ENABLE,</div>
-<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;  GUARD_CF_FLAGS::GRF_STRICT,</div>
-<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;};</div>
-<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160; </div>
-<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;}</div>
-<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;}</div>
-<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160; </div>
-<div class="line"><a name="l01644"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1SECTION__CHARACTERISTICS_01_4.html"> 1644</a></span>&#160;ENABLE_BITMASK_OPERATORS(LIEF::PE::SECTION_CHARACTERISTICS)</div>
-<div class="line"><a name="l01645"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1DLL__CHARACTERISTICS_01_4.html"> 1645</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::DLL_CHARACTERISTICS)</div>
-<div class="line"><a name="l01646"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1HEADER__CHARACTERISTICS_01_4.html"> 1646</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::HEADER_CHARACTERISTICS)</div>
-<div class="line"><a name="l01647"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1GUARD__CF__FLAGS_01_4.html"> 1647</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::GUARD_CF_FLAGS)</div>
-<div class="line"><a name="l01648"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1ACCELERATOR__FLAGS_01_4.html"> 1648</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::ACCELERATOR_FLAGS)</div>
-<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01271"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f"> 1271</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> {</div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;  UNKNOWN = 0,</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;  SHA_512,</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;  SHA_384,</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;  SHA_256,</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;  SHA_1,</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160; </div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;  MD5,</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;  MD4,</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;  MD2,</div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160; </div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;  RSA,</div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;  EC,</div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160; </div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  MD5_RSA,</div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  SHA1_DSA,</div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;  SHA1_RSA,</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;  SHA_256_RSA,</div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  SHA_384_RSA,</div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  SHA_512_RSA,</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  SHA1_ECDSA,</div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;  SHA_256_ECDSA,</div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;  SHA_384_ECDSA,</div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  SHA_512_ECDSA,</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;};</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160; </div>
+<div class="line"><a name="l01298"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#aef30bd912b1aae068c73006c54a6c406"> 1298</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespaceLIEF_1_1PE.html#aef30bd912b1aae068c73006c54a6c406">SIG_ATTRIBUTE_TYPES</a> {</div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;  UNKNOWN = 0,</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  CONTENT_TYPE,</div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;  GENERIC_TYPE,</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160; </div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;  SPC_SP_OPUS_INFO,</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160; </div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;  MS_COUNTER_SIGN,</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;  MS_SPC_NESTED_SIGN,</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;  MS_SPC_STATEMENT_TYPE,</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160; </div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  PKCS9_AT_SEQUENCE_NUMBER,</div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;  PKCS9_COUNTER_SIGNATURE,</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  PKCS9_MESSAGE_DIGEST,</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;  PKCS9_SIGNING_TIME,</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;};</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160; </div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160; </div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceLIEF_1_1PE.html#a4e9823f89766dd36adf25c17577e84cb">RESOURCE_TYPES</a> resource_types_array[] = {</div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;  RESOURCE_TYPES::CURSOR,</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;  RESOURCE_TYPES::BITMAP,</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;  RESOURCE_TYPES::ICON,</div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;  RESOURCE_TYPES::MENU,</div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;  RESOURCE_TYPES::DIALOG,</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;  RESOURCE_TYPES::STRING,</div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;  RESOURCE_TYPES::FONTDIR,</div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;  RESOURCE_TYPES::FONT,</div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;  RESOURCE_TYPES::ACCELERATOR,</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;  RESOURCE_TYPES::RCDATA,</div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;  RESOURCE_TYPES::MESSAGETABLE,</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;  RESOURCE_TYPES::GROUP_CURSOR,</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;  RESOURCE_TYPES::GROUP_ICON,</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;  RESOURCE_TYPES::VERSION,</div>
+<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;  RESOURCE_TYPES::DLGINCLUDE,</div>
+<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;  RESOURCE_TYPES::PLUGPLAY,</div>
+<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;  RESOURCE_TYPES::VXD,</div>
+<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;  RESOURCE_TYPES::ANICURSOR,</div>
+<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;  RESOURCE_TYPES::ANIICON,</div>
+<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;  RESOURCE_TYPES::HTML,</div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;  RESOURCE_TYPES::MANIFEST,</div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;};</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160; </div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> RESOURCE_LANGS resource_langs_array[] = {</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;  RESOURCE_LANGS::LANG_NEUTRAL,</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;  RESOURCE_LANGS::LANG_INVARIANT,</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;  RESOURCE_LANGS::LANG_AFRIKAANS,</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;  RESOURCE_LANGS::LANG_ALBANIAN,</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;  RESOURCE_LANGS::LANG_ARABIC,</div>
+<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;  RESOURCE_LANGS::LANG_ARMENIAN,</div>
+<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;  RESOURCE_LANGS::LANG_ASSAMESE,</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;  RESOURCE_LANGS::LANG_AZERI,</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;  RESOURCE_LANGS::LANG_BASQUE,</div>
+<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;  RESOURCE_LANGS::LANG_BELARUSIAN,</div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;  RESOURCE_LANGS::LANG_BANGLA,</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;  RESOURCE_LANGS::LANG_BULGARIAN,</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;  RESOURCE_LANGS::LANG_CATALAN,</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;  RESOURCE_LANGS::LANG_CHINESE,</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;  RESOURCE_LANGS::LANG_CROATIAN,</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;  RESOURCE_LANGS::LANG_BOSNIAN,</div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;  RESOURCE_LANGS::LANG_CZECH,</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;  RESOURCE_LANGS::LANG_DANISH,</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;  RESOURCE_LANGS::LANG_DIVEHI,</div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;  RESOURCE_LANGS::LANG_DUTCH,</div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;  RESOURCE_LANGS::LANG_ENGLISH,</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;  RESOURCE_LANGS::LANG_ESTONIAN,</div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;  RESOURCE_LANGS::LANG_FAEROESE,</div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;  RESOURCE_LANGS::LANG_FARSI,</div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;  RESOURCE_LANGS::LANG_FINNISH,</div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;  RESOURCE_LANGS::LANG_FRENCH,</div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;  RESOURCE_LANGS::LANG_GALICIAN,</div>
+<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;  RESOURCE_LANGS::LANG_GEORGIAN,</div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;  RESOURCE_LANGS::LANG_GERMAN,</div>
+<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;  RESOURCE_LANGS::LANG_GREEK,</div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;  RESOURCE_LANGS::LANG_GUJARATI,</div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;  RESOURCE_LANGS::LANG_HEBREW,</div>
+<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;  RESOURCE_LANGS::LANG_HINDI,</div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;  RESOURCE_LANGS::LANG_HUNGARIAN,</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;  RESOURCE_LANGS::LANG_ICELANDIC,</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;  RESOURCE_LANGS::LANG_INDONESIAN,</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;  RESOURCE_LANGS::LANG_ITALIAN,</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;  RESOURCE_LANGS::LANG_JAPANESE,</div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;  RESOURCE_LANGS::LANG_KANNADA,</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;  RESOURCE_LANGS::LANG_KASHMIRI,</div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;  RESOURCE_LANGS::LANG_KAZAK,</div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;  RESOURCE_LANGS::LANG_KONKANI,</div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;  RESOURCE_LANGS::LANG_KOREAN,</div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;  RESOURCE_LANGS::LANG_KYRGYZ,</div>
+<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;  RESOURCE_LANGS::LANG_LATVIAN,</div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;  RESOURCE_LANGS::LANG_LITHUANIAN,</div>
+<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;  RESOURCE_LANGS::LANG_MACEDONIAN,</div>
+<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;  RESOURCE_LANGS::LANG_MALAY,</div>
+<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;  RESOURCE_LANGS::LANG_MALAYALAM,</div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;  RESOURCE_LANGS::LANG_MANIPURI,</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;  RESOURCE_LANGS::LANG_MARATHI,</div>
+<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;  RESOURCE_LANGS::LANG_MONGOLIAN,</div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;  RESOURCE_LANGS::LANG_NEPALI,</div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;  RESOURCE_LANGS::LANG_NORWEGIAN,</div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;  RESOURCE_LANGS::LANG_ORIYA,</div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;  RESOURCE_LANGS::LANG_POLISH,</div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;  RESOURCE_LANGS::LANG_PORTUGUESE,</div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;  RESOURCE_LANGS::LANG_PUNJABI,</div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;  RESOURCE_LANGS::LANG_ROMANIAN,</div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;  RESOURCE_LANGS::LANG_RUSSIAN,</div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;  RESOURCE_LANGS::LANG_SANSKRIT,</div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;  RESOURCE_LANGS::LANG_SERBIAN,</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;  RESOURCE_LANGS::LANG_SINDHI,</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;  RESOURCE_LANGS::LANG_SLOVAK,</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;  RESOURCE_LANGS::LANG_SLOVENIAN,</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;  RESOURCE_LANGS::LANG_SPANISH,</div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;  RESOURCE_LANGS::LANG_SWAHILI,</div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;  RESOURCE_LANGS::LANG_SWEDISH,</div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;  RESOURCE_LANGS::LANG_SYRIAC,</div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;  RESOURCE_LANGS::LANG_TAMIL,</div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;  RESOURCE_LANGS::LANG_TATAR,</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;  RESOURCE_LANGS::LANG_TELUGU,</div>
+<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;  RESOURCE_LANGS::LANG_THAI,</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;  RESOURCE_LANGS::LANG_TURKISH,</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;  RESOURCE_LANGS::LANG_UKRAINIAN,</div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;  RESOURCE_LANGS::LANG_URDU,</div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;  RESOURCE_LANGS::LANG_UZBEK,</div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;  RESOURCE_LANGS::LANG_VIETNAMESE,</div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;  RESOURCE_LANGS::LANG_GAELIC,</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;  RESOURCE_LANGS::LANG_MALTESE,</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;  RESOURCE_LANGS::LANG_MAORI,</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;  RESOURCE_LANGS::LANG_RHAETO_ROMANCE,</div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;  RESOURCE_LANGS::LANG_SAMI,</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;  RESOURCE_LANGS::LANG_SORBIAN,</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;  RESOURCE_LANGS::LANG_SUTU,</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;  RESOURCE_LANGS::LANG_TSONGA,</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;  RESOURCE_LANGS::LANG_TSWANA,</div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;  RESOURCE_LANGS::LANG_VENDA,</div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;  RESOURCE_LANGS::LANG_XHOSA,</div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;  RESOURCE_LANGS::LANG_ZULU,</div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;  RESOURCE_LANGS::LANG_ESPERANTO,</div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;  RESOURCE_LANGS::LANG_WALON,</div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;  RESOURCE_LANGS::LANG_CORNISH,</div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;  RESOURCE_LANGS::LANG_WELSH,</div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;  RESOURCE_LANGS::LANG_BRETON,</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;  RESOURCE_LANGS::LANG_INUKTITUT,</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;  RESOURCE_LANGS::LANG_IRISH,</div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;  RESOURCE_LANGS::LANG_LOWER_SORBIAN,</div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;  RESOURCE_LANGS::LANG_PULAR,</div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;  RESOURCE_LANGS::LANG_QUECHUA,</div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;  RESOURCE_LANGS::LANG_TAMAZIGHT,</div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  RESOURCE_LANGS::LANG_TIGRINYA,</div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  RESOURCE_LANGS::LANG_VALENCIAN,</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;};</div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160; </div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160; </div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> RESOURCE_SUBLANGS resource_sublangs_array[] = {</div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AFRIKAANS_SOUTH_AFRICA,</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ALBANIAN_ALBANIA,</div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ALSATIAN_FRANCE,</div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AMHARIC_ETHIOPIA,</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_ALGERIA,</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_BAHRAIN,</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_EGYPT,</div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_IRAQ,</div>
+<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_JORDAN,</div>
+<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_KUWAIT,</div>
+<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_LEBANON,</div>
+<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_LIBYA,</div>
+<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_MOROCCO,</div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_OMAN,</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_QATAR,</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_SAUDI_ARABIA,</div>
+<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_SYRIA,</div>
+<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_TUNISIA,</div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_UAE,</div>
+<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARABIC_YEMEN,</div>
+<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ARMENIAN_ARMENIA,</div>
+<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ASSAMESE_INDIA,</div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AZERI_CYRILLIC,</div>
+<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_AZERI_LATIN,</div>
+<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BASHKIR_RUSSIA,</div>
+<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BASQUE_BASQUE,</div>
+<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BELARUSIAN_BELARUS,</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BANGLA_BANGLADESH,</div>
+<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BANGLA_INDIA,</div>
+<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BOSNIAN_BOSNIA_HERZEGOVINA_CYRILLIC,</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BOSNIAN_BOSNIA_HERZEGOVINA_LATIN,</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BRETON_FRANCE,</div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_BULGARIAN_BULGARIA,</div>
+<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CATALAN_CATALAN,</div>
+<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_HONGKONG,</div>
+<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_MACAU,</div>
+<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_SIMPLIFIED,</div>
+<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_SINGAPORE,</div>
+<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CHINESE_TRADITIONAL,</div>
+<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CORSICAN_FRANCE,</div>
+<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CROATIAN_BOSNIA_HERZEGOVINA_LATIN,</div>
+<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CROATIAN_CROATIA,</div>
+<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CUSTOM_DEFAULT,</div>
+<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CUSTOM_UNSPECIFIED,</div>
+<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_CZECH_CZECH_REPUBLIC,</div>
+<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DANISH_DENMARK,</div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DARI_AFGHANISTAN,</div>
+<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DEFAULT,</div>
+<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DIVEHI_MALDIVES,</div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DUTCH_BELGIAN,</div>
+<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_DUTCH,</div>
+<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_AUS,</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_BELIZE,</div>
+<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_CAN,</div>
+<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_CARIBBEAN,</div>
+<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_EIRE,</div>
+<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_INDIA,</div>
+<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_JAMAICA,</div>
+<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_MALAYSIA,</div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_NZ,</div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_PHILIPPINES,</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_SINGAPORE,</div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_SOUTH_AFRICA,</div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_TRINIDAD,</div>
+<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_UK,</div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_US,</div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_ZIMBABWE,</div>
+<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ENGLISH_IRELAND,</div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ESTONIAN_ESTONIA,</div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FAEROESE_FAROE_ISLANDS,</div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FILIPINO_PHILIPPINES,</div>
+<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FINNISH_FINLAND,</div>
+<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_BELGIAN,</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_CANADIAN,</div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_LUXEMBOURG,</div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_MONACO,</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH_SWISS,</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRENCH,</div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_FRISIAN_NETHERLANDS,</div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GALICIAN_GALICIAN,</div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GEORGIAN_GEORGIA,</div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_AUSTRIAN,</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_LIECHTENSTEIN,</div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_LUXEMBOURG,</div>
+<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN_SWISS,</div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GERMAN,</div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GREEK_GREECE,</div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GREENLANDIC_GREENLAND,</div>
+<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_GUJARATI_INDIA,</div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HAUSA_NIGERIA_LATIN,</div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HEBREW_ISRAEL,</div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HINDI_INDIA,</div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_HUNGARIAN_HUNGARY,</div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ICELANDIC_ICELAND,</div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_IGBO_NIGERIA,</div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_INDONESIAN_INDONESIA,</div>
+<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_INUKTITUT_CANADA_LATIN,</div>
+<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_INUKTITUT_CANADA,</div>
+<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_IRISH_IRELAND,</div>
+<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ITALIAN_SWISS,</div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ITALIAN,</div>
+<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_JAPANESE_JAPAN,</div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KANNADA_INDIA,</div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KASHMIRI_INDIA,</div>
+<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KASHMIRI_SASIA,</div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KAZAK_KAZAKHSTAN,</div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KHMER_CAMBODIA,</div>
+<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KICHE_GUATEMALA,</div>
+<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KINYARWANDA_RWANDA,</div>
+<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KONKANI_INDIA,</div>
+<div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KOREAN,</div>
+<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_KYRGYZ_KYRGYZSTAN,</div>
+<div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LAO_LAO,</div>
+<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LATVIAN_LATVIA,</div>
+<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LITHUANIAN_CLASSIC,</div>
+<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LITHUANIAN,</div>
+<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LOWER_SORBIAN_GERMANY,</div>
+<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_LUXEMBOURGISH_LUXEMBOURG,</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MACEDONIAN_MACEDONIA,</div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALAY_BRUNEI_DARUSSALAM,</div>
+<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALAY_MALAYSIA,</div>
+<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALAYALAM_INDIA,</div>
+<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MALTESE_MALTA,</div>
+<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MAORI_NEW_ZEALAND,</div>
+<div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MAPUDUNGUN_CHILE,</div>
+<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MARATHI_INDIA,</div>
+<div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MOHAWK_MOHAWK,</div>
+<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MONGOLIAN_CYRILLIC_MONGOLIA,</div>
+<div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_MONGOLIAN_PRC,</div>
+<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NEPALI_INDIA,</div>
+<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NEPALI_NEPAL,</div>
+<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NEUTRAL,</div>
+<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NORWEGIAN_BOKMAL,</div>
+<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_NORWEGIAN_NYNORSK,</div>
+<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_OCCITAN_FRANCE,</div>
+<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ORIYA_INDIA,</div>
+<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PASHTO_AFGHANISTAN,</div>
+<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PERSIAN_IRAN,</div>
+<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_POLISH_POLAND,</div>
+<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PORTUGUESE_BRAZILIAN,</div>
+<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PORTUGUESE,</div>
+<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_PUNJABI_INDIA,</div>
+<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_QUECHUA_BOLIVIA,</div>
+<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_QUECHUA_ECUADOR,</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_QUECHUA_PERU,</div>
+<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ROMANIAN_ROMANIA,</div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ROMANSH_SWITZERLAND,</div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_RUSSIAN_RUSSIA,</div>
+<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_INARI_FINLAND,</div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_LULE_NORWAY,</div>
+<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_LULE_SWEDEN,</div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_NORTHERN_FINLAND,</div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_NORTHERN_NORWAY,</div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_NORTHERN_SWEDEN,</div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_SKOLT_FINLAND,</div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_SOUTHERN_NORWAY,</div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SAMI_SOUTHERN_SWEDEN,</div>
+<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SANSKRIT_INDIA,</div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_CYRILLIC,</div>
+<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_LATIN,</div>
+<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_CROATIA,</div>
+<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_CYRILLIC,</div>
+<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SERBIAN_LATIN,</div>
+<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINDHI_AFGHANISTAN,</div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINDHI_INDIA,</div>
+<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINDHI_PAKISTAN,</div>
+<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SINHALESE_SRI_LANKA,</div>
+<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SLOVAK_SLOVAKIA,</div>
+<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SLOVENIAN_SLOVENIA,</div>
+<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SOTHO_NORTHERN_SOUTH_AFRICA,</div>
+<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_ARGENTINA,</div>
+<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_BOLIVIA,</div>
+<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_CHILE,</div>
+<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_COLOMBIA,</div>
+<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_COSTA_RICA,</div>
+<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_DOMINICAN_REPUBLIC,</div>
+<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_ECUADOR,</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_EL_SALVADOR,</div>
+<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_GUATEMALA,</div>
+<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_HONDURAS,</div>
+<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_MEXICAN,</div>
+<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_MODERN,</div>
+<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_NICARAGUA,</div>
+<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PANAMA,</div>
+<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PARAGUAY,</div>
+<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PERU,</div>
+<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_PUERTO_RICO,</div>
+<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_URUGUAY,</div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_US,</div>
+<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH_VENEZUELA,</div>
+<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SPANISH,</div>
+<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SWAHILI_KENYA,</div>
+<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SWEDISH_FINLAND,</div>
+<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SWEDISH,</div>
+<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SYRIAC_SYRIA,</div>
+<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_SYS_DEFAULT,</div>
+<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TAJIK_TAJIKISTAN,</div>
+<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TAMAZIGHT_ALGERIA_LATIN,</div>
+<div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TAMIL_INDIA,</div>
+<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TATAR_RUSSIA,</div>
+<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TELUGU_INDIA,</div>
+<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_THAI_THAILAND,</div>
+<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TIBETAN_PRC,</div>
+<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TIGRIGNA_ERITREA,</div>
+<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TSWANA_SOUTH_AFRICA,</div>
+<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TURKISH_TURKEY,</div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_TURKMEN_TURKMENISTAN,</div>
+<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UI_CUSTOM_DEFAULT,</div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UIGHUR_PRC,</div>
+<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UKRAINIAN_UKRAINE,</div>
+<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UPPER_SORBIAN_GERMANY,</div>
+<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_URDU_INDIA,</div>
+<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_URDU_PAKISTAN,</div>
+<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UZBEK_CYRILLIC,</div>
+<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_UZBEK_LATIN,</div>
+<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_VIETNAMESE_VIETNAM,</div>
+<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_WELSH_UNITED_KINGDOM,</div>
+<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_WOLOF_SENEGAL,</div>
+<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_XHOSA_SOUTH_AFRICA,</div>
+<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_YAKUT_RUSSIA,</div>
+<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_YI_PRC,</div>
+<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_YORUBA_NIGERIA,</div>
+<div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;  RESOURCE_SUBLANGS::SUBLANG_ZULU_SOUTH_AFRICA,</div>
+<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;};</div>
+<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160; </div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160; </div>
+<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="namespaceLIEF_1_1PE.html#a60f8e63830752da363fa5eecf7a494f2">GUARD_CF_FLAGS</a> guard_cf_flags_array[] = {</div>
+<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;  GUARD_CF_FLAGS::GCF_INSTRUMENTED,</div>
+<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;  GUARD_CF_FLAGS::GCF_W_INSTRUMENTED,</div>
+<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;  GUARD_CF_FLAGS::GCF_FUNCTION_TABLE_PRESENT,</div>
+<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;  GUARD_CF_FLAGS::GCF_EXPORT_SUPPRESSION_INFO_PRESENT,</div>
+<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;  GUARD_CF_FLAGS::GCF_ENABLE_EXPORT_SUPPRESSION,</div>
+<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;  GUARD_CF_FLAGS::GCF_LONGJUMP_TABLE_PRESENT,</div>
+<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;  GUARD_CF_FLAGS::GRF_INSTRUMENTED,</div>
+<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;  GUARD_CF_FLAGS::GRF_ENABLE,</div>
+<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;  GUARD_CF_FLAGS::GRF_STRICT,</div>
+<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;};</div>
+<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160; </div>
+<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;}</div>
+<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;}</div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160; </div>
+<div class="line"><a name="l01689"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1SECTION__CHARACTERISTICS_01_4.html"> 1689</a></span>&#160;ENABLE_BITMASK_OPERATORS(LIEF::PE::SECTION_CHARACTERISTICS)</div>
+<div class="line"><a name="l01690"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1DLL__CHARACTERISTICS_01_4.html"> 1690</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::DLL_CHARACTERISTICS)</div>
+<div class="line"><a name="l01691"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1HEADER__CHARACTERISTICS_01_4.html"> 1691</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::HEADER_CHARACTERISTICS)</div>
+<div class="line"><a name="l01692"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1GUARD__CF__FLAGS_01_4.html"> 1692</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::GUARD_CF_FLAGS)</div>
+<div class="line"><a name="l01693"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1ACCELERATOR__FLAGS_01_4.html"> 1693</a></span>&#160;ENABLE_BITMASK_OPERATORS(<a class="code" href="namespaceLIEF.html">LIEF</a>::PE::ACCELERATOR_FLAGS)</div>
+<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a5d277795a4fa5b6b31502211fa4af1f7a4ac290759a3a837a69ddf09ced4900f0"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a5d277795a4fa5b6b31502211fa4af1f7a4ac290759a3a837a69ddf09ced4900f0">LIEF::PE::SYMBOL_BASE_TYPES::IMAGE_SYM_TYPE_NULL</a></div><div class="ttdeci">@ IMAGE_SYM_TYPE_NULL</div><div class="ttdoc">No type information or unknown base type.</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad79f0792ac94cc4d9a359b8382c683d6"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad79f0792ac94cc4d9a359b8382c683d6">LIEF::PE::SYMBOL_COMPLEX_TYPES</a></div><div class="ttdeci">SYMBOL_COMPLEX_TYPES</div><div class="ttdef"><b>Definition:</b> enums.hpp:126</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad2ed22c4e32a85a85132274deded1d57"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad2ed22c4e32a85a85132274deded1d57">LIEF::PE::SUBSYSTEM</a></div><div class="ttdeci">SUBSYSTEM</div><div class="ttdef"><b>Definition:</b> enums.hpp:243</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1PE32_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1PE32.html">LIEF::PE::PE32</a></div><div class="ttdef"><b>Definition:</b> Structures.hpp:784</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1PE32_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1PE32.html">LIEF::PE::PE32</a></div><div class="ttdef"><b>Definition:</b> Structures.hpp:778</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_ac2031f26c8fb449a4773916a424c659f"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">LIEF::PE::ALGORITHMS</a></div><div class="ttdeci">ALGORITHMS</div><div class="ttdoc">Cryptography algorithms.</div><div class="ttdef"><b>Definition:</b> enums.hpp:1271</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a30ab10536f38aa33c9fb99a3a6706153"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a30ab10536f38aa33c9fb99a3a6706153">LIEF::PE::ACCELERATOR_VK_CODES</a></div><div class="ttdeci">ACCELERATOR_VK_CODES</div><div class="ttdoc">From https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes.</div><div class="ttdef"><b>Definition:</b> enums.hpp:1070</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1TLS_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1TLS.html">LIEF::PE::TLS</a></div><div class="ttdef"><b>Definition:</b> TLS.hpp:39</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_acf3dbfe6d56bca6be4285a3cb319bcbe"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#acf3dbfe6d56bca6be4285a3cb319bcbe">LIEF::PE::CODE_PAGES</a></div><div class="ttdeci">CODE_PAGES</div><div class="ttdoc">Code page from https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers.</div><div class="ttdef"><b>Definition:</b> enums.hpp:890</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad79f0792ac94cc4d9a359b8382c683d6a6945e4c3c62226697ea3dbec7d42e141"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad79f0792ac94cc4d9a359b8382c683d6a6945e4c3c62226697ea3dbec7d42e141">LIEF::PE::SYMBOL_COMPLEX_TYPES::IMAGE_SYM_DTYPE_NULL</a></div><div class="ttdeci">@ IMAGE_SYM_DTYPE_NULL</div><div class="ttdoc">No complex type; simple scalar variable.</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_acf3dbfe6d56bca6be4285a3cb319bcbea1afb9ac18d986ee12b195020468704a6"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#acf3dbfe6d56bca6be4285a3cb319bcbea1afb9ac18d986ee12b195020468704a6">LIEF::PE::CODE_PAGES::CP_IBM037</a></div><div class="ttdeci">@ CP_IBM037</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_aded2cd2d3e89f690383426e32d310370"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aded2cd2d3e89f690383426e32d310370">LIEF::PE::DIALOG_BOX_STYLES</a></div><div class="ttdeci">DIALOG_BOX_STYLES</div><div class="ttdoc">From https://docs.microsoft.com/en-us/windows/win32/dlgbox/dialog-box-styles.</div><div class="ttdef"><b>Definition:</b> enums.hpp:812</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_a094f1b260e5a0c95e02d25ceb18894d2"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">LIEF::PE::PE_SECTION_TYPES</a></div><div class="ttdeci">PE_SECTION_TYPES</div><div class="ttdoc">Common section type.</div><div class="ttdef"><b>Definition:</b> enums.hpp:1251</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a892f37bf397a9a3dd9c13fbab327f1eb"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a892f37bf397a9a3dd9c13fbab327f1eb">LIEF::PE::ImportNameType</a></div><div class="ttdeci">ImportNameType</div><div class="ttdef"><b>Definition:</b> enums.hpp:320</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a892f37bf397a9a3dd9c13fbab327f1ebafea12005f53bf4b10c54ec14f8540957"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a892f37bf397a9a3dd9c13fbab327f1ebafea12005f53bf4b10c54ec14f8540957">LIEF::PE::ImportNameType::IMPORT_ORDINAL</a></div><div class="ttdeci">@ IMPORT_ORDINAL</div><div class="ttdoc">Import is by ordinal. This indicates that the value in the Ordinal/Hint field of the import header is...</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad894955993b3dcbb92923fafcceb28c3a6203090680bd2c85ddca78e044558c66"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3a6203090680bd2c85ddca78e044558c66">LIEF::PE::PE_TYPE::PE32</a></div><div class="ttdeci">@ PE32</div><div class="ttdoc">32bits</div></div>
@@ -1725,6 +1770,7 @@ $(function() {
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad2ed22c4e32a85a85132274deded1d57a90498fad1f050cb604ab2eb4ee0b7c5c"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad2ed22c4e32a85a85132274deded1d57a90498fad1f050cb604ab2eb4ee0b7c5c">LIEF::PE::SUBSYSTEM::IMAGE_SUBSYSTEM_UNKNOWN</a></div><div class="ttdeci">@ IMAGE_SUBSYSTEM_UNKNOWN</div><div class="ttdoc">An unknown subsystem.</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a748c76daa5c3b2c06e0476c6dd92ce53"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a748c76daa5c3b2c06e0476c6dd92ce53">LIEF::PE::SYMBOL_STORAGE_CLASS</a></div><div class="ttdeci">SYMBOL_STORAGE_CLASS</div><div class="ttdoc">Storage class tells where and what the symbol represents.</div><div class="ttdef"><b>Definition:</b> enums.hpp:74</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a57df698dc5f71bfabd41e8167db24c97af6fba36d3685f91f060becbd42713a82"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a57df698dc5f71bfabd41e8167db24c97af6fba36d3685f91f060becbd42713a82">LIEF::PE::DLL_CHARACTERISTICS::IMAGE_DLL_CHARACTERISTICS_HIGH_ENTROPY_VA</a></div><div class="ttdeci">@ IMAGE_DLL_CHARACTERISTICS_HIGH_ENTROPY_VA</div><div class="ttdoc">ASLR with 64 bit address space.</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_aef30bd912b1aae068c73006c54a6c406"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aef30bd912b1aae068c73006c54a6c406">LIEF::PE::SIG_ATTRIBUTE_TYPES</a></div><div class="ttdeci">SIG_ATTRIBUTE_TYPES</div><div class="ttdoc">Typed enum for LIEF::PE::Attribute.</div><div class="ttdef"><b>Definition:</b> enums.hpp:1298</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:34</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a4e9823f89766dd36adf25c17577e84cb"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a4e9823f89766dd36adf25c17577e84cb">LIEF::PE::RESOURCE_TYPES</a></div><div class="ttdeci">RESOURCE_TYPES</div><div class="ttdoc">From https://docs.microsoft.com/en-us/windows/win32/menurc/resource-types.</div><div class="ttdef"><b>Definition:</b> enums.hpp:356</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a7c4953830bf9e432d76af0e2052a9df2"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a7c4953830bf9e432d76af0e2052a9df2">LIEF::PE::PE_TYPES</a></div><div class="ttdeci">PE_TYPES</div><div class="ttdef"><b>Definition:</b> enums.hpp:12</div></div>

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['rebase_5fopcodes_3255',['REBASE_OPCODES',['../namespaceLIEF_1_1MachO.html#ae9e248890f8ac676faf183fe1b5491df',1,'LIEF::MachO']]],
-  ['reloc_5fi386_3256',['RELOC_i386',['../namespaceLIEF_1_1ELF.html#a9a7934000d4d5399486f03bbfa654589',1,'LIEF::ELF']]],
-  ['reloc_5fx86_5f64_3257',['RELOC_x86_64',['../namespaceLIEF_1_1ELF.html#a7e388090c2f6678cfe37572db239f8ff',1,'LIEF::ELF']]],
-  ['resource_5ftypes_3258',['RESOURCE_TYPES',['../namespaceLIEF_1_1PE.html#a4e9823f89766dd36adf25c17577e84cb',1,'LIEF::PE']]]
+  ['pe_5fsection_5ftypes_3431',['PE_SECTION_TYPES',['../namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2',1,'LIEF::PE']]],
+  ['pe_5ftype_3432',['PE_TYPE',['../namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3',1,'LIEF::PE']]],
+  ['pe_5ftypes_3433',['PE_TYPES',['../namespaceLIEF_1_1PE.html#a7c4953830bf9e432d76af0e2052a9df2',1,'LIEF::PE']]]
 ];

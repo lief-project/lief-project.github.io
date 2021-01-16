@@ -191,6 +191,39 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6abc201d52f7a72da0bbd219f994edf9"><td class="memItemLeft" align="right" valign="top"><a id="a6abc201d52f7a72da0bbd219f994edf9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_endian_swap</b> (bool swap)</td></tr>
 <tr class="separator:a6abc201d52f7a72da0bbd219f994edf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d091c8c6a219517f592e36185527c4"><td class="memItemLeft" align="right" valign="top"><a id="aa3d091c8c6a219517f592e36185527c4"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_tag</b> (int tag)=0</td></tr>
+<tr class="separator:aa3d091c8c6a219517f592e36185527c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c29fefbee740477ee234ed8f888deab"><td class="memItemLeft" align="right" valign="top"><a id="a9c29fefbee740477ee234ed8f888deab"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_len</b> ()=0</td></tr>
+<tr class="separator:a9c29fefbee740477ee234ed8f888deab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf89ca73cc051f3b827ca9106fa09970"><td class="memItemLeft" align="right" valign="top"><a id="abf89ca73cc051f3b827ca9106fa09970"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_alg</b> ()=0</td></tr>
+<tr class="separator:abf89ca73cc051f3b827ca9106fa09970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704b094250355f0c77dc6a593596fe53"><td class="memItemLeft" align="right" valign="top"><a id="a704b094250355f0c77dc6a593596fe53"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_oid</b> ()=0</td></tr>
+<tr class="separator:a704b094250355f0c77dc6a593596fe53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece26fdc7030d27149260c72fd50997f"><td class="memItemLeft" align="right" valign="top"><a id="aece26fdc7030d27149260c72fd50997f"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_int</b> ()=0</td></tr>
+<tr class="separator:aece26fdc7030d27149260c72fd50997f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40764d38249329e758a0c9a5df08c78d"><td class="memItemLeft" align="right" valign="top"><a id="a40764d38249329e758a0c9a5df08c78d"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::vector&lt; uint8_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_bitstring</b> ()=0</td></tr>
+<tr class="separator:a40764d38249329e758a0c9a5df08c78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6e5ffdb1114587bb447bcd684b107c"><td class="memItemLeft" align="right" valign="top"><a id="a6d6e5ffdb1114587bb447bcd684b107c"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::vector&lt; uint8_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_octet_string</b> ()=0</td></tr>
+<tr class="separator:a6d6e5ffdb1114587bb447bcd684b107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d44702de5e33a05c09dd39820c0e6af"><td class="memItemLeft" align="right" valign="top"><a id="a1d44702de5e33a05c09dd39820c0e6af"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::unique_ptr&lt; mbedtls_x509_crt &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asn1_read_cert</b> ()=0</td></tr>
+<tr class="separator:a1d44702de5e33a05c09dd39820c0e6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb3f3547affb78b1450c6dc42b9441d"><td class="memItemLeft" align="right" valign="top"><a id="a6fb3f3547affb78b1450c6dc42b9441d"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>x509_read_names</b> ()=0</td></tr>
+<tr class="separator:a6fb3f3547affb78b1450c6dc42b9441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4c46dd3a929d74ae72c3c5f95e96af"><td class="memItemLeft" align="right" valign="top"><a id="acb4c46dd3a929d74ae72c3c5f95e96af"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::vector&lt; uint8_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>x509_read_serial</b> ()=0</td></tr>
+<tr class="separator:acb4c46dd3a929d74ae72c3c5f95e96af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3954183d3e6027374a4dec4f6a9402"><td class="memItemLeft" align="right" valign="top"><a id="a7e3954183d3e6027374a4dec4f6a9402"></a>
+virtual <a class="el" href="namespaceLIEF.html#a198f5f80819ba38d7fabe5d3dfd64e00">result</a>&lt; std::unique_ptr&lt; mbedtls_x509_time &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>x509_read_time</b> ()=0</td></tr>
+<tr class="separator:a7e3954183d3e6027374a4dec4f6a9402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -200,7 +233,7 @@ template&lt;typename T &gt; </td></tr>
 <tr class="separator:a9be7bef222971689c226a02d9b672ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/BinaryStream/<a class="el" href="BinaryStream_8hpp_source.html">BinaryStream.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/BinaryStream/<a class="el" href="BinaryStream_8hpp_source.html">BinaryStream.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

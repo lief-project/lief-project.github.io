@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux/include/LIEF/PE/utils.hpp Source File</title>
+<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/utils.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_731cd7084368180f7ed2f012ad1a1e53.html">LIEF-0.11.0-Linux</a></li><li class="navelem"><a class="el" href="dir_23a7dd625aa501f68e0ff76113659718.html">include</a></li><li class="navelem"><a class="el" href="dir_7054063bae06b9b23cdf2938acc2007e.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_25004186b9bb47132e9ad8409d69e68a.html">PE</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b311a8464debf2b001d997b85ac53400.html">LIEF-0.11.0-Linux-x86_64</a></li><li class="navelem"><a class="el" href="dir_34cb7207f2a04a3b98c40eed726bbd03.html">include</a></li><li class="navelem"><a class="el" href="dir_0ab2c57e7b0f9b2375a439c4dcc81bbb.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_a4a561ed700b15c020bff57e3a8ed9d0.html">PE</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -110,11 +110,14 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#a7504b9d94bbb906107a0aa3aa9662db3">   52</a></span>&#160;LIEF_API std::string <a class="code" href="namespaceLIEF_1_1PE.html#a7504b9d94bbb906107a0aa3aa9662db3">get_imphash</a>(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1Binary.html">Binary</a>&amp; binary);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#a1a293d29efe94561a1a412760096a9d3">   64</a></span>&#160;LIEF_API <a class="code" href="classLIEF_1_1PE_1_1Import.html">Import</a> <a class="code" href="namespaceLIEF_1_1PE.html#a1a293d29efe94561a1a412760096a9d3">resolve_ordinals</a>(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1Import.html">Import</a>&amp; <span class="keyword">import</span>, <span class="keywordtype">bool</span> strict=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;LIEF_API <a class="code" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> algo_from_oid(<span class="keyword">const</span> std::string&amp; oid);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Binary.html">LIEF::PE::Binary</a></div><div class="ttdoc">Class which represent a PE binary object.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:41</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_ac2031f26c8fb449a4773916a424c659f"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">LIEF::PE::ALGORITHMS</a></div><div class="ttdeci">ALGORITHMS</div><div class="ttdoc">Cryptography algorithms.</div><div class="ttdef"><b>Definition:</b> enums.hpp:1271</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Binary.html">LIEF::PE::Binary</a></div><div class="ttdoc">Class which represent a PE binary object.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:42</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a7504b9d94bbb906107a0aa3aa9662db3"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a7504b9d94bbb906107a0aa3aa9662db3">LIEF::PE::get_imphash</a></div><div class="ttdeci">std::string get_imphash(const Binary &amp;binary)</div><div class="ttdoc">Compute the hash of imported functions.</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_a1a293d29efe94561a1a412760096a9d3"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a1a293d29efe94561a1a412760096a9d3">LIEF::PE::resolve_ordinals</a></div><div class="ttdeci">Import resolve_ordinals(const Import &amp;import, bool strict=false)</div><div class="ttdoc">Take a PE::Import as entry and try to resolve imports by ordinal.</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ac966c50a1d43bbc6e241cdb171621737"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ac966c50a1d43bbc6e241cdb171621737">LIEF::PE::get_type</a></div><div class="ttdeci">PE_TYPE get_type(const std::string &amp;file)</div><div class="ttdoc">if the input file is a PE one, return PE32 or PE32+</div></div>

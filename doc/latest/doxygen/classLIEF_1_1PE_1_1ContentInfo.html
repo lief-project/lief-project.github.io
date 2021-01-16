@@ -73,6 +73,8 @@ $(function() {
 <div class="title">LIEF::PE::ContentInfo Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ContentInfo_8hpp_source.html">ContentInfo.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LIEF::PE::ContentInfo:</div>
 <div class="dyncontent">
@@ -91,25 +93,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abd235c5cfda0b97604667ed4f181fb04"><td class="memItemLeft" align="right" valign="top"><a id="abd235c5cfda0b97604667ed4f181fb04"></a>
 <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a> &amp;)</td></tr>
 <tr class="separator:abd235c5cfda0b97604667ed4f181fb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac12810ae1b4f7e01d1e38d70e880a0"><td class="memItemLeft" align="right" valign="top"><a id="a9ac12810ae1b4f7e01d1e38d70e880a0"></a>
-const oid_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a9ac12810ae1b4f7e01d1e38d70e880a0">content_type</a> (void) const</td></tr>
-<tr class="memdesc:a9ac12810ae1b4f7e01d1e38d70e880a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">OID of the content type. This value should match <code>SPC_INDIRECT_DATA_OBJID</code> <br /></td></tr>
-<tr class="separator:a9ac12810ae1b4f7e01d1e38d70e880a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99a1b9d120976bf2731ffd7a6a745745"><td class="memItemLeft" align="right" valign="top"><a id="a99a1b9d120976bf2731ffd7a6a745745"></a>
-const oid_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> (void) const</td></tr>
-<tr class="separator:a99a1b9d120976bf2731ffd7a6a745745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6660c8c7c5f365e530c57dc9c84531cb"><td class="memItemLeft" align="right" valign="top"><a id="a6660c8c7c5f365e530c57dc9c84531cb"></a>
-const oid_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a6660c8c7c5f365e530c57dc9c84531cb">digest_algorithm</a> (void) const</td></tr>
-<tr class="memdesc:a6660c8c7c5f365e530c57dc9c84531cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm (OID) used to hash the file. This value should match <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#aa98e15c6d716b93594bfcc57d80d5de9" title="Algorithm (OID) used to hash the file. This value should match ContentInfo::digest_algorithm and Sign...">SignerInfo::digest_algorithm</a> and <a class="el" href="classLIEF_1_1PE_1_1Signature.html#ac2640ffbc879ff348a48dcd1204242ec" title="Return the algorithm (OID) used to sign the content of ContentInfo.">Signature::digest_algorithm</a>. <br /></td></tr>
-<tr class="separator:a6660c8c7c5f365e530c57dc9c84531cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e3ef31c03f2eda6c6209ee74fb8a52a"><td class="memItemLeft" align="right" valign="top"><a id="a4e3ef31c03f2eda6c6209ee74fb8a52a"></a>
-const std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a4e3ef31c03f2eda6c6209ee74fb8a52a">digest</a> (void) const</td></tr>
-<tr class="memdesc:a4e3ef31c03f2eda6c6209ee74fb8a52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The digest. <br /></td></tr>
-<tr class="separator:a4e3ef31c03f2eda6c6209ee74fb8a52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9729110fae02373a2e7b2a2df981666c"><td class="memItemLeft" align="right" valign="top"><a id="a9729110fae02373a2e7b2a2df981666c"></a>
-const std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a9729110fae02373a2e7b2a2df981666c">raw</a> (void) const</td></tr>
-<tr class="memdesc:a9729110fae02373a2e7b2a2df981666c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw bytes associated with the <a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a>. <br /></td></tr>
-<tr class="separator:a9729110fae02373a2e7b2a2df981666c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68daf198acc89a70a55025501dbd13e4"><td class="memItemLeft" align="right" valign="top"><a id="a68daf198acc89a70a55025501dbd13e4"></a>
+oid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a68daf198acc89a70a55025501dbd13e4">content_type</a> () const</td></tr>
+<tr class="memdesc:a68daf198acc89a70a55025501dbd13e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the OID that describes the content wrapped by this object. It should match SPC_INDIRECT_DATA_OBJID (1.3.6.1.4.1.311.2.1.4) <br /></td></tr>
+<tr class="separator:a68daf198acc89a70a55025501dbd13e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cafef41530fb92cdcae310e7dd0bdf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a0cafef41530fb92cdcae310e7dd0bdf9">digest_algorithm</a> () const</td></tr>
+<tr class="memdesc:a0cafef41530fb92cdcae310e7dd0bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Digest used to hash the file.  <a href="classLIEF_1_1PE_1_1ContentInfo.html#a0cafef41530fb92cdcae310e7dd0bdf9">More...</a><br /></td></tr>
+<tr class="separator:a0cafef41530fb92cdcae310e7dd0bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e93eafc8e14dbc4133821f36816b15"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; uint8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html#a69e93eafc8e14dbc4133821f36816b15">digest</a> () const</td></tr>
+<tr class="memdesc:a69e93eafc8e14dbc4133821f36816b15"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a>'s authentihash.  <a href="classLIEF_1_1PE_1_1ContentInfo.html#a69e93eafc8e14dbc4133821f36816b15">More...</a><br /></td></tr>
+<tr class="separator:a69e93eafc8e14dbc4133821f36816b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79bb76c8e1aec9728e6505de4c8bee36"><td class="memItemLeft" align="right" valign="top"><a id="a79bb76c8e1aec9728e6505de4c8bee36"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>file</b> () const</td></tr>
+<tr class="separator:a79bb76c8e1aec9728e6505de4c8bee36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c98adecd13de31e0cc0bb197bb4718"><td class="memItemLeft" align="right" valign="top"><a id="a11c98adecd13de31e0cc0bb197bb4718"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
 <tr class="separator:a11c98adecd13de31e0cc0bb197bb4718"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,8 +141,92 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>output_const_t</b> = add_pointer_t&lt; add_const_t&lt; decay_t&lt; T &gt; &gt;&gt;</td></tr>
 <tr class="separator:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classLIEF_1_1PE_1_1ContentInfo.html">ContentInfo</a> as described in the RFC2315 (<a href="https://tools.ietf.org/html/rfc2315#section-7">https://tools.ietf.org/html/rfc2315#section-7</a>)</p>
+<div class="fragment"><div class="line">ContentInfo ::= SEQUENCE {</div>
+<div class="line">  contentType ContentType,</div>
+<div class="line">  content     [0] EXPLICIT ANY DEFINED BY contentType OPTIONAL</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">ContentType ::= OBJECT IDENTIFIER</div>
+</div><!-- fragment --><p>In the case of <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> signature, <a class="el" href="classLIEF_1_1PE_1_1ContentType.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.3 (PKCS #9)">ContentType</a> <b>must</b> be set to SPC_INDIRECT_DATA_OBJID OID: <code>1.3.6.1.4.1.311.2.1.4</code> and content is defined by the structure: <code>SpcIndirectDataContent</code> </p><div class="fragment"><div class="line">SpcIndirectDataContent ::= SEQUENCE {</div>
+<div class="line"> data          SpcAttributeTypeAndOptionalValue,</div>
+<div class="line"> messageDigest DigestInfo</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">SpcAttributeTypeAndOptionalValue ::= SEQUENCE {</div>
+<div class="line"> type  ObjectID,</div>
+<div class="line"> value [0] EXPLICIT ANY OPTIONAL</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>For <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> signature, <code>SpcAttributeTypeAndOptionalValue.type</code> is set to <code>SPC_PE_IMAGE_DATAOBJ</code> (OID: <code>1.3.6.1.4.1.311.2.1.15</code>) and the value is defined by <code>SpcPeImageData</code></p>
+<div class="fragment"><div class="line">DigestInfo ::= SEQUENCE {</div>
+<div class="line"> digestAlgorithm  AlgorithmIdentifier,</div>
+<div class="line"> digest           OCTETSTRING</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">AlgorithmIdentifier ::= SEQUENCE {</div>
+<div class="line"> algorithm  ObjectID,</div>
+<div class="line"> parameters [0] EXPLICIT ANY OPTIONAL</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a69e93eafc8e14dbc4133821f36816b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e93eafc8e14dbc4133821f36816b15">&#9670;&nbsp;</a></span>digest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;uint8_t&gt;&amp; LIEF::PE::ContentInfo::digest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a>'s authentihash. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a4fcf20d10d41febb7dfdefcaf8b1ca7a" title="Compute the authentihash according to the algorithm provided in the first parameter.">LIEF::PE::Binary::authentihash</a> </dd></dl>
+
+</div>
+</div>
+<a id="a0cafef41530fb92cdcae310e7dd0bdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cafef41530fb92cdcae310e7dd0bdf9">&#9670;&nbsp;</a></span>digest_algorithm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF_1_1PE.html#ac2031f26c8fb449a4773916a424c659f">ALGORITHMS</a> LIEF::PE::ContentInfo::digest_algorithm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Digest used to hash the file. </p>
+<p>It should match <a class="el" href="classLIEF_1_1PE_1_1SignerInfo.html#a2400853e407764efb12066a6f8c1cef4" title="Algorithm (OID) used to hash the file.">LIEF::PE::SignerInfo::digest_algorithm</a> </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/PE/signature/<a class="el" href="ContentInfo_8hpp_source.html">ContentInfo.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/signature/<a class="el" href="ContentInfo_8hpp_source.html">ContentInfo.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

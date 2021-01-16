@@ -111,6 +111,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reserve</b> (size_t s
 <tr class="memitem:afcbbd9292c41c2a96d0a66534fc0d843"><td class="memItemLeft" align="right" valign="top"><a id="afcbbd9292c41c2a96d0a66534fc0d843"></a>
 <a class="el" href="classLIEF_1_1vector__iostream.html">vector_iostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t count, uint8_t value)</td></tr>
 <tr class="separator:afcbbd9292c41c2a96d0a66534fc0d843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32c02c5d16d02f03261c7d3f0f9bdf3"><td class="memItemLeft" align="right" valign="top"><a id="af32c02c5d16d02f03261c7d3f0f9bdf3"></a>
+<a class="el" href="classLIEF_1_1vector__iostream.html">vector_iostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write_sized_int</b> (uint64_t value, size_t size)</td></tr>
+<tr class="separator:af32c02c5d16d02f03261c7d3f0f9bdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4371044f7637e92ad8818a733d318b08"><td class="memTemplParams" colspan="2"><a id="a4371044f7637e92ad8818a733d318b08"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4371044f7637e92ad8818a733d318b08"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1vector__iostream.html">vector_iostream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write_conv</b> (const T &amp;t)</td></tr>
@@ -126,6 +129,10 @@ template&lt;typename T &gt; </td></tr>
 template&lt;class Integer , typename  = typename std::enable_if&lt;std::is_integral&lt;Integer&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:ab21bc13a87a70015dbdcd6868ab04308"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1vector__iostream.html">vector_iostream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write</b> (Integer integer)</td></tr>
 <tr class="separator:ab21bc13a87a70015dbdcd6868ab04308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0268d87a0aff437fcb8627e4cccaa9fd"><td class="memTemplParams" colspan="2"><a id="a0268d87a0aff437fcb8627e4cccaa9fd"></a>
+template&lt;typename T , size_t size, typename  = typename std::enable_if&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a0268d87a0aff437fcb8627e4cccaa9fd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1vector__iostream.html">vector_iostream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write</b> (const std::array&lt; T, size &gt; &amp;t)</td></tr>
+<tr class="separator:a0268d87a0aff437fcb8627e4cccaa9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa350e5ed1f870f5a2acff7bd6f9aeba3"><td class="memItemLeft" align="right" valign="top"><a id="aa350e5ed1f870f5a2acff7bd6f9aeba3"></a>
 <a class="el" href="classLIEF_1_1vector__iostream.html">vector_iostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>write_uleb128</b> (uint64_t value)</td></tr>
 <tr class="separator:aa350e5ed1f870f5a2acff7bd6f9aeba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +177,7 @@ static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>sleb128_size
 <tr class="separator:a0f05210743002b5f45f25f94ef2c39e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux/include/LIEF/<a class="el" href="iostream_8hpp_source.html">iostream.hpp</a></li>
+<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/<a class="el" href="iostream_8hpp_source.html">iostream.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

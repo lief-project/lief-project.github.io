@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux/include/LIEF/Abstract/Binary.hpp Source File</title>
+<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.0-Linux-x86_64/include/LIEF/Abstract/Binary.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_731cd7084368180f7ed2f012ad1a1e53.html">LIEF-0.11.0-Linux</a></li><li class="navelem"><a class="el" href="dir_23a7dd625aa501f68e0ff76113659718.html">include</a></li><li class="navelem"><a class="el" href="dir_7054063bae06b9b23cdf2938acc2007e.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_fa510c828eea284e1cf15a7625871a46.html">Abstract</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b311a8464debf2b001d997b85ac53400.html">LIEF-0.11.0-Linux-x86_64</a></li><li class="navelem"><a class="el" href="dir_34cb7207f2a04a3b98c40eed726bbd03.html">include</a></li><li class="navelem"><a class="el" href="dir_0ab2c57e7b0f9b2375a439c4dcc81bbb.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_6e26ba9203eccb0a4184d18b35048ef2.html">Abstract</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -191,8 +191,8 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  uint64_t original_size_;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classLIEF_1_1Header.html">Header</a>                    get_abstract_header(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">virtual</span> symbols_t                 get_abstract_symbols(<span class="keywordtype">void</span>)      = 0;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">virtual</span> sections_t                get_abstract_sections(<span class="keywordtype">void</span>)     = 0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="namespaceLIEF.html#a56d1eb9fc404d9c89e1dbbe803da60a9">symbols_t</a>                 get_abstract_symbols(<span class="keywordtype">void</span>)      = 0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="namespaceLIEF.html#a3e93ac2f2b8673fd175b1c190dab48b2">sections_t</a>                get_abstract_sections(<span class="keywordtype">void</span>)     = 0;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="namespaceLIEF.html#a5131af45f3ca610ce77662e21c91252f">relocations_t</a>             get_abstract_relocations(<span class="keywordtype">void</span>)  = 0;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">virtual</span> functions_t  get_abstract_exported_functions(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
@@ -205,6 +205,7 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespaceLIEF_html_a56d1eb9fc404d9c89e1dbbe803da60a9"><div class="ttname"><a href="namespaceLIEF.html#a56d1eb9fc404d9c89e1dbbe803da60a9">LIEF::symbols_t</a></div><div class="ttdeci">std::vector&lt; Symbol * &gt; symbols_t</div><div class="ttdoc">Default container for abstract symbols.</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:29</div></div>
 <div class="ttc" id="anamespaceLIEF_html_a5131af45f3ca610ce77662e21c91252f"><div class="ttname"><a href="namespaceLIEF.html#a5131af45f3ca610ce77662e21c91252f">LIEF::relocations_t</a></div><div class="ttdeci">std::vector&lt; Relocation * &gt; relocations_t</div><div class="ttdoc">Container used to transfert abstract relocations from binary formats.</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:33</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_a9df0bd42e6c47f4733dd0aa63ac1945b"><div class="ttname"><a href="classLIEF_1_1Binary.html#a9df0bd42e6c47f4733dd0aa63ac1945b">LIEF::Binary::symbols</a></div><div class="ttdeci">it_const_symbols symbols(void) const</div><div class="ttdoc">Return list of symbols whose elements can't be modified.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_a4d99024566acade97911f5ea6da8adc3"><div class="ttname"><a href="classLIEF_1_1Binary.html#a4d99024566acade97911f5ea6da8adc3">LIEF::Binary::ctor_functions</a></div><div class="ttdeci">virtual LIEF::Binary::functions_t ctor_functions(void) const =0</div><div class="ttdoc">Constructor functions that are called prior any other functions.</div></div>
@@ -221,7 +222,7 @@ $(function() {
 <div class="ttc" id="aclassLIEF_1_1Binary_html_a0a1be816bca82f0e5112f328ccdca60f"><div class="ttname"><a href="classLIEF_1_1Binary.html#a0a1be816bca82f0e5112f328ccdca60f">LIEF::Binary::entrypoint</a></div><div class="ttdeci">virtual uint64_t entrypoint(void) const =0</div><div class="ttdoc">Binary's entrypoint (if any)</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_ac0bce822117abce4042f5851589ffe64"><div class="ttname"><a href="classLIEF_1_1Binary.html#ac0bce822117abce4042f5851589ffe64">LIEF::Binary::imported_functions</a></div><div class="ttdeci">functions_t imported_functions(void) const</div><div class="ttdoc">Return functions's name imported by the binary.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_afacbde2190b266b2e8393cd4b578ef42"><div class="ttname"><a href="classLIEF_1_1Binary.html#afacbde2190b266b2e8393cd4b578ef42">LIEF::Binary::format</a></div><div class="ttdeci">EXE_FORMATS format(void) const</div><div class="ttdoc">Executable format (ELF, PE, Mach-O) of the underlying binary.</div></div>
-<div class="ttc" id="aclassLIEF_1_1Visitor_html"><div class="ttname"><a href="classLIEF_1_1Visitor.html">LIEF::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.hpp:198</div></div>
+<div class="ttc" id="aclassLIEF_1_1Visitor_html"><div class="ttname"><a href="classLIEF_1_1Visitor.html">LIEF::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.hpp:210</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_ad6db8461cef9b4f5f8c0b55523afb221"><div class="ttname"><a href="classLIEF_1_1Binary.html#ad6db8461cef9b4f5f8c0b55523afb221">LIEF::Binary::get_symbol</a></div><div class="ttdeci">const Symbol &amp; get_symbol(const std::string &amp;name) const</div><div class="ttdoc">Return the Symbol with the given name.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_afb336721fbb557d61acdd5eb3e950476"><div class="ttname"><a href="classLIEF_1_1Binary.html#afb336721fbb557d61acdd5eb3e950476">LIEF::Binary::name</a></div><div class="ttdeci">const std::string &amp; name(void) const</div><div class="ttdoc">Binary's name.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_af67a13c7944d1983cc5c68b99baa7fa2"><div class="ttname"><a href="classLIEF_1_1Binary.html#af67a13c7944d1983cc5c68b99baa7fa2">LIEF::Binary::sections</a></div><div class="ttdeci">it_sections sections(void)</div><div class="ttdoc">Returns binary's sections.</div></div>
@@ -234,6 +235,7 @@ $(function() {
 <div class="ttc" id="aclassLIEF_1_1Binary_html_a36ebc2fa264324f4b4747365c95b9315"><div class="ttname"><a href="classLIEF_1_1Binary.html#a36ebc2fa264324f4b4747365c95b9315">LIEF::Binary::has_nx</a></div><div class="ttdeci">virtual bool has_nx(void) const =0</div><div class="ttdoc">Check if the binary uses NX protection.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_aebcebfdb66a3ed457f07dbf1e681fc15"><div class="ttname"><a href="classLIEF_1_1Binary.html#aebcebfdb66a3ed457f07dbf1e681fc15">LIEF::Binary::relocations</a></div><div class="ttdeci">it_relocations relocations(void)</div><div class="ttdoc">Returns binary's relocations.</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:34</div></div>
+<div class="ttc" id="anamespaceLIEF_html_a3e93ac2f2b8673fd175b1c190dab48b2"><div class="ttname"><a href="namespaceLIEF.html#a3e93ac2f2b8673fd175b1c190dab48b2">LIEF::sections_t</a></div><div class="ttdeci">std::vector&lt; Section * &gt; sections_t</div><div class="ttdoc">Default container for abstract sections.</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:25</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_ac7296f6c1699d76272e7225cb27ee16f"><div class="ttname"><a href="classLIEF_1_1Binary.html#ac7296f6c1699d76272e7225cb27ee16f">LIEF::Binary::header</a></div><div class="ttdeci">Header header(void) const</div><div class="ttdoc">Return the abstract header of the binary.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_a0535d034775adf11c6412c974bd013c1"><div class="ttname"><a href="classLIEF_1_1Binary.html#a0535d034775adf11c6412c974bd013c1">LIEF::Binary::original_size</a></div><div class="ttdeci">uint64_t original_size(void) const</div><div class="ttdoc">Binary's original size.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Binary_html_a143e6bf9b64520e85abdf866d02d6c3a"><div class="ttname"><a href="classLIEF_1_1Binary.html#a143e6bf9b64520e85abdf866d02d6c3a">LIEF::Binary::symbols</a></div><div class="ttdeci">it_symbols symbols(void)</div><div class="ttdoc">Return list of symbols whose elements can be modified.</div></div>

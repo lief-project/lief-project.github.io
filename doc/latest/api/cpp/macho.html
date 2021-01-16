@@ -223,6 +223,13 @@
       
 
       
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
         <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
           <span class="caption-text">API</span>
         </div>
@@ -280,9 +287,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/c365a53" class="text-darkblue">0.11.0-c365a53</a>
+  <a href="https://github.com/lief-project/LIEF/commits/1587cf5" class="text-darkblue">0.11.0-1587cf5</a>
     <br>
-    Last updated on 12/21/2020, 16:57:43.
+    Last updated on 16/01/2021, 11:23:50.
 </div>
 
 
@@ -496,6 +503,16 @@
 <dt id="_CPPv4NK4LIEF5MachO9FatBinaryixE6size_t">
 <span id="_CPPv3NK4LIEF5MachO9FatBinaryixE6size_t"></span><span id="_CPPv2NK4LIEF5MachO9FatBinaryixE6size_t"></span><span id="LIEF::MachO::FatBinary::subscript-operator__sC"></span><span class="target" id="classLIEF_1_1MachO_1_1FatBinary_1a208e628146181aff82b28f31036b65c0"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF5MachO6BinaryE" title="LIEF::MachO::Binary">Binary</a> &amp;<code class="sig-name descname">operator[]</code><span class="sig-paren">(</span>size_t <em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF5MachO9FatBinaryixE6size_t" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N4LIEF5MachO9FatBinary4takeE6size_t">
+<span id="_CPPv3N4LIEF5MachO9FatBinary4takeE6size_t"></span><span id="_CPPv2N4LIEF5MachO9FatBinary4takeE6size_t"></span><span id="LIEF::MachO::FatBinary::take__s"></span><span class="target" id="classLIEF_1_1MachO_1_1FatBinary_1a0f0a70eee8b4f3c4992f30191b70ece6"></span>std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4N4LIEF5MachO6BinaryE" title="LIEF::MachO::Binary">Binary</a>&gt; <code class="sig-name descname">take</code><span class="sig-paren">(</span>size_t <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF5MachO9FatBinary4takeE6size_t" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Extract a <a class="reference internal" href="#classLIEF_1_1MachO_1_1Binary"><span class="std std-ref">MachO::Binary</span></a> object. Gives ownership to the caller, and remove it from this <a class="reference internal" href="#classLIEF_1_1MachO_1_1FatBinary"><span class="std std-ref">FatBinary</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Warning</strong></dt><dd><p>: this invalidates any previously hold iterator! </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF5MachO9FatBinary5writeERKNSt6stringE">
 <span id="_CPPv3N4LIEF5MachO9FatBinary5writeERKNSt6stringE"></span><span id="_CPPv2N4LIEF5MachO9FatBinary5writeERKNSt6stringE"></span><span id="LIEF::MachO::FatBinary::write__ssCR"></span><span class="target" id="classLIEF_1_1MachO_1_1FatBinary_1ac0b9509b7451d2ee07a7d61aca57f479"></span>void <code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF5MachO9FatBinary5writeERKNSt6stringE" title="Permalink to this definition">¶</a><br/></dt>
