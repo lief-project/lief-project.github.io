@@ -162,10 +162,112 @@ Signature
 
 ----------
 
-AuthenticatedAttributes
+Signature Attribute
+*******************
+
+.. autoclass:: lief.PE.Attribute
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+
+Signature ContentType
+*********************
+
+.. autoclass:: lief.PE.ContentType
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature GenericType
+*********************
+
+.. autoclass:: lief.PE.GenericType
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature MsSpcNestedSignature
+******************************
+
+.. autoclass:: lief.PE.MsSpcNestedSignature
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature MsSpcStatementType
+****************************
+
+.. autoclass:: lief.PE.MsSpcStatementType
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature PKCS9AtSequenceNumber
+*******************************
+
+.. autoclass:: lief.PE.PKCS9AtSequenceNumber
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature PKCS9CounterSignature
+*******************************
+
+.. autoclass:: lief.PE.PKCS9CounterSignature
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature PKCS9MessageDigest
+****************************
+
+.. autoclass:: lief.PE.PKCS9MessageDigest
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature PKCS9SigningTime
+**************************
+
+.. autoclass:: lief.PE.PKCS9SigningTime
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+Signature SpcSpOpusInfo
 ***********************
 
-.. autoclass:: lief.PE.AuthenticatedAttributes
+.. autoclass:: lief.PE.SpcSpOpusInfo
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
+
+RsaInfo
+*******
+
+.. autoclass:: lief.PE.RsaInfo
   :members:
   :inherited-members:
   :undoc-members:
@@ -351,6 +453,16 @@ Lang code item
 
 ----------
 
+Resource String Table
+*********************
+
+.. autoclass:: lief.PE.ResourceStringTable
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
 Rich Header
 ***********
 
@@ -519,6 +631,11 @@ Utilities
 .. autofunction:: lief.PE.get_type
 
 .. autofunction:: lief.PE.get_imphash
+
+.. autoclass:: lief.PE.IMPHASH_MODE
+  :members:
+  :inherited-members:
+  :undoc-members:
 
 .. autofunction:: lief.PE.resolve_ordinals
 
@@ -805,16 +922,6 @@ GUARD_CF_FLAGS
 
 ----------
 
-GUARD_RF_FLAGS
-~~~~~~~~~~~~~~
-
-.. autoclass:: lief.PE.GUARD_RF_FLAGS
-  :members:
-  :inherited-members:
-  :undoc-members:
-
-----------
-
 CODE_VIEW_SIGNATURES
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -828,6 +935,24 @@ POGO_SIGNATURES
 ~~~~~~~~~~~~~~~
 
 .. autoclass:: lief.PE.POGO_SIGNATURES
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+
+ALGORITHMS
+~~~~~~~~~~
+
+.. autoclass:: lief.PE.ALGORITHMS
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+
+SIG_ATTRIBUTE_TYPES
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: lief.PE.SIG_ATTRIBUTE_TYPES
   :members:
   :inherited-members:
   :undoc-members:

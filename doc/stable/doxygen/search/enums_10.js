@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['weakexternalcharacteristics',['WeakExternalCharacteristics',['../namespaceLIEF_1_1PE.html#a233c0ec6f2371d864bc57befd836bdb1',1,'LIEF::PE']]],
-  ['window_5fstyles',['WINDOW_STYLES',['../namespaceLIEF_1_1PE.html#a5ea67bae613e4caa48f1b4330613996a',1,'LIEF::PE']]]
+  ['x86_5f64_5frelocation_3283',['X86_64_RELOCATION',['../namespaceLIEF_1_1MachO.html#ad2d244b82187d41a8bc93dd1078fa5e0',1,'LIEF::MachO']]],
+  ['x86_5frelocation_3284',['X86_RELOCATION',['../namespaceLIEF_1_1MachO.html#a43e31e52b8727142358ebeb11c642ee9',1,'LIEF::MachO']]]
 ];

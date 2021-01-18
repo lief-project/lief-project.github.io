@@ -1,321 +1,64 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=viewport content=width=device-width,initial-scale=1><meta http-equiv=x-ua-compatible content=ie=edge><meta name=lang:clipboard.copy content="Copy to clipboard"><meta name=lang:clipboard.copied content="Copied to clipboard"><meta name=lang:search.language content=en><meta name=lang:search.pipeline.stopwords content=True><meta name=lang:search.pipeline.trimmer content=True><meta name=lang:search.result.none content="No matching documents"><meta name=lang:search.result.one content="1 matching document"><meta name=lang:search.result.other content="# matching documents"><meta name=lang:search.tokenizer content=[\s\-]+><meta name=Description content="LIEF Documentation"><link href=https://fonts.gstatic.com/ rel=preconnect><script src=../_static/javascripts/vendor.min.js></script><link rel=apple-touch-icon href=../_static/favicon.ico><title>07 - PE Resources — LIEF Documentation</title><link rel=stylesheet href=../_static/fonts/material-icons.css><link rel=stylesheet href=../_static/fonts/font-awesome.css><link rel=stylesheet href=../_static/stylesheets/vendor.min.css><link rel=stylesheet href=../_static/pygments.css><link rel=stylesheet href=../_static/basic.css><link rel=stylesheet href=../_static/css/custom.css><script id=documentation_options data-url_root=../ src=../_static/documentation_options.js></script><script src=../_static/jquery.js></script><script src=../_static/underscore.js></script><script src=../_static/doctools.js></script><script async src=https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML></script><link rel="shortcut icon"href=../_static/favicon.ico><link rel=index title=Index href=../genindex.html><link rel=search title=Search href=../search.html><link rel=next title="08 - Transforming an ELF executable into a library"href=08_elf_bin2lib.html><link rel=prev title="06 - PE Hooking"href=06_pe_hooking.html><link rel=stylesheet href=../_static/stylesheets/theme.css><link rel=stylesheet href=../_static/stylesheets/theme-fixes.css><body dir=ltr data-md-color-primary=blue data-md-color-accent=cyan><nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top"role=navigation><a href=../index.html class=navbar-brand>LIEF Documentation</a><button class=navbar-toggler data-toggle=collapse data-target=#navbar-collapse><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0"id=navbar-collapse><ul class="navbar-nav position-relative px-lg-6 px-xl-8"><li class=nav-item><a class=nav-link href=https://lief-project.github.io/>Home</a><li class=nav-item><a class=nav-link href=https://lief-project.github.io//blog>Blog</a><li class=nav-item><a class=nav-link href=https://lief-project.github.io//download>Download</a><li class="nav-item dropdown"><a class="nav-link dropdown-toggle"href=# role=button data-toggle=dropdown aria-expanded=false> Documentation </a> <div class=dropdown-menu role=menu><a class=dropdown-item href=https://lief-project.github.io//doc/stable/doxygen>Doxygen</a></div><li class=nav-item><a class=nav-link href=https://lief-project.github.io//about>About</a></ul></div></nav><div class="container-fluid container-docs"><div class=row><div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left"><div class="collapse d-lg-block mb-6 mb-lg-0"id=sidebar-collapse><form action=../search.html method=GET name=search><input class=form-control placeholder=Search autocapitalize=off autocomplete=off spellcheck=false data-md-component=query data-md-state=active name=q></form><ul class="list-unstyled mt-3"><li><a href=../intro.html class="text-darkblue font-size-sm d-block mb-2">Introduction</a></ul><ul class="list-unstyled mt-3"><li><a href=../installation.html class="text-darkblue font-size-sm d-block mb-2">Installation and Integration</a></ul><ul class="list-unstyled mt-3"><li><a href=../getting_started.html class="text-darkblue font-size-sm d-block mb-2">Getting started</a></ul><ul class="list-unstyled mt-3"><li><a href=../compilation.html class="text-darkblue font-size-sm d-block mb-2">Compilation</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text>Tutorials</span></div><ul class="list-unstyled mt-3"><li><a href=01_play_with_formats.html class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></ul><ul class="list-unstyled mt-3"><li><a href=02_pe_from_scratch.html class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch</a></ul><ul class="list-unstyled mt-3"><li><a href=03_elf_change_symbols.html class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></ul><ul class="list-unstyled mt-3"><li><a href=04_elf_hooking.html class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></ul><ul class="list-unstyled mt-3"><li><a href=05_elf_infect_plt_got.html class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></ul><ul class="list-unstyled mt-3"><li><a href=06_pe_hooking.html class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking</a></ul><ul class="list-unstyled mt-3"><li><a href=# class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></ul><ul class="list-unstyled mt-3"><li><a href=08_elf_bin2lib.html class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></ul><ul class="list-unstyled mt-3"><li><a href=09_frida_lief.html class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></ul><ul class="list-unstyled mt-3"><li><a href=10_android_formats.html class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></ul><ul class="list-unstyled mt-3"><li><a href=11_macho_modification.html class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></ul><ul class="list-unstyled mt-3"><li><a href=12_elf_coredump.html class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></ul><ul class="list-unstyled mt-3"><li><a href=13_pe_authenticode.html class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text>API</span></div><ul class="list-unstyled mt-3"><li><a href=../api/python/index.html class="text-darkblue font-size-sm d-block mb-2">Python</a></ul><ul class="list-unstyled mt-3"><li><a href=../api/cpp/index.html class="text-darkblue font-size-sm d-block mb-2">C++</a></ul><ul class="list-unstyled mt-3"><li><a href=../api/c/index.html class="text-darkblue font-size-sm d-block mb-2">C</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text>Extra Information</span></div><ul class="list-unstyled mt-3"><li><a href=../formats/index.html class="text-darkblue font-size-sm d-block mb-2">Formats</a></ul><ul class="list-unstyled mt-3"><li><a href=../references.html class="text-darkblue font-size-sm d-block mb-2">References</a></ul><ul class="list-unstyled mt-3"><li><a href=../changelog.html class="text-darkblue font-size-sm d-block mb-2">Changelog</a></ul></div><hr><span class="svg-icon text-purple mr-1 relative-top--1"> <svg xmlns=http://www.w3.org/2000/svg width=512 height=512 viewbox="0 0 512 512"><title>ionicons-v5-d</title><circle cx=160 cy=96 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><circle cx=160 cy=416 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><line x1=160 y1=368 x2=160 y2=144 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></line><circle cx=352 cy=160 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><path d=M352,208c0,128-192,48-192,160 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></path></svg> </span><a href=https://github.com/lief-project/LIEF/commits/f58605f class=text-darkblue>0.11.0</a><br> Last updated on 18/01/2021, 18:59:35.</div><div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8"><h1 id=tutorials-07-pe-resource--page-root>07 - PE Resources<a class=headerlink href=#tutorials-07-pe-resource--page-root title="Permalink to this headline">¶</a></h1><p>This tutorial gives an overview of the resource structure in a PE file and how they can be manipulated using LIEF<p>Scripts and materials are available here: <a class="reference external"href=https://github.com/lief-project/tutorials/tree/master/07_PE_resource>materials</a><p>By Romain Thomas - <a class="reference external"href=https://twitter.com/rh0main>@rh0main</a><hr class=docutils><p>Unlike <strong>ELF</strong> and <strong>Mach-O</strong> formats, <strong>PE</strong> enables to embed <em>resources</em> (icons, images, raw, dialog …) within an executable or a DLL.<p>These resources are usually located in the <code class="docutils literal notranslate"><span class=pre>.rsrc</span></code> section but this is not an absolute rule.<p>To retrieve the section in which resources are located, one can use the <a class="reference internal"href=../api/python/pe.html#lief.PE.DataDirectory.section title=lief.PE.DataDirectory.section><code class="xref py py-attr docutils literal notranslate"><span class=pre>section</span></code></a> attribute of the associated <a class="reference internal"href=../api/python/pe.html#lief.PE.DataDirectory title=lief.PE.DataDirectory><code class="xref py py-class docutils literal notranslate"><span class=pre>DataDirectory</span></code></a><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>binary</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"C:</span><span class=se>\\</span><span class=s2>Windows</span><span class=se>\\</span><span class=s2>explorer.exe"</span><span class=p>)</span>
+<span class=k>if</span> <span class=n>binary</span><span class=o>.</span><span class=n>has_resources</span><span class=p>:</span>
+  <span class=n>rsrc_directory</span> <span class=o>=</span> <span class=n>binary</span><span class=o>.</span><span class=n>data_directory</span><span class=p>(</span><span class=n>lief</span><span class=o>.</span><span class=n>PE</span><span class=o>.</span><span class=n>DATA_DIRECTORY</span><span class=o>.</span><span class=n>RESOURCE_TABLE</span><span class=p>)</span>
+  <span class=k>if</span> <span class=n>rsrc_directory</span><span class=o>.</span><span class=n>has_section</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>rsrc_directory</span><span class=o>.</span><span class=n>section</span><span class=p>)</span>
+</pre></div></div><div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=go>.rsrc 22e0d8 23f000 22e200 236c00 0 4.3596 CNT_INITIALIZED_DATA - MEM_READ</span>
+</pre></div></div><h2 id=resource-structure>Resource structure<a class=headerlink href=#resource-structure title="Permalink to this headline">¶</a></h2><p>The underlying structure used to represent resources is a tree:<div class="figure align-center"><a class="reference internal image-reference"href=../_images/07_resource_tree.png><img alt=../_images/07_resource_tree.png src=../_images/07_resource_tree.png style="width: 972.0px; height: 499.5px;"></a></div><p>In the resource tree we basically have two kinds of node:<ol class="arabic simple"><li><p><a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory title=lief.PE.ResourceDirectory><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourceDirectory</span></code></a>: Contains some information about the subtree.<li><p><a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceData title=lief.PE.ResourceData><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourceData</span></code></a>: Used to store raw data. These nodes are the <strong>leaf</strong> of the tree</ol><p>The first 3 levels of the tree have a special meaning:<ul class=simple><li><p>Level 1: The <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory.id title=lief.PE.ResourceDirectory.id><code class="xref py py-attr docutils literal notranslate"><span class=pre>id</span></code></a> represents the <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES title=lief.PE.RESOURCE_TYPES><code class="xref py py-class docutils literal notranslate"><span class=pre>RESOURCE_TYPES</span></code></a><li><p>Level 2: The <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory.id title=lief.PE.ResourceDirectory.id><code class="xref py py-attr docutils literal notranslate"><span class=pre>id</span></code></a> represents an ID to access to the resource<li><p>Level 3: The <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory.id title=lief.PE.ResourceDirectory.id><code class="xref py py-attr docutils literal notranslate"><span class=pre>id</span></code></a> represents the <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_LANGS title=lief.PE.RESOURCE_LANGS><code class="xref py py-class docutils literal notranslate"><span class=pre>RESOURCE_LANGS</span></code></a> / <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_SUBLANGS title=lief.PE.RESOURCE_SUBLANGS><code class="xref py py-class docutils literal notranslate"><span class=pre>RESOURCE_SUBLANGS</span></code></a> of the resource.</ul><p>We can check that a given binary embed resources with the <a class="reference internal"href=../api/python/pe.html#lief.PE.Binary.has_resources title=lief.PE.Binary.has_resources><code class="xref py py-attr docutils literal notranslate"><span class=pre>has_resources</span></code></a> property, then we can access to this structure through the <a class="reference internal"href=../api/python/pe.html#lief.PE.Binary.resources title=lief.PE.Binary.resources><code class="xref py py-attr docutils literal notranslate"><span class=pre>resources</span></code></a> property which returns a <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory title=lief.PE.ResourceDirectory><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourceDirectory</span></code></a> representing the <strong>root</strong> of the tree.<p>Given a <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory title=lief.PE.ResourceDirectory><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourceDirectory</span></code></a>, the <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourceDirectory.childs title=lief.PE.ResourceDirectory.childs><code class="xref py py-attr docutils literal notranslate"><span class=pre>childs</span></code></a> property returns an <strong>iterator</strong> (quiet similar to a <code class="docutils literal notranslate"><span class=pre>list</span></code>) over the sub tree associated with the node.<p>The following snippet retrieves the <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST title=lief.PE.RESOURCE_TYPES.MANIFEST><code class="xref py py-attr docutils literal notranslate"><span class=pre>MANIFEST</span></code></a> element and print it.<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>filezilla</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"filezilla.exe"</span><span class=p>)</span>
 
+<span class=k>if</span> <span class=ow>not</span> <span class=n>filezilla</span><span class=o>.</span><span class=n>has_resources</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>"'</span><span class=si>{}</span><span class=s2>' has no resources. Abort!"</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>filezilla</span><span class=o>.</span><span class=n>name</span><span class=p>),</span> <span class=n>file</span><span class=o>=</span><span class=n>sys</span><span class=o>.</span><span class=n>stderr</span><span class=p>)</span>
+    <span class=n>sys</span><span class=o>.</span><span class=n>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>07 - PE Resources &mdash; LIEF 0.10.0-845f675 documentation</title>
-  
+<span class=n>root</span> <span class=o>=</span> <span class=n>filezilla</span><span class=o>.</span><span class=n>resources</span>
 
-  
-  
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-  
-  
+<span class=c1># First level => Type ((ResourceDirectory node)</span>
+<span class=n>manifest_node</span> <span class=o>=</span> <span class=nb>next</span><span class=p>(</span><span class=nb>iter</span><span class=p>(</span><span class=nb>filter</span><span class=p>(</span><span class=k>lambda</span> <span class=n>e</span> <span class=p>:</span> <span class=n>e</span><span class=o>.</span><span class=n>id</span> <span class=o>==</span> <span class=n>lief</span><span class=o>.</span><span class=n>PE</span><span class=o>.</span><span class=n>RESOURCE_TYPES</span><span class=o>.</span><span class=n>MANIFEST</span><span class=p>,</span> <span class=n>root</span><span class=o>.</span><span class=n>childs</span><span class=p>)))</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>manifest_node</span><span class=p>)</span>
 
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
+<span class=c1># Second level => ID (ResourceDirectory node)</span>
+<span class=n>id_node</span> <span class=o>=</span> <span class=n>manifest_node</span><span class=o>.</span><span class=n>childs</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>id_node</span><span class=p>)</span>
 
-    
+<span class=c1># Third level => Lang (ResourceData node)</span>
+<span class=n>lang_node</span> <span class=o>=</span> <span class=n>id_node</span><span class=o>.</span><span class=n>childs</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>lang_node</span><span class=p>)</span>
 
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="08 - Transforming an ELF executable into a library" href="08_elf_bin2lib.html" />
-    <link rel="prev" title="06 - PE Hooking" href="06_pe_hooking.html" /> 
-</head>
+<span class=n>manifest</span> <span class=o>=</span> <span class=nb>bytes</span><span class=p>(</span><span class=n>lang_node</span><span class=o>.</span><span class=n>content</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s2>"utf8"</span><span class=p>)</span>
 
-<body class="wy-body-for-nav">
+<span class=nb>print</span><span class=p>(</span><span class=n>manifest</span><span class=p>)</span>
+</pre></div></div><div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=go>[DIRECTORY] - ID: 0x18 - Depth: 1 - Childs : 1</span>
+<span class=go> Characteristics : 0</span>
+<span class=go> Time/Date stamp : 0</span>
+<span class=go> Major version : 0</span>
+<span class=go> Minor version : 0</span>
+<span class=go> Number of name entries : 0</span>
+<span class=go> Number of id entries : 1</span>
 
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
+<span class=go>[DIRECTORY] - ID: 0x01 - Depth: 2 - Childs : 1</span>
+<span class=go> Characteristics : 0</span>
+<span class=go> Time/Date stamp : 0</span>
+<span class=go> Major version : 0</span>
+<span class=go> Minor version : 0</span>
+<span class=go> Number of name entries : 0</span>
+<span class=go> Number of id entries : 1</span>
 
-          
-            <a href="../index.html" class="icon icon-home"> LIEF
-          
+<span class=go>[DATA] - ID: 0x409 - Depth: 3 - Childs : 0</span>
+<span class=go> Code page : 0</span>
+<span class=go> Reserved : 0</span>
+<span class=go> Size : 1666</span>
+<span class=go> Hash : ffffffffb00b5419</span>
 
-          
-            
-            <img src="../_static/logo_blue.png" class="logo" alt="Logo"/>
-          
-          </a>
+<span class=go>&LT?xml version="1.0" encoding="UTF-8" standalone="yes"?></span>
+<span class=go>&LTassembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3"></span>
+<span class=go> &LTassemblyIdentity</span>
+<span class=go> name="FileZilla"</span>
+<span class=go>...</span>
+</pre></div></div><p>As manipulating a tree is not very convenient, LIEF includes a <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> which provides an enhanced API to manipulate binary resources<h2 id=resource-manager>Resource Manager<a class=headerlink href=#resource-manager title="Permalink to this headline">¶</a></h2><p>As mentioned previously, the <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> is a kind of wrapper over the resource tree to:<ul class=simple><li><p>Parse resources that have a predefined structures like <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST title=lief.PE.RESOURCE_TYPES.MANIFEST><code class="xref py py-attr docutils literal notranslate"><span class=pre>MANIFEST</span></code></a>, <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES.ICON title=lief.PE.RESOURCE_TYPES.ICON><code class="xref py py-attr docutils literal notranslate"><span class=pre>ICON</span></code></a>, <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES.VERSION title=lief.PE.RESOURCE_TYPES.VERSION><code class="xref py py-attr docutils literal notranslate"><span class=pre>VERSION</span></code></a> …<li><p>Access and modify these structures</ul><p>This can be summarize with the following diagram:<div class="figure align-center"><a class="reference internal image-reference"href=../_images/07_pe_resource_manager.png><img alt=../_images/07_pe_resource_manager.png src=../_images/07_pe_resource_manager.png style="width: 1188.0px; height: 521.4000000000001px;"></a></div><p>The <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> can be accessed with the <a class="reference internal"href=../api/python/pe.html#lief.PE.Binary.resources_manager title=lief.PE.Binary.resources_manager><code class="xref py py-attr docutils literal notranslate"><span class=pre>resources_manager</span></code></a> property. To have an overview of the binary’s resources, we can simply <em>print</em> the <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> instance:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>filezilla</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"filezilla.exe"</span><span class=p>)</span>
 
-          
-            
-            
-              <div class="version">
-                0.10.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="01_play_with_formats.html">01 - Parse and manipulate formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_pe_from_scratch.html">02 - Create a PE from scratch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_elf_change_symbols.html">03 - Play with ELF symbols</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_elf_hooking.html">04 - ELF Hooking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_elf_infect_plt_got.html">05 - Infecting the plt/got</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_pe_hooking.html">06 - PE Hooking</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">07 - PE Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#resource-structure">Resource structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resource-manager">Resource Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#play-with-manifest">Play with Manifest</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#play-with-icons">Play with Icons</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="08_elf_bin2lib.html">08 - Transforming an ELF executable into a library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_frida_lief.html">09 - How to use frida on a non-rooted device</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_android_formats.html">10 - Android formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11_macho_modification.html">11 - Mach-O Modification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="12_elf_coredump.html">12 - ELF Coredump</a></li>
-</ul>
-<p class="caption"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/python/index.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/cpp/index.html">C++</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/c/index.html">C</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Extra Information</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">LIEF</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>07 - PE Resources</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/tutorials/07_pe_resource.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="pe-resources">
-<h1>07 - PE Resources<a class="headerlink" href="#pe-resources" title="Permalink to this headline">¶</a></h1>
-<p>This tutorial gives an overview of the resource structure in a PE file and how they can be manipulated using LIEF</p>
-<p>Scripts and materials are available here: <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/07_PE_resource">materials</a></p>
-<p>By Romain Thomas - <a class="reference external" href="https://twitter.com/rh0main">&#64;rh0main</a></p>
-<hr class="docutils" />
-<p>Unlike <strong>ELF</strong> and <strong>Mach-O</strong> formats, <strong>PE</strong> enables to embed <em>resources</em> (icons, images, raw, dialog …) within an
-executable or a DLL.</p>
-<p>These resources are usually located in the <code class="docutils literal notranslate"><span class="pre">.rsrc</span></code> section but this is not an absolute rule.</p>
-<p>To retrieve the section in which resources are located, one can use the <a class="reference internal" href="../api/python/pe.html#lief.PE.DataDirectory.section" title="lief.PE.DataDirectory.section"><code class="xref py py-attr docutils literal notranslate"><span class="pre">section</span></code></a> attribute of the associated <a class="reference internal" href="../api/python/pe.html#lief.PE.DataDirectory" title="lief.PE.DataDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataDirectory</span></code></a></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">binary</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Windows</span><span class="se">\\</span><span class="s2">explorer.exe&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">binary</span><span class="o">.</span><span class="n">has_resources</span><span class="p">:</span>
-  <span class="n">rsrc_directory</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">data_directory</span><span class="p">(</span><span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">DATA_DIRECTORY</span><span class="o">.</span><span class="n">RESOURCE_TABLE</span><span class="p">)</span>
-  <span class="k">if</span> <span class="n">rsrc_directory</span><span class="o">.</span><span class="n">has_section</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">rsrc_directory</span><span class="o">.</span><span class="n">section</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.rsrc     22e0d8    23f000    22e200    236c00    0         4.3596    CNT_INITIALIZED_DATA - MEM_READ</span>
-</pre></div>
-</div>
-<div class="section" id="resource-structure">
-<h2>Resource structure<a class="headerlink" href="#resource-structure" title="Permalink to this headline">¶</a></h2>
-<p>The underlying structure used to represent resources is a tree:</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/07_resource_tree.png"><img alt="../_images/07_resource_tree.png" src="../_images/07_resource_tree.png" style="width: 972.0px; height: 499.5px;" /></a>
-</div>
-<p>In the resource tree we basically have two kinds of node:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p><a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory" title="lief.PE.ResourceDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceDirectory</span></code></a>: Contains some information about the subtree.</p></li>
-<li><p><a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceData" title="lief.PE.ResourceData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceData</span></code></a>: Used to store raw data. These nodes are the <strong>leaf</strong> of the tree</p></li>
-</ol>
-</div></blockquote>
-<p>The first 3 levels of the tree have a special meaning:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Level 1: The <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory.id" title="lief.PE.ResourceDirectory.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> represents the <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES" title="lief.PE.RESOURCE_TYPES"><code class="xref py py-class docutils literal notranslate"><span class="pre">RESOURCE_TYPES</span></code></a></p></li>
-<li><p>Level 2: The <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory.id" title="lief.PE.ResourceDirectory.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> represents an ID to access to the resource</p></li>
-<li><p>Level 3: The <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory.id" title="lief.PE.ResourceDirectory.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> represents the <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_LANGS" title="lief.PE.RESOURCE_LANGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">RESOURCE_LANGS</span></code></a> / <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_SUBLANGS" title="lief.PE.RESOURCE_SUBLANGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">RESOURCE_SUBLANGS</span></code></a> of the resource.</p></li>
-</ul>
-</div></blockquote>
-<p>We can check that a given binary embed resources with the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary.has_resources" title="lief.PE.Binary.has_resources"><code class="xref py py-attr docutils literal notranslate"><span class="pre">has_resources</span></code></a> property, then we can access to this structure
-through the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary.resources" title="lief.PE.Binary.resources"><code class="xref py py-attr docutils literal notranslate"><span class="pre">resources</span></code></a> property which returns a <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory" title="lief.PE.ResourceDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceDirectory</span></code></a> representing the <strong>root</strong> of the tree.</p>
-<p>Given a <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory" title="lief.PE.ResourceDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceDirectory</span></code></a>, the <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourceDirectory.childs" title="lief.PE.ResourceDirectory.childs"><code class="xref py py-attr docutils literal notranslate"><span class="pre">childs</span></code></a> property returns an <strong>iterator</strong> (quiet similar to a <code class="docutils literal notranslate"><span class="pre">list</span></code>) over the sub tree associated with the node.</p>
-<p>The following snippet retrieves the <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST" title="lief.PE.RESOURCE_TYPES.MANIFEST"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MANIFEST</span></code></a> element and print it.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filezilla</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;filezilla.exe&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="ow">not</span> <span class="n">filezilla</span><span class="o">.</span><span class="n">has_resources</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&#39;{}&#39; has no resources. Abort!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filezilla</span><span class="o">.</span><span class="n">name</span><span class="p">),</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">root</span> <span class="o">=</span> <span class="n">filezilla</span><span class="o">.</span><span class="n">resources</span>
-
-<span class="c1"># First level =&gt; Type ((ResourceDirectory node)</span>
-<span class="n">manifest_node</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span> <span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">RESOURCE_TYPES</span><span class="o">.</span><span class="n">MANIFEST</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">childs</span><span class="p">)))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">manifest_node</span><span class="p">)</span>
-
-<span class="c1"># Second level =&gt; ID (ResourceDirectory node)</span>
-<span class="n">id_node</span> <span class="o">=</span> <span class="n">manifest_node</span><span class="o">.</span><span class="n">childs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">id_node</span><span class="p">)</span>
-
-<span class="c1"># Third level =&gt; Lang (ResourceData node)</span>
-<span class="n">lang_node</span> <span class="o">=</span> <span class="n">id_node</span><span class="o">.</span><span class="n">childs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">lang_node</span><span class="p">)</span>
-
-<span class="n">manifest</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">lang_node</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">manifest</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[DIRECTORY] - ID: 0x18 - Depth: 1 - Childs : 1</span>
-<span class="go">    Characteristics :         0</span>
-<span class="go">    Time/Date stamp :         0</span>
-<span class="go">    Major version :           0</span>
-<span class="go">    Minor version :           0</span>
-<span class="go">    Number of name entries :  0</span>
-<span class="go">    Number of id entries :    1</span>
-
-<span class="go">[DIRECTORY] - ID: 0x01 - Depth: 2 - Childs : 1</span>
-<span class="go">    Characteristics :         0</span>
-<span class="go">    Time/Date stamp :         0</span>
-<span class="go">    Major version :           0</span>
-<span class="go">    Minor version :           0</span>
-<span class="go">    Number of name entries :  0</span>
-<span class="go">    Number of id entries :    1</span>
-
-<span class="go">[DATA] - ID: 0x409 - Depth: 3 - Childs : 0</span>
-<span class="go">    Code page :  0</span>
-<span class="go">    Reserved :   0</span>
-<span class="go">    Size :       1666</span>
-<span class="go">    Hash :       ffffffffb00b5419</span>
-
-<span class="go">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
-<span class="go">&lt;assembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot; manifestVersion=&quot;1.0&quot; xmlns:asmv3=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;</span>
-<span class="go">  &lt;assemblyIdentity</span>
-<span class="go">    name=&quot;FileZilla&quot;</span>
-<span class="go">...</span>
-</pre></div>
-</div>
-<p>As manipulating a tree is not very convenient, LIEF includes a <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> which provides an enhanced API to manipulate binary resources</p>
-</div>
-<div class="section" id="resource-manager">
-<h2>Resource Manager<a class="headerlink" href="#resource-manager" title="Permalink to this headline">¶</a></h2>
-<p>As mentioned previously, the <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> is a kind of wrapper over the resource tree to:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Parse resources that have a predefined structures like
-<a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST" title="lief.PE.RESOURCE_TYPES.MANIFEST"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MANIFEST</span></code></a>, <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES.ICON" title="lief.PE.RESOURCE_TYPES.ICON"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ICON</span></code></a>, <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES.VERSION" title="lief.PE.RESOURCE_TYPES.VERSION"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VERSION</span></code></a> …</p></li>
-<li><p>Access and modify these structures</p></li>
-</ul>
-</div></blockquote>
-<p>This can be summarize with the following diagram:</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/07_pe_resource_manager.png"><img alt="../_images/07_pe_resource_manager.png" src="../_images/07_pe_resource_manager.png" style="width: 1188.0px; height: 521.4000000000001px;" /></a>
-</div>
-<p>The <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> can be accessed with the <a class="reference internal" href="../api/python/pe.html#lief.PE.Binary.resources_manager" title="lief.PE.Binary.resources_manager"><code class="xref py py-attr docutils literal notranslate"><span class="pre">resources_manager</span></code></a> property. To have an overview of the binary’s resources, we can simply <em>print</em> the <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> instance:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filezilla</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;filezilla.exe&quot;</span><span class="p">)</span>
-
-<span class="n">resource_manager</span> <span class="o">=</span> <span class="n">filezilla</span><span class="o">.</span><span class="n">resources_manager</span>
-<span class="k">print</span><span class="p">(</span><span class="n">resource_manager</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  [Directory] ID: 01 - CURSOR
+<span class=n>resource_manager</span> <span class=o>=</span> <span class=n>filezilla</span><span class=o>.</span><span class=n>resources_manager</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>resource_manager</span><span class=p>)</span>
+</pre></div></div><div class="highlight-default notranslate"><div class=highlight><pre><span></span>  [Directory] ID: 01 - CURSOR
     [Directory] ID: 01
       [Data] ID: 1033 - ENGLISH/DEFAULT
     [Directory] ID: 02
@@ -449,54 +192,54 @@ Sub-langs: DEFAULT
 Manifest
 ========
 
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
-&lt;assembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot; manifestVersion=&quot;1.0&quot; xmlns:asmv3=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;
-  &lt;assemblyIdentity
-    name=&quot;FileZilla&quot;
-    processorArchitecture=&quot;*&quot;
-    version=&quot;3.10.0.0&quot;
-    type=&quot;win32&quot;
-  /&gt;
-  &lt;description&gt;FileZilla FTP client&lt;/description&gt;
-  &lt;dependency&gt;
-    &lt;dependentAssembly&gt;
-      &lt;assemblyIdentity
-        type=&quot;win32&quot;
-        name=&quot;Microsoft.Windows.Common-Controls&quot;
-        version=&quot;6.0.0.0&quot;
-        processorArchitecture=&quot;*&quot;
-        publicKeyToken=&quot;6595b64144ccf1df&quot;
-        language=&quot;*&quot;
-      /&gt;
-    &lt;/dependentAssembly&gt;
-  &lt;/dependency&gt;
-  &lt;trustInfo xmlns=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;
-    &lt;security&gt;
-      &lt;requestedPrivileges&gt;
-        &lt;requestedExecutionLevel level=&quot;asInvoker&quot; uiAccess=&quot;false&quot;/&gt;
-      &lt;/requestedPrivileges&gt;
-    &lt;/security&gt;
-   &lt;/trustInfo&gt;
-  &lt;compatibility xmlns=&quot;urn:schemas-microsoft-com:compatibility.v1&quot;&gt;
-    &lt;application&gt;
-      &lt;!--Vista--&gt;
-      &lt;supportedOS Id=&quot;{e2011457-1546-43c5-a5fe-008deee3d3f0}&quot;/&gt;
-      &lt;!--7--&gt;
-      &lt;supportedOS Id=&quot;{35138b9a-5d96-4fbd-8e2d-a2440225f93a}&quot;/&gt;
-      &lt;!--8--&gt;
-      &lt;supportedOS Id=&quot;{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}&quot;/&gt;
-      &lt;!--8.1--&gt;
-      &lt;supportedOS Id=&quot;{1f676c76-80e1-4239-95bb-83d0f6d0da78}&quot;/&gt;
-      &lt;!--10 --&gt;
-      &lt;supportedOS Id=&quot;{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}&quot;/&gt;
-    &lt;/application&gt;
-  &lt;/compatibility&gt;
-  &lt;asmv3:application xmlns:asmv3=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;
-    &lt;asmv3:windowsSettings xmlns=&quot;http://schemas.microsoft.com/SMI/2005/WindowsSettings&quot;&gt;
-      &lt;dpiAware&gt;true&lt;/dpiAware&gt;
-    &lt;/asmv3:windowsSettings&gt;
-  &lt;/asmv3:application&gt;
-&lt;/assembly&gt;
+&LT?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+&LTassembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+  &LTassemblyIdentity
+    name="FileZilla"
+    processorArchitecture="*"
+    version="3.10.0.0"
+    type="win32"
+  />
+  &LTdescription>FileZilla FTP client&LT/description>
+  &LTdependency>
+    &LTdependentAssembly>
+      &LTassemblyIdentity
+        type="win32"
+        name="Microsoft.Windows.Common-Controls"
+        version="6.0.0.0"
+        processorArchitecture="*"
+        publicKeyToken="6595b64144ccf1df"
+        language="*"
+      />
+    &LT/dependentAssembly>
+  &LT/dependency>
+  &LTtrustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    &LTsecurity>
+      &LTrequestedPrivileges>
+        &LTrequestedExecutionLevel level="asInvoker" uiAccess="false"/>
+      &LT/requestedPrivileges>
+    &LT/security>
+   &LT/trustInfo>
+  &LTcompatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    &LTapplication>
+      &LT!--Vista-->
+      &LTsupportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/>
+      &LT!--7-->
+      &LTsupportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>
+      &LT!--8-->
+      &LTsupportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
+      &LT!--8.1-->
+      &LTsupportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
+      &LT!--10 -->
+      &LTsupportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+    &LT/application>
+  &LT/compatibility>
+  &LTasmv3:application xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+    &LTasmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
+      &LTdpiAware>true&LT/dpiAware>
+    &LT/asmv3:windowsSettings>
+  &LT/asmv3:application>
+&LT/assembly>
 
 
 Version
@@ -522,15 +265,15 @@ key:   StringFileInfo
 type:   1
 key:    000004b0: (NEUTRAL - NEUTRAL - UTF_16)
 Items:
-    &#39;Comments&#39;: &#39;Version 3.25.2&#39;
-    &#39;CompanyName&#39;: &#39;FileZilla Project&#39;
-    &#39;FileDescription&#39;: &#39;FileZilla FTP Client&#39;
-    &#39;FileVersion&#39;: &#39;3, 25, 2, 0&#39;
-    &#39;InternalName&#39;: &#39;FileZilla 3&#39;
-    &#39;LegalCopyright&#39;: &#39;Copyright (C) 2006-2016&#39;
-    &#39;OriginalFilename&#39;: &#39;filezilla.exe&#39;
-    &#39;ProductName&#39;: &#39;FileZilla&#39;
-    &#39;ProductVersion&#39;: &#39;3, 25, 2, 0&#39;
+    'Comments': 'Version 3.25.2'
+    'CompanyName': 'FileZilla Project'
+    'FileDescription': 'FileZilla FTP Client'
+    'FileVersion': '3, 25, 2, 0'
+    'InternalName': 'FileZilla 3'
+    'LegalCopyright': 'Copyright (C) 2006-2016'
+    'OriginalFilename': 'filezilla.exe'
+    'ProductName': 'FileZilla'
+    'ProductVersion': '3, 25, 2, 0'
 
 
 Var file info
@@ -581,209 +324,89 @@ Bit count:                       20
 Hash:                            13a82f1
 
 
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
-&lt;assembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot; manifestVersion=&quot;1.0&quot; xmlns:asmv3=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;
-  &lt;assemblyIdentity
-    name=&quot;FileZilla&quot;
-    processorArchitecture=&quot;*&quot;
-    version=&quot;3.10.0.0&quot;
-    type=&quot;win32&quot;
-  /&gt;
-  &lt;description&gt;FileZilla FTP client&lt;/description&gt;
-  &lt;dependency&gt;
-    &lt;dependentAssembly&gt;
-      &lt;assemblyIdentity
-        type=&quot;win32&quot;
-        name=&quot;Microsoft.Windows.Common-Controls&quot;
-        version=&quot;6.0.0.0&quot;
-        processorArchitecture=&quot;*&quot;
-        publicKeyToken=&quot;6595b64144ccf1df&quot;
-        language=&quot;*&quot;
-      /&gt;
-    &lt;/dependentAssembly&gt;
-  &lt;/dependency&gt;
-  &lt;trustInfo xmlns=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;
-    &lt;security&gt;
-      &lt;requestedPrivileges&gt;
-        &lt;requestedExecutionLevel level=&quot;asInvoker&quot; uiAccess=&quot;false&quot;/&gt;
-      &lt;/requestedPrivileges&gt;
-    &lt;/security&gt;
-   &lt;/trustInfo&gt;
-  &lt;compatibility xmlns=&quot;urn:schemas-microsoft-com:compatibility.v1&quot;&gt;
-    &lt;application&gt;
-      &lt;!--Vista--&gt;
-      &lt;supportedOS Id=&quot;{e2011457-1546-43c5-a5fe-008deee3d3f0}&quot;/&gt;
-      &lt;!--7--&gt;
-      &lt;supportedOS Id=&quot;{35138b9a-5d96-4fbd-8e2d-a2440225f93a}&quot;/&gt;
-      &lt;!--8--&gt;
-      &lt;supportedOS Id=&quot;{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}&quot;/&gt;
-      &lt;!--8.1--&gt;
-      &lt;supportedOS Id=&quot;{1f676c76-80e1-4239-95bb-83d0f6d0da78}&quot;/&gt;
-      &lt;!--10 --&gt;
-      &lt;supportedOS Id=&quot;{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}&quot;/&gt;
-    &lt;/application&gt;
-  &lt;/compatibility&gt;
-  &lt;asmv3:application xmlns:asmv3=&quot;urn:schemas-microsoft-com:asm.v3&quot;&gt;
-    &lt;asmv3:windowsSettings xmlns=&quot;http://schemas.microsoft.com/SMI/2005/WindowsSettings&quot;&gt;
-      &lt;dpiAware&gt;true&lt;/dpiAware&gt;
-    &lt;/asmv3:windowsSettings&gt;
-  &lt;/asmv3:application&gt;
-&lt;/assembly&gt;
-</pre></div>
-</div>
-<p>Similarly to the previous example, accessing to the <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST" title="lief.PE.RESOURCE_TYPES.MANIFEST"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MANIFEST</span></code></a> element is as simple as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filezilla</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;filezilla.exe&quot;</span><span class="p">)</span>
+&LT?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+&LTassembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+  &LTassemblyIdentity
+    name="FileZilla"
+    processorArchitecture="*"
+    version="3.10.0.0"
+    type="win32"
+  />
+  &LTdescription>FileZilla FTP client&LT/description>
+  &LTdependency>
+    &LTdependentAssembly>
+      &LTassemblyIdentity
+        type="win32"
+        name="Microsoft.Windows.Common-Controls"
+        version="6.0.0.0"
+        processorArchitecture="*"
+        publicKeyToken="6595b64144ccf1df"
+        language="*"
+      />
+    &LT/dependentAssembly>
+  &LT/dependency>
+  &LTtrustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    &LTsecurity>
+      &LTrequestedPrivileges>
+        &LTrequestedExecutionLevel level="asInvoker" uiAccess="false"/>
+      &LT/requestedPrivileges>
+    &LT/security>
+   &LT/trustInfo>
+  &LTcompatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    &LTapplication>
+      &LT!--Vista-->
+      &LTsupportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/>
+      &LT!--7-->
+      &LTsupportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>
+      &LT!--8-->
+      &LTsupportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
+      &LT!--8.1-->
+      &LTsupportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
+      &LT!--10 -->
+      &LTsupportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+    &LT/application>
+  &LT/compatibility>
+  &LTasmv3:application xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+    &LTasmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
+      &LTdpiAware>true&LT/dpiAware>
+    &LT/asmv3:windowsSettings>
+  &LT/asmv3:application>
+&LT/assembly>
+</pre></div></div><p>Similarly to the previous example, accessing to the <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST title=lief.PE.RESOURCE_TYPES.MANIFEST><code class="xref py py-attr docutils literal notranslate"><span class=pre>MANIFEST</span></code></a> element is as simple as:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>filezilla</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"filezilla.exe"</span><span class=p>)</span>
 
-<span class="n">resources_manager</span> <span class="o">=</span> <span class="n">filezilla</span><span class="o">.</span><span class="n">resources_manager</span>
+<span class=n>resources_manager</span> <span class=o>=</span> <span class=n>filezilla</span><span class=o>.</span><span class=n>resources_manager</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">resources_manager</span><span class="o">.</span><span class="n">has_manifest</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&#39;{}&#39; has no manifest. Abort!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filezilla</span><span class="o">.</span><span class="n">name</span><span class="p">),</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class=k>if</span> <span class=ow>not</span> <span class=n>resources_manager</span><span class=o>.</span><span class=n>has_manifest</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>"'</span><span class=si>{}</span><span class=s2>' has no manifest. Abort!"</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>filezilla</span><span class=o>.</span><span class=n>name</span><span class=p>),</span> <span class=n>file</span><span class=o>=</span><span class=n>sys</span><span class=o>.</span><span class=n>stderr</span><span class=p>)</span>
+    <span class=n>sys</span><span class=o>.</span><span class=n>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
 
-<span class="n">manifest</span> <span class="o">=</span> <span class="n">resources_manager</span><span class="o">.</span><span class="n">manifest</span>
-<span class="k">print</span><span class="p">(</span><span class="n">manifest</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="play-with-manifest">
-<h2>Play with Manifest<a class="headerlink" href="#play-with-manifest" title="Permalink to this headline">¶</a></h2>
-<p>Now we will see how we can use practically the <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> to grant <em>Administrator</em> privilege to an executable thanks to the <a class="reference internal" href="../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST" title="lief.PE.RESOURCE_TYPES.MANIFEST"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MANIFEST</span></code></a> element.</p>
-<p>The application manifest is implement as an XML document whose the documentation is available here: <a class="reference external" href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa375632(v=vs.85).aspx">MSDN</a></p>
-<p>Among these tags, the <code class="docutils literal notranslate"><span class="pre">requestedExecutionLevel</span></code> tag <em>“describes the minimum security permissions required for the application to run on the client computer.”</em> <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;requestedPrivileges&gt;</span>
-  <span class="nt">&lt;requestedExecutionLevel</span> <span class="na">level=</span><span class="s">&quot;...&quot;</span> <span class="na">uiAccess=</span><span class="s">&quot;...&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/requestedPrivileges&gt;</span>
-</pre></div>
-</div>
-<p>This tag has the following options:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Level</strong>: Indicates the security level the application is requesting</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">asInvoker</span></code>: Same permission as the process that started it</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">highestAvailable</span></code>: The application will run with the highest permission level that it can</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireAdministrator</span></code>: The application will run with administrator permissions</p></li>
-</ul>
-</li>
-<li><p><strong>uiAccess</strong> (Optional): Indicates whether the application requires access to protected user interface elements</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-</ul>
-</li>
-</ul>
-</div></blockquote>
-<p>Thanks to the <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> replacing the <code class="docutils literal notranslate"><span class="pre">asInvoker</span></code> value to <code class="docutils literal notranslate"><span class="pre">requireAdministrator</span></code> is as simple as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filezilla</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;filezilla.exe&quot;</span><span class="p">)</span>
+<span class=n>manifest</span> <span class=o>=</span> <span class=n>resources_manager</span><span class=o>.</span><span class=n>manifest</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>manifest</span><span class=p>)</span>
+</pre></div></div><h2 id=play-with-manifest>Play with Manifest<a class=headerlink href=#play-with-manifest title="Permalink to this headline">¶</a></h2><p>Now we will see how we can use practically the <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> to grant <em>Administrator</em> privilege to an executable thanks to the <a class="reference internal"href=../api/python/pe.html#lief.PE.RESOURCE_TYPES.MANIFEST title=lief.PE.RESOURCE_TYPES.MANIFEST><code class="xref py py-attr docutils literal notranslate"><span class=pre>MANIFEST</span></code></a> element.<p>The application manifest is implement as an XML document whose the documentation is available here: <a class="reference external"href=https://docs.microsoft.com/en-us/windows/win32/sbscs/manifest-files-reference>MSDN</a><p>Among these tags, the <code class="docutils literal notranslate"><span class=pre>requestedExecutionLevel</span></code> tag <em>“describes the minimum security permissions required for the application to run on the client computer.”</em> <a class="footnote-reference brackets"href=#f1 id=id1>1</a><div class="highlight-xml notranslate"><div class=highlight><pre><span></span><span class=nt>&LTrequestedPrivileges></span>
+  <span class=nt>&LTrequestedExecutionLevel</span> <span class=na>level=</span><span class=s>"..."</span> <span class=na>uiAccess=</span><span class=s>"..."</span><span class=nt>/></span>
+<span class=nt>&LT/requestedPrivileges></span>
+</pre></div></div><p>This tag has the following options:<ul class=simple><li><p><strong>Level</strong>: Indicates the security level the application is requesting</p> <ul><li><p><code class="docutils literal notranslate"><span class=pre>asInvoker</span></code>: Same permission as the process that started it<li><p><code class="docutils literal notranslate"><span class=pre>highestAvailable</span></code>: The application will run with the highest permission level that it can<li><p><code class="docutils literal notranslate"><span class=pre>requireAdministrator</span></code>: The application will run with administrator permissions</ul><li><p><strong>uiAccess</strong> (Optional): Indicates whether the application requires access to protected user interface elements</p> <ul><li><p><code class="docutils literal notranslate"><span class=pre>true</span></code><li><p><code class="docutils literal notranslate"><span class=pre>false</span></code></ul></ul><p>Thanks to the <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> replacing the <code class="docutils literal notranslate"><span class=pre>asInvoker</span></code> value to <code class="docutils literal notranslate"><span class=pre>requireAdministrator</span></code> is as simple as:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>filezilla</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"filezilla.exe"</span><span class=p>)</span>
 
-<span class="n">resources_manager</span> <span class="o">=</span> <span class="n">filezilla</span><span class="o">.</span><span class="n">resources_manager</span>
+<span class=n>resources_manager</span> <span class=o>=</span> <span class=n>filezilla</span><span class=o>.</span><span class=n>resources_manager</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">resources_manager</span><span class="o">.</span><span class="n">has_manifest</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&#39;{}&#39; has no manifest. Abort!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filezilla</span><span class="o">.</span><span class="n">name</span><span class="p">),</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class=k>if</span> <span class=ow>not</span> <span class=n>resources_manager</span><span class=o>.</span><span class=n>has_manifest</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>"'</span><span class=si>{}</span><span class=s2>' has no manifest. Abort!"</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>filezilla</span><span class=o>.</span><span class=n>name</span><span class=p>),</span> <span class=n>file</span><span class=o>=</span><span class=n>sys</span><span class=o>.</span><span class=n>stderr</span><span class=p>)</span>
+    <span class=n>sys</span><span class=o>.</span><span class=n>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
 
-<span class="n">manifest</span> <span class="o">=</span> <span class="n">resources_manager</span><span class="o">.</span><span class="n">manifest</span>
-<span class="n">manifest</span> <span class="o">=</span> <span class="n">manifest</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;asInvoker&quot;</span><span class="p">,</span> <span class="s2">&quot;requireAdministrator&quot;</span><span class="p">)</span>
-<span class="n">resources_manager</span><span class="o">.</span><span class="n">manifest</span> <span class="o">=</span> <span class="n">manifest</span>
-</pre></div>
-</div>
-<p>The PE <a class="reference internal" href="../api/python/pe.html#lief.PE.Builder" title="lief.PE.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a> can be configured to rebuild or not the resource tree. To take account of modifications we need to rebuild it:</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>By default the <a class="reference internal" href="../api/python/pe.html#lief.PE.Builder" title="lief.PE.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a> doesn’t rebuild the resource tree.</p>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">builder</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">Builder</span><span class="p">(</span><span class="n">filezilla</span><span class="p">)</span>
-<span class="n">builder</span><span class="o">.</span><span class="n">build_resources</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
-<span class="n">builder</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;filezilla_rsrc.exe&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/filezilla.png"><img alt="../_images/filezilla.png" src="../_images/filezilla.png" style="width: 216.9px; height: 113.4px;" /></a>
-</div>
-</div>
-<div class="section" id="play-with-icons">
-<h2>Play with Icons<a class="headerlink" href="#play-with-icons" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager.change_icon" title="lief.PE.ResourcesManager.change_icon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">change_icon()</span></code></a> method switch icons from two applications.</p>
-<p>In the same way as the previous part, we get the <a class="reference internal" href="../api/python/pe.html#lief.PE.ResourcesManager" title="lief.PE.ResourcesManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourcesManager</span></code></a> as follow:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mfc</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;mfc.exe&quot;</span><span class="p">)</span>
-<span class="n">cmd</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;cmd.exe&quot;</span><span class="p">)</span>
+<span class=n>manifest</span> <span class=o>=</span> <span class=n>resources_manager</span><span class=o>.</span><span class=n>manifest</span>
+<span class=n>manifest</span> <span class=o>=</span> <span class=n>manifest</span><span class=o>.</span><span class=n>replace</span><span class=p>(</span><span class=s2>"asInvoker"</span><span class=p>,</span> <span class=s2>"requireAdministrator"</span><span class=p>)</span>
+<span class=n>resources_manager</span><span class=o>.</span><span class=n>manifest</span> <span class=o>=</span> <span class=n>manifest</span>
+</pre></div></div><p>The PE <a class="reference internal"href=../api/python/pe.html#lief.PE.Builder title=lief.PE.Builder><code class="xref py py-class docutils literal notranslate"><span class=pre>Builder</span></code></a> can be configured to rebuild or not the resource tree. To take account of modifications we need to rebuild it:<div class="admonition warning"><p class=admonition-title>Warning<p>By default the <a class="reference internal"href=../api/python/pe.html#lief.PE.Builder title=lief.PE.Builder><code class="xref py py-class docutils literal notranslate"><span class=pre>Builder</span></code></a> doesn’t rebuild the resource tree.</div><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>builder</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>PE</span><span class=o>.</span><span class=n>Builder</span><span class=p>(</span><span class=n>filezilla</span><span class=p>)</span>
+<span class=n>builder</span><span class=o>.</span><span class=n>build_resources</span><span class=p>(</span><span class=kc>True</span><span class=p>)</span>
+<span class=n>builder</span><span class=o>.</span><span class=n>build</span><span class=p>()</span>
+<span class=n>builder</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=s2>"filezilla_rsrc.exe"</span><span class=p>)</span>
+</pre></div></div><div class="figure align-center"><a class="reference internal image-reference"href=../_images/filezilla.png><img alt=../_images/filezilla.png src=../_images/filezilla.png style="width: 216.9px; height: 113.4px;"></a></div><h2 id=play-with-icons>Play with Icons<a class=headerlink href=#play-with-icons title="Permalink to this headline">¶</a></h2><p>The <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager.change_icon title=lief.PE.ResourcesManager.change_icon><code class="xref py py-meth docutils literal notranslate"><span class=pre>change_icon()</span></code></a> method switch icons from two applications.<p>In the same way as the previous part, we get the <a class="reference internal"href=../api/python/pe.html#lief.PE.ResourcesManager title=lief.PE.ResourcesManager><code class="xref py py-class docutils literal notranslate"><span class=pre>ResourcesManager</span></code></a> as follow:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>mfc</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"mfc.exe"</span><span class=p>)</span>
+<span class=n>cmd</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"cmd.exe"</span><span class=p>)</span>
 
-<span class="n">mfc_rsrc_manager</span> <span class="o">=</span> <span class="n">mfc</span><span class="o">.</span><span class="n">resources_manager</span>
-<span class="n">cmd_rsrc_manager</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">resources_manager</span>
-</pre></div>
-</div>
-<p>Then we can switch the first icons of the applications:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mfc_icons</span> <span class="o">=</span> <span class="n">mfc_rsrc_manager</span><span class="o">.</span><span class="n">icons</span>
-<span class="n">cmd_icons</span> <span class="o">=</span> <span class="n">cmd_rsrc_manager</span><span class="o">.</span><span class="n">icons</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mfc_icons</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">cmd_icons</span><span class="p">))):</span>
-    <span class="n">mfc_rsrc_manager</span><span class="o">.</span><span class="n">change_icon</span><span class="p">(</span><span class="n">mfc_icons</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cmd_icons</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
-</div>
-<p>The MFC icons before switching:</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/mfc.png"><img alt="../_images/mfc.png" src="../_images/mfc.png" style="width: 1168.2px; height: 688.5px;" /></a>
-</div>
-<p>After the switch:</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/mfc_modified.png"><img alt="../_images/mfc_modified.png" src="../_images/mfc_modified.png" style="width: 1167.3px; height: 860.4px;" /></a>
-</div>
-<p class="rubric">References</p>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><a class="reference external" href="https://msdn.microsoft.com/en-us/library/6ad1fshk.aspx">https://msdn.microsoft.com/en-us/library/6ad1fshk.aspx</a></p>
-</dd>
-</dl>
-</div>
-</div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="08_elf_bin2lib.html" class="btn btn-neutral float-right" title="08 - Transforming an ELF executable into a library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="06_pe_hooking.html" class="btn btn-neutral float-left" title="06 - PE Hooking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018, Quarkslab
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
-</html>
+<span class=n>mfc_rsrc_manager</span> <span class=o>=</span> <span class=n>mfc</span><span class=o>.</span><span class=n>resources_manager</span>
+<span class=n>cmd_rsrc_manager</span> <span class=o>=</span> <span class=n>cmd</span><span class=o>.</span><span class=n>resources_manager</span>
+</pre></div></div><p>Then we can switch the first icons of the applications:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>mfc_icons</span> <span class=o>=</span> <span class=n>mfc_rsrc_manager</span><span class=o>.</span><span class=n>icons</span>
+<span class=n>cmd_icons</span> <span class=o>=</span> <span class=n>cmd_rsrc_manager</span><span class=o>.</span><span class=n>icons</span>
+<span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>min</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>mfc_icons</span><span class=p>),</span> <span class=nb>len</span><span class=p>(</span><span class=n>cmd_icons</span><span class=p>))):</span>
+    <span class=n>mfc_rsrc_manager</span><span class=o>.</span><span class=n>change_icon</span><span class=p>(</span><span class=n>mfc_icons</span><span class=p>[</span><span class=n>i</span><span class=p>],</span> <span class=n>cmd_icons</span><span class=p>[</span><span class=n>i</span><span class=p>])</span>
+</pre></div></div><p>The MFC icons before switching:<div class="figure align-center"><a class="reference internal image-reference"href=../_images/mfc.png><img alt=../_images/mfc.png src=../_images/mfc.png style="width: 1168.2px; height: 688.5px;"></a></div><p>After the switch:<div class="figure align-center"><a class="reference internal image-reference"href=../_images/mfc_modified.png><img alt=../_images/mfc_modified.png src=../_images/mfc_modified.png style="width: 1167.3px; height: 860.4px;"></a></div><p class=rubric>References<dl class="footnote brackets"><dt class=label id=f1><span class=brackets><a class=fn-backref href=#id1>1</a></span><dd><p><a class="reference external"href=https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/deployment/trustinfo-element-clickonce-application>https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/deployment/trustinfo-element-clickonce-application</a></dl></div><div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right"><aside class="border-left pl-5 py-3"><span class="text-uppercase text-muted font-size-sm d-block mb-3"> On this page: </span><a href=#resource-structure class="d-block my-2"data-toggle=scroll>Resource structure</a><a href=#resource-manager class="d-block my-2"data-toggle=scroll>Resource Manager</a><a href=#play-with-manifest class="d-block my-2"data-toggle=scroll>Play with Manifest</a><a href=#play-with-icons class="d-block my-2"data-toggle=scroll>Play with Icons</a></aside></div></div></div>

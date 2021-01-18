@@ -4,14 +4,13 @@ Installation and Integration
 SDK
 ---
 
-For each platform there is an SDK that contains:
+For each platform supported by LIEF there is an SDK that contains:
 
-  * Static library
-  * Headers
-  * Examples
+* Static library
+* Headers
+* Examples
 
-Nightly build can be downloaded here: https://lief-project.github.io/packages/sdk while releases are available here: https://github.com/lief-project/LIEF/releases.
-
+Nightly build can be downloaded on: https://lief-project.github.io/packages/sdk while releases are available on Github release page: https://github.com/lief-project/LIEF/releases.
 
 Python
 ------
@@ -27,7 +26,11 @@ To install nightly build (master):
 
   $ pip install [--user] --index-url  https://lief-project.github.io/packages lief
 
-Python packages can be found here: https://lief-project.github.io/packages/lief
+You can also directly download the Python wheel package on: https://lief-project.github.io/packages/lief
+
+.. note::
+
+  If you already installed a nightly version of LIEF you may need the flag: ``--no-cache-dir``
 
 
 To install **release** package
@@ -36,7 +39,7 @@ To install **release** package
 
   $ pip install lief
 
-Release packages can be found here: `Releases <https://github.com/lief-project/LIEF/releases>`_
+Release packages can be found on the `PyPI <https://pypi.org/project/lief/>`_ and the Github release page: https://github.com/lief-project/LIEF/releases
 
 Using ``setup.py``, one can build and install lief as follows:
 
@@ -45,6 +48,8 @@ Using ``setup.py``, one can build and install lief as follows:
    $ python ./setup.py [--user] install
 
 LIEF modules can also be parameterized using the following options:
+
+.. code-block:: console
 
    $ python ./setup.py --help
    ...
@@ -220,21 +225,20 @@ External Project
 
 Using `CMake External Project <https://cmake.org/cmake/help/v3.0/module/ExternalProject.html>`_:
 
-.. literalinclude:: _static/CMakeExternalProject.cmake
+.. literalinclude:: ../../examples/cmake/external_project/CMakeLists.txt
    :language: cmake
    :lines: 1-42
 
 And now, to be integrated within a project:
 
-.. literalinclude:: _static/CMakeExternalProject.cmake
+.. literalinclude:: ../../examples/cmake/external_project/CMakeLists.txt
    :language: cmake
    :lines: 47-
 
 For the compilation:
 
-.. literalinclude:: _static/ReadmeExternalProject.rst
-   :language: rst
-   :lines: 1-42
+.. include:: ../../examples/cmake/external_project/README.rst
+   :start-line: 3
 
 A *full* example is available in the ``examples/cmake/external_project`` directory.
 
@@ -244,19 +248,19 @@ find_package()
 
 Using `CMake find_package() <https://cmake.org/cmake/help/v3.0/command/find_package.html>`_:
 
-.. literalinclude:: _static/CMakeFindPackage.cmake
+.. literalinclude:: ../../examples/cmake/find_package/CMakeLists.txt
    :language: cmake
    :lines: 5-19
 
 And now, to be integrated within a project:
 
-.. literalinclude:: _static/CMakeFindPackage.cmake
+.. literalinclude:: ../../examples/cmake/find_package/CMakeLists.txt
    :language: cmake
    :lines: 20-
 
 For the compilation:
 
-.. literalinclude:: _static/ReadmeFindPackage.rst
-   :language: rst
+.. include:: ../../examples/cmake/find_package/README.rst
+   :start-line: 3
 
 A *full* example is available in the ``examples/cmake/find_package`` directory.

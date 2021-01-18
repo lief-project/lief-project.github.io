@@ -40,14 +40,14 @@ The underlying structure used to represent resources is a tree:
 
 In the resource tree we basically have two kinds of node:
 
-  #. :class:`~lief.PE.ResourceDirectory`: Contains some information about the subtree.
-  #. :class:`~lief.PE.ResourceData`: Used to store raw data. These nodes are the **leaf** of the tree
+#. :class:`~lief.PE.ResourceDirectory`: Contains some information about the subtree.
+#. :class:`~lief.PE.ResourceData`: Used to store raw data. These nodes are the **leaf** of the tree
 
 The first 3 levels of the tree have a special meaning:
 
-  * Level 1: The :attr:`~lief.PE.ResourceDirectory.id` represents the :class:`~lief.PE.RESOURCE_TYPES`
-  * Level 2: The :attr:`~lief.PE.ResourceDirectory.id` represents an ID to access to the resource
-  * Level 3: The :attr:`~lief.PE.ResourceDirectory.id` represents the :class:`~lief.PE.RESOURCE_LANGS` / :class:`~lief.PE.RESOURCE_SUBLANGS` of the resource.
+* Level 1: The :attr:`~lief.PE.ResourceDirectory.id` represents the :class:`~lief.PE.RESOURCE_TYPES`
+* Level 2: The :attr:`~lief.PE.ResourceDirectory.id` represents an ID to access to the resource
+* Level 3: The :attr:`~lief.PE.ResourceDirectory.id` represents the :class:`~lief.PE.RESOURCE_LANGS` / :class:`~lief.PE.RESOURCE_SUBLANGS` of the resource.
 
 
 We can check that a given binary embed resources with the :attr:`~lief.PE.Binary.has_resources` property, then we can access to this structure
@@ -122,9 +122,9 @@ Resource Manager
 
 As mentioned previously, the :class:`~lief.PE.ResourcesManager` is a kind of wrapper over the resource tree to:
 
-  * Parse resources that have a predefined structures like
-    :attr:`~lief.PE.RESOURCE_TYPES.MANIFEST`, :attr:`~lief.PE.RESOURCE_TYPES.ICON`, :attr:`~lief.PE.RESOURCE_TYPES.VERSION` ...
-  * Access and modify these structures
+* Parse resources that have a predefined structures like
+  :attr:`~lief.PE.RESOURCE_TYPES.MANIFEST`, :attr:`~lief.PE.RESOURCE_TYPES.ICON`, :attr:`~lief.PE.RESOURCE_TYPES.VERSION` ...
+* Access and modify these structures
 
 This can be summarize with the following diagram:
 
@@ -167,7 +167,7 @@ Play with Manifest
 
 Now we will see how we can use practically the :class:`~lief.PE.ResourcesManager` to grant *Administrator* privilege to an executable thanks to the :attr:`~lief.PE.RESOURCE_TYPES.MANIFEST` element.
 
-The application manifest is implement as an XML document whose the documentation is available here: `MSDN <https://msdn.microsoft.com/en-us/library/windows/desktop/aa375632(v=vs.85).aspx>`_
+The application manifest is implement as an XML document whose the documentation is available here: `MSDN <https://docs.microsoft.com/en-us/windows/win32/sbscs/manifest-files-reference>`_
 
 Among these tags, the ``requestedExecutionLevel`` tag *"describes the minimum security permissions required for the application to run on the client computer."* [#f1]_
 
@@ -179,16 +179,16 @@ Among these tags, the ``requestedExecutionLevel`` tag *"describes the minimum se
 
 This tag has the following options:
 
-  * **Level**: Indicates the security level the application is requesting
+* **Level**: Indicates the security level the application is requesting
 
-    * ``asInvoker``: Same permission as the process that started it
-    * ``highestAvailable``: The application will run with the highest permission level that it can
-    * ``requireAdministrator``: The application will run with administrator permissions
+  * ``asInvoker``: Same permission as the process that started it
+  * ``highestAvailable``: The application will run with the highest permission level that it can
+  * ``requireAdministrator``: The application will run with administrator permissions
 
-  * **uiAccess** (Optional): Indicates whether the application requires access to protected user interface elements
+* **uiAccess** (Optional): Indicates whether the application requires access to protected user interface elements
 
-    * ``true``
-    * ``false``
+  * ``true``
+  * ``false``
 
 Thanks to the :class:`~lief.PE.ResourcesManager` replacing the ``asInvoker`` value to ``requireAdministrator`` is as simple as:
 
@@ -268,5 +268,5 @@ After the switch:
 
 .. rubric:: References
 
-.. [#f1] https://msdn.microsoft.com/en-us/library/6ad1fshk.aspx
+.. [#f1] https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/deployment/trustinfo-element-clickonce-application
 

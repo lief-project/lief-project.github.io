@@ -106,8 +106,8 @@ The hook will consist in printing arguments of ``memcmp`` and returning ``0``:
 
 As the hook is going to be injected into the crackme, it must have the following requirements:
 
-  * Assembly code must be *position independant* (compiled with ``-fPIC`` or ``-pie/-fPIE`` flags)
-  * Don't use external libraries such as ``libc.so`` (``-nostdlib -nodefaultlibs`` flags)
+* Assembly code must be *position independant* (compiled with ``-fPIC`` or ``-pie/-fPIE`` flags)
+* Don't use external libraries such as ``libc.so`` (``-nostdlib -nodefaultlibs`` flags)
 
 
 Due to the requirements, the hook is compiled with: :code:`gcc -nostdlib -nodefaultlibs -fPIC -Wl,-shared hook.c -o hook`.
@@ -141,7 +141,7 @@ LIEF provides a function to easily patch the ``got`` entry associated with a :cl
 
 The offset of the ``memcmp`` function is stored in the :attr:`~lief.ELF.Symbol.value` attribute of the associated dynamic symbol. Thus its virtual address will be:
 
-  * ``my_memcpy``: :attr:`~lief.ELF.Symbol.value` + ``segment_added.virtual_address``
+* ``my_memcpy``: :attr:`~lief.ELF.Symbol.value` + ``segment_added.virtual_address``
 
 .. code-block:: python
 
@@ -177,7 +177,10 @@ As a check on the input size is performed before checking the flag value, we hav
 
 .. rubric:: References
 
-.. [#f1] http://vxheaven.org/lib/vrn00.html
+.. role:: strike
+   :class: strike
+
+.. [#f1] :strike:`hxxp://vxheaven.org/lib/vrn00.html`
 .. [#f2] http://phrack.org/issues/56/7.html
 
 
