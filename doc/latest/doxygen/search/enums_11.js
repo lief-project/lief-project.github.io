@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['x86_5f64_5frelocation_3454',['X86_64_RELOCATION',['../namespaceLIEF_1_1MachO.html#ad2d244b82187d41a8bc93dd1078fa5e0',1,'LIEF::MachO']]],
-  ['x86_5frelocation_3455',['X86_RELOCATION',['../namespaceLIEF_1_1MachO.html#a43e31e52b8727142358ebeb11c642ee9',1,'LIEF::MachO']]]
+  ['x86_5f64_5frelocation_3469',['X86_64_RELOCATION',['../namespaceLIEF_1_1MachO.html#ad2d244b82187d41a8bc93dd1078fa5e0',1,'LIEF::MachO']]],
+  ['x86_5frelocation_3470',['X86_RELOCATION',['../namespaceLIEF_1_1MachO.html#a43e31e52b8727142358ebeb11c642ee9',1,'LIEF::MachO']]]
 ];

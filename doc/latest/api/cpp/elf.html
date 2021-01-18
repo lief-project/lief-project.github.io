@@ -40,7 +40,6 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -287,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/1587cf5" class="text-darkblue">0.11.0-1587cf5</a>
+  <a href="https://github.com/lief-project/LIEF/commits/9974da2" class="text-darkblue">0.11.0-9974da2</a>
     <br>
-    Last updated on 16/01/2021, 11:23:50.
+    Last updated on 18/01/2021, 17:20:30.
 </div>
 
 
@@ -327,7 +326,7 @@
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">file</span></code>: Path to the ELF binary </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">count_mtd</span></code>: Method used to count dynamic symbols. Default: LIEF::ELF::DYNSYM_COUNT_METHODS::COUNT_AUTO</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">count_mtd</span></code>: Method used to count dynamic symbols. Default: <a class="reference internal" href="#namespaceLIEF_1_1ELF_1a7156032b2f27ddbce7498994632fa880a917c60f1ea1f42fdee26955f87c7b374"><span class="std std-ref">LIEF::ELF::DYNSYM_COUNT_METHODS::COUNT_AUTO</span></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -344,7 +343,7 @@
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">data</span></code>: Raw ELF </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">name</span></code>: <a class="reference internal" href="#classLIEF_1_1ELF_1_1Binary"><span class="std std-ref">Binary</span></a> name (optional) </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">count_mtd</span></code>: Method used to count dynamic symbols. Default: LIEF::ELF::DYNSYM_COUNT_METHODS::COUNT_AUTO</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">count_mtd</span></code>: Method used to count dynamic symbols. Default: <a class="reference internal" href="#namespaceLIEF_1_1ELF_1a7156032b2f27ddbce7498994632fa880a917c60f1ea1f42fdee26955f87c7b374"><span class="std std-ref">LIEF::ELF::DYNSYM_COUNT_METHODS::COUNT_AUTO</span></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -1624,7 +1623,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header">
-<span id="_CPPv3N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header"></span><span id="_CPPv2N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header"></span><span id="LIEF::ELF::Header::lshift-operator__osR.HeaderCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Header_1a431f6e0bc64b3208ecdfb9f6b9207b00"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF6HeaderE" title="LIEF::ELF::Header">Header</a> &amp;<em>hdr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header"></span><span id="_CPPv2N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header"></span><span id="LIEF::ELF::Header::lshift-operator__osR.HeaderCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Header_1a431f6e0bc64b3208ecdfb9f6b9207b00"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF6HeaderE" title="LIEF::ELF::Header">Header</a> &amp;<em>hdr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6HeaderlsERNSt7ostreamERK6Header" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -1850,7 +1849,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section">
-<span id="_CPPv3N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section"></span><span id="_CPPv2N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section"></span><span id="LIEF::ELF::Section::lshift-operator__osR.SectionCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Section_1a0201f94024f194a0142ba0861f30ce78"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section"></span><span id="_CPPv2N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section"></span><span id="LIEF::ELF::Section::lshift-operator__osR.SectionCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Section_1a0201f94024f194a0142ba0861f30ce78"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7SectionlsERNSt7ostreamERK7Section" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -2045,7 +2044,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment">
-<span id="_CPPv3N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment"></span><span id="_CPPv2N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment"></span><span id="LIEF::ELF::Segment::lshift-operator__osR.SegmentCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Segment_1a7bce905e5e36858e7d09df16a792f7b0"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SegmentE" title="LIEF::ELF::Segment">Segment</a> &amp;<em>segment</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment"></span><span id="_CPPv2N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment"></span><span id="LIEF::ELF::Segment::lshift-operator__osR.SegmentCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Segment_1a7bce905e5e36858e7d09df16a792f7b0"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SegmentE" title="LIEF::ELF::Segment">Segment</a> &amp;<em>segment</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7SegmentlsERNSt7ostreamERK7Segment" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -2124,7 +2123,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry">
-<span id="_CPPv3N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry"></span><span id="_CPPv2N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry"></span><span id="LIEF::ELF::DynamicEntry::lshift-operator__osR.DynamicEntryCR"></span><span class="target" id="classLIEF_1_1ELF_1_1DynamicEntry_1a30cadf8da3f033ae2e216b37305e046f"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF12DynamicEntryE" title="LIEF::ELF::DynamicEntry">DynamicEntry</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry"></span><span id="_CPPv2N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry"></span><span id="LIEF::ELF::DynamicEntry::lshift-operator__osR.DynamicEntryCR"></span><span class="target" id="classLIEF_1_1ELF_1_1DynamicEntry_1a30cadf8da3f033ae2e216b37305e046f"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF12DynamicEntryE" title="LIEF::ELF::DynamicEntry">DynamicEntry</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF12DynamicEntrylsERNSt7ostreamERK12DynamicEntry" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -2867,7 +2866,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation">
-<span id="_CPPv3N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation"></span><span id="_CPPv2N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation"></span><span id="LIEF::ELF::Relocation::lshift-operator__osR.RelocationCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Relocation_1ae281231106785333bb1af52adf29ec03"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF10RelocationE" title="LIEF::ELF::Relocation">Relocation</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation"></span><span id="_CPPv2N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation"></span><span id="LIEF::ELF::Relocation::lshift-operator__osR.RelocationCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Relocation_1ae281231106785333bb1af52adf29ec03"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF10RelocationE" title="LIEF::ELF::Relocation">Relocation</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF10RelocationlsERNSt7ostreamERK10Relocation" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3063,7 +3062,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol">
-<span id="_CPPv3N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol"></span><span id="_CPPv2N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol"></span><span id="LIEF::ELF::Symbol::lshift-operator__osR.SymbolCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Symbol_1abe36ae597aa9177d695685e22f72a4ed"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF6SymbolE" title="LIEF::ELF::Symbol">Symbol</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol"></span><span id="_CPPv2N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol"></span><span id="LIEF::ELF::Symbol::lshift-operator__osR.SymbolCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Symbol_1abe36ae597aa9177d695685e22f72a4ed"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF6SymbolE" title="LIEF::ELF::Symbol">Symbol</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6SymbollsERNSt7ostreamERK6Symbol" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3156,7 +3155,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion">
-<span id="_CPPv3N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion"></span><span id="_CPPv2N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion"></span><span id="LIEF::ELF::SymbolVersion::lshift-operator__osR.SymbolVersionCR"></span><span class="target" id="classLIEF_1_1ELF_1_1SymbolVersion_1a725355980fb55a7c93d93b99f86954bb"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF13SymbolVersionE" title="LIEF::ELF::SymbolVersion">SymbolVersion</a> &amp;<em>symv</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion"></span><span id="_CPPv2N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion"></span><span id="LIEF::ELF::SymbolVersion::lshift-operator__osR.SymbolVersionCR"></span><span class="target" id="classLIEF_1_1ELF_1_1SymbolVersion_1a725355980fb55a7c93d93b99f86954bb"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF13SymbolVersionE" title="LIEF::ELF::SymbolVersion">SymbolVersion</a> &amp;<em>symv</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF13SymbolVersionlsERNSt7ostreamERK13SymbolVersion" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3217,7 +3216,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux">
-<span id="_CPPv3N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux"></span><span id="_CPPv2N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux"></span><span id="LIEF::ELF::SymbolVersionAux::lshift-operator__osR.SymbolVersionAuxCR"></span><span class="target" id="classLIEF_1_1ELF_1_1SymbolVersionAux_1ad7af615148a029872ec7c4259768cfb6"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF16SymbolVersionAuxE" title="LIEF::ELF::SymbolVersionAux">SymbolVersionAux</a> &amp;<em>symAux</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux"></span><span id="_CPPv2N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux"></span><span id="LIEF::ELF::SymbolVersionAux::lshift-operator__osR.SymbolVersionAuxCR"></span><span class="target" id="classLIEF_1_1ELF_1_1SymbolVersionAux_1ad7af615148a029872ec7c4259768cfb6"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF16SymbolVersionAuxE" title="LIEF::ELF::SymbolVersionAux">SymbolVersionAux</a> &amp;<em>symAux</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF16SymbolVersionAuxlsERNSt7ostreamERK16SymbolVersionAux" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3327,7 +3326,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash">
-<span id="_CPPv3N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash"></span><span id="_CPPv2N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash"></span><span id="LIEF::ELF::GnuHash::lshift-operator__osR.GnuHashCR"></span><span class="target" id="classLIEF_1_1ELF_1_1GnuHash_1abf171d2f0665a43464577cd172dc030b"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7GnuHashE" title="LIEF::ELF::GnuHash">GnuHash</a> &amp;<em>gnuhash</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash"></span><span id="_CPPv2N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash"></span><span id="LIEF::ELF::GnuHash::lshift-operator__osR.GnuHashCR"></span><span class="target" id="classLIEF_1_1ELF_1_1GnuHash_1abf171d2f0665a43464577cd172dc030b"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7GnuHashE" title="LIEF::ELF::GnuHash">GnuHash</a> &amp;<em>gnuhash</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7GnuHashlsERNSt7ostreamERK7GnuHash" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3393,7 +3392,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash">
-<span id="_CPPv3N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash"></span><span id="_CPPv2N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash"></span><span id="LIEF::ELF::SysvHash::lshift-operator__osR.SysvHashCR"></span><span class="target" id="classLIEF_1_1ELF_1_1SysvHash_1a5bb93795f73b01872c6624a53839c568"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF8SysvHashE" title="LIEF::ELF::SysvHash">SysvHash</a> &amp;<em>sysvhash</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash"></span><span id="_CPPv2N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash"></span><span id="LIEF::ELF::SysvHash::lshift-operator__osR.SysvHashCR"></span><span class="target" id="classLIEF_1_1ELF_1_1SysvHash_1a5bb93795f73b01872c6624a53839c568"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF8SysvHashE" title="LIEF::ELF::SysvHash">SysvHash</a> &amp;<em>sysvhash</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF8SysvHashlsERNSt7ostreamERK8SysvHash" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3531,7 +3530,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF4NotelsERNSt7ostreamERK4Note">
-<span id="_CPPv3N4LIEF3ELF4NotelsERNSt7ostreamERK4Note"></span><span id="_CPPv2N4LIEF3ELF4NotelsERNSt7ostreamERK4Note"></span><span id="LIEF::ELF::Note::lshift-operator__osR.NoteCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Note_1ab833ed683ea119660278052836c1eead"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF4NoteE" title="LIEF::ELF::Note">Note</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF4NotelsERNSt7ostreamERK4Note" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF4NotelsERNSt7ostreamERK4Note"></span><span id="_CPPv2N4LIEF3ELF4NotelsERNSt7ostreamERK4Note"></span><span id="LIEF::ELF::Note::lshift-operator__osR.NoteCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Note_1ab833ed683ea119660278052836c1eead"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF4NoteE" title="LIEF::ELF::Note">Note</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF4NotelsERNSt7ostreamERK4Note" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3589,7 +3588,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails">
-<span id="_CPPv3N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails"></span><span id="_CPPv2N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails"></span><span id="LIEF::ELF::NoteDetails::lshift-operator__osR.NoteDetailsCR"></span><span class="target" id="classLIEF_1_1ELF_1_1NoteDetails_1ad3ba7576880dbca7a0f09ef24617b088"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF11NoteDetailsE" title="LIEF::ELF::NoteDetails">NoteDetails</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails"></span><span id="_CPPv2N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails"></span><span id="LIEF::ELF::NoteDetails::lshift-operator__osR.NoteDetailsCR"></span><span class="target" id="classLIEF_1_1ELF_1_1NoteDetails_1ad3ba7576880dbca7a0f09ef24617b088"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF11NoteDetailsE" title="LIEF::ELF::NoteDetails">NoteDetails</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF11NoteDetailslsERNSt7ostreamERK11NoteDetails" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3715,7 +3714,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo">
-<span id="_CPPv3N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo"></span><span id="_CPPv2N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo"></span><span id="LIEF::ELF::CorePrPsInfo::lshift-operator__osR.CorePrPsInfoCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CorePrPsInfo_1a08a5d1886dc5c1354d102beb9804aa41"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF12CorePrPsInfoE" title="LIEF::ELF::CorePrPsInfo">CorePrPsInfo</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo"></span><span id="_CPPv2N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo"></span><span id="LIEF::ELF::CorePrPsInfo::lshift-operator__osR.CorePrPsInfoCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CorePrPsInfo_1a08a5d1886dc5c1354d102beb9804aa41"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF12CorePrPsInfoE" title="LIEF::ELF::CorePrPsInfo">CorePrPsInfo</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF12CorePrPsInfolsERNSt7ostreamERK12CorePrPsInfo" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3814,7 +3813,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile">
-<span id="_CPPv3N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile"></span><span id="_CPPv2N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile"></span><span id="LIEF::ELF::CoreFile::lshift-operator__osR.CoreFileCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CoreFile_1a11cfe53019b064352dadc2a4bec46e7b"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF8CoreFileE" title="LIEF::ELF::CoreFile">CoreFile</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile"></span><span id="_CPPv2N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile"></span><span id="LIEF::ELF::CoreFile::lshift-operator__osR.CoreFileCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CoreFile_1a11cfe53019b064352dadc2a4bec46e7b"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF8CoreFileE" title="LIEF::ELF::CoreFile">CoreFile</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF8CoreFilelsERNSt7ostreamERK8CoreFile" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -3853,7 +3852,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry">
-<span id="_CPPv3N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry"></span><span id="_CPPv2N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry"></span><span id="LIEF::ELF::CoreFileEntry::lshift-operator__osR.CoreFileEntryCR"></span><span class="target" id="structLIEF_1_1ELF_1_1CoreFileEntry_1ac9a2c281a054feeaa2cdcc698604ce4c"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF13CoreFileEntryE" title="LIEF::ELF::CoreFileEntry">CoreFileEntry</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry"></span><span id="_CPPv2N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry"></span><span id="LIEF::ELF::CoreFileEntry::lshift-operator__osR.CoreFileEntryCR"></span><span class="target" id="structLIEF_1_1ELF_1_1CoreFileEntry_1ac9a2c281a054feeaa2cdcc698604ce4c"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF13CoreFileEntryE" title="LIEF::ELF::CoreFileEntry">CoreFileEntry</a> &amp;<em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF13CoreFileEntrylsERNSt7ostreamERK13CoreFileEntry" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -4468,7 +4467,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus">
-<span id="_CPPv3N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus"></span><span id="_CPPv2N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus"></span><span id="LIEF::ELF::CorePrStatus::lshift-operator__osR.CorePrStatusCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CorePrStatus_1ac6b1cc31983e66abef790b024b5a3438"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF12CorePrStatusE" title="LIEF::ELF::CorePrStatus">CorePrStatus</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus"></span><span id="_CPPv2N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus"></span><span id="LIEF::ELF::CorePrStatus::lshift-operator__osR.CorePrStatusCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CorePrStatus_1ac6b1cc31983e66abef790b024b5a3438"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF12CorePrStatusE" title="LIEF::ELF::CorePrStatus">CorePrStatus</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF12CorePrStatuslsERNSt7ostreamERK12CorePrStatus" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -4549,7 +4548,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo">
-<span id="_CPPv3N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo"></span><span id="_CPPv2N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo"></span><span id="LIEF::ELF::CoreSigInfo::lshift-operator__osR.CoreSigInfoCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CoreSigInfo_1a117972055cb31d63ba6053aaab957f27"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF11CoreSigInfoE" title="LIEF::ELF::CoreSigInfo">CoreSigInfo</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo"></span><span id="_CPPv2N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo"></span><span id="LIEF::ELF::CoreSigInfo::lshift-operator__osR.CoreSigInfoCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CoreSigInfo_1a117972055cb31d63ba6053aaab957f27"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF11CoreSigInfoE" title="LIEF::ELF::CoreSigInfo">CoreSigInfo</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF11CoreSigInfolsERNSt7ostreamERK11CoreSigInfo" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -4637,7 +4636,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv">
-<span id="_CPPv3N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv"></span><span id="_CPPv2N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv"></span><span id="LIEF::ELF::CoreAuxv::lshift-operator__osR.CoreAuxvCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CoreAuxv_1a8613fad211486004382621fcdd8bd70a"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF8CoreAuxvE" title="LIEF::ELF::CoreAuxv">CoreAuxv</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv"></span><span id="_CPPv2N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv"></span><span id="LIEF::ELF::CoreAuxv::lshift-operator__osR.CoreAuxvCR"></span><span class="target" id="classLIEF_1_1ELF_1_1CoreAuxv_1a8613fad211486004382621fcdd8bd70a"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF8CoreAuxvE" title="LIEF::ELF::CoreAuxv">CoreAuxv</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF8CoreAuxvlsERNSt7ostreamERK8CoreAuxv" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -4761,7 +4760,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote">
-<span id="_CPPv3N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote"></span><span id="_CPPv2N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote"></span><span id="LIEF::ELF::AndroidNote::lshift-operator__osR.AndroidNoteCR"></span><span class="target" id="classLIEF_1_1ELF_1_1AndroidNote_1a9c1e25152eacbd9fccab69472103a29c"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF11AndroidNoteE" title="LIEF::ELF::AndroidNote">AndroidNote</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote"></span><span id="_CPPv2N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote"></span><span id="LIEF::ELF::AndroidNote::lshift-operator__osR.AndroidNoteCR"></span><span class="target" id="classLIEF_1_1ELF_1_1AndroidNote_1a9c1e25152eacbd9fccab69472103a29c"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF11AndroidNoteE" title="LIEF::ELF::AndroidNote">AndroidNote</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF11AndroidNotelsERNSt7ostreamERK11AndroidNote" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
@@ -4861,7 +4860,7 @@
 <p class="breathe-sectiondef-title rubric">Friends</p>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi">
-<span id="_CPPv3N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi"></span><span id="_CPPv2N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi"></span><span id="LIEF::ELF::NoteAbi::lshift-operator__osR.NoteAbiCR"></span><span class="target" id="classLIEF_1_1ELF_1_1NoteAbi_1af06cd11b8e371f0bbd5e4a43202563aa"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7NoteAbiE" title="LIEF::ELF::NoteAbi">NoteAbi</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi"></span><span id="_CPPv2N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi"></span><span id="LIEF::ELF::NoteAbi::lshift-operator__osR.NoteAbiCR"></span><span class="target" id="classLIEF_1_1ELF_1_1NoteAbi_1af06cd11b8e371f0bbd5e4a43202563aa"></span>std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7NoteAbiE" title="LIEF::ELF::NoteAbi">NoteAbi</a> &amp;<em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF7NoteAbilsERNSt7ostreamERK7NoteAbi" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </div>
 </dd></dl>
