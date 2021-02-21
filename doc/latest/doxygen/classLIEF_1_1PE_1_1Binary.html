@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LIEF: Library to Instrument Executable Formats
-   &#160;<span id="projectnumber">Version 0.11.0</span>
+   &#160;<span id="projectnumber">Version 0.12.0</span>
    </div>
   </td>
  </tr>
@@ -105,6 +105,13 @@ Public Member Functions</h2></td></tr>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a2429033910809c71f032a94174e4feaa">va_to_offset</a> (uint64_t VA)</td></tr>
 <tr class="memdesc:a2429033910809c71f032a94174e4feaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Virtual address to offset. <br /></td></tr>
 <tr class="separator:a2429033910809c71f032a94174e4feaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa72ef17100fc0201fab14af34642a7"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#affa72ef17100fc0201fab14af34642a7">offset_to_virtual_address</a> (uint64_t offset, uint64_t slide=0) const override</td></tr>
+<tr class="memdesc:affa72ef17100fc0201fab14af34642a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the given offset into a virtual address.  <a href="classLIEF_1_1PE_1_1Binary.html#affa72ef17100fc0201fab14af34642a7">More...</a><br /></td></tr>
+<tr class="separator:affa72ef17100fc0201fab14af34642a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0f312fe38d58d4af1491e8d4be720e"><td class="memItemLeft" align="right" valign="top"><a id="a1b0f312fe38d58d4af1491e8d4be720e"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#a1b0f312fe38d58d4af1491e8d4be720e">imagebase</a> (void) const override</td></tr>
+<tr class="memdesc:a1b0f312fe38d58d4af1491e8d4be720e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return binary's imagebase. <code>0</code> if not relevant. <br /></td></tr>
+<tr class="separator:a1b0f312fe38d58d4af1491e8d4be720e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd20080764f5ea42e2a5fabfd29613c"><td class="memItemLeft" align="right" valign="top"><a id="accd20080764f5ea42e2a5fabfd29613c"></a>
 <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Binary.html#accd20080764f5ea42e2a5fabfd29613c">section_from_offset</a> (uint64_t offset)</td></tr>
 <tr class="memdesc:accd20080764f5ea42e2a5fabfd29613c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the section associated with the <code>offset</code> <br /></td></tr>
@@ -906,6 +913,53 @@ template&lt;class T &gt; </td></tr>
 
 </div>
 </div>
+<a id="affa72ef17100fc0201fab14af34642a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa72ef17100fc0201fab14af34642a7">&#9670;&nbsp;</a></span>offset_to_virtual_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::PE::Binary::offset_to_virtual_address </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>slide</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the given offset into a virtual address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>The offset to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">slide</td><td>If not 0, it will replace the default base address (if any) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classLIEF_1_1Binary.html#acea74c2aeef37219b97fd27a8370cba8">LIEF::Binary</a>.</p>
+
+</div>
+</div>
 <a id="abb160b6e4246c03e737e8c8e77f4bb37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb160b6e4246c03e737e8c8e77f4bb37">&#9670;&nbsp;</a></span>patch_address() <span class="overload">[1/2]</span></h2>
 
@@ -1218,7 +1272,7 @@ template&lt;class T &gt; </td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/PE/<a class="el" href="PE_2Binary_8hpp_source.html">Binary.hpp</a></li>
+<li>LIEF-0.12.0-Linux-x86_64/include/LIEF/PE/<a class="el" href="PE_2Binary_8hpp_source.html">Binary.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

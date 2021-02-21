@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LIEF: Library to Instrument Executable Formats
-   &#160;<span id="projectnumber">Version 0.11.0</span>
+   &#160;<span id="projectnumber">Version 0.12.0</span>
    </div>
   </td>
  </tr>
@@ -270,10 +270,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html#a579195145cadf302ecea888e7ed56ea6">disable_pie</a> (void)</td></tr>
 <tr class="memdesc:a579195145cadf302ecea888e7ed56ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <code>PIE</code> flag. <br /></td></tr>
 <tr class="separator:a579195145cadf302ecea888e7ed56ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bb32cda544f4862540ae6e4506ffd09"><td class="memItemLeft" align="right" valign="top"><a id="a3bb32cda544f4862540ae6e4506ffd09"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html#a3bb32cda544f4862540ae6e4506ffd09">imagebase</a> (void) const</td></tr>
-<tr class="memdesc:a3bb32cda544f4862540ae6e4506ffd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return binary's imagebase. <code>0</code> if not relevant. <br /></td></tr>
-<tr class="separator:a3bb32cda544f4862540ae6e4506ffd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e931b987699de20985f79998ed401b8"><td class="memItemLeft" align="right" valign="top"><a id="a1e931b987699de20985f79998ed401b8"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html#a1e931b987699de20985f79998ed401b8">imagebase</a> (void) const override</td></tr>
+<tr class="memdesc:a1e931b987699de20985f79998ed401b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return binary's imagebase. <code>0</code> if not relevant. <br /></td></tr>
+<tr class="separator:a1e931b987699de20985f79998ed401b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb724c99e6bfb3b085d6db95be5d4dfd"><td class="memItemLeft" align="right" valign="top"><a id="afb724c99e6bfb3b085d6db95be5d4dfd"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html#afb724c99e6bfb3b085d6db95be5d4dfd">virtual_size</a> (void) const</td></tr>
 <tr class="memdesc:afb724c99e6bfb3b085d6db95be5d4dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the binary in memory when mapped. <br /></td></tr>
@@ -346,6 +346,9 @@ const <a class="el" href="classLIEF_1_1MachO_1_1Section.html">Section</a> *&#160
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html#a03d9e0801c196af63d54e4f1302e7f96">virtual_address_to_offset</a> (uint64_t virtualAddress) const</td></tr>
 <tr class="memdesc:a03d9e0801c196af63d54e4f1302e7f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a virtual address to an offset in the file. <br /></td></tr>
 <tr class="separator:a03d9e0801c196af63d54e4f1302e7f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b9a9ed601c2e3d9a8fd6307196f889"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aa3b9a9ed601c2e3d9a8fd6307196f889">offset_to_virtual_address</a> (uint64_t offset, uint64_t slide=0) const override</td></tr>
+<tr class="memdesc:aa3b9a9ed601c2e3d9a8fd6307196f889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the given offset into a virtual address.  <a href="classLIEF_1_1MachO_1_1Binary.html#aa3b9a9ed601c2e3d9a8fd6307196f889">More...</a><br /></td></tr>
+<tr class="separator:aa3b9a9ed601c2e3d9a8fd6307196f889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae27c7dd43e1c96bbc4ca47f62a142270"><td class="memItemLeft" align="right" valign="top"><a id="ae27c7dd43e1c96bbc4ca47f62a142270"></a>
 <a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>segment_from_offset</b> (uint64_t offset)</td></tr>
 <tr class="separator:ae27c7dd43e1c96bbc4ca47f62a142270"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -819,6 +822,53 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a id="aa3b9a9ed601c2e3d9a8fd6307196f889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b9a9ed601c2e3d9a8fd6307196f889">&#9670;&nbsp;</a></span>offset_to_virtual_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::MachO::Binary::offset_to_virtual_address </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>slide</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the given offset into a virtual address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>The offset to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">slide</td><td>If not 0, it will replace the default base address (if any) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classLIEF_1_1Binary.html#acea74c2aeef37219b97fd27a8370cba8">LIEF::Binary</a>.</p>
+
+</div>
+</div>
 <a id="a466b9fa0d1a626375f20a133fb1456e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a466b9fa0d1a626375f20a133fb1456e5">&#9670;&nbsp;</a></span>patch_address() <span class="overload">[1/2]</span></h2>
 
@@ -971,7 +1021,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/MachO/<a class="el" href="MachO_2Binary_8hpp_source.html">Binary.hpp</a></li>
+<li>LIEF-0.12.0-Linux-x86_64/include/LIEF/MachO/<a class="el" href="MachO_2Binary_8hpp_source.html">Binary.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

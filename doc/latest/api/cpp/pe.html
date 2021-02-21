@@ -286,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/9974da2" class="text-darkblue">0.11.0-9974da2</a>
+  <a href="https://github.com/lief-project/LIEF/commits/10c5b0a" class="text-darkblue">0.12.0-10c5b0a</a>
     <br>
-    Last updated on 18/01/2021, 17:20:30.
+    Last updated on 21/02/2021, 18:04:44.
 </div>
 
 
@@ -328,6 +328,24 @@
 <dt id="_CPPv4N4LIEF2PE6Binary12va_to_offsetE8uint64_t">
 <span id="_CPPv3N4LIEF2PE6Binary12va_to_offsetE8uint64_t"></span><span id="_CPPv2N4LIEF2PE6Binary12va_to_offsetE8uint64_t"></span><span id="LIEF::PE::Binary::va_to_offset__uint64_t"></span><span class="target" id="classLIEF_1_1PE_1_1Binary_1a2429033910809c71f032a94174e4feaa"></span>uint64_t <code class="sig-name descname">va_to_offset</code><span class="sig-paren">(</span>uint64_t <em>VA</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE6Binary12va_to_offsetE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Convert Virtual address to offset. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK4LIEF2PE6Binary25offset_to_virtual_addressE8uint64_t8uint64_t">
+<span id="_CPPv3NK4LIEF2PE6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="_CPPv2NK4LIEF2PE6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="LIEF::PE::Binary::offset_to_virtual_address__uint64_t.uint64_tC"></span><span class="target" id="classLIEF_1_1PE_1_1Binary_1affa72ef17100fc0201fab14af34642a7"></span>uint64_t <code class="sig-name descname">offset_to_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>offset</em>, uint64_t <em>slide</em> = 0<span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE6Binary25offset_to_virtual_addressE8uint64_t8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Convert the given offset into a virtual address. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">offset</span></code>: The offset to convert. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">slide</span></code>: If not 0, it will replace the default base address (if any) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK4LIEF2PE6Binary9imagebaseEv">
+<span id="_CPPv3NK4LIEF2PE6Binary9imagebaseEv"></span><span id="_CPPv2NK4LIEF2PE6Binary9imagebaseEv"></span><span id="LIEF::PE::Binary::imagebase__voidC"></span><span class="target" id="classLIEF_1_1PE_1_1Binary_1a1b0f312fe38d58d4af1491e8d4be720e"></span>uint64_t <code class="sig-name descname">imagebase</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE6Binary9imagebaseEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Return binary’s imagebase. <code class="docutils literal notranslate"><span class="pre">0</span></code> if not relevant. </p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF2PE6Binary19section_from_offsetE8uint64_t">
@@ -3293,6 +3311,11 @@
 <dt id="_CPPv4N4LIEF2PE9Signature4hashERKNSt6vectorI7uint8_tEE10ALGORITHMS">
 <span id="_CPPv3N4LIEF2PE9Signature4hashERKNSt6vectorI7uint8_tEE10ALGORITHMS"></span><span id="_CPPv2N4LIEF2PE9Signature4hashERKNSt6vectorI7uint8_tEE10ALGORITHMS"></span><span id="LIEF::PE::Signature::hash__std::vector:uint8_t:CR.ALGORITHMS"></span><span class="target" id="classLIEF_1_1PE_1_1Signature_1ad3345b601438539df022c49598919733"></span>std::vector&lt;uint8_t&gt; <code class="sig-name descname">hash</code><span class="sig-paren">(</span><em class="property">const</em> std::vector&lt;uint8_t&gt; &amp;<em>input</em>, <a class="reference internal" href="#_CPPv4N4LIEF2PE10ALGORITHMSE" title="LIEF::PE::ALGORITHMS">ALGORITHMS</a> <em>algo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE9Signature4hashERKNSt6vectorI7uint8_tEE10ALGORITHMS" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Hash the input given the algorithm. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N4LIEF2PE9Signature14flag_to_stringE18VERIFICATION_FLAGS">
+<span id="_CPPv3N4LIEF2PE9Signature14flag_to_stringE18VERIFICATION_FLAGS"></span><span id="_CPPv2N4LIEF2PE9Signature14flag_to_stringE18VERIFICATION_FLAGS"></span><span id="LIEF::PE::Signature::flag_to_string__VERIFICATION_FLAGS"></span><span class="target" id="classLIEF_1_1PE_1_1Signature_1a5fa2893101e44fc663e9a1106ebf87ce"></span>std::string <code class="sig-name descname">flag_to_string</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF2PE9Signature18VERIFICATION_FLAGSE" title="LIEF::PE::Signature::VERIFICATION_FLAGS">VERIFICATION_FLAGS</a> <em>flag</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE9Signature14flag_to_stringE18VERIFICATION_FLAGS" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Convert a verification flag into a humman representation. e.g VERIFICATION_FLAGS.BAD_DIGEST | VERIFICATION_FLAGS.BAD_SIGNATURE | VERIFICATION_FLAGS.CERT_EXPIRED. </p>
 </dd></dl>
 </div>
 <div class="breathe-sectiondef docutils container">

@@ -286,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/9974da2" class="text-darkblue">0.11.0-9974da2</a>
+  <a href="https://github.com/lief-project/LIEF/commits/10c5b0a" class="text-darkblue">0.12.0-10c5b0a</a>
     <br>
-    Last updated on 18/01/2021, 17:20:30.
+    Last updated on 21/02/2021, 18:04:44.
 </div>
 
 
@@ -635,9 +635,27 @@
 <dd><p>Check if the binary uses <code class="docutils literal notranslate"><span class="pre">NX</span></code> protection. </p>
 </dd></dl>
 <dl class="cpp function">
+<dt id="_CPPv4NK4LIEF6Binary9imagebaseEv">
+<span id="_CPPv3NK4LIEF6Binary9imagebaseEv"></span><span id="_CPPv2NK4LIEF6Binary9imagebaseEv"></span><span id="LIEF::Binary::imagebaseC"></span><span class="target" id="classLIEF_1_1Binary_1ab8ccb2b1f4a40e5c0c244b866245574d"></span>uint64_t <code class="sig-name descname">imagebase</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK4LIEF6Binary9imagebaseEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Default image base address if the ASLR is not enabled. </p>
+</dd></dl>
+<dl class="cpp function">
 <dt id="_CPPv4NK4LIEF6Binary14ctor_functionsEv">
 <span id="_CPPv3NK4LIEF6Binary14ctor_functionsEv"></span><span id="_CPPv2NK4LIEF6Binary14ctor_functionsEv"></span><span id="LIEF::Binary::ctor_functions__voidC"></span><span class="target" id="classLIEF_1_1Binary_1a4d99024566acade97911f5ea6da8adc3"></span>LIEF::<a class="reference internal" href="#_CPPv4N4LIEF6BinaryE" title="LIEF::Binary">Binary</a>::<a class="reference internal" href="#_CPPv4N4LIEF6Binary11functions_tE" title="LIEF::Binary::functions_t">functions_t</a> <code class="sig-name descname">ctor_functions</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK4LIEF6Binary14ctor_functionsEv" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Constructor functions that are called prior any other functions. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK4LIEF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t">
+<span id="_CPPv3NK4LIEF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="_CPPv2NK4LIEF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="LIEF::Binary::offset_to_virtual_address__uint64_t.uint64_tC"></span><span class="target" id="classLIEF_1_1Binary_1acea74c2aeef37219b97fd27a8370cba8"></span>uint64_t <code class="sig-name descname">offset_to_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>offset</em>, uint64_t <em>slide</em> = 0<span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK4LIEF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Convert the given offset into a virtual address. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">offset</span></code>: The offset to convert. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">slide</span></code>: If not 0, it will replace the default base address (if any) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF6Binary5printERNSt7ostreamE">

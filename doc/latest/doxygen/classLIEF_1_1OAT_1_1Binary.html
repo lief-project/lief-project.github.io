@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LIEF: Library to Instrument Executable Formats
-   &#160;<span id="projectnumber">Version 0.11.0</span>
+   &#160;<span id="projectnumber">Version 0.12.0</span>
    </div>
   </td>
  </tr>
@@ -400,9 +400,9 @@ const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#1
 <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a9fdd4fab2f03b5aca1b66e89f026749d">static_symbols_section</a> (void)</td></tr>
 <tr class="memdesc:a9fdd4fab2f03b5aca1b66e89f026749d inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return section which holds static symbols. <br /></td></tr>
 <tr class="separator:a9fdd4fab2f03b5aca1b66e89f026749d inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9402ee5074bdfc9d0bea8a9091113f52 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a9402ee5074bdfc9d0bea8a9091113f52">imagebase</a> (void) const</td></tr>
-<tr class="memdesc:a9402ee5074bdfc9d0bea8a9091113f52 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return program image base. For instance 0x40000.  <a href="classLIEF_1_1ELF_1_1Binary.html#a9402ee5074bdfc9d0bea8a9091113f52">More...</a><br /></td></tr>
-<tr class="separator:a9402ee5074bdfc9d0bea8a9091113f52 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379f818a59c79ffbbdaa0175ea7f5c26 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a379f818a59c79ffbbdaa0175ea7f5c26">imagebase</a> (void) const override</td></tr>
+<tr class="memdesc:a379f818a59c79ffbbdaa0175ea7f5c26 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return program image base. For instance 0x40000.  <a href="classLIEF_1_1ELF_1_1Binary.html#a379f818a59c79ffbbdaa0175ea7f5c26">More...</a><br /></td></tr>
+<tr class="separator:a379f818a59c79ffbbdaa0175ea7f5c26 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c67e1dcac945032e8a4c17a46f0375a inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memItemLeft" align="right" valign="top"><a id="a2c67e1dcac945032e8a4c17a46f0375a"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a2c67e1dcac945032e8a4c17a46f0375a">virtual_size</a> (void) const</td></tr>
 <tr class="memdesc:a2c67e1dcac945032e8a4c17a46f0375a inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the mapped binary. <br /></td></tr>
@@ -559,6 +559,9 @@ std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom">
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#aa211313ac8dcee2386c14b95d888d11f">virtual_address_to_offset</a> (uint64_t virtual_address) const</td></tr>
 <tr class="memdesc:aa211313ac8dcee2386c14b95d888d11f inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a virtual address to an offset in the file. <br /></td></tr>
 <tr class="separator:aa211313ac8dcee2386c14b95d888d11f inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955f935049f7b5a7f5962627da977e9a inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a955f935049f7b5a7f5962627da977e9a">offset_to_virtual_address</a> (uint64_t offset, uint64_t slide=0) const override</td></tr>
+<tr class="memdesc:a955f935049f7b5a7f5962627da977e9a inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the given offset into a virtual address.  <a href="classLIEF_1_1ELF_1_1Binary.html#a955f935049f7b5a7f5962627da977e9a">More...</a><br /></td></tr>
+<tr class="separator:a955f935049f7b5a7f5962627da977e9a inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69d5aebcbbdb674a5aa6c25aea25000 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#aa69d5aebcbbdb674a5aa6c25aea25000">is_pie</a> (void) const override</td></tr>
 <tr class="memdesc:aa69d5aebcbbdb674a5aa6c25aea25000 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the binary has been compiled with <code>-fpie -pie</code> flags.  <a href="classLIEF_1_1ELF_1_1Binary.html#aa69d5aebcbbdb674a5aa6c25aea25000">More...</a><br /></td></tr>
 <tr class="separator:aa69d5aebcbbdb674a5aa6c25aea25000 inherit pub_methods_classLIEF_1_1ELF_1_1Binary"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -867,7 +870,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="separator:a13449a73f7eb12a7cef1523c84c8eae3 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/OAT/<a class="el" href="OAT_2Binary_8hpp_source.html">Binary.hpp</a></li>
+<li>LIEF-0.12.0-Linux-x86_64/include/LIEF/OAT/<a class="el" href="OAT_2Binary_8hpp_source.html">Binary.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

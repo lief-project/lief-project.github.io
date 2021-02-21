@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LIEF: Library to Instrument Executable Formats
-   &#160;<span id="projectnumber">Version 0.11.0</span>
+   &#160;<span id="projectnumber">Version 0.12.0</span>
    </div>
   </td>
  </tr>
@@ -634,6 +634,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:aa54f2a9a50954d78aa035598b830c6b9"><td class="memItemLeft" align="right" valign="top"><a id="aa54f2a9a50954d78aa035598b830c6b9"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>REBASE_TYPES</b> : size_t { <b>REBASE_TYPE_POINTER</b> = 1u
 , <b>REBASE_TYPE_TEXT_ABSOLUTE32</b> = 2u
 , <b>REBASE_TYPE_TEXT_PCREL32</b> = 3u
+, <b>REBASE_TYPE_THREADED</b> = 102u
  }</td></tr>
 <tr class="separator:aa54f2a9a50954d78aa035598b830c6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52902e684194f3a508573892afb62dad"><td class="memItemLeft" align="right" valign="top"><a id="a52902e684194f3a508573892afb62dad"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>REBASE_OPCODE_MASK</b> = 0xF0u
@@ -659,6 +660,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a07330888f1db2b0581c2a277dee7772b"><td class="memItemLeft" align="right" valign="top"><a id="a07330888f1db2b0581c2a277dee7772b"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1MachO.html#a07330888f1db2b0581c2a277dee7772b">BINDING_CLASS</a> : size_t { <b>BIND_CLASS_WEAK</b> = 1u
 , <b>BIND_CLASS_LAZY</b> = 2u
 , <b>BIND_CLASS_STANDARD</b> = 3u
+, <b>BIND_CLASS_THREADED</b> = 100u
  }</td></tr>
 <tr class="memdesc:a07330888f1db2b0581c2a277dee7772b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Within the <a class="el" href="structdyld__info__command.html">dyld_info_command</a> there are differents area of binding. These enums tag these area. <br /></td></tr>
 <tr class="separator:a07330888f1db2b0581c2a277dee7772b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -695,10 +697,17 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceLIEF_1_1MachO.html#af0a8e6ea7926011902a441f7700e7663a7e31494e45bd776e9a40419f76f357fc">BIND_OPCODE_DO_BIND_ADD_ADDR_IMM_SCALED</a> = 0xB0u
 , <br />
 &#160;&#160;<a class="el" href="namespaceLIEF_1_1MachO.html#af0a8e6ea7926011902a441f7700e7663a40e63ec21ddf67bb79299b6a73418763">BIND_OPCODE_DO_BIND_ULEB_TIMES_SKIPPING_ULEB</a> = 0xC0u
+, <b>BIND_OPCODE_THREADED</b> = 0xD0u
+, <b>BIND_OPCODE_THREADED_APPLY</b> = 0xD0u | 0x01u
+, <b>BIND_OPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEB</b> = 0xD0u | 0x00u
 <br />
  }</td></tr>
 <tr class="memdesc:af0a8e6ea7926011902a441f7700e7663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opcodes used by Dyld info to bind symbols.  <a href="namespaceLIEF_1_1MachO.html#af0a8e6ea7926011902a441f7700e7663">More...</a><br /></td></tr>
 <tr class="separator:af0a8e6ea7926011902a441f7700e7663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8491c68e93b386a45175afbbd7b5163"><td class="memItemLeft" align="right" valign="top"><a id="ae8491c68e93b386a45175afbbd7b5163"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>BIND_SUBOPCODE_THREADED</b> : uint8_t { <b>BIND_SUBOPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEB</b> = 0x00u
+, <b>BIND_SUBOPCODE_THREADED_APPLY</b> = 0x01u
+ }</td></tr>
+<tr class="separator:ae8491c68e93b386a45175afbbd7b5163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa687fa915cd943d868cae5779ab85aa"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1MachO.html#afa687fa915cd943d868cae5779ab85aa">EXPORT_SYMBOL_FLAGS</a> : size_t { <a class="el" href="namespaceLIEF_1_1MachO.html#afa687fa915cd943d868cae5779ab85aaa78819b3fc1edb844057faa9c78b14f3f">EXPORT_SYMBOL_FLAGS_KIND_MASK</a> = 0x03u
 , <b>EXPORT_SYMBOL_FLAGS_WEAK_DEFINITION</b> = 0x04u
 , <b>EXPORT_SYMBOL_FLAGS_REEXPORT</b> = 0x08u
@@ -1078,6 +1087,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b>
 <tr class="memitem:ae480392771f0eda92e348b222b18e73a"><td class="memItemLeft" align="right" valign="top"><a id="ae480392771f0eda92e348b222b18e73a"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (BIND_SPECIAL_DYLIB e)</td></tr>
 <tr class="separator:ae480392771f0eda92e348b222b18e73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa656b310b148ffe1faf330a42454575"><td class="memItemLeft" align="right" valign="top"><a id="afa656b310b148ffe1faf330a42454575"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (BIND_SUBOPCODE_THREADED e)</td></tr>
+<tr class="separator:afa656b310b148ffe1faf330a42454575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf53e406b3de46648f2d7ed42a5d2bd3"><td class="memItemLeft" align="right" valign="top"><a id="abf53e406b3de46648f2d7ed42a5d2bd3"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (<a class="el" href="namespaceLIEF_1_1MachO.html#af0a8e6ea7926011902a441f7700e7663">BIND_OPCODES</a> e)</td></tr>
 <tr class="separator:abf53e406b3de46648f2d7ed42a5d2bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>

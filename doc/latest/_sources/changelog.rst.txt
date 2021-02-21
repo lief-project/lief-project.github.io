@@ -1,10 +1,47 @@
 Changelog
 =========
 
+0.12.0 - Not Released Yet
+-------------------------
+
+:ELF:
+  * :github_user:`Clcanny` improved (see :pr:`507` and :pr:`509`) the reconstruction of the dynamic symbol table
+    by sorting local symbols and non-exported symbols. It fixes the following warning when parsing
+    a modified binary with ``readelf``
+
+    .. code-block:: text
+
+      Warning: local symbol 29 found at index >= .dynsym's sh_info value of 1
+
+:PE:
+  * :meth:`lief.PE.x509.is_trusted_by` and :meth:`lief.PE.x509.verify` now return
+    a better :attr:`lief.PE.x509.VERIFICATION_FLAGS` instead of just :attr:`lief.PE.x509.VERIFICATION_FLAGS.BADCERT_NOT_TRUSTED`
+    (see: :issue:`532`)
+
+:MachO:
+  * Add API to select a :class:`~lief.MachO.Binary` from a :class:`~lief.MachO.FatBinary` by its achitecture. See:
+    :meth:`lief.MachO.FatBinary.take`.
+
+    .. code-block:: python
+
+      fat = lief.MachO.parse("/bin/ls")
+      fit = fat.take(lief.MachO.CPU_TYPES.x86_64)
+
+  * Fix error on property :attr:`lief.MachO.BuildVersion.sdk` (see :issue:`533`)
+  * Handle the `0x0D` binding opcode (see: :issue:`524`)
+
+:DEX:
+  * :github_user:`DanielFi` added support for DEX's fields (see: :pr:`547`)
+
+:Abstraction:
+  * Abtract binary imagebase for PE, ELF and Mach-O (:attr:`lief.Binary.imagebase`)
+  * Add :meth:`lief.Binary.offset_to_virtual_addres`
+
+
 .. _release-0110:
 
-0.11.0 - Not Released
----------------------
+0.11.0 - January 19, 2021
+-------------------------
 
 :ELF:
   * :github_user:`mkomet` updated enums related to Android (see: :commit:`9dd641d380a5defd0a71a9f42dde2fe9c9cb1dbd`)

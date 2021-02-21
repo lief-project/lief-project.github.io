@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LIEF: Library to Instrument Executable Formats
-   &#160;<span id="projectnumber">Version 0.11.0</span>
+   &#160;<span id="projectnumber">Version 0.12.0</span>
    </div>
   </td>
  </tr>
@@ -226,10 +226,17 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#a36ebc2fa264324f4b4747365c95b9315">has_nx</a> (void) const =0</td></tr>
 <tr class="memdesc:a36ebc2fa264324f4b4747365c95b9315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the binary uses <code>NX</code> protection. <br /></td></tr>
 <tr class="separator:a36ebc2fa264324f4b4747365c95b9315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ccb2b1f4a40e5c0c244b866245574d"><td class="memItemLeft" align="right" valign="top"><a id="ab8ccb2b1f4a40e5c0c244b866245574d"></a>
+virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#ab8ccb2b1f4a40e5c0c244b866245574d">imagebase</a> () const =0</td></tr>
+<tr class="memdesc:ab8ccb2b1f4a40e5c0c244b866245574d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default image base address if the ASLR is not enabled. <br /></td></tr>
+<tr class="separator:ab8ccb2b1f4a40e5c0c244b866245574d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d99024566acade97911f5ea6da8adc3"><td class="memItemLeft" align="right" valign="top"><a id="a4d99024566acade97911f5ea6da8adc3"></a>
 virtual LIEF::Binary::functions_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#a4d99024566acade97911f5ea6da8adc3">ctor_functions</a> (void) const =0</td></tr>
 <tr class="memdesc:a4d99024566acade97911f5ea6da8adc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor functions that are called prior any other functions. <br /></td></tr>
 <tr class="separator:a4d99024566acade97911f5ea6da8adc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea74c2aeef37219b97fd27a8370cba8"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Binary.html#acea74c2aeef37219b97fd27a8370cba8">offset_to_virtual_address</a> (uint64_t offset, uint64_t slide=0) const =0</td></tr>
+<tr class="memdesc:acea74c2aeef37219b97fd27a8370cba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the given offset into a virtual address.  <a href="classLIEF_1_1Binary.html#acea74c2aeef37219b97fd27a8370cba8">More...</a><br /></td></tr>
+<tr class="separator:acea74c2aeef37219b97fd27a8370cba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5869ca2a52d17f2855a5686a77e920a4"><td class="memItemLeft" align="right" valign="top"><a id="a5869ca2a52d17f2855a5686a77e920a4"></a>
 virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (std::ostream &amp;os) const</td></tr>
 <tr class="separator:a5869ca2a52d17f2855a5686a77e920a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,6 +299,53 @@ template&lt;class T &gt; </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acea74c2aeef37219b97fd27a8370cba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea74c2aeef37219b97fd27a8370cba8">&#9670;&nbsp;</a></span>offset_to_virtual_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t LIEF::Binary::offset_to_virtual_address </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>slide</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the given offset into a virtual address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>The offset to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">slide</td><td>If not 0, it will replace the default base address (if any) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classLIEF_1_1PE_1_1Binary.html#affa72ef17100fc0201fab14af34642a7">LIEF::PE::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aa3b9a9ed601c2e3d9a8fd6307196f889">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a955f935049f7b5a7f5962627da977e9a">LIEF::ELF::Binary</a>.</p>
+
+</div>
+</div>
 <a id="a63383a6710b0719ca39deb1a9abf786e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63383a6710b0719ca39deb1a9abf786e">&#9670;&nbsp;</a></span>original_size()</h2>
 
@@ -429,7 +483,7 @@ template&lt;class T &gt; </td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LIEF-0.11.0-Linux-x86_64/include/LIEF/Abstract/<a class="el" href="Abstract_2Binary_8hpp_source.html">Binary.hpp</a></li>
+<li>LIEF-0.12.0-Linux-x86_64/include/LIEF/Abstract/<a class="el" href="Abstract_2Binary_8hpp_source.html">Binary.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

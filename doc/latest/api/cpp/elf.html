@@ -286,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/9974da2" class="text-darkblue">0.11.0-9974da2</a>
+  <a href="https://github.com/lief-project/LIEF/commits/10c5b0a" class="text-darkblue">0.12.0-10c5b0a</a>
     <br>
-    Last updated on 18/01/2021, 17:20:30.
+    Last updated on 21/02/2021, 18:04:44.
 </div>
 
 
@@ -754,7 +754,7 @@
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF3ELF6Binary9imagebaseEv">
-<span id="_CPPv3NK4LIEF3ELF6Binary9imagebaseEv"></span><span id="_CPPv2NK4LIEF3ELF6Binary9imagebaseEv"></span><span id="LIEF::ELF::Binary::imagebase__voidC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a9402ee5074bdfc9d0bea8a9091113f52"></span>uint64_t <code class="sig-name descname">imagebase</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary9imagebaseEv" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3NK4LIEF3ELF6Binary9imagebaseEv"></span><span id="_CPPv2NK4LIEF3ELF6Binary9imagebaseEv"></span><span id="LIEF::ELF::Binary::imagebase__voidC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a379f818a59c79ffbbdaa0175ea7f5c26"></span>uint64_t <code class="sig-name descname">imagebase</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary9imagebaseEv" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Return program image base. For instance 0x40000. </p>
 <p>To compute the image base, we look for the PT_PHDR segment header (phdr), and we return phdr-&gt;p_vaddr - phdr-&gt;p_offset </p>
 </dd></dl>
@@ -1060,6 +1060,19 @@
 <dt id="_CPPv4NK4LIEF3ELF6Binary25virtual_address_to_offsetE8uint64_t">
 <span id="_CPPv3NK4LIEF3ELF6Binary25virtual_address_to_offsetE8uint64_t"></span><span id="_CPPv2NK4LIEF3ELF6Binary25virtual_address_to_offsetE8uint64_t"></span><span id="LIEF::ELF::Binary::virtual_address_to_offset__uint64_tC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1aa211313ac8dcee2386c14b95d888d11f"></span>uint64_t <code class="sig-name descname">virtual_address_to_offset</code><span class="sig-paren">(</span>uint64_t <em>virtual_address</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary25virtual_address_to_offsetE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Convert a virtual address to an offset in the file. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK4LIEF3ELF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t">
+<span id="_CPPv3NK4LIEF3ELF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="_CPPv2NK4LIEF3ELF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="LIEF::ELF::Binary::offset_to_virtual_address__uint64_t.uint64_tC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a955f935049f7b5a7f5962627da977e9a"></span>uint64_t <code class="sig-name descname">offset_to_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>offset</em>, uint64_t <em>slide</em> = 0<span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary25offset_to_virtual_addressE8uint64_t8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Convert the given offset into a virtual address. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">offset</span></code>: The offset to convert. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">slide</span></code>: If not 0, it will replace the default base address (if any) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF3ELF6Binary6is_pieEv">

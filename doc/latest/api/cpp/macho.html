@@ -286,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/9974da2" class="text-darkblue">0.11.0-9974da2</a>
+  <a href="https://github.com/lief-project/LIEF/commits/10c5b0a" class="text-darkblue">0.12.0-10c5b0a</a>
     <br>
-    Last updated on 18/01/2021, 17:20:30.
+    Last updated on 21/02/2021, 18:04:44.
 </div>
 
 
@@ -511,6 +511,11 @@
 </dd>
 </dl>
 </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N4LIEF5MachO9FatBinary4takeE9CPU_TYPES">
+<span id="_CPPv3N4LIEF5MachO9FatBinary4takeE9CPU_TYPES"></span><span id="_CPPv2N4LIEF5MachO9FatBinary4takeE9CPU_TYPES"></span><span id="LIEF::MachO::FatBinary::take__CPU_TYPES"></span><span class="target" id="classLIEF_1_1MachO_1_1FatBinary_1a94d1db0463e4700dd6fd9145c49b7c11"></span>std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4N4LIEF5MachO6BinaryE" title="LIEF::MachO::Binary">Binary</a>&gt; <code class="sig-name descname">take</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF5MachO9CPU_TYPESE" title="LIEF::MachO::CPU_TYPES">CPU_TYPES</a> <em>cpu</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF5MachO9FatBinary4takeE9CPU_TYPES" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Take the underlying <a class="reference internal" href="#classLIEF_1_1MachO_1_1Binary"><span class="std std-ref">MachO::Binary</span></a> that matches the given architecture If no binary with the architecture can be found, return a nullptr. </p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF5MachO9FatBinary5writeERKNSt6stringE">
@@ -769,7 +774,7 @@
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF5MachO6Binary9imagebaseEv">
-<span id="_CPPv3NK4LIEF5MachO6Binary9imagebaseEv"></span><span id="_CPPv2NK4LIEF5MachO6Binary9imagebaseEv"></span><span id="LIEF::MachO::Binary::imagebase__voidC"></span><span class="target" id="classLIEF_1_1MachO_1_1Binary_1a3bb32cda544f4862540ae6e4506ffd09"></span>uint64_t <code class="sig-name descname">imagebase</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF5MachO6Binary9imagebaseEv" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3NK4LIEF5MachO6Binary9imagebaseEv"></span><span id="_CPPv2NK4LIEF5MachO6Binary9imagebaseEv"></span><span id="LIEF::MachO::Binary::imagebase__voidC"></span><span class="target" id="classLIEF_1_1MachO_1_1Binary_1a1e931b987699de20985f79998ed401b8"></span>uint64_t <code class="sig-name descname">imagebase</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF5MachO6Binary9imagebaseEv" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Return binary’s imagebase. <code class="docutils literal notranslate"><span class="pre">0</span></code> if not relevant. </p>
 </dd></dl>
 <dl class="cpp function">
@@ -862,6 +867,19 @@
 <dt id="_CPPv4NK4LIEF5MachO6Binary25virtual_address_to_offsetE8uint64_t">
 <span id="_CPPv3NK4LIEF5MachO6Binary25virtual_address_to_offsetE8uint64_t"></span><span id="_CPPv2NK4LIEF5MachO6Binary25virtual_address_to_offsetE8uint64_t"></span><span id="LIEF::MachO::Binary::virtual_address_to_offset__uint64_tC"></span><span class="target" id="classLIEF_1_1MachO_1_1Binary_1a03d9e0801c196af63d54e4f1302e7f96"></span>uint64_t <code class="sig-name descname">virtual_address_to_offset</code><span class="sig-paren">(</span>uint64_t <em>virtualAddress</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF5MachO6Binary25virtual_address_to_offsetE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Convert a virtual address to an offset in the file. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK4LIEF5MachO6Binary25offset_to_virtual_addressE8uint64_t8uint64_t">
+<span id="_CPPv3NK4LIEF5MachO6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="_CPPv2NK4LIEF5MachO6Binary25offset_to_virtual_addressE8uint64_t8uint64_t"></span><span id="LIEF::MachO::Binary::offset_to_virtual_address__uint64_t.uint64_tC"></span><span class="target" id="classLIEF_1_1MachO_1_1Binary_1aa3b9a9ed601c2e3d9a8fd6307196f889"></span>uint64_t <code class="sig-name descname">offset_to_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>offset</em>, uint64_t <em>slide</em> = 0<span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF5MachO6Binary25offset_to_virtual_addressE8uint64_t8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Convert the given offset into a virtual address. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">offset</span></code>: The offset to convert. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">slide</span></code>: If not 0, it will replace the default base address (if any) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF5MachO6Binary19segment_from_offsetE8uint64_t">
@@ -2631,6 +2649,23 @@
 <dd><p>LC_DYLD_INFO and LC_DYLD_INFO_ONLY command model. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp enum">
+<dt id="_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSIONE">
+<span id="_CPPv3N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSIONE"></span><span id="_CPPv2N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSIONE"></span><span class="target" id="classLIEF_1_1MachO_1_1DyldInfo_1a79807d50422eaaad0b26192500ebab90"></span><em class="property">enum </em><code class="sig-name descname">BINDING_ENCODING_VERSION</code><a class="headerlink" href="#_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSIONE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION7UNKNOWNE">
+<span id="_CPPv3N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION7UNKNOWNE"></span><span id="_CPPv2N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION7UNKNOWNE"></span><span class="target" id="classLIEF_1_1MachO_1_1DyldInfo_1a79807d50422eaaad0b26192500ebab90a696b031073e74bf2cb98e5ef201d4aa3"></span><em class="property">enumerator </em><code class="sig-name descname">UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION7UNKNOWNE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V1E">
+<span id="_CPPv3N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V1E"></span><span id="_CPPv2N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V1E"></span><span class="target" id="classLIEF_1_1MachO_1_1DyldInfo_1a79807d50422eaaad0b26192500ebab90ab4daca084ad9eabfc8de231929477ed6"></span><em class="property">enumerator </em><code class="sig-name descname">V1</code><a class="headerlink" href="#_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V1E" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V2E">
+<span id="_CPPv3N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V2E"></span><span id="_CPPv2N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V2E"></span><span class="target" id="classLIEF_1_1MachO_1_1DyldInfo_1a79807d50422eaaad0b26192500ebab90aec765f1adc3b4253f2d3b131a4a8618f"></span><em class="property">enumerator </em><code class="sig-name descname">V2</code><a class="headerlink" href="#_CPPv4N4LIEF5MachO8DyldInfo24BINDING_ENCODING_VERSION2V2E" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+</dd></dl>
 <dl class="cpp type">
 <dt id="_CPPv4N4LIEF5MachO8DyldInfo6info_tE">
 <span id="_CPPv3N4LIEF5MachO8DyldInfo6info_tE"></span><span id="_CPPv2N4LIEF5MachO8DyldInfo6info_tE"></span><span class="target" id="classLIEF_1_1MachO_1_1DyldInfo_1abc4f52a37d40b7f0db06163294c191d1"></span><em class="property">using </em><code class="sig-name descname">info_t</code> = std::pair&lt;uint32_t, uint32_t&gt;<a class="headerlink" href="#_CPPv4N4LIEF5MachO8DyldInfo6info_tE" title="Permalink to this definition">¶</a><br/></dt>
@@ -5868,6 +5903,10 @@
 <dt id="_CPPv4N4LIEF5MachO12REBASE_TYPES24REBASE_TYPE_TEXT_PCREL32E">
 <span id="_CPPv3N4LIEF5MachO12REBASE_TYPES24REBASE_TYPE_TEXT_PCREL32E"></span><span id="_CPPv2N4LIEF5MachO12REBASE_TYPES24REBASE_TYPE_TEXT_PCREL32E"></span><span class="target" id="namespaceLIEF_1_1MachO_1aa54f2a9a50954d78aa035598b830c6b9a240b4385d4d9843a2bc04fd467777c3b"></span><em class="property">enumerator </em><code class="sig-name descname">REBASE_TYPE_TEXT_PCREL32</code> = 3u<a class="headerlink" href="#_CPPv4N4LIEF5MachO12REBASE_TYPES24REBASE_TYPE_TEXT_PCREL32E" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO12REBASE_TYPES20REBASE_TYPE_THREADEDE">
+<span id="_CPPv3N4LIEF5MachO12REBASE_TYPES20REBASE_TYPE_THREADEDE"></span><span id="_CPPv2N4LIEF5MachO12REBASE_TYPES20REBASE_TYPE_THREADEDE"></span><span class="target" id="namespaceLIEF_1_1MachO_1aa54f2a9a50954d78aa035598b830c6b9aa70b39894e17e7dbb95868a75da27b27"></span><em class="property">enumerator </em><code class="sig-name descname">REBASE_TYPE_THREADED</code> = 102u<a class="headerlink" href="#_CPPv4N4LIEF5MachO12REBASE_TYPES20REBASE_TYPE_THREADEDE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
 </dd></dl>
 <dl class="cpp enum">
 <dt id="_CPPv4N4LIEF5MachO13BINDING_CLASSE">
@@ -5885,6 +5924,10 @@
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_STANDARDE">
 <span id="_CPPv3N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_STANDARDE"></span><span id="_CPPv2N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_STANDARDE"></span><span class="target" id="namespaceLIEF_1_1MachO_1a07330888f1db2b0581c2a277dee7772badeb4b5d53c6bff439979f3d9dcb55f1a"></span><em class="property">enumerator </em><code class="sig-name descname">BIND_CLASS_STANDARD</code> = 3u<a class="headerlink" href="#_CPPv4N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_STANDARDE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_THREADEDE">
+<span id="_CPPv3N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_THREADEDE"></span><span id="_CPPv2N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_THREADEDE"></span><span class="target" id="namespaceLIEF_1_1MachO_1a07330888f1db2b0581c2a277dee7772bacdd801f99b10e69a9b629bce67b24d80"></span><em class="property">enumerator </em><code class="sig-name descname">BIND_CLASS_THREADED</code> = 100u<a class="headerlink" href="#_CPPv4N4LIEF5MachO13BINDING_CLASS19BIND_CLASS_THREADEDE" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </dd></dl>
 <dl class="cpp enum">
@@ -6042,6 +6085,18 @@
 <span id="_CPPv3N4LIEF5MachO12BIND_OPCODES44BIND_OPCODE_DO_BIND_ULEB_TIMES_SKIPPING_ULEBE"></span><span id="_CPPv2N4LIEF5MachO12BIND_OPCODES44BIND_OPCODE_DO_BIND_ULEB_TIMES_SKIPPING_ULEBE"></span><span class="target" id="namespaceLIEF_1_1MachO_1af0a8e6ea7926011902a441f7700e7663a40e63ec21ddf67bb79299b6a73418763"></span><em class="property">enumerator </em><code class="sig-name descname">BIND_OPCODE_DO_BIND_ULEB_TIMES_SKIPPING_ULEB</code> = 0xC0u<a class="headerlink" href="#_CPPv4N4LIEF5MachO12BIND_OPCODES44BIND_OPCODE_DO_BIND_ULEB_TIMES_SKIPPING_ULEBE" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Perform binding for several symbols (as following ULEB128), and skip several bytes. </p>
 </dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO12BIND_OPCODES20BIND_OPCODE_THREADEDE">
+<span id="_CPPv3N4LIEF5MachO12BIND_OPCODES20BIND_OPCODE_THREADEDE"></span><span id="_CPPv2N4LIEF5MachO12BIND_OPCODES20BIND_OPCODE_THREADEDE"></span><span class="target" id="namespaceLIEF_1_1MachO_1af0a8e6ea7926011902a441f7700e7663af3445df7f47bfc1d3cea17aa839e7b49"></span><em class="property">enumerator </em><code class="sig-name descname">BIND_OPCODE_THREADED</code> = 0xD0u<a class="headerlink" href="#_CPPv4N4LIEF5MachO12BIND_OPCODES20BIND_OPCODE_THREADEDE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO12BIND_OPCODES26BIND_OPCODE_THREADED_APPLYE">
+<span id="_CPPv3N4LIEF5MachO12BIND_OPCODES26BIND_OPCODE_THREADED_APPLYE"></span><span id="_CPPv2N4LIEF5MachO12BIND_OPCODES26BIND_OPCODE_THREADED_APPLYE"></span><span class="target" id="namespaceLIEF_1_1MachO_1af0a8e6ea7926011902a441f7700e7663ab0e4d5da8d7a4a8dc30e95c2884fd439"></span><em class="property">enumerator </em><code class="sig-name descname">BIND_OPCODE_THREADED_APPLY</code> = 0xD0u | 0x01u<a class="headerlink" href="#_CPPv4N4LIEF5MachO12BIND_OPCODES26BIND_OPCODE_THREADED_APPLYE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF5MachO12BIND_OPCODES53BIND_OPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEBE">
+<span id="_CPPv3N4LIEF5MachO12BIND_OPCODES53BIND_OPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEBE"></span><span id="_CPPv2N4LIEF5MachO12BIND_OPCODES53BIND_OPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEBE"></span><span class="target" id="namespaceLIEF_1_1MachO_1af0a8e6ea7926011902a441f7700e7663a4777bea1ea3edd34204bf554222d6147"></span><em class="property">enumerator </em><code class="sig-name descname">BIND_OPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEB</code> = 0xD0u | 0x00u<a class="headerlink" href="#_CPPv4N4LIEF5MachO12BIND_OPCODES53BIND_OPCODE_THREADED_SET_BIND_ORDINAL_TABLE_SIZE_ULEBE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
 </dd></dl>
 <dl class="cpp enum">
 <dt id="_CPPv4N4LIEF5MachO19EXPORT_SYMBOL_KINDSE">
