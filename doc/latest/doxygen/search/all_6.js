@@ -35,7 +35,7 @@ var searchData=
   ['get_5fsegment_1034',['get_segment',['../classLIEF_1_1MachO_1_1Binary.html#a9d7ec46d747faf69b7eafed516ea4265',1,'LIEF::MachO::Binary']]],
   ['get_5fstatic_5fsymbol_1035',['get_static_symbol',['../classLIEF_1_1ELF_1_1Binary.html#a2d86f7080827c6ed45eb04cdf11bd6ef',1,'LIEF::ELF::Binary']]],
   ['get_5fsublangs_5favailable_1036',['get_sublangs_available',['../classLIEF_1_1PE_1_1ResourcesManager.html#a06f9207d7833c5efe997bea47d9cd5b7',1,'LIEF::PE::ResourcesManager']]],
-  ['get_5fsymbol_1037',['get_symbol',['../classLIEF_1_1MachO_1_1Binary.html#af0ec00544748ba662945d3ea8564422f',1,'LIEF::MachO::Binary::get_symbol()'],['../classLIEF_1_1Binary.html#ad6db8461cef9b4f5f8c0b55523afb221',1,'LIEF::Binary::get_symbol()']]],
+  ['get_5fsymbol_1037',['get_symbol',['../classLIEF_1_1MachO_1_1Binary.html#a16def7734cbf5dd865f669b70dc7608d',1,'LIEF::MachO::Binary::get_symbol()'],['../classLIEF_1_1Binary.html#ad6db8461cef9b4f5f8c0b55523afb221',1,'LIEF::Binary::get_symbol()']]],
   ['get_5ftype_1038',['get_type',['../namespaceLIEF_1_1PE.html#ac966c50a1d43bbc6e241cdb171621737',1,'LIEF::PE::get_type(const std::string &amp;file)'],['../namespaceLIEF_1_1PE.html#acf9b50e27e3b81632b4fc629b7270caa',1,'LIEF::PE::get_type(const std::vector&lt; uint8_t &gt; &amp;raw)']]],
   ['get_5ftypes_5favailable_1039',['get_types_available',['../classLIEF_1_1PE_1_1ResourcesManager.html#a1fc11cbaa8fe8dfba89f229432610fca',1,'LIEF::PE::ResourcesManager']]],
   ['get_5funauth_5fattribute_1040',['get_unauth_attribute',['../classLIEF_1_1PE_1_1SignerInfo.html#a8d81d1d9a099b5a0048fe42beb091f2d',1,'LIEF::PE::SignerInfo']]],
