@@ -8,8 +8,8 @@ var searchData=
   ['key_5fto_5fstring_1364',['key_to_string',['../classLIEF_1_1OAT_1_1Header.html#a89ef2294d94a08fb071b42b230f16166',1,'LIEF::OAT::Header']]],
   ['key_5ftype_1365',['key_type',['../classLIEF_1_1PE_1_1x509.html#a85d5fd015bb6780b4d8b5568d7f76e84',1,'LIEF::PE::x509']]],
   ['key_5ftypes_1366',['KEY_TYPES',['../classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000',1,'LIEF::PE::x509']]],
-  ['key_5fusage_1367',['key_usage',['../classLIEF_1_1PE_1_1x509.html#a1ff5973bfccbf9e4dadf8dcc32a4aa22',1,'LIEF::PE::x509']]],
-  ['key_5fusage_1368',['KEY_USAGE',['../classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66',1,'LIEF::PE::x509']]],
+  ['key_5fusage_1367',['KEY_USAGE',['../classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66',1,'LIEF::PE::x509']]],
+  ['key_5fusage_1368',['key_usage',['../classLIEF_1_1PE_1_1x509.html#a1ff5973bfccbf9e4dadf8dcc32a4aa22',1,'LIEF::PE::x509']]],
   ['keycmp_1369',['KeyCmp',['../structLIEF_1_1MachO_1_1KeyCmp.html',1,'LIEF::MachO']]],
   ['keys_5ft_1370',['keys_t',['../classLIEF_1_1OAT_1_1Header.html#aa531b9673d988e6a1b657867e14d12be',1,'LIEF::OAT::Header']]]
 ];

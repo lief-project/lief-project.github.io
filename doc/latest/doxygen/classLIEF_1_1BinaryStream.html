@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classLIEF_1_1BinaryStream-members.html">List of all members</a>  </div>
@@ -80,15 +81,27 @@ Inheritance diagram for LIEF::BinaryStream:</div>
  <div class="center">
   <img src="classLIEF_1_1BinaryStream.png" usemap="#LIEF::BinaryStream_map" alt=""/>
   <map id="LIEF::BinaryStream_map" name="LIEF::BinaryStream_map">
-<area href="classLIEF_1_1VectorStream.html" alt="LIEF::VectorStream" shape="rect" coords="0,56,121,80"/>
+<area href="classLIEF_1_1MemoryStream.html" alt="LIEF::MemoryStream" shape="rect" coords="0,56,129,80"/>
+<area href="classLIEF_1_1VectorStream.html" alt="LIEF::VectorStream" shape="rect" coords="139,56,268,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a07800f380086544fe9d770b25420a5a6"><td class="memItemLeft" align="right" valign="top"><a id="a07800f380086544fe9d770b25420a5a6"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_TYPE</b> { <b>UNKNOWN</b> = 0
+, <b>FILE</b>
+, <b>MEMORY</b>
+ }</td></tr>
+<tr class="separator:a07800f380086544fe9d770b25420a5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6902ef2135c6c79f2b40b656cb250ee"><td class="memItemLeft" align="right" valign="top"><a id="ad6902ef2135c6c79f2b40b656cb250ee"></a>
 virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> (void) const =0</td></tr>
 <tr class="separator:ad6902ef2135c6c79f2b40b656cb250ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a03dfbbf1a8428b86d4d32d7bbe6d0"><td class="memItemLeft" align="right" valign="top"><a id="a11a03dfbbf1a8428b86d4d32d7bbe6d0"></a>
+virtual STREAM_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () const =0</td></tr>
+<tr class="separator:a11a03dfbbf1a8428b86d4d32d7bbe6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb92ffb2b8422805e50afd19b19d0f8e"><td class="memItemLeft" align="right" valign="top"><a id="afb92ffb2b8422805e50afd19b19d0f8e"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_uleb128</b> (void) const</td></tr>
 <tr class="separator:afb92ffb2b8422805e50afd19b19d0f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -127,6 +127,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1BinaryStream.html">BinaryStream</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MemoryStream.html">MemoryStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1VectorStream.html">VectorStream</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1exception.html">exception</a></td></tr>
@@ -328,6 +330,17 @@ Enumerations</h2></td></tr>
 , <b>ENDIAN_LITTLE</b> = 2
  }</td></tr>
 <tr class="separator:aeb2d22c6a3d6c904db8549c4410c9873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b86e1cfbfccb1239252cfcb64ec4bd"><td class="memItemLeft" align="right" valign="top"><a id="af8b86e1cfbfccb1239252cfcb64ec4bd"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>PLATFORMS</b> { <br />
+&#160;&#160;<b>UNKNOWN</b> = 0
+, <b>LINUX</b>
+, <b>ANDROID</b>
+, <b>WINDOWS</b>
+, <br />
+&#160;&#160;<b>IOS</b>
+, <b>OSX</b>
+<br />
+ }</td></tr>
+<tr class="separator:af8b86e1cfbfccb1239252cfcb64ec4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -373,6 +386,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>hash</b> (const <a 
 <tr class="memitem:a1b4e19ab768c54d8b5df91808258392d"><td class="memItemLeft" align="right" valign="top"><a id="a1b4e19ab768c54d8b5df91808258392d"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>hash</b> (const std::vector&lt; uint8_t &gt; &amp;raw)</td></tr>
 <tr class="separator:a1b4e19ab768c54d8b5df91808258392d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa92cd5b1ce037063e1ff351fc53a3009"><td class="memItemLeft" align="right" valign="top"><a id="aa92cd5b1ce037063e1ff351fc53a3009"></a>
+constexpr PLATFORMS&#160;</td><td class="memItemRight" valign="bottom"><b>current_platform</b> ()</td></tr>
+<tr class="separator:aa92cd5b1ce037063e1ff351fc53a3009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17dd2c8831ebf7cd7e134f30d9365579"><td class="memItemLeft" align="right" valign="top"><a id="a17dd2c8831ebf7cd7e134f30d9365579"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>align</b> (uint64_t value, uint64_t align_on)</td></tr>
 <tr class="separator:a17dd2c8831ebf7cd7e134f30d9365579"><td class="memSeparator" colspan="2">&#160;</td></tr>
