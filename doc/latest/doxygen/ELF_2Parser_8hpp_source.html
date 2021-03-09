@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>VectorStream;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>BinaryStream;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1OAT.html">   30</a></span>&#160;<span class="keyword">namespace </span>OAT {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="code" href="classLIEF_1_1OAT_1_1Parser.html">Parser</a>;</div>
@@ -224,7 +224,7 @@ $(function() {
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ELF_T, <span class="keyword">typename</span> REL_T&gt;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  uint32_t max_relocation_index(uint64_t relocations_offset, uint64_t size) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  std::unique_ptr&lt;VectorStream&gt; stream_;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  std::unique_ptr&lt;BinaryStream&gt; stream_;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <a class="code" href="classLIEF_1_1ELF_1_1Binary.html">Binary</a>*                       binary_{<span class="keyword">nullptr</span>};</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <a class="code" href="namespaceLIEF_1_1ELF.html#ac826455232b8418ac454be46782890aa">ELF_CLASS</a>                     type_;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <a class="code" href="namespaceLIEF_1_1ELF.html#a7156032b2f27ddbce7498994632fa880">DYNSYM_COUNT_METHODS</a>          count_mtd_;</div>
