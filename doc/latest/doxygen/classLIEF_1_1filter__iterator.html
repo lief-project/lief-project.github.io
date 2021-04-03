@@ -145,26 +145,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="e
 <tr class="memitem:a6757bea4b3f287f194f5711a2bd20a08"><td class="memItemLeft" align="right" valign="top"><a id="a6757bea4b3f287f194f5711a2bd20a08"></a>
 <a class="el" href="classLIEF_1_1filter__iterator.html">filter_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> (void) const</td></tr>
 <tr class="separator:a6757bea4b3f287f194f5711a2bd20a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e70acfdbf43df07cf53a0f2eae39ed0"><td class="memItemLeft" align="right" valign="top"><a id="a4e70acfdbf43df07cf53a0f2eae39ed0"></a>
-std::enable_if&lt; not std::is_const&lt; ref_t &gt;::value, remove_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> ()</td></tr>
-<tr class="separator:a4e70acfdbf43df07cf53a0f2eae39ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5f7f322a2081b583622a8066b8f132"><td class="memItemLeft" align="right" valign="top"><a id="a4c5f7f322a2081b583622a8066b8f132"></a>
+std::enable_if&lt;!std::is_const&lt; ref_t &gt;::value, remove_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> ()</td></tr>
+<tr class="separator:a4c5f7f322a2081b583622a8066b8f132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cd7893308a744f22d78c5706551b976"><td class="memTemplParams" colspan="2"><a id="a9cd7893308a744f22d78c5706551b976"></a>
 template&lt;typename U  = typename DT::value_type&gt; </td></tr>
 <tr class="memitem:a9cd7893308a744f22d78c5706551b976"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_pointer&lt; U &gt;::value, add_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
 <tr class="separator:a9cd7893308a744f22d78c5706551b976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5edeb3f3fcb2e70ce149c7f1fa1cd9ed"><td class="memTemplParams" colspan="2"><a id="a5edeb3f3fcb2e70ce149c7f1fa1cd9ed"></a>
+<tr class="memitem:acd30b3192b0b0131b1ad3d190d7a69c3"><td class="memTemplParams" colspan="2"><a id="acd30b3192b0b0131b1ad3d190d7a69c3"></a>
 template&lt;typename U  = typename DT::value_type&gt; </td></tr>
-<tr class="memitem:a5edeb3f3fcb2e70ce149c7f1fa1cd9ed"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; not std::is_pointer&lt; U &gt;::value, add_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
-<tr class="separator:a5edeb3f3fcb2e70ce149c7f1fa1cd9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af121130342b847665a190c2027130789"><td class="memItemLeft" align="right" valign="top"><a id="af121130342b847665a190c2027130789"></a>
-std::enable_if&lt; not std::is_const&lt; ref_t &gt;::value, remove_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t n)</td></tr>
-<tr class="separator:af121130342b847665a190c2027130789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd30b3192b0b0131b1ad3d190d7a69c3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_pointer&lt; U &gt;::value, add_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
+<tr class="separator:acd30b3192b0b0131b1ad3d190d7a69c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04a48b2a41ac4d56e0f1f64186ded96"><td class="memItemLeft" align="right" valign="top"><a id="ab04a48b2a41ac4d56e0f1f64186ded96"></a>
+std::enable_if&lt;!std::is_const&lt; ref_t &gt;::value, remove_const_t&lt; ref_t &gt; &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t n)</td></tr>
+<tr class="separator:ab04a48b2a41ac4d56e0f1f64186ded96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40e9c4ee5fc14ba2768545491dc401f2"><td class="memItemLeft" align="right" valign="top"><a id="a40e9c4ee5fc14ba2768545491dc401f2"></a>
 add_const_t&lt; ref_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t n) const</td></tr>
 <tr class="separator:a40e9c4ee5fc14ba2768545491dc401f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad82e40ffa80571ed164aab242366c9a5"><td class="memItemLeft" align="right" valign="top"><a id="ad82e40ffa80571ed164aab242366c9a5"></a>
-std::enable_if&lt; not std::is_const&lt; pointer_t &gt;::value, pointer_t &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> ()</td></tr>
-<tr class="separator:ad82e40ffa80571ed164aab242366c9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a439516dd7e9300f421e69670b15938ad"><td class="memItemLeft" align="right" valign="top"><a id="a439516dd7e9300f421e69670b15938ad"></a>
+std::enable_if&lt;!std::is_const&lt; pointer_t &gt;::value, pointer_t &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> ()</td></tr>
+<tr class="separator:a439516dd7e9300f421e69670b15938ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fe9cef7013768f32361d57cfe183574"><td class="memItemLeft" align="right" valign="top"><a id="a8fe9cef7013768f32361d57cfe183574"></a>
 add_const_t&lt; pointer_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const</td></tr>
 <tr class="separator:a8fe9cef7013768f32361d57cfe183574"><td class="memSeparator" colspan="2">&#160;</td></tr>

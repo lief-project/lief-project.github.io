@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">enum class</span> PLATFORMS {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  UNKNOWN = 0,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  LINUX,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  ANDROID,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  ANDROID_PLAT,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  WINDOWS,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  IOS,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  OSX,</div>
@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;constexpr PLATFORMS current_platform() {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#if defined(__ANDROID__)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> PLATFORMS::ANDROID;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> PLATFORMS::ANDROID_PLAT;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#elif defined(__linux__)</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> PLATFORMS::LINUX;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#elif defined(_WIN64) || defined(_WIN32)</span></div>
