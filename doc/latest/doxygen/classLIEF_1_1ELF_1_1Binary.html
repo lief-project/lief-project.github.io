@@ -267,6 +267,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a74482daa8ef85809e2cc00bfb9bb090a"><td class="memItemLeft" align="right" valign="top"><a id="a74482daa8ef85809e2cc00bfb9bb090a"></a>
 <a class="el" href="classLIEF_1_1ELF_1_1Relocation.html">Relocation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>add_pltgot_relocation</b> (const <a class="el" href="classLIEF_1_1ELF_1_1Relocation.html">Relocation</a> &amp;relocation)</td></tr>
 <tr class="separator:a74482daa8ef85809e2cc00bfb9bb090a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1008679b4443ccd91347c85146ed9b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1ELF_1_1Relocation.html">Relocation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a1008679b4443ccd91347c85146ed9b83">add_object_relocation</a> (const <a class="el" href="classLIEF_1_1ELF_1_1Relocation.html">Relocation</a> &amp;relocation, const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;section)</td></tr>
+<tr class="memdesc:a1008679b4443ccd91347c85146ed9b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add relocation for object file (.o)  <a href="classLIEF_1_1ELF_1_1Binary.html#a1008679b4443ccd91347c85146ed9b83">More...</a><br /></td></tr>
+<tr class="separator:a1008679b4443ccd91347c85146ed9b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc4dd80d375c7ea846341a056f09b7d2"><td class="memItemLeft" align="right" valign="top"><a id="adc4dd80d375c7ea846341a056f09b7d2"></a>
 <a class="el" href="classLIEF_1_1filter__iterator.html">it_pltgot_relocations</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#adc4dd80d375c7ea846341a056f09b7d2">pltgot_relocations</a> (void)</td></tr>
 <tr class="memdesc:adc4dd80d375c7ea846341a056f09b7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>plt.got</code> relocations. <br /></td></tr>
@@ -527,20 +530,18 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#adeb9fdab4046deb6b4983c57afd48dbe">has_nx</a> (void) const override</td></tr>
 <tr class="memdesc:adeb9fdab4046deb6b4983c57afd48dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the binary uses <code>NX</code> protection. <br /></td></tr>
 <tr class="separator:adeb9fdab4046deb6b4983c57afd48dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bb7680362e050e402b6dc79c09976ab"><td class="memItemLeft" align="right" valign="top"><a id="a4bb7680362e050e402b6dc79c09976ab"></a>
-const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a4bb7680362e050e402b6dc79c09976ab">section_from_offset</a> (uint64_t offset) const</td></tr>
-<tr class="memdesc:a4bb7680362e050e402b6dc79c09976ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section </a> from the <code>offset</code>. <br /></td></tr>
-<tr class="separator:a4bb7680362e050e402b6dc79c09976ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12abfbee3cf5caf62cad3cdbcd520e79"><td class="memItemLeft" align="right" valign="top"><a id="a12abfbee3cf5caf62cad3cdbcd520e79"></a>
-<a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>section_from_offset</b> (uint64_t offset)</td></tr>
-<tr class="separator:a12abfbee3cf5caf62cad3cdbcd520e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25cff3d2ba76d67156453cf31489d9f4"><td class="memItemLeft" align="right" valign="top"><a id="a25cff3d2ba76d67156453cf31489d9f4"></a>
-const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a25cff3d2ba76d67156453cf31489d9f4">section_from_virtual_address</a> (uint64_t address) const</td></tr>
-<tr class="memdesc:a25cff3d2ba76d67156453cf31489d9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section </a> from the <code>address</code>. <br /></td></tr>
-<tr class="separator:a25cff3d2ba76d67156453cf31489d9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f286d8d46ef98e93086081bfcba7a5f"><td class="memItemLeft" align="right" valign="top"><a id="a9f286d8d46ef98e93086081bfcba7a5f"></a>
-<a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>section_from_virtual_address</b> (uint64_t address)</td></tr>
-<tr class="separator:a9f286d8d46ef98e93086081bfcba7a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4882135237158779645acc9b44444f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a2e4882135237158779645acc9b44444f">section_from_offset</a> (uint64_t offset, bool skip_nobits=true) const</td></tr>
+<tr class="memdesc:a2e4882135237158779645acc9b44444f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section </a> from the <code>offset</code>.  <a href="classLIEF_1_1ELF_1_1Binary.html#a2e4882135237158779645acc9b44444f">More...</a><br /></td></tr>
+<tr class="separator:a2e4882135237158779645acc9b44444f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b1d5271d1becc451592fa0d61b1dd3"><td class="memItemLeft" align="right" valign="top"><a id="ac0b1d5271d1becc451592fa0d61b1dd3"></a>
+<a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>section_from_offset</b> (uint64_t offset, bool skip_nobits=true)</td></tr>
+<tr class="separator:ac0b1d5271d1becc451592fa0d61b1dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2dacd39a0dc0d4c85644573e3ca735"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#afe2dacd39a0dc0d4c85644573e3ca735">section_from_virtual_address</a> (uint64_t address, bool skip_nobits=true) const</td></tr>
+<tr class="memdesc:afe2dacd39a0dc0d4c85644573e3ca735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section </a> from the <code>address</code>.  <a href="classLIEF_1_1ELF_1_1Binary.html#afe2dacd39a0dc0d4c85644573e3ca735">More...</a><br /></td></tr>
+<tr class="separator:afe2dacd39a0dc0d4c85644573e3ca735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530a941c05ee6c4533133e810f1c1978"><td class="memItemLeft" align="right" valign="top"><a id="a530a941c05ee6c4533133e810f1c1978"></a>
+<a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>section_from_virtual_address</b> (uint64_t address, bool skip_nobits=true)</td></tr>
+<tr class="separator:a530a941c05ee6c4533133e810f1c1978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8809e3ccd439e3a3ac6be9a231739eb"><td class="memItemLeft" align="right" valign="top"><a id="aa8809e3ccd439e3a3ac6be9a231739eb"></a>
 const <a class="el" href="classLIEF_1_1ELF_1_1Segment.html">Segment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1Binary.html#aa8809e3ccd439e3a3ac6be9a231739eb">segment_from_virtual_address</a> (uint64_t address) const</td></tr>
 <tr class="memdesc:aa8809e3ccd439e3a3ac6be9a231739eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1ELF_1_1Segment.html">Segment </a> from the <code>address</code>. <br /></td></tr>
@@ -872,6 +873,38 @@ template&lt;class T &gt; </td></tr>
 <p>Add a new segment in the binary. </p>
 <p>The segment is inserted at the end </p><dl class="section warning"><dt>Warning</dt><dd>We assume that the binary is not position independent</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The segment added. <code>Virtual address</code> and <code>File Offset</code>&#160;may have changed </dd></dl>
+
+</div>
+</div>
+<a id="a1008679b4443ccd91347c85146ed9b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1008679b4443ccd91347c85146ed9b83">&#9670;&nbsp;</a></span>add_object_relocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1ELF_1_1Relocation.html">Relocation</a>* LIEF::ELF::Binary::add_object_relocation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLIEF_1_1ELF_1_1Relocation.html">Relocation</a> &amp;&#160;</td>
+          <td class="paramname"><em>relocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a> &amp;&#160;</td>
+          <td class="paramname"><em>section</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add relocation for object file (.o) </p>
+<p>The first parameter is the section to add while the second parameter is the <a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represent sections.">LIEF::ELF::Section</a> associated with the relocation.</p>
+<p>If there is an error, this function return a nullptr. Otherwise, it returns the relocation added. </p>
 
 </div>
 </div>
@@ -1394,6 +1427,68 @@ template&lt;class T &gt; </td></tr>
 
 <p>Replace the segment given in 2nd parameter with the segment given in the first one and return the updated segment. </p>
 <dl class="section warning"><dt>Warning</dt><dd>.The <code>original_segment</code> is no longer valid after this function </dd></dl>
+
+</div>
+</div>
+<a id="a2e4882135237158779645acc9b44444f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4882135237158779645acc9b44444f">&#9670;&nbsp;</a></span>section_from_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a>&amp; LIEF::ELF::Binary::section_from_offset </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_nobits</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section </a> from the <code>offset</code>. </p>
+<p>If <code>skip_nobits</code> is set (which is the case by default), this function won't consider section whose type is <code>SHT_NOBITS</code> (like <code>.bss, .tbss, ...</code>) </p>
+
+</div>
+</div>
+<a id="afe2dacd39a0dc0d4c85644573e3ca735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2dacd39a0dc0d4c85644573e3ca735">&#9670;&nbsp;</a></span>section_from_virtual_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section</a>&amp; LIEF::ELF::Binary::section_from_virtual_address </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_nobits</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the <a class="el" href="classLIEF_1_1ELF_1_1Section.html">Section </a> from the <code>address</code>. </p>
+<p>If <code>skip_nobits</code> is set (which is the case by default), this function won't consider section whose type is <code>SHT_NOBITS</code> (like <code>.bss, .tbss, ...</code>) </p>
 
 </div>
 </div>

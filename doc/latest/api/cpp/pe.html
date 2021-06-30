@@ -286,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/3d4799a" class="text-darkblue">0.12.0-3d4799a</a>
+  <a href="https://github.com/lief-project/LIEF/commits/9a7636d" class="text-darkblue">0.12.0-9a7636d</a>
     <br>
-    Last updated on 22/05/2021, 09:21:41.
+    Last updated on 30/06/2021, 05:34:15.
 </div>
 
 
@@ -498,7 +498,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE6Binary10signaturesEv">
 <span id="_CPPv3NK4LIEF2PE6Binary10signaturesEv"></span><span id="_CPPv2NK4LIEF2PE6Binary10signaturesEv"></span><span id="LIEF::PE::Binary::signatures__voidC"></span><span class="target" id="classLIEF_1_1PE_1_1Binary_1a53b4fe91d33f2dc8bb5b6b913c9589ec"></span>it_const_signatures <code class="sig-name descname">signatures</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE6Binary10signaturesEv" title="Permalink to this definition">¶</a><br/></dt>
-<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1PE_1_1Signature"><span class="std std-ref">Signature</span></a> object(s) if the bianry is signed. </p>
+<dd><p>Return the <a class="reference internal" href="#classLIEF_1_1PE_1_1Signature"><span class="std std-ref">Signature</span></a> object(s) if the binary is signed. </p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE6Binary16verify_signatureEN9Signature19VERIFICATION_CHECKSE">
@@ -2046,7 +2046,7 @@
 <h2 id="import-entry">Import Entry<a class="headerlink" href="#import-entry" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp class">
 <dt id="_CPPv4N4LIEF2PE11ImportEntryE">
-<span id="_CPPv3N4LIEF2PE11ImportEntryE"></span><span id="_CPPv2N4LIEF2PE11ImportEntryE"></span><span id="LIEF::PE::ImportEntry"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry"></span><em class="property">class </em><code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::PE<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ImportEntry</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::Object<a class="headerlink" href="#_CPPv4N4LIEF2PE11ImportEntryE" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF2PE11ImportEntryE"></span><span id="_CPPv2N4LIEF2PE11ImportEntryE"></span><span id="LIEF::PE::ImportEntry"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry"></span><em class="property">class </em><code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::PE<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ImportEntry</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::Symbol<a class="headerlink" href="#_CPPv4N4LIEF2PE11ImportEntryE" title="Permalink to this definition">¶</a><br/></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
@@ -2103,14 +2103,10 @@
 <dd><p>Value of the current entry in the <a class="reference internal" href="#classLIEF_1_1PE_1_1Import"><span class="std std-ref">Import</span></a> Address Table. It should match the lookup table value. </p>
 </dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4NK4LIEF2PE11ImportEntry4nameEv">
-<span id="_CPPv3NK4LIEF2PE11ImportEntry4nameEv"></span><span id="_CPPv2NK4LIEF2PE11ImportEntry4nameEv"></span><span id="LIEF::PE::ImportEntry::name__voidC"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry_1ace4136073cfce7a48058fd97dc2b5e49"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ImportEntry4nameEv" title="Permalink to this definition">¶</a><br/></dt>
-<dd><p><a class="reference internal" href="#classLIEF_1_1PE_1_1Import"><span class="std std-ref">Import</span></a> name if not ordinal. </p>
-</dd></dl>
-<dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ImportEntry4dataEv">
 <span id="_CPPv3NK4LIEF2PE11ImportEntry4dataEv"></span><span id="_CPPv2NK4LIEF2PE11ImportEntry4dataEv"></span><span id="LIEF::PE::ImportEntry::data__voidC"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry_1a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a"></span>uint64_t <code class="sig-name descname">data</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ImportEntry4dataEv" title="Permalink to this definition">¶</a><br/></dt>
-<dd><p>Raw value. </p>
+<dd><p><a class="reference internal" href="#classLIEF_1_1PE_1_1Import"><span class="std std-ref">Import</span></a> name if not ordinal. </p>
+<p>Raw value </p>
 </dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ImportEntry11iat_addressEv">
@@ -2118,17 +2114,14 @@
 <dd><p><strong>Original</strong> address of the entry in the <a class="reference internal" href="#classLIEF_1_1PE_1_1Import"><span class="std std-ref">Import</span></a> Address Table </p>
 </dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4N4LIEF2PE11ImportEntry4nameERKNSt6stringE">
-<span id="_CPPv3N4LIEF2PE11ImportEntry4nameERKNSt6stringE"></span><span id="_CPPv2N4LIEF2PE11ImportEntry4nameERKNSt6stringE"></span><span id="LIEF::PE::ImportEntry::name__ssCR"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry_1a25995d4553db7a5b73c36476bfd1ddf3"></span>void <code class="sig-name descname">name</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE11ImportEntry4nameERKNSt6stringE" title="Permalink to this definition">¶</a><br/></dt>
-<dd></dd></dl>
-<dl class="cpp function">
 <dt id="_CPPv4N4LIEF2PE11ImportEntry4dataE8uint64_t">
 <span id="_CPPv3N4LIEF2PE11ImportEntry4dataE8uint64_t"></span><span id="_CPPv2N4LIEF2PE11ImportEntry4dataE8uint64_t"></span><span id="LIEF::PE::ImportEntry::data__uint64_t"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry_1a1e7a5c8256f7c8c10d04e84578ce6a80"></span>void <code class="sig-name descname">data</code><span class="sig-paren">(</span>uint64_t <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE11ImportEntry4dataE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ImportEntry6acceptER7Visitor">
 <span id="_CPPv3NK4LIEF2PE11ImportEntry6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF2PE11ImportEntry6acceptER7Visitor"></span><span id="LIEF::PE::ImportEntry::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry_1a304483d12c92278dded634552beb674e"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ImportEntry6acceptER7Visitor" title="Permalink to this definition">¶</a><br/></dt>
-<dd></dd></dl>
+<dd><p>Method so that the <code class="docutils literal notranslate"><span class="pre">visitor</span></code> can visit us. </p>
+</dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ImportEntryeqERK11ImportEntry">
 <span id="_CPPv3NK4LIEF2PE11ImportEntryeqERK11ImportEntry"></span><span id="_CPPv2NK4LIEF2PE11ImportEntryeqERK11ImportEntry"></span><span id="LIEF::PE::ImportEntry::eq-operator__ImportEntryCRC"></span><span class="target" id="classLIEF_1_1PE_1_1ImportEntry_1a60611560533edc8c7f4601ad133766b6"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF2PE11ImportEntryE" title="LIEF::PE::ImportEntry">ImportEntry</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ImportEntryeqERK11ImportEntry" title="Permalink to this definition">¶</a><br/></dt>
@@ -2997,7 +2990,7 @@
 <h2 id="export-entry">Export Entry<a class="headerlink" href="#export-entry" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp class">
 <dt id="_CPPv4N4LIEF2PE11ExportEntryE">
-<span id="_CPPv3N4LIEF2PE11ExportEntryE"></span><span id="_CPPv2N4LIEF2PE11ExportEntryE"></span><span id="LIEF::PE::ExportEntry"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry"></span><em class="property">class </em><code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::PE<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ExportEntry</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::Object<a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntryE" title="Permalink to this definition">¶</a><br/></dt>
+<span id="_CPPv3N4LIEF2PE11ExportEntryE"></span><span id="_CPPv2N4LIEF2PE11ExportEntryE"></span><span id="LIEF::PE::ExportEntry"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry"></span><em class="property">class </em><code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::PE<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ExportEntry</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv4N4LIEF2PE12IMPHASH_MODE4LIEFE" title="LIEF::PE::LIEF">LIEF</a>::Symbol<a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntryE" title="Permalink to this definition">¶</a><br/></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
@@ -3015,10 +3008,6 @@
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF2PE11ExportEntryD0Ev">
 <span id="_CPPv3N4LIEF2PE11ExportEntryD0Ev"></span><span id="_CPPv2N4LIEF2PE11ExportEntryD0Ev"></span><span id="LIEF::PE::ExportEntry::~ExportEntry__void"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1abf15e01527cdb82a7cfed48c708a131f"></span><code class="sig-name descname">~ExportEntry</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntryD0Ev" title="Permalink to this definition">¶</a><br/></dt>
-<dd></dd></dl>
-<dl class="cpp function">
-<dt id="_CPPv4NK4LIEF2PE11ExportEntry4nameEv">
-<span id="_CPPv3NK4LIEF2PE11ExportEntry4nameEv"></span><span id="_CPPv2NK4LIEF2PE11ExportEntry4nameEv"></span><span id="LIEF::PE::ExportEntry::name__voidC"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1a34ed1f13ceba352d4e43e66522d6b729"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">name</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ExportEntry4nameEv" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ExportEntry7ordinalEv">
@@ -3045,10 +3034,6 @@
 <span id="_CPPv3NK4LIEF2PE11ExportEntry12function_rvaEv"></span><span id="_CPPv2NK4LIEF2PE11ExportEntry12function_rvaEv"></span><span id="LIEF::PE::ExportEntry::function_rva__voidC"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1ae7a402be6c573df71748e044acc7b55e"></span>uint32_t <code class="sig-name descname">function_rva</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ExportEntry12function_rvaEv" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4N4LIEF2PE11ExportEntry4nameERKNSt6stringE">
-<span id="_CPPv3N4LIEF2PE11ExportEntry4nameERKNSt6stringE"></span><span id="_CPPv2N4LIEF2PE11ExportEntry4nameERKNSt6stringE"></span><span id="LIEF::PE::ExportEntry::name__ssCR"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1a968f7c5db712417440faf158b6bed655"></span>void <code class="sig-name descname">name</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntry4nameERKNSt6stringE" title="Permalink to this definition">¶</a><br/></dt>
-<dd></dd></dl>
-<dl class="cpp function">
 <dt id="_CPPv4N4LIEF2PE11ExportEntry7ordinalE8uint16_t">
 <span id="_CPPv3N4LIEF2PE11ExportEntry7ordinalE8uint16_t"></span><span id="_CPPv2N4LIEF2PE11ExportEntry7ordinalE8uint16_t"></span><span id="LIEF::PE::ExportEntry::ordinal__uint16_t"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1ad651ff065e2fea736a0b0b25667f2def"></span>void <code class="sig-name descname">ordinal</code><span class="sig-paren">(</span>uint16_t <em>ordinal</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntry7ordinalE8uint16_t" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
@@ -3061,9 +3046,18 @@
 <span id="_CPPv3N4LIEF2PE11ExportEntry9is_externEb"></span><span id="_CPPv2N4LIEF2PE11ExportEntry9is_externEb"></span><span id="LIEF::PE::ExportEntry::is_extern__b"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1a5e380083f00e334f0d948f4e13c8b325"></span>void <code class="sig-name descname">is_extern</code><span class="sig-paren">(</span>bool <em>is_extern</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntry9is_externEb" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
+<dt id="_CPPv4NK4LIEF2PE11ExportEntry5valueEv">
+<span id="_CPPv3NK4LIEF2PE11ExportEntry5valueEv"></span><span id="_CPPv2NK4LIEF2PE11ExportEntry5valueEv"></span><span id="LIEF::PE::ExportEntry::valueC"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1a26c6cf9e9bdfe400c2f0af7907b6316c"></span>uint64_t <code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ExportEntry5valueEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N4LIEF2PE11ExportEntry5valueE8uint64_t">
+<span id="_CPPv3N4LIEF2PE11ExportEntry5valueE8uint64_t"></span><span id="_CPPv2N4LIEF2PE11ExportEntry5valueE8uint64_t"></span><span id="LIEF::PE::ExportEntry::value__uint64_t"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1a55b95bd76732589653f05a4a86d613e4"></span>void <code class="sig-name descname">value</code><span class="sig-paren">(</span>uint64_t <em>value</em><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N4LIEF2PE11ExportEntry5valueE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ExportEntry6acceptER7Visitor">
 <span id="_CPPv3NK4LIEF2PE11ExportEntry6acceptER7Visitor"></span><span id="_CPPv2NK4LIEF2PE11ExportEntry6acceptER7Visitor"></span><span id="LIEF::PE::ExportEntry::accept__VisitorRC"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1a0681b458ad3cf3d031cd7cdf521ddc5f"></span>void <code class="sig-name descname">accept</code><span class="sig-paren">(</span>Visitor &amp;<em>visitor</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ExportEntry6acceptER7Visitor" title="Permalink to this definition">¶</a><br/></dt>
-<dd></dd></dl>
+<dd><p>Method so that the <code class="docutils literal notranslate"><span class="pre">visitor</span></code> can visit us. </p>
+</dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF2PE11ExportEntryeqERK11ExportEntry">
 <span id="_CPPv3NK4LIEF2PE11ExportEntryeqERK11ExportEntry"></span><span id="_CPPv2NK4LIEF2PE11ExportEntryeqERK11ExportEntry"></span><span id="LIEF::PE::ExportEntry::eq-operator__ExportEntryCRC"></span><span class="target" id="classLIEF_1_1PE_1_1ExportEntry_1aa55e2fb18d30589447808a24df97f841"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF2PE11ExportEntryE" title="LIEF::PE::ExportEntry">ExportEntry</a> &amp;<em>rhs</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF2PE11ExportEntryeqERK11ExportEntry" title="Permalink to this definition">¶</a><br/></dt>
@@ -7848,7 +7842,7 @@
 <dd><p>Take a <a class="reference internal" href="#classLIEF_1_1PE_1_1Import"><span class="std std-ref">PE::Import</span></a> as entry and try to resolve imports by ordinal. </p>
 <p>The <code class="docutils literal notranslate"><span class="pre">strict</span></code> boolean parameter enables to throw an <a class="reference internal" href="index.html#classLIEF_1_1not__found"><span class="std std-ref">LIEF::not_found</span></a> exception if the ordinal can’t be resolved. Otherwise it skips the entry.</p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The PE::import resolved with <a class="reference internal" href="#classLIEF_1_1PE_1_1ImportEntry_1ace4136073cfce7a48058fd97dc2b5e49"><span class="std std-ref">PE::ImportEntry::name</span></a> set </p>
+<dt><strong>Return</strong></dt><dd><p>The PE::import resolved with <a class="reference internal" href="abstract.html#classLIEF_1_1Symbol_1a6d174b173db665c67fed41172efe0674"><span class="std std-ref">PE::ImportEntry::name</span></a> set </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">import</span></code>: <a class="reference internal" href="#classLIEF_1_1PE_1_1Import"><span class="std std-ref">Import</span></a> to resolve </p></li>

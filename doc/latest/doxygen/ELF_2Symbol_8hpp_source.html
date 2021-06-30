@@ -193,12 +193,12 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  LIEF_API <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classLIEF_1_1ELF_1_1Symbol.html">Symbol</a>&amp; entry);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  ELF_SYMBOL_TYPES type_;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0">SYMBOL_BINDINGS</a>  binding_;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  uint8_t          other_;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  uint16_t         shndx_;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="classLIEF_1_1ELF_1_1Section.html">Section</a>*         section_{<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="classLIEF_1_1ELF_1_1SymbolVersion.html">SymbolVersion</a>*   symbol_version_{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  ELF_SYMBOL_TYPES type_    = ELF_SYMBOL_TYPES::STT_NOTYPE;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0">SYMBOL_BINDINGS</a>  binding_ = <a class="code" href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0a50f039ed321beb85510a3b524f0963e5">SYMBOL_BINDINGS::STB_LOCAL</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  uint8_t          other_   = 0;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  uint16_t         shndx_   = 0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="classLIEF_1_1ELF_1_1Section.html">Section</a>*         section_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="classLIEF_1_1ELF_1_1SymbolVersion.html">SymbolVersion</a>*   symbol_version_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
@@ -229,6 +229,7 @@ $(function() {
 <div class="ttc" id="aclassLIEF_1_1Symbol_html"><div class="ttname"><a href="classLIEF_1_1Symbol.html">LIEF::Symbol</a></div><div class="ttdef"><b>Definition:</b> Symbol.hpp:25</div></div>
 <div class="ttc" id="aclassLIEF_1_1Visitor_html"><div class="ttname"><a href="classLIEF_1_1Visitor.html">LIEF::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.hpp:211</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_a34af929868e7996ff1a3eab0d1f65ad0"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0">LIEF::ELF::SYMBOL_BINDINGS</a></div><div class="ttdeci">SYMBOL_BINDINGS</div><div class="ttdef"><b>Definition:</b> enums.hpp:579</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1ELF_html_a34af929868e7996ff1a3eab0d1f65ad0a50f039ed321beb85510a3b524f0963e5"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0a50f039ed321beb85510a3b524f0963e5">LIEF::ELF::SYMBOL_BINDINGS::STB_LOCAL</a></div><div class="ttdeci">@ STB_LOCAL</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_a34af929868e7996ff1a3eab0d1f65ad0a61e471a10e43048f0c91d3d47993f0f8"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0a61e471a10e43048f0c91d3d47993f0f8">LIEF::ELF::SYMBOL_BINDINGS::STB_WEAK</a></div><div class="ttdeci">@ STB_WEAK</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_a34af929868e7996ff1a3eab0d1f65ad0af49aee1432e5da68513f5c00b31d2028"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#a34af929868e7996ff1a3eab0d1f65ad0af49aee1432e5da68513f5c00b31d2028">LIEF::ELF::SYMBOL_BINDINGS::STB_GLOBAL</a></div><div class="ttdeci">@ STB_GLOBAL</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_a9001d07c34cb227ed7c0c7cf2a4a2775"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#a9001d07c34cb227ed7c0c7cf2a4a2775">LIEF::ELF::SYMBOL_SECTION_INDEX</a></div><div class="ttdeci">SYMBOL_SECTION_INDEX</div><div class="ttdef"><b>Definition:</b> enums.hpp:454</div></div>

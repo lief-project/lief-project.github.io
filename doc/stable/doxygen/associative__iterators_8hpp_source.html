@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.4-Linux-x86_64/include/LIEF/associative_iterators.hpp Source File</title>
+<title>LIEF: Library to Instrument Executable Formats: LIEF-0.11.5-Linux-x86_64/include/LIEF/associative_iterators.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LIEF: Library to Instrument Executable Formats
-   &#160;<span id="projectnumber">Version 0.11.4</span>
+   &#160;<span id="projectnumber">Version 0.11.5</span>
    </div>
   </td>
  </tr>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_daf8d80fff822b9f4163d226174f0080.html">LIEF-0.11.4-Linux-x86_64</a></li><li class="navelem"><a class="el" href="dir_51bc061e03268bdd8245de1681bb69eb.html">include</a></li><li class="navelem"><a class="el" href="dir_7c8640cdbe4e9a2ef89ed1d5e5d55f15.html">LIEF</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ac79bd5df421d1a5669a04ce97772865.html">LIEF-0.11.5-Linux-x86_64</a></li><li class="navelem"><a class="el" href="dir_d1d917814012fb210efb9ed5f20f45d1.html">include</a></li><li class="navelem"><a class="el" href="dir_8e9e28e14161e48a21ac2dbfaa7d3ae7.html">LIEF</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -137,7 +137,7 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>add_const_t&lt;key_ref_t&gt;<span class="keyword">&gt;</span>(this-&gt;key_);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;not std::is_const&lt;key_ref_t&gt;::value, remove_const_t&lt;key_ref_t&gt;&gt;::type</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;!std::is_const&lt;key_ref_t&gt;::value, remove_const_t&lt;key_ref_t&gt;&gt;::type</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  key(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>remove_const_t&lt;key_ref_t&gt;<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="structLIEF_1_1dict__iterator__pair.html">dict_iterator_pair</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;key());</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
@@ -146,7 +146,7 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>add_const_t&lt;value_ref_t&gt;<span class="keyword">&gt;</span>(*this-&gt;value_);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;not std::is_const&lt;value_ref_t&gt;::value, remove_const_t&lt;value_ref_t&gt;&gt;::type</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;!std::is_const&lt;value_ref_t&gt;::value, remove_const_t&lt;value_ref_t&gt;&gt;::type</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  value(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>remove_const_t&lt;value_ref_t&gt;<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="structLIEF_1_1dict__iterator__pair.html">dict_iterator_pair</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;value());</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
@@ -257,7 +257,7 @@ $(function() {
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  }</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="comment">//typename std::enable_if&lt;not std::is_const&lt;ref_t&gt;::value, remove_const_t&lt;ref_t&gt;&gt;::type</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="comment">//typename std::enable_if&lt;!std::is_const&lt;ref_t&gt;::value, remove_const_t&lt;ref_t&gt;&gt;::type</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="comment">//operator[](size_t n) {</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="comment">//  return const_cast&lt;remove_const_t&lt;ref_t&gt;&gt;(static_cast&lt;const dict_iterator*&gt;(this)-&gt;operator[](n));</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="comment">//}</span></div>
@@ -297,12 +297,12 @@ $(function() {
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordtype">bool</span> operator&gt;=(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1dict__iterator.html">dict_iterator</a>&amp; rhs)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> not (*<span class="keyword">this</span> &lt; rhs);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> !(*<span class="keyword">this</span> &lt; rhs);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  }</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordtype">bool</span> operator&lt;=(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1dict__iterator.html">dict_iterator</a>&amp; rhs)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> not (*<span class="keyword">this</span> &gt; rhs);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> !(*<span class="keyword">this</span> &gt; rhs);</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <a class="code" href="classLIEF_1_1dict__iterator.html">dict_iterator</a> begin(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
@@ -329,7 +329,7 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1dict__iterator.html">dict_iterator</a>&amp; other)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> not (*<span class="keyword">this</span> == other);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">size_t</span> size(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
@@ -337,7 +337,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;not std::is_const&lt;ref_t&gt;::value, remove_const_t&lt;ref_t&gt;&gt;::type</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;!std::is_const&lt;ref_t&gt;::value, remove_const_t&lt;ref_t&gt;&gt;::type</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  operator*() {</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>remove_const_t&lt;ref_t&gt;<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classLIEF_1_1dict__iterator.html">dict_iterator</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;<span class="keyword">operator</span>*());</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  }</div>
@@ -350,13 +350,13 @@ $(function() {
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  }</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> U = <span class="keyword">typename</span> DT::value_type&gt;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;not std::is_pointer&lt;U&gt;::value, add_const_t&lt;ref_t&gt;&gt;::type</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;!std::is_pointer&lt;U&gt;::value, add_const_t&lt;ref_t&gt;&gt;::type</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  operator*()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>add_const_t&lt;ref_t&gt;<span class="keyword">&gt;</span>(*(this-&gt;it_));</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  }</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;not std::is_const&lt;pointer_t&gt;::value, pointer_t&gt;::type</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keyword">typename</span> std::enable_if&lt;!std::is_const&lt;pointer_t&gt;::value, pointer_t&gt;::type</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  operator-&gt;() {</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>remove_const_t&lt;pointer_t&gt;<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;operator-&gt;());</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  }</div>

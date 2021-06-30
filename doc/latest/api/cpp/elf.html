@@ -286,9 +286,9 @@
   <span class="svg-icon text-purple mr-1 relative-top--1">
   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
   </span>
-  <a href="https://github.com/lief-project/LIEF/commits/3d4799a" class="text-darkblue">0.12.0-3d4799a</a>
+  <a href="https://github.com/lief-project/LIEF/commits/9a7636d" class="text-darkblue">0.12.0-9a7636d</a>
     <br>
-    Last updated on 22/05/2021, 09:21:41.
+    Last updated on 30/06/2021, 05:34:15.
 </div>
 
 
@@ -628,6 +628,13 @@
 <dt id="_CPPv4N4LIEF3ELF6Binary21add_pltgot_relocationERK10Relocation">
 <span id="_CPPv3N4LIEF3ELF6Binary21add_pltgot_relocationERK10Relocation"></span><span id="_CPPv2N4LIEF3ELF6Binary21add_pltgot_relocationERK10Relocation"></span><span id="LIEF::ELF::Binary::add_pltgot_relocation__RelocationCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a74482daa8ef85809e2cc00bfb9bb090a"></span><a class="reference internal" href="#_CPPv4N4LIEF3ELF10RelocationE" title="LIEF::ELF::Relocation">Relocation</a> &amp;<code class="sig-name descname">add_pltgot_relocation</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF10RelocationE" title="LIEF::ELF::Relocation">Relocation</a> &amp;<em>relocation</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary21add_pltgot_relocationERK10Relocation" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N4LIEF3ELF6Binary21add_object_relocationERK10RelocationRK7Section">
+<span id="_CPPv3N4LIEF3ELF6Binary21add_object_relocationERK10RelocationRK7Section"></span><span id="_CPPv2N4LIEF3ELF6Binary21add_object_relocationERK10RelocationRK7Section"></span><span id="LIEF::ELF::Binary::add_object_relocation__RelocationCR.SectionCR"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a1008679b4443ccd91347c85146ed9b83"></span><a class="reference internal" href="#_CPPv4N4LIEF3ELF10RelocationE" title="LIEF::ELF::Relocation">Relocation</a> *<code class="sig-name descname">add_object_relocation</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF10RelocationE" title="LIEF::ELF::Relocation">Relocation</a> &amp;<em>relocation</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary21add_object_relocationERK10RelocationRK7Section" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Add relocation for object file (.o) </p>
+<p>The first parameter is the section to add while the second parameter is the <a class="reference internal" href="#classLIEF_1_1ELF_1_1Section"><span class="std std-ref">LIEF::ELF::Section</span></a> associated with the relocation.</p>
+<p>If there is an error, this function return a nullptr. Otherwise, it returns the relocation added. </p>
+</dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF6Binary18pltgot_relocationsEv">
 <span id="_CPPv3N4LIEF3ELF6Binary18pltgot_relocationsEv"></span><span id="_CPPv2N4LIEF3ELF6Binary18pltgot_relocationsEv"></span><span id="LIEF::ELF::Binary::pltgot_relocations__void"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1adc4dd80d375c7ea846341a056f09b7d2"></span>it_pltgot_relocations <code class="sig-name descname">pltgot_relocations</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary18pltgot_relocationsEv" title="Permalink to this definition">¶</a><br/></dt>
@@ -1090,22 +1097,24 @@
 <dd><p>Check if the binary uses <code class="docutils literal notranslate"><span class="pre">NX</span></code> protection. </p>
 </dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4NK4LIEF3ELF6Binary19section_from_offsetE8uint64_t">
-<span id="_CPPv3NK4LIEF3ELF6Binary19section_from_offsetE8uint64_t"></span><span id="_CPPv2NK4LIEF3ELF6Binary19section_from_offsetE8uint64_t"></span><span id="LIEF::ELF::Binary::section_from_offset__uint64_tC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a4bb7680362e050e402b6dc79c09976ab"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_offset</code><span class="sig-paren">(</span>uint64_t <em>offset</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary19section_from_offsetE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dt id="_CPPv4NK4LIEF3ELF6Binary19section_from_offsetE8uint64_tb">
+<span id="_CPPv3NK4LIEF3ELF6Binary19section_from_offsetE8uint64_tb"></span><span id="_CPPv2NK4LIEF3ELF6Binary19section_from_offsetE8uint64_tb"></span><span id="LIEF::ELF::Binary::section_from_offset__uint64_t.bC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a2e4882135237158779645acc9b44444f"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_offset</code><span class="sig-paren">(</span>uint64_t <em>offset</em>, bool <em>skip_nobits</em> = true<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary19section_from_offsetE8uint64_tb" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Return the <a class="reference internal" href="#classLIEF_1_1ELF_1_1Section"><span class="std std-ref">Section </span></a> from the <code class="docutils literal notranslate"><span class="pre">offset</span></code>. </p>
+<p>If <code class="docutils literal notranslate"><span class="pre">skip_nobits</span></code> is set (which is the case by default), this function won’t consider section whose type is <code class="docutils literal notranslate"><span class="pre">SHT_NOBITS</span></code> (like <code class="docutils literal notranslate"><span class="pre">.bss,</span> <span class="pre">.tbss,</span> <span class="pre">...</span></code>) </p>
 </dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4N4LIEF3ELF6Binary19section_from_offsetE8uint64_t">
-<span id="_CPPv3N4LIEF3ELF6Binary19section_from_offsetE8uint64_t"></span><span id="_CPPv2N4LIEF3ELF6Binary19section_from_offsetE8uint64_t"></span><span id="LIEF::ELF::Binary::section_from_offset__uint64_t"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a12abfbee3cf5caf62cad3cdbcd520e79"></span><a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_offset</code><span class="sig-paren">(</span>uint64_t <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary19section_from_offsetE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dt id="_CPPv4N4LIEF3ELF6Binary19section_from_offsetE8uint64_tb">
+<span id="_CPPv3N4LIEF3ELF6Binary19section_from_offsetE8uint64_tb"></span><span id="_CPPv2N4LIEF3ELF6Binary19section_from_offsetE8uint64_tb"></span><span id="LIEF::ELF::Binary::section_from_offset__uint64_t.b"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1ac0b1d5271d1becc451592fa0d61b1dd3"></span><a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_offset</code><span class="sig-paren">(</span>uint64_t <em>offset</em>, bool <em>skip_nobits</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary19section_from_offsetE8uint64_tb" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t">
-<span id="_CPPv3NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t"></span><span id="_CPPv2NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t"></span><span id="LIEF::ELF::Binary::section_from_virtual_address__uint64_tC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a25cff3d2ba76d67156453cf31489d9f4"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>address</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dt id="_CPPv4NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb">
+<span id="_CPPv3NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb"></span><span id="_CPPv2NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb"></span><span id="LIEF::ELF::Binary::section_from_virtual_address__uint64_t.bC"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1afe2dacd39a0dc0d4c85644573e3ca735"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>address</em>, bool <em>skip_nobits</em> = true<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb" title="Permalink to this definition">¶</a><br/></dt>
 <dd><p>Return the <a class="reference internal" href="#classLIEF_1_1ELF_1_1Section"><span class="std std-ref">Section </span></a> from the <code class="docutils literal notranslate"><span class="pre">address</span></code>. </p>
+<p>If <code class="docutils literal notranslate"><span class="pre">skip_nobits</span></code> is set (which is the case by default), this function won’t consider section whose type is <code class="docutils literal notranslate"><span class="pre">SHT_NOBITS</span></code> (like <code class="docutils literal notranslate"><span class="pre">.bss,</span> <span class="pre">.tbss,</span> <span class="pre">...</span></code>) </p>
 </dd></dl>
 <dl class="cpp function">
-<dt id="_CPPv4N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t">
-<span id="_CPPv3N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t"></span><span id="_CPPv2N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t"></span><span id="LIEF::ELF::Binary::section_from_virtual_address__uint64_t"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a9f286d8d46ef98e93086081bfcba7a5f"></span><a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_t" title="Permalink to this definition">¶</a><br/></dt>
+<dt id="_CPPv4N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb">
+<span id="_CPPv3N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb"></span><span id="_CPPv2N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb"></span><span id="LIEF::ELF::Binary::section_from_virtual_address__uint64_t.b"></span><span class="target" id="classLIEF_1_1ELF_1_1Binary_1a530a941c05ee6c4533133e810f1c1978"></span><a class="reference internal" href="#_CPPv4N4LIEF3ELF7SectionE" title="LIEF::ELF::Section">Section</a> &amp;<code class="sig-name descname">section_from_virtual_address</code><span class="sig-paren">(</span>uint64_t <em>address</em>, bool <em>skip_nobits</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF6Binary28section_from_virtual_addressE8uint64_tb" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4NK4LIEF3ELF6Binary28segment_from_virtual_addressE8uint64_t">
@@ -2764,6 +2773,10 @@
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF10Relocation10RelocationEv">
 <span id="_CPPv3N4LIEF3ELF10Relocation10RelocationEv"></span><span id="_CPPv2N4LIEF3ELF10Relocation10RelocationEv"></span><span id="LIEF::ELF::Relocation::Relocation__void"></span><span class="target" id="classLIEF_1_1ELF_1_1Relocation_1a603a13b57eb722a4d97e78927b1505d6"></span><code class="sig-name descname">Relocation</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF10Relocation10RelocationEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N4LIEF3ELF10Relocation10RelocationE4ARCH">
+<span id="_CPPv3N4LIEF3ELF10Relocation10RelocationE4ARCH"></span><span id="_CPPv2N4LIEF3ELF10Relocation10RelocationE4ARCH"></span><span id="LIEF::ELF::Relocation::Relocation__ARCH"></span><span class="target" id="classLIEF_1_1ELF_1_1Relocation_1a1e5a94371db28b9ef7846b0363d034a4"></span><code class="sig-name descname">Relocation</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4LIEF3ELF4ARCHE" title="LIEF::ELF::ARCH">ARCH</a> <em>arch</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF3ELF10Relocation10RelocationE4ARCH" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 <dl class="cpp function">
 <dt id="_CPPv4N4LIEF3ELF10RelocationD0Ev">
@@ -7557,6 +7570,10 @@
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4LIEF3ELF10NOTE_TYPES19NT_GNU_GOLD_VERSIONE">
 <span id="_CPPv3N4LIEF3ELF10NOTE_TYPES19NT_GNU_GOLD_VERSIONE"></span><span id="_CPPv2N4LIEF3ELF10NOTE_TYPES19NT_GNU_GOLD_VERSIONE"></span><span class="target" id="namespaceLIEF_1_1ELF_1a435abec8cb63de6dd1fe8e88d03c348faa60797986f65635d8f7535b178fcb027"></span><em class="property">enumerator </em><code class="sig-name descname">NT_GNU_GOLD_VERSION</code> = 4<a class="headerlink" href="#_CPPv4N4LIEF3ELF10NOTE_TYPES19NT_GNU_GOLD_VERSIONE" title="Permalink to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4LIEF3ELF10NOTE_TYPES11NT_CRASHPADE">
+<span id="_CPPv3N4LIEF3ELF10NOTE_TYPES11NT_CRASHPADE"></span><span id="_CPPv2N4LIEF3ELF10NOTE_TYPES11NT_CRASHPADE"></span><span class="target" id="namespaceLIEF_1_1ELF_1a435abec8cb63de6dd1fe8e88d03c348fa857b787da660af039f8bb50b7dc37d08"></span><em class="property">enumerator </em><code class="sig-name descname">NT_CRASHPAD</code> = 0x4f464e49<a class="headerlink" href="#_CPPv4N4LIEF3ELF10NOTE_TYPES11NT_CRASHPADE" title="Permalink to this definition">¶</a><br/></dt>
 <dd></dd></dl>
 </dd></dl>
 

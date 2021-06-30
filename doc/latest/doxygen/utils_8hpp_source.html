@@ -145,19 +145,21 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="namespaceLIEF.html#a9458f1f4d1e5384c0acfed488809da9e">   77</a></span>&#160;LIEF_API <span class="keywordtype">bool</span> <a class="code" href="namespaceLIEF.html#a9458f1f4d1e5384c0acfed488809da9e">is_printable</a>(<span class="keyword">const</span> std::string&amp; str);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">namespace </span>LEB128 {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;std::vector&lt;uint8_t&gt; uencode(uint64_t value);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="namespaceLIEF.html#af928dfefd8fd128fae040da5ea26fc84">   80</a></span>&#160;LIEF_API <span class="keywordtype">bool</span> <a class="code" href="namespaceLIEF.html#af928dfefd8fd128fae040da5ea26fc84">is_hex_number</a>(<span class="keyword">const</span> std::string&amp; nb);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceLIEF.html">LIEF</a> {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">namespace </span>LEB128 {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;std::vector&lt;uint8_t&gt; uencode(uint64_t value);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:34</div></div>
 <div class="ttc" id="anamespaceLIEF_html_a9458f1f4d1e5384c0acfed488809da9e"><div class="ttname"><a href="namespaceLIEF.html#a9458f1f4d1e5384c0acfed488809da9e">LIEF::is_printable</a></div><div class="ttdeci">bool is_printable(const std::string &amp;str)</div><div class="ttdoc">Check if the given string in printable.</div></div>
 <div class="ttc" id="anamespaceLIEF_html_a97ee08c23939ce93f876b23834b8e79a"><div class="ttname"><a href="namespaceLIEF.html#a97ee08c23939ce93f876b23834b8e79a">LIEF::u8tou16</a></div><div class="ttdeci">std::u16string u8tou16(const std::string &amp;string)</div><div class="ttdoc">Convert a UTF-8 string to a UTF-16 one.</div></div>
 <div class="ttc" id="anamespaceLIEF_html_ac5555152b71029010b6cb6fff16ab5fa"><div class="ttname"><a href="namespaceLIEF.html#ac5555152b71029010b6cb6fff16ab5fa">LIEF::u16tou8</a></div><div class="ttdeci">std::string u16tou8(const std::u16string &amp;string, bool remove_null_char=false)</div><div class="ttdoc">Convert a UTF-16 string to a UTF-8 one.</div></div>
+<div class="ttc" id="anamespaceLIEF_html_af928dfefd8fd128fae040da5ea26fc84"><div class="ttname"><a href="namespaceLIEF.html#af928dfefd8fd128fae040da5ea26fc84">LIEF::is_hex_number</a></div><div class="ttdeci">bool is_hex_number(const std::string &amp;nb)</div><div class="ttdoc">Check if the given number is a hex-like string.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

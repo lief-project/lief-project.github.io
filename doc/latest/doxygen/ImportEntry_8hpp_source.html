@@ -92,26 +92,26 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;LIEF/Object.hpp&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;LIEF/visibility.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;LIEF/PE/enums.hpp&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>PE {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>Parser;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>Builder;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html">   31</a></span>&#160;<span class="keyword">class </span>LIEF_API <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a> : <span class="keyword">public</span> <a class="code" href="classLIEF_1_1Object.html">Object</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLIEF_1_1PE_1_1Parser.html">Parser</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLIEF_1_1PE_1_1Builder.html">Builder</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(uint64_t data, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp;);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp;);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;LIEF/Abstract/Symbol.hpp&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;LIEF/PE/enums.hpp&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceLIEF.html">LIEF</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>PE {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>Parser;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>Builder;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html">   32</a></span>&#160;<span class="keyword">class </span>LIEF_API <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a> : <span class="keyword">public</span> <a class="code" href="classLIEF_1_1Symbol.html">LIEF::Symbol</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLIEF_1_1PE_1_1Parser.html">Parser</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLIEF_1_1PE_1_1Builder.html">Builder</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(uint64_t data, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp;);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp;);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html#a5bb3718d47477ba9888362cf64d695a0">   45</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html#a5bb3718d47477ba9888362cf64d695a0">is_ordinal</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
@@ -123,17 +123,17 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html#a7e40e2d35f24d08a0528233a4ebcb277">   58</a></span>&#160;  uint64_t <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html#a7e40e2d35f24d08a0528233a4ebcb277">iat_value</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html#ace4136073cfce7a48058fd97dc2b5e49">   61</a></span>&#160;  <span class="keyword">const</span> std::string&amp; <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html#ace4136073cfce7a48058fd97dc2b5e49">name</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">//const std::string&amp; name(void) const;</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html#a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a">   64</a></span>&#160;  uint64_t <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html#a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a">data</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html#a853d9a1c56b5a8f94f5f3c1b90ad22e7">   67</a></span>&#160;  uint64_t <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html#a853d9a1c56b5a8f94f5f3c1b90ad22e7">iat_address</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> name(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">//void name(const std::string&amp; name);</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> data(uint64_t data);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> accept(<a class="code" href="classLIEF_1_1Visitor.html">Visitor</a>&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ImportEntry.html#a304483d12c92278dded634552beb674e">   73</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html#a304483d12c92278dded634552beb674e">accept</a>(<a class="code" href="classLIEF_1_1Visitor.html">Visitor</a>&amp; visitor) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp; rhs) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp; rhs) <span class="keyword">const</span>;</div>
@@ -141,32 +141,32 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  LIEF_API <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&amp; entry);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  uint64_t    data_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::string name_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  uint16_t    hint_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  uint64_t    iat_value_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  uint64_t    rva_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3">PE_TYPE</a>     type_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  uint64_t    data_ = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  uint16_t    hint_ = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  uint64_t    iat_value_ = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  uint64_t    rva_ = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3">PE_TYPE</a>     type_ = <a class="code" href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3ad72e2a83d48f080b08dfdf1e3395bdfc">PE_TYPE::PE32_PLUS</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IMPORTENTRY_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassLIEF_1_1Object_html"><div class="ttname"><a href="classLIEF_1_1Object.html">LIEF::Object</a></div><div class="ttdef"><b>Definition:</b> Object.hpp:33</div></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IMPORTENTRY_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Builder_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Builder.html">LIEF::PE::Builder</a></div><div class="ttdoc">Class which reconstruct a PE binary from a PE::Binary object.</div><div class="ttdef"><b>Definition:</b> Builder.hpp:41</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html">LIEF::PE::ImportEntry</a></div><div class="ttdef"><b>Definition:</b> ImportEntry.hpp:31</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html">LIEF::PE::ImportEntry</a></div><div class="ttdef"><b>Definition:</b> ImportEntry.hpp:32</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a304483d12c92278dded634552beb674e"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a304483d12c92278dded634552beb674e">LIEF::PE::ImportEntry::accept</a></div><div class="ttdeci">virtual void accept(Visitor &amp;visitor) const override</div><div class="ttdoc">Method so that the visitor can visit us.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a53c0cfa06b8ec6cb2accda084b0ba9f6"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a53c0cfa06b8ec6cb2accda084b0ba9f6">LIEF::PE::ImportEntry::hint</a></div><div class="ttdeci">uint16_t hint(void) const</div><div class="ttdoc">Index into the Export::entries.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a579c7bde228f61a0e6a9f68c527cc2c9"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a579c7bde228f61a0e6a9f68c527cc2c9">LIEF::PE::ImportEntry::ordinal</a></div><div class="ttdeci">uint16_t ordinal(void) const</div><div class="ttdoc">ordinal value</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a5bb3718d47477ba9888362cf64d695a0"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a5bb3718d47477ba9888362cf64d695a0">LIEF::PE::ImportEntry::is_ordinal</a></div><div class="ttdeci">bool is_ordinal(void) const</div><div class="ttdoc">True if ordinal is used</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a">LIEF::PE::ImportEntry::data</a></div><div class="ttdeci">uint64_t data(void) const</div><div class="ttdoc">Raw value.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a6f4ff1ef6d65ee3e4b2c7fcbd3fb537a">LIEF::PE::ImportEntry::data</a></div><div class="ttdeci">uint64_t data(void) const</div><div class="ttdoc">Import name if not ordinal.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a7e40e2d35f24d08a0528233a4ebcb277"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a7e40e2d35f24d08a0528233a4ebcb277">LIEF::PE::ImportEntry::iat_value</a></div><div class="ttdeci">uint64_t iat_value(void) const</div><div class="ttdoc">Value of the current entry in the Import Address Table. It should match the lookup table value.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a853d9a1c56b5a8f94f5f3c1b90ad22e7"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a853d9a1c56b5a8f94f5f3c1b90ad22e7">LIEF::PE::ImportEntry::iat_address</a></div><div class="ttdeci">uint64_t iat_address(void) const</div><div class="ttdoc">Original address of the entry in the Import Address Table</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_a95d83a0f15074566610d252bb59ebbdc"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#a95d83a0f15074566610d252bb59ebbdc">LIEF::PE::ImportEntry::hint_name_rva</a></div><div class="ttdeci">uint64_t hint_name_rva(void) const</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ImportEntry_html_ace4136073cfce7a48058fd97dc2b5e49"><div class="ttname"><a href="classLIEF_1_1PE_1_1ImportEntry.html#ace4136073cfce7a48058fd97dc2b5e49">LIEF::PE::ImportEntry::name</a></div><div class="ttdeci">const std::string &amp; name(void) const</div><div class="ttdoc">Import name if not ordinal.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdef"><b>Definition:</b> Parser.hpp:40</div></div>
+<div class="ttc" id="aclassLIEF_1_1Symbol_html"><div class="ttname"><a href="classLIEF_1_1Symbol.html">LIEF::Symbol</a></div><div class="ttdef"><b>Definition:</b> Symbol.hpp:25</div></div>
 <div class="ttc" id="aclassLIEF_1_1Visitor_html"><div class="ttname"><a href="classLIEF_1_1Visitor.html">LIEF::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.hpp:211</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad894955993b3dcbb92923fafcceb28c3"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3">LIEF::PE::PE_TYPE</a></div><div class="ttdeci">PE_TYPE</div><div class="ttdef"><b>Definition:</b> enums.hpp:1265</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_ad894955993b3dcbb92923fafcceb28c3ad72e2a83d48f080b08dfdf1e3395bdfc"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3ad72e2a83d48f080b08dfdf1e3395bdfc">LIEF::PE::PE_TYPE::PE32_PLUS</a></div><div class="ttdeci">@ PE32_PLUS</div><div class="ttdoc">64 bits</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition:</b> Binary.hpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
