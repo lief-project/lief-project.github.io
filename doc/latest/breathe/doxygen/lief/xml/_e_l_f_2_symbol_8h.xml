@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_e_l_f_2_symbol_8h" kind="file" language="C++">
+    <compoundname>Symbol.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes refid="types_8h" local="yes">LIEF/types.h</includes>
+    <includedby refid="_e_l_f_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</includedby>
+    <includedby refid="_e_l_f_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h</label>
+        <link refid="_e_l_f_2_symbol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/types.h</label>
+        <link refid="types_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</label>
+        <link refid="_e_l_f_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <link refid="_e_l_f_2_binary_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h</label>
+        <link refid="_e_l_f_2_symbol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_elf___symbol__t" prot="public">Elf_Symbol_t</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_e_l_f_2_symbol_8h_1a657712fc8d5275fc745dbc539cc5cb85" prot="public" static="no">
+        <type>struct Elf_Symbol_t</type>
+        <definition>typedef struct Elf_Symbol_t Elf_Symbol_t</definition>
+        <argsstring></argsstring>
+        <name>Elf_Symbol_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h" line="39" column="27" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIEF_C_ELF_SYMBOL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIEF_C_ELF_SYMBOL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/types.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="struct_elf___symbol__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>type;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>binding;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/>information;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/>other;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/>shndx;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>value;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>size;</highlight></codeline>
+<codeline lineno="35" refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" kindref="member">is_exported</ref>;<sp/></highlight></codeline>
+<codeline lineno="36" refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" kindref="member">is_imported</ref>;<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref><sp/><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h"/>
+  </compounddef>
+</doxygen>

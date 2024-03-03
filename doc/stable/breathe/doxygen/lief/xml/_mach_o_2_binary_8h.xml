@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_mach_o_2_binary_8h" kind="file" language="C++">
+    <compoundname>Binary.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">LIEF/visibility.h</includes>
+    <includes refid="_mach_o_2_header_8h" local="yes">LIEF/MachO/Header.h</includes>
+    <includes refid="_load_command_8h" local="yes">LIEF/MachO/LoadCommand.h</includes>
+    <includes refid="_mach_o_2_symbol_8h" local="yes">LIEF/MachO/Symbol.h</includes>
+    <includes refid="_mach_o_2_section_8h" local="yes">LIEF/MachO/Section.h</includes>
+    <includes refid="_mach_o_2_segment_8h" local="yes">LIEF/MachO/Segment.h</includes>
+    <includedby refid="_mach_o_8h" local="yes">/lief-src/api/c/include/LIEF/MachO.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/MachO/Binary.h</label>
+        <link refid="_mach_o_2_binary_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LIEF/MachO/Header.h</label>
+        <link refid="_mach_o_2_header_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>LIEF/MachO/LoadCommand.h</label>
+        <link refid="_load_command_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>LIEF/MachO/Section.h</label>
+        <link refid="_mach_o_2_section_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>LIEF/MachO/Segment.h</label>
+        <link refid="_mach_o_2_segment_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>LIEF/MachO/Symbol.h</label>
+        <link refid="_mach_o_2_symbol_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>LIEF/MachO/enums.h</label>
+        <link refid="_mach_o_2enums_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>LIEF/MachO/enums.inc</label>
+      </node>
+      <node id="7">
+        <label>LIEF/MachO/undef.h</label>
+      </node>
+      <node id="3">
+        <label>LIEF/visibility.h</label>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="2">
+        <label>/lief-src/api/c/include/LIEF/MachO.h</label>
+        <link refid="_mach_o_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/MachO/Binary.h</label>
+        <link refid="_mach_o_2_binary_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_macho___binary__t" prot="public">Macho_Binary_t</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_mach_o_2_binary_8h_1aa43da6dda26fe05e49addad8375ac11b" prot="public" static="no">
+        <type>struct <ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref></type>
+        <definition>typedef struct Macho_Binary_t Macho_Binary_t</definition>
+        <argsstring></argsstring>
+        <name>Macho_Binary_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h" line="46" column="29" bodyfile="/lief-src/api/c/include/LIEF/MachO/Binary.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_mach_o_2_binary_8h_1a7ade0ab0c32b9cec08f70472957228d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref> **</type>
+        <definition>Macho_Binary_t ** macho_parse</definition>
+        <argsstring>(const char *file)</argsstring>
+        <name>macho_parse</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper on LIEF::MachO::Parser::parse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h" line="49" column="17" declfile="/lief-src/api/c/include/LIEF/MachO/Binary.h" declline="49" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_binary_8h_1ab17a736d9c79569700b31fc58a843b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void macho_binaries_destroy</definition>
+        <argsstring>(Macho_Binary_t **binaries)</argsstring>
+        <name>macho_binaries_destroy</name>
+        <param>
+          <type><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref> **</type>
+          <declname>binaries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h" line="51" column="7" declfile="/lief-src/api/c/include/LIEF/MachO/Binary.h" declline="51" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_MACHO_BINARY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_MACHO_BINARY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/visibility.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/MachO/Header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/MachO/LoadCommand.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/MachO/Symbol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/MachO/Section.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/MachO/Segment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_macho___binary__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___header__t" kindref="compound">Macho_Header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___command__t" kindref="compound">Macho_Command_t</ref>**<sp/><sp/><sp/>commands;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___symbol__t" kindref="compound">Macho_Symbol_t</ref>**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/><sp/><sp/>sections;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>**<sp/><sp/><sp/>segments;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">LIEF_API<sp/><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>**<sp/>macho_parse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>macho_binaries_destroy(<ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>**<sp/>binaries);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h"/>
+  </compounddef>
+</doxygen>

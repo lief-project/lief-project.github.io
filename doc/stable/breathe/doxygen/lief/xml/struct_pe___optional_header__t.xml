@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_pe___optional_header__t" kind="struct" language="C++" prot="public">
+    <compoundname>Pe_OptionalHeader_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1afa4db7d8b9ef419948106617bb223b44" prot="public" static="no" mutable="no">
+        <type>enum LIEF_PE_PE_TYPES</type>
+        <definition>enum LIEF_PE_PE_TYPES Pe_OptionalHeader_t::magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <qualifiedname>Pe_OptionalHeader_t::magic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="59" column="24" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a2a1c45e0e11975a0fe32bd1bcc72f9d4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Pe_OptionalHeader_t::major_linker_version</definition>
+        <argsstring></argsstring>
+        <name>major_linker_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::major_linker_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="60" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a8d85b5882f5edd3858c190bfb5f1ba20" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Pe_OptionalHeader_t::minor_linker_version</definition>
+        <argsstring></argsstring>
+        <name>minor_linker_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::minor_linker_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="61" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1ac840bc0bfa0ad5d90db721869a117d4c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::sizeof_code</definition>
+        <argsstring></argsstring>
+        <name>sizeof_code</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_code</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="62" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1acd259f263b9f9ed6482a99b8cc5f88ec" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::sizeof_initialized_data</definition>
+        <argsstring></argsstring>
+        <name>sizeof_initialized_data</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_initialized_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="63" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a51b669316e1e3be8dcb799608333a68a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::sizeof_uninitialized_data</definition>
+        <argsstring></argsstring>
+        <name>sizeof_uninitialized_data</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_uninitialized_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="64" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1af12b3828461ebeffd3a2d81b9c0a7a59" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::addressof_entrypoint</definition>
+        <argsstring></argsstring>
+        <name>addressof_entrypoint</name>
+        <qualifiedname>Pe_OptionalHeader_t::addressof_entrypoint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="65" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a220bd105924da4878d1471e8e9c094f7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::baseof_code</definition>
+        <argsstring></argsstring>
+        <name>baseof_code</name>
+        <qualifiedname>Pe_OptionalHeader_t::baseof_code</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="66" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a3ac6f7bcffa3d6624b68efb70bcfc449" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::baseof_data</definition>
+        <argsstring></argsstring>
+        <name>baseof_data</name>
+        <qualifiedname>Pe_OptionalHeader_t::baseof_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="67" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a9b9e4dcea605248e8efe5895238a424a" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_OptionalHeader_t::imagebase</definition>
+        <argsstring></argsstring>
+        <name>imagebase</name>
+        <qualifiedname>Pe_OptionalHeader_t::imagebase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="68" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a993abe3e2fe648ca1731b5f4de9734b4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::section_alignment</definition>
+        <argsstring></argsstring>
+        <name>section_alignment</name>
+        <qualifiedname>Pe_OptionalHeader_t::section_alignment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="69" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a6d8ef6077bc21fa2ab6a942ab519f0c3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::file_alignment</definition>
+        <argsstring></argsstring>
+        <name>file_alignment</name>
+        <qualifiedname>Pe_OptionalHeader_t::file_alignment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="70" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a3b5a63f1c31e37fbd4aab01244e02ae1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Pe_OptionalHeader_t::major_operating_system_version</definition>
+        <argsstring></argsstring>
+        <name>major_operating_system_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::major_operating_system_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="71" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1aa248d3b1a91f604d3a4cbe335367ff20" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Pe_OptionalHeader_t::minor_operating_system_version</definition>
+        <argsstring></argsstring>
+        <name>minor_operating_system_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::minor_operating_system_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="72" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a147256007d453a82994ce6aefe032a9a" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Pe_OptionalHeader_t::major_image_version</definition>
+        <argsstring></argsstring>
+        <name>major_image_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::major_image_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="73" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a442c0a128e6328533ddccb156dce42a7" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Pe_OptionalHeader_t::minor_image_version</definition>
+        <argsstring></argsstring>
+        <name>minor_image_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::minor_image_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="74" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a55e90593348b5b3c74ceae8d04a62ddb" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Pe_OptionalHeader_t::major_subsystem_version</definition>
+        <argsstring></argsstring>
+        <name>major_subsystem_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::major_subsystem_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="75" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a8a8e0f83aec1de815e5445ba7f39f8f7" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Pe_OptionalHeader_t::minor_subsystem_version</definition>
+        <argsstring></argsstring>
+        <name>minor_subsystem_version</name>
+        <qualifiedname>Pe_OptionalHeader_t::minor_subsystem_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="76" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a266bc53ad6fe80f684a4ebe3bf3f8ea5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::win32_version_value</definition>
+        <argsstring></argsstring>
+        <name>win32_version_value</name>
+        <qualifiedname>Pe_OptionalHeader_t::win32_version_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="77" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a8458e01783c21fbc9c2422a616b330ec" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::sizeof_image</definition>
+        <argsstring></argsstring>
+        <name>sizeof_image</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_image</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="78" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a5079ce5c8f30f8e396cf7e724513ab0f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::sizeof_headers</definition>
+        <argsstring></argsstring>
+        <name>sizeof_headers</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_headers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="79" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1ad1c7ae060b6f5748180ce8b1b060ea2d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::checksum</definition>
+        <argsstring></argsstring>
+        <name>checksum</name>
+        <qualifiedname>Pe_OptionalHeader_t::checksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="80" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a9ace5e066ebaf80dad227eb095e75df9" prot="public" static="no" mutable="no">
+        <type>enum LIEF_PE_SUBSYSTEM</type>
+        <definition>enum LIEF_PE_SUBSYSTEM Pe_OptionalHeader_t::subsystem</definition>
+        <argsstring></argsstring>
+        <name>subsystem</name>
+        <qualifiedname>Pe_OptionalHeader_t::subsystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="81" column="25" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1aaf65a7c979a1535a3b5ee81292da938d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::dll_characteristics</definition>
+        <argsstring></argsstring>
+        <name>dll_characteristics</name>
+        <qualifiedname>Pe_OptionalHeader_t::dll_characteristics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="82" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1aa6e8093162a133b106e38814e6fcebbd" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_OptionalHeader_t::sizeof_stack_reserve</definition>
+        <argsstring></argsstring>
+        <name>sizeof_stack_reserve</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_stack_reserve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="83" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1af6cea20ee34e0d46415269e29122cbca" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_OptionalHeader_t::sizeof_stack_commit</definition>
+        <argsstring></argsstring>
+        <name>sizeof_stack_commit</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_stack_commit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="84" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1ab3cebd01ef92b73fd4d5cc9216172fda" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_OptionalHeader_t::sizeof_heap_reserve</definition>
+        <argsstring></argsstring>
+        <name>sizeof_heap_reserve</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_heap_reserve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="85" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a9826d55302ed5cf31da6744a93009272" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_OptionalHeader_t::sizeof_heap_commit</definition>
+        <argsstring></argsstring>
+        <name>sizeof_heap_commit</name>
+        <qualifiedname>Pe_OptionalHeader_t::sizeof_heap_commit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="86" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1adcb9efc81065acef05158d72bf4a8a62" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::loader_flags</definition>
+        <argsstring></argsstring>
+        <name>loader_flags</name>
+        <qualifiedname>Pe_OptionalHeader_t::loader_flags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="87" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___optional_header__t_1a6932548cdc212617647bf8295fe5ba64" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_OptionalHeader_t::numberof_rva_and_size</definition>
+        <argsstring></argsstring>
+        <name>numberof_rva_and_size</name>
+        <qualifiedname>Pe_OptionalHeader_t::numberof_rva_and_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="88" column="18" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" line="58" column="1" bodyfile="/lief-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="58" bodyend="89"/>
+    <listofallmembers>
+      <member refid="struct_pe___optional_header__t_1af12b3828461ebeffd3a2d81b9c0a7a59" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>addressof_entrypoint</name></member>
+      <member refid="struct_pe___optional_header__t_1a220bd105924da4878d1471e8e9c094f7" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>baseof_code</name></member>
+      <member refid="struct_pe___optional_header__t_1a3ac6f7bcffa3d6624b68efb70bcfc449" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>baseof_data</name></member>
+      <member refid="struct_pe___optional_header__t_1ad1c7ae060b6f5748180ce8b1b060ea2d" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>checksum</name></member>
+      <member refid="struct_pe___optional_header__t_1aaf65a7c979a1535a3b5ee81292da938d" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>dll_characteristics</name></member>
+      <member refid="struct_pe___optional_header__t_1a6d8ef6077bc21fa2ab6a942ab519f0c3" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>file_alignment</name></member>
+      <member refid="struct_pe___optional_header__t_1a9b9e4dcea605248e8efe5895238a424a" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>imagebase</name></member>
+      <member refid="struct_pe___optional_header__t_1adcb9efc81065acef05158d72bf4a8a62" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>loader_flags</name></member>
+      <member refid="struct_pe___optional_header__t_1afa4db7d8b9ef419948106617bb223b44" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>magic</name></member>
+      <member refid="struct_pe___optional_header__t_1a147256007d453a82994ce6aefe032a9a" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>major_image_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a2a1c45e0e11975a0fe32bd1bcc72f9d4" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>major_linker_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a3b5a63f1c31e37fbd4aab01244e02ae1" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>major_operating_system_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a55e90593348b5b3c74ceae8d04a62ddb" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>major_subsystem_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a442c0a128e6328533ddccb156dce42a7" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>minor_image_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a8d85b5882f5edd3858c190bfb5f1ba20" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>minor_linker_version</name></member>
+      <member refid="struct_pe___optional_header__t_1aa248d3b1a91f604d3a4cbe335367ff20" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>minor_operating_system_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a8a8e0f83aec1de815e5445ba7f39f8f7" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>minor_subsystem_version</name></member>
+      <member refid="struct_pe___optional_header__t_1a6932548cdc212617647bf8295fe5ba64" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>numberof_rva_and_size</name></member>
+      <member refid="struct_pe___optional_header__t_1a993abe3e2fe648ca1731b5f4de9734b4" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>section_alignment</name></member>
+      <member refid="struct_pe___optional_header__t_1ac840bc0bfa0ad5d90db721869a117d4c" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_code</name></member>
+      <member refid="struct_pe___optional_header__t_1a5079ce5c8f30f8e396cf7e724513ab0f" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_headers</name></member>
+      <member refid="struct_pe___optional_header__t_1a9826d55302ed5cf31da6744a93009272" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_heap_commit</name></member>
+      <member refid="struct_pe___optional_header__t_1ab3cebd01ef92b73fd4d5cc9216172fda" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_heap_reserve</name></member>
+      <member refid="struct_pe___optional_header__t_1a8458e01783c21fbc9c2422a616b330ec" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_image</name></member>
+      <member refid="struct_pe___optional_header__t_1acd259f263b9f9ed6482a99b8cc5f88ec" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_initialized_data</name></member>
+      <member refid="struct_pe___optional_header__t_1af6cea20ee34e0d46415269e29122cbca" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_stack_commit</name></member>
+      <member refid="struct_pe___optional_header__t_1aa6e8093162a133b106e38814e6fcebbd" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_stack_reserve</name></member>
+      <member refid="struct_pe___optional_header__t_1a51b669316e1e3be8dcb799608333a68a" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>sizeof_uninitialized_data</name></member>
+      <member refid="struct_pe___optional_header__t_1a9ace5e066ebaf80dad227eb095e75df9" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>subsystem</name></member>
+      <member refid="struct_pe___optional_header__t_1a266bc53ad6fe80f684a4ebe3bf3f8ea5" prot="public" virt="non-virtual"><scope>Pe_OptionalHeader_t</scope><name>win32_version_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

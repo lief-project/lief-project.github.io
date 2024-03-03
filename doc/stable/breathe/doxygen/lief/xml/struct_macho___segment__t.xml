@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_macho___segment__t" kind="struct" language="C++" prot="public">
+    <compoundname>Macho_Segment_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_macho___segment__t_1a74cfbcbcd488c3a3cd987d4843e8e425" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Macho_Segment_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Macho_Segment_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="27" column="20" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a36c39afbd8132600e0e115962bcceac5" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Macho_Segment_t::virtual_address</definition>
+        <argsstring></argsstring>
+        <name>virtual_address</name>
+        <qualifiedname>Macho_Segment_t::virtual_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="28" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1ad81fb52ff25bd3ce77eff84f8084900f" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Macho_Segment_t::virtual_size</definition>
+        <argsstring></argsstring>
+        <name>virtual_size</name>
+        <qualifiedname>Macho_Segment_t::virtual_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="29" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a23732e7b0f5d6cedc910e71574cdcd07" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Macho_Segment_t::file_size</definition>
+        <argsstring></argsstring>
+        <name>file_size</name>
+        <qualifiedname>Macho_Segment_t::file_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="30" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a786d6b789179364095271b40a5ab72d4" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Macho_Segment_t::file_offset</definition>
+        <argsstring></argsstring>
+        <name>file_offset</name>
+        <qualifiedname>Macho_Segment_t::file_offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="31" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a498ca360cbe9681d202c61ecbf2a220a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Macho_Segment_t::max_protection</definition>
+        <argsstring></argsstring>
+        <name>max_protection</name>
+        <qualifiedname>Macho_Segment_t::max_protection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="32" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1af50676f73dc4a36ef1928e160ac72500" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Macho_Segment_t::init_protection</definition>
+        <argsstring></argsstring>
+        <name>init_protection</name>
+        <qualifiedname>Macho_Segment_t::init_protection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="33" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a4668026a5e3225d0c4f23763966e6680" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Macho_Segment_t::numberof_sections</definition>
+        <argsstring></argsstring>
+        <name>numberof_sections</name>
+        <qualifiedname>Macho_Segment_t::numberof_sections</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="34" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a5b782969caa68c977a83a1dab4718149" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Macho_Segment_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <qualifiedname>Macho_Segment_t::flags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="35" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1a39f8c78aabaa786ae5ebb323fdc1ede6" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* Macho_Segment_t::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <qualifiedname>Macho_Segment_t::content</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="36" column="20" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1ac48186893fb3e44cc0c161b4986f3de6" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Macho_Segment_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Macho_Segment_t::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="37" column="21" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_macho___segment__t_1ac0b1c94484863f03ef8860ec118ba484" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref> **</type>
+        <definition>Macho_Section_t** Macho_Segment_t::sections</definition>
+        <argsstring></argsstring>
+        <name>sections</name>
+        <qualifiedname>Macho_Segment_t::sections</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="38" column="19" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Macho_Section_t</label>
+        <link refid="struct_macho___section__t"/>
+      </node>
+      <node id="1">
+        <label>Macho_Segment_t</label>
+        <link refid="struct_macho___segment__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>sections</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/lief-src/api/c/include/LIEF/MachO/Segment.h" line="26" column="1" bodyfile="/lief-src/api/c/include/LIEF/MachO/Segment.h" bodystart="26" bodyend="39"/>
+    <listofallmembers>
+      <member refid="struct_macho___segment__t_1a39f8c78aabaa786ae5ebb323fdc1ede6" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>content</name></member>
+      <member refid="struct_macho___segment__t_1a786d6b789179364095271b40a5ab72d4" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>file_offset</name></member>
+      <member refid="struct_macho___segment__t_1a23732e7b0f5d6cedc910e71574cdcd07" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>file_size</name></member>
+      <member refid="struct_macho___segment__t_1a5b782969caa68c977a83a1dab4718149" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>flags</name></member>
+      <member refid="struct_macho___segment__t_1af50676f73dc4a36ef1928e160ac72500" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>init_protection</name></member>
+      <member refid="struct_macho___segment__t_1a498ca360cbe9681d202c61ecbf2a220a" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>max_protection</name></member>
+      <member refid="struct_macho___segment__t_1a74cfbcbcd488c3a3cd987d4843e8e425" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>name</name></member>
+      <member refid="struct_macho___segment__t_1a4668026a5e3225d0c4f23763966e6680" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>numberof_sections</name></member>
+      <member refid="struct_macho___segment__t_1ac0b1c94484863f03ef8860ec118ba484" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>sections</name></member>
+      <member refid="struct_macho___segment__t_1ac48186893fb3e44cc0c161b4986f3de6" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>size</name></member>
+      <member refid="struct_macho___segment__t_1a36c39afbd8132600e0e115962bcceac5" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>virtual_address</name></member>
+      <member refid="struct_macho___segment__t_1ad81fb52ff25bd3ce77eff84f8084900f" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>virtual_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_elf___symbol__t" kind="struct" language="C++" prot="public">
+    <compoundname>Elf_Symbol_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_elf___symbol__t_1abc0c4fe47cff31428cbc0739dfee0376" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Elf_Symbol_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Elf_Symbol_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="29" column="24" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1a446e58eefe7a166976da425687248cef" prot="public" static="no" mutable="no">
+        <type>enum LIEF_ELF_ELF_SYMBOL_TYPES</type>
+        <definition>enum LIEF_ELF_ELF_SYMBOL_TYPES Elf_Symbol_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Elf_Symbol_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="30" column="33" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1ad89e6086f3434d28884c741c760b7c5f" prot="public" static="no" mutable="no">
+        <type>enum LIEF_ELF_SYMBOL_BINDINGS</type>
+        <definition>enum LIEF_ELF_SYMBOL_BINDINGS Elf_Symbol_t::binding</definition>
+        <argsstring></argsstring>
+        <name>binding</name>
+        <qualifiedname>Elf_Symbol_t::binding</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="31" column="32" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1a8439f94adb0f924ea65df4c815548870" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Elf_Symbol_t::information</definition>
+        <argsstring></argsstring>
+        <name>information</name>
+        <qualifiedname>Elf_Symbol_t::information</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="32" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1a6032451fca2d7c13fe6f820ead575d0f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Elf_Symbol_t::other</definition>
+        <argsstring></argsstring>
+        <name>other</name>
+        <qualifiedname>Elf_Symbol_t::other</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="33" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Elf_Symbol_t::shndx</definition>
+        <argsstring></argsstring>
+        <name>shndx</name>
+        <qualifiedname>Elf_Symbol_t::shndx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="34" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Symbol_t::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>Elf_Symbol_t::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="35" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Symbol_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Elf_Symbol_t::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="36" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Elf_Symbol_t::is_exported</definition>
+        <argsstring></argsstring>
+        <name>is_exported</name>
+        <qualifiedname>Elf_Symbol_t::is_exported</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether or not the symbol is exported </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="37" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Elf_Symbol_t::is_imported</definition>
+        <argsstring></argsstring>
+        <name>is_imported</name>
+        <qualifiedname>Elf_Symbol_t::is_imported</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether or not the symbol is imported </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="38" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="28" column="1" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="28" bodyend="39"/>
+    <listofallmembers>
+      <member refid="struct_elf___symbol__t_1ad89e6086f3434d28884c741c760b7c5f" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>binding</name></member>
+      <member refid="struct_elf___symbol__t_1a8439f94adb0f924ea65df4c815548870" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>information</name></member>
+      <member refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>is_exported</name></member>
+      <member refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>is_imported</name></member>
+      <member refid="struct_elf___symbol__t_1abc0c4fe47cff31428cbc0739dfee0376" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>name</name></member>
+      <member refid="struct_elf___symbol__t_1a6032451fca2d7c13fe6f820ead575d0f" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>other</name></member>
+      <member refid="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>shndx</name></member>
+      <member refid="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>size</name></member>
+      <member refid="struct_elf___symbol__t_1a446e58eefe7a166976da425687248cef" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>type</name></member>
+      <member refid="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

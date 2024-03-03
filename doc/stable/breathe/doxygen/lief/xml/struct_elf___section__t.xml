@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_elf___section__t" kind="struct" language="C++" prot="public">
+    <compoundname>Elf_Section_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_elf___section__t_1a9b1b64f2f45263b5edb4233d767d2065" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Elf_Section_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Elf_Section_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="28" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1a8161dfdc3243bef19348e666fc154b78" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Elf_Section_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <qualifiedname>Elf_Section_t::flags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="29" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1ae4b1f23de23a0208275d85566cc32a85" prot="public" static="no" mutable="no">
+        <type>enum LIEF_ELF_ELF_SECTION_TYPES</type>
+        <definition>enum LIEF_ELF_ELF_SECTION_TYPES Elf_Section_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Elf_Section_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="30" column="34" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1a6d12fd7a8d0937f25ff6b36a242960be" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Section_t::virtual_address</definition>
+        <argsstring></argsstring>
+        <name>virtual_address</name>
+        <qualifiedname>Elf_Section_t::virtual_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="31" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1adbd233d164d5a7c808e4a4f3cac048cf" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Section_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>Elf_Section_t::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="32" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1ae34ed84ab329cbb3a45c5d7b1200c1a4" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Section_t::original_size</definition>
+        <argsstring></argsstring>
+        <name>original_size</name>
+        <qualifiedname>Elf_Section_t::original_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="33" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1a22e0146b817ee714dc7a7413b9f81706" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Elf_Section_t::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <qualifiedname>Elf_Section_t::link</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="34" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1aae34d10f3a56157ee9c7fca7152c4c7e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Elf_Section_t::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <qualifiedname>Elf_Section_t::info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="35" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1a19de268fa157188df2c6cdd4cfb63e9b" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Section_t::alignment</definition>
+        <argsstring></argsstring>
+        <name>alignment</name>
+        <qualifiedname>Elf_Section_t::alignment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="36" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1ad7400d1d259a6e21740cf7ea6dccd43c" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Section_t::entry_size</definition>
+        <argsstring></argsstring>
+        <name>entry_size</name>
+        <qualifiedname>Elf_Section_t::entry_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="37" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1a0b41eecf4b659c65fe2bb449b7823c4c" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_Section_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Elf_Section_t::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="38" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1af4abba0a0450546ce8e6ebe9be2ea852" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* Elf_Section_t::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <qualifiedname>Elf_Section_t::content</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="39" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___section__t_1a44cfd85fea40e2e54ecf99127aa75fb2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Elf_Section_t::entropy</definition>
+        <argsstring></argsstring>
+        <name>entropy</name>
+        <qualifiedname>Elf_Section_t::entropy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="40" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="27" column="1" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="27" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_elf___section__t_1a19de268fa157188df2c6cdd4cfb63e9b" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>alignment</name></member>
+      <member refid="struct_elf___section__t_1af4abba0a0450546ce8e6ebe9be2ea852" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>content</name></member>
+      <member refid="struct_elf___section__t_1a44cfd85fea40e2e54ecf99127aa75fb2" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>entropy</name></member>
+      <member refid="struct_elf___section__t_1ad7400d1d259a6e21740cf7ea6dccd43c" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>entry_size</name></member>
+      <member refid="struct_elf___section__t_1a8161dfdc3243bef19348e666fc154b78" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>flags</name></member>
+      <member refid="struct_elf___section__t_1aae34d10f3a56157ee9c7fca7152c4c7e" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>info</name></member>
+      <member refid="struct_elf___section__t_1a22e0146b817ee714dc7a7413b9f81706" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>link</name></member>
+      <member refid="struct_elf___section__t_1a9b1b64f2f45263b5edb4233d767d2065" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>name</name></member>
+      <member refid="struct_elf___section__t_1adbd233d164d5a7c808e4a4f3cac048cf" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>offset</name></member>
+      <member refid="struct_elf___section__t_1ae34ed84ab329cbb3a45c5d7b1200c1a4" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>original_size</name></member>
+      <member refid="struct_elf___section__t_1a0b41eecf4b659c65fe2bb449b7823c4c" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>size</name></member>
+      <member refid="struct_elf___section__t_1ae4b1f23de23a0208275d85566cc32a85" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>type</name></member>
+      <member refid="struct_elf___section__t_1a6d12fd7a8d0937f25ff6b36a242960be" prot="public" virt="non-virtual"><scope>Elf_Section_t</scope><name>virtual_address</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

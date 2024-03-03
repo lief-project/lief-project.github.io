@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_pe___section__t" kind="struct" language="C++" prot="public">
+    <compoundname>Pe_Section_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_pe___section__t_1a2e9a601e4737296ff937f9035e3a1f5d" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Pe_Section_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Pe_Section_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="67" column="14" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a22aeec41a6531a2bf5e1b29444f16189" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_Section_t::virtual_address</definition>
+        <argsstring></argsstring>
+        <name>virtual_address</name>
+        <qualifiedname>Pe_Section_t::virtual_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="68" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1aaf55c17e0359974e46e4ca96357118a0" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_Section_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>Pe_Section_t::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="69" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a51dba2bb866c1294e3d682f70f269bed" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_Section_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>Pe_Section_t::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="70" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a64c51ddab3d890926a37c7c07342c049" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_Section_t::virtual_size</definition>
+        <argsstring></argsstring>
+        <name>virtual_size</name>
+        <qualifiedname>Pe_Section_t::virtual_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="72" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a577b8ef7a1a20e74ff95b09b03ac52de" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_Section_t::pointerto_relocation</definition>
+        <argsstring></argsstring>
+        <name>pointerto_relocation</name>
+        <qualifiedname>Pe_Section_t::pointerto_relocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="73" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a49bca3ee4a722d65f3ac870b56296629" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_Section_t::pointerto_line_numbers</definition>
+        <argsstring></argsstring>
+        <name>pointerto_line_numbers</name>
+        <qualifiedname>Pe_Section_t::pointerto_line_numbers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="74" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a5d0e81d88e1c865919af3533a87d0b62" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pe_Section_t::characteristics</definition>
+        <argsstring></argsstring>
+        <name>characteristics</name>
+        <qualifiedname>Pe_Section_t::characteristics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="75" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a5115c00566c0dc56e5f767ae7ce02c4d" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* Pe_Section_t::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <qualifiedname>Pe_Section_t::content</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="77" column="14" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a8ce68083484e29e15c63c8e51bc922a9" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Pe_Section_t::content_size</definition>
+        <argsstring></argsstring>
+        <name>content_size</name>
+        <qualifiedname>Pe_Section_t::content_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="78" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pe___section__t_1a1c7781e6e80778a30089785e899c4bc1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Pe_Section_t::entropy</definition>
+        <argsstring></argsstring>
+        <name>entropy</name>
+        <qualifiedname>Pe_Section_t::entropy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="79" column="15" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="66" column="1" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="66" bodyend="81"/>
+    <listofallmembers>
+      <member refid="struct_pe___section__t_1a5d0e81d88e1c865919af3533a87d0b62" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>characteristics</name></member>
+      <member refid="struct_pe___section__t_1a5115c00566c0dc56e5f767ae7ce02c4d" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>content</name></member>
+      <member refid="struct_pe___section__t_1a8ce68083484e29e15c63c8e51bc922a9" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>content_size</name></member>
+      <member refid="struct_pe___section__t_1a1c7781e6e80778a30089785e899c4bc1" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>entropy</name></member>
+      <member refid="struct_pe___section__t_1a2e9a601e4737296ff937f9035e3a1f5d" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>name</name></member>
+      <member refid="struct_pe___section__t_1a51dba2bb866c1294e3d682f70f269bed" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>offset</name></member>
+      <member refid="struct_pe___section__t_1a49bca3ee4a722d65f3ac870b56296629" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>pointerto_line_numbers</name></member>
+      <member refid="struct_pe___section__t_1a577b8ef7a1a20e74ff95b09b03ac52de" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>pointerto_relocation</name></member>
+      <member refid="struct_pe___section__t_1aaf55c17e0359974e46e4ca96357118a0" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>size</name></member>
+      <member refid="struct_pe___section__t_1a22aeec41a6531a2bf5e1b29444f16189" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>virtual_address</name></member>
+      <member refid="struct_pe___section__t_1a64c51ddab3d890926a37c7c07342c049" prot="public" virt="non-virtual"><scope>Pe_Section_t</scope><name>virtual_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

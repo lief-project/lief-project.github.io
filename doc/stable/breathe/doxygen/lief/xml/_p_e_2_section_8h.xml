@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_p_e_2_section_8h" kind="file" language="C++">
+    <compoundname>Section.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes refid="_p_e_2enums_8h" local="yes">LIEF/PE/enums.h</includes>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/PE/Section.h</label>
+        <link refid="_p_e_2_section_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/PE/enums.h</label>
+        <link refid="_p_e_2enums_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>LIEF/PE/enums.inc</label>
+      </node>
+      <node id="4">
+        <label>LIEF/PE/undef.h</label>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="3">
+        <label>/lief-src/api/c/include/LIEF/PE.h</label>
+        <link refid="_p_e_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/lief-src/api/c/include/LIEF/PE/Binary.h</label>
+        <link refid="_p_e_2_binary_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/PE/Section.h</label>
+        <link refid="_p_e_2_section_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_pe___section__t" prot="public">Pe_Section_t</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LIEF_PE_SECTION_CHARACTERISTICS</name>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba3d80083f5941abd8286d844bb039640a" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_TYPE_NO_PAD</name>
+          <initializer>= 0x00000008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbadefa44226ce8db89e76443f1e6323d06" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_CNT_CODE</name>
+          <initializer>= 0x00000020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba24c29f2c3e3a19f3563d608f35156d8b" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_CNT_INITIALIZED_DATA</name>
+          <initializer>= 0x00000040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba13e3077340718dfdc43d9dae1d9ea9c5" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_CNT_UNINITIALIZED_DATA</name>
+          <initializer>= 0x00000080</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba35492320e87c94585d113bcea87e3a43" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_OTHER</name>
+          <initializer>= 0x00000100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba64776c320432cee0e0c42d711dd68c84" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_INFO</name>
+          <initializer>= 0x00000200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba69310dcee3f481cfd6f0607adcd2b593" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_REMOVE</name>
+          <initializer>= 0x00000800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbab722b12f5a3dc04d281ba61485de119c" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_COMDAT</name>
+          <initializer>= 0x00001000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac75056e75042e182231e03c17644f4be" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_GPREL</name>
+          <initializer>= 0x00008000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba4323dcc2e2c116f20371518515549418" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_PURGEABLE</name>
+          <initializer>= 0x00010000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba8fe50c5a9e04a6c5faf498daa62c3f99" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_16BIT</name>
+          <initializer>= 0x00020000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbab9401582df494b01cd2ea9f7b1172080" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_LOCKED</name>
+          <initializer>= 0x00040000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba27cf748acaf06ea21e98bd0c7249abce" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_PRELOAD</name>
+          <initializer>= 0x00080000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba6b3515ef61f47f2362bb2e6aaaef5830" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_1BYTES</name>
+          <initializer>= 0x00100000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba442b92ec78d6d2f10e8c5f2211bce495" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_2BYTES</name>
+          <initializer>= 0x00200000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba2a67d5b6f0de449dee12b6d976855cbc" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_4BYTES</name>
+          <initializer>= 0x00300000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba71c7d1e53f23884c3a27ac9c15da467d" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_8BYTES</name>
+          <initializer>= 0x00400000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba368d9df75f3a66ec9a885e0b39c0689d" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_16BYTES</name>
+          <initializer>= 0x00500000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac23336bf84bc886a8616aad22e570514" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_32BYTES</name>
+          <initializer>= 0x00600000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba6a57c40904718648411b532d0c6c6ee6" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_64BYTES</name>
+          <initializer>= 0x00700000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac12c23be7034c987db3c177b87ae906b" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_128BYTES</name>
+          <initializer>= 0x00800000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba6ca351a57de0f314d9811e0fd2156243" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_256BYTES</name>
+          <initializer>= 0x00900000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba2b364079d1461da19dab6997ec50508a" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_512BYTES</name>
+          <initializer>= 0x00A00000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba43b24e237d005fa90bd17f6664c161e6" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_1024BYTES</name>
+          <initializer>= 0x00B00000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba711c21bbbebf6cbb6cff547f148ad859" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_2048BYTES</name>
+          <initializer>= 0x00C00000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbab6ddfdd0f8d63981769a74796d22eb35" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_4096BYTES</name>
+          <initializer>= 0x00D00000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbaa1144a5b9496740a8613cf619cff2e31" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_8192BYTES</name>
+          <initializer>= 0x00E00000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba187049e4abaef6bc37534bc8f8a38286" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_NRELOC_OVFL</name>
+          <initializer>= 0x01000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac23e8817e1f348227a41a71e3e2c4e17" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_DISCARDABLE</name>
+          <initializer>= 0x02000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba321d7020def6c6aa6777ad0e22fa18a0" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_NOT_CACHED</name>
+          <initializer>= 0x04000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba0d05e53d631664b71bf69c8ad6d322f7" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_NOT_PAGED</name>
+          <initializer>= 0x08000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbabf1676abbaea63e2b7145ece6c9b15cc" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_SHARED</name>
+          <initializer>= 0x10000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba807159b0428d390d4a499059026c63e6" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_EXECUTE</name>
+          <initializer>= 0x20000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba7b4b1e68e420817759fa5d1ba98178ff" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_READ</name>
+          <initializer>= 0x40000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbacf763fae3eba8408736a94be3d0179f4" prot="public">
+          <name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_WRITE</name>
+          <initializer>= 0x80000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="27" column="1" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="27" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_p_e_2_section_8h_1aa8c1db2923703a81f6586b0c94b1926a" prot="public" static="no">
+        <type>struct <ref refid="struct_pe___section__t" kindref="compound">Pe_Section_t</ref></type>
+        <definition>typedef struct Pe_Section_t Pe_Section_t</definition>
+        <argsstring></argsstring>
+        <name>Pe_Section_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="83" column="27" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_PE_SECTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_PE_SECTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/PE/enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SECTION_CHARACTERISTICS<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_TYPE_NO_PAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000008,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_CNT_CODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000020,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_CNT_INITIALIZED_DATA<sp/><sp/><sp/>=<sp/>0x00000040,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_CNT_UNINITIALIZED_DATA<sp/>=<sp/>0x00000080,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_LNK_OTHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000100,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_LNK_INFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000200,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_LNK_REMOVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000800,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_LNK_COMDAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00001000,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_GPREL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00008000,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_PURGEABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00010000,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_16BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00020000,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_LOCKED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00040000,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_PRELOAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00080000,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_1BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00100000,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_2BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00200000,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_4BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00300000,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_8BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00400000,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_16BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00500000,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_32BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00600000,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_64BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00700000,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_128BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00800000,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_256BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00900000,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_512BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00A00000,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_1024BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00B00000,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_2048BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00C00000,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_4096BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00D00000,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_8192BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00E00000,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_LNK_NRELOC_OVFL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x01000000,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_DISCARDABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x02000000,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_NOT_CACHED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x04000000,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_NOT_PAGED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x08000000,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_SHARED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x10000000,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_EXECUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x20000000,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_READ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x40000000,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>LIEF_PE_SECTION_CHARACTERISTICS_MEM_WRITE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x80000000</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="struct_pe___section__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___section__t" kindref="compound">Pe_Section_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>virtual_address;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>size;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>offset;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>virtual_size;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>pointerto_relocation;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>pointerto_line_numbers;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>characteristics;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/>content;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>content_size;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>entropy;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___section__t" kindref="compound">Pe_Section_t</ref><sp/><ref refid="struct_pe___section__t" kindref="compound">Pe_Section_t</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/lief-src/api/c/include/LIEF/PE/Section.h"/>
+  </compounddef>
+</doxygen>

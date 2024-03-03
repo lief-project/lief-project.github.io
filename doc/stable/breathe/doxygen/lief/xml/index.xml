@@ -1,0 +1,553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="struct_elf___binary__t" kind="struct"><name>Elf_Binary_t</name>
+    <member refid="struct_elf___binary__t_1ae695b73fcf79b131d78cb6a11539ca92" kind="variable"><name>handler</name></member>
+    <member refid="struct_elf___binary__t_1a0e53d4950cd1b4b1c52e6981d0ff2650" kind="variable"><name>name</name></member>
+    <member refid="struct_elf___binary__t_1a9426da861b49ec60f95949a7ed6f361c" kind="variable"><name>interpreter</name></member>
+    <member refid="struct_elf___binary__t_1aa6c9aa146465aaea0e453447371306b3" kind="variable"><name>type</name></member>
+    <member refid="struct_elf___binary__t_1ae05ec95634b954636f99918fbf78cddb" kind="variable"><name>header</name></member>
+    <member refid="struct_elf___binary__t_1a6e014d5a92c72069a3564d8bd2c92fbf" kind="variable"><name>sections</name></member>
+    <member refid="struct_elf___binary__t_1a3664d669bff2aab8e57c5ade93e32e34" kind="variable"><name>segments</name></member>
+    <member refid="struct_elf___binary__t_1af819328d1bc63208bfe679be83eaef7c" kind="variable"><name>dynamic_entries</name></member>
+    <member refid="struct_elf___binary__t_1a0a22cee3aa1e10ea644e7e59ca4f8338" kind="variable"><name>dynamic_symbols</name></member>
+    <member refid="struct_elf___binary__t_1ad6b7576413be2dff14fc473efd1bf2a4" kind="variable"><name>static_symbols</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry___array__t" kind="struct"><name>Elf_DynamicEntry_Array_t</name>
+    <member refid="struct_elf___dynamic_entry___array__t_1aa47b375c881458fe112fc675feeae5e6" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry___array__t_1a91eebeb898e87e3f226239796d2e1192" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___dynamic_entry___array__t_1a94f481e4da3698e291ed4c490bd59d1e" kind="variable"><name>array</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry___flags__t" kind="struct"><name>Elf_DynamicEntry_Flags_t</name>
+    <member refid="struct_elf___dynamic_entry___flags__t_1a02b4d24bbcbdc38e226921c505567c74" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry___flags__t_1a7a1cff0368ac04e0d7ae252e5e50a88b" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___dynamic_entry___flags__t_1af1cbae3bf45d56952aace690e34e3fa0" kind="variable"><name>flags</name></member>
+    <member refid="struct_elf___dynamic_entry___flags__t_1a0e273dfbc615f993fa33d321da043864" kind="variable"><name>flags_1</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry___library__t" kind="struct"><name>Elf_DynamicEntry_Library_t</name>
+    <member refid="struct_elf___dynamic_entry___library__t_1a9945532e64c08c6ec885ad30e3564ea7" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry___library__t_1a38401b8b93dada9688c2d8cb95502073" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___dynamic_entry___library__t_1a5228d20b6ea6da7aa695ceb321de1840" kind="variable"><name>name</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry___rpath__t" kind="struct"><name>Elf_DynamicEntry_Rpath_t</name>
+    <member refid="struct_elf___dynamic_entry___rpath__t_1a418a5472296c9216898519cadcdb6ec4" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry___rpath__t_1ab322e9efa0ea239ca7bbb4d7e329c819" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___dynamic_entry___rpath__t_1a97ca128820848019677f3a960466b614" kind="variable"><name>rpath</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry___run_path__t" kind="struct"><name>Elf_DynamicEntry_RunPath_t</name>
+    <member refid="struct_elf___dynamic_entry___run_path__t_1a4122ebe2b236c04591f9db990dad0d9c" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry___run_path__t_1ac11cd6242ba45c65d5c9c114b0652836" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___dynamic_entry___run_path__t_1a34829fe38673e36a23340874c89c8020" kind="variable"><name>runpath</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry___shared_object__t" kind="struct"><name>Elf_DynamicEntry_SharedObject_t</name>
+    <member refid="struct_elf___dynamic_entry___shared_object__t_1ae8c38df371c1a60ee9b0586349d83831" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry___shared_object__t_1a3aa19412d0e261a8ba7b8bbf45504c9f" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___dynamic_entry___shared_object__t_1a2b6327afaef3b3fb41b04d5191822ef7" kind="variable"><name>name</name></member>
+  </compound>
+  <compound refid="struct_elf___dynamic_entry__t" kind="struct"><name>Elf_DynamicEntry_t</name>
+    <member refid="struct_elf___dynamic_entry__t_1a29017833029e1c7f37c89c0c29198770" kind="variable"><name>tag</name></member>
+    <member refid="struct_elf___dynamic_entry__t_1a2c7d8386e301eb4b7321ff5fd5c3184e" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="struct_elf___header__t" kind="struct"><name>Elf_Header_t</name>
+    <member refid="struct_elf___header__t_1a7611196021e55b42d23e518c1daf8d6d" kind="variable"><name>identity</name></member>
+    <member refid="struct_elf___header__t_1a3e9e8de17d82b82098cc9cd00b6d11c3" kind="variable"><name>file_type</name></member>
+    <member refid="struct_elf___header__t_1aa1d424a854241578e5c5f9cd12891e30" kind="variable"><name>machine_type</name></member>
+    <member refid="struct_elf___header__t_1a014df91361cfbc78248d46ac242a7834" kind="variable"><name>object_file_version</name></member>
+    <member refid="struct_elf___header__t_1a829186347e980d10410ab083bb49c21f" kind="variable"><name>entrypoint</name></member>
+    <member refid="struct_elf___header__t_1a412bee9aaad2840ec61b63093fbae6db" kind="variable"><name>program_headers_offset</name></member>
+    <member refid="struct_elf___header__t_1ad73e2e0ed52bb8fe0b01e552ce1bd0cf" kind="variable"><name>section_headers_offset</name></member>
+    <member refid="struct_elf___header__t_1ac39c8512655406e3ece07f117adf8f69" kind="variable"><name>processor_flags</name></member>
+    <member refid="struct_elf___header__t_1ae26c80eaa787b9c34d45eb9a84dc9986" kind="variable"><name>header_size</name></member>
+    <member refid="struct_elf___header__t_1a1f59d7fbf425a90d2adde2a1d4bcdbd5" kind="variable"><name>program_header_size</name></member>
+    <member refid="struct_elf___header__t_1ae1c6f3a9c8f7202297f42e57da81b3e0" kind="variable"><name>numberof_segments</name></member>
+    <member refid="struct_elf___header__t_1ad04f8853dbf0e646fb1f7d63c3cec539" kind="variable"><name>section_header_size</name></member>
+    <member refid="struct_elf___header__t_1a11d5caeb2d3bbb34d656e924f05c1e99" kind="variable"><name>numberof_sections</name></member>
+    <member refid="struct_elf___header__t_1a0e007dbf8766064b3e010a37faa44a68" kind="variable"><name>name_string_table_idx</name></member>
+  </compound>
+  <compound refid="struct_elf___section__t" kind="struct"><name>Elf_Section_t</name>
+    <member refid="struct_elf___section__t_1a9b1b64f2f45263b5edb4233d767d2065" kind="variable"><name>name</name></member>
+    <member refid="struct_elf___section__t_1a8161dfdc3243bef19348e666fc154b78" kind="variable"><name>flags</name></member>
+    <member refid="struct_elf___section__t_1ae4b1f23de23a0208275d85566cc32a85" kind="variable"><name>type</name></member>
+    <member refid="struct_elf___section__t_1a6d12fd7a8d0937f25ff6b36a242960be" kind="variable"><name>virtual_address</name></member>
+    <member refid="struct_elf___section__t_1adbd233d164d5a7c808e4a4f3cac048cf" kind="variable"><name>offset</name></member>
+    <member refid="struct_elf___section__t_1ae34ed84ab329cbb3a45c5d7b1200c1a4" kind="variable"><name>original_size</name></member>
+    <member refid="struct_elf___section__t_1a22e0146b817ee714dc7a7413b9f81706" kind="variable"><name>link</name></member>
+    <member refid="struct_elf___section__t_1aae34d10f3a56157ee9c7fca7152c4c7e" kind="variable"><name>info</name></member>
+    <member refid="struct_elf___section__t_1a19de268fa157188df2c6cdd4cfb63e9b" kind="variable"><name>alignment</name></member>
+    <member refid="struct_elf___section__t_1ad7400d1d259a6e21740cf7ea6dccd43c" kind="variable"><name>entry_size</name></member>
+    <member refid="struct_elf___section__t_1a0b41eecf4b659c65fe2bb449b7823c4c" kind="variable"><name>size</name></member>
+    <member refid="struct_elf___section__t_1af4abba0a0450546ce8e6ebe9be2ea852" kind="variable"><name>content</name></member>
+    <member refid="struct_elf___section__t_1a44cfd85fea40e2e54ecf99127aa75fb2" kind="variable"><name>entropy</name></member>
+  </compound>
+  <compound refid="struct_elf___segment__t" kind="struct"><name>Elf_Segment_t</name>
+    <member refid="struct_elf___segment__t_1a1399b9021a8b18ec264e882793b7ce86" kind="variable"><name>type</name></member>
+    <member refid="struct_elf___segment__t_1aba73439e36424653323bc80ef0ef859f" kind="variable"><name>flags</name></member>
+    <member refid="struct_elf___segment__t_1ab1767de76c309566b6f5e06191085c63" kind="variable"><name>virtual_address</name></member>
+    <member refid="struct_elf___segment__t_1a1ae476e30d1a5ea9e2f13d427dc1f438" kind="variable"><name>virtual_size</name></member>
+    <member refid="struct_elf___segment__t_1ae9db04f318c5bdff7cc1c74acb76224f" kind="variable"><name>offset</name></member>
+    <member refid="struct_elf___segment__t_1a68f8262cd67b6b8486ce94eb9fa89c36" kind="variable"><name>alignment</name></member>
+    <member refid="struct_elf___segment__t_1a2c3bdd0278783dec650054c69b0f0d88" kind="variable"><name>size</name></member>
+    <member refid="struct_elf___segment__t_1af875ed0a644a834307cd694073ec0adf" kind="variable"><name>content</name></member>
+  </compound>
+  <compound refid="struct_elf___symbol__t" kind="struct"><name>Elf_Symbol_t</name>
+    <member refid="struct_elf___symbol__t_1abc0c4fe47cff31428cbc0739dfee0376" kind="variable"><name>name</name></member>
+    <member refid="struct_elf___symbol__t_1a446e58eefe7a166976da425687248cef" kind="variable"><name>type</name></member>
+    <member refid="struct_elf___symbol__t_1ad89e6086f3434d28884c741c760b7c5f" kind="variable"><name>binding</name></member>
+    <member refid="struct_elf___symbol__t_1a8439f94adb0f924ea65df4c815548870" kind="variable"><name>information</name></member>
+    <member refid="struct_elf___symbol__t_1a6032451fca2d7c13fe6f820ead575d0f" kind="variable"><name>other</name></member>
+    <member refid="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" kind="variable"><name>shndx</name></member>
+    <member refid="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" kind="variable"><name>value</name></member>
+    <member refid="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" kind="variable"><name>size</name></member>
+    <member refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" kind="variable"><name>is_exported</name></member>
+    <member refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" kind="variable"><name>is_imported</name></member>
+  </compound>
+  <compound refid="struct_macho___binary__t" kind="struct"><name>Macho_Binary_t</name>
+    <member refid="struct_macho___binary__t_1a404b8e039cd82f0527c3062be79e9b55" kind="variable"><name>handler</name></member>
+    <member refid="struct_macho___binary__t_1a3067b945ef2c78b21dc608eaf8e5a3ad" kind="variable"><name>name</name></member>
+    <member refid="struct_macho___binary__t_1af074cd9b66a1d445f647d5078a780da4" kind="variable"><name>imagebase</name></member>
+    <member refid="struct_macho___binary__t_1a8a6836aa355c36b84700c76256a03316" kind="variable"><name>header</name></member>
+    <member refid="struct_macho___binary__t_1ab03a20311d6aa0dbefb8fa83fca22071" kind="variable"><name>commands</name></member>
+    <member refid="struct_macho___binary__t_1af7dec6d40f8961a5bea5dec7280cb66a" kind="variable"><name>symbols</name></member>
+    <member refid="struct_macho___binary__t_1aa28bf05ac5218adce1cc7c22c822c78c" kind="variable"><name>sections</name></member>
+    <member refid="struct_macho___binary__t_1aada2335c624ff4853e2dba10408c5df6" kind="variable"><name>segments</name></member>
+  </compound>
+  <compound refid="struct_macho___command__t" kind="struct"><name>Macho_Command_t</name>
+    <member refid="struct_macho___command__t_1a6a6da9b2a9444d7de1b6e5128200cb91" kind="variable"><name>command</name></member>
+    <member refid="struct_macho___command__t_1a293c4d4694367438ab3b9cee5c77a55f" kind="variable"><name>size</name></member>
+    <member refid="struct_macho___command__t_1a31b2e06e284ea1c0e517c4029b8e4d98" kind="variable"><name>data</name></member>
+    <member refid="struct_macho___command__t_1a323aa356413a6e4e976b13f2436b003e" kind="variable"><name>offset</name></member>
+  </compound>
+  <compound refid="struct_macho___header__t" kind="struct"><name>Macho_Header_t</name>
+    <member refid="struct_macho___header__t_1af3d1f9af1f8fb564b3e43c31119e5bfb" kind="variable"><name>magic</name></member>
+    <member refid="struct_macho___header__t_1a99fd3756dea4d8bef88bab334775e4f4" kind="variable"><name>cpu_type</name></member>
+    <member refid="struct_macho___header__t_1a1d6ebc2b6bd8a6ab86a2d702e71b3239" kind="variable"><name>cpu_subtype</name></member>
+    <member refid="struct_macho___header__t_1ad7c27a591d119fe4586740be9ef52df6" kind="variable"><name>file_type</name></member>
+    <member refid="struct_macho___header__t_1a61fb4fbac0e225866d76f5bb113e9dda" kind="variable"><name>nb_cmds</name></member>
+    <member refid="struct_macho___header__t_1a3601e974ba881702b45fe589c7dd304f" kind="variable"><name>sizeof_cmds</name></member>
+    <member refid="struct_macho___header__t_1a9feda4967b0e236302681e8e2f71312a" kind="variable"><name>flags</name></member>
+    <member refid="struct_macho___header__t_1a9c10bd434a6ad9cde1360199ec297001" kind="variable"><name>reserved</name></member>
+  </compound>
+  <compound refid="struct_macho___section__t" kind="struct"><name>Macho_Section_t</name>
+    <member refid="struct_macho___section__t_1aef3cb92e48cce4466e3b79c40ba5215b" kind="variable"><name>name</name></member>
+    <member refid="struct_macho___section__t_1a961a117a0da15ec2df77c8044de1867d" kind="variable"><name>alignment</name></member>
+    <member refid="struct_macho___section__t_1a3144d5ca6a2825d368bf6a7e4539b964" kind="variable"><name>relocation_offset</name></member>
+    <member refid="struct_macho___section__t_1af7b990fdc159a98d38eb6eedd1eb854d" kind="variable"><name>numberof_relocations</name></member>
+    <member refid="struct_macho___section__t_1ade63977a07f9086c46d369d18c6ce8f6" kind="variable"><name>flags</name></member>
+    <member refid="struct_macho___section__t_1a6f13da42bc6be039043978d511ddb526" kind="variable"><name>type</name></member>
+    <member refid="struct_macho___section__t_1afd3fc84cdd1c1e17ff4074d2302f046a" kind="variable"><name>reserved1</name></member>
+    <member refid="struct_macho___section__t_1ac8fda0122caddc33509e5bf78bc22a6c" kind="variable"><name>reserved2</name></member>
+    <member refid="struct_macho___section__t_1a72e4356a15cd3ca718e362260b9d6b09" kind="variable"><name>reserved3</name></member>
+    <member refid="struct_macho___section__t_1a14e17f760bddaa6e823d2d635497f7db" kind="variable"><name>virtual_address</name></member>
+    <member refid="struct_macho___section__t_1aead37c58982f4f33bf3cc7c892fc635e" kind="variable"><name>offset</name></member>
+    <member refid="struct_macho___section__t_1a643bf3448c8626bceaa4af85cd3097ea" kind="variable"><name>size</name></member>
+    <member refid="struct_macho___section__t_1a500b83eb5a12edeb2f0dba286cb1e692" kind="variable"><name>content</name></member>
+    <member refid="struct_macho___section__t_1aa5258db865154f73b5c4ce22fe62696b" kind="variable"><name>entropy</name></member>
+  </compound>
+  <compound refid="struct_macho___segment__t" kind="struct"><name>Macho_Segment_t</name>
+    <member refid="struct_macho___segment__t_1a74cfbcbcd488c3a3cd987d4843e8e425" kind="variable"><name>name</name></member>
+    <member refid="struct_macho___segment__t_1a36c39afbd8132600e0e115962bcceac5" kind="variable"><name>virtual_address</name></member>
+    <member refid="struct_macho___segment__t_1ad81fb52ff25bd3ce77eff84f8084900f" kind="variable"><name>virtual_size</name></member>
+    <member refid="struct_macho___segment__t_1a23732e7b0f5d6cedc910e71574cdcd07" kind="variable"><name>file_size</name></member>
+    <member refid="struct_macho___segment__t_1a786d6b789179364095271b40a5ab72d4" kind="variable"><name>file_offset</name></member>
+    <member refid="struct_macho___segment__t_1a498ca360cbe9681d202c61ecbf2a220a" kind="variable"><name>max_protection</name></member>
+    <member refid="struct_macho___segment__t_1af50676f73dc4a36ef1928e160ac72500" kind="variable"><name>init_protection</name></member>
+    <member refid="struct_macho___segment__t_1a4668026a5e3225d0c4f23763966e6680" kind="variable"><name>numberof_sections</name></member>
+    <member refid="struct_macho___segment__t_1a5b782969caa68c977a83a1dab4718149" kind="variable"><name>flags</name></member>
+    <member refid="struct_macho___segment__t_1a39f8c78aabaa786ae5ebb323fdc1ede6" kind="variable"><name>content</name></member>
+    <member refid="struct_macho___segment__t_1ac48186893fb3e44cc0c161b4986f3de6" kind="variable"><name>size</name></member>
+    <member refid="struct_macho___segment__t_1ac0b1c94484863f03ef8860ec118ba484" kind="variable"><name>sections</name></member>
+  </compound>
+  <compound refid="struct_macho___symbol__t" kind="struct"><name>Macho_Symbol_t</name>
+    <member refid="struct_macho___symbol__t_1ab52dd7043bdec5376c3276cc6b2062b0" kind="variable"><name>name</name></member>
+    <member refid="struct_macho___symbol__t_1a0f51a3adb091d3c9da1e42c7c98743bc" kind="variable"><name>type</name></member>
+    <member refid="struct_macho___symbol__t_1ad2f1bb408b1954ddb60ddf3b17cc9729" kind="variable"><name>numberof_sections</name></member>
+    <member refid="struct_macho___symbol__t_1a747ce72d39ecaad15eb9a9050dfcf64b" kind="variable"><name>description</name></member>
+    <member refid="struct_macho___symbol__t_1a69097bc3eb244ae2f961459dad782174" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="struct_pe___binary__t" kind="struct"><name>Pe_Binary_t</name>
+    <member refid="struct_pe___binary__t_1a59673592754daea3b209d6d91b27492e" kind="variable"><name>handler</name></member>
+    <member refid="struct_pe___binary__t_1abbf838eabce4a5ca1ed36f7a85c94ee8" kind="variable"><name>name</name></member>
+    <member refid="struct_pe___binary__t_1a42ee70306bc08085af953adbcebf2e3d" kind="variable"><name>dos_header</name></member>
+    <member refid="struct_pe___binary__t_1ab3cf3a65edaf13499daab5b5178915ac" kind="variable"><name>header</name></member>
+    <member refid="struct_pe___binary__t_1af6aa682ac0356f2debe3b8b86d958309" kind="variable"><name>optional_header</name></member>
+    <member refid="struct_pe___binary__t_1a173a873379509d151c8be83acd88fbf2" kind="variable"><name>data_directories</name></member>
+    <member refid="struct_pe___binary__t_1a6da45ebcba54fe2c5872924669b77665" kind="variable"><name>sections</name></member>
+    <member refid="struct_pe___binary__t_1ab497b4ec1bdf89cf18b134f3a78bcb9c" kind="variable"><name>imports</name></member>
+  </compound>
+  <compound refid="struct_pe___data_directory__t" kind="struct"><name>Pe_DataDirectory_t</name>
+    <member refid="struct_pe___data_directory__t_1a7007d7cd8c2056848415e335f8567684" kind="variable"><name>rva</name></member>
+    <member refid="struct_pe___data_directory__t_1a32590b4b90d33dd470803ef2e3d05458" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="struct_pe___dos_header__t" kind="struct"><name>Pe_DosHeader_t</name>
+    <member refid="struct_pe___dos_header__t_1aa33793e30b8da1c0448939d8047a3c5e" kind="variable"><name>magic</name></member>
+    <member refid="struct_pe___dos_header__t_1a993493b1ce9a670a7a45eddf8917db22" kind="variable"><name>used_bytes_in_last_page</name></member>
+    <member refid="struct_pe___dos_header__t_1a2ef4ef701fdb0eb12e7d85d91d45fbc9" kind="variable"><name>file_size_in_pages</name></member>
+    <member refid="struct_pe___dos_header__t_1a922173719898fc137e72e8da0ebdc269" kind="variable"><name>numberof_relocation</name></member>
+    <member refid="struct_pe___dos_header__t_1a5a1f5ab66c73ed95fa13fb2b7ebf74b7" kind="variable"><name>header_size_in_paragraphs</name></member>
+    <member refid="struct_pe___dos_header__t_1a8537a1d434012478fcacb6831430b6d6" kind="variable"><name>minimum_extra_paragraphs</name></member>
+    <member refid="struct_pe___dos_header__t_1a83ee9a919d828c1ec611a28d021c647b" kind="variable"><name>maximum_extra_paragraphs</name></member>
+    <member refid="struct_pe___dos_header__t_1a3d5a133e02322b64c146e2a61c278b0b" kind="variable"><name>initial_relative_ss</name></member>
+    <member refid="struct_pe___dos_header__t_1ac533021689aab34e4dd61c25f65880f1" kind="variable"><name>initial_sp</name></member>
+    <member refid="struct_pe___dos_header__t_1a237df361911a942a9284455d48cba0be" kind="variable"><name>checksum</name></member>
+    <member refid="struct_pe___dos_header__t_1add5af1f809db20756081487ae0138995" kind="variable"><name>initial_ip</name></member>
+    <member refid="struct_pe___dos_header__t_1aef4ee2991ff81a6294144cfcdf0b7873" kind="variable"><name>initial_relative_cs</name></member>
+    <member refid="struct_pe___dos_header__t_1afdf93668bd4eee1da16a5f1d9e2e06d0" kind="variable"><name>addressof_relocation_table</name></member>
+    <member refid="struct_pe___dos_header__t_1acf10f8933687fc7d59abc82ec5017b4d" kind="variable"><name>overlay_number</name></member>
+    <member refid="struct_pe___dos_header__t_1aa4d1c5af9d249018dbc24009da612a8c" kind="variable"><name>reserved</name></member>
+    <member refid="struct_pe___dos_header__t_1a0214ed4dda162932f77ddd9cc5e579ee" kind="variable"><name>oem_id</name></member>
+    <member refid="struct_pe___dos_header__t_1a2aa0c684d77f9f36ac6aa87297e099db" kind="variable"><name>oem_info</name></member>
+    <member refid="struct_pe___dos_header__t_1a4ab8df592b1be9ae6e5578fd467621b2" kind="variable"><name>reserved2</name></member>
+    <member refid="struct_pe___dos_header__t_1a97f689f1c47c248ce175b6629c306a41" kind="variable"><name>addressof_new_exeheader</name></member>
+  </compound>
+  <compound refid="struct_pe___header__t" kind="struct"><name>Pe_Header_t</name>
+    <member refid="struct_pe___header__t_1a8f9ef29fc681d1e6c983927132f70c4d" kind="variable"><name>signature</name></member>
+    <member refid="struct_pe___header__t_1a4c717fa6553cc8fbd2372e4ea740330c" kind="variable"><name>machine</name></member>
+    <member refid="struct_pe___header__t_1ae066bb86bfdc8ac7251f506e867d88f7" kind="variable"><name>numberof_sections</name></member>
+    <member refid="struct_pe___header__t_1a5815c4db98e918e63c55caea8bc3ce30" kind="variable"><name>time_date_stamp</name></member>
+    <member refid="struct_pe___header__t_1aa2ce087166bc7b8c91364bd85ab532ca" kind="variable"><name>pointerto_symbol_table</name></member>
+    <member refid="struct_pe___header__t_1a3d974a574faf00934ea163b41f178760" kind="variable"><name>numberof_symbols</name></member>
+    <member refid="struct_pe___header__t_1a83730eddfb3361a397af2bb460c99a17" kind="variable"><name>sizeof_optional_header</name></member>
+    <member refid="struct_pe___header__t_1ad7d58cf4a8cab19b152e6f4006895cc8" kind="variable"><name>characteristics</name></member>
+  </compound>
+  <compound refid="struct_pe___import__t" kind="struct"><name>Pe_Import_t</name>
+    <member refid="struct_pe___import__t_1afbba28d280942f67e89c4be2183139bd" kind="variable"><name>name</name></member>
+    <member refid="struct_pe___import__t_1ae47b51062989414c2ab620d7d2166630" kind="variable"><name>forwarder_chain</name></member>
+    <member refid="struct_pe___import__t_1a0439939c37cefdb481b793181fa6f4df" kind="variable"><name>timedatestamp</name></member>
+    <member refid="struct_pe___import__t_1a8dbdcdddb3fb5f48a77f9638c8f71eeb" kind="variable"><name>entries</name></member>
+    <member refid="struct_pe___import__t_1a7a7873be5f1611c9f0eb42102c1536f0" kind="variable"><name>import_address_table_rva</name></member>
+    <member refid="struct_pe___import__t_1a4a5f9239e34227d5370b938d353f947b" kind="variable"><name>import_lookup_table_rva</name></member>
+  </compound>
+  <compound refid="struct_pe___import_entry__t" kind="struct"><name>Pe_ImportEntry_t</name>
+    <member refid="struct_pe___import_entry__t_1adaa3d1932e7fa6b937d2f077f6b99d6f" kind="variable"><name>is_ordinal</name></member>
+    <member refid="struct_pe___import_entry__t_1a8e8a5c16ddb29eb0c7936e57d4526928" kind="variable"><name>name</name></member>
+    <member refid="struct_pe___import_entry__t_1afea21fad413906ef392d4584820301c5" kind="variable"><name>ordinal</name></member>
+    <member refid="struct_pe___import_entry__t_1abdd07944f2ec0a94a4d94049f1485e36" kind="variable"><name>hint_name_rva</name></member>
+    <member refid="struct_pe___import_entry__t_1a5da26610061ca43ef471b8d036e26aea" kind="variable"><name>hint</name></member>
+    <member refid="struct_pe___import_entry__t_1affba22b6800d4db0a09eaa1aef97de1f" kind="variable"><name>iat_value</name></member>
+    <member refid="struct_pe___import_entry__t_1ac4f933a918f8b3c838e122dfc4b8d59e" kind="variable"><name>data</name></member>
+    <member refid="struct_pe___import_entry__t_1ac62e6ffcafacdd82fe21af0856d5a044" kind="variable"><name>iat_address</name></member>
+  </compound>
+  <compound refid="struct_pe___optional_header__t" kind="struct"><name>Pe_OptionalHeader_t</name>
+    <member refid="struct_pe___optional_header__t_1afa4db7d8b9ef419948106617bb223b44" kind="variable"><name>magic</name></member>
+    <member refid="struct_pe___optional_header__t_1a2a1c45e0e11975a0fe32bd1bcc72f9d4" kind="variable"><name>major_linker_version</name></member>
+    <member refid="struct_pe___optional_header__t_1a8d85b5882f5edd3858c190bfb5f1ba20" kind="variable"><name>minor_linker_version</name></member>
+    <member refid="struct_pe___optional_header__t_1ac840bc0bfa0ad5d90db721869a117d4c" kind="variable"><name>sizeof_code</name></member>
+    <member refid="struct_pe___optional_header__t_1acd259f263b9f9ed6482a99b8cc5f88ec" kind="variable"><name>sizeof_initialized_data</name></member>
+    <member refid="struct_pe___optional_header__t_1a51b669316e1e3be8dcb799608333a68a" kind="variable"><name>sizeof_uninitialized_data</name></member>
+    <member refid="struct_pe___optional_header__t_1af12b3828461ebeffd3a2d81b9c0a7a59" kind="variable"><name>addressof_entrypoint</name></member>
+    <member refid="struct_pe___optional_header__t_1a220bd105924da4878d1471e8e9c094f7" kind="variable"><name>baseof_code</name></member>
+    <member refid="struct_pe___optional_header__t_1a3ac6f7bcffa3d6624b68efb70bcfc449" kind="variable"><name>baseof_data</name></member>
+    <member refid="struct_pe___optional_header__t_1a9b9e4dcea605248e8efe5895238a424a" kind="variable"><name>imagebase</name></member>
+    <member refid="struct_pe___optional_header__t_1a993abe3e2fe648ca1731b5f4de9734b4" kind="variable"><name>section_alignment</name></member>
+    <member refid="struct_pe___optional_header__t_1a6d8ef6077bc21fa2ab6a942ab519f0c3" kind="variable"><name>file_alignment</name></member>
+    <member refid="struct_pe___optional_header__t_1a3b5a63f1c31e37fbd4aab01244e02ae1" kind="variable"><name>major_operating_system_version</name></member>
+    <member refid="struct_pe___optional_header__t_1aa248d3b1a91f604d3a4cbe335367ff20" kind="variable"><name>minor_operating_system_version</name></member>
+    <member refid="struct_pe___optional_header__t_1a147256007d453a82994ce6aefe032a9a" kind="variable"><name>major_image_version</name></member>
+    <member refid="struct_pe___optional_header__t_1a442c0a128e6328533ddccb156dce42a7" kind="variable"><name>minor_image_version</name></member>
+    <member refid="struct_pe___optional_header__t_1a55e90593348b5b3c74ceae8d04a62ddb" kind="variable"><name>major_subsystem_version</name></member>
+    <member refid="struct_pe___optional_header__t_1a8a8e0f83aec1de815e5445ba7f39f8f7" kind="variable"><name>minor_subsystem_version</name></member>
+    <member refid="struct_pe___optional_header__t_1a266bc53ad6fe80f684a4ebe3bf3f8ea5" kind="variable"><name>win32_version_value</name></member>
+    <member refid="struct_pe___optional_header__t_1a8458e01783c21fbc9c2422a616b330ec" kind="variable"><name>sizeof_image</name></member>
+    <member refid="struct_pe___optional_header__t_1a5079ce5c8f30f8e396cf7e724513ab0f" kind="variable"><name>sizeof_headers</name></member>
+    <member refid="struct_pe___optional_header__t_1ad1c7ae060b6f5748180ce8b1b060ea2d" kind="variable"><name>checksum</name></member>
+    <member refid="struct_pe___optional_header__t_1a9ace5e066ebaf80dad227eb095e75df9" kind="variable"><name>subsystem</name></member>
+    <member refid="struct_pe___optional_header__t_1aaf65a7c979a1535a3b5ee81292da938d" kind="variable"><name>dll_characteristics</name></member>
+    <member refid="struct_pe___optional_header__t_1aa6e8093162a133b106e38814e6fcebbd" kind="variable"><name>sizeof_stack_reserve</name></member>
+    <member refid="struct_pe___optional_header__t_1af6cea20ee34e0d46415269e29122cbca" kind="variable"><name>sizeof_stack_commit</name></member>
+    <member refid="struct_pe___optional_header__t_1ab3cebd01ef92b73fd4d5cc9216172fda" kind="variable"><name>sizeof_heap_reserve</name></member>
+    <member refid="struct_pe___optional_header__t_1a9826d55302ed5cf31da6744a93009272" kind="variable"><name>sizeof_heap_commit</name></member>
+    <member refid="struct_pe___optional_header__t_1adcb9efc81065acef05158d72bf4a8a62" kind="variable"><name>loader_flags</name></member>
+    <member refid="struct_pe___optional_header__t_1a6932548cdc212617647bf8295fe5ba64" kind="variable"><name>numberof_rva_and_size</name></member>
+  </compound>
+  <compound refid="struct_pe___section__t" kind="struct"><name>Pe_Section_t</name>
+    <member refid="struct_pe___section__t_1a2e9a601e4737296ff937f9035e3a1f5d" kind="variable"><name>name</name></member>
+    <member refid="struct_pe___section__t_1a22aeec41a6531a2bf5e1b29444f16189" kind="variable"><name>virtual_address</name></member>
+    <member refid="struct_pe___section__t_1aaf55c17e0359974e46e4ca96357118a0" kind="variable"><name>size</name></member>
+    <member refid="struct_pe___section__t_1a51dba2bb866c1294e3d682f70f269bed" kind="variable"><name>offset</name></member>
+    <member refid="struct_pe___section__t_1a64c51ddab3d890926a37c7c07342c049" kind="variable"><name>virtual_size</name></member>
+    <member refid="struct_pe___section__t_1a577b8ef7a1a20e74ff95b09b03ac52de" kind="variable"><name>pointerto_relocation</name></member>
+    <member refid="struct_pe___section__t_1a49bca3ee4a722d65f3ac870b56296629" kind="variable"><name>pointerto_line_numbers</name></member>
+    <member refid="struct_pe___section__t_1a5d0e81d88e1c865919af3533a87d0b62" kind="variable"><name>characteristics</name></member>
+    <member refid="struct_pe___section__t_1a5115c00566c0dc56e5f767ae7ce02c4d" kind="variable"><name>content</name></member>
+    <member refid="struct_pe___section__t_1a8ce68083484e29e15c63c8e51bc922a9" kind="variable"><name>content_size</name></member>
+    <member refid="struct_pe___section__t_1a1c7781e6e80778a30089785e899c4bc1" kind="variable"><name>entropy</name></member>
+  </compound>
+  <compound refid="_e_l_f_8h" kind="file"><name>ELF.h</name>
+  </compound>
+  <compound refid="_dynamic_entry_8h" kind="file"><name>DynamicEntry.h</name>
+    <member refid="_dynamic_entry_8h_1aba987e5d07f669d73796a8aef9b24386" kind="typedef"><name>Elf_DynamicEntry_t</name></member>
+    <member refid="_dynamic_entry_8h_1a6897e5e720767845ab0d55fa5551cb19" kind="typedef"><name>Elf_DynamicEntry_Library_t</name></member>
+    <member refid="_dynamic_entry_8h_1ad791b685029cf5161db40915e49b345b" kind="typedef"><name>Elf_DynamicEntry_SharedObject_t</name></member>
+    <member refid="_dynamic_entry_8h_1a1bbe4f628928e3fdefef97197cd91598" kind="typedef"><name>Elf_DynamicEntry_Array_t</name></member>
+    <member refid="_dynamic_entry_8h_1a62a68e5b6b83ec9810133f9ac7c6af32" kind="typedef"><name>Elf_DynamicEntry_Rpath_t</name></member>
+    <member refid="_dynamic_entry_8h_1a6063c6fcf04b63d4be7855a04958a0b2" kind="typedef"><name>Elf_DynamicEntry_RunPath_t</name></member>
+    <member refid="_dynamic_entry_8h_1adf80b7a3d4c9a2ac6f1e0e1c92f6c32f" kind="typedef"><name>Elf_DynamicEntry_Flags_t</name></member>
+  </compound>
+  <compound refid="utils_8h" kind="file"><name>utils.h</name>
+    <member refid="utils_8h_1a8bef2268c0b58f5d3f4771c02ce4313d" kind="function"><name>is_elf</name></member>
+  </compound>
+  <compound refid="_l_i_e_f_8h" kind="file"><name>LIEF.h</name>
+  </compound>
+  <compound refid="logging_8h" kind="file"><name>logging.h</name>
+    <member refid="logging_8h_1a53a227780e833ebe2c698f92493d0a45" kind="function"><name>lief_logging_disable</name></member>
+    <member refid="logging_8h_1ac883dcb9dc05bb1cd09e213f321595b5" kind="function"><name>lief_logging_enable</name></member>
+    <member refid="logging_8h_1aaded9e1d6f48355d9b703f575d14cfb1" kind="function"><name>lief_logging_set_level</name></member>
+  </compound>
+  <compound refid="_mach_o_8h" kind="file"><name>MachO.h</name>
+  </compound>
+  <compound refid="_e_l_f_2_binary_8h" kind="file"><name>Binary.h</name>
+    <member refid="_e_l_f_2_binary_8h_1ab4e2d0591fbfec9ced6a6c9362fe3092" kind="typedef"><name>Elf_Binary_t</name></member>
+    <member refid="_e_l_f_2_binary_8h_1af7ed75e99e14191c28ea39fcca095a6d" kind="function"><name>elf_parse</name></member>
+    <member refid="_e_l_f_2_binary_8h_1abb43b1d09a7e42e846a8e9a050b97776" kind="function"><name>elf_binary_destroy</name></member>
+    <member refid="_e_l_f_2_binary_8h_1aafb05be6c71b05ff0fadb06c3090c17d" kind="function"><name>elf_binary_save_header</name></member>
+  </compound>
+  <compound refid="_mach_o_2_binary_8h" kind="file"><name>Binary.h</name>
+    <member refid="_mach_o_2_binary_8h_1aa43da6dda26fe05e49addad8375ac11b" kind="typedef"><name>Macho_Binary_t</name></member>
+    <member refid="_mach_o_2_binary_8h_1a7ade0ab0c32b9cec08f70472957228d7" kind="function"><name>macho_parse</name></member>
+    <member refid="_mach_o_2_binary_8h_1ab17a736d9c79569700b31fc58a843b89" kind="function"><name>macho_binaries_destroy</name></member>
+  </compound>
+  <compound refid="_p_e_2_binary_8h" kind="file"><name>Binary.h</name>
+    <member refid="_p_e_2_binary_8h_1a09b0868eac7d73860db2021bedcc8292" kind="typedef"><name>Pe_Binary_t</name></member>
+    <member refid="_p_e_2_binary_8h_1a753ac34ea89868b5f316c0bcbbd5d2c5" kind="function"><name>pe_parse</name></member>
+    <member refid="_p_e_2_binary_8h_1a8c3a678dc5f071d03cbb150bba43a016" kind="function"><name>pe_binary_destroy</name></member>
+  </compound>
+  <compound refid="_e_l_f_2enums_8h" kind="file"><name>enums.h</name>
+    <member refid="_e_l_f_2enums_8h_1a9254e234b0fe8d9478032195486d12d1" kind="define"><name>_LIEF_EN</name></member>
+    <member refid="_e_l_f_2enums_8h_1a5a5009ff68d6b84c24e0a81d84740f6d" kind="define"><name>_LIEF_EN_2</name></member>
+    <member refid="_e_l_f_2enums_8h_1a40aeba360cb85332d15ac9d4d3f6e86a" kind="define"><name>_LIEF_EI</name></member>
+  </compound>
+  <compound refid="_mach_o_2enums_8h" kind="file"><name>enums.h</name>
+    <member refid="_mach_o_2enums_8h_1a9254e234b0fe8d9478032195486d12d1" kind="define"><name>_LIEF_EN</name></member>
+    <member refid="_mach_o_2enums_8h_1a5a5009ff68d6b84c24e0a81d84740f6d" kind="define"><name>_LIEF_EN_2</name></member>
+    <member refid="_mach_o_2enums_8h_1a40aeba360cb85332d15ac9d4d3f6e86a" kind="define"><name>_LIEF_EI</name></member>
+  </compound>
+  <compound refid="_p_e_2enums_8h" kind="file"><name>enums.h</name>
+    <member refid="_p_e_2enums_8h_1a9254e234b0fe8d9478032195486d12d1" kind="define"><name>_LIEF_EN</name></member>
+    <member refid="_p_e_2enums_8h_1a5a5009ff68d6b84c24e0a81d84740f6d" kind="define"><name>_LIEF_EN_2</name></member>
+    <member refid="_p_e_2enums_8h_1a40aeba360cb85332d15ac9d4d3f6e86a" kind="define"><name>_LIEF_EI</name></member>
+  </compound>
+  <compound refid="_e_l_f_2_enum_to_string_8h" kind="file"><name>EnumToString.h</name>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a2438e84a2c631d1b5d4ab0e290d07a16" kind="function"><name>SYMBOL_BINDINGS_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1abe698e6078bb65b83a3796c72c17068a" kind="function"><name>E_TYPE_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a0de02d8d15b854251a26d9f8e176bbd4" kind="function"><name>VERSION_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1ac4a3eacf62d77a7caffe98b27a412888" kind="function"><name>ARCH_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1ab0629f6d892ef96390f5568a43be9366" kind="function"><name>SEGMENT_TYPES_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1adad57ac61aca0255a013a940f34a71e6" kind="function"><name>DYNAMIC_TAGS_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a35442d5dcc7d27f2c11622043173ec8f" kind="function"><name>ELF_SECTION_TYPES_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a4aec4ff4f519ef9e65be4a41de79001f" kind="function"><name>ELF_SECTION_FLAGS_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a0a48ebe3b6831293784aae028d9708d2" kind="function"><name>ELF_SYMBOL_TYPES_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a4bf16cefd4675ce0de78847733b8f722" kind="function"><name>ELF_CLASS_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a5900c116ffe55d3a8284b76b6d2eb00c" kind="function"><name>ELF_DATA_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1adf04ffcfb06393ac74825f0cce02dc4f" kind="function"><name>OS_ABI_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1ae1b97eac62207a4be3dd6d3e62ee1553" kind="function"><name>DYNAMIC_FLAGS_to_string</name></member>
+    <member refid="_e_l_f_2_enum_to_string_8h_1a1d54e5ac7597db43dc0af64019d1ad20" kind="function"><name>DYNAMIC_FLAGS_1_to_string</name></member>
+  </compound>
+  <compound refid="_mach_o_2_enum_to_string_8h" kind="file"><name>EnumToString.h</name>
+    <member refid="_mach_o_2_enum_to_string_8h_1ac0d817d919382bc2afdfc67276929f24" kind="function"><name>LOAD_COMMAND_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1a3ea76ad163a24c6f7c1eb1e502fd1bf1" kind="function"><name>MACHO_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1ae2c41e215b4677d09f7b016289652eb4" kind="function"><name>FILE_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1abd232d24b91ecda482f6ede0d9271060" kind="function"><name>CPU_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1aaa2e2560a8d1cf77792ab3cdecbbbe8d" kind="function"><name>HEADER_FLAGS_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1ae6a0e02dee26e30bee382aa5985102c9" kind="function"><name>MACHO_SECTION_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1aaf2f74cc00ee8b240a1588a61007124f" kind="function"><name>MACHO_SYMBOL_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1a1381aca59b93265339dc95eb0f6aa90d" kind="function"><name>N_LIST_TYPES_to_string</name></member>
+    <member refid="_mach_o_2_enum_to_string_8h_1a516add9178bbc38e94ba9516989b5b7f" kind="function"><name>SYMBOL_DESCRIPTIONS_to_string</name></member>
+  </compound>
+  <compound refid="_p_e_2_enum_to_string_8h" kind="file"><name>EnumToString.h</name>
+    <member refid="_p_e_2_enum_to_string_8h_1a8b1ac786f32e2f518a25866e4ed6814b" kind="function"><name>PE_TYPES_to_string</name></member>
+  </compound>
+  <compound refid="_e_l_f_2_header_8h" kind="file"><name>Header.h</name>
+    <member refid="_e_l_f_2_header_8h_1ae7cb6102f4d87a4cf3dab3502e9823b4" kind="typedef"><name>Elf_Header_t</name></member>
+  </compound>
+  <compound refid="_mach_o_2_header_8h" kind="file"><name>Header.h</name>
+    <member refid="_mach_o_2_header_8h_1a4c3821d90e0cb7057961b6ad28b13453" kind="typedef"><name>Macho_Header_t</name></member>
+  </compound>
+  <compound refid="_p_e_2_header_8h" kind="file"><name>Header.h</name>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704" kind="enum"><name>LIEF_PE_MACHINE_TYPES</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704ae105db0e5412a12fa1bb10c3eddc6d7d" kind="enumvalue"><name>LIEF_PE_MACHINE_UNKNOWN</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a17fa01513368a8d69545c96539fbfafe" kind="enumvalue"><name>LIEF_PE_MACHINE_AM33</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a375be9cae8872f01717935409c2a7322" kind="enumvalue"><name>LIEF_PE_MACHINE_AMD64</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a52e7b587d84e90fddb370ea2d579b2b5" kind="enumvalue"><name>LIEF_PE_MACHINE_ARM</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a8db173f6550ccbec2271a64595b2de7f" kind="enumvalue"><name>LIEF_PE_MACHINE_ARMNT</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704aab240b60ad8de99ed731e306226ba571" kind="enumvalue"><name>LIEF_PE_MACHINE_ARM64</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a941ae5cb2dbf2860b352183fd69efd22" kind="enumvalue"><name>LIEF_PE_MACHINE_EBC</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704abb3d78e235b34986c6953eaa1b6c6e69" kind="enumvalue"><name>LIEF_PE_MACHINE_I386</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a025b240c27c670d8964c1bf1baf18c3c" kind="enumvalue"><name>LIEF_PE_MACHINE_IA64</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704af6d0cf4431d5260cbe258b362b4a0ae2" kind="enumvalue"><name>LIEF_PE_MACHINE_M32R</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a716e17278474cffb4770e6c974374b03" kind="enumvalue"><name>LIEF_PE_MACHINE_MIPS16</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704aa2bea137174d09a16d3f7a16bd46b2f6" kind="enumvalue"><name>LIEF_PE_MACHINE_MIPSFPU</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a33923e4fe6750d684e92a41791a1de0d" kind="enumvalue"><name>LIEF_PE_MACHINE_MIPSFPU16</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4a11fd57e645835a01d89417fc8ecb5a" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPC</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a611dc44ad91d7302d5567eaec846f745" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPCFP</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a2f3c22354dacdcfed81650370fd820c7" kind="enumvalue"><name>LIEF_PE_MACHINE_R4000</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a1fe3eab4f18d54fcc966636000adbe6c" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV32</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a30bd55d27f725d54f6b887e7c7d2ecb6" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV64</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704af4abbed80d894fcfaea9a1fac25b0042" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV128</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a64d90b9d6bc85c713833d434b5e35432" kind="enumvalue"><name>LIEF_PE_MACHINE_SH3</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704ae92258b22aa0da3e84089cc890f3fb16" kind="enumvalue"><name>LIEF_PE_MACHINE_SH3DSP</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704aacd2a72bda43c3b4f92615e90c11a45d" kind="enumvalue"><name>LIEF_PE_MACHINE_SH4</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704af9fd269a8a82887c731de2c53bee850a" kind="enumvalue"><name>LIEF_PE_MACHINE_SH5</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4ec8162c06c571b5fa5389e8f0d9c889" kind="enumvalue"><name>LIEF_PE_MACHINE_THUMB</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4ff7547327fd08e69549d2662d0d89e6" kind="enumvalue"><name>LIEF_PE_MACHINE_WCEMIPSV2</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99" kind="enum"><name>LIEF_PE_HEADER_CHARACTERISTICS</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a91f5741eb015a5ebb0142aa037c1f550" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_INVALID</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99acc39116f58ec12df2aedefb97c6d31a9" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_RELOCS_STRIPPED</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a544dc5b0987e0127efba978f336a7e11" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_EXECUTABLE_IMAGE</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a53fd6d11eb7d1cc676fc98935f8cca12" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_LINE_NUMS_STRIPPED</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a9d7b756ecf74dd6719f70564b9d66ecf" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_LOCAL_SYMS_STRIPPED</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a897b7f84670afc4e4b2bf628896b8b1d" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_AGGRESSIVE_WS_TRIM</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a20cf3938118d5af630b17d112a4421e3" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_LARGE_ADDRESS_AWARE</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a1985dced9231f85aa55faaaf5ca7849e" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_BYTES_REVERSED_LO</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99ac0b83f09425d56c65542ad797164e47a" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_32BIT_MACHINE</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a96c7719bc6cff524d747dfe3e185ebbd" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_DEBUG_STRIPPED</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99ad1d2afc106b75875adf9caaa12c16c09" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_REMOVABLE_RUN_FROM_SWAP</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a8834b66faa56c4463d379ed522c1ce93" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_NET_RUN_FROM_SWAP</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a552e923f7a798e4ec3351d3a5538e2ee" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_SYSTEM</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a251a2ac4fead196005e427c019651959" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_DLL</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99adfb5aa52e943e64e71eaaabebef7953d" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_UP_SYSTEM_ONLY</name></member>
+    <member refid="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a705e82d905b6320b45c0b412ca9e0d03" kind="enumvalue"><name>LIEF_PE_HEADER_CHARACTERISTICS_BYTES_REVERSED_HI</name></member>
+    <member refid="_p_e_2_header_8h_1a152734038418b26df37b1daef678bbb8" kind="typedef"><name>Pe_Header_t</name></member>
+    <member refid="_p_e_2_header_8h_1a3873a71f81039d938e74284f62a2f43a" kind="function"><name>lief_pe_header_machine_str</name></member>
+    <member refid="_p_e_2_header_8h_1a2f6d20b7c1203a2fb5182ed71b0d53ca" kind="function"><name>lief_pe_header_characteristics_str</name></member>
+  </compound>
+  <compound refid="_load_command_8h" kind="file"><name>LoadCommand.h</name>
+    <member refid="_load_command_8h_1a4abe41ecbce3c520959124f88baa63f8" kind="typedef"><name>Macho_Command_t</name></member>
+  </compound>
+  <compound refid="_e_l_f_2_section_8h" kind="file"><name>Section.h</name>
+    <member refid="_e_l_f_2_section_8h_1a5d075ea3af285e90b9def729a5b8b8b5" kind="typedef"><name>Elf_Section_t</name></member>
+  </compound>
+  <compound refid="_mach_o_2_section_8h" kind="file"><name>Section.h</name>
+    <member refid="_mach_o_2_section_8h_1a55b431a6aeb54e7b629b7cbf00920b39" kind="typedef"><name>Macho_Section_t</name></member>
+  </compound>
+  <compound refid="_p_e_2_section_8h" kind="file"><name>Section.h</name>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbb" kind="enum"><name>LIEF_PE_SECTION_CHARACTERISTICS</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba3d80083f5941abd8286d844bb039640a" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_TYPE_NO_PAD</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbadefa44226ce8db89e76443f1e6323d06" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_CNT_CODE</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba24c29f2c3e3a19f3563d608f35156d8b" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_CNT_INITIALIZED_DATA</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba13e3077340718dfdc43d9dae1d9ea9c5" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_CNT_UNINITIALIZED_DATA</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba35492320e87c94585d113bcea87e3a43" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_OTHER</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba64776c320432cee0e0c42d711dd68c84" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_INFO</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba69310dcee3f481cfd6f0607adcd2b593" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_REMOVE</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbab722b12f5a3dc04d281ba61485de119c" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_COMDAT</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac75056e75042e182231e03c17644f4be" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_GPREL</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba4323dcc2e2c116f20371518515549418" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_PURGEABLE</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba8fe50c5a9e04a6c5faf498daa62c3f99" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_16BIT</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbab9401582df494b01cd2ea9f7b1172080" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_LOCKED</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba27cf748acaf06ea21e98bd0c7249abce" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_PRELOAD</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba6b3515ef61f47f2362bb2e6aaaef5830" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_1BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba442b92ec78d6d2f10e8c5f2211bce495" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_2BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba2a67d5b6f0de449dee12b6d976855cbc" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_4BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba71c7d1e53f23884c3a27ac9c15da467d" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_8BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba368d9df75f3a66ec9a885e0b39c0689d" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_16BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac23336bf84bc886a8616aad22e570514" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_32BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba6a57c40904718648411b532d0c6c6ee6" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_64BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac12c23be7034c987db3c177b87ae906b" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_128BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba6ca351a57de0f314d9811e0fd2156243" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_256BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba2b364079d1461da19dab6997ec50508a" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_512BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba43b24e237d005fa90bd17f6664c161e6" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_1024BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba711c21bbbebf6cbb6cff547f148ad859" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_2048BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbab6ddfdd0f8d63981769a74796d22eb35" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_4096BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbaa1144a5b9496740a8613cf619cff2e31" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_ALIGN_8192BYTES</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba187049e4abaef6bc37534bc8f8a38286" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_LNK_NRELOC_OVFL</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbac23e8817e1f348227a41a71e3e2c4e17" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_DISCARDABLE</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba321d7020def6c6aa6777ad0e22fa18a0" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_NOT_CACHED</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba0d05e53d631664b71bf69c8ad6d322f7" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_NOT_PAGED</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbabf1676abbaea63e2b7145ece6c9b15cc" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_SHARED</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba807159b0428d390d4a499059026c63e6" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_EXECUTE</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbba7b4b1e68e420817759fa5d1ba98178ff" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_READ</name></member>
+    <member refid="_p_e_2_section_8h_1a45529fec217b2d306398a4e74bd09dbbacf763fae3eba8408736a94be3d0179f4" kind="enumvalue"><name>LIEF_PE_SECTION_CHARACTERISTICS_MEM_WRITE</name></member>
+    <member refid="_p_e_2_section_8h_1aa8c1db2923703a81f6586b0c94b1926a" kind="typedef"><name>Pe_Section_t</name></member>
+  </compound>
+  <compound refid="_e_l_f_2_segment_8h" kind="file"><name>Segment.h</name>
+    <member refid="_e_l_f_2_segment_8h_1ab0bd0019872e4d82cc263eac2bc8224e" kind="typedef"><name>Elf_Segment_t</name></member>
+  </compound>
+  <compound refid="_mach_o_2_segment_8h" kind="file"><name>Segment.h</name>
+    <member refid="_mach_o_2_segment_8h_1a329f1b5d769a37b7297b91674fea8ffb" kind="typedef"><name>Macho_Segment_t</name></member>
+  </compound>
+  <compound refid="_e_l_f_2_symbol_8h" kind="file"><name>Symbol.h</name>
+    <member refid="_e_l_f_2_symbol_8h_1a657712fc8d5275fc745dbc539cc5cb85" kind="typedef"><name>Elf_Symbol_t</name></member>
+  </compound>
+  <compound refid="_mach_o_2_symbol_8h" kind="file"><name>Symbol.h</name>
+    <member refid="_mach_o_2_symbol_8h_1abbd5ff3c31c27453e94b1f27c6355cd8" kind="typedef"><name>Macho_Symbol_t</name></member>
+  </compound>
+  <compound refid="_p_e_8h" kind="file"><name>PE.h</name>
+  </compound>
+  <compound refid="_data_directory_8h" kind="file"><name>DataDirectory.h</name>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624" kind="enum"><name>LIEF_PE_DATA_DIRECTORY</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a52852f96a59acff9ff5ebc8e26a2b39a" kind="enumvalue"><name>LIEF_PE_DATA_DIR_EXPORT_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a3bc3d3c265968d1c5aa0ce553ea8c6af" kind="enumvalue"><name>LIEF_PE_DATA_DIR_IMPORT_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a7db9dbba035d03e35496754d35cf932a" kind="enumvalue"><name>LIEF_PE_DATA_DIR_RESOURCE_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624aa39fa64c0e9f282e0c1ce6aec6d35757" kind="enumvalue"><name>LIEF_PE_DATA_DIR_EXCEPTION_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a33f20ec9cdc63c9be04c09e8f8653b2c" kind="enumvalue"><name>LIEF_PE_DATA_DIR_CERTIFICATE_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624add76c8ea1aca078af49bcb6804317f33" kind="enumvalue"><name>LIEF_PE_DATA_DIR_BASE_RELOCATION_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a6086272b48b7417eada50b1687b28b39" kind="enumvalue"><name>LIEF_PE_DATA_DIR_DEBUG</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a5733d697626ea77431a4a8c00dd7275e" kind="enumvalue"><name>LIEF_PE_DATA_DIR_ARCHITECTURE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624af08c1685ceb284c2c1f20957dee489a9" kind="enumvalue"><name>LIEF_PE_DATA_DIR_GLOBAL_PTR</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a1588d04bc155961d93a0b66dba3d9442" kind="enumvalue"><name>LIEF_PE_DATA_DIR_TLS_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a0fa6cef618e5e504d4bfef81b9ebba7b" kind="enumvalue"><name>LIEF_PE_DATA_DIR_LOAD_CONFIG_TABLE</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a28ba678185c1404e3ffffc2b18c2bf6f" kind="enumvalue"><name>LIEF_PE_DATA_DIR_BOUND_IMPORT</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624ab3442b74c9ab65b4a7480a5ad2e6277a" kind="enumvalue"><name>LIEF_PE_DATA_DIR_IAT</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a4b65ffe2e002cd2a570663a7630c06d7" kind="enumvalue"><name>LIEF_PE_DATA_DIR_DELAY_IMPORT_DESCRIPTOR</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624ae024225f969cff5ff4922c2ba8eac7d4" kind="enumvalue"><name>LIEF_PE_DATA_DIR_CLR_RUNTIME_HEADER</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a78532abe7a7ea05ae9f68fe4196348dd" kind="enumvalue"><name>LIEF_PE_DATA_DIR_RESERVED</name></member>
+    <member refid="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624ae290a92a37dcd558395c74667a027451" kind="enumvalue"><name>LIEF_PE_DATA_DIR_NONE</name></member>
+    <member refid="_data_directory_8h_1ab1a6e5db8202fae246b68763894ebd94" kind="typedef"><name>Pe_DataDirectory_t</name></member>
+  </compound>
+  <compound refid="_dos_header_8h" kind="file"><name>DosHeader.h</name>
+    <member refid="_dos_header_8h_1a96d6b2bd3262be00a3ee5b99b702f7ce" kind="typedef"><name>Pe_DosHeader_t</name></member>
+  </compound>
+  <compound refid="_import_8h" kind="file"><name>Import.h</name>
+    <member refid="_import_8h_1a72f3a35d019d6693e69f3273db35f371" kind="typedef"><name>Pe_Import_t</name></member>
+  </compound>
+  <compound refid="_import_entry_8h" kind="file"><name>ImportEntry.h</name>
+    <member refid="_import_entry_8h_1ae22d243660f78bb225a88d8bb8d583be" kind="typedef"><name>Pe_ImportEntry_t</name></member>
+  </compound>
+  <compound refid="_optional_header_8h" kind="file"><name>OptionalHeader.h</name>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731" kind="enum"><name>LIEF_PE_DLL_CHARACTERISTICS</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a187dd02a78377a9c0d74f61dafb79ba5" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_HIGH_ENTROPY_VA</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a75d0b7e31e1e286d840e62efb0070d54" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_DYNAMIC_BASE</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731ae7027de50e50ae9f3484a89b858f871d" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_FORCE_INTEGRITY</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731aaa93b2241685f3509ee3cf6b0e614742" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_NX_COMPAT</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a0f6f59ad1a138d65c985c284d6d25be1" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_NO_ISOLATION</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a47f0b7974d4b591f2505d6fdad1458ab" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_NO_SEH</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a7dc884eb7f93a95ef0b9584aac4b854e" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_NO_BIND</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731ad1eddf642638e5d824c2c062e6249592" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_APPCONTAINER</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a87ccc9ca32ce40a0fc93e1fc1e61e7b0" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_WDM_DRIVER</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a984fba731863fa5b0c88f94b372a973c" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_GUARD_CF</name></member>
+    <member refid="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a12380cf63fe8023d38f18b5d2eb76923" kind="enumvalue"><name>LIEF_PE_DLL_CHARACTERISTICS_TERMINAL_SERVER_AWARE</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634e" kind="enum"><name>LIEF_PE_SUBSYSTEM</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eadad431de96b58505b32702a7a34659ba" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_UNKNOWN</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea6f196416b8e6d3c433ef520da5f0aaea" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_NATIVE</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eaee422dcb6892bc9a5637d54ebe45cce1" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_WINDOWS_GUI</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea374f6ee716a321154a3ea3c10f11df4c" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_WINDOWS_CUI</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea01c4884bcaeaaf1b6c16bb1336538a7e" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_OS2_CUI</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea2402de1df557e23cd47fd20c9f3375f4" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_POSIX_CUI</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eacb49887c209bd72f92d66a6bd6a12417" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_NATIVE_WINDOWS</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea45226ff66150260e1d7fccfdd392b656" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_WINDOWS_CE_GUI</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eaa005f98bb97189e045194fb2ecbfa4a1" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_EFI_APPLICATION</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea776e348d09dc1ee26df324cb69bdba19" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea07575258b6d7b667a36d1f1646dcfd38" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_EFI_RUNTIME_DRIVER</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea480ea8bcff6d0ea9f15b30762f1c89b8" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_EFI_ROM</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eabe444ab8aa82c6c92b090cb6099eb266" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_XBOX</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ead82002ecd14b0b3632c7cc0349a5072d" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION</name></member>
+    <member refid="_optional_header_8h_1a736ab4f34133218fb8d48ae6e31e8c73" kind="typedef"><name>Pe_OptionalHeader_t</name></member>
+    <member refid="_optional_header_8h_1aa62938db48a666994f543a3e81bec6b6" kind="function"><name>lief_pe_subsytem_str</name></member>
+  </compound>
+  <compound refid="types_8h" kind="file"><name>types.h</name>
+  </compound>
+  <compound refid="dir_b3f819f9982c3db4f036d8f1930be57e" kind="dir"><name>/lief-src/api</name>
+  </compound>
+  <compound refid="dir_1005d45042621889394dc7100591be9f" kind="dir"><name>/lief-src/api/c</name>
+  </compound>
+  <compound refid="dir_531380b7f615e4bd0ab1c930f2fa2078" kind="dir"><name>/lief-src/api/c/include/LIEF/ELF</name>
+  </compound>
+  <compound refid="dir_6acf92f7a6655e6ddc88aef782b9c445" kind="dir"><name>/lief-src/api/c/include</name>
+  </compound>
+  <compound refid="dir_19a52d206f1c9d6db114d7d0fbc2ed20" kind="dir"><name>/lief-src/api/c/include/LIEF</name>
+  </compound>
+  <compound refid="dir_0a908f4f6e74b14a7afcf783de099178" kind="dir"><name>/lief-src</name>
+  </compound>
+  <compound refid="dir_a90ad0cef56f8fde8e0f9387d117a72e" kind="dir"><name>/lief-src/api/c/include/LIEF/MachO</name>
+  </compound>
+  <compound refid="dir_9bfb90f5af1eb4dc61286f25526a5f85" kind="dir"><name>/lief-src/api/c/include/LIEF/PE</name>
+  </compound>
+</doxygenindex>

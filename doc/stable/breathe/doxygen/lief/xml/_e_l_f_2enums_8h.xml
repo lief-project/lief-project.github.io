@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_e_l_f_2enums_8h" kind="file" language="C++">
+    <compoundname>enums.h</compoundname>
+    <includes local="yes">LIEF/ELF/undef.h</includes>
+    <includes local="yes">LIEF/ELF/enums.inc</includes>
+    <includedby refid="_e_l_f_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Binary.h</includedby>
+    <includedby refid="_dynamic_entry_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/DynamicEntry.h</includedby>
+    <includedby refid="_e_l_f_2_enum_to_string_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/EnumToString.h</includedby>
+    <includedby refid="_e_l_f_2_header_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Header.h</includedby>
+    <includedby refid="_e_l_f_2_section_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Section.h</includedby>
+    <includedby refid="_e_l_f_2_segment_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Segment.h</includedby>
+    <includedby refid="_e_l_f_2_symbol_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Symbol.h</includedby>
+    <includedby refid="_dos_header_8h" local="yes">/lief-src/api/c/include/LIEF/PE/DosHeader.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/ELF/enums.h</label>
+        <link refid="_e_l_f_2enums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/ELF/enums.inc</label>
+      </node>
+      <node id="2">
+        <label>LIEF/ELF/undef.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/lief-src/api/c/include/LIEF/ELF.h</label>
+        <link refid="_e_l_f_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/lief-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <link refid="_e_l_f_2_binary_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/lief-src/api/c/include/LIEF/ELF/DynamicEntry.h</label>
+        <link refid="_dynamic_entry_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/lief-src/api/c/include/LIEF/ELF/EnumToString.h</label>
+        <link refid="_e_l_f_2_enum_to_string_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/lief-src/api/c/include/LIEF/ELF/Header.h</label>
+        <link refid="_e_l_f_2_header_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/lief-src/api/c/include/LIEF/ELF/Section.h</label>
+        <link refid="_e_l_f_2_section_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/lief-src/api/c/include/LIEF/ELF/Segment.h</label>
+        <link refid="_e_l_f_2_segment_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/lief-src/api/c/include/LIEF/ELF/Symbol.h</label>
+        <link refid="_e_l_f_2_symbol_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/ELF/enums.h</label>
+        <link refid="_e_l_f_2enums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="13">
+        <label>/lief-src/api/c/include/LIEF/PE.h</label>
+        <link refid="_p_e_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/lief-src/api/c/include/LIEF/PE/Binary.h</label>
+        <link refid="_p_e_2_binary_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/lief-src/api/c/include/LIEF/PE/DosHeader.h</label>
+        <link refid="_dos_header_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_e_l_f_2enums_8h_1a9254e234b0fe8d9478032195486d12d1" prot="public" static="no">
+        <name>_LIEF_EN</name>
+        <param><defname>N</defname></param>
+        <initializer>LIEF_ELF_##N</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/enums.h" line="9" column="9" bodyfile="/lief-src/api/c/include/LIEF/ELF/enums.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_l_f_2enums_8h_1a5a5009ff68d6b84c24e0a81d84740f6d" prot="public" static="no">
+        <name>_LIEF_EN_2</name>
+        <param><defname>N</defname></param>
+        <param><defname>TYPE</defname></param>
+        <initializer>LIEF_ELF_##N</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/enums.h" line="10" column="9" bodyfile="/lief-src/api/c/include/LIEF/ELF/enums.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_l_f_2enums_8h_1a40aeba360cb85332d15ac9d4d3f6e86a" prot="public" static="no">
+        <name>_LIEF_EI</name>
+        <param><defname>X</defname></param>
+        <initializer>LIEF_ELF_##X</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/ELF/enums.h" line="11" column="9" bodyfile="/lief-src/api/c/include/LIEF/ELF/enums.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LIEF_ELF_C_ENUMS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIEF_ELF_C_ENUMS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/ELF/undef.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LIEF_EN(N)<sp/>LIEF_ELF_##N</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LIEF_EN_2(N,<sp/>TYPE)<sp/>LIEF_ELF_##N</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LIEF_EI(X)<sp/>LIEF_ELF_##X</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/ELF/enums.inc&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>_LIEF_EN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>_LIEF_EN_2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>_LIEF_EI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/lief-src/api/c/include/LIEF/ELF/enums.h"/>
+  </compounddef>
+</doxygen>

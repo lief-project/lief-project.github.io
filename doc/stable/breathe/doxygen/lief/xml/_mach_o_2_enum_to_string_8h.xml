@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_mach_o_2_enum_to_string_8h" kind="file" language="C++">
+    <compoundname>EnumToString.h</compoundname>
+    <includes local="yes">LIEF/visibility.h</includes>
+    <includes refid="_mach_o_2enums_8h" local="yes">LIEF/MachO/enums.h</includes>
+    <includedby refid="_mach_o_8h" local="yes">/lief-src/api/c/include/LIEF/MachO.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/MachO/EnumToString.h</label>
+        <link refid="_mach_o_2_enum_to_string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/MachO/enums.h</label>
+        <link refid="_mach_o_2enums_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>LIEF/MachO/enums.inc</label>
+      </node>
+      <node id="4">
+        <label>LIEF/MachO/undef.h</label>
+      </node>
+      <node id="2">
+        <label>LIEF/visibility.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="2">
+        <label>/lief-src/api/c/include/LIEF/MachO.h</label>
+        <link refid="_mach_o_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/MachO/EnumToString.h</label>
+        <link refid="_mach_o_2_enum_to_string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1ac0d817d919382bc2afdfc67276929f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * LOAD_COMMAND_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_LOAD_COMMAND_TYPES e)</argsstring>
+        <name>LOAD_COMMAND_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_LOAD_COMMAND_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="26" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="26" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1a3ea76ad163a24c6f7c1eb1e502fd1bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * MACHO_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_MACHO_TYPES e)</argsstring>
+        <name>MACHO_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_MACHO_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="27" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="27" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1ae2c41e215b4677d09f7b016289652eb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * FILE_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_FILE_TYPES e)</argsstring>
+        <name>FILE_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_FILE_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="28" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="28" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1abd232d24b91ecda482f6ede0d9271060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * CPU_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_CPU_TYPES e)</argsstring>
+        <name>CPU_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_CPU_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="29" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="29" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1aaa2e2560a8d1cf77792ab3cdecbbbe8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * HEADER_FLAGS_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_HEADER_FLAGS e)</argsstring>
+        <name>HEADER_FLAGS_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_HEADER_FLAGS</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="30" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="30" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1ae6a0e02dee26e30bee382aa5985102c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * MACHO_SECTION_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_MACHO_SECTION_TYPES e)</argsstring>
+        <name>MACHO_SECTION_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_MACHO_SECTION_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="31" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="31" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1aaf2f74cc00ee8b240a1588a61007124f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * MACHO_SYMBOL_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_MACHO_SYMBOL_TYPES e)</argsstring>
+        <name>MACHO_SYMBOL_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_MACHO_SYMBOL_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="32" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="32" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1a1381aca59b93265339dc95eb0f6aa90d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * N_LIST_TYPES_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_N_LIST_TYPES e)</argsstring>
+        <name>N_LIST_TYPES_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_N_LIST_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="33" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="33" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_mach_o_2_enum_to_string_8h_1a516add9178bbc38e94ba9516989b5b7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SYMBOL_DESCRIPTIONS_to_string</definition>
+        <argsstring>(enum LIEF_MACHO_SYMBOL_DESCRIPTIONS e)</argsstring>
+        <name>SYMBOL_DESCRIPTIONS_to_string</name>
+        <param>
+          <type>enum LIEF_MACHO_SYMBOL_DESCRIPTIONS</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" line="34" column="13" declfile="/lief-src/api/c/include/LIEF/MachO/EnumToString.h" declline="34" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_MACHO_ENUM_TO_STRING_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_MACHO_ENUM_TO_STRING_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/visibility.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/MachO/enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>LOAD_COMMAND_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_LOAD_COMMAND_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACHO_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_MACHO_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>FILE_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_FILE_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>CPU_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_CPU_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>HEADER_FLAGS_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_HEADER_FLAGS<sp/>e);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACHO_SECTION_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_MACHO_SECTION_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACHO_SYMBOL_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_MACHO_SYMBOL_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>N_LIST_TYPES_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_N_LIST_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>SYMBOL_DESCRIPTIONS_to_string(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_MACHO_SYMBOL_DESCRIPTIONS<sp/>e);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/lief-src/api/c/include/LIEF/MachO/EnumToString.h"/>
+  </compounddef>
+</doxygen>

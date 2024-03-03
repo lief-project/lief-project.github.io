@@ -1,0 +1,29 @@
+<map id="inheritanceeab4232853" name="inheritanceeab4232853">
+<area shape="rect" id="node1" href="#lief.MachO.BuildVersion" target="_top" title="MachO.BuildVersion" alt="" coords="244,5,382,28"/>
+<area shape="rect" id="node2" href="#lief.MachO.LoadCommand" target="_top" title="Based class for the Mach&#45;O load commands" alt="" coords="5,565,159,588"/>
+<area shape="rect" id="node3" href="#lief.MachO.CodeSignature" target="_top" title="MachO.CodeSignature" alt="" coords="238,50,389,73"/>
+<area shape="rect" id="node4" href="#lief.MachO.CodeSignatureDir" target="_top" title="MachO.CodeSignatureDir" alt="" coords="229,94,398,117"/>
+<area shape="rect" id="node5" href="#lief.MachO.DataInCode" target="_top" title="Interface of the LC_DATA_IN_CODE command" alt="" coords="247,139,380,162"/>
+<area shape="rect" id="node6" href="#lief.MachO.DyldChainedFixups" target="_top" title="Class that represents the LC_DYLD_CHAINED_FIXUPS command" alt="" coords="224,184,402,207"/>
+<area shape="rect" id="node7" href="#lief.MachO.DyldEnvironment" target="_top" title="Class that represents a LC_DYLD_ENVIRONMENT which is" alt="" coords="230,229,397,252"/>
+<area shape="rect" id="node8" href="#lief.MachO.DyldExportsTrie" target="_top" title="Class that represents the LC_DYLD_EXPORTS_TRIE command" alt="" coords="235,273,392,296"/>
+<area shape="rect" id="node9" href="#lief.MachO.DyldInfo" target="_top" title="Class that represents the LC_DYLD_INFO and LC_DYLD_INFO_ONLY commands" alt="" coords="256,318,371,341"/>
+<area shape="rect" id="node10" href="#lief.MachO.DylibCommand" target="_top" title="Class which represents a library dependency" alt="" coords="235,363,391,386"/>
+<area shape="rect" id="node11" href="#lief.MachO.DylinkerCommand" target="_top" title="Class that represents the Mach&#45;O linker, also named loader" alt="" coords="226,408,401,431"/>
+<area shape="rect" id="node12" href="#lief.MachO.DynamicSymbolCommand" target="_top" title="Class that represents the LC_DYSYMTAB command." alt="" coords="202,453,425,476"/>
+<area shape="rect" id="node13" href="#lief.MachO.EncryptionInfo" target="_top" title="Class that represents the LC_ENCRYPTION_INFO / LC_ENCRYPTION_INFO_64 commands" alt="" coords="238,497,388,520"/>
+<area shape="rect" id="node14" href="#lief.MachO.FilesetCommand" target="_top" title="Class associated with the LC_FILESET_ENTRY commands" alt="" coords="231,542,396,565"/>
+<area shape="rect" id="node15" href="#lief.MachO.FunctionStarts" target="_top" title="Class which represents the LC_FUNCTION_STARTS command" alt="" coords="239,587,388,610"/>
+<area shape="rect" id="node17" href="#lief.MachO.SegmentCommand" target="_top" title="Class which represents a LOAD_COMMAND_TYPES::LC_SEGMENT /" alt="" coords="224,632,402,655"/>
+<area shape="rect" id="node18" href="#lief.MachO.LinkerOptHint" target="_top" title="Class which represents the `LC_LINKER_OPTIMIZATION_HINT` command" alt="" coords="241,676,386,699"/>
+<area shape="rect" id="node19" href="#lief.MachO.MainCommand" target="_top" title="Class that represent the LC_MAIN command. This kind" alt="" coords="236,721,391,744"/>
+<area shape="rect" id="node20" href="#lief.MachO.RPathCommand" target="_top" title="MachO.RPathCommand" alt="" coords="234,766,393,789"/>
+<area shape="rect" id="node21" href="#lief.MachO.SegmentSplitInfo" target="_top" title="Class that represents the LOAD_COMMAND_TYPES::LC_SEGMENT_SPLIT_INFO command" alt="" coords="231,811,396,834"/>
+<area shape="rect" id="node22" href="#lief.MachO.SourceVersion" target="_top" title="Class that represents the MachO LOAD_COMMAND_TYPES::LC_SOURCE_VERSION" alt="" coords="240,856,387,879"/>
+<area shape="rect" id="node23" href="#lief.MachO.SubFramework" target="_top" title="Class that represents the SubFramework command." alt="" coords="237,900,390,923"/>
+<area shape="rect" id="node24" href="#lief.MachO.SymbolCommand" target="_top" title="Class that represents the LC_SYMTAB command" alt="" coords="229,945,398,968"/>
+<area shape="rect" id="node25" href="#lief.MachO.ThreadCommand" target="_top" title="Class that represents the LC_THREAD / LC_UNIXTHREAD commands and that" alt="" coords="231,990,396,1013"/>
+<area shape="rect" id="node26" href="#lief.MachO.TwoLevelHints" target="_top" title="Class which represents the `LC_TWOLEVEL_HINTS` command" alt="" coords="238,1035,388,1058"/>
+<area shape="rect" id="node27" href="#lief.MachO.UUIDCommand" target="_top" title="Class that represents the UUID command" alt="" coords="235,1079,391,1102"/>
+<area shape="rect" id="node28" href="#lief.MachO.VersionMin" target="_top" title="Class that wraps the LC_VERSION_MIN_MACOSX, LC_VERSION_MIN_IPHONEOS, ... commands" alt="" coords="249,1124,378,1147"/>
+</map>

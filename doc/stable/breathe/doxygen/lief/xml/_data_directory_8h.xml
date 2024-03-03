@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_data_directory_8h" kind="file" language="C++">
+    <compoundname>DataDirectory.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes refid="_p_e_2enums_8h" local="yes">LIEF/PE/enums.h</includes>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/PE/DataDirectory.h</label>
+        <link refid="_data_directory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/PE/enums.h</label>
+        <link refid="_p_e_2enums_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>LIEF/PE/enums.inc</label>
+      </node>
+      <node id="4">
+        <label>LIEF/PE/undef.h</label>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="3">
+        <label>/lief-src/api/c/include/LIEF/PE.h</label>
+        <link refid="_p_e_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/lief-src/api/c/include/LIEF/PE/Binary.h</label>
+        <link refid="_p_e_2_binary_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/lief-src/api/c/include/LIEF/PE/DataDirectory.h</label>
+        <link refid="_data_directory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_pe___data_directory__t" prot="public">Pe_DataDirectory_t</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LIEF_PE_DATA_DIRECTORY</name>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a52852f96a59acff9ff5ebc8e26a2b39a" prot="public">
+          <name>LIEF_PE_DATA_DIR_EXPORT_TABLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a3bc3d3c265968d1c5aa0ce553ea8c6af" prot="public">
+          <name>LIEF_PE_DATA_DIR_IMPORT_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a7db9dbba035d03e35496754d35cf932a" prot="public">
+          <name>LIEF_PE_DATA_DIR_RESOURCE_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624aa39fa64c0e9f282e0c1ce6aec6d35757" prot="public">
+          <name>LIEF_PE_DATA_DIR_EXCEPTION_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a33f20ec9cdc63c9be04c09e8f8653b2c" prot="public">
+          <name>LIEF_PE_DATA_DIR_CERTIFICATE_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624add76c8ea1aca078af49bcb6804317f33" prot="public">
+          <name>LIEF_PE_DATA_DIR_BASE_RELOCATION_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a6086272b48b7417eada50b1687b28b39" prot="public">
+          <name>LIEF_PE_DATA_DIR_DEBUG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a5733d697626ea77431a4a8c00dd7275e" prot="public">
+          <name>LIEF_PE_DATA_DIR_ARCHITECTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624af08c1685ceb284c2c1f20957dee489a9" prot="public">
+          <name>LIEF_PE_DATA_DIR_GLOBAL_PTR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a1588d04bc155961d93a0b66dba3d9442" prot="public">
+          <name>LIEF_PE_DATA_DIR_TLS_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a0fa6cef618e5e504d4bfef81b9ebba7b" prot="public">
+          <name>LIEF_PE_DATA_DIR_LOAD_CONFIG_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a28ba678185c1404e3ffffc2b18c2bf6f" prot="public">
+          <name>LIEF_PE_DATA_DIR_BOUND_IMPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624ab3442b74c9ab65b4a7480a5ad2e6277a" prot="public">
+          <name>LIEF_PE_DATA_DIR_IAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a4b65ffe2e002cd2a570663a7630c06d7" prot="public">
+          <name>LIEF_PE_DATA_DIR_DELAY_IMPORT_DESCRIPTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624ae024225f969cff5ff4922c2ba8eac7d4" prot="public">
+          <name>LIEF_PE_DATA_DIR_CLR_RUNTIME_HEADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624a78532abe7a7ea05ae9f68fe4196348dd" prot="public">
+          <name>LIEF_PE_DATA_DIR_RESERVED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_data_directory_8h_1a1a4ac808071dcf6bad7a77e31954c624ae290a92a37dcd558395c74667a027451" prot="public">
+          <name>LIEF_PE_DATA_DIR_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/DataDirectory.h" line="28" column="1" bodyfile="/lief-src/api/c/include/LIEF/PE/DataDirectory.h" bodystart="28" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_data_directory_8h_1ab1a6e5db8202fae246b68763894ebd94" prot="public" static="no">
+        <type>struct <ref refid="struct_pe___data_directory__t" kindref="compound">Pe_DataDirectory_t</ref></type>
+        <definition>typedef struct Pe_DataDirectory_t Pe_DataDirectory_t</definition>
+        <argsstring></argsstring>
+        <name>Pe_DataDirectory_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/lief-src/api/c/include/LIEF/PE/DataDirectory.h" line="54" column="33" bodyfile="/lief-src/api/c/include/LIEF/PE/DataDirectory.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;,;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_PE_DATA_DIRECTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_PE_DATA_DIRECTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/PE/enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_DATA_DIRECTORY<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_EXPORT_TABLE<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_IMPORT_TABLE,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_RESOURCE_TABLE,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_EXCEPTION_TABLE,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_CERTIFICATE_TABLE,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_BASE_RELOCATION_TABLE,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_DEBUG,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_ARCHITECTURE,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_GLOBAL_PTR,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_TLS_TABLE,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_LOAD_CONFIG_TABLE,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_BOUND_IMPORT,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_IAT,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_DELAY_IMPORT_DESCRIPTOR,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_CLR_RUNTIME_HEADER,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_RESERVED,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>LIEF_PE_DATA_DIR_NONE,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="struct_pe___data_directory__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___data_directory__t" kindref="compound">Pe_DataDirectory_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>uint32_t<sp/>rva;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>uint32_t<sp/>size;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___data_directory__t" kindref="compound">Pe_DataDirectory_t</ref><sp/><ref refid="struct_pe___data_directory__t" kindref="compound">Pe_DataDirectory_t</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/lief-src/api/c/include/LIEF/PE/DataDirectory.h"/>
+  </compounddef>
+</doxygen>

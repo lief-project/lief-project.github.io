@@ -1,0 +1,29 @@
+<style>
+.ml5 {
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2px;
+  width: 100%;
+  background-color: #1f2c73;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
