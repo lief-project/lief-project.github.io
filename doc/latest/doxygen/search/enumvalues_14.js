@@ -1,20 +1,11 @@
 var searchData=
 [
-  ['v800_0',['V800',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea8457e801d11924ad1dccefa7bbe331b1',1,'LIEF::ELF']]],
-  ['v850_1',['V850',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea5a4966ad9347533c66076598123d0a33',1,'LIEF::ELF']]],
-  ['va_2',['VA',['../classLIEF_1_1Binary.html#a63897a975536c5359d2b3ec82208fab3a3a11129c3467b1bcf46522b8e2ab3328',1,'LIEF::Binary']]],
-  ['vax_3',['VAX',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaa10c654e8d848b7a2de643c7644f8863',1,'LIEF::ELF']]],
-  ['verdef_4',['VERDEF',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea30ba623ebe593f087d9041699fed166f',1,'LIEF::ELF::DynamicEntry']]],
-  ['verdefnum_5',['VERDEFNUM',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deab22ebc35d3d936a89b700768fda2e77d',1,'LIEF::ELF::DynamicEntry']]],
-  ['verneed_6',['VERNEED',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea5dfee70b6e6e9ca95ad1f54e64407db0',1,'LIEF::ELF::DynamicEntry']]],
-  ['verneednum_7',['VERNEEDNUM',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea27b3c8e3a848e10906ece11f6764af1c',1,'LIEF::ELF::DynamicEntry']]],
-  ['versym_8',['VERSYM',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea6dd0438e5286c2a1bf090aa35ee401db',1,'LIEF::ELF::DynamicEntry']]],
-  ['videocore_9',['VIDEOCORE',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eac916d3533ae1dee100ae0625a8f1ea2a',1,'LIEF::ELF']]],
-  ['videocore3_10',['VIDEOCORE3',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea803898c37183c41309df80f4c1c6a664',1,'LIEF::ELF']]],
-  ['videocore5_11',['VIDEOCORE5',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eace1aeab6c86d9643968c1e29a09aa5bc',1,'LIEF::ELF']]],
-  ['vm_5fprot_5fexecute_12',['VM_PROT_EXECUTE',['../namespaceLIEF_1_1MachO.html#ae5a8ecf6132546b0b5792a6e41998fd0aba80dbfd714c48f16755663eff74f8f0',1,'LIEF::MachO']]],
-  ['vm_5fprot_5fread_13',['VM_PROT_READ',['../namespaceLIEF_1_1MachO.html#ae5a8ecf6132546b0b5792a6e41998fd0abeeb8a6e666bb1f6dc092fdd844c6518',1,'LIEF::MachO']]],
-  ['vm_5fprot_5fwrite_14',['VM_PROT_WRITE',['../namespaceLIEF_1_1MachO.html#ae5a8ecf6132546b0b5792a6e41998fd0aeda1d1daf5b781bc067b3638b39f288a',1,'LIEF::MachO']]],
-  ['vpp500_15',['VPP500',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ead2ba3bb32a34902627d6ad2359ea4d64',1,'LIEF::ELF']]],
-  ['vt_16',['VT',['../namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea072bfacf555fde9accd162a180ff0ac4',1,'LIEF::PE']]]
+  ['ucachebsize_0',['UCACHEBSIZE',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211ba473dec1225e7c8b95f6809183a78cc02',1,'LIEF::ELF::CoreAuxv']]],
+  ['uid_1',['UID',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211bae7d22294bdcb7133967c3548ece982e5',1,'LIEF::ELF::CoreAuxv']]],
+  ['undef_2',['UNDEF',['../classLIEF_1_1ELF_1_1Symbol.html#a7a3a61ad793548049ab4669968fc2fb2ac80c1bac50dea1365ef001d983a91d5b',1,'LIEF::ELF::Symbol']]],
+  ['undefined_3',['UNDEFINED',['../classLIEF_1_1MachO_1_1Symbol.html#a7c20656f7b0f9cddaf359a51981b7ccda0db45d2a4141101bdfe48e3314cfbca3',1,'LIEF::MachO::Symbol']]],
+  ['unicore_4',['UNICORE',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea60cc9c17a04ab86b0bfb1cd7977f80cd',1,'LIEF::ELF']]],
+  ['unknown_5',['UNKNOWN',['../classLIEF_1_1PE_1_1OptionalHeader.html#a19cd92d690498cf84b34ba4598673357a696b031073e74bf2cb98e5ef201d4aa3',1,'LIEF::PE::OptionalHeader']]],
+  ['up_5fsystem_5fonly_6',['UP_SYSTEM_ONLY',['../classLIEF_1_1PE_1_1Header.html#a08d38528d74f0baf71291de383c447fda10f64c15d1a4a9351289e4936fc50215',1,'LIEF::PE::Header']]],
+  ['used_7',['USED',['../classLIEF_1_1ELF_1_1X86Features.html#a69a85c04efe3307f5f1e2e6a5c368801ad725ec4321dfa3a30ec3b096511be30e',1,'LIEF::ELF::X86Features']]]
 ];

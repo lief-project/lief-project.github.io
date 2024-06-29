@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['section_5findex_0',['SECTION_INDEX',['../classLIEF_1_1ELF_1_1Symbol.html#a7a3a61ad793548049ab4669968fc2fb2',1,'LIEF::ELF::Symbol']]],
-  ['signatures_1',['SIGNATURES',['../classLIEF_1_1PE_1_1CodeView.html#a74f57fb6e3aa88d4588c86e83f501160',1,'LIEF::PE::CodeView']]],
-  ['subsystem_2',['SUBSYSTEM',['../classLIEF_1_1PE_1_1OptionalHeader.html#a19cd92d690498cf84b34ba4598673357',1,'LIEF::PE::OptionalHeader']]],
-  ['symbol_5fbase_5ftypes_3',['SYMBOL_BASE_TYPES',['../namespaceLIEF_1_1PE.html#a5d277795a4fa5b6b31502211fa4af1f7',1,'LIEF::PE']]],
-  ['symbol_5fcomplex_5ftypes_4',['SYMBOL_COMPLEX_TYPES',['../namespaceLIEF_1_1PE.html#ad79f0792ac94cc4d9a359b8382c683d6',1,'LIEF::PE']]],
-  ['symbol_5fdescriptions_5',['SYMBOL_DESCRIPTIONS',['../namespaceLIEF_1_1MachO.html#a414d4244b161eb5631cebace0b801c2f',1,'LIEF::MachO']]],
-  ['symbol_5forigins_6',['SYMBOL_ORIGINS',['../namespaceLIEF_1_1MachO.html#a4e35ba8f21d5be647278aa300ed1701e',1,'LIEF::MachO']]],
-  ['symbol_5fstorage_5fclass_7',['SYMBOL_STORAGE_CLASS',['../namespaceLIEF_1_1PE.html#a748c76daa5c3b2c06e0476c6dd92ce53',1,'LIEF::PE']]]
+  ['tag_0',['TAG',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961de',1,'LIEF::ELF::DynamicEntry']]],
+  ['type_1',['TYPE',['../classLIEF_1_1ELF_1_1Note.html#a36b63d97ec0d6bdcbc853bede75f828d',1,'LIEF::ELF::Note::TYPE'],['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211b',1,'LIEF::ELF::CoreAuxv::TYPE'],['../classLIEF_1_1ELF_1_1NoteGnuProperty_1_1Property.html#a63d7a3c28943eedff980c089890ff875',1,'LIEF::ELF::NoteGnuProperty::Property::TYPE'],['../classLIEF_1_1ELF_1_1Relocation.html#a02d2d4fe67fd71db94ddc5036b00a070',1,'LIEF::ELF::Relocation::TYPE'],['../classLIEF_1_1ELF_1_1Section.html#a8a7f94673ad26470c3a0b7fbad41d7af',1,'LIEF::ELF::Section::TYPE'],['../classLIEF_1_1ELF_1_1Segment.html#ab9e5337a2630d6e2112b800c4dbd889c',1,'LIEF::ELF::Segment::TYPE'],['../classLIEF_1_1ELF_1_1Symbol.html#ac07ba7dc4d30bf64f0bcd3fc878e849e',1,'LIEF::ELF::Symbol::TYPE'],['../classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325',1,'LIEF::MachO::Section::TYPE'],['../classLIEF_1_1MachO_1_1Symbol.html#a7c20656f7b0f9cddaf359a51981b7ccd',1,'LIEF::MachO::Symbol::TYPE'],['../classLIEF_1_1PE_1_1ResourceNode.html#ad5e4b2340ec34ea8d7ae44e4f3fad0a4',1,'LIEF::PE::ResourceNode::TYPE'],['../classLIEF_1_1PE_1_1ResourcesManager.html#aae25bf71c626aefc4b20e4b4a99e35d3',1,'LIEF::PE::ResourcesManager::TYPE']]],
+  ['types_2',['TYPES',['../classLIEF_1_1MachO_1_1BindingInfo.html#aae89bcc917b92737376e9c9730593746',1,'LIEF::MachO::BindingInfo::TYPES'],['../classLIEF_1_1PE_1_1Debug.html#afc006976a0654fbf25b537d4d3b6fde0',1,'LIEF::PE::Debug::TYPES']]]
 ];

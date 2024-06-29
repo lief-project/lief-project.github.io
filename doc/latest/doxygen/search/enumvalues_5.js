@@ -19,5 +19,6 @@ var searchData=
   ['fr30_16',['FR30',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaf2e7ca7fc866abaf3ee39c9f013a3051',1,'LIEF::ELF']]],
   ['freebsd_17',['FREEBSD',['../classLIEF_1_1ELF_1_1Header.html#acecec836b3b9811c5d65b3634e1533d7a08ba1e9699db0295c87a329cf093b182',1,'LIEF::ELF::Header']]],
   ['func_18',['FUNC',['../classLIEF_1_1ELF_1_1Symbol.html#ac07ba7dc4d30bf64f0bcd3fc878e849ea1e49c8ad07b69571bfcafaf18ac9fa5b',1,'LIEF::ELF::Symbol']]],
-  ['fx66_19',['FX66',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea42e27f9aae66a6a3363c03cbd3af9586',1,'LIEF::ELF']]]
+  ['fvmlib_19',['FVMLIB',['../classLIEF_1_1MachO_1_1SegmentCommand.html#a5e3d770abcad19149f7a30046e6634faaadc7eefaa1d672a36cf36a9674beee5b',1,'LIEF::MachO::SegmentCommand']]],
+  ['fx66_20',['FX66',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea42e27f9aae66a6a3363c03cbd3af9586',1,'LIEF::ELF']]]
 ];

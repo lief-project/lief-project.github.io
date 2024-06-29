@@ -25,11 +25,13 @@ var searchData=
   ['powerpcfp_22',['POWERPCFP',['../classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4ea43ad074d53709992f2ee11751b3145f4',1,'LIEF::PE::Header']]],
   ['ppc_23',['PPC',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eae854a6217ff1e49413ffa5353f124c64',1,'LIEF::ELF']]],
   ['ppc64_24',['PPC64',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea8fff0776edd5df0ef5e8c68ef6051c9b',1,'LIEF::ELF']]],
-  ['preinit_5farray_25',['PREINIT_ARRAY',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea4b5ac8523624cdb3d178b5e2d81a988f',1,'LIEF::ELF::DynamicEntry::PREINIT_ARRAY'],['../classLIEF_1_1ELF_1_1Section.html#a8a7f94673ad26470c3a0b7fbad41d7afa4b5ac8523624cdb3d178b5e2d81a988f',1,'LIEF::ELF::Section::PREINIT_ARRAY']]],
-  ['preinit_5farraysz_26',['PREINIT_ARRAYSZ',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaef856ee0dd9bbfc7829b7bf4a039caee',1,'LIEF::ELF::DynamicEntry']]],
-  ['prism_27',['PRISM',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea25608df56c02f9fc6854a3de6a51822a',1,'LIEF::ELF']]],
-  ['progbits_28',['PROGBITS',['../classLIEF_1_1ELF_1_1Section.html#a8a7f94673ad26470c3a0b7fbad41d7afac94c37334a8660ad8e5c05176a2b3853',1,'LIEF::ELF::Section']]],
-  ['protect_5fdelayload_5fiat_29',['PROTECT_DELAYLOAD_IAT',['../classLIEF_1_1PE_1_1LoadConfigurationV1.html#a75c857aeb84f2a90c8b4d724a04b8a6aa33dd52aae8e48081bc019755b19bca1d',1,'LIEF::PE::LoadConfigurationV1']]],
-  ['protected_30',['PROTECTED',['../classLIEF_1_1ELF_1_1Symbol.html#afd4269ee33474c4d97489c68c668aaf5a0c2448254108d59f7400d1c96f31d751',1,'LIEF::ELF::Symbol']]],
-  ['pt_5fnull_31',['PT_NULL',['../classLIEF_1_1ELF_1_1Segment.html#ab9e5337a2630d6e2112b800c4dbd889caedbadb89d72876dbd4b63fe42c18b9a3',1,'LIEF::ELF::Segment']]]
+  ['prebound_25',['PREBOUND',['../classLIEF_1_1MachO_1_1Symbol.html#a7c20656f7b0f9cddaf359a51981b7ccda202dd7960f249fac49a8afa51d258ec7',1,'LIEF::MachO::Symbol']]],
+  ['preinit_5farray_26',['PREINIT_ARRAY',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea4b5ac8523624cdb3d178b5e2d81a988f',1,'LIEF::ELF::DynamicEntry::PREINIT_ARRAY'],['../classLIEF_1_1ELF_1_1Section.html#a8a7f94673ad26470c3a0b7fbad41d7afa4b5ac8523624cdb3d178b5e2d81a988f',1,'LIEF::ELF::Section::PREINIT_ARRAY']]],
+  ['preinit_5farraysz_27',['PREINIT_ARRAYSZ',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaef856ee0dd9bbfc7829b7bf4a039caee',1,'LIEF::ELF::DynamicEntry']]],
+  ['prism_28',['PRISM',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea25608df56c02f9fc6854a3de6a51822a',1,'LIEF::ELF']]],
+  ['progbits_29',['PROGBITS',['../classLIEF_1_1ELF_1_1Section.html#a8a7f94673ad26470c3a0b7fbad41d7afac94c37334a8660ad8e5c05176a2b3853',1,'LIEF::ELF::Section']]],
+  ['protect_5fdelayload_5fiat_30',['PROTECT_DELAYLOAD_IAT',['../classLIEF_1_1PE_1_1LoadConfigurationV1.html#a686b3f41214d4bc5c0ac4afd1e09d699a33dd52aae8e48081bc019755b19bca1d',1,'LIEF::PE::LoadConfigurationV1']]],
+  ['protected_31',['PROTECTED',['../classLIEF_1_1ELF_1_1Symbol.html#afd4269ee33474c4d97489c68c668aaf5a0c2448254108d59f7400d1c96f31d751',1,'LIEF::ELF::Symbol']]],
+  ['pt_5fnull_32',['PT_NULL',['../classLIEF_1_1ELF_1_1Segment.html#ab9e5337a2630d6e2112b800c4dbd889caedbadb89d72876dbd4b63fe42c18b9a3',1,'LIEF::ELF::Segment']]],
+  ['pure_5finstructions_33',['PURE_INSTRUCTIONS',['../classLIEF_1_1MachO_1_1Section.html#aa38bb45cc5f893c97bdf65aa6acd95c1a720e4c488219e23d5d8392ed06e66365',1,'LIEF::MachO::Section']]]
 ];

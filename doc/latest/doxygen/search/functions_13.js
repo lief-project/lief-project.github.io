@@ -10,5 +10,5 @@ var searchData=
   ['unwind_5ffunctions_7',['unwind_functions',['../classLIEF_1_1MachO_1_1Binary.html#af4eec9539248f40b43140e49f7b10cf7',1,'LIEF::MachO::Binary']]],
   ['use_5fgnu_5fhash_8',['use_gnu_hash',['../classLIEF_1_1ELF_1_1Binary.html#a0899aa1671ad8a1d506b80c99b75b83e',1,'LIEF::ELF::Binary']]],
   ['use_5fsysv_5fhash_9',['use_sysv_hash',['../classLIEF_1_1ELF_1_1Binary.html#ac7e76fae1dabdd2e8745357a7e8b1167',1,'LIEF::ELF::Binary']]],
-  ['uuid_10',['uuid',['../classLIEF_1_1MachO_1_1Binary.html#a010958d38649f948e3d4f938035c641b',1,'LIEF::MachO::Binary::uuid()'],['../classLIEF_1_1MachO_1_1UUIDCommand.html#ab6339bc553dbe38c0fe12b827ca6d9ab',1,'LIEF::MachO::UUIDCommand::uuid()']]]
+  ['uuid_10',['uuid',['../classLIEF_1_1MachO_1_1Binary.html#a010958d38649f948e3d4f938035c641b',1,'LIEF::MachO::Binary::uuid()'],['../classLIEF_1_1MachO_1_1UUIDCommand.html#a010f95de17bb479280a6d9483208a0db',1,'LIEF::MachO::UUIDCommand::uuid()']]]
 ];

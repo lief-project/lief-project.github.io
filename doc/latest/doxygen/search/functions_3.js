@@ -33,7 +33,7 @@ var searchData=
   ['dll_5fcharacteristics_30',['dll_characteristics',['../classLIEF_1_1PE_1_1OptionalHeader.html#ad17076fbb6859ade79eed106df21a0ca',1,'LIEF::PE::OptionalHeader']]],
   ['dll_5fcharacteristics_5flist_31',['dll_characteristics_list',['../classLIEF_1_1PE_1_1OptionalHeader.html#a2baf56c244cc4b47338dd8db7fe31425',1,'LIEF::PE::OptionalHeader']]],
   ['dos_5fheader_32',['dos_header',['../classLIEF_1_1PE_1_1Binary.html#ab7e025c74e93f2573a03cb9daa791403',1,'LIEF::PE::Binary']]],
-  ['dos_5fstub_33',['dos_stub',['../classLIEF_1_1PE_1_1Binary.html#abeb8e5858a33ee2d4dfde78984862f2c',1,'LIEF::PE::Binary::dos_stub() const'],['../classLIEF_1_1PE_1_1Binary.html#ae3122d0dbd31495bc6a5081008c8798f',1,'LIEF::PE::Binary::dos_stub(const std::vector&lt; uint8_t &gt; &amp;content)']]],
+  ['dos_5fstub_33',['dos_stub',['../classLIEF_1_1PE_1_1Binary.html#abeb8e5858a33ee2d4dfde78984862f2c',1,'LIEF::PE::Binary::dos_stub() const'],['../classLIEF_1_1PE_1_1Binary.html#a2564403b441830d3f0428e04edbad2cb',1,'LIEF::PE::Binary::dos_stub(std::vector&lt; uint8_t &gt; content)']]],
   ['dtor_5ffunctions_34',['dtor_functions',['../classLIEF_1_1ELF_1_1Binary.html#a4036e0d934fd821ecaeef69eb190aa87',1,'LIEF::ELF::Binary']]],
   ['dyld_5fchained_5ffixups_35',['dyld_chained_fixups',['../classLIEF_1_1MachO_1_1Binary.html#a875b6888c21ec1bb833cf9691b9dfc65',1,'LIEF::MachO::Binary']]],
   ['dyld_5fenvironment_36',['dyld_environment',['../classLIEF_1_1MachO_1_1Binary.html#aa62aac13c3e82eec3e0471cdce5991ae',1,'LIEF::MachO::Binary']]],

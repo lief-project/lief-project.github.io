@@ -1,10 +1,26 @@
 var searchData=
 [
-  ['ucachebsize_0',['UCACHEBSIZE',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211ba473dec1225e7c8b95f6809183a78cc02',1,'LIEF::ELF::CoreAuxv']]],
-  ['uid_1',['UID',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211bae7d22294bdcb7133967c3548ece982e5',1,'LIEF::ELF::CoreAuxv']]],
-  ['undef_2',['UNDEF',['../classLIEF_1_1ELF_1_1Symbol.html#a7a3a61ad793548049ab4669968fc2fb2ac80c1bac50dea1365ef001d983a91d5b',1,'LIEF::ELF::Symbol']]],
-  ['unicore_3',['UNICORE',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea60cc9c17a04ab86b0bfb1cd7977f80cd',1,'LIEF::ELF']]],
-  ['unknown_4',['UNKNOWN',['../classLIEF_1_1PE_1_1OptionalHeader.html#a19cd92d690498cf84b34ba4598673357a696b031073e74bf2cb98e5ef201d4aa3',1,'LIEF::PE::OptionalHeader']]],
-  ['up_5fsystem_5fonly_5',['UP_SYSTEM_ONLY',['../classLIEF_1_1PE_1_1Header.html#a08d38528d74f0baf71291de383c447fda10f64c15d1a4a9351289e4936fc50215',1,'LIEF::PE::Header']]],
-  ['used_6',['USED',['../classLIEF_1_1ELF_1_1X86Features.html#a69a85c04efe3307f5f1e2e6a5c368801ad725ec4321dfa3a30ec3b096511be30e',1,'LIEF::ELF::X86Features']]]
+  ['terminal_5fserver_5faware_0',['TERMINAL_SERVER_AWARE',['../classLIEF_1_1PE_1_1OptionalHeader.html#a01b5cd1a580304bb99f12cbed0a3c973a0c46ff32ed3ee2bc620eb693b4c85c5e',1,'LIEF::PE::OptionalHeader']]],
+  ['textrel_1',['TEXTREL',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea93d56f2188c38f7f38aa86ee8dd05be2',1,'LIEF::ELF::DynamicEntry::TEXTREL'],['../classLIEF_1_1ELF_1_1DynamicEntryFlags.html#a0e2862ed5a6e37716192fd60b7356e0da93d56f2188c38f7f38aa86ee8dd05be2',1,'LIEF::ELF::DynamicEntryFlags::TEXTREL']]],
+  ['tgt_5fplatform_2',['TGT_PLATFORM',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211baeddae77d8c3a6f6512e13c13cc9bc745',1,'LIEF::ELF::CoreAuxv']]],
+  ['thread_5flocal_5finit_5ffunction_5fpointers_3',['THREAD_LOCAL_INIT_FUNCTION_POINTERS',['../classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a068e79c696854f6df448b092daa1d92f',1,'LIEF::MachO::Section']]],
+  ['thread_5flocal_5fregular_4',['THREAD_LOCAL_REGULAR',['../classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325aa5ea88ed8f42fb2462668195b02fee4a',1,'LIEF::MachO::Section']]],
+  ['thread_5flocal_5fvariable_5fpointers_5',['THREAD_LOCAL_VARIABLE_POINTERS',['../classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a74db9ce09fc626073e720d12620190ce',1,'LIEF::MachO::Section']]],
+  ['thread_5flocal_5fvariables_6',['THREAD_LOCAL_VARIABLES',['../classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a06d21f2ebb842455355c719b4e94af63',1,'LIEF::MachO::Section']]],
+  ['thread_5flocal_5fzerofill_7',['THREAD_LOCAL_ZEROFILL',['../classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325ae4811a024d54d822bbc3f4ed71bdd670',1,'LIEF::MachO::Section']]],
+  ['thumb_8',['THUMB',['../classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4eae466500055d2302ad1956d15e96a129a',1,'LIEF::PE::Header']]],
+  ['ti_5fc2000_9',['TI_C2000',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea88e4685626b82c5d7f7b570fba3138d9',1,'LIEF::ELF']]],
+  ['ti_5fc5500_10',['TI_C5500',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea24f78517b76c85371056571560b67c17',1,'LIEF::ELF']]],
+  ['ti_5fc6000_11',['TI_C6000',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaa9d14005d578c09d4a7d281643c106f3',1,'LIEF::ELF']]],
+  ['tile64_12',['TILE64',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea9524f669e7fff13bbbbbd037e4900544',1,'LIEF::ELF']]],
+  ['tilegx_13',['TILEGX',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ead0a34ef6739257b4d7b5ba59135f3fa1',1,'LIEF::ELF']]],
+  ['tilepro_14',['TILEPRO',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea730b289a4c57c4c87a1e093d15385cc2',1,'LIEF::ELF']]],
+  ['tinyj_15',['TINYJ',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaa7b7d606b33958f1d556d02f1f69dfab',1,'LIEF::ELF']]],
+  ['tls_16',['TLS',['../classLIEF_1_1ELF_1_1Section.html#abb57f404fc75bc74d261801f50ebe744a099d7d04319e5191b7473e016c55e320',1,'LIEF::ELF::Section::TLS'],['../classLIEF_1_1ELF_1_1Segment.html#ab9e5337a2630d6e2112b800c4dbd889ca099d7d04319e5191b7473e016c55e320',1,'LIEF::ELF::Segment::TLS'],['../classLIEF_1_1ELF_1_1Symbol.html#ac07ba7dc4d30bf64f0bcd3fc878e849ea099d7d04319e5191b7473e016c55e320',1,'LIEF::ELF::Symbol::TLS']]],
+  ['tmm_5fgpp_17',['TMM_GPP',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaea55f681e4d5c2606834fdeaf92510da',1,'LIEF::ELF']]],
+  ['tpc_18',['TPC',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eac4a67af0e5cf82a778d5a75ce3164e33',1,'LIEF::ELF']]],
+  ['tricore_19',['TRICORE',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea536f9b95d4f61baf0e5908ca9f9748af',1,'LIEF::ELF']]],
+  ['trimedia_20',['TRIMEDIA',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea32ee00f8e71c280aebd3548e33681376',1,'LIEF::ELF']]],
+  ['tru64_21',['TRU64',['../classLIEF_1_1ELF_1_1Header.html#acecec836b3b9811c5d65b3634e1533d7a0336e6e481927c0bbf26dcf6fa605044',1,'LIEF::ELF::Header']]],
+  ['tsk3000_22',['TSK3000',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea2fc9d70409303de38ef1a02f6b8ba3f8',1,'LIEF::ELF']]]
 ];

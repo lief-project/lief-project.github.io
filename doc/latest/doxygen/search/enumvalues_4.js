@@ -1,9 +1,9 @@
 var searchData=
 [
   ['ebc_0',['EBC',['../classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4ea5b3299b34e5a0fe69daa2120fa414734',1,'LIEF::PE::Header']]],
-  ['ecdsa_1',['ECDSA',['../classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000ab1870fa8801941a8b0faddfd614d3493',1,'LIEF::PE::x509']]],
-  ['eckey_2',['ECKEY',['../classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a3e7b31ceb5af3b10c4c9ac3bf51a09aa',1,'LIEF::PE::x509']]],
-  ['eckey_5fdh_3',['ECKEY_DH',['../classLIEF_1_1PE_1_1x509.html#af52576da8e6b6e7b2295470883e60000a16226d8a94d53c9eec05580568827d3d',1,'LIEF::PE::x509']]],
+  ['ecdsa_1',['ECDSA',['../classLIEF_1_1PE_1_1x509.html#ad51d67bbbc146716333c7f94fd88358fab1870fa8801941a8b0faddfd614d3493',1,'LIEF::PE::x509']]],
+  ['eckey_2',['ECKEY',['../classLIEF_1_1PE_1_1x509.html#ad51d67bbbc146716333c7f94fd88358fa3e7b31ceb5af3b10c4c9ac3bf51a09aa',1,'LIEF::PE::x509']]],
+  ['eckey_5fdh_3',['ECKEY_DH',['../classLIEF_1_1PE_1_1x509.html#ad51d67bbbc146716333c7f94fd88358fa16226d8a94d53c9eec05580568827d3d',1,'LIEF::PE::x509']]],
   ['ecog1_4',['ECOG1',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea8c47ca8c45802f2a5e47b14213128b1d',1,'LIEF::ELF']]],
   ['ecog16_5',['ECOG16',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea140084b6e9590e2d6fb077369762fc50',1,'LIEF::ELF']]],
   ['ecog1x_6',['ECOG1X',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaa213a12225bdfebd2c5ceeee00c234dd',1,'LIEF::ELF']]],
@@ -14,7 +14,7 @@ var searchData=
   ['efi_5from_11',['EFI_ROM',['../classLIEF_1_1PE_1_1OptionalHeader.html#a19cd92d690498cf84b34ba4598673357ac8a241a9070eb965106c3606810537a5',1,'LIEF::PE::OptionalHeader']]],
   ['efi_5fruntime_5fdriver_12',['EFI_RUNTIME_DRIVER',['../classLIEF_1_1PE_1_1OptionalHeader.html#a19cd92d690498cf84b34ba4598673357a475942d3a9cd1dfc7e1e75e9a7ba10ca',1,'LIEF::PE::OptionalHeader']]],
   ['egid_13',['EGID',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211baf6a575c3108a8296bde7f97c24bf29bc',1,'LIEF::ELF::CoreAuxv']]],
-  ['eh_5fcontinuation_5ftable_5fpresent_14',['EH_CONTINUATION_TABLE_PRESENT',['../classLIEF_1_1PE_1_1LoadConfigurationV1.html#a75c857aeb84f2a90c8b4d724a04b8a6aa6635c9e0f12934a5883d8024962e1993',1,'LIEF::PE::LoadConfigurationV1']]],
+  ['eh_5fcontinuation_5ftable_5fpresent_14',['EH_CONTINUATION_TABLE_PRESENT',['../classLIEF_1_1PE_1_1LoadConfigurationV1.html#a686b3f41214d4bc5c0ac4afd1e09d699a6635c9e0f12934a5883d8024962e1993',1,'LIEF::PE::LoadConfigurationV1']]],
   ['ei_5fabiversion_15',['EI_ABIVERSION',['../classLIEF_1_1ELF_1_1Header.html#ae6d0ea0709f984150338032104c4562ba1a87f3565eac558c983ffb5f732d47bc',1,'LIEF::ELF::Header']]],
   ['ei_5fclass_16',['EI_CLASS',['../classLIEF_1_1ELF_1_1Header.html#ae6d0ea0709f984150338032104c4562baa66bb9ab67cc04f063c56ca3a3cc8b91',1,'LIEF::ELF::Header']]],
   ['ei_5fdata_17',['EI_DATA',['../classLIEF_1_1ELF_1_1Header.html#ae6d0ea0709f984150338032104c4562ba6ab13925f4db3b8cceae677a1c34ef6a',1,'LIEF::ELF::Header']]],
@@ -28,7 +28,7 @@ var searchData=
   ['ei_5fversion_25',['EI_VERSION',['../classLIEF_1_1ELF_1_1Header.html#ae6d0ea0709f984150338032104c4562ba76cc1c1c438381e13c44ffe99067324a',1,'LIEF::ELF::Header']]],
   ['elf32_26',['ELF32',['../classLIEF_1_1ELF_1_1Header.html#ae80a4fad99408ced3a33b1b0733bf8f2acd743c20bf0141c38f02f434409a89e7',1,'LIEF::ELF::Header']]],
   ['elf64_27',['ELF64',['../classLIEF_1_1ELF_1_1Header.html#ae80a4fad99408ced3a33b1b0733bf8f2a523e8094660cc5b0a46e1379cecd4ee0',1,'LIEF::ELF::Header']]],
-  ['encipher_5fonly_28',['ENCIPHER_ONLY',['../classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a5a7cf1e37739fae5277ead0b6723b9a0',1,'LIEF::PE::x509']]],
+  ['encipher_5fonly_28',['ENCIPHER_ONLY',['../classLIEF_1_1PE_1_1x509.html#a189270a22f01ef8e0d461d92bd66a450a5a7cf1e37739fae5277ead0b6723b9a0',1,'LIEF::PE::x509']]],
   ['end_29',['END',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211bab1a326c06d88bf042f73d70f50197905',1,'LIEF::ELF::CoreAuxv']]],
   ['endfiltee_30',['ENDFILTEE',['../classLIEF_1_1ELF_1_1DynamicEntryFlags.html#a0e2862ed5a6e37716192fd60b7356e0da34abcd0b87a614e5a7d82ff575e5b54e',1,'LIEF::ELF::DynamicEntryFlags']]],
   ['entry_31',['ENTRY',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211ba5d5fa847ba846e56023955fb50c7f803',1,'LIEF::ELF::CoreAuxv']]],
@@ -41,6 +41,7 @@ var searchData=
   ['execfn_38',['EXECFN',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211baec0a9de921c4c51ee0b5006320c21540',1,'LIEF::ELF::CoreAuxv']]],
   ['execinstr_39',['EXECINSTR',['../classLIEF_1_1ELF_1_1Section.html#abb57f404fc75bc74d261801f50ebe744a25818a44fc26f2a2ea3381e30f552568',1,'LIEF::ELF::Section']]],
   ['executable_5fimage_40',['EXECUTABLE_IMAGE',['../classLIEF_1_1PE_1_1Header.html#a08d38528d74f0baf71291de383c447fdade897b9edbbe7702bde9ec5ff2a7d508',1,'LIEF::PE::Header']]],
-  ['export_5fsymbol_5fflags_5fkind_5fmask_41',['EXPORT_SYMBOL_FLAGS_KIND_MASK',['../namespaceLIEF_1_1MachO.html#afa687fa915cd943d868cae5779ab85aaa78819b3fc1edb844057faa9c78b14f3f',1,'LIEF::MachO']]],
-  ['exported_42',['EXPORTED',['../classLIEF_1_1Function.html#a61ff4c851fd4ee58d20c7925e54c8d37ae1644008da3c5a090413f0ea362fc9ed',1,'LIEF::Function']]]
+  ['execute_41',['EXECUTE',['../classLIEF_1_1MachO_1_1SegmentCommand.html#a7e67b23821e8516801981eb147995419a5d76688e2261e6805ee36ad961b3fa7a',1,'LIEF::MachO::SegmentCommand']]],
+  ['exported_42',['EXPORTED',['../classLIEF_1_1Function.html#a61ff4c851fd4ee58d20c7925e54c8d37ae1644008da3c5a090413f0ea362fc9ed',1,'LIEF::Function']]],
+  ['ext_5freloc_43',['EXT_RELOC',['../classLIEF_1_1MachO_1_1Section.html#aa38bb45cc5f893c97bdf65aa6acd95c1ad7ee17a4efd080b85814f7c0f67b8402',1,'LIEF::MachO::Section']]]
 ];

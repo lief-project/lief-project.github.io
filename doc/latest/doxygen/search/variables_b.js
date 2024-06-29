@@ -9,7 +9,7 @@ var searchData=
   ['parse_5fexports_6',['parse_exports',['../structLIEF_1_1PE_1_1ParserConfig.html#a986b7527c1f652a74896aa1d254a6a55',1,'LIEF::PE::ParserConfig']]],
   ['parse_5fimports_7',['parse_imports',['../structLIEF_1_1PE_1_1ParserConfig.html#a0cb3a727de227388f40a92243084127f',1,'LIEF::PE::ParserConfig']]],
   ['parse_5fnotes_8',['parse_notes',['../structLIEF_1_1ELF_1_1ParserConfig.html#a1dcd88ed9ba288d94ce613f7e87a15ce',1,'LIEF::ELF::ParserConfig']]],
-  ['parse_5foverlay_9',['parse_overlay',['../structLIEF_1_1ELF_1_1ParserConfig.html#a8908c03f6b362d160b763406379f1dea',1,'LIEF::ELF::ParserConfig']]],
+  ['parse_5foverlay_9',['parse_overlay',['../structLIEF_1_1ELF_1_1ParserConfig.html#a8908c03f6b362d160b763406379f1dea',1,'LIEF::ELF::ParserConfig::parse_overlay'],['../structLIEF_1_1MachO_1_1ParserConfig.html#a52568ce3f03d407b3953b3b8a0110bdd',1,'LIEF::MachO::ParserConfig::parse_overlay']]],
   ['parse_5freloc_10',['parse_reloc',['../structLIEF_1_1PE_1_1ParserConfig.html#a7926eb5ffe01dade79aa470837890a5f',1,'LIEF::PE::ParserConfig']]],
   ['parse_5frelocations_11',['parse_relocations',['../structLIEF_1_1ELF_1_1ParserConfig.html#a2e5066828ef9b4e8d8b7956d7260fd24',1,'LIEF::ELF::ParserConfig']]],
   ['parse_5frsrc_12',['parse_rsrc',['../structLIEF_1_1PE_1_1ParserConfig.html#a42a10da26dd47a102865421e2d9b4394',1,'LIEF::PE::ParserConfig']]],

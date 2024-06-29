@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['tag_0',['TAG',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961de',1,'LIEF::ELF::DynamicEntry']]],
-  ['type_1',['TYPE',['../classLIEF_1_1ELF_1_1Note.html#a36b63d97ec0d6bdcbc853bede75f828d',1,'LIEF::ELF::Note::TYPE'],['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211b',1,'LIEF::ELF::CoreAuxv::TYPE'],['../classLIEF_1_1ELF_1_1NoteGnuProperty_1_1Property.html#a63d7a3c28943eedff980c089890ff875',1,'LIEF::ELF::NoteGnuProperty::Property::TYPE'],['../classLIEF_1_1ELF_1_1Relocation.html#a02d2d4fe67fd71db94ddc5036b00a070',1,'LIEF::ELF::Relocation::TYPE'],['../classLIEF_1_1ELF_1_1Section.html#a8a7f94673ad26470c3a0b7fbad41d7af',1,'LIEF::ELF::Section::TYPE'],['../classLIEF_1_1ELF_1_1Segment.html#ab9e5337a2630d6e2112b800c4dbd889c',1,'LIEF::ELF::Segment::TYPE'],['../classLIEF_1_1ELF_1_1Symbol.html#ac07ba7dc4d30bf64f0bcd3fc878e849e',1,'LIEF::ELF::Symbol::TYPE'],['../classLIEF_1_1PE_1_1ResourceNode.html#ad5e4b2340ec34ea8d7ae44e4f3fad0a4',1,'LIEF::PE::ResourceNode::TYPE'],['../classLIEF_1_1PE_1_1ResourcesManager.html#aae25bf71c626aefc4b20e4b4a99e35d3',1,'LIEF::PE::ResourcesManager::TYPE']]],
-  ['types_2',['TYPES',['../classLIEF_1_1MachO_1_1BindingInfo.html#aae89bcc917b92737376e9c9730593746',1,'LIEF::MachO::BindingInfo::TYPES'],['../classLIEF_1_1PE_1_1Debug.html#afc006976a0654fbf25b537d4d3b6fde0',1,'LIEF::PE::Debug::TYPES']]]
+  ['va_5ftypes_0',['VA_TYPES',['../classLIEF_1_1Binary.html#a63897a975536c5359d2b3ec82208fab3',1,'LIEF::Binary']]],
+  ['verification_5fchecks_1',['VERIFICATION_CHECKS',['../classLIEF_1_1PE_1_1Signature.html#abf70940910955c531f8d11e2fd374bdb',1,'LIEF::PE::Signature']]],
+  ['verification_5fflags_2',['VERIFICATION_FLAGS',['../classLIEF_1_1PE_1_1Signature.html#aefd5b1e4458abd33e7993d37846f7d0c',1,'LIEF::PE::Signature::VERIFICATION_FLAGS'],['../classLIEF_1_1PE_1_1x509.html#ac888ffa531a038404ce0477399c407f9',1,'LIEF::PE::x509::VERIFICATION_FLAGS']]],
+  ['version_3',['VERSION',['../classLIEF_1_1ELF_1_1Header.html#a6b0aae41354f900f39f6a9f7f01c157f',1,'LIEF::ELF::Header']]],
+  ['visibility_4',['VISIBILITY',['../classLIEF_1_1ELF_1_1Symbol.html#afd4269ee33474c4d97489c68c668aaf5',1,'LIEF::ELF::Symbol']]],
+  ['vm_5fprotections_5',['VM_PROTECTIONS',['../classLIEF_1_1MachO_1_1SegmentCommand.html#a7e67b23821e8516801981eb147995419',1,'LIEF::MachO::SegmentCommand']]]
 ];

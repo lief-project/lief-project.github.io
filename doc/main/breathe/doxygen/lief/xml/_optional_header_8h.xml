@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_optional_header_8h" kind="file" language="C++">
+    <compoundname>OptionalHeader.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes refid="_p_e_2enums_8h" local="yes">LIEF/PE/enums.h</includes>
+    <includes local="yes">LIEF/visibility.h</includes>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h</label>
+        <link refid="_optional_header_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/PE/enums.h</label>
+        <link refid="_p_e_2enums_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>LIEF/PE/enums.inc</label>
+      </node>
+      <node id="4">
+        <label>LIEF/PE/undef.h</label>
+      </node>
+      <node id="6">
+        <label>LIEF/visibility.h</label>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="3">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <link refid="_p_e_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</label>
+        <link refid="_p_e_2_binary_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h</label>
+        <link refid="_optional_header_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_pe___optional_header__t" prot="public">Pe_OptionalHeader_t</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LIEF_PE_DLL_CHARACTERISTICS</name>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a187dd02a78377a9c0d74f61dafb79ba5" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_HIGH_ENTROPY_VA</name>
+          <initializer>= 0x0020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ASLR with 64 bit address space. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a75d0b7e31e1e286d840e62efb0070d54" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_DYNAMIC_BASE</name>
+          <initializer>= 0x0040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>DLL can be relocated at load time. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731ae7027de50e50ae9f3484a89b858f871d" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_FORCE_INTEGRITY</name>
+          <initializer>= 0x0080</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Code integrity checks are enforced. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731aaa93b2241685f3509ee3cf6b0e614742" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_NX_COMPAT</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Image is NX compatible. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a0f6f59ad1a138d65c985c284d6d25be1" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_NO_ISOLATION</name>
+          <initializer>= 0x0200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Isolation aware, but do not isolate the image. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a47f0b7974d4b591f2505d6fdad1458ab" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_NO_SEH</name>
+          <initializer>= 0x0400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Does not use structured exception handling (SEH). No SEH handler may be called in this image. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a7dc884eb7f93a95ef0b9584aac4b854e" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_NO_BIND</name>
+          <initializer>= 0x0800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Do not bind the image. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731ad1eddf642638e5d824c2c062e6249592" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_APPCONTAINER</name>
+          <initializer>= 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Image should execute in an AppContainer. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a87ccc9ca32ce40a0fc93e1fc1e61e7b0" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_WDM_DRIVER</name>
+          <initializer>= 0x2000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>A WDM driver. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a984fba731863fa5b0c88f94b372a973c" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_GUARD_CF</name>
+          <initializer>= 0x4000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Image supports Control Flow Guard. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a6387a48f2dcee526898cc9717be3b731a12380cf63fe8023d38f18b5d2eb76923" prot="public">
+          <name>LIEF_PE_DLL_CHARACTERISTICS_TERMINAL_SERVER_AWARE</name>
+          <initializer>= 0x8000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Terminal Server aware. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="27" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="27" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="enum" id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LIEF_PE_SUBSYSTEM</name>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eadad431de96b58505b32702a7a34659ba" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_UNKNOWN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An unknown subsystem. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea6f196416b8e6d3c433ef520da5f0aaea" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_NATIVE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Device drivers and native Windows processes </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eaee422dcb6892bc9a5637d54ebe45cce1" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_WINDOWS_GUI</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The Windows GUI subsystem. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea374f6ee716a321154a3ea3c10f11df4c" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_WINDOWS_CUI</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The Windows character subsystem. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea01c4884bcaeaaf1b6c16bb1336538a7e" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_OS2_CUI</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The OS/2 character subsytem. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea2402de1df557e23cd47fd20c9f3375f4" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_POSIX_CUI</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The POSIX character subsystem. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eacb49887c209bd72f92d66a6bd6a12417" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_NATIVE_WINDOWS</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Native Windows 9x driver. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea45226ff66150260e1d7fccfdd392b656" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_WINDOWS_CE_GUI</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Windows CE. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eaa005f98bb97189e045194fb2ecbfa4a1" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_EFI_APPLICATION</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An EFI application. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea776e348d09dc1ee26df324cb69bdba19" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An EFI driver with boot services. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea07575258b6d7b667a36d1f1646dcfd38" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_EFI_RUNTIME_DRIVER</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An EFI driver with run-time services. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea480ea8bcff6d0ea9f15b30762f1c89b8" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_EFI_ROM</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An EFI ROM image. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eabe444ab8aa82c6c92b090cb6099eb266" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_XBOX</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>XBOX. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ead82002ecd14b0b3632c7cc0349a5072d" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>A BCD application. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="41" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="41" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_optional_header_8h_1a736ab4f34133218fb8d48ae6e31e8c73" prot="public" static="no">
+        <type>struct Pe_OptionalHeader_t</type>
+        <definition>typedef struct Pe_OptionalHeader_t Pe_OptionalHeader_t</definition>
+        <argsstring></argsstring>
+        <name>Pe_OptionalHeader_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="91" column="34" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_optional_header_8h_1aa62938db48a666994f543a3e81bec6b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * lief_pe_subsytem_str</definition>
+        <argsstring>(enum LIEF_PE_SUBSYSTEM e)</argsstring>
+        <name>lief_pe_subsytem_str</name>
+        <param>
+          <type>enum LIEF_PE_SUBSYSTEM</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="93" column="13" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" declline="93" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_PE_OPTIONAL_HEADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_PE_OPTIONAL_HEADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/PE/enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/visibility.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_DLL_CHARACTERISTICS<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_HIGH_ENTROPY_VA<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0020,<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_DYNAMIC_BASE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0040,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_FORCE_INTEGRITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0080,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_NX_COMPAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0100,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_NO_ISOLATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0200,<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_NO_SEH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0400,<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_NO_BIND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0800,<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_APPCONTAINER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1000,<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_WDM_DRIVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2000,<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_GUARD_CF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x4000,<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>LIEF_PE_DLL_CHARACTERISTICS_TERMINAL_SERVER_AWARE<sp/>=<sp/>0x8000<sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_UNKNOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_NATIVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_WINDOWS_GUI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_WINDOWS_CUI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_OS2_CUI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,<sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_POSIX_CUI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_NATIVE_WINDOWS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,<sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_WINDOWS_CE_GUI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,<sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_EFI_APPLICATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER<sp/><sp/>=<sp/>11,<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_EFI_RUNTIME_DRIVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_EFI_ROM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_XBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION<sp/>=<sp/>16<sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="struct_pe___optional_header__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_PE_TYPES<sp/><sp/>magic;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_linker_version;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_linker_version;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_code;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_initialized_data;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_uninitialized_data;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>addressof_entrypoint;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseof_code;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseof_data;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>section_alignment;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>file_alignment;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_operating_system_version;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_operating_system_version;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_image_version;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_image_version;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_subsystem_version;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_subsystem_version;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>win32_version_value;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_image;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_headers;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>checksum;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>subsystem;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>dll_characteristics;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_stack_reserve;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_stack_commit;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_heap_reserve;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_heap_commit;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>loader_flags;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>numberof_rva_and_size;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref><sp/><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lief_pe_subsytem_str(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>e);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h"/>
+  </compounddef>
+</doxygen>
