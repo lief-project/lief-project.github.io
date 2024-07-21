@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['x509_0',['x509',['../classLIEF_1_1PE_1_1x509.html',1,'LIEF::PE']]],
-  ['x86features_1',['X86Features',['../classLIEF_1_1ELF_1_1X86Features.html',1,'LIEF::ELF']]],
-  ['x86isa_2',['X86ISA',['../classLIEF_1_1ELF_1_1X86ISA.html',1,'LIEF::ELF']]]
+  ['variable_0',['Variable',['../classLIEF_1_1dwarf_1_1Variable.html',1,'LIEF::dwarf']]],
+  ['vector_5fiostream_1',['vector_iostream',['../classLIEF_1_1vector__iostream.html',1,'LIEF']]],
+  ['vectorstream_2',['VectorStream',['../classLIEF_1_1VectorStream.html',1,'LIEF']]],
+  ['versionmin_3',['VersionMin',['../classLIEF_1_1MachO_1_1VersionMin.html',1,'LIEF::MachO']]],
+  ['visitor_4',['Visitor',['../classLIEF_1_1Visitor.html',1,'LIEF']]]
 ];

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="_mach_o_2_binary_8h" kind="file" language="C++">
     <compoundname>Binary.h</compoundname>
     <includes local="no">stdint.h</includes>
@@ -9,10 +9,10 @@
     <includes refid="_mach_o_2_symbol_8h" local="yes">LIEF/MachO/Symbol.h</includes>
     <includes refid="_mach_o_2_section_8h" local="yes">LIEF/MachO/Section.h</includes>
     <includes refid="_mach_o_2_segment_8h" local="yes">LIEF/MachO/Segment.h</includes>
-    <includedby refid="_mach_o_8h" local="yes">/lief-src/api/c/include/LIEF/MachO.h</includedby>
+    <includedby refid="_mach_o_8h" local="yes">/src/api/c/include/LIEF/MachO.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/MachO/Binary.h</label>
+        <label>/src/api/c/include/LIEF/MachO/Binary.h</label>
         <link refid="_mach_o_2_binary_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -97,17 +97,17 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/src/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="2">
-        <label>/lief-src/api/c/include/LIEF/MachO.h</label>
+        <label>/src/api/c/include/LIEF/MachO.h</label>
         <link refid="_mach_o_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/MachO/Binary.h</label>
+        <label>/src/api/c/include/LIEF/MachO/Binary.h</label>
         <link refid="_mach_o_2_binary_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -116,7 +116,7 @@
     <innerclass refid="struct_macho___binary__t" prot="public">Macho_Binary_t</innerclass>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_mach_o_2_binary_8h_1aa43da6dda26fe05e49addad8375ac11b" prot="public" static="no">
-        <type>struct <ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref></type>
+        <type>struct Macho_Binary_t</type>
         <definition>typedef struct Macho_Binary_t Macho_Binary_t</definition>
         <argsstring></argsstring>
         <name>Macho_Binary_t</name>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h" line="46" column="29" bodyfile="/lief-src/api/c/include/LIEF/MachO/Binary.h" bodystart="46" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/MachO/Binary.h" line="45" column="29" bodyfile="/src/api/c/include/LIEF/MachO/Binary.h" bodystart="45" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h" line="49" column="17" declfile="/lief-src/api/c/include/LIEF/MachO/Binary.h" declline="49" declcolumn="17"/>
+        <location file="/src/api/c/include/LIEF/MachO/Binary.h" line="48" column="17" declfile="/src/api/c/include/LIEF/MachO/Binary.h" declline="48" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="_mach_o_2_binary_8h_1ab17a736d9c79569700b31fc58a843b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h" line="51" column="7" declfile="/lief-src/api/c/include/LIEF/MachO/Binary.h" declline="51" declcolumn="7"/>
+        <location file="/src/api/c/include/LIEF/MachO/Binary.h" line="50" column="7" declfile="/src/api/c/include/LIEF/MachO/Binary.h" declline="50" declcolumn="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -171,8 +171,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -205,29 +205,28 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34" refid="struct_macho___binary__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___header__t" kindref="compound">Macho_Header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___command__t" kindref="compound">Macho_Command_t</ref>**<sp/><sp/><sp/>commands;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___symbol__t" kindref="compound">Macho_Symbol_t</ref>**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/><sp/><sp/>sections;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>**<sp/><sp/><sp/>segments;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">LIEF_API<sp/><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>**<sp/>macho_parse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>macho_binaries_destroy(<ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>**<sp/>binaries);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___header__t" kindref="compound">Macho_Header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___command__t" kindref="compound">Macho_Command_t</ref>**<sp/><sp/><sp/>commands;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___symbol__t" kindref="compound">Macho_Symbol_t</ref>**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/><sp/><sp/>sections;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>**<sp/><sp/><sp/>segments;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">LIEF_API<sp/><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>**<sp/>macho_parse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>macho_binaries_destroy(<ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref>**<sp/>binaries);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/lief-src/api/c/include/LIEF/MachO/Binary.h"/>
+    <location file="/src/api/c/include/LIEF/MachO/Binary.h"/>
   </compounddef>
 </doxygen>

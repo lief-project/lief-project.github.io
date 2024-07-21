@@ -11,7 +11,7 @@ Welcome to LIEF's documentation!
   error_handling
 
 .. toctree::
-  :caption: Tutorials
+  :caption: <i class="fa-solid fa-layer-group">&nbsp;</i>Tutorials
   :maxdepth: 1
 
   tutorials/01_play_with_formats
@@ -29,15 +29,25 @@ Welcome to LIEF's documentation!
   tutorials/13_pe_authenticode
 
 .. toctree::
-  :caption: API
+  :caption: <i class="fa-solid fa-code">&nbsp;</i>API
   :maxdepth: 1
 
   api/python/index
   api/cpp/index
   api/c/index
+  api/rust/index
 
 .. toctree::
-  :caption: Extra Information
+  :caption: <i class="fa-solid fa-hat-wizard">&nbsp;</i>LIEF Extended
+  :maxdepth: 1
+
+  extended/intro
+  extended/dwarf/index
+  extended/pdb/index
+  extended/objc/index
+
+.. toctree::
+  :caption: <i class="fa-brands fa-space-awesome">&nbsp;</i>Extra Information
   :maxdepth: 1
 
   formats/index

@@ -9,8 +9,13 @@ var searchData=
   ['maincommand_6',['MainCommand',['../classLIEF_1_1MachO_1_1MainCommand.html',1,'LIEF::MachO']]],
   ['mapitem_7',['MapItem',['../classLIEF_1_1DEX_1_1MapItem.html',1,'LIEF::DEX']]],
   ['maplist_8',['MapList',['../classLIEF_1_1DEX_1_1MapList.html',1,'LIEF::DEX']]],
-  ['memorystream_9',['MemoryStream',['../classLIEF_1_1MemoryStream.html',1,'LIEF']]],
-  ['method_10',['method',['../classLIEF_1_1DEX_1_1Method.html',1,'LIEF::DEX::Method'],['../classLIEF_1_1OAT_1_1Method.html',1,'LIEF::OAT::Method']]],
-  ['msspcnestedsignature_11',['MsSpcNestedSignature',['../classLIEF_1_1PE_1_1MsSpcNestedSignature.html',1,'LIEF::PE']]],
-  ['msspcstatementtype_12',['MsSpcStatementType',['../classLIEF_1_1PE_1_1MsSpcStatementType.html',1,'LIEF::PE']]]
+  ['member_9',['Member',['../classLIEF_1_1dwarf_1_1types_1_1ClassLike_1_1Member.html',1,'LIEF::dwarf::types::ClassLike']]],
+  ['memorystream_10',['MemoryStream',['../classLIEF_1_1MemoryStream.html',1,'LIEF']]],
+  ['metadata_11',['Metadata',['../classLIEF_1_1objc_1_1Metadata.html',1,'LIEF::objc']]],
+  ['method_12',['Method',['../classLIEF_1_1DEX_1_1Method.html',1,'LIEF::DEX::Method'],['../classLIEF_1_1OAT_1_1Method.html',1,'LIEF::OAT::Method'],['../classLIEF_1_1objc_1_1Method.html',1,'LIEF::objc::Method'],['../classLIEF_1_1pdb_1_1types_1_1Method.html',1,'LIEF::pdb::types::Method']]],
+  ['modifier_13',['Modifier',['../classLIEF_1_1pdb_1_1types_1_1Modifier.html',1,'LIEF::pdb::types']]],
+  ['mscountersign_14',['MsCounterSign',['../classLIEF_1_1PE_1_1MsCounterSign.html',1,'LIEF::PE']]],
+  ['msmanifestbinaryid_15',['MsManifestBinaryID',['../classLIEF_1_1PE_1_1MsManifestBinaryID.html',1,'LIEF::PE']]],
+  ['msspcnestedsignature_16',['MsSpcNestedSignature',['../classLIEF_1_1PE_1_1MsSpcNestedSignature.html',1,'LIEF::PE']]],
+  ['msspcstatementtype_17',['MsSpcStatementType',['../classLIEF_1_1PE_1_1MsSpcStatementType.html',1,'LIEF::PE']]]
 ];

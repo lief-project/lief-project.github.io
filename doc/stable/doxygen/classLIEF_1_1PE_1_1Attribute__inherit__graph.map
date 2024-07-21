@@ -1,23 +1,31 @@
 <map id="LIEF::PE::Attribute" name="LIEF::PE::Attribute">
-<area shape="rect" id="Node000001" title="Interface over PKCS #7 attribute." alt="" coords="152,211,289,236"/>
+<area shape="rect" id="Node000001" title="Interface over PKCS #7 attribute." alt="" coords="152,309,289,335"/>
 <area shape="rect" id="Node000003" href="$classLIEF_1_1PE_1_1ContentType.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.3 (PKCS #9)" alt="" coords="374,5,535,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,196,244,160,266,118,297,75,336,40,373,23,375,28,339,44,301,79,271,121,248,163,233,198"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,295,232,241,251,172,266,135,285,100,308,68,336,40,353,29,373,21,375,26,356,33,339,44,312,71,289,103,271,138,256,173,237,242,227,296"/>
 <area shape="rect" id="Node000004" href="$classLIEF_1_1PE_1_1GenericType.html" title="Interface over an attribute for which the internal structure is not supported by LIEF." alt="" coords="375,55,535,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,197,275,142,303,113,336,89,374,74,376,79,339,94,307,117,279,145,239,200"/>
-<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1MsSpcNestedSignature.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.2.4.1" alt="" coords="339,104,570,129"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="244,199,286,167,336,138,369,127,371,132,338,143,289,172,248,204"/>
-<area shape="rect" id="Node000006" href="$classLIEF_1_1PE_1_1MsSpcStatementType.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.2.1.11" alt="" coords="345,153,565,179"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="278,204,337,189,391,176,392,181,338,194,279,209"/>
-<area shape="rect" id="Node000007" href="$classLIEF_1_1PE_1_1PKCS9AtSequenceNumber.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.25.4 (PKCS #9)" alt="" coords="355,203,554,243"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="303,221,355,221,355,226,303,226"/>
-<area shape="rect" id="Node000008" href="$classLIEF_1_1PE_1_1PKCS9CounterSignature.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.6 (PKCS #9)" alt="" coords="337,268,572,293"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="279,237,338,253,392,265,391,270,337,258,278,242"/>
-<area shape="rect" id="Node000009" href="$classLIEF_1_1PE_1_1PKCS9MessageDigest.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.4 (PKCS #9)" alt="" coords="344,317,565,343"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="248,243,289,275,338,304,371,315,369,320,336,308,286,279,244,247"/>
-<area shape="rect" id="Node000010" href="$classLIEF_1_1PE_1_1PKCS9SigningTime.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.5 (PKCS #9)" alt="" coords="353,367,556,392"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="239,246,279,301,307,330,339,353,364,364,361,369,336,358,303,334,275,305,234,250"/>
-<area shape="rect" id="Node000011" href="$classLIEF_1_1PE_1_1SpcSpOpusInfo.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.2.1.12" alt="" coords="366,416,543,441"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="233,248,248,284,271,326,301,368,339,402,367,416,365,421,336,407,297,371,266,329,244,286,229,250"/>
-<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,211,104,236"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,221,152,221,152,226,118,226"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,295,237,250,258,194,291,137,312,111,336,89,354,78,373,71,375,76,356,83,339,93,315,115,295,140,263,196,242,252,230,297"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1MsCounterSign.html" title="This class exposes the MS Counter Signature attribute." alt="" coords="365,104,544,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="229,295,244,259,266,216,297,174,336,138,364,125,366,129,339,143,301,177,271,219,248,261,233,297"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1PE_1_1MsManifestBinaryID.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.10.3.28 (szOID_PLATFORM_MANIFEST_BI..." alt="" coords="349,153,561,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="234,296,275,241,303,212,336,188,361,176,364,181,339,192,307,216,279,244,239,299"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1PE_1_1MsSpcNestedSignature.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.2.4.1" alt="" coords="339,203,570,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="244,298,286,266,336,237,369,226,371,231,338,242,289,270,248,302"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1PE_1_1MsSpcStatementType.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.2.1.11" alt="" coords="345,252,565,277"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="278,303,337,287,391,275,392,280,338,293,279,308"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1PE_1_1PKCS9AtSequenceNumber.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.25.4 (PKCS #9)" alt="" coords="355,302,554,342"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="303,319,355,319,355,325,303,325"/>
+<area shape="rect" id="Node000010" href="$classLIEF_1_1PE_1_1PKCS9CounterSignature.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.6 (PKCS #9)" alt="" coords="337,367,572,392"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="279,336,338,351,392,364,391,369,337,357,278,341"/>
+<area shape="rect" id="Node000011" href="$classLIEF_1_1PE_1_1PKCS9MessageDigest.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.4 (PKCS #9)" alt="" coords="344,416,565,441"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="248,342,289,374,338,402,371,413,369,418,336,407,286,378,244,346"/>
+<area shape="rect" id="Node000012" href="$classLIEF_1_1PE_1_1PKCS9SigningTime.html" title="Interface over the structure described by the OID 1.2.840.113549.1.9.5 (PKCS #9)" alt="" coords="353,465,556,491"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="239,345,279,400,307,428,339,452,364,463,361,468,336,456,303,432,275,403,234,348"/>
+<area shape="rect" id="Node000013" href="$classLIEF_1_1PE_1_1SigningCertificateV2.html" title="SigningCertificateV2 ::= SEQUENCE { certs SEQUENCE OF ESSCertIDv2, policies SEQUENCE OF PolicyInforma..." alt="" coords="349,515,561,540"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="233,347,248,383,271,425,301,467,339,501,360,512,358,517,336,506,297,470,266,428,244,385,229,349"/>
+<area shape="rect" id="Node000014" href="$classLIEF_1_1PE_1_1SpcRelaxedPeMarkerCheck.html" title=" " alt="" coords="347,565,563,605"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="230,348,243,392,265,447,296,503,316,528,339,551,357,562,354,567,336,555,312,532,292,506,260,449,238,394,225,349"/>
+<area shape="rect" id="Node000015" href="$classLIEF_1_1PE_1_1SpcSpOpusInfo.html" title="Interface over the structure described by the OID 1.3.6.1.4.1.311.2.1.12" alt="" coords="366,629,543,655"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="227,348,235,404,254,477,269,515,288,552,311,585,339,615,367,631,365,635,336,619,307,589,283,554,264,517,249,479,230,406,222,349"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,309,104,335"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,319,152,319,152,325,118,325"/>
 </map>

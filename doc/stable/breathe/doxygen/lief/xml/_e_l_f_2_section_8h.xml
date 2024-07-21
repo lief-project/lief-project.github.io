@@ -1,33 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="_e_l_f_2_section_8h" kind="file" language="C++">
     <compoundname>Section.h</compoundname>
     <includes local="no">stdint.h</includes>
-    <includes refid="_e_l_f_2enums_8h" local="yes">LIEF/ELF/enums.h</includes>
-    <includedby refid="_e_l_f_8h" local="yes">/lief-src/api/c/include/LIEF/ELF.h</includedby>
-    <includedby refid="_e_l_f_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Binary.h</includedby>
+    <includedby refid="_e_l_f_8h" local="yes">/src/api/c/include/LIEF/ELF.h</includedby>
+    <includedby refid="_e_l_f_2_binary_8h" local="yes">/src/api/c/include/LIEF/ELF/Binary.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/ELF/Section.h</label>
+        <label>/src/api/c/include/LIEF/ELF/Section.h</label>
         <link refid="_e_l_f_2_section_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>LIEF/ELF/enums.h</label>
-        <link refid="_e_l_f_2enums_8h_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>LIEF/ELF/enums.inc</label>
-      </node>
-      <node id="4">
-        <label>LIEF/ELF/undef.h</label>
       </node>
       <node id="2">
         <label>stdint.h</label>
@@ -35,19 +18,19 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/lief-src/api/c/include/LIEF/ELF.h</label>
+        <label>/src/api/c/include/LIEF/ELF.h</label>
         <link refid="_e_l_f_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/lief-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <label>/src/api/c/include/LIEF/ELF/Binary.h</label>
         <link refid="_e_l_f_2_binary_8h_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/ELF/Section.h</label>
+        <label>/src/api/c/include/LIEF/ELF/Section.h</label>
         <link refid="_e_l_f_2_section_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -55,14 +38,14 @@
         </childnode>
       </node>
       <node id="3">
-        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/src/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_elf___section__t" prot="public">Elf_Section_t</innerclass>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_e_l_f_2_section_8h_1a5d075ea3af285e90b9def729a5b8b8b5" prot="public" static="no">
-        <type>struct <ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref></type>
+        <type>struct Elf_Section_t</type>
         <definition>typedef struct Elf_Section_t Elf_Section_t</definition>
         <argsstring></argsstring>
         <name>Elf_Section_t</name>
@@ -72,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Section.h" line="43" column="28" bodyfile="/lief-src/api/c/include/LIEF/ELF/Section.h" bodystart="43" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Section.h" line="41" column="28" bodyfile="/src/api/c/include/LIEF/ELF/Section.h" bodystart="41" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -80,8 +63,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -95,41 +78,39 @@
 <codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
 <codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
 <codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_ELF_SECTION_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_ELF_SECTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIEF_C_ELF_SECTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIEF_C_ELF_SECTION_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/ELF/enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="struct_elf___section__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_ELF_ELF_SECTION_TYPES<sp/>type;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual_address;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>original_size;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>link;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alignment;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry_size;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>content;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entropy;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="struct_elf___section__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>flags;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>type;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>virtual_address;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>offset;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>original_size;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>link;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>info;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>alignment;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>entry_size;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>size;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/>content;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>entropy;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref><sp/><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref>;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref><sp/><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref>;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/lief-src/api/c/include/LIEF/ELF/Section.h"/>
+    <location file="/src/api/c/include/LIEF/ELF/Section.h"/>
   </compounddef>
 </doxygen>

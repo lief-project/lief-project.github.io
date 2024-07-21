@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="_e_l_f_2_segment_8h" kind="file" language="C++">
     <compoundname>Segment.h</compoundname>
     <includes local="no">stdint.h</includes>
     <includes refid="_e_l_f_2enums_8h" local="yes">LIEF/ELF/enums.h</includes>
-    <includedby refid="_e_l_f_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/ELF/Binary.h</includedby>
+    <includedby refid="_e_l_f_2_binary_8h" local="yes">/src/api/c/include/LIEF/ELF/Binary.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/ELF/Segment.h</label>
+        <label>/src/api/c/include/LIEF/ELF/Segment.h</label>
         <link refid="_e_l_f_2_segment_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -21,9 +21,59 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>LIEF/ELF/Relocations/AArch64.def</label>
+      </node>
+      <node id="10">
+        <label>LIEF/ELF/Relocations/ARM.def</label>
+      </node>
+      <node id="12">
+        <label>LIEF/ELF/Relocations/Hexagon.def</label>
+      </node>
+      <node id="15">
+        <label>LIEF/ELF/Relocations/LoongArch.def</label>
+      </node>
+      <node id="11">
+        <label>LIEF/ELF/Relocations/Mips.def</label>
+      </node>
+      <node id="7">
+        <label>LIEF/ELF/Relocations/PowerPC.def</label>
+      </node>
+      <node id="8">
+        <label>LIEF/ELF/Relocations/PowerPC64.def</label>
+      </node>
+      <node id="14">
+        <label>LIEF/ELF/Relocations/Sparc.def</label>
+      </node>
+      <node id="13">
+        <label>LIEF/ELF/Relocations/SystemZ.def</label>
+      </node>
+      <node id="6">
+        <label>LIEF/ELF/Relocations/i386.def</label>
       </node>
       <node id="5">
-        <label>LIEF/ELF/enums.inc</label>
+        <label>LIEF/ELF/Relocations/x86_64.def</label>
       </node>
       <node id="4">
         <label>LIEF/ELF/undef.h</label>
@@ -34,32 +84,32 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>/lief-src/api/c/include/LIEF/ELF.h</label>
+        <label>/src/api/c/include/LIEF/ELF.h</label>
         <link refid="_e_l_f_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/lief-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <label>/src/api/c/include/LIEF/ELF/Binary.h</label>
         <link refid="_e_l_f_2_binary_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/ELF/Segment.h</label>
+        <label>/src/api/c/include/LIEF/ELF/Segment.h</label>
         <link refid="_e_l_f_2_segment_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/src/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_elf___segment__t" prot="public">Elf_Segment_t</innerclass>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_e_l_f_2_segment_8h_1ab0bd0019872e4d82cc263eac2bc8224e" prot="public" static="no">
-        <type>struct <ref refid="struct_elf___segment__t" kindref="compound">Elf_Segment_t</ref></type>
+        <type>struct Elf_Segment_t</type>
         <definition>typedef struct Elf_Segment_t Elf_Segment_t</definition>
         <argsstring></argsstring>
         <name>Elf_Segment_t</name>
@@ -69,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Segment.h" line="37" column="28" bodyfile="/lief-src/api/c/include/LIEF/ELF/Segment.h" bodystart="37" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Segment.h" line="37" column="28" bodyfile="/src/api/c/include/LIEF/ELF/Segment.h" bodystart="37" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -77,8 +127,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -92,8 +142,8 @@
 <codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
 <codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
 <codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_ELF_SEGMENT_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_ELF_SEGMENT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIEF_C_ELF_SEGMENT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIEF_C_ELF_SEGMENT_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/ELF/enums.h&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -103,14 +153,14 @@
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26" refid="struct_elf___segment__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___segment__t" kindref="compound">Elf_Segment_t</ref><sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_ELF_SEGMENT_TYPES<sp/>type;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual_address;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual_size;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alignment;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>content;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>uint32_t<sp/>type;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>uint32_t<sp/>flags;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>uint64_t<sp/>virtual_address;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>uint64_t<sp/>virtual_size;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>uint64_t<sp/>offset;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>uint64_t<sp/>alignment;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>uint64_t<sp/>size;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>uint8_t*<sp/>content;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___segment__t" kindref="compound">Elf_Segment_t</ref><sp/><ref refid="struct_elf___segment__t" kindref="compound">Elf_Segment_t</ref>;</highlight></codeline>
@@ -121,6 +171,6 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/lief-src/api/c/include/LIEF/ELF/Segment.h"/>
+    <location file="/src/api/c/include/LIEF/ELF/Segment.h"/>
   </compounddef>
 </doxygen>

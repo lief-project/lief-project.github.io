@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="struct_elf___symbol__t" kind="struct" language="C++" prot="public">
     <compoundname>Elf_Symbol_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="29" column="24" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="29" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="27" column="14" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="27" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_elf___symbol__t_1a446e58eefe7a166976da425687248cef" prot="public" static="no" mutable="no">
-        <type>enum LIEF_ELF_ELF_SYMBOL_TYPES</type>
-        <definition>enum LIEF_ELF_ELF_SYMBOL_TYPES Elf_Symbol_t::type</definition>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1a54a3b1d2ca302f8053fbf8e4c5976af8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Elf_Symbol_t::type</definition>
         <argsstring></argsstring>
         <name>type</name>
         <qualifiedname>Elf_Symbol_t::type</qualifiedname>
@@ -29,11 +29,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="30" column="33" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="30" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="28" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="28" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_elf___symbol__t_1ad89e6086f3434d28884c741c760b7c5f" prot="public" static="no" mutable="no">
-        <type>enum LIEF_ELF_SYMBOL_BINDINGS</type>
-        <definition>enum LIEF_ELF_SYMBOL_BINDINGS Elf_Symbol_t::binding</definition>
+      <memberdef kind="variable" id="struct_elf___symbol__t_1ac7934f08f06add42f6e2d9ebce79ca0f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Elf_Symbol_t::binding</definition>
         <argsstring></argsstring>
         <name>binding</name>
         <qualifiedname>Elf_Symbol_t::binding</qualifiedname>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="31" column="32" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="31" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="29" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1a8439f94adb0f924ea65df4c815548870" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="32" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="32" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="30" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1a6032451fca2d7c13fe6f820ead575d0f" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="33" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="33" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="31" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="34" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="34" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="32" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="35" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="35" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="33" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="36" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="36" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="34" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="37" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="37" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="35" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -143,16 +143,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="38" column="25" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="38" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="36" column="15" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="36" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/lief-src/api/c/include/LIEF/ELF/Symbol.h" line="28" column="1" bodyfile="/lief-src/api/c/include/LIEF/ELF/Symbol.h" bodystart="28" bodyend="39"/>
+    <location file="/src/api/c/include/LIEF/ELF/Symbol.h" line="26" column="1" bodyfile="/src/api/c/include/LIEF/ELF/Symbol.h" bodystart="26" bodyend="37"/>
     <listofallmembers>
-      <member refid="struct_elf___symbol__t_1ad89e6086f3434d28884c741c760b7c5f" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>binding</name></member>
+      <member refid="struct_elf___symbol__t_1ac7934f08f06add42f6e2d9ebce79ca0f" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>binding</name></member>
       <member refid="struct_elf___symbol__t_1a8439f94adb0f924ea65df4c815548870" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>information</name></member>
       <member refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>is_exported</name></member>
       <member refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>is_imported</name></member>
@@ -160,7 +160,7 @@
       <member refid="struct_elf___symbol__t_1a6032451fca2d7c13fe6f820ead575d0f" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>other</name></member>
       <member refid="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>shndx</name></member>
       <member refid="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>size</name></member>
-      <member refid="struct_elf___symbol__t_1a446e58eefe7a166976da425687248cef" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>type</name></member>
+      <member refid="struct_elf___symbol__t_1a54a3b1d2ca302f8053fbf8e4c5976af8" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>type</name></member>
       <member refid="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" prot="public" virt="non-virtual"><scope>Elf_Symbol_t</scope><name>value</name></member>
     </listofallmembers>
   </compounddef>

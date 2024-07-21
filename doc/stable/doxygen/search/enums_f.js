@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['va_5ftypes_0',['VA_TYPES',['../classLIEF_1_1Binary.html#a63897a975536c5359d2b3ec82208fab3',1,'LIEF::Binary']]],
-  ['verification_5fchecks_1',['VERIFICATION_CHECKS',['../classLIEF_1_1PE_1_1Signature.html#a04a40460f6b23c0934144bdfb18a2d87',1,'LIEF::PE::Signature']]],
-  ['verification_5fflags_2',['verification_flags',['../classLIEF_1_1PE_1_1Signature.html#a372027a6fcc75b5f87923f585e3e96a2',1,'LIEF::PE::Signature::VERIFICATION_FLAGS'],['../classLIEF_1_1PE_1_1x509.html#a4a6b7f5507eb531957f6b0ce370f05e3',1,'LIEF::PE::x509::VERIFICATION_FLAGS']]],
-  ['version_3',['VERSION',['../namespaceLIEF_1_1ELF.html#af7ba395dce87911e8bc784b436383603',1,'LIEF::ELF']]],
-  ['vm_5fprotections_4',['VM_PROTECTIONS',['../namespaceLIEF_1_1MachO.html#ae5a8ecf6132546b0b5792a6e41998fd0',1,'LIEF::MachO']]]
+  ['section_5findex_0',['SECTION_INDEX',['../classLIEF_1_1ELF_1_1Symbol.html#a7a3a61ad793548049ab4669968fc2fb2',1,'LIEF::ELF::Symbol']]],
+  ['signatures_1',['SIGNATURES',['../classLIEF_1_1PE_1_1CodeView.html#a74f57fb6e3aa88d4588c86e83f501160',1,'LIEF::PE::CodeView::SIGNATURES'],['../classLIEF_1_1PE_1_1Pogo.html#a4c56919feeffe58830abaf3e5f9c1f7e',1,'LIEF::PE::Pogo::SIGNATURES']]],
+  ['storage_5fmodes_2',['STORAGE_MODES',['../namespaceLIEF_1_1ART.html#a36b64f0aef95dfdf6dae5ee8824787d5',1,'LIEF::ART']]],
+  ['stream_5ftype_3',['STREAM_TYPE',['../classLIEF_1_1BinaryStream.html#a07800f380086544fe9d770b25420a5a6',1,'LIEF::BinaryStream']]],
+  ['subsystem_4',['SUBSYSTEM',['../classLIEF_1_1PE_1_1OptionalHeader.html#a19cd92d690498cf84b34ba4598673357',1,'LIEF::PE::OptionalHeader']]],
+  ['switch_5farray_5fident_5',['SWITCH_ARRAY_IDENT',['../namespaceLIEF_1_1DEX.html#a517d23dcf02fbe990c9d7ff01c0e2903',1,'LIEF::DEX']]],
+  ['symbol_5fbase_5ftypes_6',['SYMBOL_BASE_TYPES',['../namespaceLIEF_1_1PE.html#a5d277795a4fa5b6b31502211fa4af1f7',1,'LIEF::PE']]],
+  ['symbol_5fcomplex_5ftypes_7',['SYMBOL_COMPLEX_TYPES',['../namespaceLIEF_1_1PE.html#ad79f0792ac94cc4d9a359b8382c683d6',1,'LIEF::PE']]],
+  ['symbol_5fsection_5fnumber_8',['SYMBOL_SECTION_NUMBER',['../namespaceLIEF_1_1PE.html#ace39029f959b70201e7e11de81097e15',1,'LIEF::PE']]],
+  ['symbol_5fstorage_5fclass_9',['SYMBOL_STORAGE_CLASS',['../namespaceLIEF_1_1PE.html#a748c76daa5c3b2c06e0476c6dd92ce53',1,'LIEF::PE']]]
 ];

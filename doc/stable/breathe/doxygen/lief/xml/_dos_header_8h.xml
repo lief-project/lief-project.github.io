@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="_dos_header_8h" kind="file" language="C++">
     <compoundname>DosHeader.h</compoundname>
     <includes local="no">inttypes.h</includes>
     <includes refid="_e_l_f_2enums_8h" local="yes">LIEF/ELF/enums.h</includes>
-    <includedby refid="_p_e_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/src/api/c/include/LIEF/PE/Binary.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>LIEF/ELF/enums.h</label>
@@ -13,17 +13,67 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/PE/DosHeader.h</label>
+        <label>/src/api/c/include/LIEF/PE/DosHeader.h</label>
         <link refid="_dos_header_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>LIEF/ELF/Relocations/AArch64.def</label>
+      </node>
+      <node id="10">
+        <label>LIEF/ELF/Relocations/ARM.def</label>
+      </node>
+      <node id="12">
+        <label>LIEF/ELF/Relocations/Hexagon.def</label>
+      </node>
+      <node id="15">
+        <label>LIEF/ELF/Relocations/LoongArch.def</label>
+      </node>
+      <node id="11">
+        <label>LIEF/ELF/Relocations/Mips.def</label>
+      </node>
+      <node id="7">
+        <label>LIEF/ELF/Relocations/PowerPC.def</label>
+      </node>
+      <node id="8">
+        <label>LIEF/ELF/Relocations/PowerPC64.def</label>
+      </node>
+      <node id="14">
+        <label>LIEF/ELF/Relocations/Sparc.def</label>
+      </node>
+      <node id="13">
+        <label>LIEF/ELF/Relocations/SystemZ.def</label>
+      </node>
+      <node id="6">
+        <label>LIEF/ELF/Relocations/i386.def</label>
+      </node>
       <node id="5">
-        <label>LIEF/ELF/enums.inc</label>
+        <label>LIEF/ELF/Relocations/x86_64.def</label>
       </node>
       <node id="4">
         <label>LIEF/ELF/undef.h</label>
@@ -34,23 +84,23 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4">
-        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/src/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="3">
-        <label>/lief-src/api/c/include/LIEF/PE.h</label>
+        <label>/src/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/lief-src/api/c/include/LIEF/PE/Binary.h</label>
+        <label>/src/api/c/include/LIEF/PE/Binary.h</label>
         <link refid="_p_e_2_binary_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/PE/DosHeader.h</label>
+        <label>/src/api/c/include/LIEF/PE/DosHeader.h</label>
         <link refid="_dos_header_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -59,7 +109,7 @@
     <innerclass refid="struct_pe___dos_header__t" prot="public">Pe_DosHeader_t</innerclass>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_dos_header_8h_1a96d6b2bd3262be00a3ee5b99b702f7ce" prot="public" static="no">
-        <type>struct <ref refid="struct_pe___dos_header__t" kindref="compound">Pe_DosHeader_t</ref></type>
+        <type>struct Pe_DosHeader_t</type>
         <definition>typedef struct Pe_DosHeader_t Pe_DosHeader_t</definition>
         <argsstring></argsstring>
         <name>Pe_DosHeader_t</name>
@@ -69,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/PE/DosHeader.h" line="48" column="29" bodyfile="/lief-src/api/c/include/LIEF/PE/DosHeader.h" bodystart="48" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/PE/DosHeader.h" line="48" column="29" bodyfile="/src/api/c/include/LIEF/PE/DosHeader.h" bodystart="48" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -77,8 +127,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -133,6 +183,6 @@
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/lief-src/api/c/include/LIEF/PE/DosHeader.h"/>
+    <location file="/src/api/c/include/LIEF/PE/DosHeader.h"/>
   </compounddef>
 </doxygen>

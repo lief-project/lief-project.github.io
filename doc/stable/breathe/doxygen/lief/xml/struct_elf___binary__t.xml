@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="struct_elf___binary__t" kind="struct" language="C++" prot="public">
     <compoundname>Elf_Binary_t</compoundname>
     <includes refid="_e_l_f_2_binary_8h" local="no">Binary.h</includes>
@@ -16,21 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="37" column="21" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="37" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_elf___binary__t_1a0e53d4950cd1b4b1c52e6981d0ff2650" prot="public" static="no" mutable="no">
-        <type>const char *</type>
-        <definition>const char* Elf_Binary_t::name</definition>
-        <argsstring></argsstring>
-        <name>name</name>
-        <qualifiedname>Elf_Binary_t::name</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="38" column="21" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="38" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="37" column="21" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___binary__t_1a9426da861b49ec60f95949a7ed6f361c" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -44,11 +30,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="39" column="21" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="39" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="38" column="21" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_elf___binary__t_1aa6c9aa146465aaea0e453447371306b3" prot="public" static="no" mutable="no">
-        <type>enum LIEF_ELF_ELF_CLASS</type>
-        <definition>enum LIEF_ELF_ELF_CLASS Elf_Binary_t::type</definition>
+      <memberdef kind="variable" id="struct_elf___binary__t_1a830db58f306a4a8dd52e0edae4a4ceea" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Elf_Binary_t::type</definition>
         <argsstring></argsstring>
         <name>type</name>
         <qualifiedname>Elf_Binary_t::type</qualifiedname>
@@ -58,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="40" column="26" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="40" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="39" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___binary__t_1ae05ec95634b954636f99918fbf78cddb" prot="public" static="no" mutable="no">
         <type><ref refid="struct_elf___header__t" kindref="compound">Elf_Header_t</ref></type>
@@ -72,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="41" column="22" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="41" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="40" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___binary__t_1a6e014d5a92c72069a3564d8bd2c92fbf" prot="public" static="no" mutable="no">
         <type><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref> **</type>
@@ -86,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="42" column="22" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="42" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="41" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___binary__t_1a3664d669bff2aab8e57c5ade93e32e34" prot="public" static="no" mutable="no">
         <type><ref refid="struct_elf___segment__t" kindref="compound">Elf_Segment_t</ref> **</type>
@@ -100,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="43" column="22" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="43" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="42" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___binary__t_1af819328d1bc63208bfe679be83eaef7c" prot="public" static="no" mutable="no">
         <type><ref refid="struct_elf___dynamic_entry__t" kindref="compound">Elf_DynamicEntry_t</ref> **</type>
@@ -114,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="44" column="22" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="44" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="43" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___binary__t_1a0a22cee3aa1e10ea644e7e59ca4f8338" prot="public" static="no" mutable="no">
         <type><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref> **</type>
@@ -128,21 +114,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="45" column="22" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="45" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="44" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_elf___binary__t_1ad6b7576413be2dff14fc473efd1bf2a4" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_elf___binary__t_1a88a30f5d00b739b5ae06a4d27aef8ac6" prot="public" static="no" mutable="no">
         <type><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref> **</type>
-        <definition>Elf_Symbol_t** Elf_Binary_t::static_symbols</definition>
+        <definition>Elf_Symbol_t** Elf_Binary_t::symtab_symbols</definition>
         <argsstring></argsstring>
-        <name>static_symbols</name>
-        <qualifiedname>Elf_Binary_t::static_symbols</qualifiedname>
+        <name>symtab_symbols</name>
+        <qualifiedname>Elf_Binary_t::symtab_symbols</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="46" column="22" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="46" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="45" column="22" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="45" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -168,7 +154,7 @@
         </childnode>
         <childnode refid="6" relation="usage">
           <edgelabel>dynamic_symbols</edgelabel>
-          <edgelabel>static_symbols</edgelabel>
+          <edgelabel>symtab_symbols</edgelabel>
         </childnode>
       </node>
       <node id="5">
@@ -192,18 +178,17 @@
         <link refid="struct_elf___symbol__t"/>
       </node>
     </collaborationgraph>
-    <location file="/lief-src/api/c/include/LIEF/ELF/Binary.h" line="36" column="1" bodyfile="/lief-src/api/c/include/LIEF/ELF/Binary.h" bodystart="36" bodyend="47"/>
+    <location file="/src/api/c/include/LIEF/ELF/Binary.h" line="36" column="1" bodyfile="/src/api/c/include/LIEF/ELF/Binary.h" bodystart="36" bodyend="46"/>
     <listofallmembers>
       <member refid="struct_elf___binary__t_1af819328d1bc63208bfe679be83eaef7c" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>dynamic_entries</name></member>
       <member refid="struct_elf___binary__t_1a0a22cee3aa1e10ea644e7e59ca4f8338" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>dynamic_symbols</name></member>
       <member refid="struct_elf___binary__t_1ae695b73fcf79b131d78cb6a11539ca92" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>handler</name></member>
       <member refid="struct_elf___binary__t_1ae05ec95634b954636f99918fbf78cddb" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>header</name></member>
       <member refid="struct_elf___binary__t_1a9426da861b49ec60f95949a7ed6f361c" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>interpreter</name></member>
-      <member refid="struct_elf___binary__t_1a0e53d4950cd1b4b1c52e6981d0ff2650" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>name</name></member>
       <member refid="struct_elf___binary__t_1a6e014d5a92c72069a3564d8bd2c92fbf" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>sections</name></member>
       <member refid="struct_elf___binary__t_1a3664d669bff2aab8e57c5ade93e32e34" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>segments</name></member>
-      <member refid="struct_elf___binary__t_1ad6b7576413be2dff14fc473efd1bf2a4" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>static_symbols</name></member>
-      <member refid="struct_elf___binary__t_1aa6c9aa146465aaea0e453447371306b3" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>type</name></member>
+      <member refid="struct_elf___binary__t_1a88a30f5d00b739b5ae06a4d27aef8ac6" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>symtab_symbols</name></member>
+      <member refid="struct_elf___binary__t_1a830db58f306a4a8dd52e0edae4a4ceea" prot="public" virt="non-virtual"><scope>Elf_Binary_t</scope><name>type</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
