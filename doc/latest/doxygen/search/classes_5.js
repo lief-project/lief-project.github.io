@@ -8,6 +8,6 @@ var searchData=
   ['fill_5farray_5fdata_5',['fill_array_data',['../structLIEF_1_1DEX_1_1fill__array__data.html',1,'LIEF::DEX']]],
   ['filter_5fiterator_6',['filter_iterator',['../classLIEF_1_1filter__iterator.html',1,'LIEF']]],
   ['forward_5finformation_5ft_7',['forward_information_t',['../structLIEF_1_1PE_1_1ExportEntry_1_1forward__information__t.html',1,'LIEF::PE::ExportEntry']]],
-  ['function_8',['Function',['../classLIEF_1_1Function.html',1,'LIEF']]],
+  ['function_8',['Function',['../classLIEF_1_1dwarf_1_1Function.html',1,'LIEF::dwarf::Function'],['../classLIEF_1_1Function.html',1,'LIEF::Function'],['../classLIEF_1_1pdb_1_1Function.html',1,'LIEF::pdb::Function'],['../classLIEF_1_1pdb_1_1types_1_1Function.html',1,'LIEF::pdb::types::Function']]],
   ['functionstarts_9',['FunctionStarts',['../classLIEF_1_1MachO_1_1FunctionStarts.html',1,'LIEF::MachO']]]
 ];

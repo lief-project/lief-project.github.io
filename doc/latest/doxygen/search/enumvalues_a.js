@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['k10m_0',['K10M',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea632e0411a2a1e9002a48cadb9130b397',1,'LIEF::ELF']]],
-  ['key_5fagreement_1',['KEY_AGREEMENT',['../classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66abec212be5542884a6db302f9b22c8171',1,'LIEF::PE::x509']]],
-  ['key_5fcert_5fsign_2',['KEY_CERT_SIGN',['../classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66ae08dd63ce9b9bc7669f6f24ae0a0aa1d',1,'LIEF::PE::x509']]],
-  ['key_5fencipherment_3',['KEY_ENCIPHERMENT',['../classLIEF_1_1PE_1_1x509.html#a416e0fe442f88ded41e90d0040a79e66a14584a4cd206b97cd4554745cfe2b697',1,'LIEF::PE::x509']]],
-  ['km32_4',['KM32',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eaeeacaaf593ec7296ab27c2945be1ec8d',1,'LIEF::ELF']]],
-  ['kmx16_5',['KMX16',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea5dc80ebfdf997fb0828e1e7dc1829374',1,'LIEF::ELF']]],
-  ['kmx32_6',['KMX32',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ead9b0e3c97c5992204beedc0232f47b1a',1,'LIEF::ELF']]],
-  ['kmx8_7',['KMX8',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea43de977ba73f97f178053fb0b84076cc',1,'LIEF::ELF']]],
-  ['kvarc_8',['KVARC',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea2904d0dca5b4e2268e7ac523105e6099',1,'LIEF::ELF']]]
+  ['japanese_0',['JAPANESE',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65a5ae445aa3b5ec4f591501216bfa3dafe',1,'LIEF::PE']]],
+  ['javelin_1',['JAVELIN',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea05f60bf7a11987d39b33db63595a2f11',1,'LIEF::ELF']]],
+  ['jmprel_2',['JMPREL',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaa483eb568c7478c4708d63d4a906098f',1,'LIEF::ELF::DynamicEntry']]],
+  ['jump_5ftable_5f16_3',['JUMP_TABLE_16',['../classLIEF_1_1MachO_1_1DataCodeEntry.html#afab11df1cc5f11d9c8265e6ab138ad67a63df9a48e55c61c7a9139874c14f32ec',1,'LIEF::MachO::DataCodeEntry']]],
+  ['jump_5ftable_5f32_4',['JUMP_TABLE_32',['../classLIEF_1_1MachO_1_1DataCodeEntry.html#afab11df1cc5f11d9c8265e6ab138ad67a28044b94f64f8955338314f5ee118bb6',1,'LIEF::MachO::DataCodeEntry']]],
+  ['jump_5ftable_5f8_5',['JUMP_TABLE_8',['../classLIEF_1_1MachO_1_1DataCodeEntry.html#afab11df1cc5f11d9c8265e6ab138ad67ad0d8c7c9d10a618589b6809430a9cfda',1,'LIEF::MachO::DataCodeEntry']]]
 ];

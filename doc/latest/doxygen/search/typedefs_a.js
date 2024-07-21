@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ok_5ferror_5ft_0',['ok_error_t',['../namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f',1,'LIEF']]]
+  ['libraries_5fcache_5ft_0',['libraries_cache_t',['../classLIEF_1_1MachO_1_1Binary.html#a2a1905f2708703857a01198d3ceee717',1,'LIEF::MachO::Binary']]],
+  ['location_5ft_1',['location_t',['../classLIEF_1_1DEX_1_1Header.html#a467c3871b2a113cebc656997cd8c28a0',1,'LIEF::DEX::Header']]]
 ];

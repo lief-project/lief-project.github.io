@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_p_e_2_header_8h" kind="file" language="C++">
+    <compoundname>Header.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="yes">LIEF/visibility.h</includes>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h</label>
+        <link refid="_p_e_2_header_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LIEF/visibility.h</label>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <link refid="_l_i_e_f_8h_source"/>
+      </node>
+      <node id="3">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <link refid="_p_e_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</label>
+        <link refid="_p_e_2_binary_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h</label>
+        <link refid="_p_e_2_header_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_pe___header__t" prot="public">Pe_Header_t</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LIEF_PE_MACHINE_TYPES</name>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704ae105db0e5412a12fa1bb10c3eddc6d7d" prot="public">
+          <name>LIEF_PE_MACHINE_UNKNOWN</name>
+          <initializer>= 0x0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a17fa01513368a8d69545c96539fbfafe" prot="public">
+          <name>LIEF_PE_MACHINE_AM33</name>
+          <initializer>= 0x1D3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Matsushita AM33 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a375be9cae8872f01717935409c2a7322" prot="public">
+          <name>LIEF_PE_MACHINE_AMD64</name>
+          <initializer>= 0x8664</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>AMD x64 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a52e7b587d84e90fddb370ea2d579b2b5" prot="public">
+          <name>LIEF_PE_MACHINE_ARM</name>
+          <initializer>= 0x1C0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ARM little endian <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a8db173f6550ccbec2271a64595b2de7f" prot="public">
+          <name>LIEF_PE_MACHINE_ARMNT</name>
+          <initializer>= 0x1C4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ARMv7 Thumb mode only <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704aab240b60ad8de99ed731e306226ba571" prot="public">
+          <name>LIEF_PE_MACHINE_ARM64</name>
+          <initializer>= 0xAA64</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ARMv8 in 64-bits mode <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a941ae5cb2dbf2860b352183fd69efd22" prot="public">
+          <name>LIEF_PE_MACHINE_EBC</name>
+          <initializer>= 0xEBC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>EFI byte code <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704abb3d78e235b34986c6953eaa1b6c6e69" prot="public">
+          <name>LIEF_PE_MACHINE_I386</name>
+          <initializer>= 0x14C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Intel 386 or later <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a025b240c27c670d8964c1bf1baf18c3c" prot="public">
+          <name>LIEF_PE_MACHINE_IA64</name>
+          <initializer>= 0x200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Intel Itanium processor family </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704af6d0cf4431d5260cbe258b362b4a0ae2" prot="public">
+          <name>LIEF_PE_MACHINE_M32R</name>
+          <initializer>= 0x9041</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Mitsubishi M32R little endian <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a716e17278474cffb4770e6c974374b03" prot="public">
+          <name>LIEF_PE_MACHINE_MIPS16</name>
+          <initializer>= 0x266</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MIPS16 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704aa2bea137174d09a16d3f7a16bd46b2f6" prot="public">
+          <name>LIEF_PE_MACHINE_MIPSFPU</name>
+          <initializer>= 0x366</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MIPS with FPU <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a33923e4fe6750d684e92a41791a1de0d" prot="public">
+          <name>LIEF_PE_MACHINE_MIPSFPU16</name>
+          <initializer>= 0x466</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MIPS16 with FPU <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4a11fd57e645835a01d89417fc8ecb5a" prot="public">
+          <name>LIEF_PE_MACHINE_POWERPC</name>
+          <initializer>= 0x1F0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Power PC little endian <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a611dc44ad91d7302d5567eaec846f745" prot="public">
+          <name>LIEF_PE_MACHINE_POWERPCFP</name>
+          <initializer>= 0x1F1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Power PC with floating point <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a2f3c22354dacdcfed81650370fd820c7" prot="public">
+          <name>LIEF_PE_MACHINE_R4000</name>
+          <initializer>= 0x166</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MIPS with little endian <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a1fe3eab4f18d54fcc966636000adbe6c" prot="public">
+          <name>LIEF_PE_MACHINE_RISCV32</name>
+          <initializer>= 0x5032</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RISC-V 32-bit address space <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a30bd55d27f725d54f6b887e7c7d2ecb6" prot="public">
+          <name>LIEF_PE_MACHINE_RISCV64</name>
+          <initializer>= 0x5064</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RISC-V 64-bit address space <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704af4abbed80d894fcfaea9a1fac25b0042" prot="public">
+          <name>LIEF_PE_MACHINE_RISCV128</name>
+          <initializer>= 0x5128</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RISC-V 128-bit address space <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a64d90b9d6bc85c713833d434b5e35432" prot="public">
+          <name>LIEF_PE_MACHINE_SH3</name>
+          <initializer>= 0x1A2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Hitachi SH3 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704ae92258b22aa0da3e84089cc890f3fb16" prot="public">
+          <name>LIEF_PE_MACHINE_SH3DSP</name>
+          <initializer>= 0x1A3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Hitachi SH3 DSP <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704aacd2a72bda43c3b4f92615e90c11a45d" prot="public">
+          <name>LIEF_PE_MACHINE_SH4</name>
+          <initializer>= 0x1A6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Hitachi SH4 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704af9fd269a8a82887c731de2c53bee850a" prot="public">
+          <name>LIEF_PE_MACHINE_SH5</name>
+          <initializer>= 0x1A8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Hitachi SH5 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4ec8162c06c571b5fa5389e8f0d9c889" prot="public">
+          <name>LIEF_PE_MACHINE_THUMB</name>
+          <initializer>= 0x1C2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ARM or Thumb <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4ff7547327fd08e69549d2662d0d89e6" prot="public">
+          <name>LIEF_PE_MACHINE_WCEMIPSV2</name>
+          <initializer>= 0x169</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MIPS little-endian WCE v2 <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="27" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="27" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="enum" id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LIEF_PE_HEADER_CHARACTERISTICS</name>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a91f5741eb015a5ebb0142aa037c1f550" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_INVALID</name>
+          <initializer>= 0x0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99acc39116f58ec12df2aedefb97c6d31a9" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_RELOCS_STRIPPED</name>
+          <initializer>= 0x0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The file does not contain base relocations and must be loaded at its preferred base. If this cannot be done, the loader will error. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a544dc5b0987e0127efba978f336a7e11" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_EXECUTABLE_IMAGE</name>
+          <initializer>= 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The file is valid and can be run. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a53fd6d11eb7d1cc676fc98935f8cca12" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_LINE_NUMS_STRIPPED</name>
+          <initializer>= 0x0004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>COFF line numbers have been stripped. This is deprecated and should be 0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a9d7b756ecf74dd6719f70564b9d66ecf" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_LOCAL_SYMS_STRIPPED</name>
+          <initializer>= 0x0008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>COFF symbol table entries for local symbols have been removed. This is deprecated and should be 0. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a897b7f84670afc4e4b2bf628896b8b1d" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_AGGRESSIVE_WS_TRIM</name>
+          <initializer>= 0x0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Aggressively trim working set. This is deprecated and must be 0. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a20cf3938118d5af630b17d112a4421e3" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_LARGE_ADDRESS_AWARE</name>
+          <initializer>= 0x0020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Image can handle &gt; 2GiB addresses. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a1985dced9231f85aa55faaaf5ca7849e" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_BYTES_REVERSED_LO</name>
+          <initializer>= 0x0080</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Little endian: the LSB precedes the MSB in memory. This is deprecated and should be 0. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99ac0b83f09425d56c65542ad797164e47a" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_32BIT_MACHINE</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Machine is based on a 32bit word architecture. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a96c7719bc6cff524d747dfe3e185ebbd" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_DEBUG_STRIPPED</name>
+          <initializer>= 0x0200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Debugging info has been removed. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99ad1d2afc106b75875adf9caaa12c16c09" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_REMOVABLE_RUN_FROM_SWAP</name>
+          <initializer>= 0x0400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>If the image is on removable media, fully load it and copy it to swap. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a8834b66faa56c4463d379ed522c1ce93" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_NET_RUN_FROM_SWAP</name>
+          <initializer>= 0x0800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>If the image is on network media, fully load it and copy it to swap. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a552e923f7a798e4ec3351d3a5538e2ee" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_SYSTEM</name>
+          <initializer>= 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The image file is a system file, not a user program. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a251a2ac4fead196005e427c019651959" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_DLL</name>
+          <initializer>= 0x2000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The image file is a DLL. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99adfb5aa52e943e64e71eaaabebef7953d" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_UP_SYSTEM_ONLY</name>
+          <initializer>= 0x4000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This file should only be run on a uniprocessor machine. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_p_e_2_header_8h_1ae924d6415ad364649776bae1a38b5f99a705e82d905b6320b45c0b412ca9e0d03" prot="public">
+          <name>LIEF_PE_HEADER_CHARACTERISTICS_BYTES_REVERSED_HI</name>
+          <initializer>= 0x8000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Big endian: the MSB precedes the LSB in memory. This is deprecated </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="55" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="55" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_p_e_2_header_8h_1a152734038418b26df37b1daef678bbb8" prot="public" static="no">
+        <type>struct Pe_Header_t</type>
+        <definition>typedef struct Pe_Header_t Pe_Header_t</definition>
+        <argsstring></argsstring>
+        <name>Pe_Header_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="85" column="26" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_p_e_2_header_8h_1a3873a71f81039d938e74284f62a2f43a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * lief_pe_header_machine_str</definition>
+        <argsstring>(enum LIEF_PE_MACHINE_TYPES e)</argsstring>
+        <name>lief_pe_header_machine_str</name>
+        <param>
+          <type>enum LIEF_PE_MACHINE_TYPES</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="87" column="13" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" declline="87" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_e_2_header_8h_1a2f6d20b7c1203a2fb5182ed71b0d53ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * lief_pe_header_characteristics_str</definition>
+        <argsstring>(enum LIEF_PE_HEADER_CHARACTERISTICS e)</argsstring>
+        <name>lief_pe_header_characteristics_str</name>
+        <param>
+          <type>enum LIEF_PE_HEADER_CHARACTERISTICS</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="88" column="13" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" declline="88" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_PE_HEADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_PE_HEADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/visibility.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_MACHINE_TYPES<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_UNKNOWN<sp/><sp/><sp/>=<sp/>0x0,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_AM33<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1D3,<sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_AMD64<sp/><sp/><sp/><sp/><sp/>=<sp/>0x8664,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_ARM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1C0,<sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_ARMNT<sp/><sp/><sp/><sp/><sp/>=<sp/>0x1C4,<sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_ARM64<sp/><sp/><sp/><sp/><sp/>=<sp/>0xAA64,<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_EBC<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xEBC,<sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_I386<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x14C,<sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_IA64<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x200,<sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_M32R<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x9041,<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_MIPS16<sp/><sp/><sp/><sp/>=<sp/>0x266,<sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_MIPSFPU<sp/><sp/><sp/>=<sp/>0x366,<sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_MIPSFPU16<sp/>=<sp/>0x466,<sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_POWERPC<sp/><sp/><sp/>=<sp/>0x1F0,<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_POWERPCFP<sp/>=<sp/>0x1F1,<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_R4000<sp/><sp/><sp/><sp/><sp/>=<sp/>0x166,<sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_RISCV32<sp/><sp/><sp/>=<sp/>0x5032,<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_RISCV64<sp/><sp/><sp/>=<sp/>0x5064,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_RISCV128<sp/><sp/>=<sp/>0x5128,<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_SH3<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1A2,<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_SH3DSP<sp/><sp/><sp/><sp/>=<sp/>0x1A3,<sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_SH4<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1A6,<sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_SH5<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1A8,<sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_THUMB<sp/><sp/><sp/><sp/><sp/>=<sp/>0x1C2,<sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>LIEF_PE_MACHINE_WCEMIPSV2<sp/>=<sp/>0x169<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_HEADER_CHARACTERISTICS<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_INVALID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0000,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_RELOCS_STRIPPED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0001,<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_EXECUTABLE_IMAGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0002,<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_LINE_NUMS_STRIPPED<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0004,<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_LOCAL_SYMS_STRIPPED<sp/><sp/><sp/><sp/><sp/>=<sp/>0x0008,<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_AGGRESSIVE_WS_TRIM<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0010,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_LARGE_ADDRESS_AWARE<sp/><sp/><sp/><sp/><sp/>=<sp/>0x0020,<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_BYTES_REVERSED_LO<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0080,<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_32BIT_MACHINE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0100,<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_DEBUG_STRIPPED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0200,<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_REMOVABLE_RUN_FROM_SWAP<sp/>=<sp/>0x0400,<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_NET_RUN_FROM_SWAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0800,<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_SYSTEM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1000,<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_DLL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2000,<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_UP_SYSTEM_ONLY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x4000,<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>LIEF_PE_HEADER_CHARACTERISTICS_BYTES_REVERSED_HI<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x8000<sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="struct_pe___header__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___header__t" kindref="compound">Pe_Header_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signature[4];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_MACHINE_TYPES<sp/>machine;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numberof_sections;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_date_stamp;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointerto_symbol_table;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numberof_symbols;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_optional_header;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>characteristics;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___header__t" kindref="compound">Pe_Header_t</ref><sp/><ref refid="struct_pe___header__t" kindref="compound">Pe_Header_t</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lief_pe_header_machine_str(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_MACHINE_TYPES<sp/>e);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lief_pe_header_characteristics_str(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_HEADER_CHARACTERISTICS<sp/>e);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h"/>
+  </compounddef>
+</doxygen>

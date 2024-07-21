@@ -16,11 +16,11 @@ var searchData=
   ['enablebitmaskoperators_13',['EnableBitMaskOperators',['../structEnableBitMaskOperators.html',1,'']]],
   ['enablebitmaskoperators_3c_20lief_3a_3aelf_3a_3asection_3a_3aflags_20_3e_14',['EnableBitMaskOperators&lt; LIEF::ELF::Section::FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1ELF_1_1Section_1_1FLAGS_01_4.html',1,'']]],
   ['enablebitmaskoperators_3c_20lief_3a_3aelf_3a_3asegment_3a_3aflags_20_3e_15',['EnableBitMaskOperators&lt; LIEF::ELF::Segment::FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1ELF_1_1Segment_1_1FLAGS_01_4.html',1,'']]],
-  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3abind_5fopcodes_20_3e_16',['EnableBitMaskOperators&lt; LIEF::MachO::BIND_OPCODES &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1BIND__OPCODES_01_4.html',1,'']]],
-  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3aexport_5fsymbol_5fflags_20_3e_17',['EnableBitMaskOperators&lt; LIEF::MachO::EXPORT_SYMBOL_FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1EXPORT__SYMBOL__FLAGS_01_4.html',1,'']]],
-  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3aheader_5fflags_20_3e_18',['EnableBitMaskOperators&lt; LIEF::MachO::HEADER_FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1HEADER__FLAGS_01_4.html',1,'']]],
-  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3amacho_5fsection_5fflags_20_3e_19',['EnableBitMaskOperators&lt; LIEF::MachO::MACHO_SECTION_FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1MACHO__SECTION__FLAGS_01_4.html',1,'']]],
-  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3arebase_5fopcodes_20_3e_20',['EnableBitMaskOperators&lt; LIEF::MachO::REBASE_OPCODES &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1REBASE__OPCODES_01_4.html',1,'']]],
+  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3aexportinfo_3a_3aflags_20_3e_16',['EnableBitMaskOperators&lt; LIEF::MachO::ExportInfo::FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1ExportInfo_1_1FLAGS_01_4.html',1,'']]],
+  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3aheader_3a_3aflags_20_3e_17',['EnableBitMaskOperators&lt; LIEF::MachO::Header::FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1Header_1_1FLAGS_01_4.html',1,'']]],
+  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3asection_3a_3aflags_20_3e_18',['EnableBitMaskOperators&lt; LIEF::MachO::Section::FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1Section_1_1FLAGS_01_4.html',1,'']]],
+  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3asegmentcommand_3a_3aflags_20_3e_19',['EnableBitMaskOperators&lt; LIEF::MachO::SegmentCommand::FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1SegmentCommand_1_1FLAGS_01_4.html',1,'']]],
+  ['enablebitmaskoperators_3c_20lief_3a_3amacho_3a_3asegmentcommand_3a_3avm_5fprotections_20_3e_20',['EnableBitMaskOperators&lt; LIEF::MachO::SegmentCommand::VM_PROTECTIONS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1MachO_1_1SegmentCommand_1_1VM__PROTECTIONS_01_4.html',1,'']]],
   ['enablebitmaskoperators_3c_20lief_3a_3ape_3a_3aaccelerator_5fflags_20_3e_21',['EnableBitMaskOperators&lt; LIEF::PE::ACCELERATOR_FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1ACCELERATOR__FLAGS_01_4.html',1,'']]],
   ['enablebitmaskoperators_3c_20lief_3a_3ape_3a_3aheader_3a_3acharacteristics_20_3e_22',['EnableBitMaskOperators&lt; LIEF::PE::Header::CHARACTERISTICS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1Header_1_1CHARACTERISTICS_01_4.html',1,'']]],
   ['enablebitmaskoperators_3c_20lief_3a_3ape_3a_3aloadconfigurationv1_3a_3aimage_5fguard_20_3e_23',['EnableBitMaskOperators&lt; LIEF::PE::LoadConfigurationV1::IMAGE_GUARD &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1LoadConfigurationV1_1_1IMAGE__GUARD_01_4.html',1,'']]],
@@ -31,7 +31,8 @@ var searchData=
   ['enablebitmaskoperators_3c_20lief_3a_3ape_3a_3ax509_3a_3averification_5fflags_20_3e_28',['EnableBitMaskOperators&lt; LIEF::PE::x509::VERIFICATION_FLAGS &gt;',['../structEnableBitMaskOperators_3_01LIEF_1_1PE_1_1x509_1_1VERIFICATION__FLAGS_01_4.html',1,'']]],
   ['encryptioninfo_29',['EncryptionInfo',['../classLIEF_1_1MachO_1_1EncryptionInfo.html',1,'LIEF::MachO']]],
   ['entry_5ft_30',['entry_t',['../structLIEF_1_1ELF_1_1CoreFile_1_1entry__t.html',1,'LIEF::ELF::CoreFile']]],
-  ['export_31',['Export',['../classLIEF_1_1PE_1_1Export.html',1,'LIEF::PE']]],
-  ['exportentry_32',['ExportEntry',['../classLIEF_1_1PE_1_1ExportEntry.html',1,'LIEF::PE']]],
-  ['exportinfo_33',['ExportInfo',['../classLIEF_1_1MachO_1_1ExportInfo.html',1,'LIEF::MachO']]]
+  ['enum_31',['Enum',['../classLIEF_1_1pdb_1_1types_1_1Enum.html',1,'LIEF::pdb::types']]],
+  ['export_32',['Export',['../classLIEF_1_1PE_1_1Export.html',1,'LIEF::PE']]],
+  ['exportentry_33',['ExportEntry',['../classLIEF_1_1PE_1_1ExportEntry.html',1,'LIEF::PE']]],
+  ['exportinfo_34',['ExportInfo',['../classLIEF_1_1MachO_1_1ExportInfo.html',1,'LIEF::MachO']]]
 ];
