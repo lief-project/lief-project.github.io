@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="_p_e_2_section_8h" kind="file" language="C++">
     <compoundname>Section.h</compoundname>
     <includes local="no">inttypes.h</includes>
     <includes refid="_p_e_2enums_8h" local="yes">LIEF/PE/enums.h</includes>
-    <includedby refid="_p_e_2_binary_8h" local="yes">/lief-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/src/api/c/include/LIEF/PE/Binary.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/PE/Section.h</label>
+        <label>/src/api/c/include/LIEF/PE/Section.h</label>
         <link refid="_p_e_2_section_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -34,23 +34,23 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4">
-        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/src/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="3">
-        <label>/lief-src/api/c/include/LIEF/PE.h</label>
+        <label>/src/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/lief-src/api/c/include/LIEF/PE/Binary.h</label>
+        <label>/src/api/c/include/LIEF/PE/Binary.h</label>
         <link refid="_p_e_2_binary_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/PE/Section.h</label>
+        <label>/src/api/c/include/LIEF/PE/Section.h</label>
         <link refid="_p_e_2_section_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -347,12 +347,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="27" column="1" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="27" bodyend="63"/>
+        <location file="/src/api/c/include/LIEF/PE/Section.h" line="27" column="1" bodyfile="/src/api/c/include/LIEF/PE/Section.h" bodystart="27" bodyend="63"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_p_e_2_section_8h_1aa8c1db2923703a81f6586b0c94b1926a" prot="public" static="no">
-        <type>struct <ref refid="struct_pe___section__t" kindref="compound">Pe_Section_t</ref></type>
+        <type>struct Pe_Section_t</type>
         <definition>typedef struct Pe_Section_t Pe_Section_t</definition>
         <argsstring></argsstring>
         <name>Pe_Section_t</name>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/PE/Section.h" line="83" column="27" bodyfile="/lief-src/api/c/include/LIEF/PE/Section.h" bodystart="83" bodyend="-1"/>
+        <location file="/src/api/c/include/LIEF/PE/Section.h" line="83" column="27" bodyfile="/src/api/c/include/LIEF/PE/Section.h" bodystart="83" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -370,8 +370,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -460,6 +460,6 @@
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/lief-src/api/c/include/LIEF/PE/Section.h"/>
+    <location file="/src/api/c/include/LIEF/PE/Section.h"/>
   </compounddef>
 </doxygen>

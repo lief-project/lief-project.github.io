@@ -1,9 +1,12 @@
 .. _cpp-api-ref:
 
-C++
-===
+:fa:`regular fa-file-code` C++
+==============================
 
-The original Doxygen documentation is also available `here <../../doxygen/>`_
+.. note::
+
+   You can also find the Doxygen documentation `here <../../doxygen/>`_
+
 
 .. toctree::
   :maxdepth: 2
@@ -82,7 +85,7 @@ Logging
 Logging levels
 ~~~~~~~~~~~~~~
 
-.. doxygenenum:: LIEF::logging::LOGGING_LEVEL
+.. doxygenenum:: LIEF::logging::LEVEL
    :project: lief
 
 

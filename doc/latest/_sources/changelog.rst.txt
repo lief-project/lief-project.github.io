@@ -1,10 +1,49 @@
 Changelog
 =========
 
-0.15.0 - Not Released Yet
--------------------------
+0.15.0 - July 21th, 2024
+------------------------
+
+:Extended:
+
+  .. note::
+
+    See: https://extended.lief.re and :ref:`extended-intro`
+
+  * Add support for DWARF: :ref:`extended-dwarf`
+  * Add support for PDB: :ref:`extended-pdb`
+  * Add support for Objective-C: :ref:`extended-objc`
+
+
+:Repo:
+  * ``master`` branch has been renamed ``main``
+
+:Rust:
+  * First (beta) release of the bindings (c.f. :ref:`lief_rust_bindings`)
 
 :ELF:
+  * Add support to create custom notes (:issue:`1026`):
+
+    .. code-block:: python
+
+      elf: lief.ELF.Binary = ...
+
+      elf += lief.ELF.Note.create(
+          name="my-custom-note",
+          original_type=lief.ELF.Note.TYPE.UNKNOWN,
+          description=list(b"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed"),
+          section_name=".lief.note.custom"
+      )
+
+      config = lief.ELF.Builder.config_t()
+      config.notes = True
+      elf.write("/tmp/new-binary.elf", config)
+
+  * Add :meth:`lief.ELF.Binary.get_relocated_dynamic_array` which allows
+    to get a **relocated** view of the of init/fini entries. This function can
+    handy ELF init array/fini array functions are defined through relocations.
+    See: :issue:`1058`, :issue:`626`
+  * Add support for QNX Stack note (:issue:`1065`)
   * The ``static_symbols`` API functions has been renamed in ``symtab_symbols``.
 
     LIEF was naming symbols located in the ``.symtab`` sections as **static
@@ -39,8 +78,57 @@ Changelog
   * Add support for relative relocation format (``DT_RELR``)
 
 :PE:
+  * Authenticode:
+    Add partial support for the following PKCS #7 attributes:
+
+      - ``1.3.6.1.4.1.311.3.3.1 - Ms-CounterSign`` (:class:`lief.PE.MsCounterSign`)
+      - ``1.3.6.1.4.1.311.10.3.28 - Ms-ManifestBinaryID`` (:class:`lief.PE.MsManifestBinaryID`)
+      - ``1.3.6.1.4.1.311.2.6.1 - SPC_RELAXED_PE_MARKER_CHECK_OBJID`` (:class:`lief.PE.SpcRelaxedPeMarkerCheck`)
+      - ``1.2.840.113549.1.9.16.2.47 - SIGNING_CERTIFICATE_V2`` (:class:`lief.PE.SigningCertificateV2`)
+
+    - ``1.2.840.113549.1.9.16.1.4 - PKCS#9 TSTInfo`` (:class:`lief.PE.PKCS9TSTInfo`)
 
   * Add :attr:`lief.PE.CodeViewPDB.guid` attribute (:issue:`480`)
+  * Move ``lief.PE.OptionalHeader.computed_checksum`` to :meth:`lief.PE.Binary.compute_checksum`
+
+    In previous versions of LIEF, :attr:`lief.PE.OptionalHeader.checksum` was
+    re-computed (on purpose) in the parsing phase. On large
+    binaries, this re-computation can have a **strong impact** on the performances.
+    Thus, this computation has been deferred to a dedicated method :meth:`lief.PE.Binary.compute_checksum`
+
+    .. code-block:: python
+
+      pe = lief.PE.parse("...")
+      # Before:
+      computed = pe.optional_header.computed_checksum
+      # Now:
+      computed = pe.compute_checksum()
+
+:MachO:
+
+  * Add support to modify Mach-O rpath (see: :issue:`1074`)
+  * Add helper :attr:`lief.MachO.Binary.support_arm64_ptr_auth` to check if a
+    Mach-O binary is supporting ARM64 pointer authentication (arm64e)
+  * Fix **major performance issue when processing Mach-O binaries on Windows & macOS**
+  * Add generic :class:`lief.MachO.UnknownCommand` to support Apple private Load
+    commands not officially supported by LIEF.
+  * Re-scope ``LOAD_COMMAND_TYPES`` into :class:`lief.MachO.LoadCommand.TYPE`
+  * Re-scope ``FILE_TYPES`` into :class:`lief.MachO.Header.FILE_TYPE`
+  * Re-scope ``HEADER_FLAGS`` into :class:`lief.MachO.Header.FLAGS`
+  * Re-scope ``MACHO_SEGMENTS_FLAGS`` into :class:`lief.MachO.SegmentCommand.FLAGS`
+  * Re-scope ``MACHO_SECTION_TYPES`` into :class:`lief.MachO.Section.TYPE`
+  * Re-scope ``MACHO_SECTION_FLAGS`` into :class:`lief.MachO.Section.FLAGS`
+  * Re-scope ``REBASE_TYPES`` into :class:`lief.MachO.DyldInfo.REBASE_TYPE`
+  * Re-scope ``REBASE_OPCODES`` into :class:`lief.MachO.DyldInfo.REBASE_OPCODES`
+  * Re-scope ``BIND_OPCODES`` into :class:`lief.MachO.DyldInfo.BIND_OPCODES`
+  * Re-scope ``BINDING_CLASS`` into :class:`lief.MachO.DyldBindingInfo.CLASS`
+  * Re-scope ``BIND_TYPES`` into :class:`lief.MachO.DyldBindingInfo.TYPE`
+  * Re-scope ``EXPORT_SYMBOL_FLAGS`` into :class:`lief.MachO.ExportInfo.FLAGS`
+  * Re-scope ``EXPORT_SYMBOL_KINDS`` into :class:`lief.MachO.ExportInfo.KIND`
+  * Re-scope ``RELOCATION_ORIGINS`` into :class:`lief.MachO.Relocation.ORIGIN`
+  * Re-scope ``SYMBOL_ORIGINS`` into :class:`lief.MachO.Symbol.ORIGIN`
+  * Re-scope ``VM_PROTECTIONS`` into :class:`lief.MachO.SegmentCommand.VM_PROTECTIONS`
+  * Re-scope ``CPU_TYPES`` into :class:`lief.MachO.Header.CPU_TYPE`
 
 :CMake:
 
@@ -202,7 +290,7 @@ Changelog
 
 :Abstraction:
 
-    * `LIEF::EXE_FORMATS` is now scoped in `LIEF::Binary::FORMATS`
+    * ``LIEF::EXE_FORMATS`` is now scoped in ``LIEF::Binary::FORMATS``
     * All the `Binary` classes now implement `classof`:
 
       .. code-block:: cpp
@@ -730,7 +818,7 @@ This release contains several security fixes:
 
     lief.logging.disable()
     lief.logging.enable()
-    lief.logging.set_level(lief.logging.LOGGING_LEVEL.INFO)
+    lief.logging.set_level(lief.logging.LEVEL.INFO)
 
   See: :func:`lief.logging.set_level`
 
@@ -811,7 +899,7 @@ This release contains several security fixes:
 
    * :github_user:`lkollar` added support for Python 3.8 in CI (Linux & OSX only)
    * Update Pybind11 dependency to ``v2.4.3``
-   * Enhance Python install (see: :ref:`v10-label`)
+   * Enhance Python install
    * Thanks to :github_user:`lkollar`, Linux CI now produces **manylinux1-compliant wheels**
 
 Many thanks to the contributors: :github_user:`recvfrom`, :github_user:`pbrunet`,
@@ -1192,7 +1280,7 @@ In the C++ API ``get_XXX()`` getters have been renamed into ``XXX()`` (e.g. ``ge
     from lief import Logger
     Logger.disable()
     Logger.enable()
-    Logger.set_level(lief.LOGGING_LEVEL.INFO)
+    Logger.set_level(lief.LEVEL.INFO)
 
   See: :class:`lief.Logger`
 

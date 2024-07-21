@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['vector_5fiostream_0',['vector_iostream',['../classLIEF_1_1vector__iostream.html',1,'LIEF']]],
-  ['vectorstream_1',['VectorStream',['../classLIEF_1_1VectorStream.html',1,'LIEF']]],
-  ['versionmin_2',['VersionMin',['../classLIEF_1_1MachO_1_1VersionMin.html',1,'LIEF::MachO']]],
-  ['visitor_3',['Visitor',['../classLIEF_1_1Visitor.html',1,'LIEF']]]
+  ['union_0',['Union',['../classLIEF_1_1dwarf_1_1types_1_1Union.html',1,'LIEF::dwarf::types::Union'],['../classLIEF_1_1pdb_1_1types_1_1Union.html',1,'LIEF::pdb::types::Union']]],
+  ['unknowncommand_1',['UnknownCommand',['../classLIEF_1_1MachO_1_1UnknownCommand.html',1,'LIEF::MachO']]],
+  ['uuidcommand_2',['UUIDCommand',['../classLIEF_1_1MachO_1_1UUIDCommand.html',1,'LIEF::MachO']]]
 ];

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="_p_e_2enums_8h" kind="file" language="C++">
     <compoundname>enums.h</compoundname>
     <includes local="yes">LIEF/PE/undef.h</includes>
     <includes local="yes">LIEF/PE/enums.inc</includes>
     <includedby refid="_p_e_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</includedby>
     <includedby refid="_data_directory_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/DataDirectory.h</includedby>
-    <includedby refid="_p_e_2_enum_to_string_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/EnumToString.h</includedby>
+    <includedby refid="_enum_to_string_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/EnumToString.h</includedby>
     <includedby refid="_import_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h</includedby>
     <includedby refid="_import_entry_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/ImportEntry.h</includedby>
     <includedby refid="_optional_header_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h</includedby>
@@ -52,7 +52,7 @@
       </node>
       <node id="6">
         <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/EnumToString.h</label>
-        <link refid="_p_e_2_enum_to_string_8h_source"/>
+        <link refid="_enum_to_string_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>

@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="en-US">
   <compound refid="struct_elf___binary__t" kind="struct"><name>Elf_Binary_t</name>
     <member refid="struct_elf___binary__t_1ae695b73fcf79b131d78cb6a11539ca92" kind="variable"><name>handler</name></member>
-    <member refid="struct_elf___binary__t_1a0e53d4950cd1b4b1c52e6981d0ff2650" kind="variable"><name>name</name></member>
     <member refid="struct_elf___binary__t_1a9426da861b49ec60f95949a7ed6f361c" kind="variable"><name>interpreter</name></member>
     <member refid="struct_elf___binary__t_1a830db58f306a4a8dd52e0edae4a4ceea" kind="variable"><name>type</name></member>
     <member refid="struct_elf___binary__t_1ae05ec95634b954636f99918fbf78cddb" kind="variable"><name>header</name></member>
@@ -100,7 +99,6 @@
   </compound>
   <compound refid="struct_macho___binary__t" kind="struct"><name>Macho_Binary_t</name>
     <member refid="struct_macho___binary__t_1a404b8e039cd82f0527c3062be79e9b55" kind="variable"><name>handler</name></member>
-    <member refid="struct_macho___binary__t_1a3067b945ef2c78b21dc608eaf8e5a3ad" kind="variable"><name>name</name></member>
     <member refid="struct_macho___binary__t_1af074cd9b66a1d445f647d5078a780da4" kind="variable"><name>imagebase</name></member>
     <member refid="struct_macho___binary__t_1a8a6836aa355c36b84700c76256a03316" kind="variable"><name>header</name></member>
     <member refid="struct_macho___binary__t_1ab03a20311d6aa0dbefb8fa83fca22071" kind="variable"><name>commands</name></member>
@@ -163,7 +161,6 @@
   </compound>
   <compound refid="struct_pe___binary__t" kind="struct"><name>Pe_Binary_t</name>
     <member refid="struct_pe___binary__t_1a59673592754daea3b209d6d91b27492e" kind="variable"><name>handler</name></member>
-    <member refid="struct_pe___binary__t_1abbf838eabce4a5ca1ed36f7a85c94ee8" kind="variable"><name>name</name></member>
     <member refid="struct_pe___binary__t_1a42ee70306bc08085af953adbcebf2e3d" kind="variable"><name>dos_header</name></member>
     <member refid="struct_pe___binary__t_1ab3cf3a65edaf13499daab5b5178915ac" kind="variable"><name>header</name></member>
     <member refid="struct_pe___binary__t_1af6aa682ac0356f2debe3b8b86d958309" kind="variable"><name>optional_header</name></member>
@@ -1143,20 +1140,6 @@
   </compound>
   <compound refid="_mach_o_8h" kind="file"><name>MachO.h</name>
   </compound>
-  <compound refid="_mach_o_2_enum_to_string_8h" kind="file"><name>EnumToString.h</name>
-    <member refid="_mach_o_2_enum_to_string_8h_1ac0d817d919382bc2afdfc67276929f24" kind="function"><name>LOAD_COMMAND_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1a3ea76ad163a24c6f7c1eb1e502fd1bf1" kind="function"><name>MACHO_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1ae2c41e215b4677d09f7b016289652eb4" kind="function"><name>FILE_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1abd232d24b91ecda482f6ede0d9271060" kind="function"><name>CPU_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1aaa2e2560a8d1cf77792ab3cdecbbbe8d" kind="function"><name>HEADER_FLAGS_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1ae6a0e02dee26e30bee382aa5985102c9" kind="function"><name>MACHO_SECTION_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1aaf2f74cc00ee8b240a1588a61007124f" kind="function"><name>MACHO_SYMBOL_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1a1381aca59b93265339dc95eb0f6aa90d" kind="function"><name>N_LIST_TYPES_to_string</name></member>
-    <member refid="_mach_o_2_enum_to_string_8h_1a516add9178bbc38e94ba9516989b5b7f" kind="function"><name>SYMBOL_DESCRIPTIONS_to_string</name></member>
-  </compound>
-  <compound refid="_p_e_2_enum_to_string_8h" kind="file"><name>EnumToString.h</name>
-    <member refid="_p_e_2_enum_to_string_8h_1a8b1ac786f32e2f518a25866e4ed6814b" kind="function"><name>PE_TYPES_to_string</name></member>
-  </compound>
   <compound refid="_load_command_8h" kind="file"><name>LoadCommand.h</name>
     <member refid="_load_command_8h_1a4abe41ecbce3c520959124f88baa63f8" kind="typedef"><name>Macho_Command_t</name></member>
   </compound>
@@ -1185,6 +1168,9 @@
   </compound>
   <compound refid="_dos_header_8h" kind="file"><name>DosHeader.h</name>
     <member refid="_dos_header_8h_1a96d6b2bd3262be00a3ee5b99b702f7ce" kind="typedef"><name>Pe_DosHeader_t</name></member>
+  </compound>
+  <compound refid="_enum_to_string_8h" kind="file"><name>EnumToString.h</name>
+    <member refid="_enum_to_string_8h_1a8b1ac786f32e2f518a25866e4ed6814b" kind="function"><name>PE_TYPES_to_string</name></member>
   </compound>
   <compound refid="_import_8h" kind="file"><name>Import.h</name>
     <member refid="_import_8h_1a72f3a35d019d6693e69f3273db35f371" kind="typedef"><name>Pe_Import_t</name></member>

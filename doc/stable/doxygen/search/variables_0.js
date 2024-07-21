@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['args_0',['args',['../structLIEF_1_1ELF_1_1CorePrPsInfo_1_1info__t.html#aceb795d5171551fcc2722fb3eeac085e',1,'LIEF::ELF::CorePrPsInfo::info_t']]]
+  ['aarch64_5fdisc_0',['AARCH64_DISC',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a1f036c2f52d55b32882d18eb5870cf91',1,'LIEF::ELF::DynamicEntry']]],
+  ['abi64_1',['ABI64',['../classLIEF_1_1MachO_1_1Header.html#aed0fc4a3dafc77f70b3b341e24ebb549',1,'LIEF::MachO::Header']]],
+  ['abi_5foffset_2',['abi_offset',['../classLIEF_1_1ELF_1_1NoteAbi.html#ab8a73d363cb84ccd3b95016d72ca35d8',1,'LIEF::ELF::NoteAbi']]],
+  ['abi_5fsize_3',['abi_size',['../classLIEF_1_1ELF_1_1NoteAbi.html#afccae28a15f36f752565f97141900520',1,'LIEF::ELF::NoteAbi']]],
+  ['addressof_5fentrypoint_4',['addressof_entrypoint',['../structPe__OptionalHeader__t.html#af12b3828461ebeffd3a2d81b9c0a7a59',1,'Pe_OptionalHeader_t']]],
+  ['addressof_5fnew_5fexeheader_5',['addressof_new_exeheader',['../structPe__DosHeader__t.html#a97f689f1c47c248ce175b6629c306a41',1,'Pe_DosHeader_t']]],
+  ['addressof_5frelocation_5ftable_6',['addressof_relocation_table',['../structPe__DosHeader__t.html#afdf93668bd4eee1da16a5f1d9e2e06d0',1,'Pe_DosHeader_t']]],
+  ['alignment_7',['alignment',['../structElf__Section__t.html#a19de268fa157188df2c6cdd4cfb63e9b',1,'Elf_Section_t::alignment'],['../structElf__Segment__t.html#a68f8262cd67b6b8486ce94eb9fa89c36',1,'Elf_Segment_t::alignment'],['../structMacho__Section__t.html#a961a117a0da15ec2df77c8044de1867d',1,'Macho_Section_t::alignment']]],
+  ['android_5frela_8',['android_rela',['../structLIEF_1_1ELF_1_1Builder_1_1config__t.html#a52f70e6c0d5ae9a17ab6f1a615042e4a',1,'LIEF::ELF::Builder::config_t']]],
+  ['args_9',['args',['../structLIEF_1_1ELF_1_1CorePrPsInfo_1_1info__t.html#aceb795d5171551fcc2722fb3eeac085e',1,'LIEF::ELF::CorePrPsInfo::info_t']]],
+  ['arm64_5fauth_5fbind24_5f_10',['arm64_auth_bind24_',['../classLIEF_1_1MachO_1_1ChainedBindingInfo.html#a8f7c8be50fd76bc9568bc142a2dd70f1',1,'LIEF::MachO::ChainedBindingInfo']]],
+  ['arm64_5fauth_5fbind_5f_11',['arm64_auth_bind_',['../classLIEF_1_1MachO_1_1ChainedBindingInfo.html#ab7b49d3a824c5e777d193906b7720ff9',1,'LIEF::MachO::ChainedBindingInfo']]],
+  ['arm64_5fauth_5frebase_5f_12',['arm64_auth_rebase_',['../classLIEF_1_1MachO_1_1RelocationFixup.html#aa79a5167625f1aeae1375a120767b12a',1,'LIEF::MachO::RelocationFixup']]],
+  ['arm64_5fbind24_5f_13',['arm64_bind24_',['../classLIEF_1_1MachO_1_1ChainedBindingInfo.html#af176c57a2f1d19770ee8bd38f3264f90',1,'LIEF::MachO::ChainedBindingInfo']]],
+  ['arm64_5fbind_5f_14',['arm64_bind_',['../classLIEF_1_1MachO_1_1ChainedBindingInfo.html#ad9b761e759a925f42a035dd0b5dee4dd',1,'LIEF::MachO::ChainedBindingInfo']]],
+  ['arm64_5frebase_5f_15',['arm64_rebase_',['../classLIEF_1_1MachO_1_1RelocationFixup.html#a4889feea82f92432137fbc3939d0a54c',1,'LIEF::MachO::RelocationFixup']]],
+  ['array_16',['array',['../structElf__DynamicEntry__Array__t.html#a94f481e4da3698e291ed4c490bd59d1e',1,'Elf_DynamicEntry_Array_t']]],
+  ['array_5f_17',['array_',['../classLIEF_1_1DEX_1_1Type.html#a33e80849e898ad55680021d6bdf93ae5',1,'LIEF::DEX::Type']]]
 ];

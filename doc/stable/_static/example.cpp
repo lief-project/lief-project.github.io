@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2023 R. Thomas
- * Copyright 2017 - 2023 Quarkslab
+/* Copyright 2017 - 2024 R. Thomas
+ * Copyright 2017 - 2024 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ class MyClass {
   public:
     MyClass(void) : message_{"hello"} {};
     MyClass(const std::string& message) : message_{message} {};
-    void say_hello(void) { std::cout << this->message_<< std::endl; }
+    void say_hello(void) { std::cout << this->message_<< '\n'; }
 
   private:
     std::string message_;

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['terminal_5fserver_5faware_0',['TERMINAL_SERVER_AWARE',['../classLIEF_1_1PE_1_1OptionalHeader.html#a01b5cd1a580304bb99f12cbed0a3c973a0c46ff32ed3ee2bc620eb693b4c85c5e',1,'LIEF::PE::OptionalHeader']]],
-  ['tgt_5fplatform_1',['TGT_PLATFORM',['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211baeddae77d8c3a6f6512e13c13cc9bc745',1,'LIEF::ELF::CoreAuxv']]],
-  ['thumb_2',['THUMB',['../classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4eae466500055d2302ad1956d15e96a129a',1,'LIEF::PE::Header']]]
+  ['qnx_5fstack_0',['QNX_STACK',['../classLIEF_1_1ELF_1_1Note.html#a36b63d97ec0d6bdcbc853bede75f828da8a2d62d0eeff3066ca29c171f7a9c270',1,'LIEF::ELF::Note']]],
+  ['quechua_1',['QUECHUA',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65a7fde6f36981c171d92eae906cfbcd51c',1,'LIEF::PE']]]
 ];

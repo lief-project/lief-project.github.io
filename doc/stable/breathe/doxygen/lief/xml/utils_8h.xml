@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
   <compounddef id="utils_8h" kind="file" language="C++">
     <compoundname>utils.h</compoundname>
     <includes local="no">stddef.h</includes>
     <includes local="yes">LIEF/visibility.h</includes>
     <includes refid="types_8h" local="yes">LIEF/types.h</includes>
-    <includedby refid="_e_l_f_8h" local="yes">/lief-src/api/c/include/LIEF/ELF.h</includedby>
+    <includedby refid="_e_l_f_8h" local="yes">/src/api/c/include/LIEF/ELF.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/ELF/utils.h</label>
+        <label>/src/api/c/include/LIEF/ELF/utils.h</label>
         <link refid="utils_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -35,19 +35,19 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/lief-src/api/c/include/LIEF/ELF.h</label>
+        <label>/src/api/c/include/LIEF/ELF.h</label>
         <link refid="_e_l_f_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/lief-src/api/c/include/LIEF/ELF/utils.h</label>
+        <label>/src/api/c/include/LIEF/ELF/utils.h</label>
         <link refid="utils_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/lief-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/src/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
     </invincdepgraph>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/lief-src/api/c/include/LIEF/ELF/utils.h" line="30" column="7" declfile="/lief-src/api/c/include/LIEF/ELF/utils.h" declline="30" declcolumn="7"/>
+        <location file="/src/api/c/include/LIEF/ELF/utils.h" line="30" column="7" declfile="/src/api/c/include/LIEF/ELF/utils.h" declline="30" declcolumn="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -76,8 +76,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2023<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -91,8 +91,8 @@
 <codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
 <codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
 <codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>C_LIEF_ELF_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>C_LIEF_ELF_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIEF_C_ELF_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIEF_C_ELF_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
@@ -113,6 +113,6 @@
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/lief-src/api/c/include/LIEF/ELF/utils.h"/>
+    <location file="/src/api/c/include/LIEF/ELF/utils.h"/>
   </compounddef>
 </doxygen>
