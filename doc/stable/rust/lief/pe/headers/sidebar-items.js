@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["MachineType","Subsystem"],"struct":["Characteristics","DllCharacteristics","DosHeader","Header","OptionalHeader"]};

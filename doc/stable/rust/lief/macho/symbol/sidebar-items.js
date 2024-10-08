@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Category","Origin"],"struct":["Symbol"],"type":["Symbols"]};
