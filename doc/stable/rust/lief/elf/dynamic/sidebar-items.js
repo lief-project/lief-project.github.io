@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Entries","Tag"],"struct":["Array","Generic","Library","Rpath","RunPath","SharedObject"],"trait":["DynamicEntry"],"type":["DynamicEntries"]};

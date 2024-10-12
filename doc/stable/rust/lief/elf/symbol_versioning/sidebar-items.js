@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["SymbolVersion","SymbolVersionAux","SymbolVersionAuxRequirement","SymbolVersionDefinition","SymbolVersionRequirement"],"type":["AuxiliarySymbols","DefAuxiliarySymbols"]};

@@ -212,6 +212,17 @@ Version Min
 
 ----------
 
+Routine
+*******
+
+.. lief-inheritance:: lief._lief.MachO.Routine
+  :top-classes: lief._lief.MachO.LoadCommand
+  :parts: 2
+
+.. autoclass:: lief.MachO.Routine
+
+----------
+
 
 Relocation
 **********
@@ -377,6 +388,18 @@ Sub Framework
 
 ----------
 
+
+Sub Client
+**********
+
+.. lief-inheritance:: lief._lief.MachO.SubClient
+  :top-classes: lief._lief.MachO.LoadCommand
+  :parts: 2
+
+.. autoclass:: lief.MachO.SubClient
+
+----------
+
 Dyld Environment
 ****************
 
@@ -495,6 +518,14 @@ UnknownCommand
   :parts: 2
 
 .. autoclass:: lief.MachO.UnknownCommand
+
+----------
+
+Stub
+****
+
+
+.. autoclass:: lief.MachO.Stub
 
 ----------
 

@@ -4585,6 +4585,42 @@
 <para>Size of the DT_PREINIT_ARRAY array. </para>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8889e9d77192369a624a4946f9d0f744" prot="public">
+          <name>LIEF_DT_SYMTAB_SHNDX</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Address of SYMTAB_SHNDX section </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab278b543d1cb4db823565ad230933329" prot="public">
+          <name>LIEF_DT_RELRSZ</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Total size of RELR relative relocations </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8a5e38ca3691fbc122255cc7e2451f22" prot="public">
+          <name>LIEF_DT_RELR</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Address of RELR relative relocations </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad87650ef5065a4e3e4adf81990fefa79" prot="public">
+          <name>LIEF_DT_RELRENT</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Size of one RELR relative relocaction </para>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caaaea3f610d6818460ff2b5da902354ad" prot="public">
           <name>LIEF_DT_LOOS</name>
           <initializer>= 0x60000000</initializer>
@@ -5107,6 +5143,22 @@
 <para>Points to the base of a writable PLT. </para>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca14b6a0b4cb39ab5805f992a7874449c9" prot="public">
+          <name>LIEF_DT_MIPS_RLD_MAP_REL</name>
+          <initializer>= 0x70000035</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca3b0ef7a82f2d9b5a861762e27494a9c7" prot="public">
+          <name>LIEF_DT_MIPS_XHASH</name>
+          <initializer>= 0x70000036</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7817051a826bdfd6ba08e39501b99656" prot="public">
           <name>LIEF_DT_ANDROID_REL_OFFSET</name>
           <initializer>= 0x6000000D</initializer>
@@ -5161,8 +5213,8 @@
 <para>The size of packed relocation data in bytes (Android specific. </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8a5e38ca3691fbc122255cc7e2451f22" prot="public">
-          <name>LIEF_DT_RELR</name>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cade688ee17ebe272f0bc805b70b8b5f5c" prot="public">
+          <name>LIEF_DT_ANDROID_RELR</name>
           <initializer>= 0x6FFFE000</initializer>
           <briefdescription>
           </briefdescription>
@@ -5170,8 +5222,8 @@
 <para>The offset of new relr relocation data (Android specific. </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab278b543d1cb4db823565ad230933329" prot="public">
-          <name>LIEF_DT_RELRSZ</name>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7b12469bc0356536e4bae4e21cba671c" prot="public">
+          <name>LIEF_DT_ANDROID_RELRSZ</name>
           <initializer>= 0x6FFFE001</initializer>
           <briefdescription>
           </briefdescription>
@@ -5179,8 +5231,8 @@
 <para>The size of nre relr relocation data in bytes (Android specific. </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad87650ef5065a4e3e4adf81990fefa79" prot="public">
-          <name>LIEF_DT_RELRENT</name>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca08a04398d28caff149eda795abed89fe" prot="public">
+          <name>LIEF_DT_ANDROID_RELRENT</name>
           <initializer>= 0x6FFFE003</initializer>
           <briefdescription>
           </briefdescription>
@@ -5188,13 +5240,165 @@
 <para>The size of a new relr relocation entry (Android specific. </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad2b7831f5113f2ea71b934b41def1856" prot="public">
-          <name>LIEF_DT_RELRCOUNT</name>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca1ade8cf973fef8189d1a190295b8779f" prot="public">
+          <name>LIEF_DT_ANDROID_RELRCOUNT</name>
           <initializer>= 0x6FFFE005</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
 <para>Specifies the relative count of new relr relocation entries (Android specific. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca38384289ebf235e636fd09d839461329" prot="public">
+          <name>LIEF_DT_AARCH64_BTI_PLT</name>
+          <initializer>= 0x70000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca5e9d6d6b95ad605a88da0c27a19bbfff" prot="public">
+          <name>LIEF_DT_AARCH64_PAC_PLT</name>
+          <initializer>= 0x70000003</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2953a38c460311b73fdcac5a8cb530a8" prot="public">
+          <name>LIEF_DT_AARCH64_VARIANT_PCS</name>
+          <initializer>= 0x70000005</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca351d8aa20a48593647cbb47d7332b422" prot="public">
+          <name>LIEF_DT_AARCH64_MEMTAG_MODE</name>
+          <initializer>= 0x70000009</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cade7503a33a8b0017b654a43d7da2a35e" prot="public">
+          <name>LIEF_DT_AARCH64_MEMTAG_HEAP</name>
+          <initializer>= 0x7000000b</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca77d504b8bff3f71d46c6e8e1b08c6b84" prot="public">
+          <name>LIEF_DT_AARCH64_MEMTAG_STACK</name>
+          <initializer>= 0x7000000c</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca4256ed649054a398c5096cd402049204" prot="public">
+          <name>LIEF_DT_AARCH64_MEMTAG_GLOBALS</name>
+          <initializer>= 0x7000000d</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca9bd729a0a444b267ab62a2e5c0d9ce5e" prot="public">
+          <name>LIEF_DT_AARCH64_MEMTAG_GLOBALSSZ</name>
+          <initializer>= 0x7000000f</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2fcfdd42d1d2f074cf486c2deca69f08" prot="public">
+          <name>LIEF_DT_HEXAGON_SYMSZ</name>
+          <initializer>= 0x70000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca5e5721b02bccde0d1e7c294ace793078" prot="public">
+          <name>LIEF_DT_HEXAGON_VER</name>
+          <initializer>= 0x70000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca22ab95461f9e769e22f09d1ad4c5ae06" prot="public">
+          <name>LIEF_DT_HEXAGON_PLT</name>
+          <initializer>= 0x70000002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca53772bd7b845eb372b218efa1d4b1d56" prot="public">
+          <name>LIEF_DT_PPC_GOT</name>
+          <initializer>= 0x70000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca0a08641f62200921e99d1b381d3bc890" prot="public">
+          <name>LIEF_DT_PPC_OPT</name>
+          <initializer>= 0x70000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7433aa502a84ebcad9be4d5f0cdc5e3d" prot="public">
+          <name>LIEF_DT_PPC64_GLINK</name>
+          <initializer>= 0x70000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca70bba76ba42dc21b0c58a3d50cdb51a3" prot="public">
+          <name>LIEF_DT_PPC64_OPT</name>
+          <initializer>= 0x70000003</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caf66d062d060b0382233cb19edc6bdecf" prot="public">
+          <name>LIEF_DT_RISCV_VARIANT_CC</name>
+          <initializer>= 0x70000003</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca15c14e30641e21f09831a978c43cff40" prot="public">
+          <name>LIEF_DT_X86_64_PLT</name>
+          <initializer>= 0x70000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca3debdc16d5ac9cc7e2e4ef18622037f8" prot="public">
+          <name>LIEF_DT_X86_64_PLTSZ</name>
+          <initializer>= 0x70000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caa158625763152705948dacd3da09fcdd" prot="public">
+          <name>LIEF_DT_X86_64_PLTENT</name>
+          <initializer>= 0x70000003</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
@@ -5204,7 +5408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="661" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="661" bodyend="772"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="661" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="661" bodyend="804"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229" prot="public" static="no" strong="no">
         <type></type>
@@ -5261,7 +5465,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="775" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="775" bodyend="781"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="807" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="807" bodyend="813"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9" prot="public" static="no" strong="no">
         <type></type>
@@ -5510,7 +5714,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="783" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="783" bodyend="811"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="815" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="815" bodyend="843"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no" strong="no">
         <type></type>
@@ -5649,7 +5853,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="814" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="814" bodyend="836"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="846" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="846" bodyend="868"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7" prot="public" static="no" strong="no">
         <type></type>
@@ -5677,7 +5881,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="839" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="839" bodyend="842"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="871" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="871" bodyend="874"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5" prot="public" static="no" strong="no">
         <type></type>
@@ -5713,7 +5917,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="845" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="845" bodyend="849"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="877" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="877" bodyend="881"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04" prot="public" static="no" strong="no">
         <type></type>
@@ -5761,7 +5965,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="852" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="852" bodyend="857"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="884" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="884" bodyend="889"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no" strong="no">
         <type></type>
@@ -5789,7 +5993,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="860" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="860" bodyend="863"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="892" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="892" bodyend="895"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1a2e0e9b63108329d518739bc8da2babbb" prot="public" static="no" strong="no">
         <type></type>
@@ -6111,7 +6315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="865" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="865" bodyend="919"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="897" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="897" bodyend="951"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1aea65d69c2ed5d83d01ca3d9a4c917197" prot="public" static="no" strong="no">
         <type></type>
@@ -6159,7 +6363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="923" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="923" bodyend="928"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="955" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="955" bodyend="960"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1a3215726650fccfaf26c3b320d5edea83" prot="public" static="no" strong="no">
         <type></type>
@@ -6242,7 +6446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="930" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="930" bodyend="940"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="962" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="962" bodyend="972"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1af8b98d498a1b576a95d920b85954c908" prot="public" static="no" strong="no">
         <type></type>
@@ -6397,7 +6601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="942" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="942" bodyend="964"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="974" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="974" bodyend="996"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1abf2939695ee98e176b464df650b3d202" prot="public" static="no" strong="no">
         <type></type>
@@ -6464,7 +6668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="967" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="967" bodyend="975"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="999" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="999" bodyend="1007"/>
       </memberdef>
       <memberdef kind="enum" id="_e_l_f_2enums_8h_1af20d8e5faf6877e793adea9cec300e18" prot="public" static="no" strong="no">
         <type></type>
@@ -6507,7 +6711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="977" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="977" bodyend="982"/>
+        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="1009" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="1009" bodyend="1014"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -7184,282 +7388,313 @@
 <codeline lineno="693"><highlight class="normal"><sp/><sp/>LIEF_DT_ENCODING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="695"><highlight class="normal"><sp/><sp/>LIEF_DT_PREINIT_ARRAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="696"><highlight class="normal"><sp/><sp/>LIEF_DT_PREINIT_ARRAYSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>33,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="698"><highlight class="normal"><sp/><sp/>LIEF_DT_LOOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000000,<sp/></highlight></codeline>
-<codeline lineno="699"><highlight class="normal"><sp/><sp/>LIEF_DT_HIOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFF,<sp/></highlight></codeline>
-<codeline lineno="700"><highlight class="normal"><sp/><sp/>LIEF_DT_LOPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,<sp/></highlight></codeline>
-<codeline lineno="701"><highlight class="normal"><sp/><sp/>LIEF_DT_HIPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7FFFFFFF,<sp/></highlight></codeline>
-<codeline lineno="703"><highlight class="normal"><sp/><sp/>LIEF_DT_GNU_HASH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFEF5,<sp/></highlight></codeline>
-<codeline lineno="704"><highlight class="normal"><sp/><sp/>LIEF_DT_RELACOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFF9,<sp/></highlight></codeline>
-<codeline lineno="705"><highlight class="normal"><sp/><sp/>LIEF_DT_RELCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFA,<sp/></highlight></codeline>
-<codeline lineno="707"><highlight class="normal"><sp/><sp/>LIEF_DT_FLAGS_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFB,<sp/></highlight></codeline>
-<codeline lineno="708"><highlight class="normal"><sp/><sp/>LIEF_DT_VERSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFF0,<sp/></highlight></codeline>
-<codeline lineno="709"><highlight class="normal"><sp/><sp/>LIEF_DT_VERDEF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFC,<sp/></highlight></codeline>
-<codeline lineno="710"><highlight class="normal"><sp/><sp/>LIEF_DT_VERDEFNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFD,<sp/></highlight></codeline>
-<codeline lineno="711"><highlight class="normal"><sp/><sp/>LIEF_DT_VERNEED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFE,<sp/></highlight></codeline>
-<codeline lineno="712"><highlight class="normal"><sp/><sp/>LIEF_DT_VERNEEDNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFF,<sp/></highlight></codeline>
-<codeline lineno="714"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mips<sp/>specific<sp/>dynamic<sp/>table<sp/>entry<sp/>tags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="715"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,<sp/></highlight></codeline>
-<codeline lineno="716"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_TIME_STAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000002,<sp/></highlight></codeline>
-<codeline lineno="717"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_ICHECKSUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003,<sp/></highlight></codeline>
-<codeline lineno="718"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_IVERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000004,<sp/></highlight></codeline>
-<codeline lineno="719"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000005,<sp/></highlight></codeline>
-<codeline lineno="720"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_BASE_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000006,<sp/></highlight></codeline>
-<codeline lineno="721"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_MSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000007,<sp/></highlight></codeline>
-<codeline lineno="722"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_CONFLICT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000008,<sp/></highlight></codeline>
-<codeline lineno="723"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LIBLIST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000009,<sp/></highlight></codeline>
-<codeline lineno="724"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LOCAL_GOTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000a,<sp/></highlight></codeline>
-<codeline lineno="725"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_CONFLICTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000b,<sp/></highlight></codeline>
-<codeline lineno="726"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LIBLISTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000010,<sp/></highlight></codeline>
-<codeline lineno="727"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_SYMTABNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000011,<sp/></highlight></codeline>
-<codeline lineno="728"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_UNREFEXTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000012,<sp/></highlight></codeline>
-<codeline lineno="729"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_GOTSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000013,<sp/></highlight></codeline>
-<codeline lineno="730"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_HIPAGENO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000014,<sp/></highlight></codeline>
-<codeline lineno="731"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_MAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000016,<sp/></highlight></codeline>
-<codeline lineno="732"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000017,<sp/></highlight></codeline>
-<codeline lineno="733"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASS_NO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000018,<sp/></highlight></codeline>
-<codeline lineno="734"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_INSTANCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000019,<sp/></highlight></codeline>
-<codeline lineno="735"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_INSTANCE_NO<sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001A,<sp/></highlight></codeline>
-<codeline lineno="736"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_RELOC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001B,<sp/></highlight></codeline>
-<codeline lineno="737"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_RELOC_NO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001C,<sp/></highlight></codeline>
-<codeline lineno="738"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_SYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001D,<sp/></highlight></codeline>
-<codeline lineno="739"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_SYM_NO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001E,<sp/></highlight></codeline>
-<codeline lineno="740"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASSSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000020,<sp/></highlight></codeline>
-<codeline lineno="741"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASSSYM_NO<sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000021,<sp/></highlight></codeline>
-<codeline lineno="742"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_CXX_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000022,<sp/></highlight></codeline>
-<codeline lineno="743"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PIXIE_INIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000023,<sp/></highlight></codeline>
-<codeline lineno="744"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_SYMBOL_LIB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000024,<sp/></highlight></codeline>
-<codeline lineno="745"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LOCALPAGE_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000025,<sp/></highlight></codeline>
-<codeline lineno="746"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LOCAL_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000026,<sp/></highlight></codeline>
-<codeline lineno="747"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_HIDDEN_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000027,<sp/></highlight></codeline>
-<codeline lineno="748"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PROTECTED_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000028,<sp/></highlight></codeline>
-<codeline lineno="749"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_OPTIONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000029,<sp/></highlight></codeline>
-<codeline lineno="750"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_INTERFACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002A,<sp/></highlight></codeline>
-<codeline lineno="751"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DYNSTR_ALIGN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002B,<sp/></highlight></codeline>
-<codeline lineno="752"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_INTERFACE_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002C,<sp/></highlight></codeline>
-<codeline lineno="753"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_TEXT_RESOLVE_ADDR<sp/>=<sp/>0x7000002D,<sp/></highlight></codeline>
-<codeline lineno="754"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PERF_SUFFIX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002E,<sp/></highlight></codeline>
-<codeline lineno="755"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_COMPACT_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002F,<sp/></highlight></codeline>
-<codeline lineno="756"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_GP_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000030,<sp/></highlight></codeline>
-<codeline lineno="757"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_AUX_DYNAMIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000031,<sp/></highlight></codeline>
-<codeline lineno="758"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PLTGOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000032,<sp/></highlight></codeline>
-<codeline lineno="759"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RWPLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000034,<sp/></highlight></codeline>
-<codeline lineno="761"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Android<sp/>specific<sp/>dynamic<sp/>table<sp/>entry<sp/>tags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="762"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_REL_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6000000D,<sp/></highlight></codeline>
-<codeline lineno="763"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_REL_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6000000E,<sp/></highlight></codeline>
-<codeline lineno="764"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_REL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6000000F,<sp/></highlight></codeline>
-<codeline lineno="765"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000010,<sp/></highlight></codeline>
-<codeline lineno="766"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000011,<sp/></highlight></codeline>
-<codeline lineno="767"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELASZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000012,<sp/></highlight></codeline>
-<codeline lineno="768"><highlight class="normal"><sp/><sp/>LIEF_DT_RELR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE000,<sp/></highlight></codeline>
-<codeline lineno="769"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE001,<sp/></highlight></codeline>
-<codeline lineno="770"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE003,<sp/></highlight></codeline>
-<codeline lineno="771"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE005<sp/></highlight></codeline>
-<codeline lineno="772"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="773"><highlight class="normal"></highlight></codeline>
-<codeline lineno="775"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_DYNAMIC_FLAGS<sp/>{</highlight></codeline>
-<codeline lineno="776"><highlight class="normal"><sp/><sp/>LIEF_DF_ORIGIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000001,<sp/></highlight></codeline>
-<codeline lineno="777"><highlight class="normal"><sp/><sp/>LIEF_DF_SYMBOLIC<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000002,<sp/></highlight></codeline>
-<codeline lineno="778"><highlight class="normal"><sp/><sp/>LIEF_DF_TEXTREL<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000004,<sp/></highlight></codeline>
-<codeline lineno="779"><highlight class="normal"><sp/><sp/>LIEF_DF_BIND_NOW<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000008,<sp/></highlight></codeline>
-<codeline lineno="780"><highlight class="normal"><sp/><sp/>LIEF_DF_STATIC_TLS<sp/><sp/><sp/>=<sp/>0x00000010,<sp/></highlight></codeline>
-<codeline lineno="781"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="782"><highlight class="normal"></highlight></codeline>
-<codeline lineno="783"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_DYNAMIC_FLAGS_1<sp/>{</highlight></codeline>
-<codeline lineno="784"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000001,<sp/></highlight></codeline>
-<codeline lineno="785"><highlight class="normal"><sp/><sp/>LIEF_DF_1_GLOBAL<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000002,<sp/></highlight></codeline>
-<codeline lineno="786"><highlight class="normal"><sp/><sp/>LIEF_DF_1_GROUP<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000004,<sp/></highlight></codeline>
-<codeline lineno="787"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODELETE<sp/><sp/><sp/>=<sp/>0x00000008,<sp/></highlight></codeline>
-<codeline lineno="788"><highlight class="normal"><sp/><sp/>LIEF_DF_1_LOADFLTR<sp/><sp/><sp/>=<sp/>0x00000010,<sp/></highlight></codeline>
-<codeline lineno="789"><highlight class="normal"><sp/><sp/>LIEF_DF_1_INITFIRST<sp/><sp/>=<sp/>0x00000020,<sp/></highlight></codeline>
-<codeline lineno="790"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOOPEN<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000040,<sp/></highlight></codeline>
-<codeline lineno="791"><highlight class="normal"><sp/><sp/>LIEF_DF_1_ORIGIN<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000080,<sp/></highlight></codeline>
-<codeline lineno="792"><highlight class="normal"><sp/><sp/>LIEF_DF_1_DIRECT<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000100,<sp/></highlight></codeline>
-<codeline lineno="793"><highlight class="normal"><sp/><sp/>LIEF_DF_1_TRANS<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000200,</highlight></codeline>
-<codeline lineno="794"><highlight class="normal"><sp/><sp/>LIEF_DF_1_INTERPOSE<sp/><sp/>=<sp/>0x00000400,<sp/></highlight></codeline>
-<codeline lineno="795"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODEFLIB<sp/><sp/><sp/>=<sp/>0x00000800,<sp/></highlight></codeline>
-<codeline lineno="796"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODUMP<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00001000,<sp/></highlight></codeline>
-<codeline lineno="797"><highlight class="normal"><sp/><sp/>LIEF_DF_1_CONFALT<sp/><sp/><sp/><sp/>=<sp/>0x00002000,<sp/></highlight></codeline>
-<codeline lineno="798"><highlight class="normal"><sp/><sp/>LIEF_DF_1_ENDFILTEE<sp/><sp/>=<sp/>0x00004000,<sp/></highlight></codeline>
-<codeline lineno="799"><highlight class="normal"><sp/><sp/>LIEF_DF_1_DISPRELDNE<sp/>=<sp/>0x00008000,<sp/></highlight></codeline>
-<codeline lineno="800"><highlight class="normal"><sp/><sp/>LIEF_DF_1_DISPRELPND<sp/>=<sp/>0x00010000,<sp/></highlight></codeline>
-<codeline lineno="801"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODIRECT<sp/><sp/><sp/>=<sp/>0x00020000,<sp/></highlight></codeline>
-<codeline lineno="802"><highlight class="normal"><sp/><sp/>LIEF_DF_1_IGNMULDEF<sp/><sp/>=<sp/>0x00040000,</highlight></codeline>
-<codeline lineno="803"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOKSYMS<sp/><sp/><sp/><sp/>=<sp/>0x00080000,</highlight></codeline>
-<codeline lineno="804"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOHDR<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00100000,</highlight></codeline>
-<codeline lineno="805"><highlight class="normal"><sp/><sp/>LIEF_DF_1_EDITED<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00200000,<sp/></highlight></codeline>
-<codeline lineno="806"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NORELOC<sp/><sp/><sp/><sp/>=<sp/>0x00400000,</highlight></codeline>
-<codeline lineno="807"><highlight class="normal"><sp/><sp/>LIEF_DF_1_SYMINTPOSE<sp/>=<sp/>0x00800000,<sp/></highlight></codeline>
-<codeline lineno="808"><highlight class="normal"><sp/><sp/>LIEF_DF_1_GLOBAUDIT<sp/><sp/>=<sp/>0x01000000,<sp/></highlight></codeline>
-<codeline lineno="809"><highlight class="normal"><sp/><sp/>LIEF_DF_1_SINGLETON<sp/><sp/>=<sp/>0x02000000,<sp/><sp/></highlight></codeline>
-<codeline lineno="810"><highlight class="normal"><sp/><sp/>LIEF_DF_1_PIE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x08000000<sp/><sp/></highlight></codeline>
-<codeline lineno="811"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="812"><highlight class="normal"></highlight></codeline>
-<codeline lineno="813"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DT_MIPS_FLAGS<sp/>values.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="814"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="815"><highlight class="normal"><sp/><sp/>LIEF_RHF_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000000,<sp/></highlight><highlight class="comment">/*<sp/>No<sp/>flags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="816"><highlight class="normal"><sp/><sp/>LIEF_RHF_QUICKSTART<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000001,<sp/></highlight><highlight class="comment">/*<sp/>Uses<sp/>shortcut<sp/>pointers.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="817"><highlight class="normal"><sp/><sp/>LIEF_RHF_NOTPOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000002,<sp/></highlight><highlight class="comment">/*<sp/>Hash<sp/>size<sp/>is<sp/>not<sp/>a<sp/>power<sp/>of<sp/>two.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="818"><highlight class="normal"><sp/><sp/>LIEF_RHS_NO_LIBRARY_REPLACEMENT<sp/><sp/>=<sp/>0x00000004,<sp/></highlight><highlight class="comment">/*<sp/>Ignore<sp/>LD_LIBRARY_PATH.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="819"><highlight class="normal"><sp/><sp/>LIEF_RHF_NO_MOVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000008,<sp/></highlight><highlight class="comment">/*<sp/>DSO<sp/>address<sp/>may<sp/>not<sp/>be<sp/>relocated.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="820"><highlight class="normal"><sp/><sp/>LIEF_RHF_SGI_ONLY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000010,<sp/></highlight><highlight class="comment">/*<sp/>SGI<sp/>specific<sp/>features.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="821"><highlight class="normal"><sp/><sp/>LIEF_RHF_GUARANTEE_INIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000020,<sp/></highlight><highlight class="comment">/*<sp/>Guarantee<sp/>that<sp/>.init<sp/>will<sp/>finish<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="822"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>executing<sp/>before<sp/>any<sp/>non-init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="823"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>code<sp/>in<sp/>DSO<sp/>is<sp/>called.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="824"><highlight class="normal"><sp/><sp/>LIEF_RHF_DELTA_C_PLUS_PLUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000040,<sp/></highlight><highlight class="comment">/*<sp/>Contains<sp/>Delta<sp/>C++<sp/>code.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="825"><highlight class="normal"><sp/><sp/>LIEF_RHF_GUARANTEE_START_INIT<sp/><sp/><sp/><sp/>=<sp/>0x00000080,<sp/></highlight><highlight class="comment">/*<sp/>Guarantee<sp/>that<sp/>.init<sp/>will<sp/>start<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="826"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>executing<sp/>before<sp/>any<sp/>non-init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="827"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>code<sp/>in<sp/>DSO<sp/>is<sp/>called.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="828"><highlight class="normal"><sp/><sp/>LIEF_RHF_PIXIE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000100,<sp/></highlight><highlight class="comment">/*<sp/>Generated<sp/>by<sp/>pixie.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="829"><highlight class="normal"><sp/><sp/>LIEF_RHF_DEFAULT_DELAY_LOAD<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000200,<sp/></highlight><highlight class="comment">/*<sp/>Delay-load<sp/>DSO<sp/>by<sp/>default.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="830"><highlight class="normal"><sp/><sp/>LIEF_RHF_REQUICKSTART<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000400,<sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>may<sp/>be<sp/>requickstarted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="831"><highlight class="normal"><sp/><sp/>LIEF_RHF_REQUICKSTARTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000800,<sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>has<sp/>been<sp/>requickstarted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="832"><highlight class="normal"><sp/><sp/>LIEF_RHF_CORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00001000,<sp/></highlight><highlight class="comment">/*<sp/>Generated<sp/>by<sp/>cord.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="833"><highlight class="normal"><sp/><sp/>LIEF_RHF_NO_UNRES_UNDEF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00002000,<sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>contains<sp/>no<sp/>unresolved<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="834"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>undef<sp/>symbols.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="835"><highlight class="normal"><sp/><sp/>LIEF_RHF_RLD_ORDER_SAFE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00004000<sp/><sp/></highlight><highlight class="comment">/*<sp/>Symbol<sp/>table<sp/>is<sp/>in<sp/>a<sp/>safe<sp/>order.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="836"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="837"><highlight class="normal"></highlight></codeline>
-<codeline lineno="839"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="840"><highlight class="normal"><sp/><sp/>LIEF_VER_DEF_NONE<sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="841"><highlight class="normal"><sp/><sp/>LIEF_VER_DEF_CURRENT<sp/>=<sp/>1</highlight></codeline>
-<codeline lineno="842"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="843"><highlight class="normal"></highlight></codeline>
-<codeline lineno="845"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="846"><highlight class="normal"><sp/><sp/>LIEF_VER_FLG_BASE<sp/>=<sp/>0x1,</highlight></codeline>
-<codeline lineno="847"><highlight class="normal"><sp/><sp/>LIEF_VER_FLG_WEAK<sp/>=<sp/>0x2,</highlight></codeline>
-<codeline lineno="848"><highlight class="normal"><sp/><sp/>LIEF_VER_FLG_INFO<sp/>=<sp/>0x4</highlight></codeline>
-<codeline lineno="849"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="850"><highlight class="normal"></highlight></codeline>
-<codeline lineno="852"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="853"><highlight class="normal"><sp/><sp/>LIEF_VER_NDX_LOCAL<sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="854"><highlight class="normal"><sp/><sp/>LIEF_VER_NDX_GLOBAL<sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="855"><highlight class="normal"><sp/><sp/>LIEF_VERSYM_VERSION<sp/>=<sp/>0x7fff,<sp/></highlight></codeline>
-<codeline lineno="856"><highlight class="normal"><sp/><sp/>LIEF_VERSYM_HIDDEN<sp/><sp/>=<sp/>0x8000<sp/><sp/></highlight></codeline>
-<codeline lineno="857"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="858"><highlight class="normal"></highlight></codeline>
-<codeline lineno="860"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="861"><highlight class="normal"><sp/><sp/>LIEF_VER_NEED_NONE<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="862"><highlight class="normal"><sp/><sp/>LIEF_VER_NEED_CURRENT<sp/>=<sp/>1</highlight></codeline>
-<codeline lineno="863"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="864"><highlight class="normal"></highlight></codeline>
-<codeline lineno="865"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_AUX_TYPE<sp/>{</highlight></codeline>
-<codeline lineno="866"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_NULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="867"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_IGNORE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EXECFD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PHDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PHENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PHNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PAGESZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_BASE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_ENTRY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_NOTELF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_UID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EUID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="879"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_GID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="880"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EGID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="881"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_CLKTCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="883"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Some<sp/>more<sp/>special<sp/>a_type<sp/>values<sp/>describing<sp/>the<sp/>hardware.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="884"><highlight class="normal"></highlight></codeline>
-<codeline lineno="885"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PLATFORM<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="886"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_HWCAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="888"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>entry<sp/>gives<sp/>some<sp/>information<sp/>about<sp/>the<sp/>FPU<sp/>initialization</highlight></codeline>
-<codeline lineno="889"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>performed<sp/>by<sp/>the<sp/>kernel.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/>LIEF_DT_SYMTAB_SHNDX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>34,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>35,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/>LIEF_DT_RELR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>36,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>37,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/>LIEF_DT_LOOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000000,<sp/></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/>LIEF_DT_HIOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFF,<sp/></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/>LIEF_DT_LOPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,<sp/></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/>LIEF_DT_HIPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7FFFFFFF,<sp/></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/>LIEF_DT_GNU_HASH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFEF5,<sp/></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/>LIEF_DT_RELACOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFF9,<sp/></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/>LIEF_DT_RELCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFA,<sp/></highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/>LIEF_DT_FLAGS_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFB,<sp/></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/>LIEF_DT_VERSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFF0,<sp/></highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/>LIEF_DT_VERDEF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFC,<sp/></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"><sp/><sp/>LIEF_DT_VERDEFNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFD,<sp/></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/>LIEF_DT_VERNEED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFE,<sp/></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><sp/><sp/>LIEF_DT_VERNEEDNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFF,<sp/></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mips<sp/>specific<sp/>dynamic<sp/>table<sp/>entry<sp/>tags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,<sp/></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_TIME_STAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000002,<sp/></highlight></codeline>
+<codeline lineno="722"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_ICHECKSUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003,<sp/></highlight></codeline>
+<codeline lineno="723"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_IVERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000004,<sp/></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000005,<sp/></highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_BASE_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000006,<sp/></highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_MSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000007,<sp/></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_CONFLICT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000008,<sp/></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LIBLIST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000009,<sp/></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LOCAL_GOTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000a,<sp/></highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_CONFLICTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000b,<sp/></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LIBLISTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000010,<sp/></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_SYMTABNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000011,<sp/></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_UNREFEXTNO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000012,<sp/></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_GOTSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000013,<sp/></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_HIPAGENO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000014,<sp/></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_MAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000016,<sp/></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000017,<sp/></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASS_NO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000018,<sp/></highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_INSTANCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000019,<sp/></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_INSTANCE_NO<sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001A,<sp/></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_RELOC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001B,<sp/></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_RELOC_NO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001C,<sp/></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_SYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001D,<sp/></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_SYM_NO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000001E,<sp/></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASSSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000020,<sp/></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DELTA_CLASSSYM_NO<sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000021,<sp/></highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_CXX_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000022,<sp/></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PIXIE_INIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000023,<sp/></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_SYMBOL_LIB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000024,<sp/></highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LOCALPAGE_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000025,<sp/></highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_LOCAL_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000026,<sp/></highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_HIDDEN_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000027,<sp/></highlight></codeline>
+<codeline lineno="753"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PROTECTED_GOTIDX<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000028,<sp/></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_OPTIONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000029,<sp/></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_INTERFACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002A,<sp/></highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_DYNSTR_ALIGN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002B,<sp/></highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_INTERFACE_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002C,<sp/></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_TEXT_RESOLVE_ADDR<sp/>=<sp/>0x7000002D,<sp/></highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PERF_SUFFIX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002E,<sp/></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_COMPACT_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002F,<sp/></highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_GP_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000030,<sp/></highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_AUX_DYNAMIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000031,<sp/></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_PLTGOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000032,<sp/></highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RWPLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000034,<sp/></highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_MAP_REL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000035,</highlight></codeline>
+<codeline lineno="766"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_XHASH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000036,</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Android<sp/>specific<sp/>dynamic<sp/>table<sp/>entry<sp/>tags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_REL_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6000000D,<sp/></highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_REL_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6000000E,<sp/></highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_REL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6000000F,<sp/></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000010,<sp/></highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000011,<sp/></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELASZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000012,<sp/></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE000,<sp/></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELRSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE001,<sp/></highlight></codeline>
+<codeline lineno="777"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE003,<sp/></highlight></codeline>
+<codeline lineno="778"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELRCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE005,<sp/></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_BTI_PLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_PAC_PLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003,</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_VARIANT_PCS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000005,</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_MEMTAG_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000009,</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_MEMTAG_HEAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000b,</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_MEMTAG_STACK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000c,</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_MEMTAG_GLOBALS<sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000d,</highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_MEMTAG_GLOBALSSZ<sp/><sp/><sp/>=<sp/>0x7000000f,</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"></highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/>LIEF_DT_HEXAGON_SYMSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,</highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/>LIEF_DT_HEXAGON_VER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/>LIEF_DT_HEXAGON_PLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000002,</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"></highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/>LIEF_DT_PPC_GOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,</highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/>LIEF_DT_PPC_OPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/>LIEF_DT_PPC64_GLINK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"><sp/><sp/>LIEF_DT_PPC64_OPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003,</highlight></codeline>
+<codeline lineno="798"><highlight class="normal"></highlight></codeline>
+<codeline lineno="799"><highlight class="normal"><sp/><sp/>LIEF_DT_RISCV_VARIANT_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003,</highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal"><sp/><sp/>LIEF_DT_X86_64_PLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,</highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/>LIEF_DT_X86_64_PLTSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"><sp/><sp/>LIEF_DT_X86_64_PLTENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003</highlight></codeline>
+<codeline lineno="804"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight></codeline>
+<codeline lineno="807"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_DYNAMIC_FLAGS<sp/>{</highlight></codeline>
+<codeline lineno="808"><highlight class="normal"><sp/><sp/>LIEF_DF_ORIGIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000001,<sp/></highlight></codeline>
+<codeline lineno="809"><highlight class="normal"><sp/><sp/>LIEF_DF_SYMBOLIC<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000002,<sp/></highlight></codeline>
+<codeline lineno="810"><highlight class="normal"><sp/><sp/>LIEF_DF_TEXTREL<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000004,<sp/></highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/>LIEF_DF_BIND_NOW<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000008,<sp/></highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/><sp/>LIEF_DF_STATIC_TLS<sp/><sp/><sp/>=<sp/>0x00000010,<sp/></highlight></codeline>
+<codeline lineno="813"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="814"><highlight class="normal"></highlight></codeline>
+<codeline lineno="815"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_DYNAMIC_FLAGS_1<sp/>{</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000001,<sp/></highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/>LIEF_DF_1_GLOBAL<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000002,<sp/></highlight></codeline>
+<codeline lineno="818"><highlight class="normal"><sp/><sp/>LIEF_DF_1_GROUP<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000004,<sp/></highlight></codeline>
+<codeline lineno="819"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODELETE<sp/><sp/><sp/>=<sp/>0x00000008,<sp/></highlight></codeline>
+<codeline lineno="820"><highlight class="normal"><sp/><sp/>LIEF_DF_1_LOADFLTR<sp/><sp/><sp/>=<sp/>0x00000010,<sp/></highlight></codeline>
+<codeline lineno="821"><highlight class="normal"><sp/><sp/>LIEF_DF_1_INITFIRST<sp/><sp/>=<sp/>0x00000020,<sp/></highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOOPEN<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000040,<sp/></highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/>LIEF_DF_1_ORIGIN<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000080,<sp/></highlight></codeline>
+<codeline lineno="824"><highlight class="normal"><sp/><sp/>LIEF_DF_1_DIRECT<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000100,<sp/></highlight></codeline>
+<codeline lineno="825"><highlight class="normal"><sp/><sp/>LIEF_DF_1_TRANS<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000200,</highlight></codeline>
+<codeline lineno="826"><highlight class="normal"><sp/><sp/>LIEF_DF_1_INTERPOSE<sp/><sp/>=<sp/>0x00000400,<sp/></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODEFLIB<sp/><sp/><sp/>=<sp/>0x00000800,<sp/></highlight></codeline>
+<codeline lineno="828"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODUMP<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00001000,<sp/></highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/>LIEF_DF_1_CONFALT<sp/><sp/><sp/><sp/>=<sp/>0x00002000,<sp/></highlight></codeline>
+<codeline lineno="830"><highlight class="normal"><sp/><sp/>LIEF_DF_1_ENDFILTEE<sp/><sp/>=<sp/>0x00004000,<sp/></highlight></codeline>
+<codeline lineno="831"><highlight class="normal"><sp/><sp/>LIEF_DF_1_DISPRELDNE<sp/>=<sp/>0x00008000,<sp/></highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/>LIEF_DF_1_DISPRELPND<sp/>=<sp/>0x00010000,<sp/></highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NODIRECT<sp/><sp/><sp/>=<sp/>0x00020000,<sp/></highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/>LIEF_DF_1_IGNMULDEF<sp/><sp/>=<sp/>0x00040000,</highlight></codeline>
+<codeline lineno="835"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOKSYMS<sp/><sp/><sp/><sp/>=<sp/>0x00080000,</highlight></codeline>
+<codeline lineno="836"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NOHDR<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00100000,</highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/>LIEF_DF_1_EDITED<sp/><sp/><sp/><sp/><sp/>=<sp/>0x00200000,<sp/></highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/>LIEF_DF_1_NORELOC<sp/><sp/><sp/><sp/>=<sp/>0x00400000,</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/>LIEF_DF_1_SYMINTPOSE<sp/>=<sp/>0x00800000,<sp/></highlight></codeline>
+<codeline lineno="840"><highlight class="normal"><sp/><sp/>LIEF_DF_1_GLOBAUDIT<sp/><sp/>=<sp/>0x01000000,<sp/></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/>LIEF_DF_1_SINGLETON<sp/><sp/>=<sp/>0x02000000,<sp/><sp/></highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/>LIEF_DF_1_PIE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x08000000<sp/><sp/></highlight></codeline>
+<codeline lineno="843"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="844"><highlight class="normal"></highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DT_MIPS_FLAGS<sp/>values.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="846"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="847"><highlight class="normal"><sp/><sp/>LIEF_RHF_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000000,<sp/></highlight><highlight class="comment">/*<sp/>No<sp/>flags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="848"><highlight class="normal"><sp/><sp/>LIEF_RHF_QUICKSTART<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000001,<sp/></highlight><highlight class="comment">/*<sp/>Uses<sp/>shortcut<sp/>pointers.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="849"><highlight class="normal"><sp/><sp/>LIEF_RHF_NOTPOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000002,<sp/></highlight><highlight class="comment">/*<sp/>Hash<sp/>size<sp/>is<sp/>not<sp/>a<sp/>power<sp/>of<sp/>two.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="850"><highlight class="normal"><sp/><sp/>LIEF_RHS_NO_LIBRARY_REPLACEMENT<sp/><sp/>=<sp/>0x00000004,<sp/></highlight><highlight class="comment">/*<sp/>Ignore<sp/>LD_LIBRARY_PATH.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"><sp/><sp/>LIEF_RHF_NO_MOVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000008,<sp/></highlight><highlight class="comment">/*<sp/>DSO<sp/>address<sp/>may<sp/>not<sp/>be<sp/>relocated.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="852"><highlight class="normal"><sp/><sp/>LIEF_RHF_SGI_ONLY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000010,<sp/></highlight><highlight class="comment">/*<sp/>SGI<sp/>specific<sp/>features.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="normal"><sp/><sp/>LIEF_RHF_GUARANTEE_INIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000020,<sp/></highlight><highlight class="comment">/*<sp/>Guarantee<sp/>that<sp/>.init<sp/>will<sp/>finish<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>executing<sp/>before<sp/>any<sp/>non-init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>code<sp/>in<sp/>DSO<sp/>is<sp/>called.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/>LIEF_RHF_DELTA_C_PLUS_PLUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000040,<sp/></highlight><highlight class="comment">/*<sp/>Contains<sp/>Delta<sp/>C++<sp/>code.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/>LIEF_RHF_GUARANTEE_START_INIT<sp/><sp/><sp/><sp/>=<sp/>0x00000080,<sp/></highlight><highlight class="comment">/*<sp/>Guarantee<sp/>that<sp/>.init<sp/>will<sp/>start<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>executing<sp/>before<sp/>any<sp/>non-init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="859"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>code<sp/>in<sp/>DSO<sp/>is<sp/>called.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="860"><highlight class="normal"><sp/><sp/>LIEF_RHF_PIXIE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000100,<sp/></highlight><highlight class="comment">/*<sp/>Generated<sp/>by<sp/>pixie.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="861"><highlight class="normal"><sp/><sp/>LIEF_RHF_DEFAULT_DELAY_LOAD<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000200,<sp/></highlight><highlight class="comment">/*<sp/>Delay-load<sp/>DSO<sp/>by<sp/>default.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><sp/><sp/>LIEF_RHF_REQUICKSTART<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000400,<sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>may<sp/>be<sp/>requickstarted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="863"><highlight class="normal"><sp/><sp/>LIEF_RHF_REQUICKSTARTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000800,<sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>has<sp/>been<sp/>requickstarted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="864"><highlight class="normal"><sp/><sp/>LIEF_RHF_CORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00001000,<sp/></highlight><highlight class="comment">/*<sp/>Generated<sp/>by<sp/>cord.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="865"><highlight class="normal"><sp/><sp/>LIEF_RHF_NO_UNRES_UNDEF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00002000,<sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>contains<sp/>no<sp/>unresolved<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>undef<sp/>symbols.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="867"><highlight class="normal"><sp/><sp/>LIEF_RHF_RLD_ORDER_SAFE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00004000<sp/><sp/></highlight><highlight class="comment">/*<sp/>Symbol<sp/>table<sp/>is<sp/>in<sp/>a<sp/>safe<sp/>order.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="868"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"></highlight></codeline>
+<codeline lineno="871"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="872"><highlight class="normal"><sp/><sp/>LIEF_VER_DEF_NONE<sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="873"><highlight class="normal"><sp/><sp/>LIEF_VER_DEF_CURRENT<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="874"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="875"><highlight class="normal"></highlight></codeline>
+<codeline lineno="877"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="878"><highlight class="normal"><sp/><sp/>LIEF_VER_FLG_BASE<sp/>=<sp/>0x1,</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"><sp/><sp/>LIEF_VER_FLG_WEAK<sp/>=<sp/>0x2,</highlight></codeline>
+<codeline lineno="880"><highlight class="normal"><sp/><sp/>LIEF_VER_FLG_INFO<sp/>=<sp/>0x4</highlight></codeline>
+<codeline lineno="881"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="882"><highlight class="normal"></highlight></codeline>
+<codeline lineno="884"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="885"><highlight class="normal"><sp/><sp/>LIEF_VER_NDX_LOCAL<sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="886"><highlight class="normal"><sp/><sp/>LIEF_VER_NDX_GLOBAL<sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="887"><highlight class="normal"><sp/><sp/>LIEF_VERSYM_VERSION<sp/>=<sp/>0x7fff,<sp/></highlight></codeline>
+<codeline lineno="888"><highlight class="normal"><sp/><sp/>LIEF_VERSYM_HIDDEN<sp/><sp/>=<sp/>0x8000<sp/><sp/></highlight></codeline>
+<codeline lineno="889"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="890"><highlight class="normal"></highlight></codeline>
-<codeline lineno="891"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_FPUCW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>18,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="893"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cache<sp/>block<sp/>sizes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="894"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_DCACHEBSIZE<sp/><sp/><sp/>=<sp/>19,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_ICACHEBSIZE<sp/><sp/><sp/>=<sp/>20,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_UCACHEBSIZE<sp/><sp/><sp/>=<sp/>21,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>special<sp/>ignored<sp/>value<sp/>for<sp/>PPC,<sp/>used<sp/>by<sp/>the<sp/>kernel<sp/>to<sp/>control<sp/>the</highlight></codeline>
-<codeline lineno="899"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>interpretation<sp/>of<sp/>the<sp/>AUXV.<sp/>Must<sp/>be<sp/>&gt;<sp/>16.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="900"><highlight class="normal"></highlight></codeline>
-<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_IGNOREPPC<sp/><sp/><sp/><sp/><sp/>=<sp/>22,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="902"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SECURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>23,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="903"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_BASE_PLATFORM<sp/>=<sp/>24,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_RANDOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>25,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="905"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_HWCAP2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>26,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EXECFN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>31,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointer<sp/>to<sp/>the<sp/>global<sp/>system<sp/>page<sp/>used<sp/>for<sp/>system<sp/>calls<sp/>and<sp/>other</highlight></codeline>
-<codeline lineno="909"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>nice<sp/>things.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SYSINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,</highlight></codeline>
-<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SYSINFO_EHDR<sp/><sp/>=<sp/>33,</highlight></codeline>
-<codeline lineno="912"><highlight class="normal"></highlight></codeline>
-<codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Shapes<sp/>of<sp/>the<sp/>caches.<sp/><sp/>Bits<sp/>0-3<sp/>contains<sp/>associativity;<sp/>bits<sp/>4-7<sp/>contains</highlight></codeline>
-<codeline lineno="914"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>log2<sp/>of<sp/>line<sp/>size;<sp/>mask<sp/>those<sp/>to<sp/>get<sp/>cache<sp/>size.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L1I_CACHESHAPE<sp/><sp/>=<sp/>34,</highlight></codeline>
-<codeline lineno="916"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L1D_CACHESHAPE<sp/><sp/>=<sp/>35,</highlight></codeline>
-<codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L2_CACHESHAPE<sp/><sp/><sp/>=<sp/>36,</highlight></codeline>
-<codeline lineno="918"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L3_CACHESHAPE<sp/><sp/><sp/>=<sp/>37</highlight></codeline>
-<codeline lineno="919"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="920"><highlight class="normal"></highlight></codeline>
-<codeline lineno="923"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_DYNSYM_COUNT_METHODS<sp/>{</highlight></codeline>
-<codeline lineno="924"><highlight class="normal"><sp/><sp/>LIEF_COUNT_AUTO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/></highlight></codeline>
-<codeline lineno="925"><highlight class="normal"><sp/><sp/>LIEF_COUNT_SECTION<sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/></highlight></codeline>
-<codeline lineno="926"><highlight class="normal"><sp/><sp/>LIEF_COUNT_HASH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/></highlight></codeline>
-<codeline lineno="927"><highlight class="normal"><sp/><sp/>LIEF_COUNT_RELOCATIONS<sp/>=<sp/>3,<sp/></highlight></codeline>
-<codeline lineno="928"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="929"><highlight class="normal"></highlight></codeline>
-<codeline lineno="930"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_NOTE_TYPES<sp/>{</highlight></codeline>
-<codeline lineno="931"><highlight class="normal"><sp/><sp/>LIEF_NT_UNKNOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="932"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_ABI_TAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="933"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_HWCAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="934"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_BUILD_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="935"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_GOLD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
-<codeline lineno="936"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_PROPERTY_TYPE_0<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
-<codeline lineno="937"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_BUILD_ATTRIBUTE_OPEN<sp/>=<sp/>0x100,</highlight></codeline>
-<codeline lineno="938"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_BUILD_ATTRIBUTE_FUNC<sp/>=<sp/>0x101,</highlight></codeline>
-<codeline lineno="939"><highlight class="normal"><sp/><sp/>LIEF_NT_CRASHPAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x4f464e49,</highlight></codeline>
-<codeline lineno="940"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="941"><highlight class="normal"></highlight></codeline>
-<codeline lineno="942"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_NOTE_TYPES_CORE<sp/>{</highlight></codeline>
-<codeline lineno="943"><highlight class="normal"><sp/><sp/>LIEF_NT_CORE_UNKNOWN<sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="944"><highlight class="normal"><sp/><sp/>LIEF_NT_PRSTATUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="945"><highlight class="normal"><sp/><sp/>LIEF_NT_PRFPREG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="946"><highlight class="normal"><sp/><sp/>LIEF_NT_PRPSINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="947"><highlight class="normal"><sp/><sp/>LIEF_NT_TASKSTRUCT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
-<codeline lineno="948"><highlight class="normal"><sp/><sp/>LIEF_NT_AUXV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
-<codeline lineno="949"><highlight class="normal"><sp/><sp/>LIEF_NT_SIGINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x53494749,</highlight></codeline>
-<codeline lineno="950"><highlight class="normal"><sp/><sp/>LIEF_NT_FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x46494c45,</highlight></codeline>
-<codeline lineno="951"><highlight class="normal"><sp/><sp/>LIEF_NT_PRXFPREG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x46e62b7f,</highlight></codeline>
+<codeline lineno="892"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="893"><highlight class="normal"><sp/><sp/>LIEF_VER_NEED_NONE<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="894"><highlight class="normal"><sp/><sp/>LIEF_VER_NEED_CURRENT<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="895"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"></highlight></codeline>
+<codeline lineno="897"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_AUX_TYPE<sp/>{</highlight></codeline>
+<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_NULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="899"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_IGNORE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EXECFD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PHDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="902"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PHENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="903"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PHNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PAGESZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="905"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_BASE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_ENTRY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_NOTELF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_UID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EUID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_GID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="912"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EGID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_CLKTCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Some<sp/>more<sp/>special<sp/>a_type<sp/>values<sp/>describing<sp/>the<sp/>hardware.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="916"><highlight class="normal"></highlight></codeline>
+<codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PLATFORM<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="918"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_HWCAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="920"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>entry<sp/>gives<sp/>some<sp/>information<sp/>about<sp/>the<sp/>FPU<sp/>initialization</highlight></codeline>
+<codeline lineno="921"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>performed<sp/>by<sp/>the<sp/>kernel.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="922"><highlight class="normal"></highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_FPUCW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>18,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cache<sp/>block<sp/>sizes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_DCACHEBSIZE<sp/><sp/><sp/>=<sp/>19,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="927"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_ICACHEBSIZE<sp/><sp/><sp/>=<sp/>20,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="928"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_UCACHEBSIZE<sp/><sp/><sp/>=<sp/>21,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>special<sp/>ignored<sp/>value<sp/>for<sp/>PPC,<sp/>used<sp/>by<sp/>the<sp/>kernel<sp/>to<sp/>control<sp/>the</highlight></codeline>
+<codeline lineno="931"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>interpretation<sp/>of<sp/>the<sp/>AUXV.<sp/>Must<sp/>be<sp/>&gt;<sp/>16.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="932"><highlight class="normal"></highlight></codeline>
+<codeline lineno="933"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_IGNOREPPC<sp/><sp/><sp/><sp/><sp/>=<sp/>22,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="934"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SECURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>23,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_BASE_PLATFORM<sp/>=<sp/>24,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_RANDOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>25,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_HWCAP2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>26,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="938"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EXECFN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>31,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="940"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointer<sp/>to<sp/>the<sp/>global<sp/>system<sp/>page<sp/>used<sp/>for<sp/>system<sp/>calls<sp/>and<sp/>other</highlight></codeline>
+<codeline lineno="941"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>nice<sp/>things.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="942"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SYSINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,</highlight></codeline>
+<codeline lineno="943"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SYSINFO_EHDR<sp/><sp/>=<sp/>33,</highlight></codeline>
+<codeline lineno="944"><highlight class="normal"></highlight></codeline>
+<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Shapes<sp/>of<sp/>the<sp/>caches.<sp/><sp/>Bits<sp/>0-3<sp/>contains<sp/>associativity;<sp/>bits<sp/>4-7<sp/>contains</highlight></codeline>
+<codeline lineno="946"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>log2<sp/>of<sp/>line<sp/>size;<sp/>mask<sp/>those<sp/>to<sp/>get<sp/>cache<sp/>size.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="947"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L1I_CACHESHAPE<sp/><sp/>=<sp/>34,</highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L1D_CACHESHAPE<sp/><sp/>=<sp/>35,</highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L2_CACHESHAPE<sp/><sp/><sp/>=<sp/>36,</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_L3_CACHESHAPE<sp/><sp/><sp/>=<sp/>37</highlight></codeline>
+<codeline lineno="951"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="952"><highlight class="normal"></highlight></codeline>
-<codeline lineno="953"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_VFP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x400,</highlight></codeline>
-<codeline lineno="954"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_TLS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x401,</highlight></codeline>
-<codeline lineno="955"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_HW_BREAK<sp/><sp/><sp/><sp/><sp/>=<sp/>0x402,</highlight></codeline>
-<codeline lineno="956"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_HW_WATCH<sp/><sp/><sp/><sp/><sp/>=<sp/>0x403,</highlight></codeline>
-<codeline lineno="957"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_SYSTEM_CALL<sp/><sp/>=<sp/>0x404,</highlight></codeline>
-<codeline lineno="958"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_SVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x405,</highlight></codeline>
-<codeline lineno="959"><highlight class="normal"></highlight></codeline>
-<codeline lineno="960"><highlight class="normal"><sp/><sp/>LIEF_NT_386_TLS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x200,</highlight></codeline>
-<codeline lineno="961"><highlight class="normal"><sp/><sp/>LIEF_NT_386_IOPERM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x201,</highlight></codeline>
-<codeline lineno="962"><highlight class="normal"><sp/><sp/>LIEF_NT_386_XSTATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x202,</highlight></codeline>
-<codeline lineno="963"><highlight class="normal"></highlight></codeline>
-<codeline lineno="964"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="965"><highlight class="normal"></highlight></codeline>
-<codeline lineno="966"><highlight class="normal"></highlight></codeline>
-<codeline lineno="967"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_NOTE_ABIS<sp/>{</highlight></codeline>
-<codeline lineno="968"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_UNKNOWN<sp/><sp/><sp/><sp/><sp/>=<sp/>~(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)(0),</highlight></codeline>
-<codeline lineno="969"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_LINUX<sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="970"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_GNU<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="971"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_SOLARIS2<sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="972"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_FREEBSD<sp/><sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="973"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_NETBSD<sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
-<codeline lineno="974"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_SYLLABLE<sp/>=<sp/>5,</highlight></codeline>
-<codeline lineno="975"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="976"><highlight class="normal"></highlight></codeline>
-<codeline lineno="977"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_RELOCATION_PURPOSES<sp/>{</highlight></codeline>
-<codeline lineno="978"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_NONE<sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="979"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_PLTGOT<sp/><sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="980"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_DYNAMIC<sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="981"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_OBJECT<sp/><sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="982"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="983"><highlight class="normal"></highlight></codeline>
-<codeline lineno="984"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="985"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="986"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="987"><highlight class="normal"></highlight></codeline>
-<codeline lineno="988"><highlight class="normal"></highlight></codeline>
-<codeline lineno="989"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="955"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_DYNSYM_COUNT_METHODS<sp/>{</highlight></codeline>
+<codeline lineno="956"><highlight class="normal"><sp/><sp/>LIEF_COUNT_AUTO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="957"><highlight class="normal"><sp/><sp/>LIEF_COUNT_SECTION<sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="958"><highlight class="normal"><sp/><sp/>LIEF_COUNT_HASH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="959"><highlight class="normal"><sp/><sp/>LIEF_COUNT_RELOCATIONS<sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="960"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="961"><highlight class="normal"></highlight></codeline>
+<codeline lineno="962"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_NOTE_TYPES<sp/>{</highlight></codeline>
+<codeline lineno="963"><highlight class="normal"><sp/><sp/>LIEF_NT_UNKNOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="964"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_ABI_TAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="965"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_HWCAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="966"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_BUILD_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="967"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_GOLD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="968"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_PROPERTY_TYPE_0<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="969"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_BUILD_ATTRIBUTE_OPEN<sp/>=<sp/>0x100,</highlight></codeline>
+<codeline lineno="970"><highlight class="normal"><sp/><sp/>LIEF_NT_GNU_BUILD_ATTRIBUTE_FUNC<sp/>=<sp/>0x101,</highlight></codeline>
+<codeline lineno="971"><highlight class="normal"><sp/><sp/>LIEF_NT_CRASHPAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x4f464e49,</highlight></codeline>
+<codeline lineno="972"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="973"><highlight class="normal"></highlight></codeline>
+<codeline lineno="974"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_NOTE_TYPES_CORE<sp/>{</highlight></codeline>
+<codeline lineno="975"><highlight class="normal"><sp/><sp/>LIEF_NT_CORE_UNKNOWN<sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="976"><highlight class="normal"><sp/><sp/>LIEF_NT_PRSTATUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="977"><highlight class="normal"><sp/><sp/>LIEF_NT_PRFPREG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="978"><highlight class="normal"><sp/><sp/>LIEF_NT_PRPSINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="979"><highlight class="normal"><sp/><sp/>LIEF_NT_TASKSTRUCT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="980"><highlight class="normal"><sp/><sp/>LIEF_NT_AUXV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="981"><highlight class="normal"><sp/><sp/>LIEF_NT_SIGINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x53494749,</highlight></codeline>
+<codeline lineno="982"><highlight class="normal"><sp/><sp/>LIEF_NT_FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x46494c45,</highlight></codeline>
+<codeline lineno="983"><highlight class="normal"><sp/><sp/>LIEF_NT_PRXFPREG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x46e62b7f,</highlight></codeline>
+<codeline lineno="984"><highlight class="normal"></highlight></codeline>
+<codeline lineno="985"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_VFP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x400,</highlight></codeline>
+<codeline lineno="986"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_TLS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x401,</highlight></codeline>
+<codeline lineno="987"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_HW_BREAK<sp/><sp/><sp/><sp/><sp/>=<sp/>0x402,</highlight></codeline>
+<codeline lineno="988"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_HW_WATCH<sp/><sp/><sp/><sp/><sp/>=<sp/>0x403,</highlight></codeline>
+<codeline lineno="989"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_SYSTEM_CALL<sp/><sp/>=<sp/>0x404,</highlight></codeline>
+<codeline lineno="990"><highlight class="normal"><sp/><sp/>LIEF_NT_ARM_SVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x405,</highlight></codeline>
+<codeline lineno="991"><highlight class="normal"></highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/>LIEF_NT_386_TLS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x200,</highlight></codeline>
+<codeline lineno="993"><highlight class="normal"><sp/><sp/>LIEF_NT_386_IOPERM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x201,</highlight></codeline>
+<codeline lineno="994"><highlight class="normal"><sp/><sp/>LIEF_NT_386_XSTATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x202,</highlight></codeline>
+<codeline lineno="995"><highlight class="normal"></highlight></codeline>
+<codeline lineno="996"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="997"><highlight class="normal"></highlight></codeline>
+<codeline lineno="998"><highlight class="normal"></highlight></codeline>
+<codeline lineno="999"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_NOTE_ABIS<sp/>{</highlight></codeline>
+<codeline lineno="1000"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_UNKNOWN<sp/><sp/><sp/><sp/><sp/>=<sp/>~(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)(0),</highlight></codeline>
+<codeline lineno="1001"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_LINUX<sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="1002"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_GNU<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="1003"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_SOLARIS2<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="1004"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_FREEBSD<sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="1005"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_NETBSD<sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="1006"><highlight class="normal"><sp/><sp/>LIEF_ELF_NOTE_OS_SYLLABLE<sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="1007"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1008"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1009"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_RELOCATION_PURPOSES<sp/>{</highlight></codeline>
+<codeline lineno="1010"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_NONE<sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="1011"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_PLTGOT<sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="1012"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_DYNAMIC<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="1013"><highlight class="normal"><sp/><sp/>LIEF_RELOC_PURPOSE_OBJECT<sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="1014"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1015"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1016"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1017"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1018"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1019"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1020"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1021"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h"/>
   </compounddef>

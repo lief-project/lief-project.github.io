@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Type"],"mod":["array","attribute","bitfield","classlike","enum_ty","function","method","modifier","pointer","simple","union"],"struct":["Array","Attribute","BitField","Class","Enum","Function","Generic","Interface","Method","Modifier","Pointer","Simple","Structure","Union"],"trait":["PdbType"],"type":["Types"]};
