@@ -16,6 +16,14 @@ Class
 ----------
 
 
+Category
+********
+
+.. autoclass:: lief.objc.Category
+
+----------
+
+
 Protocol
 ********
 
@@ -41,3 +49,10 @@ Property
 ********
 
 .. autoclass:: lief.objc.Property
+
+----------
+
+DeclOpt
+*******
+
+.. autoclass:: lief.objc.DeclOpt

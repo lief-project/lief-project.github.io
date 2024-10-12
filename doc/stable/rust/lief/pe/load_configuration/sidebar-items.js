@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CHPEMetadata"],"struct":["GuardFunction","ImageGuardFlags","LoadConfiguration"],"trait":["AsCHPEMetadata"],"type":["DynamicRelocations","GuardAddressTakenIATEntries","GuardCFFunctions","GuardEhContinuationFunctions","GuardLongJumpTargets"]};

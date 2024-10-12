@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["assemble","assemble_with_config"]};

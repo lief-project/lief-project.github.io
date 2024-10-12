@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ChecksumAlgorithm","CodeViewSignature","Entries","PogoSignature","Type"],"struct":["CodeView","CodeViewPDB","ExDllCharacteristics","ExtendedDLLCharacteristics","FPO","FPOEntry","Generic","PDBChecksum","Pogo","PogoEntry","Repro","VCFeature"],"trait":["DebugEntry"],"type":["FPOEntries","PogoEntries"]};

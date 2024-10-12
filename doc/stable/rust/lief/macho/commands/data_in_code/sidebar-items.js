@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["EntryType"],"struct":["DataCodeEntry","DataInCode"],"type":["Entries"]};

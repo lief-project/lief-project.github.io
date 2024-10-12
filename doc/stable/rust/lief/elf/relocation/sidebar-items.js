@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Encoding","Purpose","Type"],"struct":["Relocation"],"type":["DynamicRelocations","ObjectRelocations","PltGotRelocations","Relocations"]};

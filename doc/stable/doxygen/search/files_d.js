@@ -14,9 +14,16 @@ var searchData=
   ['oat_2futils_2ehpp_11',['utils.hpp',['../OAT_2utils_8hpp.html',1,'']]],
   ['objc_2ehpp_12',['ObjC.hpp',['../ObjC_8hpp.html',1,'']]],
   ['objc_2fclass_2ehpp_13',['Class.hpp',['../ObjC_2Class_8hpp.html',1,'']]],
-  ['objc_2fmethod_2ehpp_14',['Method.hpp',['../ObjC_2Method_8hpp.html',1,'']]],
-  ['object_2ehpp_15',['Object.hpp',['../Object_8hpp.html',1,'']]],
-  ['oidtostring_2ehpp_16',['OIDToString.hpp',['../OIDToString_8hpp.html',1,'']]],
-  ['optionalheader_2eh_17',['OptionalHeader.h',['../OptionalHeader_8h.html',1,'']]],
-  ['optionalheader_2ehpp_18',['OptionalHeader.hpp',['../OptionalHeader_8hpp.html',1,'']]]
+  ['objc_2fmetadata_2ehpp_14',['Metadata.hpp',['../ObjC_2Metadata_8hpp.html',1,'']]],
+  ['objc_2fmethod_2ehpp_15',['Method.hpp',['../ObjC_2Method_8hpp.html',1,'']]],
+  ['objc_2fproperty_2ehpp_16',['Property.hpp',['../ObjC_2Property_8hpp.html',1,'']]],
+  ['object_2ehpp_17',['Object.hpp',['../Object_8hpp.html',1,'']]],
+  ['oidtostring_2ehpp_18',['OIDToString.hpp',['../OIDToString_8hpp.html',1,'']]],
+  ['optional_2ehpp_19',['optional.hpp',['../optional_8hpp.html',1,'']]],
+  ['optionalheader_2eh_20',['OptionalHeader.h',['../OptionalHeader_8h.html',1,'']]],
+  ['optionalheader_2ehpp_21',['OptionalHeader.hpp',['../OptionalHeader_8hpp.html',1,'']]],
+  ['osx_2ehpp_22',['osx.hpp',['../osx_8hpp.html',1,'']]],
+  ['osx_2fhost_2ehpp_23',['Host.hpp',['../osx_2Host_8hpp.html',1,'']]],
+  ['osx_2fmodule_2ehpp_24',['Module.hpp',['../osx_2Module_8hpp.html',1,'']]],
+  ['osx_2fprocess_2ehpp_25',['Process.hpp',['../osx_2Process_8hpp.html',1,'']]]
 ];

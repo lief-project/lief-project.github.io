@@ -21,6 +21,14 @@ Class
 ----------
 
 
+Category
+********
+
+.. doxygenclass:: LIEF::objc::Category
+
+----------
+
+
 Protocol
 ********
 
@@ -49,4 +57,11 @@ Property
 ********
 
 .. doxygenclass:: LIEF::objc::Property
+
+----------
+
+DeclOpt
+*******
+
+.. doxygenstruct:: LIEF::objc::DeclOpt
 
