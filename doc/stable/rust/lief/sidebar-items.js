@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Binary","DebugInfo","Error"],"fn":["is_extended"],"mod":["debug_info","debug_location","dwarf","elf","error","generic","logging","macho","objc","pdb","pe","range"],"struct":["DebugLocation","Range"],"trait":["Relocation"]};

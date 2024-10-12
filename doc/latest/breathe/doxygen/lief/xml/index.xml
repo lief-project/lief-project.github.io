@@ -790,6 +790,10 @@
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca6628a75d312428aee99c925dbca44c77" kind="enumvalue"><name>LIEF_DT_ENCODING</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac7ab74dc282e4145ed27b5b780a600e5" kind="enumvalue"><name>LIEF_DT_PREINIT_ARRAY</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac817d4f95c11039841566a00da9766e7" kind="enumvalue"><name>LIEF_DT_PREINIT_ARRAYSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8889e9d77192369a624a4946f9d0f744" kind="enumvalue"><name>LIEF_DT_SYMTAB_SHNDX</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab278b543d1cb4db823565ad230933329" kind="enumvalue"><name>LIEF_DT_RELRSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8a5e38ca3691fbc122255cc7e2451f22" kind="enumvalue"><name>LIEF_DT_RELR</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad87650ef5065a4e3e4adf81990fefa79" kind="enumvalue"><name>LIEF_DT_RELRENT</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caaaea3f610d6818460ff2b5da902354ad" kind="enumvalue"><name>LIEF_DT_LOOS</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca605d77e7a4565a5010d309028ac8c54e" kind="enumvalue"><name>LIEF_DT_HIOS</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca86c473c8e0e6eeb5a25f575fb6e997ea" kind="enumvalue"><name>LIEF_DT_LOPROC</name></member>
@@ -848,16 +852,37 @@
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca4ec215c0a279a98c614469e85956e887" kind="enumvalue"><name>LIEF_DT_MIPS_AUX_DYNAMIC</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca90bdc9fddf21a7d34460eaf7d8f6647c" kind="enumvalue"><name>LIEF_DT_MIPS_PLTGOT</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac23d49f3a97da79191a397ba6bca91d1" kind="enumvalue"><name>LIEF_DT_MIPS_RWPLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca14b6a0b4cb39ab5805f992a7874449c9" kind="enumvalue"><name>LIEF_DT_MIPS_RLD_MAP_REL</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca3b0ef7a82f2d9b5a861762e27494a9c7" kind="enumvalue"><name>LIEF_DT_MIPS_XHASH</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7817051a826bdfd6ba08e39501b99656" kind="enumvalue"><name>LIEF_DT_ANDROID_REL_OFFSET</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2f0e806c2f0e093838ea95265cb7a6cf" kind="enumvalue"><name>LIEF_DT_ANDROID_REL_SIZE</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca45fd70d72f0b156b808a47d6f7725dee" kind="enumvalue"><name>LIEF_DT_ANDROID_REL</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cae0b6a91bffd191ad76b54e98bb295320" kind="enumvalue"><name>LIEF_DT_ANDROID_RELSZ</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca6800fe5595f498e4a8f8d4cb999253f8" kind="enumvalue"><name>LIEF_DT_ANDROID_RELA</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca0f0f7025d9b89b0603571feb0599f68d" kind="enumvalue"><name>LIEF_DT_ANDROID_RELASZ</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8a5e38ca3691fbc122255cc7e2451f22" kind="enumvalue"><name>LIEF_DT_RELR</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab278b543d1cb4db823565ad230933329" kind="enumvalue"><name>LIEF_DT_RELRSZ</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad87650ef5065a4e3e4adf81990fefa79" kind="enumvalue"><name>LIEF_DT_RELRENT</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad2b7831f5113f2ea71b934b41def1856" kind="enumvalue"><name>LIEF_DT_RELRCOUNT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cade688ee17ebe272f0bc805b70b8b5f5c" kind="enumvalue"><name>LIEF_DT_ANDROID_RELR</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7b12469bc0356536e4bae4e21cba671c" kind="enumvalue"><name>LIEF_DT_ANDROID_RELRSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca08a04398d28caff149eda795abed89fe" kind="enumvalue"><name>LIEF_DT_ANDROID_RELRENT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca1ade8cf973fef8189d1a190295b8779f" kind="enumvalue"><name>LIEF_DT_ANDROID_RELRCOUNT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca38384289ebf235e636fd09d839461329" kind="enumvalue"><name>LIEF_DT_AARCH64_BTI_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca5e9d6d6b95ad605a88da0c27a19bbfff" kind="enumvalue"><name>LIEF_DT_AARCH64_PAC_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2953a38c460311b73fdcac5a8cb530a8" kind="enumvalue"><name>LIEF_DT_AARCH64_VARIANT_PCS</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca351d8aa20a48593647cbb47d7332b422" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_MODE</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cade7503a33a8b0017b654a43d7da2a35e" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_HEAP</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca77d504b8bff3f71d46c6e8e1b08c6b84" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_STACK</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca4256ed649054a398c5096cd402049204" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_GLOBALS</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca9bd729a0a444b267ab62a2e5c0d9ce5e" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_GLOBALSSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2fcfdd42d1d2f074cf486c2deca69f08" kind="enumvalue"><name>LIEF_DT_HEXAGON_SYMSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca5e5721b02bccde0d1e7c294ace793078" kind="enumvalue"><name>LIEF_DT_HEXAGON_VER</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca22ab95461f9e769e22f09d1ad4c5ae06" kind="enumvalue"><name>LIEF_DT_HEXAGON_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca53772bd7b845eb372b218efa1d4b1d56" kind="enumvalue"><name>LIEF_DT_PPC_GOT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca0a08641f62200921e99d1b381d3bc890" kind="enumvalue"><name>LIEF_DT_PPC_OPT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7433aa502a84ebcad9be4d5f0cdc5e3d" kind="enumvalue"><name>LIEF_DT_PPC64_GLINK</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca70bba76ba42dc21b0c58a3d50cdb51a3" kind="enumvalue"><name>LIEF_DT_PPC64_OPT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caf66d062d060b0382233cb19edc6bdecf" kind="enumvalue"><name>LIEF_DT_RISCV_VARIANT_CC</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca15c14e30641e21f09831a978c43cff40" kind="enumvalue"><name>LIEF_DT_X86_64_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca3debdc16d5ac9cc7e2e4ef18622037f8" kind="enumvalue"><name>LIEF_DT_X86_64_PLTSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caa158625763152705948dacd3da09fcdd" kind="enumvalue"><name>LIEF_DT_X86_64_PLTENT</name></member>
     <member refid="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229" kind="enum"><name>LIEF_DYNAMIC_FLAGS</name></member>
     <member refid="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229a908c029d7cd67097673b8e21346eac89" kind="enumvalue"><name>LIEF_DF_ORIGIN</name></member>
     <member refid="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229a5317cbdd4260dae6b048803bcf47dff5" kind="enumvalue"><name>LIEF_DF_SYMBOLIC</name></member>
@@ -1040,6 +1065,7 @@
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a33923e4fe6750d684e92a41791a1de0d" kind="enumvalue"><name>LIEF_PE_MACHINE_MIPSFPU16</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4a11fd57e645835a01d89417fc8ecb5a" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPC</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a611dc44ad91d7302d5567eaec846f745" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPCFP</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a68925bcb0a623594b473f51fb699be6b" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPCBE</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a2f3c22354dacdcfed81650370fd820c7" kind="enumvalue"><name>LIEF_PE_MACHINE_R4000</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a1fe3eab4f18d54fcc966636000adbe6c" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV32</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a30bd55d27f725d54f6b887e7c7d2ecb6" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV64</name></member>
