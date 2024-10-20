@@ -51,7 +51,7 @@ var searchData=
   ['fini_5farraysz_48',['FINI_ARRAYSZ',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea0fd31bd65dd4cdf65b0b4a1092e0e3ac',1,'LIEF::ELF::DynamicEntry']]],
   ['finnish_49',['FINNISH',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65ab8441b6f7e5e0b726557ce5bfeaf7b1a',1,'LIEF::PE']]],
   ['firepath_50',['FIREPATH',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eab21335b07443ba1a8c60265d378ed991',1,'LIEF::ELF']]],
-  ['firmware_51',['FIRMWARE',['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3ae69283e6e6bd475ce96a37d62e61c08b',1,'LIEF::MachO::BuildVersion']]],
+  ['firmware_51',['FIRMWARE',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#af541cdc5a6ffb145c0b723dd8129dde5ae69283e6e6bd475ce96a37d62e61c08b',1,'LIEF::dsc::DyldSharedCache::FIRMWARE'],['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3ae69283e6e6bd475ce96a37d62e61c08b',1,'LIEF::MachO::BuildVersion::FIRMWARE']]],
   ['fixup_52',['FIXUP',['../classLIEF_1_1PE_1_1Debug.html#afc006976a0654fbf25b537d4d3b6fde0a7a5a425544f03acc49cfffea8de11390',1,'LIEF::PE::Debug']]],
   ['flags_53',['FLAGS',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea67c6e660061c755787b8f8716b4f2430',1,'LIEF::ELF::DynamicEntry::FLAGS'],['../classLIEF_1_1ELF_1_1CoreAuxv.html#a1c71b5e7ee70d33080211c55b2f7211ba67c6e660061c755787b8f8716b4f2430',1,'LIEF::ELF::CoreAuxv::FLAGS']]],
   ['flags_5f1_54',['FLAGS_1',['../classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea93ab7e77bd9675d39b195895972498b6',1,'LIEF::ELF::DynamicEntry']]],

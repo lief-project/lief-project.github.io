@@ -44,7 +44,7 @@ var searchData=
   ['bound_5fimport_41',['BOUND_IMPORT',['../classLIEF_1_1PE_1_1DataDirectory.html#abc50978a5afaff445650cf12221fe879af2f7466a30aa47dcdeff3d0a5bed7b75',1,'LIEF::PE::DataDirectory']]],
   ['bpf_42',['BPF',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea2f4e6a5631d5cefeaf5704ead6d6fd3a',1,'LIEF::ELF']]],
   ['breton_43',['BRETON',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65ac82d28c358e9aa31e6e35b390aee0b4c',1,'LIEF::PE']]],
-  ['bridgeos_44',['BRIDGEOS',['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3a425a2bede22fd6e6a71ed8121f8f4f8a',1,'LIEF::MachO::BuildVersion']]],
+  ['bridgeos_44',['BRIDGEOS',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#af541cdc5a6ffb145c0b723dd8129dde5a425a2bede22fd6e6a71ed8121f8f4f8a',1,'LIEF::dsc::DyldSharedCache::BRIDGEOS'],['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3a425a2bede22fd6e6a71ed8121f8f4f8a',1,'LIEF::MachO::BuildVersion::BRIDGEOS']]],
   ['bss_45',['BSS',['../namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2a69d7984ac6af787547b91ea2dd031fe6',1,'LIEF::PE']]],
   ['bss_5fend_46',['BSS_END',['../classLIEF_1_1ELF_1_1Binary.html#a18838848f5c7eddd58d3a21d358d5e60aaefa220330c56a1d21e62d83e8ac5091',1,'LIEF::ELF::Binary']]],
   ['bti_47',['BTI',['../classLIEF_1_1ELF_1_1AArch64Feature.html#a5ee8c44b6b32b982c5b0b0bf2815d9a6a9cd4708c3d8e18ab193ef36e086ad39d',1,'LIEF::ELF::AArch64Feature']]],

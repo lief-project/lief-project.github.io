@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_e_l_f_2enums_8h" kind="file" language="C++">
     <compoundname>enums.h</compoundname>
     <includes local="yes">LIEF/ELF/undef.h</includes>
@@ -5716,10 +5716,10 @@
         </inbodydescription>
         <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="815" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="815" bodyend="843"/>
       </memberdef>
-      <memberdef kind="enum" id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bac32cef1755b3566486b52fa0bd6a4381" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10ac32cef1755b3566486b52fa0bd6a4381" prot="public">
           <name>LIEF_RHF_NONE</name>
           <initializer>= 0x00000000</initializer>
           <briefdescription>
@@ -5727,7 +5727,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba1fec4700c2a85fd9a207d9c84502813c" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a1fec4700c2a85fd9a207d9c84502813c" prot="public">
           <name>LIEF_RHF_QUICKSTART</name>
           <initializer>= 0x00000001</initializer>
           <briefdescription>
@@ -5735,7 +5735,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55baa0733db5e00f071ef102facb9fa9dd45" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10aa0733db5e00f071ef102facb9fa9dd45" prot="public">
           <name>LIEF_RHF_NOTPOT</name>
           <initializer>= 0x00000002</initializer>
           <briefdescription>
@@ -5743,7 +5743,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5d07380891dd1a5904b4c763961444fa" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a5d07380891dd1a5904b4c763961444fa" prot="public">
           <name>LIEF_RHS_NO_LIBRARY_REPLACEMENT</name>
           <initializer>= 0x00000004</initializer>
           <briefdescription>
@@ -5751,7 +5751,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bac850403fc1bfc6093b186ba420eb813f" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10ac850403fc1bfc6093b186ba420eb813f" prot="public">
           <name>LIEF_RHF_NO_MOVE</name>
           <initializer>= 0x00000008</initializer>
           <briefdescription>
@@ -5759,7 +5759,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba47d30ec86c89da211cea3d976d650af7" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a47d30ec86c89da211cea3d976d650af7" prot="public">
           <name>LIEF_RHF_SGI_ONLY</name>
           <initializer>= 0x00000010</initializer>
           <briefdescription>
@@ -5767,7 +5767,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bab90f8e4c0962681f21b64e20233719a8" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10ab90f8e4c0962681f21b64e20233719a8" prot="public">
           <name>LIEF_RHF_GUARANTEE_INIT</name>
           <initializer>= 0x00000020</initializer>
           <briefdescription>
@@ -5775,7 +5775,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba86bba00f79ca3c028faef47752e3a3df" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a86bba00f79ca3c028faef47752e3a3df" prot="public">
           <name>LIEF_RHF_DELTA_C_PLUS_PLUS</name>
           <initializer>= 0x00000040</initializer>
           <briefdescription>
@@ -5783,7 +5783,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55baab3317f667c501cac78d0f961ced4e1d" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10aab3317f667c501cac78d0f961ced4e1d" prot="public">
           <name>LIEF_RHF_GUARANTEE_START_INIT</name>
           <initializer>= 0x00000080</initializer>
           <briefdescription>
@@ -5791,7 +5791,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba38ed505bf62e6f1fa0a6c5ad370af768" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a38ed505bf62e6f1fa0a6c5ad370af768" prot="public">
           <name>LIEF_RHF_PIXIE</name>
           <initializer>= 0x00000100</initializer>
           <briefdescription>
@@ -5799,7 +5799,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba113626f65c46397505f725c8c0e77b8c" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a113626f65c46397505f725c8c0e77b8c" prot="public">
           <name>LIEF_RHF_DEFAULT_DELAY_LOAD</name>
           <initializer>= 0x00000200</initializer>
           <briefdescription>
@@ -5807,7 +5807,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bacd0343227884ce7938cbd0cecda2780e" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10acd0343227884ce7938cbd0cecda2780e" prot="public">
           <name>LIEF_RHF_REQUICKSTART</name>
           <initializer>= 0x00000400</initializer>
           <briefdescription>
@@ -5815,7 +5815,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba033c1350282ab4fa04faf85166adb010" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a033c1350282ab4fa04faf85166adb010" prot="public">
           <name>LIEF_RHF_REQUICKSTARTED</name>
           <initializer>= 0x00000800</initializer>
           <briefdescription>
@@ -5823,7 +5823,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55badb46a660ad246dcdd0737cf40ae80915" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10adb46a660ad246dcdd0737cf40ae80915" prot="public">
           <name>LIEF_RHF_CORD</name>
           <initializer>= 0x00001000</initializer>
           <briefdescription>
@@ -5831,7 +5831,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba080b5e07b20050db9307edc7b54fca55" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10a080b5e07b20050db9307edc7b54fca55" prot="public">
           <name>LIEF_RHF_NO_UNRES_UNDEF</name>
           <initializer>= 0x00002000</initializer>
           <briefdescription>
@@ -5839,7 +5839,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55baab3ab8ae5818394492906248f9655865" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1adf306708fcee97880f98f626c6c83d10aab3ab8ae5818394492906248f9655865" prot="public">
           <name>LIEF_RHF_RLD_ORDER_SAFE</name>
           <initializer>= 0x00004000</initializer>
           <briefdescription>
@@ -5855,10 +5855,10 @@
         </inbodydescription>
         <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="846" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="846" bodyend="868"/>
       </memberdef>
-      <memberdef kind="enum" id="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="_e_l_f_2enums_8h_1a9e07893b995b084677c65cf4023e4dcd" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7a7564ef6f0021427eb06749afac35193e" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a9e07893b995b084677c65cf4023e4dcda7564ef6f0021427eb06749afac35193e" prot="public">
           <name>LIEF_VER_DEF_NONE</name>
           <initializer>= 0</initializer>
           <briefdescription>
@@ -5866,7 +5866,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7a0464a6eff9ab3c825f3fa9b20136565b" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a9e07893b995b084677c65cf4023e4dcda0464a6eff9ab3c825f3fa9b20136565b" prot="public">
           <name>LIEF_VER_DEF_CURRENT</name>
           <initializer>= 1</initializer>
           <briefdescription>
@@ -5883,10 +5883,10 @@
         </inbodydescription>
         <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="871" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="871" bodyend="874"/>
       </memberdef>
-      <memberdef kind="enum" id="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="_e_l_f_2enums_8h_1a14fa1d00422d940da8473c4a3507da28" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5a5eac79f8b645ecac9d24e5b631a1abb2" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a14fa1d00422d940da8473c4a3507da28a5eac79f8b645ecac9d24e5b631a1abb2" prot="public">
           <name>LIEF_VER_FLG_BASE</name>
           <initializer>= 0x1</initializer>
           <briefdescription>
@@ -5894,7 +5894,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5a6fd7ae129cc9afc39b0280ef8e45c67e" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a14fa1d00422d940da8473c4a3507da28a6fd7ae129cc9afc39b0280ef8e45c67e" prot="public">
           <name>LIEF_VER_FLG_WEAK</name>
           <initializer>= 0x2</initializer>
           <briefdescription>
@@ -5902,7 +5902,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5a21fe0cf228ccb2e3f71e31571dc60d48" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a14fa1d00422d940da8473c4a3507da28a21fe0cf228ccb2e3f71e31571dc60d48" prot="public">
           <name>LIEF_VER_FLG_INFO</name>
           <initializer>= 0x4</initializer>
           <briefdescription>
@@ -5919,10 +5919,10 @@
         </inbodydescription>
         <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="877" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="877" bodyend="881"/>
       </memberdef>
-      <memberdef kind="enum" id="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="_e_l_f_2enums_8h_1ad9b8c9b35aea4fc13b86f91e1abd6c00" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04aa9d7f1b4cf3f3db096d5c4fac56ee1c5" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1ad9b8c9b35aea4fc13b86f91e1abd6c00aa9d7f1b4cf3f3db096d5c4fac56ee1c5" prot="public">
           <name>LIEF_VER_NDX_LOCAL</name>
           <initializer>= 0</initializer>
           <briefdescription>
@@ -5931,7 +5931,7 @@
 <para>Unversioned local symbol </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04aae2a1c4de9bfe86439a4bc98ef8b2af3" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1ad9b8c9b35aea4fc13b86f91e1abd6c00aae2a1c4de9bfe86439a4bc98ef8b2af3" prot="public">
           <name>LIEF_VER_NDX_GLOBAL</name>
           <initializer>= 1</initializer>
           <briefdescription>
@@ -5940,7 +5940,7 @@
 <para>Unversioned global symbol </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04af61e33f34ac3bb7c9f984b3295d3e3c1" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1ad9b8c9b35aea4fc13b86f91e1abd6c00af61e33f34ac3bb7c9f984b3295d3e3c1" prot="public">
           <name>LIEF_VERSYM_VERSION</name>
           <initializer>= 0x7fff</initializer>
           <briefdescription>
@@ -5949,7 +5949,7 @@
 <para>Version Index mask </para>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04ad7eb87f34e2261153b842fa60260a432" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1ad9b8c9b35aea4fc13b86f91e1abd6c00ad7eb87f34e2261153b842fa60260a432" prot="public">
           <name>LIEF_VERSYM_HIDDEN</name>
           <initializer>= 0x8000</initializer>
           <briefdescription>
@@ -5967,10 +5967,10 @@
         </inbodydescription>
         <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" line="884" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h" bodystart="884" bodyend="889"/>
       </memberdef>
-      <memberdef kind="enum" id="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="_e_l_f_2enums_8h_1a099393fd3026b5122fabe554c530299b" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06cad44b9245cf203718f3e8e6fc9a7ce843" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a099393fd3026b5122fabe554c530299bad44b9245cf203718f3e8e6fc9a7ce843" prot="public">
           <name>LIEF_VER_NEED_NONE</name>
           <initializer>= 0</initializer>
           <briefdescription>
@@ -5978,7 +5978,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06ca9aaa459377dcb2106226615581ad6bb9" prot="public">
+        <enumvalue id="_e_l_f_2enums_8h_1a099393fd3026b5122fabe554c530299ba9aaa459377dcb2106226615581ad6bb9" prot="public">
           <name>LIEF_VER_NEED_CURRENT</name>
           <initializer>= 1</initializer>
           <briefdescription>
@@ -7201,11 +7201,13 @@
 <codeline lineno="495"><highlight class="normal"><sp/><sp/>LIEF_SHT_ARM_DEBUGOVERLAY<sp/><sp/><sp/><sp/>=<sp/>0x70000004U,</highlight></codeline>
 <codeline lineno="496"><highlight class="normal"><sp/><sp/>LIEF_SHT_ARM_OVERLAYSECTION<sp/><sp/>=<sp/>0x70000005U,</highlight></codeline>
 <codeline lineno="497"><highlight class="normal"><sp/><sp/>LIEF_SHT_HEX_ORDERED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,<sp/></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
 <codeline lineno="499"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>this<sp/>section<sp/>based<sp/>on<sp/>their<sp/>sizes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="500"><highlight class="normal"><sp/><sp/>LIEF_SHT_X86_64_UNWIND<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,<sp/></highlight></codeline>
 <codeline lineno="501"><highlight class="normal"><sp/><sp/>LIEF_SHT_MIPS_REGINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000006,<sp/></highlight></codeline>
 <codeline lineno="502"><highlight class="normal"><sp/><sp/>LIEF_SHT_MIPS_OPTIONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000000d,<sp/></highlight></codeline>
 <codeline lineno="503"><highlight class="normal"><sp/><sp/>LIEF_SHT_MIPS_ABIFLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7000002a,<sp/></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
 <codeline lineno="505"><highlight class="normal"><sp/><sp/>LIEF_SHT_HIPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7fffffff,<sp/></highlight></codeline>
 <codeline lineno="506"><highlight class="normal"><sp/><sp/>LIEF_SHT_LOUSER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x80000000,<sp/></highlight></codeline>
 <codeline lineno="507"><highlight class="normal"><sp/><sp/>LIEF_SHT_HIUSER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xffffffff<sp/><sp/></highlight></codeline>
@@ -7241,6 +7243,7 @@
 <codeline lineno="538"><highlight class="normal"><sp/><sp/>LIEF_XCORE_SHF_DP_SECTION<sp/>=<sp/>0x1000U,</highlight></codeline>
 <codeline lineno="539"><highlight class="normal"><sp/><sp/>LIEF_SHF_MASKOS<sp/><sp/><sp/>=<sp/>0x0ff00000,</highlight></codeline>
 <codeline lineno="540"><highlight class="normal"><sp/><sp/>LIEF_SHF_MASKPROC<sp/>=<sp/>0xf0000000,<sp/></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
 <codeline lineno="542"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>an<sp/>object<sp/>file<sp/>section<sp/>does<sp/>not<sp/>have<sp/>this<sp/>flag<sp/>set,<sp/>then<sp/>it<sp/>may<sp/>not<sp/>hold</highlight></codeline>
 <codeline lineno="543"><highlight class="comment"><sp/><sp/><sp/>*<sp/>more<sp/>than<sp/>2GB<sp/>and<sp/>can<sp/>be<sp/>freely<sp/>referred<sp/>to<sp/>in<sp/>objects<sp/>using<sp/>smaller<sp/>code</highlight></codeline>
 <codeline lineno="544"><highlight class="comment"><sp/><sp/><sp/>*<sp/>models.<sp/>Otherwise,<sp/>only<sp/>objects<sp/>using<sp/>larger<sp/>code<sp/>models<sp/>can<sp/>refer<sp/>to<sp/>them.</highlight></codeline>
@@ -7320,6 +7323,7 @@
 <codeline lineno="620"><highlight class="normal"><sp/><sp/>LIEF_PT_HIOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6fffffff,<sp/></highlight></codeline>
 <codeline lineno="621"><highlight class="normal"><sp/><sp/>LIEF_PT_LOPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,<sp/></highlight></codeline>
 <codeline lineno="622"><highlight class="normal"><sp/><sp/>LIEF_PT_HIPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7fffffff,<sp/></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"></highlight></codeline>
 <codeline lineno="624"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>x86-64<sp/>program<sp/>header<sp/>types.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="625"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>These<sp/>all<sp/>contain<sp/>stack<sp/>unwind<sp/>tables.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="626"><highlight class="normal"><sp/><sp/>LIEF_PT_GNU_EH_FRAME<sp/><sp/>=<sp/>0x6474e550,</highlight></codeline>
@@ -7329,8 +7333,10 @@
 <codeline lineno="630"><highlight class="normal"><sp/><sp/>LIEF_PT_GNU_STACK<sp/><sp/><sp/><sp/><sp/>=<sp/>0x6474e551,<sp/></highlight></codeline>
 <codeline lineno="631"><highlight class="normal"><sp/><sp/>LIEF_PT_GNU_PROPERTY<sp/><sp/>=<sp/>0x6474e553,<sp/></highlight></codeline>
 <codeline lineno="632"><highlight class="normal"><sp/><sp/>LIEF_PT_GNU_RELRO<sp/><sp/><sp/><sp/><sp/>=<sp/>0x6474e552,<sp/></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight></codeline>
 <codeline lineno="634"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>ARM<sp/>program<sp/>header<sp/>types.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="635"><highlight class="normal"><sp/><sp/>LIEF_PT_ARM_ARCHEXT<sp/><sp/><sp/>=<sp/>0x70000000,<sp/></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight></codeline>
 <codeline lineno="637"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>These<sp/>all<sp/>contain<sp/>stack<sp/>unwind<sp/>tables.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="638"><highlight class="normal"><sp/><sp/>LIEF_PT_ARM_EXIDX<sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
 <codeline lineno="639"><highlight class="normal"><sp/><sp/>LIEF_PT_ARM_UNWIND<sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
@@ -7386,25 +7392,31 @@
 <codeline lineno="691"><highlight class="normal"><sp/><sp/>LIEF_DT_RUNPATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>29,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="692"><highlight class="normal"><sp/><sp/>LIEF_DT_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>30,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="693"><highlight class="normal"><sp/><sp/>LIEF_DT_ENCODING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
 <codeline lineno="695"><highlight class="normal"><sp/><sp/>LIEF_DT_PREINIT_ARRAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="696"><highlight class="normal"><sp/><sp/>LIEF_DT_PREINIT_ARRAYSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>33,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight></codeline>
 <codeline lineno="698"><highlight class="normal"><sp/><sp/>LIEF_DT_SYMTAB_SHNDX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>34,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="699"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>35,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="700"><highlight class="normal"><sp/><sp/>LIEF_DT_RELR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>36,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="701"><highlight class="normal"><sp/><sp/>LIEF_DT_RELRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>37,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
 <codeline lineno="703"><highlight class="normal"><sp/><sp/>LIEF_DT_LOOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60000000,<sp/></highlight></codeline>
 <codeline lineno="704"><highlight class="normal"><sp/><sp/>LIEF_DT_HIOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFF,<sp/></highlight></codeline>
 <codeline lineno="705"><highlight class="normal"><sp/><sp/>LIEF_DT_LOPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000000,<sp/></highlight></codeline>
 <codeline lineno="706"><highlight class="normal"><sp/><sp/>LIEF_DT_HIPROC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7FFFFFFF,<sp/></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight></codeline>
 <codeline lineno="708"><highlight class="normal"><sp/><sp/>LIEF_DT_GNU_HASH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFEF5,<sp/></highlight></codeline>
 <codeline lineno="709"><highlight class="normal"><sp/><sp/>LIEF_DT_RELACOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFF9,<sp/></highlight></codeline>
 <codeline lineno="710"><highlight class="normal"><sp/><sp/>LIEF_DT_RELCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFA,<sp/></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight></codeline>
 <codeline lineno="712"><highlight class="normal"><sp/><sp/>LIEF_DT_FLAGS_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFB,<sp/></highlight></codeline>
 <codeline lineno="713"><highlight class="normal"><sp/><sp/>LIEF_DT_VERSYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFF0,<sp/></highlight></codeline>
 <codeline lineno="714"><highlight class="normal"><sp/><sp/>LIEF_DT_VERDEF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFC,<sp/></highlight></codeline>
 <codeline lineno="715"><highlight class="normal"><sp/><sp/>LIEF_DT_VERDEFNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFD,<sp/></highlight></codeline>
 <codeline lineno="716"><highlight class="normal"><sp/><sp/>LIEF_DT_VERNEED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFE,<sp/></highlight></codeline>
 <codeline lineno="717"><highlight class="normal"><sp/><sp/>LIEF_DT_VERNEEDNUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFFFFF,<sp/></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
 <codeline lineno="719"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mips<sp/>specific<sp/>dynamic<sp/>table<sp/>entry<sp/>tags.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="720"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_RLD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,<sp/></highlight></codeline>
 <codeline lineno="721"><highlight class="normal"><sp/><sp/>LIEF_DT_MIPS_TIME_STAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000002,<sp/></highlight></codeline>
@@ -7465,6 +7477,7 @@
 <codeline lineno="776"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELRSZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE001,<sp/></highlight></codeline>
 <codeline lineno="777"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE003,<sp/></highlight></codeline>
 <codeline lineno="778"><highlight class="normal"><sp/><sp/>LIEF_DT_ANDROID_RELRCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6FFFE005,<sp/></highlight></codeline>
+<codeline lineno="779"><highlight class="normal"></highlight></codeline>
 <codeline lineno="780"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_BTI_PLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000001,</highlight></codeline>
 <codeline lineno="781"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_PAC_PLT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000003,</highlight></codeline>
 <codeline lineno="782"><highlight class="normal"><sp/><sp/>LIEF_DT_AARCH64_VARIANT_PCS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x70000005,</highlight></codeline>
@@ -7594,18 +7607,22 @@
 <codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_GID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="912"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EGID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_CLKTCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight></codeline>
 <codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Some<sp/>more<sp/>special<sp/>a_type<sp/>values<sp/>describing<sp/>the<sp/>hardware.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="916"><highlight class="normal"></highlight></codeline>
 <codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_PLATFORM<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="918"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_HWCAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="919"><highlight class="normal"></highlight></codeline>
 <codeline lineno="920"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>entry<sp/>gives<sp/>some<sp/>information<sp/>about<sp/>the<sp/>FPU<sp/>initialization</highlight></codeline>
 <codeline lineno="921"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>performed<sp/>by<sp/>the<sp/>kernel.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="922"><highlight class="normal"></highlight></codeline>
 <codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_FPUCW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>18,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight></codeline>
 <codeline lineno="925"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cache<sp/>block<sp/>sizes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="926"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_DCACHEBSIZE<sp/><sp/><sp/>=<sp/>19,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="927"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_ICACHEBSIZE<sp/><sp/><sp/>=<sp/>20,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="928"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_UCACHEBSIZE<sp/><sp/><sp/>=<sp/>21,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="929"><highlight class="normal"></highlight></codeline>
 <codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>special<sp/>ignored<sp/>value<sp/>for<sp/>PPC,<sp/>used<sp/>by<sp/>the<sp/>kernel<sp/>to<sp/>control<sp/>the</highlight></codeline>
 <codeline lineno="931"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>interpretation<sp/>of<sp/>the<sp/>AUXV.<sp/>Must<sp/>be<sp/>&gt;<sp/>16.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="932"><highlight class="normal"></highlight></codeline>
@@ -7615,6 +7632,7 @@
 <codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_RANDOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>25,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_HWCAP2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>26,<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="938"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_EXECFN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>31,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="939"><highlight class="normal"></highlight></codeline>
 <codeline lineno="940"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointer<sp/>to<sp/>the<sp/>global<sp/>system<sp/>page<sp/>used<sp/>for<sp/>system<sp/>calls<sp/>and<sp/>other</highlight></codeline>
 <codeline lineno="941"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>nice<sp/>things.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="942"><highlight class="normal"><sp/><sp/><sp/>LIEF_AT_SYSINFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>32,</highlight></codeline>

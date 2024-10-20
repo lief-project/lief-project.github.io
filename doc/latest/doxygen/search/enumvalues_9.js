@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['i386_0',['I386',['../classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4ead8b3e50d7c8ecaef026c0ebffd9b5e85',1,'LIEF::PE::Header::I386'],['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ead8b3e50d7c8ecaef026c0ebffd9b5e85',1,'LIEF::ELF::I386']]],
+  ['i386_0',['I386',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#ad6aa4fabf3bf6035db9a334abfc053ccad8b3e50d7c8ecaef026c0ebffd9b5e85',1,'LIEF::dsc::DyldSharedCache::I386'],['../classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4ead8b3e50d7c8ecaef026c0ebffd9b5e85',1,'LIEF::PE::Header::I386'],['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ead8b3e50d7c8ecaef026c0ebffd9b5e85',1,'LIEF::ELF::I386']]],
   ['i486_1',['I486',['../classLIEF_1_1ELF_1_1X86ISA.html#a4219592ffd7054e1d5d9f0d7a67b6af9a168220f2bfc01a335e50fe0f3a4db78c',1,'LIEF::ELF::X86ISA']]],
   ['i586_2',['I586',['../classLIEF_1_1ELF_1_1X86ISA.html#a4219592ffd7054e1d5d9f0d7a67b6af9a552f96311bf955d8aaeb885b05222961',1,'LIEF::ELF::X86ISA']]],
   ['i60_3',['I60',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2ea12220d1c6041a9ddbda85a1effbb8eab',1,'LIEF::ELF']]],
@@ -176,10 +176,11 @@ var searchData=
   ['inuktitut_173',['INUKTITUT',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65a09b3492366fa774cc679753b600f029f',1,'LIEF::PE']]],
   ['invalid_5fsigner_174',['INVALID_SIGNER',['../classLIEF_1_1PE_1_1Signature.html#aefd5b1e4458abd33e7993d37846f7d0cadde11f77e9f89b1f37d7cb1b6eafa219',1,'LIEF::PE::Signature']]],
   ['invariant_175',['INVARIANT',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65abdbe9b3e99678fa8369d445ccf769ccc',1,'LIEF::PE']]],
-  ['ios_176',['IOS',['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3aba3f2adea47b86b0d408de3f7e4d922c',1,'LIEF::MachO::BuildVersion']]],
-  ['ios_5fsimulator_177',['IOS_SIMULATOR',['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3a24a6028451e7f19985c6da10e456d79b',1,'LIEF::MachO::BuildVersion']]],
-  ['ip2k_178',['IP2K',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eae099e2239eb63bd68a574e78637e1dea',1,'LIEF::ELF']]],
-  ['irish_179',['IRISH',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65a190dcf71e4f4779bf82139e592d6bedd',1,'LIEF::PE']]],
-  ['irix_180',['IRIX',['../classLIEF_1_1ELF_1_1Header.html#acecec836b3b9811c5d65b3634e1533d7a2bc415d58fce842bce4883a3e6974237',1,'LIEF::ELF::Header']]],
-  ['italian_181',['ITALIAN',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65ab6a3ee75be7c094822592cdaf15d7451',1,'LIEF::PE']]]
+  ['ios_176',['IOS',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#af541cdc5a6ffb145c0b723dd8129dde5aba3f2adea47b86b0d408de3f7e4d922c',1,'LIEF::dsc::DyldSharedCache::IOS'],['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3aba3f2adea47b86b0d408de3f7e4d922c',1,'LIEF::MachO::BuildVersion::IOS']]],
+  ['ios_5fsimulator_177',['IOS_SIMULATOR',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#af541cdc5a6ffb145c0b723dd8129dde5a24a6028451e7f19985c6da10e456d79b',1,'LIEF::dsc::DyldSharedCache::IOS_SIMULATOR'],['../classLIEF_1_1MachO_1_1BuildVersion.html#ae90129836a70facd8765db8670ec65c3a24a6028451e7f19985c6da10e456d79b',1,'LIEF::MachO::BuildVersion::IOS_SIMULATOR']]],
+  ['iosmac_178',['IOSMAC',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#af541cdc5a6ffb145c0b723dd8129dde5a974283f716e8ab439f38d67c5367f76d',1,'LIEF::dsc::DyldSharedCache']]],
+  ['ip2k_179',['IP2K',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2eae099e2239eb63bd68a574e78637e1dea',1,'LIEF::ELF']]],
+  ['irish_180',['IRISH',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65a190dcf71e4f4779bf82139e592d6bedd',1,'LIEF::PE']]],
+  ['irix_181',['IRIX',['../classLIEF_1_1ELF_1_1Header.html#acecec836b3b9811c5d65b3634e1533d7a2bc415d58fce842bce4883a3e6974237',1,'LIEF::ELF::Header']]],
+  ['italian_182',['ITALIAN',['../namespaceLIEF_1_1PE.html#aa60e9e3f2e02f42e4fe20ef79023ad65ab6a3ee75be7c094822592cdaf15d7451',1,'LIEF::PE']]]
 ];
