@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="struct_elf___dynamic_entry___shared_object__t" kind="struct" language="C++" prot="public">
     <compoundname>Elf_DynamicEntry_SharedObject_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" line="37" column="15" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="37" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="37" column="15" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___dynamic_entry___shared_object__t_1a3aa19412d0e261a8ba7b8bbf45504c9f" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" line="38" column="15" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="38" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="38" column="15" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___dynamic_entry___shared_object__t_1a2b6327afaef3b3fb41b04d5191822ef7" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -43,14 +43,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" line="39" column="14" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="39" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="39" column="14" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="39" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" line="36" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="36" bodyend="40"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="36" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="36" bodyend="40"/>
     <listofallmembers>
       <member refid="struct_elf___dynamic_entry___shared_object__t_1a2b6327afaef3b3fb41b04d5191822ef7" prot="public" virt="non-virtual"><scope>Elf_DynamicEntry_SharedObject_t</scope><name>name</name></member>
       <member refid="struct_elf___dynamic_entry___shared_object__t_1ae8c38df371c1a60ee9b0586349d83831" prot="public" virt="non-virtual"><scope>Elf_DynamicEntry_SharedObject_t</scope><name>tag</name></member>
