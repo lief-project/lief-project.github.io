@@ -5,8 +5,8 @@
 
 .. note::
 
-  The API is documented here https://lief.re/doc/stable/rust/lief/ and the
-  nightly doc is here: https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/index.html.
+  The API is documented here |lief-rust-doc| and the nightly doc is
+  here: |lief-rust-doc-nightly|.
 
 .. code-block:: toml
 
@@ -46,6 +46,8 @@ and download them either from Github (for release) or a S3 bucket for nightly
 builds.
 
 
+.. _lief-rust-precompiled:
+
 ``LIEF_RUST_PRECOMPILED``
 --------------------------
 
@@ -73,7 +75,9 @@ As of now, the following targets are supported with pre-compilation:
 +--------------------------------+--------------------------------------------------------+
 | Target                         | Description                                            |
 +================================+========================================================+
-| ``x86_64-unknown-linux-gnu``   | Regular Linux x86-64 (Ubuntu 20.04, Debian 11.5, ...)  |
+| ``x86_64-unknown-linux-gnu``   | Regular Linux x86-64 (Ubuntu 19.10, Debian 10, ...)    |
++--------------------------------+--------------------------------------------------------+
+| ``x86_64-unknown-linux-musl``  | Musl target that allows full static build              |
 +--------------------------------+--------------------------------------------------------+
 | ``aarch64-unknown-linux-gnu``  | Linux aarch64 (Debian 12+)                             |
 +--------------------------------+--------------------------------------------------------+

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="struct_pe___binary__t" kind="struct" language="C++" prot="public">
     <compoundname>Pe_Binary_t</compoundname>
     <includes refid="_p_e_2_binary_8h" local="no">Binary.h</includes>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="38" column="23" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="38" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="38" column="23" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___binary__t_1a42ee70306bc08085af953adbcebf2e3d" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___dos_header__t" kindref="compound">Pe_DosHeader_t</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="39" column="24" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="39" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="39" column="24" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___binary__t_1ab3cf3a65edaf13499daab5b5178915ac" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___header__t" kindref="compound">Pe_Header_t</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="40" column="24" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="40" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="40" column="24" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___binary__t_1af6aa682ac0356f2debe3b8b86d958309" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref></type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="41" column="24" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="41" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="41" column="24" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___binary__t_1a173a873379509d151c8be83acd88fbf2" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___data_directory__t" kindref="compound">Pe_DataDirectory_t</ref> **</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="42" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="42" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="42" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___binary__t_1a6da45ebcba54fe2c5872924669b77665" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___section__t" kindref="compound">Pe_Section_t</ref> **</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="43" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="43" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="43" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___binary__t_1ab497b4ec1bdf89cf18b134f3a78bcb9c" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___import__t" kindref="compound">Pe_Import_t</ref> **</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="44" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="44" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="44" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -163,7 +163,7 @@
         <link refid="struct_pe___section__t"/>
       </node>
     </collaborationgraph>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" line="37" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h" bodystart="37" bodyend="45"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" line="37" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h" bodystart="37" bodyend="45"/>
     <listofallmembers>
       <member refid="struct_pe___binary__t_1a173a873379509d151c8be83acd88fbf2" prot="public" virt="non-virtual"><scope>Pe_Binary_t</scope><name>data_directories</name></member>
       <member refid="struct_pe___binary__t_1a42ee70306bc08085af953adbcebf2e3d" prot="public" virt="non-virtual"><scope>Pe_Binary_t</scope><name>dos_header</name></member>

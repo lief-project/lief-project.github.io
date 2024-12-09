@@ -1,45 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_p_e_8h" kind="file" language="C++">
     <compoundname>PE.h</compoundname>
     <includes refid="_p_e_2_binary_8h" local="yes">LIEF/PE/Binary.h</includes>
     <includes refid="_enum_to_string_8h" local="yes">LIEF/PE/EnumToString.h</includes>
-    <includedby refid="_l_i_e_f_8h" local="no">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</includedby>
+    <includedby refid="_l_i_e_f_8h" local="no">/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</includedby>
     <incdepgraph>
       <node id="10">
         <label>LIEF/ELF/enums.h</label>
         <link refid="_e_l_f_2enums_8h_source"/>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -53,18 +31,18 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="25">
+      <node id="14">
         <label>LIEF/PE/DataDirectory.h</label>
         <link refid="_data_directory_8h_source"/>
         <childnode refid="9" relation="include">
@@ -80,7 +58,7 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="31">
+      <node id="20">
         <label>LIEF/PE/EnumToString.h</label>
         <link refid="_enum_to_string_8h_source"/>
         <childnode refid="4" relation="include">
@@ -88,7 +66,7 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="12">
         <label>LIEF/PE/Header.h</label>
         <link refid="_p_e_2_header_8h_source"/>
         <childnode refid="9" relation="include">
@@ -96,27 +74,27 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="16">
         <label>LIEF/PE/Import.h</label>
         <link refid="_import_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="28">
+      <node id="17">
         <label>LIEF/PE/ImportEntry.h</label>
         <link refid="_import_entry_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="24">
+      <node id="13">
         <label>LIEF/PE/OptionalHeader.h</label>
         <link refid="_optional_header_8h_source"/>
         <childnode refid="9" relation="include">
@@ -126,7 +104,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="15">
         <label>LIEF/PE/Section.h</label>
         <link refid="_p_e_2_section_8h_source"/>
         <childnode refid="9" relation="include">
@@ -142,44 +120,11 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="18">
         <label>LIEF/types.h</label>
         <link refid="types_8h_source"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-      </node>
-      <node id="16">
-        <label>LIEF/ELF/Relocations/AArch64.def</label>
-      </node>
-      <node id="17">
-        <label>LIEF/ELF/Relocations/ARM.def</label>
-      </node>
-      <node id="19">
-        <label>LIEF/ELF/Relocations/Hexagon.def</label>
-      </node>
-      <node id="22">
-        <label>LIEF/ELF/Relocations/LoongArch.def</label>
-      </node>
-      <node id="18">
-        <label>LIEF/ELF/Relocations/Mips.def</label>
-      </node>
-      <node id="14">
-        <label>LIEF/ELF/Relocations/PowerPC.def</label>
-      </node>
-      <node id="15">
-        <label>LIEF/ELF/Relocations/PowerPC64.def</label>
-      </node>
-      <node id="21">
-        <label>LIEF/ELF/Relocations/Sparc.def</label>
-      </node>
-      <node id="20">
-        <label>LIEF/ELF/Relocations/SystemZ.def</label>
-      </node>
-      <node id="13">
-        <label>LIEF/ELF/Relocations/i386.def</label>
-      </node>
-      <node id="12">
-        <label>LIEF/ELF/Relocations/x86_64.def</label>
       </node>
       <node id="11">
         <label>LIEF/ELF/undef.h</label>
@@ -199,17 +144,17 @@
       <node id="3">
         <label>stddef.h</label>
       </node>
-      <node id="30">
+      <node id="19">
         <label>stdint.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -242,6 +187,6 @@
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LIEF/PE/EnumToString.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/PE.h"/>
   </compounddef>
 </doxygen>
