@@ -352,6 +352,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24941b4e9eeb0dc0f0702c38b29acc19" id="r_a24941b4e9eeb0dc0f0702c38b29acc19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24941b4e9eeb0dc0f0702c38b29acc19">write</a> (const std::string &amp;filename) override</td></tr>
 <tr class="memdesc:a24941b4e9eeb0dc0f0702c38b29acc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct the binary object and write the result in the given <code>filename</code>  <br /></td></tr>
 <tr class="separator:a24941b4e9eeb0dc0f0702c38b29acc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1e7e58db30ac06936767fef6bc64b5" id="r_a7d1e7e58db30ac06936767fef6bc64b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d1e7e58db30ac06936767fef6bc64b5">write</a> (const std::string &amp;filename, <a class="el" href="structLIEF_1_1MachO_1_1Builder_1_1config__t.html">Builder::config_t</a> config)</td></tr>
+<tr class="memdesc:a7d1e7e58db30ac06936767fef6bc64b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct the binary object and write the result in the given <code>filename</code>.  <br /></td></tr>
+<tr class="separator:a7d1e7e58db30ac06936767fef6bc64b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af664c5e0c30591468309ce9251fad96a" id="r_af664c5e0c30591468309ce9251fad96a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af664c5e0c30591468309ce9251fad96a">write</a> (std::ostream &amp;os) override</td></tr>
 <tr class="memdesc:af664c5e0c30591468309ce9251fad96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct the binary object and write the result in the given <code>os</code> stream.  <br /></td></tr>
 <tr class="separator:af664c5e0c30591468309ce9251fad96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -946,6 +949,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aa93c40d76caf043e80c3a83740dc3544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a046b5bf1fc2d0d4b3af4a2b4a9313aa5" id="r_a046b5bf1fc2d0d4b3af4a2b4a9313aa5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a046b5bf1fc2d0d4b3af4a2b4a9313aa5">classof</a> (const <a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> *bin)</td></tr>
 <tr class="separator:a046b5bf1fc2d0d4b3af4a2b4a9313aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49425ab47a8a8f71a647305467296df9" id="r_a49425ab47a8a8f71a647305467296df9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49425ab47a8a8f71a647305467296df9">can_cache_segment</a> (const <a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> &amp;segment)</td></tr>
+<tr class="memdesc:a49425ab47a8a8f71a647305467296df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given segment can go in the offset_seg_ cache.  <br /></td></tr>
+<tr class="separator:a49425ab47a8a8f71a647305467296df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class which represents a <a class="el" href="namespaceLIEF_1_1MachO.html" title="Namespace related to the LIEF&#39;s Mach-O module.">MachO</a> binary. </p>
@@ -1811,6 +1817,33 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49425ab47a8a8f71a647305467296df9" name="a49425ab47a8a8f71a647305467296df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49425ab47a8a8f71a647305467296df9">&#9670;&#160;</a></span>can_cache_segment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::MachO::Binary::can_cache_segment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>segment</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the given segment can go in the offset_seg_ cache. </p>
 
 </div>
 </div>
@@ -6018,7 +6051,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="a24941b4e9eeb0dc0f0702c38b29acc19" name="a24941b4e9eeb0dc0f0702c38b29acc19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24941b4e9eeb0dc0f0702c38b29acc19">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a24941b4e9eeb0dc0f0702c38b29acc19">&#9670;&#160;</a></span>write() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6052,8 +6085,39 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a7d1e7e58db30ac06936767fef6bc64b5" name="a7d1e7e58db30ac06936767fef6bc64b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1e7e58db30ac06936767fef6bc64b5">&#9670;&#160;</a></span>write() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LIEF::MachO::Binary::write </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLIEF_1_1MachO_1_1Builder_1_1config__t.html">Builder::config_t</a></td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reconstruct the binary object and write the result in the given <code>filename</code>. </p>
+<p>The second <code>config</code> parameter is used to tweak the building process</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Path to write the reconstructed binary </td></tr>
+    <tr><td class="paramname">config</td><td><a class="el" href="classLIEF_1_1MachO_1_1Builder.html" title="Class used to rebuild a Mach-O file.">Builder</a> configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af664c5e0c30591468309ce9251fad96a" name="af664c5e0c30591468309ce9251fad96a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af664c5e0c30591468309ce9251fad96a">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af664c5e0c30591468309ce9251fad96a">&#9670;&#160;</a></span>write() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
