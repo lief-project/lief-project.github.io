@@ -1,17 +1,19 @@
 <map id="LIEF::ELF::NoteGnuProperty::Property" name="LIEF::ELF::NoteGnuProperty::Property">
-<area shape="rect" id="Node000001" title="This class wraps the different properties that can be used in a NT_GNU_PROPERTY_TYPE_0 note." alt="" coords="5,146,204,186"/>
+<area shape="rect" id="Node000001" title="This class wraps the different properties that can be used in a NT_GNU_PROPERTY_TYPE_0 note." alt="" coords="5,171,204,211"/>
 <area shape="rect" id="Node000002" href="$classLIEF_1_1ELF_1_1AArch64Feature.html" title="This class represents the GNU_PROPERTY_AARCH64_FEATURE_1_AND property." alt="" coords="281,5,471,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,134,183,85,216,60,251,40,281,28,283,33,253,44,219,64,186,89,135,138"/>
-<area shape="rect" id="Node000003" href="$classLIEF_1_1ELF_1_1Generic.html" title="This class represents a property which doesn&#39;t have a concrete LIEF implementation." alt="" coords="308,55,444,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,137,198,111,251,89,307,74,308,80,253,94,200,116,152,141"/>
-<area shape="rect" id="Node000004" href="$classLIEF_1_1ELF_1_1Needed.html" title=" " alt="" coords="308,104,444,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,143,307,126,308,132,218,148"/>
-<area shape="rect" id="Node000005" href="$classLIEF_1_1ELF_1_1NoteNoCopyOnProtected.html" title="This class provides an interface over the GNU_PROPERTY_NO_COPY_ON_PROTECTED property...." alt="" coords="252,153,500,179"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="218,163,252,163,252,169,218,169"/>
-<area shape="rect" id="Node000006" href="$classLIEF_1_1ELF_1_1StackSize.html" title="This class provides an interface over the GNU_PROPERTY_STACK_SIZE property." alt="" coords="301,203,451,228"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="218,184,306,200,305,205,217,189"/>
-<area shape="rect" id="Node000007" href="$classLIEF_1_1ELF_1_1X86Features.html" title="This class interfaces the different GNU_PROPERTY_X86_FEATURE_* properties which includes:" alt="" coords="293,252,459,277"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="153,190,200,215,253,237,298,249,297,254,251,242,198,220,150,195"/>
-<area shape="rect" id="Node000008" href="$classLIEF_1_1ELF_1_1X86ISA.html" title="This class interfaces the different GNU_PROPERTY_X86_ISA_* properties which includes:" alt="" coords="309,301,443,327"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="135,194,187,242,219,266,253,286,281,297,310,304,308,309,279,302,251,291,216,271,183,246,131,198"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,159,177,97,212,66,251,40,280,28,282,33,253,44,215,70,181,101,129,162"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1ELF_1_1AArch64PAuth.html" title="This class represents the GNU_PROPERTY_AARCH64_FEATURE_PAUTH property." alt="" coords="287,55,465,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,160,189,123,251,89,286,77,288,82,253,94,192,127,141,165"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1ELF_1_1Generic.html" title="This class represents a property which doesn&#39;t have a concrete LIEF implementation." alt="" coords="308,104,444,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,164,251,138,307,125,308,131,253,143,172,169"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1ELF_1_1Needed.html" title=" " alt="" coords="308,153,444,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="217,178,308,170,308,175,218,183"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1ELF_1_1NoteNoCopyOnProtected.html" title="This class provides an interface over the GNU_PROPERTY_NO_COPY_ON_PROTECTED property...." alt="" coords="252,203,500,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="218,199,252,202,251,207,217,204"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1ELF_1_1StackSize.html" title="This class provides an interface over the GNU_PROPERTY_STACK_SIZE property." alt="" coords="301,252,451,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="176,213,253,237,307,249,306,255,251,242,174,218"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1ELF_1_1X86Features.html" title="This class interfaces the different GNU_PROPERTY_X86_FEATURE_* properties which includes:" alt="" coords="293,301,459,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="142,217,193,254,253,286,293,299,291,304,251,291,190,258,139,222"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1ELF_1_1X86ISA.html" title="This class interfaces the different GNU_PROPERTY_X86_ISA_* properties which includes:" alt="" coords="309,351,443,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="130,221,182,281,216,311,253,336,281,347,310,354,309,360,279,352,251,340,213,315,178,284,126,225"/>
 </map>

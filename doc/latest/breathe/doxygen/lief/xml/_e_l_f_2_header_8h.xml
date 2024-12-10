@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_e_l_f_2_header_8h" kind="file" language="C++">
     <compoundname>Header.h</compoundname>
     <includes local="no">inttypes.h</includes>
     <includes refid="_e_l_f_2enums_8h" local="yes">LIEF/ELF/enums.h</includes>
-    <includedby refid="_e_l_f_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</includedby>
-    <includedby refid="_e_l_f_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</includedby>
+    <includedby refid="_e_l_f_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/ELF.h</includedby>
+    <includedby refid="_e_l_f_2_binary_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Header.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Header.h</label>
         <link refid="_e_l_f_2_header_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -20,61 +20,6 @@
         <link refid="_e_l_f_2enums_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>LIEF/ELF/Relocations/AArch64.def</label>
-      </node>
-      <node id="10">
-        <label>LIEF/ELF/Relocations/ARM.def</label>
-      </node>
-      <node id="12">
-        <label>LIEF/ELF/Relocations/Hexagon.def</label>
-      </node>
-      <node id="15">
-        <label>LIEF/ELF/Relocations/LoongArch.def</label>
-      </node>
-      <node id="11">
-        <label>LIEF/ELF/Relocations/Mips.def</label>
-      </node>
-      <node id="7">
-        <label>LIEF/ELF/Relocations/PowerPC.def</label>
-      </node>
-      <node id="8">
-        <label>LIEF/ELF/Relocations/PowerPC64.def</label>
-      </node>
-      <node id="14">
-        <label>LIEF/ELF/Relocations/Sparc.def</label>
-      </node>
-      <node id="13">
-        <label>LIEF/ELF/Relocations/SystemZ.def</label>
-      </node>
-      <node id="6">
-        <label>LIEF/ELF/Relocations/i386.def</label>
-      </node>
-      <node id="5">
-        <label>LIEF/ELF/Relocations/x86_64.def</label>
       </node>
       <node id="4">
         <label>LIEF/ELF/undef.h</label>
@@ -85,19 +30,19 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF.h</label>
         <link refid="_e_l_f_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h</label>
         <link refid="_e_l_f_2_binary_8h_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Header.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Header.h</label>
         <link refid="_e_l_f_2_header_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -105,7 +50,7 @@
         </childnode>
       </node>
       <node id="3">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
     </invincdepgraph>
@@ -122,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Header.h" line="43" column="27" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Header.h" bodystart="43" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Header.h" line="43" column="27" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/Header.h" bodystart="43" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -181,6 +126,6 @@
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Header.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Header.h"/>
   </compounddef>
 </doxygen>

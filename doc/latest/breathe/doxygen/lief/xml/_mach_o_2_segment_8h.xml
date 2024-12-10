@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_mach_o_2_segment_8h" kind="file" language="C++">
     <compoundname>Segment.h</compoundname>
     <includes local="no">inttypes.h</includes>
     <includes refid="_mach_o_2enums_8h" local="yes">LIEF/MachO/enums.h</includes>
     <includes refid="_mach_o_2_section_8h" local="yes">LIEF/MachO/Section.h</includes>
-    <includedby refid="_mach_o_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO.h</includedby>
-    <includedby refid="_mach_o_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h</includedby>
+    <includedby refid="_mach_o_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/MachO.h</includedby>
+    <includedby refid="_mach_o_2_binary_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h</includedby>
     <incdepgraph>
       <node id="6">
         <label>LIEF/MachO/Section.h</label>
@@ -17,7 +17,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h</label>
         <link refid="_mach_o_2_segment_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -46,23 +46,23 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/MachO.h</label>
         <link refid="_mach_o_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h</label>
         <link refid="_mach_o_2_binary_8h_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h</label>
         <link refid="_mach_o_2_segment_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="41" column="30" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="41" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="41" column="30" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="41" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -128,7 +128,7 @@
 <codeline lineno="35"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>content;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/>sections;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>Macho_Section_t**<sp/>sections;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>;</highlight></codeline>
@@ -140,6 +140,6 @@
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h"/>
   </compounddef>
 </doxygen>

@@ -8,5 +8,5 @@ var searchData=
   ['key_5fvalue_5fsize_5',['key_value_size',['../classLIEF_1_1OAT_1_1Header.html#aa14a21548b7da53cdc5954ba9977c8be',1,'LIEF::OAT::Header']]],
   ['key_5fvalues_6',['key_values',['../classLIEF_1_1OAT_1_1Header.html#a5382d74bb91eb8e35a0f068c9383c415',1,'LIEF::OAT::Header::key_values()'],['../classLIEF_1_1OAT_1_1Header.html#a13fe29d5d35d461ba0602d08c910db50',1,'LIEF::OAT::Header::key_values() const']]],
   ['keys_7',['keys',['../classLIEF_1_1OAT_1_1Header.html#ae75dc589ef9cbedfec7b81c0314579be',1,'LIEF::OAT::Header']]],
-  ['kind_8',['kind',['../classLIEF_1_1dwarf_1_1Type.html#a803de40c7ae40e7e6a50f62df35ad782',1,'LIEF::dwarf::Type::kind()'],['../classLIEF_1_1MachO_1_1ExportInfo.html#a7db3c82cf41e770f79a4bbad40990385',1,'LIEF::MachO::ExportInfo::kind()'],['../classLIEF_1_1pdb_1_1Type.html#afabbbad92d762b77de73d61ccd4fa732',1,'LIEF::pdb::Type::kind()']]]
+  ['kind_8',['kind',['../classLIEF_1_1dwarf_1_1Parameter.html#ac7bf528a45917f9185d4a13b6c353a4d',1,'LIEF::dwarf::Parameter::kind()'],['../classLIEF_1_1dwarf_1_1Type.html#a803de40c7ae40e7e6a50f62df35ad782',1,'LIEF::dwarf::Type::kind()'],['../classLIEF_1_1MachO_1_1ExportInfo.html#a7db3c82cf41e770f79a4bbad40990385',1,'LIEF::MachO::ExportInfo::kind()'],['../classLIEF_1_1pdb_1_1Type.html#afabbbad92d762b77de73d61ccd4fa732',1,'LIEF::pdb::Type::kind()']]]
 ];

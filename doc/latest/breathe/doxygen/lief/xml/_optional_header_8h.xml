@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_optional_header_8h" kind="file" language="C++">
     <compoundname>OptionalHeader.h</compoundname>
     <includes local="no">inttypes.h</includes>
     <includes refid="_p_e_2enums_8h" local="yes">LIEF/PE/enums.h</includes>
     <includes local="yes">LIEF/visibility.h</includes>
-    <includedby refid="_p_e_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h</label>
         <link refid="_optional_header_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -40,23 +40,23 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="3">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h</label>
         <link refid="_p_e_2_binary_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h</label>
         <link refid="_optional_header_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="27" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="27" bodyend="39"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="27" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="27" bodyend="39"/>
       </memberdef>
       <memberdef kind="enum" id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634e" prot="public" static="no" strong="no">
         <type></type>
@@ -309,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="41" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="41" bodyend="56"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="41" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="41" bodyend="56"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="91" column="34" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="91" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="91" column="34" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="91" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" line="93" column="13" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h" declline="93" declcolumn="13"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="93" column="13" declfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" declline="93" declcolumn="13"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -451,6 +451,6 @@
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h"/>
   </compounddef>
 </doxygen>

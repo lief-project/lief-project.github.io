@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_e_l_f_2_binary_8h" kind="file" language="C++">
     <compoundname>Binary.h</compoundname>
     <includes local="no">stddef.h</includes>
@@ -10,10 +10,10 @@
     <includes refid="_e_l_f_2_header_8h" local="yes">LIEF/ELF/Header.h</includes>
     <includes refid="_dynamic_entry_8h" local="yes">LIEF/ELF/DynamicEntry.h</includes>
     <includes refid="_e_l_f_2_symbol_8h" local="yes">LIEF/ELF/Symbol.h</includes>
-    <includedby refid="_e_l_f_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</includedby>
+    <includedby refid="_e_l_f_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/ELF.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h</label>
         <link refid="_e_l_f_2_binary_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -21,51 +21,51 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="11">
         <label>LIEF/ELF/DynamicEntry.h</label>
         <link refid="_dynamic_entry_8h_source"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="9">
         <label>LIEF/ELF/Header.h</label>
         <link refid="_e_l_f_2_header_8h_source"/>
-        <childnode refid="21" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="6">
         <label>LIEF/ELF/Section.h</label>
         <link refid="_e_l_f_2_section_8h_source"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="8">
         <label>LIEF/ELF/Segment.h</label>
         <link refid="_e_l_f_2_segment_8h_source"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="12">
         <label>LIEF/ELF/Symbol.h</label>
         <link refid="_e_l_f_2_symbol_8h_source"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -73,67 +73,12 @@
         <link refid="_e_l_f_2enums_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-      </node>
-      <node id="24">
-        <label>LIEF/types.h</label>
-        <link refid="types_8h_source"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>LIEF/ELF/Relocations/AArch64.def</label>
-      </node>
-      <node id="11">
-        <label>LIEF/ELF/Relocations/ARM.def</label>
       </node>
       <node id="13">
-        <label>LIEF/ELF/Relocations/Hexagon.def</label>
-      </node>
-      <node id="16">
-        <label>LIEF/ELF/Relocations/LoongArch.def</label>
-      </node>
-      <node id="12">
-        <label>LIEF/ELF/Relocations/Mips.def</label>
-      </node>
-      <node id="8">
-        <label>LIEF/ELF/Relocations/PowerPC.def</label>
-      </node>
-      <node id="9">
-        <label>LIEF/ELF/Relocations/PowerPC64.def</label>
-      </node>
-      <node id="15">
-        <label>LIEF/ELF/Relocations/Sparc.def</label>
-      </node>
-      <node id="14">
-        <label>LIEF/ELF/Relocations/SystemZ.def</label>
-      </node>
-      <node id="7">
-        <label>LIEF/ELF/Relocations/i386.def</label>
-      </node>
-      <node id="6">
-        <label>LIEF/ELF/Relocations/x86_64.def</label>
+        <label>LIEF/types.h</label>
+        <link refid="types_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="5">
         <label>LIEF/ELF/undef.h</label>
@@ -141,31 +86,31 @@
       <node id="3">
         <label>LIEF/visibility.h</label>
       </node>
-      <node id="21">
+      <node id="10">
         <label>inttypes.h</label>
       </node>
       <node id="2">
         <label>stddef.h</label>
       </node>
-      <node id="18">
+      <node id="7">
         <label>stdint.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF.h</label>
         <link refid="_e_l_f_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h</label>
         <link refid="_e_l_f_2_binary_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
     </invincdepgraph>
@@ -182,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" line="48" column="27" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" bodystart="48" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" line="48" column="27" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" bodystart="48" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -202,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" line="51" column="15" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" declline="51" declcolumn="15"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" line="51" column="15" declfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" declline="51" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="_e_l_f_2_binary_8h_1abb43b1d09a7e42e846a8e9a050b97776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -219,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" line="53" column="7" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" declline="53" declcolumn="7"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" line="53" column="7" declfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" declline="53" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="_e_l_f_2_binary_8h_1aafb05be6c71b05ff0fadb06c3090c17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -237,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" line="56" column="6" declfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h" declline="56" declcolumn="6"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" line="56" column="6" declfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h" declline="56" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -283,12 +228,12 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interpreter;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="struct_elf___header__t" kindref="compound">Elf_Header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="struct_elf___section__t" kindref="compound">Elf_Section_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>**sections;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="struct_elf___segment__t" kindref="compound">Elf_Segment_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>**segments;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="struct_elf___dynamic_entry__t" kindref="compound">Elf_DynamicEntry_t</ref><sp/>**dynamic_entries;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**dynamic_symbols;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="struct_elf___symbol__t" kindref="compound">Elf_Symbol_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**symtab_symbols;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>Elf_Header_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>Elf_Section_t<sp/><sp/><sp/><sp/><sp/><sp/>**sections;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>Elf_Segment_t<sp/><sp/><sp/><sp/><sp/><sp/>**segments;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>Elf_DynamicEntry_t<sp/>**dynamic_entries;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>Elf_Symbol_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>**dynamic_symbols;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>Elf_Symbol_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>**symtab_symbols;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_elf___binary__t" kindref="compound">Elf_Binary_t</ref><sp/><ref refid="struct_elf___binary__t" kindref="compound">Elf_Binary_t</ref>;</highlight></codeline>
@@ -305,6 +250,6 @@
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h"/>
   </compounddef>
 </doxygen>

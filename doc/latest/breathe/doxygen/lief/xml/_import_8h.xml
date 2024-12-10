@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_import_8h" kind="file" language="C++">
     <compoundname>Import.h</compoundname>
     <includes local="no">inttypes.h</includes>
     <includes refid="_p_e_2enums_8h" local="yes">LIEF/PE/enums.h</includes>
     <includes refid="_import_entry_8h" local="yes">LIEF/PE/ImportEntry.h</includes>
-    <includedby refid="_p_e_2_binary_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</includedby>
+    <includedby refid="_p_e_2_binary_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h</label>
         <link refid="_import_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -56,23 +56,23 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="3">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h</label>
         <link refid="_p_e_2_binary_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h</label>
         <link refid="_import_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="37" column="26" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="37" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="37" column="26" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="37" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -130,7 +130,7 @@
 <codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>forwarder_chain;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timedatestamp;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="struct_pe___import_entry__t" kindref="compound">Pe_ImportEntry_t</ref>**<sp/>entries;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>Pe_ImportEntry_t**<sp/>entries;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>import_address_table_rva;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>import_lookup_table_rva;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">};</highlight></codeline>
@@ -144,6 +144,6 @@
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h"/>
   </compounddef>
 </doxygen>

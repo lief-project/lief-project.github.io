@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="struct_pe___import__t" kind="struct" language="C++" prot="public">
     <compoundname>Pe_Import_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="29" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="29" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="29" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___import__t_1ae47b51062989414c2ab620d7d2166630" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="30" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="30" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="30" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___import__t_1a0439939c37cefdb481b793181fa6f4df" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="31" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="31" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="31" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___import__t_1a8dbdcdddb3fb5f48a77f9638c8f71eeb" prot="public" static="no" mutable="no">
         <type><ref refid="struct_pe___import_entry__t" kindref="compound">Pe_ImportEntry_t</ref> **</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="32" column="20" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="32" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="32" column="20" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___import__t_1a7a7873be5f1611c9f0eb42102c1536f0" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="33" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="33" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="33" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___import__t_1a4a5f9239e34227d5370b938d353f947b" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="34" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="34" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="34" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="34" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -105,7 +105,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" line="28" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h" bodystart="28" bodyend="35"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" line="28" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h" bodystart="28" bodyend="35"/>
     <listofallmembers>
       <member refid="struct_pe___import__t_1a8dbdcdddb3fb5f48a77f9638c8f71eeb" prot="public" virt="non-virtual"><scope>Pe_Import_t</scope><name>entries</name></member>
       <member refid="struct_pe___import__t_1ae47b51062989414c2ab620d7d2166630" prot="public" virt="non-virtual"><scope>Pe_Import_t</scope><name>forwarder_chain</name></member>

@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="types_8h" kind="file" language="C++">
     <compoundname>types.h</compoundname>
     <includes local="no">stdint.h</includes>
-    <includedby refid="_e_l_f_2_symbol_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h</includedby>
-    <includedby refid="utils_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/utils.h</includedby>
-    <includedby refid="_import_entry_8h" local="yes">/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/ImportEntry.h</includedby>
+    <includedby refid="_e_l_f_2_symbol_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/ELF/Symbol.h</includedby>
+    <includedby refid="utils_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/ELF/utils.h</includedby>
+    <includedby refid="_import_entry_8h" local="yes">/builds/LIEF/lief/api/c/include/LIEF/PE/ImportEntry.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/types.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/types.h</label>
         <link refid="types_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -19,19 +19,19 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF.h</label>
         <link refid="_e_l_f_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h</label>
         <link refid="_e_l_f_2_binary_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/Symbol.h</label>
         <link refid="_e_l_f_2_symbol_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -39,41 +39,41 @@
         </childnode>
       </node>
       <node id="6">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/utils.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/ELF/utils.h</label>
         <link refid="utils_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/LIEF.h</label>
         <link refid="_l_i_e_f_8h_source"/>
       </node>
       <node id="10">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE.h</label>
         <link refid="_p_e_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="9">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h</label>
         <link refid="_p_e_2_binary_8h_source"/>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h</label>
         <link refid="_import_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="7">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/ImportEntry.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/PE/ImportEntry.h</label>
         <link refid="_import_entry_8h_source"/>
         <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/types.h</label>
+        <label>/builds/LIEF/lief/api/c/include/LIEF/types.h</label>
         <link refid="types_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -113,6 +113,6 @@
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/types.h"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/types.h"/>
   </compounddef>
 </doxygen>

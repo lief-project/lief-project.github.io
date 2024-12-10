@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxyfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doxyfile.xsd" version="1.11.0" xml:lang="en-US">
+<doxyfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doxyfile.xsd" version="1.13.0" xml:lang="en-US">
   <option  id='DOXYFILE_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA[lief]]></value></option>
   <option  id='PROJECT_NUMBER' default='yes' type='string'><value><![CDATA[]]></value></option>
@@ -82,6 +82,7 @@
   <option  id='RESOLVE_UNNAMED_PARAMS' default='yes' type='bool'><value>YES</value></option>
   <option  id='HIDE_UNDOC_MEMBERS' default='yes' type='bool'><value>NO</value></option>
   <option  id='HIDE_UNDOC_CLASSES' default='yes' type='bool'><value>NO</value></option>
+  <option  id='HIDE_UNDOC_NAMESPACES' default='yes' type='bool'><value>YES</value></option>
   <option  id='HIDE_FRIEND_COMPOUNDS' default='yes' type='bool'><value>NO</value></option>
   <option  id='HIDE_IN_BODY_DOCS' default='yes' type='bool'><value>NO</value></option>
   <option  id='INTERNAL_DOCS' default='yes' type='bool'><value>NO</value></option>
@@ -113,6 +114,8 @@
   <option  id='LAYOUT_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='CITE_BIB_FILES' default='yes' type='stringlist'>
   </option>
+  <option  id='EXTERNAL_TOOL_PATH' default='yes' type='stringlist'>
+  </option>
   <option  id='QUIET' default='no' type='bool'><value>YES</value></option>
   <option  id='WARNINGS' default='yes' type='bool'><value>YES</value></option>
   <option  id='WARN_IF_UNDOCUMENTED' default='no' type='bool'><value>NO</value></option>
@@ -125,37 +128,37 @@
   <option  id='WARN_LINE_FORMAT' default='yes' type='string'><value><![CDATA["at line $line of file $file"]]></value></option>
   <option  id='WARN_LOGFILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='INPUT' default='no' type='stringlist'>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/LIEF.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/logging.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/types.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Binary.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/DynamicEntry.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Header.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Section.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Segment.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/Symbol.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/enums.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/ELF/utils.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Header.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/LoadCommand.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Section.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Symbol.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/enums.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Binary.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/DataDirectory.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/DosHeader.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/EnumToString.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Import.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/ImportEntry.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/OptionalHeader.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Section.h]]></value>
-    <value><![CDATA[/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/enums.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/logging.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/LIEF.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/types.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/enums.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/Section.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/DataDirectory.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/DosHeader.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/ImportEntry.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/EnumToString.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/Binary.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/PE/Import.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/enums.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/Section.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/LoadCommand.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/Header.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/MachO/Symbol.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/enums.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/Section.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/Header.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/Segment.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/Binary.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/utils.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/Symbol.h]]></value>
+    <value><![CDATA[/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h]]></value>
   </option>
   <option  id='INPUT_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='INPUT_FILE_ENCODING' default='yes' type='stringlist'>
@@ -297,6 +300,7 @@
   <option  id='GENERATE_TREEVIEW' default='yes' type='bool'><value>NO</value></option>
   <option  id='FULL_SIDEBAR' default='yes' type='bool'><value>NO</value></option>
   <option  id='ENUM_VALUES_PER_LINE' default='yes' type='int'><value>4</value></option>
+  <option  id='SHOW_ENUM_VALUES' default='yes' type='bool'><value>NO</value></option>
   <option  id='TREEVIEW_WIDTH' default='yes' type='int'><value>250</value></option>
   <option  id='EXT_LINKS_IN_WINDOW' default='yes' type='bool'><value>NO</value></option>
   <option  id='OBFUSCATE_EMAILS' default='yes' type='bool'><value>YES</value></option>
@@ -424,6 +428,8 @@
   <option  id='PLANTUML_JAR_PATH' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PLANTUML_CFG_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PLANTUML_INCLUDE_PATH' default='yes' type='stringlist'>
+  </option>
+  <option  id='PLANTUMLFILE_DIRS' default='yes' type='stringlist'>
   </option>
   <option  id='DOT_GRAPH_MAX_NODES' default='yes' type='int'><value>50</value></option>
   <option  id='MAX_DOT_GRAPH_DEPTH' default='yes' type='int'><value>0</value></option>

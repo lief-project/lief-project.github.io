@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="struct_pe___header__t" kind="struct" language="C++" prot="public">
     <compoundname>Pe_Header_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="76" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="76" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="76" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1a4c717fa6553cc8fbd2372e4ea740330c" prot="public" static="no" mutable="no">
         <type>enum LIEF_PE_MACHINE_TYPES</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="77" column="29" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="77" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="77" column="29" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1ae066bb86bfdc8ac7251f506e867d88f7" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="78" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="78" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="78" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1a5815c4db98e918e63c55caea8bc3ce30" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="79" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="79" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="79" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1aa2ce087166bc7b8c91364bd85ab532ca" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="80" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="80" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="80" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1a3d974a574faf00934ea163b41f178760" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="81" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="81" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="81" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1a83730eddfb3361a397af2bb460c99a17" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="82" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="82" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="82" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_pe___header__t_1ad7d58cf4a8cab19b152e6f4006895cc8" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -113,14 +113,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="83" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="83" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="83" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="83" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" line="75" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/PE/Header.h" bodystart="75" bodyend="84"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" line="75" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/Header.h" bodystart="75" bodyend="84"/>
     <listofallmembers>
       <member refid="struct_pe___header__t_1ad7d58cf4a8cab19b152e6f4006895cc8" prot="public" virt="non-virtual"><scope>Pe_Header_t</scope><name>characteristics</name></member>
       <member refid="struct_pe___header__t_1a4c717fa6553cc8fbd2372e4ea740330c" prot="public" virt="non-virtual"><scope>Pe_Header_t</scope><name>machine</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="struct_macho___segment__t" kind="struct" language="C++" prot="public">
     <compoundname>Macho_Segment_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="27" column="20" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="27" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="27" column="20" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a36c39afbd8132600e0e115962bcceac5" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="28" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="28" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="28" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1ad81fb52ff25bd3ce77eff84f8084900f" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="29" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="29" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="29" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a23732e7b0f5d6cedc910e71574cdcd07" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="30" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="30" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="30" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a786d6b789179364095271b40a5ab72d4" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="31" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="31" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="31" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a498ca360cbe9681d202c61ecbf2a220a" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="32" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="32" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="32" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1af50676f73dc4a36ef1928e160ac72500" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="33" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="33" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="33" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a4668026a5e3225d0c4f23763966e6680" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="34" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="34" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="34" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a5b782969caa68c977a83a1dab4718149" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="35" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="35" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="35" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1a39f8c78aabaa786ae5ebb323fdc1ede6" prot="public" static="no" mutable="no">
         <type>uint8_t *</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="36" column="20" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="36" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="36" column="20" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1ac48186893fb3e44cc0c161b4986f3de6" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="37" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="37" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="37" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___segment__t_1ac0b1c94484863f03ef8860ec118ba484" prot="public" static="no" mutable="no">
         <type><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref> **</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="38" column="19" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="38" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="38" column="19" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="38" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -189,7 +189,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" line="26" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Segment.h" bodystart="26" bodyend="39"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" line="26" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Segment.h" bodystart="26" bodyend="39"/>
     <listofallmembers>
       <member refid="struct_macho___segment__t_1a39f8c78aabaa786ae5ebb323fdc1ede6" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>content</name></member>
       <member refid="struct_macho___segment__t_1a786d6b789179364095271b40a5ab72d4" prot="public" virt="non-virtual"><scope>Macho_Segment_t</scope><name>file_offset</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="struct_macho___binary__t" kind="struct" language="C++" prot="public">
     <compoundname>Macho_Binary_t</compoundname>
     <includes refid="_mach_o_2_binary_8h" local="no">Binary.h</includes>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="35" column="22" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="35" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="35" column="22" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___binary__t_1af074cd9b66a1d445f647d5078a780da4" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="36" column="23" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="36" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="36" column="23" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___binary__t_1a8a6836aa355c36b84700c76256a03316" prot="public" static="no" mutable="no">
         <type><ref refid="struct_macho___header__t" kindref="compound">Macho_Header_t</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="37" column="23" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="37" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="37" column="23" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___binary__t_1ab03a20311d6aa0dbefb8fa83fca22071" prot="public" static="no" mutable="no">
         <type><ref refid="struct_macho___command__t" kindref="compound">Macho_Command_t</ref> **</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="38" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="38" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="38" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___binary__t_1af7dec6d40f8961a5bea5dec7280cb66a" prot="public" static="no" mutable="no">
         <type><ref refid="struct_macho___symbol__t" kindref="compound">Macho_Symbol_t</ref> **</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="39" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="39" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="39" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___binary__t_1aa28bf05ac5218adce1cc7c22c822c78c" prot="public" static="no" mutable="no">
         <type><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref> **</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="40" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="40" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="40" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_macho___binary__t_1aada2335c624ff4853e2dba10408c5df6" prot="public" static="no" mutable="no">
         <type><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref> **</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="41" column="21" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="41" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="41" column="21" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="41" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -152,7 +152,7 @@
         <link refid="struct_macho___symbol__t"/>
       </node>
     </collaborationgraph>
-    <location file="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" line="34" column="1" bodyfile="/home/lief-doc/project/LIEF-doc-src/api/c/include/LIEF/MachO/Binary.h" bodystart="34" bodyend="43"/>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" line="34" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/MachO/Binary.h" bodystart="34" bodyend="43"/>
     <listofallmembers>
       <member refid="struct_macho___binary__t_1ab03a20311d6aa0dbefb8fa83fca22071" prot="public" virt="non-virtual"><scope>Macho_Binary_t</scope><name>commands</name></member>
       <member refid="struct_macho___binary__t_1a404b8e039cd82f0527c3062be79e9b55" prot="public" virt="non-virtual"><scope>Macho_Binary_t</scope><name>handler</name></member>
