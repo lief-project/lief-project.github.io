@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">DylibCommand.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="DylibCommand_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="DylibCommand_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -181,102 +181,108 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> name_;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a1b5d1be9296682dc63158a40e54c8616">timestamp</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> timestamp_;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#af2786801daaa7529c5c8ccd6a027ee60">name_offset</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> name_offset_;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
 </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  version_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a9ea5c6306b0071eab337581b5ff62805">current_version</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> int2version(current_version_);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a1b5d1be9296682dc63158a40e54c8616">timestamp</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> timestamp_;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  }</div>
 </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  version_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a9558575c0f7ea4a2c3c59a0f4fca41f8">compatibility_version</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> int2version(compatibility_version_);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  version_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a9ea5c6306b0071eab337581b5ff62805">current_version</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> int2version(current_version_);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#acc89dbb21ead3507c6ab1a68a79003e6">  122</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#acc89dbb21ead3507c6ab1a68a79003e6">name</a>(std::string name) {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    name_ = std::move(name);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  version_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a9558575c0f7ea4a2c3c59a0f4fca41f8">compatibility_version</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> int2version(compatibility_version_);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a11e87b21830ae037214c59b93468cba5">  125</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a11e87b21830ae037214c59b93468cba5">timestamp</a>(uint32_t timestamp) {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    timestamp_ = timestamp;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#acc89dbb21ead3507c6ab1a68a79003e6">  127</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#acc89dbb21ead3507c6ab1a68a79003e6">name</a>(std::string name) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    name_ = std::move(name);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a065db2cf0eeb44600e21b7934874c9ca">  128</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a065db2cf0eeb44600e21b7934874c9ca">current_version</a>(version_t version) {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    current_version_ = version2int(version);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a11e87b21830ae037214c59b93468cba5">  130</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a11e87b21830ae037214c59b93468cba5">timestamp</a>(uint32_t timestamp) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    timestamp_ = timestamp;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#abd2183a6806509b2fe9aa7770b250038">  131</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#abd2183a6806509b2fe9aa7770b250038">compatibility_version</a>(version_t version) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    compatibility_version_ = version2int(version);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  }</div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a065db2cf0eeb44600e21b7934874c9ca">  133</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a065db2cf0eeb44600e21b7934874c9ca">current_version</a>(version_t version) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    current_version_ = version2int(version);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  }</div>
 </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a3359469da72293956635ed3b68e21085">  135</a></span>  std::ostream&amp; <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a3359469da72293956635ed3b68e21085">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a84659334f9c7a83574e561a550be8ba2">  137</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a84659334f9c7a83574e561a550be8ba2">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a779803901f5a1783eb74f3134d7caab4">  139</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a779803901f5a1783eb74f3134d7caab4">classof</a>(<span class="keyword">const</span> LoadCommand* cmd) {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">const</span> LoadCommand::TYPE type = cmd-&gt;<a class="code hl_function" href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">command</a>();</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> type == LoadCommand::TYPE::LOAD_WEAK_DYLIB ||</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>           type == LoadCommand::TYPE::ID_DYLIB ||</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>           type == LoadCommand::TYPE::LOAD_DYLIB ||</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>           type == LoadCommand::TYPE::LOAD_UPWARD_DYLIB ||</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>           type == LoadCommand::TYPE::REEXPORT_DYLIB ||</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>           type == LoadCommand::TYPE::LOAD_UPWARD_DYLIB ||</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>           type == LoadCommand::TYPE::LAZY_LOAD_DYLIB;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#abd2183a6806509b2fe9aa7770b250038">  136</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#abd2183a6806509b2fe9aa7770b250038">compatibility_version</a>(version_t version) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    compatibility_version_ = version2int(version);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
 </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keyword">static</span> DylibCommand create(</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    LoadCommand::TYPE type, <span class="keyword">const</span> std::string&amp; name, uint32_t timestamp,</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    uint32_t current_version, uint32_t compat_version);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a3359469da72293956635ed3b68e21085">  140</a></span>  std::ostream&amp; <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a3359469da72293956635ed3b68e21085">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a84659334f9c7a83574e561a550be8ba2">  142</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a84659334f9c7a83574e561a550be8ba2">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1DylibCommand.html#a779803901f5a1783eb74f3134d7caab4">  144</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1DylibCommand.html#a779803901f5a1783eb74f3134d7caab4">classof</a>(<span class="keyword">const</span> LoadCommand* cmd) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">const</span> LoadCommand::TYPE type = cmd-&gt;<a class="code hl_function" href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">command</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">return</span> type == LoadCommand::TYPE::LOAD_WEAK_DYLIB ||</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>           type == LoadCommand::TYPE::ID_DYLIB ||</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>           type == LoadCommand::TYPE::LOAD_DYLIB ||</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>           type == LoadCommand::TYPE::LOAD_UPWARD_DYLIB ||</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>           type == LoadCommand::TYPE::REEXPORT_DYLIB ||</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>           type == LoadCommand::TYPE::LOAD_UPWARD_DYLIB ||</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>           type == LoadCommand::TYPE::LAZY_LOAD_DYLIB;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  }</div>
+</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  std::string name_;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  uint32_t timestamp_ = 0;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  uint32_t current_version_ = 0;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  uint32_t compatibility_version_ = 0;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>};</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keyword">static</span> DylibCommand create(</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    LoadCommand::TYPE type, <span class="keyword">const</span> std::string&amp; name, uint32_t timestamp,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    uint32_t current_version, uint32_t compat_version);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  std::string name_;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  uint32_t name_offset_ = 0;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  uint32_t timestamp_ = 0;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  uint32_t current_version_ = 0;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  uint32_t compatibility_version_ = 0;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>};</div>
 </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>}</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aLoadCommand_8hpp_html"><div class="ttname"><a href="LoadCommand_8hpp.html">LoadCommand.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html">LIEF::MachO::DylibCommand</a></div><div class="ttdoc">Class which represents a library dependency.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:34</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a01767afbdee0c662bd9cb66475c16c3e"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a01767afbdee0c662bd9cb66475c16c3e">LIEF::MachO::DylibCommand::DylibCommand</a></div><div class="ttdeci">DylibCommand()=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a02b85849e79191374d4ac604fc1a7877"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a02b85849e79191374d4ac604fc1a7877">LIEF::MachO::DylibCommand::reexport_dylib</a></div><div class="ttdeci">static DylibCommand reexport_dylib(const std::string &amp;name, uint32_t timestamp=0, uint32_t current_version=0, uint32_t compat_version=0)</div><div class="ttdoc">Factory function to generate a LC_REEXPORT_DYLIB library.</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a065db2cf0eeb44600e21b7934874c9ca"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a065db2cf0eeb44600e21b7934874c9ca">LIEF::MachO::DylibCommand::current_version</a></div><div class="ttdeci">void current_version(version_t version)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:128</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a11e87b21830ae037214c59b93468cba5"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a11e87b21830ae037214c59b93468cba5">LIEF::MachO::DylibCommand::timestamp</a></div><div class="ttdeci">void timestamp(uint32_t timestamp)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:125</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a1b5d1be9296682dc63158a40e54c8616"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a1b5d1be9296682dc63158a40e54c8616">LIEF::MachO::DylibCommand::timestamp</a></div><div class="ttdeci">uint32_t timestamp() const</div><div class="ttdoc">Date and Time when the shared library was built.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:108</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a065db2cf0eeb44600e21b7934874c9ca"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a065db2cf0eeb44600e21b7934874c9ca">LIEF::MachO::DylibCommand::current_version</a></div><div class="ttdeci">void current_version(version_t version)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:133</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a11e87b21830ae037214c59b93468cba5"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a11e87b21830ae037214c59b93468cba5">LIEF::MachO::DylibCommand::timestamp</a></div><div class="ttdeci">void timestamp(uint32_t timestamp)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:130</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a1b5d1be9296682dc63158a40e54c8616"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a1b5d1be9296682dc63158a40e54c8616">LIEF::MachO::DylibCommand::timestamp</a></div><div class="ttdeci">uint32_t timestamp() const</div><div class="ttdoc">Date and Time when the shared library was built.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:113</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a3359469da72293956635ed3b68e21085"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a3359469da72293956635ed3b68e21085">LIEF::MachO::DylibCommand::print</a></div><div class="ttdeci">std::ostream &amp; print(std::ostream &amp;os) const override</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a3bac2652dcc677c6bcaa09124e0d28d8"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a3bac2652dcc677c6bcaa09124e0d28d8">LIEF::MachO::DylibCommand::version2int</a></div><div class="ttdeci">static uint32_t version2int(version_t version)</div><div class="ttdoc">Helper to convert a version array into an integer.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:49</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a51ecb4971808f9c6f7961be09072d5df"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a51ecb4971808f9c6f7961be09072d5df">LIEF::MachO::DylibCommand::int2version</a></div><div class="ttdeci">static version_t int2version(uint32_t version)</div><div class="ttdoc">Helper to convert an integer into a version array.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:40</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a642d6e3edd2b9295bfc1e5d2efb8ee8b"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a642d6e3edd2b9295bfc1e5d2efb8ee8b">LIEF::MachO::DylibCommand::lazy_load_dylib</a></div><div class="ttdeci">static DylibCommand lazy_load_dylib(const std::string &amp;name, uint32_t timestamp=0, uint32_t current_version=0, uint32_t compat_version=0)</div><div class="ttdoc">Factory function to generate a LC_LAZY_LOAD_DYLIB library.</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a779803901f5a1783eb74f3134d7caab4"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a779803901f5a1783eb74f3134d7caab4">LIEF::MachO::DylibCommand::classof</a></div><div class="ttdeci">static bool classof(const LoadCommand *cmd)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:139</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a779803901f5a1783eb74f3134d7caab4"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a779803901f5a1783eb74f3134d7caab4">LIEF::MachO::DylibCommand::classof</a></div><div class="ttdeci">static bool classof(const LoadCommand *cmd)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:144</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a814b9287648d42439560a35c26b47ef4"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a814b9287648d42439560a35c26b47ef4">LIEF::MachO::DylibCommand::DylibCommand</a></div><div class="ttdeci">DylibCommand(const DylibCommand &amp;copy)=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a84659334f9c7a83574e561a550be8ba2"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a84659334f9c7a83574e561a550be8ba2">LIEF::MachO::DylibCommand::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a8fc04bd3fb66c4d8bb71b2cabc998ac8"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a8fc04bd3fb66c4d8bb71b2cabc998ac8">LIEF::MachO::DylibCommand::clone</a></div><div class="ttdeci">std::unique_ptr&lt; LoadCommand &gt; clone() const override</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:98</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a9558575c0f7ea4a2c3c59a0f4fca41f8"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a9558575c0f7ea4a2c3c59a0f4fca41f8">LIEF::MachO::DylibCommand::compatibility_version</a></div><div class="ttdeci">version_t compatibility_version() const</div><div class="ttdoc">Compatibility version of the shared library.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:118</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a9ea5c6306b0071eab337581b5ff62805"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a9ea5c6306b0071eab337581b5ff62805">LIEF::MachO::DylibCommand::current_version</a></div><div class="ttdeci">version_t current_version() const</div><div class="ttdoc">Current version of the shared library.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:113</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a9558575c0f7ea4a2c3c59a0f4fca41f8"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a9558575c0f7ea4a2c3c59a0f4fca41f8">LIEF::MachO::DylibCommand::compatibility_version</a></div><div class="ttdeci">version_t compatibility_version() const</div><div class="ttdoc">Compatibility version of the shared library.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:123</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_a9ea5c6306b0071eab337581b5ff62805"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#a9ea5c6306b0071eab337581b5ff62805">LIEF::MachO::DylibCommand::current_version</a></div><div class="ttdeci">version_t current_version() const</div><div class="ttdoc">Current version of the shared library.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:118</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_ab06cf7a97e13d705d1f034ac4097bfa0"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#ab06cf7a97e13d705d1f034ac4097bfa0">LIEF::MachO::DylibCommand::weak_dylib</a></div><div class="ttdeci">static DylibCommand weak_dylib(const std::string &amp;name, uint32_t timestamp=0, uint32_t current_version=0, uint32_t compat_version=0)</div><div class="ttdoc">Factory function to generate a LC_LOAD_WEAK_DYLIB library.</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_ab1a79a0bbef757c36ba956cce572ff63"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#ab1a79a0bbef757c36ba956cce572ff63">LIEF::MachO::DylibCommand::DylibCommand</a></div><div class="ttdeci">DylibCommand(const details::dylib_command &amp;cmd)</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_abbe0e34df60d5c43fa7083f426013012"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#abbe0e34df60d5c43fa7083f426013012">LIEF::MachO::DylibCommand::operator=</a></div><div class="ttdeci">DylibCommand &amp; operator=(const DylibCommand &amp;copy)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_abd2183a6806509b2fe9aa7770b250038"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#abd2183a6806509b2fe9aa7770b250038">LIEF::MachO::DylibCommand::compatibility_version</a></div><div class="ttdeci">void compatibility_version(version_t version)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:131</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_abd2183a6806509b2fe9aa7770b250038"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#abd2183a6806509b2fe9aa7770b250038">LIEF::MachO::DylibCommand::compatibility_version</a></div><div class="ttdeci">void compatibility_version(version_t version)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:136</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_abf9126db5659fdb82bd1383515541814"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#abf9126db5659fdb82bd1383515541814">LIEF::MachO::DylibCommand::id_dylib</a></div><div class="ttdeci">static DylibCommand id_dylib(const std::string &amp;name, uint32_t timestamp=0, uint32_t current_version=0, uint32_t compat_version=0)</div><div class="ttdoc">Factory function to generate a LC_ID_DYLIB library.</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_ac2ba2ff28791973dde8e74c0e44eadea"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#ac2ba2ff28791973dde8e74c0e44eadea">LIEF::MachO::DylibCommand::load_dylib</a></div><div class="ttdeci">static DylibCommand load_dylib(const std::string &amp;name, uint32_t timestamp=2, uint32_t current_version=0, uint32_t compat_version=0)</div><div class="ttdoc">Factory function to generate a LC_LOAD_DYLIB library.</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_acc89dbb21ead3507c6ab1a68a79003e6"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#acc89dbb21ead3507c6ab1a68a79003e6">LIEF::MachO::DylibCommand::name</a></div><div class="ttdeci">void name(std::string name)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:122</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_acc89dbb21ead3507c6ab1a68a79003e6"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#acc89dbb21ead3507c6ab1a68a79003e6">LIEF::MachO::DylibCommand::name</a></div><div class="ttdeci">void name(std::string name)</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:127</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_af2786801daaa7529c5c8ccd6a027ee60"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#af2786801daaa7529c5c8ccd6a027ee60">LIEF::MachO::DylibCommand::name_offset</a></div><div class="ttdeci">uint32_t name_offset() const</div><div class="ttdoc">Original string offset of the name.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:108</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_af5e55c7bcdae00d6e91bd98804aeb474"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#af5e55c7bcdae00d6e91bd98804aeb474">LIEF::MachO::DylibCommand::~DylibCommand</a></div><div class="ttdeci">~DylibCommand() override=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_af6a2bf695d707de6a2833eb55d39ca4a"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#af6a2bf695d707de6a2833eb55d39ca4a">LIEF::MachO::DylibCommand::load_upward_dylib</a></div><div class="ttdeci">static DylibCommand load_upward_dylib(const std::string &amp;name, uint32_t timestamp=0, uint32_t current_version=0, uint32_t compat_version=0)</div><div class="ttdoc">Factory function to generate a LC_LOAD_UPWARD_DYLIB library.</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DylibCommand_html_afb9e4624a9e9c1475dacb6558862a254"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DylibCommand.html#afb9e4624a9e9c1475dacb6558862a254">LIEF::MachO::DylibCommand::name</a></div><div class="ttdeci">const std::string &amp; name() const</div><div class="ttdoc">Library name.</div><div class="ttdef"><b>Definition</b> DylibCommand.hpp:103</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LoadCommand_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LoadCommand.html">LIEF::MachO::LoadCommand</a></div><div class="ttdoc">Based class for the Mach-O load commands.</div><div class="ttdef"><b>Definition</b> LoadCommand.hpp:37</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1LoadCommand_html_a8a0d5263f3f65d0646593c2620d39121"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">LIEF::MachO::LoadCommand::command</a></div><div class="ttdeci">LoadCommand::TYPE command() const</div><div class="ttdoc">Command type.</div><div class="ttdef"><b>Definition</b> LoadCommand.hpp:124</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1LoadCommand_html_a8a0d5263f3f65d0646593c2620d39121"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">LIEF::MachO::LoadCommand::command</a></div><div class="ttdeci">LoadCommand::TYPE command() const</div><div class="ttdoc">Command type.</div><div class="ttdef"><b>Definition</b> LoadCommand.hpp:125</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1MachO_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1MachO_1_1details.html">LIEF::MachO::details</a></div><div class="ttdef"><b>Definition</b> endianness_support.hpp:59</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1MachO_html"><div class="ttname"><a href="namespaceLIEF_1_1MachO.html">LIEF::MachO</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s Mach-O module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:36</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
