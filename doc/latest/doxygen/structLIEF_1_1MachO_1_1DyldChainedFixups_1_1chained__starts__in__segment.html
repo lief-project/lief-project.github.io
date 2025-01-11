@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LIEF::MachO::DyldChainedFixups::chained_starts_in_segment Struct Reference</div></div>
@@ -120,6 +121,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca0309469f7d394353d982458339ba9f" id="r_aca0309469f7d394353d982458339ba9f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca0309469f7d394353d982458339ba9f">page_count</a> () const</td></tr>
 <tr class="memdesc:aca0309469f7d394353d982458339ba9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many pages are in the page_start array.  <br /></td></tr>
 <tr class="separator:aca0309469f7d394353d982458339ba9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac04e22d93fe652907a3cde4d5a600997" id="r_ac04e22d93fe652907a3cde4d5a600997"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment.html">chained_starts_in_segment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac04e22d93fe652907a3cde4d5a600997">create_empty_chained</a> (<a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> &amp;<a class="el" href="#a8128d022f7adc9416b32ae4ab0b11821">segment</a>)</td></tr>
+<tr class="separator:ac04e22d93fe652907a3cde4d5a600997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -155,6 +161,31 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Structure that mirrors the raw dyld_chained_starts_in_segment which aims at providing information about the chained rebase/bind fixups. </p>
 <p>The relocations provided by this structure can be accessed through <a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html#a35fbc7ff0c585cb07b1a3c8061fd373e" title="Return an iterator over the MachO::Relocation linked to this segment.">SegmentCommand::relocations</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac04e22d93fe652907a3cde4d5a600997" name="ac04e22d93fe652907a3cde4d5a600997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac04e22d93fe652907a3cde4d5a600997">&#9670;&#160;</a></span>create_empty_chained()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment.html">chained_starts_in_segment</a> LIEF::MachO::DyldChainedFixups::chained_starts_in_segment::create_empty_chained </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>segment</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aca0309469f7d394353d982458339ba9f" name="aca0309469f7d394353d982458339ba9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca0309469f7d394353d982458339ba9f">&#9670;&#160;</a></span>page_count()</h2>
 

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -416,6 +416,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fd7a777ee9dcd64221cd0c117f9c049" id="r_a8fd7a777ee9dcd64221cd0c117f9c049"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fd7a777ee9dcd64221cd0c117f9c049">extend_segment</a> (const <a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> &amp;segment, size_t size)</td></tr>
 <tr class="memdesc:a8fd7a777ee9dcd64221cd0c117f9c049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extend the <b>content</b> of the given <a class="el" href="classLIEF_1_1MachO_1_1SegmentCommand.html" title="Class which represents a LoadCommand::TYPE::SEGMENT / LoadCommand::TYPE::SEGMENT_64 command.">SegmentCommand</a>.  <br /></td></tr>
 <tr class="separator:a8fd7a777ee9dcd64221cd0c117f9c049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2726cdd77fa753807339d16d81c2a305" id="r_a2726cdd77fa753807339d16d81c2a305"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2726cdd77fa753807339d16d81c2a305">extend_section</a> (<a class="el" href="classLIEF_1_1MachO_1_1Section.html">Section</a> &amp;section, size_t size)</td></tr>
+<tr class="memdesc:a2726cdd77fa753807339d16d81c2a305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extend the <b>content</b> of the given <a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a>.  <br /></td></tr>
+<tr class="separator:a2726cdd77fa753807339d16d81c2a305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a475bfc93db79a58fd0ca5817b23d3d52" id="r_a475bfc93db79a58fd0ca5817b23d3d52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a475bfc93db79a58fd0ca5817b23d3d52">disable_pie</a> ()</td></tr>
 <tr class="memdesc:a475bfc93db79a58fd0ca5817b23d3d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the <code>PIE</code> flag.  <br /></td></tr>
 <tr class="separator:a475bfc93db79a58fd0ca5817b23d3d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -767,6 +770,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba9e907462d2f61d031bd20a03176401" id="r_aba9e907462d2f61d031bd20a03176401"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aec697d886eec4b1da012b19474d60ce8">stub_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba9e907462d2f61d031bd20a03176401">symbol_stubs</a> () const</td></tr>
 <tr class="memdesc:aba9e907462d2f61d031bd20a03176401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator over the symbol stubs.  <br /></td></tr>
 <tr class="separator:aba9e907462d2f61d031bd20a03176401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14310c65863ac8774b2aab111f6902bc" id="r_a14310c65863ac8774b2aab111f6902bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14310c65863ac8774b2aab111f6902bc">has_atom_info</a> () const</td></tr>
+<tr class="memdesc:a14310c65863ac8774b2aab111f6902bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>true</code> if the binary has the command LC_ATOM_INFO.  <br /></td></tr>
+<tr class="separator:a14310c65863ac8774b2aab111f6902bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada891c8da3ef878825d06b359c425b04" id="r_ada891c8da3ef878825d06b359c425b04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html">AtomInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada891c8da3ef878825d06b359c425b04">atom_info</a> ()</td></tr>
+<tr class="memdesc:ada891c8da3ef878825d06b359c425b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html" title="Class which represents the LC_ATOM_INFO command.">MachO::AtomInfo</a> if present, a nullptr otherwise.  <br /></td></tr>
+<tr class="separator:ada891c8da3ef878825d06b359c425b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa047443f7da8c69fcd5dbae69deaf726" id="r_aa047443f7da8c69fcd5dbae69deaf726"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html">AtomInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa047443f7da8c69fcd5dbae69deaf726">atom_info</a> () const</td></tr>
+<tr class="separator:aa047443f7da8c69fcd5dbae69deaf726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6360d8a136ed3c29dcea187b0980257" id="r_aa6360d8a136ed3c29dcea187b0980257"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aa6360d8a136ed3c29dcea187b0980257"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa6360d8a136ed3c29dcea187b0980257">has_command</a> () const</td></tr>
 <tr class="separator:aa6360d8a136ed3c29dcea187b0980257"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1765,6 +1776,50 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ada891c8da3ef878825d06b359c425b04" name="ada891c8da3ef878825d06b359c425b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada891c8da3ef878825d06b359c425b04">&#9670;&#160;</a></span>atom_info() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html">AtomInfo</a> * LIEF::MachO::Binary::atom_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the <a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html" title="Class which represents the LC_ATOM_INFO command.">MachO::AtomInfo</a> if present, a nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="aa047443f7da8c69fcd5dbae69deaf726" name="aa047443f7da8c69fcd5dbae69deaf726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa047443f7da8c69fcd5dbae69deaf726">&#9670;&#160;</a></span>atom_info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html">AtomInfo</a> * LIEF::MachO::Binary::atom_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a40f1fd01acb085794c6a61afed6374b3" name="a40f1fd01acb085794c6a61afed6374b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40f1fd01acb085794c6a61afed6374b3">&#9670;&#160;</a></span>bindings()</h2>
 
@@ -2549,6 +2604,32 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a2726cdd77fa753807339d16d81c2a305" name="a2726cdd77fa753807339d16d81c2a305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2726cdd77fa753807339d16d81c2a305">&#9670;&#160;</a></span>extend_section()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::MachO::Binary::extend_section </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1MachO_1_1Section.html">Section</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extend the <b>content</b> of the given <a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>This method may extend the section more than <code>size</code> preventing creation a gap between the current section and the next one. This may happen trying to satisfy alignment requirement of sections. </dd>
+<dd>
+This method works only with sections that belong to the first segment. </dd></dl>
+
+</div>
+</div>
 <a id="a8fd7a777ee9dcd64221cd0c117f9c049" name="a8fd7a777ee9dcd64221cd0c117f9c049"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fd7a777ee9dcd64221cd0c117f9c049">&#9670;&#160;</a></span>extend_segment()</h2>
 
@@ -3038,6 +3119,33 @@ template&lt;class CMD , class Func &gt; </div>
 </div><div class="memdoc">
 
 <p>Check if the current binary has the given <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1">MachO::LoadCommand::TYPE</a>. </p>
+
+</div>
+</div>
+<a id="a14310c65863ac8774b2aab111f6902bc" name="a14310c65863ac8774b2aab111f6902bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14310c65863ac8774b2aab111f6902bc">&#9670;&#160;</a></span>has_atom_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::MachO::Binary::has_atom_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>true</code> if the binary has the command LC_ATOM_INFO. </p>
 
 </div>
 </div>

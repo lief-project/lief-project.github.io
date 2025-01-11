@@ -3,8 +3,70 @@
 :fa:`solid fa-code-compare` Changelog
 =====================================
 
-0.16.0 - Not Released Yet
+0.17.0 - Not Released Yet
 -------------------------
+
+:DSC:
+
+  * Add enum for the latest dyld shared cache version introducing
+    changes in the header layout (``dyld-1231.3 - 2024-09-24``)
+
+    .. code-block:: diff
+
+         uint64_t    dynamicDataOffset;
+         uint64_t    dynamicDataMaxSize;
+      +  uint32_t    tproMappingsOffset;
+      +  uint32_t    tproMappingsCount;
+      };
+
+  * Fix symbol resolution issue: :issue:`1127`
+
+:Mach-O:
+
+  * Add support for |lief-macho-atom-info| command (``LC_ATOM_INFO``)
+
+:ELF:
+
+  * Fix issue when parsing the dynamic table with an invalid offset (bug found
+    by :github_user:`lebr0nli`)
+
+:Extended:
+
+  * Fix issue in the Python bindings while trying to access ``lief.__LIEF_MAIN_COMMIT__``
+
+:Build System:
+
+  * LIEF is now available in `vcpkg <https://github.com/microsoft/vcpkg/tree/master/ports/lief>`_.
+    Many thanks to :github_user:`luadebug` for this support.
+
+0.16.2 - January 1st, 2025
+----------------------------
+
+:Compilation:
+
+  * Fix broken ``aarch64`` Python wheel which is related to a toolchain issue
+    (:issue:`1146`)
+
+0.16.1 - December 26th, 2024
+----------------------------
+
+:MachO:
+
+  * Various fixes from :github_user:`DzenIsRich` & :github_user:`peledins-zimperium`
+    Thanks to them, Mach-O modification is more reliable.
+
+  * Fix issue when building with ``-DLIEF_MACHO=ON`` (see: :issue:`1138`)
+
+:Rust:
+
+  * Fix min-rustc version issue (see: :commit:`75a27f0e`)
+
+:Compilation:
+
+  * Fix missing ``LIEF_API`` visibility (:commit:`e01f92a0`, :pr:`1140`)
+
+0.16.0 - December 10th, 2024
+----------------------------
 
 :Abstraction:
 
