@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -183,6 +183,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLIEF_1_1ok__t.html">ok_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque structure used by <a class="el" href="#a17850ae3551b619133b0f6300f9c9d7f" title="Opaque structure that is used by LIEF to avoid writing result&lt;void&gt; f(...). Instead,...">ok_error_t</a>.  <a href="structLIEF_1_1ok__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1optional.html">optional</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Parser.html">Parser</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main interface to parse an executable regardless of its format.  <a href="classLIEF_1_1Parser.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +202,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which represents an abstracted <a class="el" href="classLIEF_1_1Relocation.html" title="Class which represents an abstracted Relocation.">Relocation</a>.  <a href="classLIEF_1_1Relocation.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ScopedStream.html">ScopedStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ScopeOStream.html">ScopeOStream</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Section.html">Section</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which represents an abstracted section.  <a href="classLIEF_1_1Section.html#details">More...</a><br /></td></tr>
@@ -588,10 +592,14 @@ Functions</h2></td></tr>
 <tr class="separator:a75d15bd5cbfc804ab5f72641140ebed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734c10a0b78f475d0b866975b7aac40b" id="r_a734c10a0b78f475d0b866975b7aac40b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734c10a0b78f475d0b866975b7aac40b">to_json</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;v)</td></tr>
 <tr class="separator:a734c10a0b78f475d0b866975b7aac40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ba2bc16ffcdc1f6785453c1c5e8767" id="r_ad5ba2bc16ffcdc1f6785453c1c5e8767"><td class="memItemLeft" align="right" valign="top">tl::unexpected&lt; <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8">lief_errors</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5ba2bc16ffcdc1f6785453c1c5e8767">nullopt</a> ()</td></tr>
+<tr class="separator:ad5ba2bc16ffcdc1f6785453c1c5e8767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92cd5b1ce037063e1ff351fc53a3009" id="r_aa92cd5b1ce037063e1ff351fc53a3009"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af8b86e1cfbfccb1239252cfcb64ec4bd">PLATFORMS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92cd5b1ce037063e1ff351fc53a3009">current_platform</a> ()</td></tr>
 <tr class="separator:aa92cd5b1ce037063e1ff351fc53a3009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17dd2c8831ebf7cd7e134f30d9365579" id="r_a17dd2c8831ebf7cd7e134f30d9365579"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17dd2c8831ebf7cd7e134f30d9365579">align</a> (uint64_t value, uint64_t align_on)</td></tr>
 <tr class="separator:a17dd2c8831ebf7cd7e134f30d9365579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6b171294df5c685bb9b5a9b459f1ed" id="r_a4c6b171294df5c685bb9b5a9b459f1ed"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c6b171294df5c685bb9b5a9b459f1ed">align_down</a> (uint64_t value, uint64_t align_on)</td></tr>
+<tr class="separator:a4c6b171294df5c685bb9b5a9b459f1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc319dd43cf19809aa2b8aab9ad8944b" id="r_adc319dd43cf19809aa2b8aab9ad8944b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:adc319dd43cf19809aa2b8aab9ad8944b"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adc319dd43cf19809aa2b8aab9ad8944b">round</a> (T x)</td></tr>
 <tr class="separator:adc319dd43cf19809aa2b8aab9ad8944b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -619,6 +627,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f7ef24e018e80b37d54661ea605dd5b" id="r_a9f7ef24e018e80b37d54661ea605dd5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae870038bb7ca9cc4686ab28ae94aa45a">result</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f7ef24e018e80b37d54661ea605dd5b">demangle</a> (const std::string &amp;mangled)</td></tr>
 <tr class="memdesc:a9f7ef24e018e80b37d54661ea605dd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangle the given input.  <br /></td></tr>
 <tr class="separator:a9f7ef24e018e80b37d54661ea605dd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7c15826ebbd96da27d0a6a0491f6ed" id="r_a5c7c15826ebbd96da27d0a6a0491f6ed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c7c15826ebbd96da27d0a6a0491f6ed">dump</a> (const uint8_t *buffer, size_t size, const std::string &amp;title=&quot;&quot;, const std::string &amp;prefix=&quot;&quot;, size_t limit=0)</td></tr>
+<tr class="memdesc:a5c7c15826ebbd96da27d0a6a0491f6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hexdump the provided buffer.  <br /></td></tr>
+<tr class="separator:a5c7c15826ebbd96da27d0a6a0491f6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49705fd04b687549cff16d8f66d7106d" id="r_a49705fd04b687549cff16d8f66d7106d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49705fd04b687549cff16d8f66d7106d">dump</a> (<a class="el" href="#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; const uint8_t &gt; data, const std::string &amp;title=&quot;&quot;, const std::string &amp;prefix=&quot;&quot;, size_t limit=0)</td></tr>
+<tr class="separator:a49705fd04b687549cff16d8f66d7106d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ba78d0e27c060cd2a65e6f06a1bc43" id="r_a75ba78d0e27c060cd2a65e6f06a1bc43"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75ba78d0e27c060cd2a65e6f06a1bc43">dump</a> (const std::vector&lt; uint8_t &gt; &amp;data, const std::string &amp;title=&quot;&quot;, const std::string &amp;prefix=&quot;&quot;, size_t limit=0)</td></tr>
+<tr class="separator:a75ba78d0e27c060cd2a65e6f06a1bc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a> namespace. </p>
@@ -867,6 +882,35 @@ template&lt;typename ElementType , std::size_t Extent = tcb::dynamic_extent&gt; 
 
 </div>
 </div>
+<a id="a4c6b171294df5c685bb9b5a9b459f1ed" name="a4c6b171294df5c685bb9b5a9b459f1ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6b171294df5c685bb9b5a9b459f1ed">&#9670;&#160;</a></span>align_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::align_down </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>align_on</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adba13405f57d3c4ebc5bdf073439e1b5" name="adba13405f57d3c4ebc5bdf073439e1b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adba13405f57d3c4ebc5bdf073439e1b5">&#9670;&#160;</a></span>as_lief_err()</h2>
 
@@ -932,6 +976,135 @@ template&lt;class T &gt; </div>
 
 <p>Demangle the given input. </p>
 <p>This function only works with the extended version of <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a> </p>
+
+</div>
+</div>
+<a id="a75ba78d0e27c060cd2a65e6f06a1bc43" name="a75ba78d0e27c060cd2a65e6f06a1bc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ba78d0e27c060cd2a65e6f06a1bc43">&#9670;&#160;</a></span>dump() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LIEF::dump </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>prefix</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="#a5c7c15826ebbd96da27d0a6a0491f6ed">dump()</a>.</p>
+
+</div>
+</div>
+<a id="a5c7c15826ebbd96da27d0a6a0491f6ed" name="a5c7c15826ebbd96da27d0a6a0491f6ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c7c15826ebbd96da27d0a6a0491f6ed">&#9670;&#160;</a></span>dump() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LIEF::dump </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>prefix</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hexdump the provided buffer. </p>
+<p>For instance:</p>
+<div class="fragment"><div class="line">+---------------------------------------------------------------------+</div>
+<div class="line">| 88 56 05 00 00 00 00 00 00 00 00 00 22 58 05 00  | .V..........&quot;X.. |</div>
+<div class="line">| 10 71 02 00 78 55 05 00 00 00 00 00 00 00 00 00  | .q..xU.......... |</div>
+<div class="line">| 68 5c 05 00 00 70 02 00 00 00 00 00 00 00 00 00  | h\...p.......... |</div>
+<div class="line">| 00 00 00 00 00 00 00 00 00 00 00 00              | ............     |</div>
+<div class="line">+---------------------------------------------------------------------+</div>
+</div><!-- fragment --> 
+<p class="reference">Referenced by <a class="el" href="#a75ba78d0e27c060cd2a65e6f06a1bc43">dump()</a>, and <a class="el" href="#a49705fd04b687549cff16d8f66d7106d">dump()</a>.</p>
+
+</div>
+</div>
+<a id="a49705fd04b687549cff16d8f66d7106d" name="a49705fd04b687549cff16d8f66d7106d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49705fd04b687549cff16d8f66d7106d">&#9670;&#160;</a></span>dump() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LIEF::dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; const uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>prefix</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="#a5c7c15826ebbd96da27d0a6a0491f6ed">dump()</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1184,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="classLIEF_1_1ELF_1_1GnuHash.html#a0043edcacf06fe24792f3cfc3e492fc3">LIEF::ELF::GnuHash::check_bucket()</a>, <a class="el" href="classLIEF_1_1Visitor.html#aba982fdf24748890618b6c2c3badd45a">LIEF::Visitor::dispatch()</a>, <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersionAuxRequirement.html#a6454251f55d55f834c9a134723314c88">LIEF::ELF::SymbolVersionAuxRequirement::hash()</a>, <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersionDefinition.html#a044b3aea715f5bea3693dccca4ac46c9">LIEF::ELF::SymbolVersionDefinition::hash()</a>, <a class="el" href="classLIEF_1_1PE_1_1RichHeader.html#a96a900b2b59fcf4f57f6db983b1a4ac3">LIEF::PE::RichHeader::hash()</a>, <a class="el" href="classLIEF_1_1PE_1_1Signature.html#aaf852eaeb1ae3676074641a1e39f65b3">LIEF::PE::Signature::hash()</a>, <a class="el" href="classLIEF_1_1PE_1_1Repro.html#a6b78b21926e9d6416ae8c1cc73e0a93d">LIEF::PE::Repro::Repro()</a>, and <a class="el" href="classLIEF_1_1PE_1_1Repro.html#a935de012f9b4b80884e251210e98b11b">LIEF::PE::Repro::Repro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classLIEF_1_1ELF_1_1GnuHash.html#a0043edcacf06fe24792f3cfc3e492fc3">LIEF::ELF::GnuHash::check_bucket()</a>, <a class="el" href="classLIEF_1_1Visitor.html#aba982fdf24748890618b6c2c3badd45a">LIEF::Visitor::dispatch()</a>, <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersionAuxRequirement.html#a6454251f55d55f834c9a134723314c88">LIEF::ELF::SymbolVersionAuxRequirement::hash()</a>, <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersionDefinition.html#a044b3aea715f5bea3693dccca4ac46c9">LIEF::ELF::SymbolVersionDefinition::hash()</a>, <a class="el" href="classLIEF_1_1PE_1_1RichHeader.html#a96a900b2b59fcf4f57f6db983b1a4ac3">LIEF::PE::RichHeader::hash()</a>, <a class="el" href="classLIEF_1_1PE_1_1Signature.html#aaf852eaeb1ae3676074641a1e39f65b3">LIEF::PE::Signature::hash()</a>, <a class="el" href="classLIEF_1_1PE_1_1PDBChecksum.html#a8d49286e4dae252aa55abf2e7713bfe3">LIEF::PE::PDBChecksum::PDBChecksum()</a>, <a class="el" href="classLIEF_1_1PE_1_1PDBChecksum.html#a07278bf47fe70782b5b1743f456ed23d">LIEF::PE::PDBChecksum::PDBChecksum()</a>, <a class="el" href="classLIEF_1_1PE_1_1Repro.html#ae366d177739ea74cd611337e272f51ab">LIEF::PE::Repro::Repro()</a>, and <a class="el" href="classLIEF_1_1PE_1_1Repro.html#a935de012f9b4b80884e251210e98b11b">LIEF::PE::Repro::Repro()</a>.</p>
 
 </div>
 </div>
@@ -1189,6 +1362,35 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="ad5ba2bc16ffcdc1f6785453c1c5e8767" name="ad5ba2bc16ffcdc1f6785453c1c5e8767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ba2bc16ffcdc1f6785453c1c5e8767">&#9670;&#160;</a></span>nullopt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tl::unexpected&lt; <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8">lief_errors</a> &gt; LIEF::nullopt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, and <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8a7500611bf7030bc99d25c354e7b64714">not_found</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classLIEF_1_1PE_1_1ResourceStringTable.html#af6baba86ff94db5aa203be7cf7088c7b">LIEF::PE::ResourceStringTable::get()</a>.</p>
+
+</div>
+</div>
 <a id="a2cc78044f8aaf88116b39c37c0acc20b" name="a2cc78044f8aaf88116b39c37c0acc20b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2cc78044f8aaf88116b39c37c0acc20b">&#9670;&#160;</a></span>ok()</h2>
 
@@ -1214,7 +1416,7 @@ template&lt;class T &gt; </div>
 
 <p>Return success for function with return type <a class="el" href="#a17850ae3551b619133b0f6300f9c9d7f" title="Opaque structure that is used by LIEF to avoid writing result&lt;void&gt; f(...). Instead,...">ok_error_t</a>. </p>
 
-<p class="reference">Referenced by <a class="el" href="classLIEF_1_1BinaryStream.html#ad88d886c7f6b0772a67e9e0f90bd4031">LIEF::BinaryStream::peek_data()</a>, <a class="el" href="classLIEF_1_1FileStream.html#a3362198197cd3cc0a2b5d272f814ed83">LIEF::FileStream::peek_in()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#a439c9a8680e2e2c96ac37b376447328b">LIEF::BinaryStream::peek_objects_at()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#afd8a0d982018067d8059b55e6d991af7">LIEF::BinaryStream::read_data()</a>, and <a class="el" href="classLIEF_1_1BinaryStream.html#a3ccd7b706cb092478dd2806f82d931fa">LIEF::BinaryStream::read_objects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classLIEF_1_1BinaryStream.html#a01ff6e7d78dd7377796dc1405462fb85">LIEF::BinaryStream::peek_array()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#ad88d886c7f6b0772a67e9e0f90bd4031">LIEF::BinaryStream::peek_data()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#ad0511720ad3d558499feae96f60c85df">LIEF::BinaryStream::peek_in()</a>, <a class="el" href="classLIEF_1_1FileStream.html#a3362198197cd3cc0a2b5d272f814ed83">LIEF::FileStream::peek_in()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#a439c9a8680e2e2c96ac37b376447328b">LIEF::BinaryStream::peek_objects_at()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#ae891f4a828bb2449458330f555c53cf0">LIEF::BinaryStream::read_array()</a>, <a class="el" href="classLIEF_1_1BinaryStream.html#afd8a0d982018067d8059b55e6d991af7">LIEF::BinaryStream::read_data()</a>, and <a class="el" href="classLIEF_1_1BinaryStream.html#a3ccd7b706cb092478dd2806f82d931fa">LIEF::BinaryStream::read_objects()</a>.</p>
 
 </div>
 </div>

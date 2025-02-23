@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">RichEntry.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="RichEntry_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="RichEntry_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -162,20 +162,21 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1RichEntry.html#a473764601f0103d60992295b639d49b7">   67</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1RichEntry.html#a473764601f0103d60992295b639d49b7">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1RichEntry.html#a35c03e125d9935843477cbd8fa5b7160">   69</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1RichEntry.html#a35c03e125d9935843477cbd8fa5b7160">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> RichEntry&amp; rich_entry);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  uint16_t id_ = 0;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  uint16_t build_id_ = 0;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  uint32_t count_ = 0;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1RichEntry.html#a35c03e125d9935843477cbd8fa5b7160">   70</a></span>    std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1RichEntry.html#a35c03e125d9935843477cbd8fa5b7160">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> RichEntry&amp; rich_entry);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  uint16_t id_ = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  uint16_t build_id_ = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  uint32_t count_ = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="ttc" id="aObject_8hpp_html"><div class="ttname"><a href="Object_8hpp.html">Object.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1RichEntry_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1RichEntry.html">LIEF::PE::RichEntry</a></div><div class="ttdoc">Class which represents an entry associated to the RichHeader.</div><div class="ttdef"><b>Definition</b> RichEntry.hpp:28</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1RichEntry_html_a0856d4659b20c1971519ee3ff8e065c6"><div class="ttname"><a href="classLIEF_1_1PE_1_1RichEntry.html#a0856d4659b20c1971519ee3ff8e065c6">LIEF::PE::RichEntry::id</a></div><div class="ttdeci">void id(uint16_t id)</div><div class="ttdef"><b>Definition</b> RichEntry.hpp:57</div></div>

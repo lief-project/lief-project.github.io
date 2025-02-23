@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">SignatureParser.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="SignatureParser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="SignatureParser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -197,7 +197,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassLIEF_1_1BinaryStream_html"><div class="ttname"><a href="classLIEF_1_1BinaryStream.html">LIEF::BinaryStream</a></div><div class="ttdoc">Class that is used to a read stream of data from different sources.</div><div class="ttdef"><b>Definition</b> BinaryStream.hpp:33</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Attribute_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Attribute.html">LIEF::PE::Attribute</a></div><div class="ttdoc">Interface over PKCS #7 attribute.</div><div class="ttdef"><b>Definition</b> PE/signature/Attribute.hpp:29</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1PKCS9TSTInfo_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1PKCS9TSTInfo.html">LIEF::PE::PKCS9TSTInfo</a></div><div class="ttdoc">Interface over the structure described by the OID 1.2.840.113549.1.9.16.1.4 (PKCS #9)</div><div class="ttdef"><b>Definition</b> PKCS9TSTInfo.hpp:59</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:47</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:52</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SignatureParser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1SignatureParser.html">LIEF::PE::SignatureParser</a></div><div class="ttdef"><b>Definition</b> SignatureParser.hpp:37</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SignatureParser_html_a2a106e0e4d2380595d97c57ee571dfd5"><div class="ttname"><a href="classLIEF_1_1PE_1_1SignatureParser.html#a2a106e0e4d2380595d97c57ee571dfd5">LIEF::PE::SignatureParser::parse</a></div><div class="ttdeci">static result&lt; Signature &gt; parse(std::vector&lt; uint8_t &gt; data, bool skip_header=false)</div><div class="ttdoc">Parse a PKCS #7 signature given a raw blob.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SignatureParser_html_a4a917bedd758625fe08b63e6cb00bb68"><div class="ttname"><a href="classLIEF_1_1PE_1_1SignatureParser.html#a4a917bedd758625fe08b63e6cb00bb68">LIEF::PE::SignatureParser::parse</a></div><div class="ttdeci">static result&lt; Signature &gt; parse(BinaryStream &amp;stream, bool skip_header=false)</div><div class="ttdoc">Parse a PKCS #7 signature given a BinaryStream.</div></div>

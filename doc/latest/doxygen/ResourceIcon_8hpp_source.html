@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ResourceIcon.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ResourceIcon_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="ResourceIcon_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -109,125 +109,230 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef LIEF_PE_RESOURCE_ICON_H</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define LIEF_PE_RESOURCE_ICON_H</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;climits&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;climits&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="errors_8hpp.html">LIEF/errors.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="span_8hpp.html">LIEF/span.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="Object_8hpp.html">LIEF/Object.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2enums_8hpp.html">LIEF/PE/enums.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE.html">PE</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1PE_1_1ResourcesManager.html">ResourcesManager</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE_1_1details.html">details</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">struct </span>pe_resource_icon_group;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">struct </span>pe_icon_header;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html">   39</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1PE_1_1ResourceIcon.html">ResourceIcon</a> : <span class="keyword">public</span> Object {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aadae418a53425958a9f42c0ac4f31360">   41</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>ResourcesManager;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3f66bd40e9d9f6c03ca83130dd1b9b12">   44</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3f66bd40e9d9f6c03ca83130dd1b9b12">ResourceIcon</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a05b8894ba30f180b9dea117ab5f37e05">   45</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a05b8894ba30f180b9dea117ab5f37e05">ResourceIcon</a>(<span class="keyword">const</span> details::pe_resource_icon_group&amp; header);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8636112213a8d52d203114f9cade5dd2">   46</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8636112213a8d52d203114f9cade5dd2">ResourceIcon</a>(<span class="keyword">const</span> details::pe_icon_header&amp; header);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a2c44792ddac9ccd863f2df6c04884b57">   48</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a2c44792ddac9ccd863f2df6c04884b57">ResourceIcon</a>(<span class="keyword">const</span> ResourceIcon&amp;);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa02624a7731b5d9652c2305b84771aea">   49</a></span>  ResourceIcon&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa02624a7731b5d9652c2305b84771aea">operator=</a>(<span class="keyword">const</span> ResourceIcon&amp;);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a37061ec33e868ec54b03301d078f3be3">   51</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a37061ec33e868ec54b03301d078f3be3">~ResourceIcon</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a616af7202d107e2eaad7934e2fd83fcc">id</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a10cfd6d4a275bf7c68f217288505fd12">lang</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a17c5f6598cb4792f453009364a8ffa8b">sublang</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae6b8dc571b786f399686f2f3aebb4d88">width</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3e41a0437a8f823cb25ed48f7b55565b">height</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a9f496a188c7ab9243c101aeb8e804e06">color_count</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a9be54d89c6da2a46690d3cbd616f2063">reserved</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a4af884551c5cdc803320f545b51045f9">planes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aafc7426c7e147202c2dd1b30c33caefb">bit_count</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa68215b2bc85039044607ca4cd386fec">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  span&lt;const uint8_t&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a7c7a4708e1014815fe093cf89d3c9a92">pixels</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a14e7476c9226b8ec5d0b306902df90c0">   86</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a14e7476c9226b8ec5d0b306902df90c0">id</a>(uint32_t <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#adade5f1ba9e62fc27bc80f646c4090ba">   87</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#adade5f1ba9e62fc27bc80f646c4090ba">lang</a>(uint32_t lang);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8fea29e7914366092934ca8ab61bf017">   88</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8fea29e7914366092934ca8ab61bf017">sublang</a>(uint32_t sublang);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a197a270f9a478b5373765e0b55028daa">   89</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a197a270f9a478b5373765e0b55028daa">width</a>(uint8_t width);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a0b96c788afe07899db6249c9b574ee19">   90</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a0b96c788afe07899db6249c9b574ee19">height</a>(uint8_t height);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a567ff17440ef44bfb3d549d18c04fff2">   91</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a567ff17440ef44bfb3d549d18c04fff2">color_count</a>(uint8_t color_count);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae01a86068ab7f9ec5dcc29f54e658114">   92</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae01a86068ab7f9ec5dcc29f54e658114">reserved</a>(uint8_t reserved);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a5f86ec5ab1b8b346a69120ab3e48a70c">   93</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a5f86ec5ab1b8b346a69120ab3e48a70c">planes</a>(uint16_t planes);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3b985a2fe15d9c67dd2bf8d3747ab96f">   94</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3b985a2fe15d9c67dd2bf8d3747ab96f">bit_count</a>(uint16_t bit_count);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3152e8182a4450964842a2e34f2e23f1">   95</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3152e8182a4450964842a2e34f2e23f1">pixels</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; pixels);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ab179ef66dd226c61a6b64f934fa92bc5">save</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa53c1d3a48eccaa09823d2425e0e71a3">  102</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa53c1d3a48eccaa09823d2425e0e71a3">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a289b9800302168c7828e80e7870acb59">  105</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1ResourceIcon.html#a289b9800302168c7828e80e7870acb59">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> ResourceIcon&amp; entry);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  uint8_t              width_ = 0;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  uint8_t              height_ = 0;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  uint8_t              color_count_ = 0;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  uint8_t              reserved_ = 0;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  uint16_t             planes_ = 0;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  uint16_t             bit_count_ = 0;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  uint32_t             id_ = UINT_MAX;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  uint32_t             lang_ = <span class="comment">/* LANG_NEUTRAL */</span>0;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  uint32_t             sublang_ = 0 <span class="comment">/* SUBLANG_NEUTRAL */</span>;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  std::vector&lt;uint8_t&gt; pixels_;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE.html">PE</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1PE_1_1ResourcesManager.html">ResourcesManager</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE_1_1details.html">details</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">struct </span>pe_resource_icon_group;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">struct </span>pe_icon_header;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html">   37</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1PE_1_1ResourceIcon.html">ResourceIcon</a> : <span class="keyword">public</span> Object {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aadae418a53425958a9f42c0ac4f31360">   38</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>ResourcesManager;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">static</span> result&lt;ResourceIcon&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a162a044ed4f8e5af89484aadc7c3296b">   42</a></span>    <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a162a044ed4f8e5af89484aadc7c3296b">from_serialization</a>(<span class="keyword">const</span> uint8_t* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a24c739d3b02590c785959bb4b0d7e9dd">   44</a></span>  <span class="keyword">static</span> result&lt;ResourceIcon&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a24c739d3b02590c785959bb4b0d7e9dd">from_serialization</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; bytes) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> from_serialization(bytes.data(), bytes.size());</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  }</div>
 </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a1093d30d9b6d68b3322ac6e14c53bf89">   48</a></span>  <span class="keyword">static</span> result&lt;ResourceIcon&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a1093d30d9b6d68b3322ac6e14c53bf89">from_bytes</a>(<a class="code hl_typedef" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">LIEF::span&lt;const uint8_t&gt;</a> bytes) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> from_serialization(bytes.data(), bytes.size_bytes());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aaeb29f17848b71e9a067e0ebc5d1d0aa">   52</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aaeb29f17848b71e9a067e0ebc5d1d0aa">ResourceIcon</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a05b8894ba30f180b9dea117ab5f37e05">   53</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a05b8894ba30f180b9dea117ab5f37e05">ResourceIcon</a>(<span class="keyword">const</span> details::pe_resource_icon_group&amp; header);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8636112213a8d52d203114f9cade5dd2">   54</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8636112213a8d52d203114f9cade5dd2">ResourceIcon</a>(<span class="keyword">const</span> details::pe_icon_header&amp; header);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a2719508d06314caaa05142b21c2f9877">   56</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a2719508d06314caaa05142b21c2f9877">ResourceIcon</a>(<span class="keyword">const</span> ResourceIcon&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae38e665ec03c5065ae2b244846c8ac6c">   57</a></span>  ResourceIcon&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae38e665ec03c5065ae2b244846c8ac6c">operator=</a>(<span class="keyword">const</span> ResourceIcon&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8887408a994fa069e43ed45c23ac6518">   59</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8887408a994fa069e43ed45c23ac6518">ResourceIcon</a>(ResourceIcon&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a2c7e7da2e6009c668df7ae095726f2a3">   60</a></span>  ResourceIcon&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a2c7e7da2e6009c668df7ae095726f2a3">operator=</a>(ResourceIcon&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa79dacf11d0880c64d3f15244f7ecf65">   62</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa79dacf11d0880c64d3f15244f7ecf65">~ResourceIcon</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a616af7202d107e2eaad7934e2fd83fcc">id</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> id_;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a10cfd6d4a275bf7c68f217288505fd12">lang</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> lang_;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a17c5f6598cb4792f453009364a8ffa8b">sublang</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> sublang_;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae6b8dc571b786f399686f2f3aebb4d88">width</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> width_;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3e41a0437a8f823cb25ed48f7b55565b">height</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> height_;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a9f496a188c7ab9243c101aeb8e804e06">color_count</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> color_count_;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  uint8_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a9be54d89c6da2a46690d3cbd616f2063">reserved</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">return</span> reserved_;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a4af884551c5cdc803320f545b51045f9">planes</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> planes_;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aafc7426c7e147202c2dd1b30c33caefb">bit_count</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> bit_count_;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa68215b2bc85039044607ca4cd386fec">size</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">return</span> pixels_.size();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  span&lt;const uint8_t&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a7c7a4708e1014815fe093cf89d3c9a92">pixels</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span> pixels_;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a14e7476c9226b8ec5d0b306902df90c0">  119</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a14e7476c9226b8ec5d0b306902df90c0">id</a>(uint32_t <span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    id_ = id;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  }</div>
+</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#endif</span></div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#adade5f1ba9e62fc27bc80f646c4090ba">  123</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#adade5f1ba9e62fc27bc80f646c4090ba">lang</a>(uint32_t lang) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    lang_ = lang;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8fea29e7914366092934ca8ab61bf017">  127</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a8fea29e7914366092934ca8ab61bf017">sublang</a>(uint32_t sublang) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    sublang_ = sublang;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  }</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a197a270f9a478b5373765e0b55028daa">  131</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a197a270f9a478b5373765e0b55028daa">width</a>(uint8_t width) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    width_ = width;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a0b96c788afe07899db6249c9b574ee19">  135</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a0b96c788afe07899db6249c9b574ee19">height</a>(uint8_t height) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    height_ = height;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a567ff17440ef44bfb3d549d18c04fff2">  139</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a567ff17440ef44bfb3d549d18c04fff2">color_count</a>(uint8_t color_count) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    color_count_ = color_count;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  }</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae01a86068ab7f9ec5dcc29f54e658114">  143</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ae01a86068ab7f9ec5dcc29f54e658114">reserved</a>(uint8_t reserved) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    reserved_ = reserved;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a5f86ec5ab1b8b346a69120ab3e48a70c">  147</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a5f86ec5ab1b8b346a69120ab3e48a70c">planes</a>(uint16_t planes) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    planes_ = planes;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  }</div>
+</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3b985a2fe15d9c67dd2bf8d3747ab96f">  151</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a3b985a2fe15d9c67dd2bf8d3747ab96f">bit_count</a>(uint16_t bit_count) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    bit_count_ = bit_count;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  }</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a09c9a9be3d87e68658f9aaa3851bcd22">  155</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a09c9a9be3d87e68658f9aaa3851bcd22">pixels</a>(std::vector&lt;uint8_t&gt; pixels) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    pixels_ = std::move(pixels);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  }</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#ab179ef66dd226c61a6b64f934fa92bc5">save</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a653d707d426da3465a68408202395d57">  164</a></span>  std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#a653d707d426da3465a68408202395d57">serialize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa53c1d3a48eccaa09823d2425e0e71a3">  166</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1ResourceIcon.html#aa53c1d3a48eccaa09823d2425e0e71a3">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1ResourceIcon.html#a289b9800302168c7828e80e7870acb59">  168</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1ResourceIcon.html#a289b9800302168c7828e80e7870acb59">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> ResourceIcon&amp; entry);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  uint8_t width_ = 0;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  uint8_t height_ = 0;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  uint8_t color_count_ = 0;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  uint8_t reserved_ = 0;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  uint16_t planes_ = 0;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  uint16_t bit_count_ = 0;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  uint32_t id_ = uint32_t(-1);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  uint32_t lang_ = <span class="comment">/* LANG_NEUTRAL */</span>0;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  uint32_t sublang_ = 0 <span class="comment">/* SUBLANG_NEUTRAL */</span>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  std::vector&lt;uint8_t&gt; pixels_;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>};</div>
+</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>}</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aObject_8hpp_html"><div class="ttname"><a href="Object_8hpp.html">Object.hpp</a></div></div>
-<div class="ttc" id="aPE_2enums_8hpp_html"><div class="ttname"><a href="PE_2enums_8hpp.html">enums.hpp</a></div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html">LIEF::PE::ResourceIcon</a></div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:39</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html">LIEF::PE::ResourceIcon</a></div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:37</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a05b8894ba30f180b9dea117ab5f37e05"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a05b8894ba30f180b9dea117ab5f37e05">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon(const details::pe_resource_icon_group &amp;header)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a0b96c788afe07899db6249c9b574ee19"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a0b96c788afe07899db6249c9b574ee19">LIEF::PE::ResourceIcon::height</a></div><div class="ttdeci">void height(uint8_t height)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a10cfd6d4a275bf7c68f217288505fd12"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a10cfd6d4a275bf7c68f217288505fd12">LIEF::PE::ResourceIcon::lang</a></div><div class="ttdeci">uint32_t lang() const</div><div class="ttdoc">Language associated with the icon.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a14e7476c9226b8ec5d0b306902df90c0"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a14e7476c9226b8ec5d0b306902df90c0">LIEF::PE::ResourceIcon::id</a></div><div class="ttdeci">void id(uint32_t id)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a17c5f6598cb4792f453009364a8ffa8b"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a17c5f6598cb4792f453009364a8ffa8b">LIEF::PE::ResourceIcon::sublang</a></div><div class="ttdeci">uint32_t sublang() const</div><div class="ttdoc">Sub language associated with the icon.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a197a270f9a478b5373765e0b55028daa"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a197a270f9a478b5373765e0b55028daa">LIEF::PE::ResourceIcon::width</a></div><div class="ttdeci">void width(uint8_t width)</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a09c9a9be3d87e68658f9aaa3851bcd22"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a09c9a9be3d87e68658f9aaa3851bcd22">LIEF::PE::ResourceIcon::pixels</a></div><div class="ttdeci">void pixels(std::vector&lt; uint8_t &gt; pixels)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:155</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a0b96c788afe07899db6249c9b574ee19"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a0b96c788afe07899db6249c9b574ee19">LIEF::PE::ResourceIcon::height</a></div><div class="ttdeci">void height(uint8_t height)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:135</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a1093d30d9b6d68b3322ac6e14c53bf89"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a1093d30d9b6d68b3322ac6e14c53bf89">LIEF::PE::ResourceIcon::from_bytes</a></div><div class="ttdeci">static result&lt; ResourceIcon &gt; from_bytes(LIEF::span&lt; const uint8_t &gt; bytes)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:48</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a10cfd6d4a275bf7c68f217288505fd12"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a10cfd6d4a275bf7c68f217288505fd12">LIEF::PE::ResourceIcon::lang</a></div><div class="ttdeci">uint32_t lang() const</div><div class="ttdoc">Language associated with the icon.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:70</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a14e7476c9226b8ec5d0b306902df90c0"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a14e7476c9226b8ec5d0b306902df90c0">LIEF::PE::ResourceIcon::id</a></div><div class="ttdeci">void id(uint32_t id)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:119</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a162a044ed4f8e5af89484aadc7c3296b"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a162a044ed4f8e5af89484aadc7c3296b">LIEF::PE::ResourceIcon::from_serialization</a></div><div class="ttdeci">static result&lt; ResourceIcon &gt; from_serialization(const uint8_t *buffer, size_t size)</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a17c5f6598cb4792f453009364a8ffa8b"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a17c5f6598cb4792f453009364a8ffa8b">LIEF::PE::ResourceIcon::sublang</a></div><div class="ttdeci">uint32_t sublang() const</div><div class="ttdoc">Sub language associated with the icon.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:75</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a197a270f9a478b5373765e0b55028daa"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a197a270f9a478b5373765e0b55028daa">LIEF::PE::ResourceIcon::width</a></div><div class="ttdeci">void width(uint8_t width)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:131</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a24c739d3b02590c785959bb4b0d7e9dd"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a24c739d3b02590c785959bb4b0d7e9dd">LIEF::PE::ResourceIcon::from_serialization</a></div><div class="ttdeci">static result&lt; ResourceIcon &gt; from_serialization(const std::vector&lt; uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:44</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a2719508d06314caaa05142b21c2f9877"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a2719508d06314caaa05142b21c2f9877">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon(const ResourceIcon &amp;)=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a289b9800302168c7828e80e7870acb59"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a289b9800302168c7828e80e7870acb59">LIEF::PE::ResourceIcon::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const ResourceIcon &amp;entry)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a2c44792ddac9ccd863f2df6c04884b57"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a2c44792ddac9ccd863f2df6c04884b57">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon(const ResourceIcon &amp;)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a3152e8182a4450964842a2e34f2e23f1"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a3152e8182a4450964842a2e34f2e23f1">LIEF::PE::ResourceIcon::pixels</a></div><div class="ttdeci">void pixels(const std::vector&lt; uint8_t &gt; &amp;pixels)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a37061ec33e868ec54b03301d078f3be3"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a37061ec33e868ec54b03301d078f3be3">LIEF::PE::ResourceIcon::~ResourceIcon</a></div><div class="ttdeci">~ResourceIcon() override</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a3b985a2fe15d9c67dd2bf8d3747ab96f"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a3b985a2fe15d9c67dd2bf8d3747ab96f">LIEF::PE::ResourceIcon::bit_count</a></div><div class="ttdeci">void bit_count(uint16_t bit_count)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a3e41a0437a8f823cb25ed48f7b55565b"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a3e41a0437a8f823cb25ed48f7b55565b">LIEF::PE::ResourceIcon::height</a></div><div class="ttdeci">uint8_t height() const</div><div class="ttdoc">Height in pixels of the image.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a3f66bd40e9d9f6c03ca83130dd1b9b12"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a3f66bd40e9d9f6c03ca83130dd1b9b12">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon()</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a4af884551c5cdc803320f545b51045f9"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a4af884551c5cdc803320f545b51045f9">LIEF::PE::ResourceIcon::planes</a></div><div class="ttdeci">uint16_t planes() const</div><div class="ttdoc">Color Planes.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a567ff17440ef44bfb3d549d18c04fff2"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a567ff17440ef44bfb3d549d18c04fff2">LIEF::PE::ResourceIcon::color_count</a></div><div class="ttdeci">void color_count(uint8_t color_count)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a5f86ec5ab1b8b346a69120ab3e48a70c"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a5f86ec5ab1b8b346a69120ab3e48a70c">LIEF::PE::ResourceIcon::planes</a></div><div class="ttdeci">void planes(uint16_t planes)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a616af7202d107e2eaad7934e2fd83fcc"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a616af7202d107e2eaad7934e2fd83fcc">LIEF::PE::ResourceIcon::id</a></div><div class="ttdeci">uint32_t id() const</div><div class="ttdoc">Id associated with the icon.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a7c7a4708e1014815fe093cf89d3c9a92"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a7c7a4708e1014815fe093cf89d3c9a92">LIEF::PE::ResourceIcon::pixels</a></div><div class="ttdeci">span&lt; const uint8_t &gt; pixels() const</div><div class="ttdoc">Pixels of the image (as bytes)</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a2c7e7da2e6009c668df7ae095726f2a3"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a2c7e7da2e6009c668df7ae095726f2a3">LIEF::PE::ResourceIcon::operator=</a></div><div class="ttdeci">ResourceIcon &amp; operator=(ResourceIcon &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a3b985a2fe15d9c67dd2bf8d3747ab96f"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a3b985a2fe15d9c67dd2bf8d3747ab96f">LIEF::PE::ResourceIcon::bit_count</a></div><div class="ttdeci">void bit_count(uint16_t bit_count)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:151</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a3e41a0437a8f823cb25ed48f7b55565b"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a3e41a0437a8f823cb25ed48f7b55565b">LIEF::PE::ResourceIcon::height</a></div><div class="ttdeci">uint8_t height() const</div><div class="ttdoc">Height in pixels of the image.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:85</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a4af884551c5cdc803320f545b51045f9"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a4af884551c5cdc803320f545b51045f9">LIEF::PE::ResourceIcon::planes</a></div><div class="ttdeci">uint16_t planes() const</div><div class="ttdoc">Color Planes.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:100</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a567ff17440ef44bfb3d549d18c04fff2"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a567ff17440ef44bfb3d549d18c04fff2">LIEF::PE::ResourceIcon::color_count</a></div><div class="ttdeci">void color_count(uint8_t color_count)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:139</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a5f86ec5ab1b8b346a69120ab3e48a70c"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a5f86ec5ab1b8b346a69120ab3e48a70c">LIEF::PE::ResourceIcon::planes</a></div><div class="ttdeci">void planes(uint16_t planes)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:147</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a616af7202d107e2eaad7934e2fd83fcc"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a616af7202d107e2eaad7934e2fd83fcc">LIEF::PE::ResourceIcon::id</a></div><div class="ttdeci">uint32_t id() const</div><div class="ttdoc">Id associated with the icon.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:65</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a653d707d426da3465a68408202395d57"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a653d707d426da3465a68408202395d57">LIEF::PE::ResourceIcon::serialize</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; serialize() const</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a7c7a4708e1014815fe093cf89d3c9a92"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a7c7a4708e1014815fe093cf89d3c9a92">LIEF::PE::ResourceIcon::pixels</a></div><div class="ttdeci">span&lt; const uint8_t &gt; pixels() const</div><div class="ttdoc">Pixels of the image (as bytes)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:115</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a8636112213a8d52d203114f9cade5dd2"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a8636112213a8d52d203114f9cade5dd2">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon(const details::pe_icon_header &amp;header)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a8fea29e7914366092934ca8ab61bf017"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a8fea29e7914366092934ca8ab61bf017">LIEF::PE::ResourceIcon::sublang</a></div><div class="ttdeci">void sublang(uint32_t sublang)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a9be54d89c6da2a46690d3cbd616f2063"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a9be54d89c6da2a46690d3cbd616f2063">LIEF::PE::ResourceIcon::reserved</a></div><div class="ttdeci">uint8_t reserved() const</div><div class="ttdoc">Reserved (must be 0)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a9f496a188c7ab9243c101aeb8e804e06"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a9f496a188c7ab9243c101aeb8e804e06">LIEF::PE::ResourceIcon::color_count</a></div><div class="ttdeci">uint8_t color_count() const</div><div class="ttdoc">Number of colors in image (0 if &gt;=8bpp)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aa02624a7731b5d9652c2305b84771aea"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aa02624a7731b5d9652c2305b84771aea">LIEF::PE::ResourceIcon::operator=</a></div><div class="ttdeci">ResourceIcon &amp; operator=(const ResourceIcon &amp;)</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a8887408a994fa069e43ed45c23ac6518"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a8887408a994fa069e43ed45c23ac6518">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon(ResourceIcon &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a8fea29e7914366092934ca8ab61bf017"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a8fea29e7914366092934ca8ab61bf017">LIEF::PE::ResourceIcon::sublang</a></div><div class="ttdeci">void sublang(uint32_t sublang)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:127</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a9be54d89c6da2a46690d3cbd616f2063"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a9be54d89c6da2a46690d3cbd616f2063">LIEF::PE::ResourceIcon::reserved</a></div><div class="ttdeci">uint8_t reserved() const</div><div class="ttdoc">Reserved (must be 0)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:95</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_a9f496a188c7ab9243c101aeb8e804e06"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#a9f496a188c7ab9243c101aeb8e804e06">LIEF::PE::ResourceIcon::color_count</a></div><div class="ttdeci">uint8_t color_count() const</div><div class="ttdoc">Number of colors in image (0 if &gt;=8bpp)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:90</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aa53c1d3a48eccaa09823d2425e0e71a3"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aa53c1d3a48eccaa09823d2425e0e71a3">LIEF::PE::ResourceIcon::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aa68215b2bc85039044607ca4cd386fec"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aa68215b2bc85039044607ca4cd386fec">LIEF::PE::ResourceIcon::size</a></div><div class="ttdeci">uint32_t size() const</div><div class="ttdoc">Size in bytes of the image.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aafc7426c7e147202c2dd1b30c33caefb"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aafc7426c7e147202c2dd1b30c33caefb">LIEF::PE::ResourceIcon::bit_count</a></div><div class="ttdeci">uint16_t bit_count() const</div><div class="ttdoc">Bits per pixel.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aa68215b2bc85039044607ca4cd386fec"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aa68215b2bc85039044607ca4cd386fec">LIEF::PE::ResourceIcon::size</a></div><div class="ttdeci">uint32_t size() const</div><div class="ttdoc">Size in bytes of the image.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:110</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aa79dacf11d0880c64d3f15244f7ecf65"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aa79dacf11d0880c64d3f15244f7ecf65">LIEF::PE::ResourceIcon::~ResourceIcon</a></div><div class="ttdeci">~ResourceIcon() override=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aaeb29f17848b71e9a067e0ebc5d1d0aa"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aaeb29f17848b71e9a067e0ebc5d1d0aa">LIEF::PE::ResourceIcon::ResourceIcon</a></div><div class="ttdeci">ResourceIcon()=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_aafc7426c7e147202c2dd1b30c33caefb"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#aafc7426c7e147202c2dd1b30c33caefb">LIEF::PE::ResourceIcon::bit_count</a></div><div class="ttdeci">uint16_t bit_count() const</div><div class="ttdoc">Bits per pixel.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:105</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_ab179ef66dd226c61a6b64f934fa92bc5"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#ab179ef66dd226c61a6b64f934fa92bc5">LIEF::PE::ResourceIcon::save</a></div><div class="ttdeci">void save(const std::string &amp;filename) const</div><div class="ttdoc">Save the icon to the given filename.</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_adade5f1ba9e62fc27bc80f646c4090ba"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#adade5f1ba9e62fc27bc80f646c4090ba">LIEF::PE::ResourceIcon::lang</a></div><div class="ttdeci">void lang(uint32_t lang)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_ae01a86068ab7f9ec5dcc29f54e658114"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#ae01a86068ab7f9ec5dcc29f54e658114">LIEF::PE::ResourceIcon::reserved</a></div><div class="ttdeci">void reserved(uint8_t reserved)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_ae6b8dc571b786f399686f2f3aebb4d88"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#ae6b8dc571b786f399686f2f3aebb4d88">LIEF::PE::ResourceIcon::width</a></div><div class="ttdeci">uint8_t width() const</div><div class="ttdoc">Width in pixels of the image.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_adade5f1ba9e62fc27bc80f646c4090ba"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#adade5f1ba9e62fc27bc80f646c4090ba">LIEF::PE::ResourceIcon::lang</a></div><div class="ttdeci">void lang(uint32_t lang)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:123</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_ae01a86068ab7f9ec5dcc29f54e658114"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#ae01a86068ab7f9ec5dcc29f54e658114">LIEF::PE::ResourceIcon::reserved</a></div><div class="ttdeci">void reserved(uint8_t reserved)</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:143</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_ae38e665ec03c5065ae2b244846c8ac6c"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#ae38e665ec03c5065ae2b244846c8ac6c">LIEF::PE::ResourceIcon::operator=</a></div><div class="ttdeci">ResourceIcon &amp; operator=(const ResourceIcon &amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1ResourceIcon_html_ae6b8dc571b786f399686f2f3aebb4d88"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourceIcon.html#ae6b8dc571b786f399686f2f3aebb4d88">LIEF::PE::ResourceIcon::width</a></div><div class="ttdeci">uint8_t width() const</div><div class="ttdoc">Width in pixels of the image.</div><div class="ttdef"><b>Definition</b> ResourceIcon.hpp:80</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ResourcesManager_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1ResourcesManager.html">LIEF::PE::ResourcesManager</a></div><div class="ttdoc">The Resource Manager provides an enhanced API to manipulate the resource tree.</div><div class="ttdef"><b>Definition</b> ResourcesManager.hpp:38</div></div>
-<div class="ttc" id="anamespaceLIEF_1_1PE_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:26</div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="errors_8hpp.html">errors.hpp</a></div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></div><div class="ttdef"><b>Definition</b> DataDirectory.hpp:37</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html"><div class="ttname"><a href="namespaceLIEF_1_1PE.html">LIEF::PE</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s PE module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:32</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
+<div class="ttc" id="anamespaceLIEF_html_a3c570bf1c62cc0e435c9fd3b5fa90305"><div class="ttname"><a href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">LIEF::span</a></div><div class="ttdeci">tcb::span&lt; ElementType, Extent &gt; span</div><div class="ttdef"><b>Definition</b> span.hpp:22</div></div>
 <div class="ttc" id="aspan_8hpp_html"><div class="ttname"><a href="span_8hpp.html">span.hpp</a></div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>

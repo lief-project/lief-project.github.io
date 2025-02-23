@@ -1,5 +1,594 @@
-<!doctypehtml><html data-content_root=../../ lang=en><meta charset=utf-8><meta content=width=device-width,initial-scale=1.0 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=ie=edge http-equiv=x-ua-compatible><meta content="Copy to clipboard"name=lang:clipboard.copy><meta content="Copied to clipboard"name=lang:clipboard.copied><meta content=en name=lang:search.language><meta content=True name=lang:search.pipeline.stopwords><meta content=True name=lang:search.pipeline.trimmer><meta content="No matching documents"name=lang:search.result.none><meta content="1 matching document"name=lang:search.result.one><meta content="# matching documents"name=lang:search.result.other><meta content=[\s\-]+ name=lang:search.tokenizer><meta content="LIEF Documentation"name=Description><link crossorigin href=https://fonts.gstatic.com/ rel=preconnect><script src=../../_static/javascripts/vendor.min.js></script><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css rel=stylesheet><link href=../../_static/favicon.ico rel=apple-touch-icon><title>Debug Info — LIEF Documentation</title><link href=../../_static/fonts/material-icons.css rel=stylesheet><link href=../../_static/stylesheets/vendor.min.css rel=stylesheet><link href=../../_static/pygments.css?v=3d3fbe02 rel=stylesheet><link href=../../_static/basic.css?v=fb9458d3 rel=stylesheet><link href=../../_static/graphviz.css?v=fd3f3429 rel=stylesheet><link href=../../_static/css/custom.css?v=49aeed65 rel=stylesheet><script src=../../_static/documentation_options.js?v=7de89ed4></script><script src=../../_static/doctools.js?v=9a2dae69></script><script src=../../_static/sphinx_highlight.js?v=dc90522c></script><link href=../../_static/favicon.ico rel=icon><link href=../../genindex.html rel=index title=Index><link href=../../search.html rel=search title=Search><link href=../dwarf/index.html rel=next title=DWARF><link title="What is LIEF Extended?"href=../intro.html rel=prev><link href=../../_static/stylesheets/theme.css rel=stylesheet><body data-md-color-accent=cyan data-md-color-primary=blue dir=ltr><nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top"role=navigation><a class=navbar-brand href=../../index.html>LIEF Documentation</a><button class=navbar-toggler data-target=#navbar-collapse data-toggle=collapse><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0"id=navbar-collapse><ul class="navbar-nav position-relative px-lg-6 px-xl-8"><li class=nav-item><a class=nav-link href=https://lief.re> <i class="fa-solid fa-house mr-3"></i>Home </a><li class=nav-item><a class=nav-link href=https://lief.re/blog> <i class="fa-solid fa-rss mr-3"></i>Blog </a><li class=nav-item><a class=nav-link href=https://lief.re/download> <i class="fa-solid fa-download mr-3"></i>Download </a><li class="nav-item dropdown"><a class="nav-link dropdown-toggle"aria-expanded=false data-toggle=dropdown href=# role=button> <i class="fa-solid fa-book mr-3"></i>Documentation </a> <div class=dropdown-menu role=menu><a class=dropdown-item href=https://lief.re/doc/latest/doxygen>Doxygen</a></div><li class=nav-item><a class=nav-link href=https://lief.re/about> <i class="fa-solid fa-bars-staggered mr-3"></i>About </a><li class="nav-item ml-lg-3 mt-3 mt-lg-0"><a class="hover-lift-light mt-1"href=https://discord.gg/jGQtyAYChJ target=_blank> <i class="fab fa-2x fa-discord text-darkblue mr-3"></i> </a><li class=nav-item><a class="btn btn-outline-pink"href=https://github.com/sponsors/lief-project target=_blank> <i class="fa-solid fa-heart mr-3"></i> Sponsor </a></ul></div></nav><div class="container-fluid container-docs"><div class=row><div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left"><div class="collapse d-lg-block mb-6 mb-lg-0"id=sidebar-collapse><form action=../../search.html method=GET name=search><input autocapitalize=off autocomplete=off class=form-control data-md-component=query data-md-state=active name=q placeholder=Search spellcheck=false></form><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../intro.html><em class="fa fa-solid fa-door-open"></em> Introduction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../installation.html><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../compilation.html><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-sitemap"> </i>Formats</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/elf/index.html><em class="fa fa-brands fa-linux"></em> ELF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/macho/index.html><em class="fa fa-brands fa-apple"></em> Mach-O</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/pe/index.html><em class="fa fa-brands fa-windows"></em> PE</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/android/index.html><em class="fa fa-brands fa-android"></em> Android</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-code"> </i>API</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/binary_abstraction/index.html><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/utilities/index.html><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/error_handling/index.html><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/logging/index.html><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/cpp/index.html><em class="fa fa-regular fa-file-code"></em> C++</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/rust/index.html><em class="fa fa-brands fa-rust"></em> Rust</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../intro.html><em class="fa fa-cubes"></em> What is LIEF Extended?</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=#><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../dwarf/index.html><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../pdb/index.html><em class="fa fa-brands fa-windows"></em> PDB</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../objc/index.html><em class="fa fa-brands fa-apple"></em> Objective-C</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../dsc/index.html><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../disassembler/index.html><em class="fa fa-solid fa-dna"></em> Disassembler</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../assembler/index.html><em class="fa fa-solid fa-user-secret"></em> Assembler</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-layer-group"> </i>Tutorials</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/01_play_with_formats.html>01 - Parse and manipulate formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/02_pe_from_scratch.html>02 - Create a PE from scratch</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/03_elf_change_symbols.html>03 - Play with ELF symbols</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/04_elf_hooking.html>04 - ELF Hooking</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/05_elf_infect_plt_got.html>05 - Infecting the plt/got</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/06_pe_hooking.html>06 - PE Hooking (Deprecated)</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/07_pe_resource.html>07 - PE Resources</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/08_elf_bin2lib.html>08 - Transforming an ELF executable into a library</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/09_frida_lief.html>09 - How to use frida on a non-rooted device</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/10_android_formats.html>10 - Android formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/11_macho_modification.html>11 - Mach-O Modification</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/12_elf_coredump.html>12 - ELF Coredump</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/13_pe_authenticode.html>13 - PE Authenticode</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-brands fa-space-awesome"> </i>Extra Information</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../references.html><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../changelog.html><em class="fa fa-solid fa-code-compare"></em> Changelog</a></ul></div><hr><span class="svg-icon text-purple mr-1 relative-top--1"> <svg viewbox="0 0 512 512"height=512 width=512 xmlns=http://www.w3.org/2000/svg><title>ionicons-v5-d</title><circle cx=160 cy=96 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><circle cx=160 cy=416 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><line style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px x1=160 x2=160 y1=368 y2=144></line><circle cx=352 cy=160 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><path d=M352,208c0,128-192,48-192,160 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></path></svg> </span><a class=text-darkblue href=https://github.com/lief-project/LIEF/commits/0ff950c0>0.16.0 (0ff950c0)</a><br> Updated on 10/12/2024, 06:48:19.</div><div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8"><nav aria-label=breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a aria-label=Home href=../../index.html><i class="fa-solid fa-home"></i></a><li class="breadcrumb-item active"aria-current=page><a href=#><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></ol></nav><section id=debug-info><span id=id1></span><h1 id=extended-debug-info-index--page-root><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info<a title="Link to this heading"class=headerlink href=#extended-debug-info-index--page-root>¶</a></h1><p><a class="reference internal"href=../pdb/index.html#extended-pdb><span class="std std-ref">PDB</span></a> and <a class="reference internal"href=../dwarf/index.html#extended-dwarf><span class="std std-ref">DWARF</span></a> shares similar traits which are abstracted by the following classes:<section id=c><h2 id=c><em class="fa fa-regular fa-file-code"></em> C++<a title="Link to this heading"class=headerlink href=#c>¶</a></h2><section id=debuginfo><h3 id=debuginfo>DebugInfo<a title="Link to this heading"class=headerlink href=#debuginfo>¶</a></h3><dl class="cpp class"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfoE><span id=_CPPv3N4LIEF9DebugInfoE></span><span id=_CPPv2N4LIEF9DebugInfoE></span><span id=LIEF::DebugInfo></span><span class=target id=classLIEF_1_1DebugInfo></span><span class=k><span class=pre>class</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>DebugInfo</span></span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfoE>¶</a><br><dd><p>Subclassed by <a class="reference internal"href=../dwarf/cpp.html#classLIEF_1_1dwarf_1_1DebugInfo><span class="std std-ref">LIEF::dwarf::DebugInfo</span></a>, <a class="reference internal"href=../pdb/cpp.html#classLIEF_1_1pdb_1_1DebugInfo><span class="std std-ref">LIEF::pdb::DebugInfo</span></a></p> <div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric"id=breathe-section-title-public-types>Public Types<dl class="cpp enum-class"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfo6FORMATE><span id=_CPPv3N4LIEF9DebugInfo6FORMATE></span><span id=_CPPv2N4LIEF9DebugInfo6FORMATE></span><span class=target id=classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6></span><span class=k><span class=pre>enum</span></span><span class=w> </span><span class=k><span class=pre>class</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>FORMAT</span></span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfo6FORMATE>¶</a><br><dd><p><em>Values:</em></p> <dl class="cpp enumerator"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfo6FORMAT7UNKNOWNE><span id=_CPPv3N4LIEF9DebugInfo6FORMAT7UNKNOWNE></span><span id=_CPPv2N4LIEF9DebugInfo6FORMAT7UNKNOWNE></span><span class=target id=classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6a696b031073e74bf2cb98e5ef201d4aa3></span><span class=k><span class=pre>enumerator</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>UNKNOWN</span></span></span><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=m><span class=pre>0</span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfo6FORMAT7UNKNOWNE>¶</a><br><dd></dl> <dl class="cpp enumerator"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfo6FORMAT5DWARFE><span id=_CPPv3N4LIEF9DebugInfo6FORMAT5DWARFE></span><span id=_CPPv2N4LIEF9DebugInfo6FORMAT5DWARFE></span><span class=target id=classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6aab798db308a24d99de697ade4aaac333></span><span class=k><span class=pre>enumerator</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>DWARF</span></span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfo6FORMAT5DWARFE>¶</a><br><dd></dl> <dl class="cpp enumerator"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfo6FORMAT3PDBE><span id=_CPPv3N4LIEF9DebugInfo6FORMAT3PDBE></span><span id=_CPPv2N4LIEF9DebugInfo6FORMAT3PDBE></span><span class=target id=classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6a03f554192338a6010647346c89146288></span><span class=k><span class=pre>enumerator</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>PDB</span></span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfo6FORMAT3PDBE>¶</a><br><dd></dl></dl></div> <div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric"id=breathe-section-title-public-functions>Public Functions<dl class="cpp function"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE><span id=_CPPv3N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE></span><span id=_CPPv2N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE></span><span id=LIEF::DebugInfo::DebugInfo__std::unique_ptr:details::DebugInfo:></span><span class=target id=classLIEF_1_1DebugInfo_1a0c5e2dde22fba4f3d1b32bd525b49b52></span><span class="sig-name descname"><span class=n><span class=pre>DebugInfo</span></span></span><span class=sig-paren>(</span><span class=n><span class=pre>std</span></span><span class=p><span class=pre>::</span></span><span class=n><span class=pre>unique_ptr</span></span><span class=p><span class=pre><</span></span><span class=n><span class=pre>details</span></span><span class=p><span class=pre>::</span></span><span class=n><span class=pre>DebugInfo</span></span><span class=p><span class=pre>></span></span><span class=w> </span><span class="n sig-param"><span class=pre>impl</span></span><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE>¶</a><br><dd></dl><dl class="cpp function"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF9DebugInfoD0Ev><span id=_CPPv3N4LIEF9DebugInfoD0Ev></span><span id=_CPPv2N4LIEF9DebugInfoD0Ev></span><span id=LIEF::DebugInfo::~DebugInfo></span><span class=target id=classLIEF_1_1DebugInfo_1a3d168dd363e5b47c7d20725f5088b2ec></span><span class=k><span class=pre>virtual</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>~DebugInfo</span></span></span><span class=sig-paren>(</span><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF9DebugInfoD0Ev>¶</a><br><dd></dl><dl class="cpp function"><dt class="sig sig-object cpp"id=_CPPv4NK4LIEF9DebugInfo6formatEv><span id=_CPPv3NK4LIEF9DebugInfo6formatEv></span><span id=_CPPv2NK4LIEF9DebugInfo6formatEv></span><span id=LIEF::DebugInfo::formatC></span><span class=target id=classLIEF_1_1DebugInfo_1abc0e763978942231ed9f8e8f2fb7b175></span><span class=k><span class=pre>inline</span></span><span class=w> </span><span class=k><span class=pre>virtual</span></span><span class=w> </span><a class="reference internal"href=#_CPPv4N4LIEF9DebugInfo6FORMATE title=LIEF::DebugInfo::FORMAT><span class=n><span class=pre>FORMAT</span></span></a><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>format</span></span></span><span class=sig-paren>(</span><span class=sig-paren>)</span><span class=w> </span><span class=k><span class=pre>const</span></span><a title="Link to this definition"class=headerlink href=#_CPPv4NK4LIEF9DebugInfo6formatEv>¶</a><br><dd></dl><dl class="cpp function"><dt class="sig sig-object cpp"id=_CPPv4I0ENK4LIEF9DebugInfo2asEPK1Tv><span id=_CPPv3I0ENK4LIEF9DebugInfo2asEv></span><span id=_CPPv2I0ENK4LIEF9DebugInfo2asEv></span><span class=k><span class=pre>template</span></span><span class=p><span class=pre><</span></span><span class=k><span class=pre>class</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>T</span></span></span><span class=p><span class=pre>></span></span><br><span class=target id=classLIEF_1_1DebugInfo_1aad71af4fc1aebabf4c0ae7a75150495c></span><span class=k><span class=pre>inline</span></span><span class=w> </span><span class=k><span class=pre>const</span></span><span class=w> </span><a class="reference internal"href=#_CPPv4I0ENK4LIEF9DebugInfo2asEPK1Tv title=LIEF::DebugInfo::as::T><span class=n><span class=pre>T</span></span></a><span class=w> </span><span class=p><span class=pre>*</span></span><span class="sig-name descname"><span class=n><span class=pre>as</span></span></span><span class=sig-paren>(</span><span class=sig-paren>)</span><span class=w> </span><span class=k><span class=pre>const</span></span><a title="Link to this definition"class=headerlink href=#_CPPv4I0ENK4LIEF9DebugInfo2asEPK1Tv>¶</a><br><dd><p>This function can be used to <strong>down cast</strong> a <a class="reference internal"href=#classLIEF_1_1DebugInfo><span class="std std-ref">DebugInfo</span></a> instance:</p> <div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=n>std</span><span class=o>::</span><span class=n>unique_ptr</span><span class=o><</span><span class=n>LIEF</span><span class=o>::</span><span class=n>Instruction</span><span class=o>></span><span class=w> </span><span class=n>dbg</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>bin</span><span class=o>-></span><span class=n>debug_info</span><span class=p>();</span>
-<span class=k>if</span><span class=w> </span><span class=p>(</span><span class=k>const</span><span class=w> </span><span class=k>auto</span><span class=o>*</span><span class=w> </span><span class=n>dwarf</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>inst</span><span class=o>-></span><span class=n>as</span><span class=o><</span><span class=n>LIEF</span><span class=o>::</span><span class=n>dwarf</span><span class=o>::</span><span class=n>DebugInfo</span><span class=o>></span><span class=p>())</span><span class=w> </span><span class=p>{</span>
-<span class=w>  </span><span class=n>dwarf</span><span class=o>-></span><span class=n>find_function</span><span class=p>(</span><span class=s>"main"</span><span class=p>);</span>
-<span class=p>}</span>
-</pre></div></div></dl></div></dl></section><section id=debug-location-t><h3 id=debug-location-t>debug_location_t<a title="Link to this heading"class=headerlink href=#debug-location-t>¶</a></h3><dl class="cpp struct"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF16debug_location_tE><span id=_CPPv3N4LIEF16debug_location_tE></span><span id=_CPPv2N4LIEF16debug_location_tE></span><span id=LIEF::debug_location_t></span><span class=target id=structLIEF_1_1debug__location__t></span><span class=k><span class=pre>struct</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>debug_location_t</span></span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF16debug_location_tE>¶</a><br><dd><p>This structure holds a debug location (source filename & line)</p> <div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric"id=breathe-section-title-public-members>Public Members<dl class="cpp var"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF16debug_location_t4fileE><span id=_CPPv3N4LIEF16debug_location_t4fileE></span><span id=_CPPv2N4LIEF16debug_location_t4fileE></span><span id=LIEF::debug_location_t::file__ss></span><span class=target id=structLIEF_1_1debug__location__t_1ae427b350037b9d6bab244ab398774e8c></span><span class=n><span class=pre>std</span></span><span class=p><span class=pre>::</span></span><span class=n><span class=pre>string</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>file</span></span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF16debug_location_t4fileE>¶</a><br><dd></dl><dl class="cpp var"><dt class="sig sig-object cpp"id=_CPPv4N4LIEF16debug_location_t4lineE><span id=_CPPv3N4LIEF16debug_location_t4lineE></span><span id=_CPPv2N4LIEF16debug_location_t4lineE></span><span id=LIEF::debug_location_t::line__uint64_t></span><span class=target id=structLIEF_1_1debug__location__t_1ad52691ad0c42c17478b3b7482bbd5aaf></span><span class=n><span class=pre>uint64_t</span></span><span class=w> </span><span class="sig-name descname"><span class=n><span class=pre>line</span></span></span><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=m><span class=pre>0</span></span><a title="Link to this definition"class=headerlink href=#_CPPv4N4LIEF16debug_location_t4lineE>¶</a><br><dd></dl></div></dl></section></section><hr class=docutils><section id=python><h2 id=python><em class="fa fa-brands fa-python"></em> Python<a title="Link to this heading"class=headerlink href=#python>¶</a></h2><section id=id2><h3 id=id2>DebugInfo<a title="Link to this heading"class=headerlink href=#id2>¶</a></h3><dl class="py class"><dt class="sig sig-object py"id=lief.DebugInfo><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.</span></span><span class="sig-name descname"><span class=pre>DebugInfo</span></span><a title="Link to this definition"class=headerlink href=#lief.DebugInfo>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <dl class="py class"><dt class="sig sig-object py"id=lief.DebugInfo.FORMAT><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>FORMAT</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>value</span></span></em>, <em class=sig-param><span class=n><span class=pre>names</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=o><span class=pre>*</span></span></em>, <em class=sig-param><span class=n><span class=pre>module</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>qualname</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>type</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>start</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>1</span></span></em>, <em class=sig-param><span class=n><span class=pre>boundary</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#lief.DebugInfo.FORMAT>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>Enum</span></code></p> <dl class="py attribute"><dt class="sig sig-object py"id=lief.DebugInfo.FORMAT.DWARF><span class="sig-name descname"><span class=pre>DWARF</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>1</span></em><a title="Link to this definition"class=headerlink href=#lief.DebugInfo.FORMAT.DWARF>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.DebugInfo.FORMAT.PDB><span class="sig-name descname"><span class=pre>PDB</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>2</span></em><a title="Link to this definition"class=headerlink href=#lief.DebugInfo.FORMAT.PDB>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.DebugInfo.FORMAT.UNKNOWN><span class="sig-name descname"><span class=pre>UNKNOWN</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>0</span></em><a title="Link to this definition"class=headerlink href=#lief.DebugInfo.FORMAT.UNKNOWN>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.DebugInfo.FORMAT.from_value><span class="sig-name descname"><span class=pre>from_value</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>arg</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.DebugInfo.FORMAT title=lief.DebugInfo.FORMAT><span class=pre>lief.DebugInfo.FORMAT</span></a></span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>&LTnanobind.nb_func</span> <span class=pre>object></span></em><a title="Link to this definition"class=headerlink href=#lief.DebugInfo.FORMAT.from_value>¶</a><dd></dl></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.DebugInfo.format><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>format</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.DebugInfo.FORMAT title=lief.DebugInfo.FORMAT><span class=pre>lief.DebugInfo.FORMAT</span></a></span></span><a title="Link to this definition"class=headerlink href=#lief.DebugInfo.format>¶</a><dd><p>Debug format (PDB/DWARF)</p></dl></dl></section><section id=id3><h3 id=id3>debug_location_t<a title="Link to this heading"class=headerlink href=#id3>¶</a></h3><dl class="py class"><dt class="sig sig-object py"id=lief.debug_location_t><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.</span></span><span class="sig-name descname"><span class=pre>debug_location_t</span></span><a title="Link to this definition"class=headerlink href=#lief.debug_location_t>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <dl class="py property"><dt class="sig sig-object py"id=lief.debug_location_t.file><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>file</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><a title="Link to this definition"class=headerlink href=#lief.debug_location_t.file>¶</a><dd></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.debug_location_t.line><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>line</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.debug_location_t.line>¶</a><dd></dl></dl></section></section><hr class=docutils><section id=rust><h2 id=rust><em class="fa fa-brands fa-rust"></em> Rust<a title="Link to this heading"class=headerlink href=#rust>¶</a></h2><ul class=simple><li><p><a class="reference external"href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/generic/trait.DebugInfo.html><code class="xref rust rust-trait docutils literal notranslate"><span class=pre>lief::generic::DebugInfo</span></code></a><li><p><a class="reference external"href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/struct.DebugLocation.html><code class="xref rust rust-struct docutils literal notranslate"><span class=pre>lief::DebugLocation</span></code></a></ul></section></section></div><div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right"><aside class="border-left pl-5 py-3"><span class="text-uppercase text-muted font-size-sm d-block mb-3"> On this page: </span><a class="d-block my-2"data-toggle=scroll href=#c><em class="fa fa-regular fa-file-code"></em> C++</a><a class="d-block my-2"data-toggle=scroll href=#python><em class="fa fa-brands fa-python"></em> Python</a><a class="d-block my-2"data-toggle=scroll href=#rust><em class="fa fa-brands fa-rust"></em> Rust</a></aside></div></div></div>
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
+
+  <script src="../../_static/javascripts/vendor.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <title>Debug Info &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/vendor.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=3d3fbe02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=411c5307" />
+    <script src="../../_static/documentation_options.js?v=0c3dd48d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DWARF" href="../dwarf/index.html" />
+    <link rel="prev" title="What is LIEF Extended?" href="../intro.html" />
+   
+  <link rel="stylesheet" href="../../_static/stylesheets/theme.css"/>
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
+
+    
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/macho/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/pe/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../dsc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/10_android_formats.html" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/dd291ae1" class="text-darkblue">0.17.0 (dd291ae1)</a>
+    <br>
+    Updated on 23/02/2025, 12:10:07.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="debug-info">
+<span id="id1"></span><h1 id="extended-debug-info-index--page-root"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info<a class="headerlink" href="#extended-debug-info-index--page-root" title="Link to this heading">¶</a></h1>
+<p><a class="reference internal" href="../pdb/index.html#extended-pdb"><span class="std std-ref">PDB</span></a> and <a class="reference internal" href="../dwarf/index.html#extended-dwarf"><span class="std std-ref">DWARF</span></a> shares similar
+traits which are abstracted by the following classes:</p>
+<section id="c">
+<h2 id="c"><em class="fa fa-regular fa-file-code"></em> C++<a class="headerlink" href="#c" title="Link to this heading">¶</a></h2>
+<section id="debuginfo">
+<h3 id="debuginfo">DebugInfo<a class="headerlink" href="#debuginfo" title="Link to this heading">¶</a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfoE">
+<span id="_CPPv3N4LIEF9DebugInfoE"></span><span id="_CPPv2N4LIEF9DebugInfoE"></span><span id="LIEF::DebugInfo"></span><span class="target" id="classLIEF_1_1DebugInfo"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DebugInfo</span></span></span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfoE" title="Link to this definition">¶</a><br/></dt>
+<dd><p>Subclassed by <a class="reference internal" href="../dwarf/cpp.html#classLIEF_1_1dwarf_1_1DebugInfo"><span class="std std-ref">LIEF::dwarf::DebugInfo</span></a>, <a class="reference internal" href="../pdb/cpp.html#classLIEF_1_1pdb_1_1DebugInfo"><span class="std std-ref">LIEF::pdb::DebugInfo</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfo6FORMATE">
+<span id="_CPPv3N4LIEF9DebugInfo6FORMATE"></span><span id="_CPPv2N4LIEF9DebugInfo6FORMATE"></span><span class="target" id="classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FORMAT</span></span></span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfo6FORMATE" title="Link to this definition">¶</a><br/></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfo6FORMAT7UNKNOWNE">
+<span id="_CPPv3N4LIEF9DebugInfo6FORMAT7UNKNOWNE"></span><span id="_CPPv2N4LIEF9DebugInfo6FORMAT7UNKNOWNE"></span><span class="target" id="classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6a696b031073e74bf2cb98e5ef201d4aa3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UNKNOWN</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfo6FORMAT7UNKNOWNE" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfo6FORMAT5DWARFE">
+<span id="_CPPv3N4LIEF9DebugInfo6FORMAT5DWARFE"></span><span id="_CPPv2N4LIEF9DebugInfo6FORMAT5DWARFE"></span><span class="target" id="classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6aab798db308a24d99de697ade4aaac333"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DWARF</span></span></span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfo6FORMAT5DWARFE" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfo6FORMAT3PDBE">
+<span id="_CPPv3N4LIEF9DebugInfo6FORMAT3PDBE"></span><span id="_CPPv2N4LIEF9DebugInfo6FORMAT3PDBE"></span><span class="target" id="classLIEF_1_1DebugInfo_1a9c36a0813528aa81dbc7d159234fbdc6a03f554192338a6010647346c89146288"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PDB</span></span></span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfo6FORMAT3PDBE" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE">
+<span id="_CPPv3N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE"></span><span id="_CPPv2N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE"></span><span id="LIEF::DebugInfo::DebugInfo__std::unique_ptr:details::DebugInfo:"></span><span class="target" id="classLIEF_1_1DebugInfo_1a0c5e2dde22fba4f3d1b32bd525b49b52"></span><span class="sig-name descname"><span class="n"><span class="pre">DebugInfo</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DebugInfo</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">impl</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfo9DebugInfoENSt10unique_ptrIN7details9DebugInfoEEE" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF9DebugInfoD0Ev">
+<span id="_CPPv3N4LIEF9DebugInfoD0Ev"></span><span id="_CPPv2N4LIEF9DebugInfoD0Ev"></span><span id="LIEF::DebugInfo::~DebugInfo"></span><span class="target" id="classLIEF_1_1DebugInfo_1a3d168dd363e5b47c7d20725f5088b2ec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~DebugInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4LIEF9DebugInfoD0Ev" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4LIEF9DebugInfo6formatEv">
+<span id="_CPPv3NK4LIEF9DebugInfo6formatEv"></span><span id="_CPPv2NK4LIEF9DebugInfo6formatEv"></span><span id="LIEF::DebugInfo::formatC"></span><span class="target" id="classLIEF_1_1DebugInfo_1abc0e763978942231ed9f8e8f2fb7b175"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4LIEF9DebugInfo6FORMATE" title="LIEF::DebugInfo::FORMAT"><span class="n"><span class="pre">FORMAT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">format</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4LIEF9DebugInfo6formatEv" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK4LIEF9DebugInfo2asEPK1Tv">
+<span id="_CPPv3I0ENK4LIEF9DebugInfo2asEv"></span><span id="_CPPv2I0ENK4LIEF9DebugInfo2asEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br/><span class="target" id="classLIEF_1_1DebugInfo_1aad71af4fc1aebabf4c0ae7a75150495c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0ENK4LIEF9DebugInfo2asEPK1Tv" title="LIEF::DebugInfo::as::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">as</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK4LIEF9DebugInfo2asEPK1Tv" title="Link to this definition">¶</a><br/></dt>
+<dd><p>This function can be used to <strong>down cast</strong> a <a class="reference internal" href="#classLIEF_1_1DebugInfo"><span class="std std-ref">DebugInfo</span></a> instance: </p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">Instruction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dbg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bin</span><span class="o">-&gt;</span><span class="n">debug_info</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">dwarf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inst</span><span class="o">-&gt;</span><span class="n">as</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">dwarf</span><span class="o">::</span><span class="n">DebugInfo</span><span class="o">&gt;</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">dwarf</span><span class="o">-&gt;</span><span class="n">find_function</span><span class="p">(</span><span class="s">"main"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+</div>
+</dd></dl>
+</section>
+<section id="debug-location-t">
+<h3 id="debug-location-t">debug_location_t<a class="headerlink" href="#debug-location-t" title="Link to this heading">¶</a></h3>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF16debug_location_tE">
+<span id="_CPPv3N4LIEF16debug_location_tE"></span><span id="_CPPv2N4LIEF16debug_location_tE"></span><span id="LIEF::debug_location_t"></span><span class="target" id="structLIEF_1_1debug__location__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_location_t</span></span></span><a class="headerlink" href="#_CPPv4N4LIEF16debug_location_tE" title="Link to this definition">¶</a><br/></dt>
+<dd><p>This structure holds a debug location (source filename &amp; line) </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF16debug_location_t4fileE">
+<span id="_CPPv3N4LIEF16debug_location_t4fileE"></span><span id="_CPPv2N4LIEF16debug_location_t4fileE"></span><span id="LIEF::debug_location_t::file__ss"></span><span class="target" id="structLIEF_1_1debug__location__t_1ae427b350037b9d6bab244ab398774e8c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">file</span></span></span><a class="headerlink" href="#_CPPv4N4LIEF16debug_location_t4fileE" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4LIEF16debug_location_t4lineE">
+<span id="_CPPv3N4LIEF16debug_location_t4lineE"></span><span id="_CPPv2N4LIEF16debug_location_t4lineE"></span><span id="LIEF::debug_location_t::line__uint64_t"></span><span class="target" id="structLIEF_1_1debug__location__t_1ad52691ad0c42c17478b3b7482bbd5aaf"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">line</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4LIEF16debug_location_t4lineE" title="Link to this definition">¶</a><br/></dt>
+<dd></dd></dl>
+</div>
+</dd></dl>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="python">
+<h2 id="python"><em class="fa fa-brands fa-python"></em> Python<a class="headerlink" href="#python" title="Link to this heading">¶</a></h2>
+<section id="id2">
+<h3 id="id2">DebugInfo<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.DebugInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.</span></span><span class="sig-name descname"><span class="pre">DebugInfo</span></span><a class="headerlink" href="#lief.DebugInfo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.DebugInfo.FORMAT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FORMAT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lief.DebugInfo.FORMAT" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.DebugInfo.FORMAT.DWARF">
+<span class="sig-name descname"><span class="pre">DWARF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lief.DebugInfo.FORMAT.DWARF" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.DebugInfo.FORMAT.PDB">
+<span class="sig-name descname"><span class="pre">PDB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lief.DebugInfo.FORMAT.PDB" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.DebugInfo.FORMAT.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lief.DebugInfo.FORMAT.UNKNOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.DebugInfo.FORMAT.from_value">
+<span class="sig-name descname"><span class="pre">from_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.DebugInfo.FORMAT" title="lief.DebugInfo.FORMAT"><span class="pre">lief.DebugInfo.FORMAT</span></a></span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nanobind.nb_func</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#lief.DebugInfo.FORMAT.from_value" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.DebugInfo.format">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">format</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.DebugInfo.FORMAT" title="lief.DebugInfo.FORMAT"><span class="pre">lief.DebugInfo.FORMAT</span></a></span></span><a class="headerlink" href="#lief.DebugInfo.format" title="Link to this definition">¶</a></dt>
+<dd><p>Debug format (PDB/DWARF)</p>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="id3">
+<h3 id="id3">debug_location_t<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.debug_location_t">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.</span></span><span class="sig-name descname"><span class="pre">debug_location_t</span></span><a class="headerlink" href="#lief.debug_location_t" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.debug_location_t.file">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lief.debug_location_t.file" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.debug_location_t.line">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">line</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.debug_location_t.line" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="rust">
+<h2 id="rust"><em class="fa fa-brands fa-rust"></em> Rust<a class="headerlink" href="#rust" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/generic/trait.DebugInfo.html"><code class="xref rust rust-trait docutils literal notranslate"><span class="pre">lief::generic::DebugInfo</span></code></a></p></li>
+<li><p><a class="reference external" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/struct.DebugLocation.html"><code class="xref rust rust-struct docutils literal notranslate"><span class="pre">lief::DebugLocation</span></code></a></p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+  <aside class="border-left pl-5 py-3">
+    <span class="text-uppercase text-muted font-size-sm d-block mb-3">
+      On this page:
+    </span>
+        <a href="#c" class="d-block my-2" data-toggle="scroll"><em class="fa fa-regular fa-file-code"></em> C++</a>
+        <a href="#python" class="d-block my-2" data-toggle="scroll"><em class="fa fa-brands fa-python"></em> Python</a>
+        <a href="#rust" class="d-block my-2" data-toggle="scroll"><em class="fa fa-brands fa-rust"></em> Rust</a>
+
+  </aside>
+</div>
+    </div>
+  </div>
+  </body>
+</html>

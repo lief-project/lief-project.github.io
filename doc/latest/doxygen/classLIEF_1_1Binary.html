@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -288,11 +288,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1e6ea79071ddbf5480e173bce6954794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89d49c7f58eccd6c4a5762e34eed2ef8" id="r_a89d49c7f58eccd6c4a5762e34eed2ef8"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89d49c7f58eccd6c4a5762e34eed2ef8">print</a> (std::ostream &amp;os) const</td></tr>
 <tr class="separator:a89d49c7f58eccd6c4a5762e34eed2ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5eb2aa9e7dcc80f5e1d1bf11786ddf" id="r_a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c5eb2aa9e7dcc80f5e1d1bf11786ddf">write</a> (const std::string &amp;name)=0</td></tr>
-<tr class="memdesc:a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build &amp; transform the <a class="el" href="classLIEF_1_1Binary.html" title="Abstract binary that exposes an uniform API for the different executable file formats.">Binary</a> object representation into a <em>real</em> executable.  <br /></td></tr>
-<tr class="separator:a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af19982ac1dff060fd3f5441282de847e" id="r_af19982ac1dff060fd3f5441282de847e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af19982ac1dff060fd3f5441282de847e">write</a> (std::ostream &amp;os)=0</td></tr>
-<tr class="separator:af19982ac1dff060fd3f5441282de847e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5568087eb278ec952fb3ac7b8021ab5" id="r_ac5568087eb278ec952fb3ac7b8021ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1DebugInfo.html">DebugInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5568087eb278ec952fb3ac7b8021ab5">debug_info</a> () const</td></tr>
 <tr class="memdesc:ac5568087eb278ec952fb3ac7b8021ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the debug info if present. It can be either a <a class="el" href="classLIEF_1_1dwarf_1_1DebugInfo.html" title="This class represents a DWARF debug information. It can embed different compilation units which can b...">LIEF::dwarf::DebugInfo</a> or a <a class="el" href="classLIEF_1_1pdb_1_1DebugInfo.html" title="This class provides an interface for PDB files. One can instantiate this class using LIEF::pdb::load(...">LIEF::pdb::DebugInfo</a>.  <br /></td></tr>
 <tr class="separator:ac5568087eb278ec952fb3ac7b8021ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1548,7 +1543,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#ae1573ba45465f71a00bddd4a9290a4e7">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aca1817f407d6b8b7ae68045cddc174a7">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#ae17ca96521ef2b347b0fbde1b0ab2560">LIEF::PE::Binary</a>.</p>
+<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#ae1573ba45465f71a00bddd4a9290a4e7">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aca1817f407d6b8b7ae68045cddc174a7">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a8024797fb3b0f264a2ad124c0f72c608">LIEF::PE::Binary</a>.</p>
 
 </div>
 </div>
@@ -1600,7 +1595,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a4ff318eb3c847f36a217c8c8c7c08773">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aabb5e6faf53a192fdd95d754de7945f6">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a4ea8b4d3ba3c1e9c1e1e6e4a080f7df5">LIEF::PE::Binary</a>.</p>
+<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a4ff318eb3c847f36a217c8c8c7c08773">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aabb5e6faf53a192fdd95d754de7945f6">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a1dde9d02549468e93c69e7f353c39420">LIEF::PE::Binary</a>.</p>
 
 </div>
 </div>
@@ -1821,62 +1816,6 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Return an iterator over the abstracted symbols in which the elements <b>can't</b> be modified. </p>
-
-</div>
-</div>
-<a id="a3c5eb2aa9e7dcc80f5e1d1bf11786ddf" name="a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c5eb2aa9e7dcc80f5e1d1bf11786ddf">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void LIEF::Binary::write </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Build &amp; transform the <a class="el" href="classLIEF_1_1Binary.html" title="Abstract binary that exposes an uniform API for the different executable file formats.">Binary</a> object representation into a <em>real</em> executable. </p>
-
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a15a0f1e7791e330db816f28085e2bc7d">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#a24941b4e9eeb0dc0f0702c38b29acc19">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#aedd09eb96deccc5ad91675186c6801b5">LIEF::PE::Binary</a>.</p>
-
-</div>
-</div>
-<a id="af19982ac1dff060fd3f5441282de847e" name="af19982ac1dff060fd3f5441282de847e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af19982ac1dff060fd3f5441282de847e">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void LIEF::Binary::write </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#ad5c814805c9b3b86ccf36e425e6672ae">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#af664c5e0c30591468309ce9251fad96a">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a6ae24a1e2e813dbd839992719bad0cf5">LIEF::PE::Binary</a>.</p>
 
 </div>
 </div>

@@ -60,6 +60,16 @@ var searchData=
   ['dynamicentrylibrary_2ehpp_57',['DynamicEntryLibrary.hpp',['../DynamicEntryLibrary_8hpp.html',1,'']]],
   ['dynamicentryrpath_2ehpp_58',['DynamicEntryRpath.hpp',['../DynamicEntryRpath_8hpp.html',1,'']]],
   ['dynamicentryrunpath_2ehpp_59',['DynamicEntryRunPath.hpp',['../DynamicEntryRunPath_8hpp.html',1,'']]],
-  ['dynamicsharedobject_2ehpp_60',['DynamicSharedObject.hpp',['../DynamicSharedObject_8hpp.html',1,'']]],
-  ['dynamicsymbolcommand_2ehpp_61',['DynamicSymbolCommand.hpp',['../DynamicSymbolCommand_8hpp.html',1,'']]]
+  ['dynamicfixup_2ehpp_60',['DynamicFixup.hpp',['../DynamicFixup_8hpp.html',1,'']]],
+  ['dynamicfixuparm64kernel_2ehpp_61',['DynamicFixupARM64Kernel.hpp',['../DynamicFixupARM64Kernel_8hpp.html',1,'']]],
+  ['dynamicfixuparm64x_2ehpp_62',['DynamicFixupARM64X.hpp',['../DynamicFixupARM64X_8hpp.html',1,'']]],
+  ['dynamicfixupcontroltransfer_2ehpp_63',['DynamicFixupControlTransfer.hpp',['../DynamicFixupControlTransfer_8hpp.html',1,'']]],
+  ['dynamicfixupgeneric_2ehpp_64',['DynamicFixupGeneric.hpp',['../DynamicFixupGeneric_8hpp.html',1,'']]],
+  ['dynamicfixupunknown_2ehpp_65',['DynamicFixupUnknown.hpp',['../DynamicFixupUnknown_8hpp.html',1,'']]],
+  ['dynamicrelocation_2ehpp_66',['DynamicRelocation.hpp',['../DynamicRelocation_8hpp.html',1,'']]],
+  ['dynamicrelocationbase_2ehpp_67',['DynamicRelocationBase.hpp',['../DynamicRelocationBase_8hpp.html',1,'']]],
+  ['dynamicrelocationv1_2ehpp_68',['DynamicRelocationV1.hpp',['../DynamicRelocationV1_8hpp.html',1,'']]],
+  ['dynamicrelocationv2_2ehpp_69',['DynamicRelocationV2.hpp',['../DynamicRelocationV2_8hpp.html',1,'']]],
+  ['dynamicsharedobject_2ehpp_70',['DynamicSharedObject.hpp',['../DynamicSharedObject_8hpp.html',1,'']]],
+  ['dynamicsymbolcommand_2ehpp_71',['DynamicSymbolCommand.hpp',['../DynamicSymbolCommand_8hpp.html',1,'']]]
 ];

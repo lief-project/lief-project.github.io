@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
+
+  <script src="../_static/javascripts/vendor.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <title>PE Changelog for LIEF 0.17.0 &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/vendor.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3d3fbe02" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=411c5307" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <script src="../_static/documentation_options.js?v=0c3dd48d"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/tabs.js?v=3030b3cb"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/stylesheets/theme.css"/>
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
+
+    
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/macho/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/pe/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/debug_info/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/dsc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/10_android_formats.html" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/dd291ae1" class="text-darkblue">0.17.0 (dd291ae1)</a>
+    <br>
+    Updated on 23/02/2025, 12:10:07.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">PE Changelog for LIEF 0.17.0</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="pe-changelog-for-lief-0-17-0">
+<span id="pe-0170-changelog"></span><h1 id="changelog-pe-0-17-0--page-root">PE Changelog for LIEF 0.17.0<a class="headerlink" href="#changelog-pe-0-17-0--page-root" title="Link to this heading">¶</a></h1>
+<p>Compared to LIEF v0.16.X, version 0.17.0 includes a significant refactoring
+of the PE parser and builder. These changes were necessary to align
+the PE functionalities of LIEF with those of ELF and Mach-O. If your codebase
+uses LIEF to process PE binaries, you may encounter issues when
+upgrading to LIEF 0.17.0. This page provides a comprehensive overview of the
+various changes, but it cannot cover every detail. If you encounter an API issue
+that is not described here, you can:</p>
+<ol class="arabic simple">
+<li><p>Join Discord and ask your questions: <a class="reference external" href="https://discord.gg/jGQtyAYChJ">https://discord.gg/jGQtyAYChJ</a></p></li>
+<li><p>Review the git diff of the tests. Most of these changes are covered by tests,
+so you should be able to find a relevant example.</p></li>
+<li><p>Email me at: <code class="docutils literal notranslate"><span class="pre">me[at]romainthomas.fr</span></code></p></li>
+</ol>
+<section id="pe-modifications">
+<h2 id="pe-modifications">PE Modifications<a class="headerlink" href="#pe-modifications" title="Link to this heading">¶</a></h2>
+<p>To explore the new modifications features, you can check the following pages:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../formats/pe/modifications/imports.html"><em class="fa fa-solid fa-gears"></em> Imports Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/pe/modifications/resources.html"><em class="fa fa-solid fa-gears"></em> Resources Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/pe/modifications/tls.html"><em class="fa fa-solid fa-gears"></em> TLS Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/pe/modifications/debug.html"><em class="fa fa-solid fa-gears"></em> Debug Modification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formats/pe/modifications/exports.html"><em class="fa fa-solid fa-gears"></em> Exports Modification</a></li>
+</ul>
+</div>
+</section>
+<section id="coff-string-coff-symbol">
+<h2 id="coff-string-coff-symbol">COFF String &amp; COFF Symbol<a class="headerlink" href="#coff-string-coff-symbol" title="Link to this heading">¶</a></h2>
+<p>As described in issue: <a class="reference external" href="https://github.com/lief-project/LIEF/issues/1043">#1043</a>, if a section’s name exceeds
+8 bytes, the linker may allocate a longer name in the
+COFF string pool while setting the section’s name with the offset in the COFF
+string pool.</p>
+<div class="fixed-paragraph">
+You can access this COFF string using <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Section-coff_string" role="button">
+<code><span class="pre">lief.PE.Section.coff_string</span></code></a><div aria-labelledby="lief-api-lief-PE-Section-coff_string" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Section.html#method.coff_string">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Section::coff_string</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.Section.coff_string">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Section.coff_string</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE7Section11coff_stringEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Section::coff_string()</span></code>
+</a></div></div>, while
+the string representing the offset (e.g. <code class="docutils literal notranslate"><span class="pre">/230</span></code>) remains in the
+section’s name.</div><p>Additionally, optional COFF symbols, along with any auxiliary symbols, are now
+processed correctly by LIEF:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">pe</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"libLIEF.dll"</span><span class="p">)</span>
+<span class="n">section</span> <span class="o">=</span> <span class="n">pe</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">section</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1"># --&gt; '/19'</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">section</span><span class="o">.</span><span class="n">coff_string</span><span class="p">)</span> <span class="c1"># --&gt; '.debug_info'</span>
+
+<span class="k">for</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="n">pe</span><span class="o">.</span><span class="n">symbols</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">symbol</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">aux</span> <span class="ow">in</span> <span class="n">symbol</span><span class="o">.</span><span class="n">auxiliary_symbols</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">aux</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Although this example is written in Python, the API is also available in C++
+and Rust.</p>
+</section>
+<section id="load-configuration">
+<h2 id="load-configuration">Load Configuration<a class="headerlink" href="#load-configuration" title="Link to this heading">¶</a></h2>
+<div class="fixed-paragraph">
+The <code class="docutils literal notranslate"><span class="pre">IMAGE_LOAD_CONFIG_DIRECTORY</span></code> structures, represented in LIEF by
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-LoadConfiguration" role="button">
+<code><span class="pre">lief.PE.LoadConfiguration</span></code></a><div aria-labelledby="lief-api-lief-PE-LoadConfiguration" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.LoadConfiguration.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.LoadConfiguration">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE17LoadConfigurationE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::LoadConfiguration</span></code>
+</a></div></div>, regularly evolves with new Windows releases.
+A new version of Windows may introduce new attributes to accommodate additional
+functionalities like Control Flow Guard. To manage these changes, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-LoadConfiguration" role="button">
+<code><span class="pre">lief.PE.LoadConfiguration</span></code></a><div aria-labelledby="lief-api-lief-PE-LoadConfiguration" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.LoadConfiguration.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.LoadConfiguration">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE17LoadConfigurationE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::LoadConfiguration</span></code>
+</a></div></div>
+previously used a form of inheritance. For each new attribute, a new class, such
+as <code class="docutils literal notranslate"><span class="pre">LoadConfigurationV12</span></code>, would inherit from <code class="docutils literal notranslate"><span class="pre">LoadConfigurationV11</span></code>.
+This approach, though systematic, resulted in numerous modifications – especially
+in Rust – raising questions about the decision to use inheritance.</div><div class="fixed-paragraph">
+Starting from LIEF v0.17.0, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-LoadConfiguration" role="button">
+<code><span class="pre">lief.PE.LoadConfiguration</span></code></a><div aria-labelledby="lief-api-lief-PE-LoadConfiguration" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.LoadConfiguration.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.LoadConfiguration">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE17LoadConfigurationE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::LoadConfiguration</span></code>
+</a></div></div> has adopted a <strong>flat</strong> representation.
+In this new model, version-dependent attributes are represented with an <code class="docutils literal notranslate"><span class="pre">option&lt;&gt;</span></code>-like
+container.</div><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1"><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">pe</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"demo.exe"</span><span class="p">)</span>
+<span class="n">offset</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">pe</span><span class="o">.</span><span class="n">load_configuration</span><span class="o">.</span><span class="n">hotpatch_table_offset</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">pe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">PE</span><span class="o">::</span><span class="n">Parser</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="s">"demo.exe"</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">LoadConfiguration</span><span class="o">*</span><span class="w"> </span><span class="n">lconf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pe</span><span class="o">-&gt;</span><span class="n">load_configuration</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">LIEF</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lconf</span><span class="o">-&gt;</span><span class="n">hotpatch_table_offset</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">lief</span><span class="p">::</span><span class="n">Binary</span><span class="p">::</span><span class="n">PE</span><span class="p">(</span><span class="n">pe</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lief</span><span class="p">::</span><span class="n">Binary</span><span class="p">::</span><span class="n">parse</span><span class="p">(</span><span class="s">"demo.exe"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">lconf</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pe</span><span class="p">.</span><span class="n">load_configuration</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">offset</span><span class="p">:</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;</span><span class="kt">u32</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lconf</span><span class="p">.</span><span class="n">hotpatch_table_offset</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+<div class="fixed-paragraph">
+Additionally, the <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-LoadConfiguration" role="button">
+<code><span class="pre">lief.PE.LoadConfiguration</span></code></a><div aria-labelledby="lief-api-lief-PE-LoadConfiguration" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.LoadConfiguration.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.LoadConfiguration">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.LoadConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE17LoadConfigurationE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::LoadConfiguration</span></code>
+</a></div></div> now provides an API that allows access to
+the internal data associated with this structure:</div><ul class="simple">
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-CHPEMetadata" role="button">
+<code><span class="pre">lief.PE.CHPEMetadata</span></code></a><div aria-labelledby="lief-api-lief-PE-CHPEMetadata" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/enum.CHPEMetadata.html">
+<code class="xref rust rust-enum"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::CHPEMetadata</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.CHPEMetadata">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.CHPEMetadata</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE12CHPEMetadataE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::CHPEMetadata</span></code>
+</a></div></div></div></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-DynamicRelocation" role="button">
+<code><span class="pre">lief.PE.DynamicRelocation</span></code></a><div aria-labelledby="lief-api-lief-PE-DynamicRelocation" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/enum.DynamicRelocation.html">
+<code class="xref rust rust-enum"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::DynamicRelocation</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.DynamicRelocation">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.DynamicRelocation</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE17DynamicRelocationE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::DynamicRelocation</span></code>
+</a></div></div></div></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-EnclaveConfiguration" role="button">
+<code><span class="pre">lief.PE.EnclaveConfiguration</span></code></a><div aria-labelledby="lief-api-lief-PE-EnclaveConfiguration" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.EnclaveConfiguration.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::EnclaveConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.EnclaveConfiguration">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.EnclaveConfiguration</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE20EnclaveConfigurationE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::EnclaveConfiguration</span></code>
+</a></div></div></div></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-VolatileMetadata" role="button">
+<code><span class="pre">lief.PE.VolatileMetadata</span></code></a><div aria-labelledby="lief-api-lief-PE-VolatileMetadata" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.VolatileMetadata.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::VolatileMetadata</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.VolatileMetadata">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.VolatileMetadata</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE16VolatileMetadataE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::VolatileMetadata</span></code>
+</a></div></div></div></li>
+</ul>
+<p>Some of these structures are important to correctly support ARM64EC/ARM64X
+PE Binary (#teasing).</p>
+</section>
+<section id="debug-information">
+<h2 id="debug-information">Debug Information<a class="headerlink" href="#debug-information" title="Link to this heading">¶</a></h2>
+<p>LIEF version 0.17.0 can manage larger types of debug entries and provides a
+user-friendly API:</p>
+<ul class="simple">
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-VCFeature" role="button">
+<code><span class="pre">lief.PE.VCFeature</span></code></a><div aria-labelledby="lief-api-lief-PE-VCFeature" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/debug/struct.VCFeature.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::debug::VCFeature</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.VCFeature">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.VCFeature</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE9VCFeatureE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::VCFeature</span></code>
+</a></div></div></div></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-FPO" role="button">
+<code><span class="pre">lief.PE.FPO</span></code></a><div aria-labelledby="lief-api-lief-PE-FPO" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/debug/struct.FPO.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::debug::FPO</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.FPO">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.FPO</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE3FPOE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::FPO</span></code>
+</a></div></div></div></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ExDllCharacteristics" role="button">
+<code><span class="pre">lief.PE.ExDllCharacteristics</span></code></a><div aria-labelledby="lief-api-lief-PE-ExDllCharacteristics" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/debug/struct.ExDllCharacteristics.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::debug::ExDllCharacteristics</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ExDllCharacteristics">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ExDllCharacteristics</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE20ExDllCharacteristicsE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ExDllCharacteristics</span></code>
+</a></div></div></div></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-PDBChecksum" role="button">
+<code><span class="pre">lief.PE.PDBChecksum</span></code></a><div aria-labelledby="lief-api-lief-PE-PDBChecksum" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/debug/struct.PDBChecksum.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::debug::PDBChecksum</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.PDBChecksum">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.PDBChecksum</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE11PDBChecksumE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::PDBChecksum</span></code>
+</a></div></div></div></li>
+</ul>
+<p>As described in the section: <a class="reference internal" href="../formats/pe/modifications/debug.html#pe-debug-modification"><span class="std std-ref">Debug Modification</span></a>
+you can modify debug entries to perform various actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pe</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"some.dll"</span><span class="p">)</span>
+<span class="c1"># Changing the PDB file path into an URL</span>
+<span class="n">pe</span><span class="o">.</span><span class="n">codeview_pdb</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="s2">"https://lief.re/"</span>
+<span class="n">pe</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"out.dll"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="resources">
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Link to this heading">¶</a></h2>
+<div class="fixed-paragraph">
+Some interfaces exposed by the <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ResourcesManager" role="button">
+<code><span class="pre">lief.PE.ResourcesManager</span></code></a><div aria-labelledby="lief-api-lief-PE-ResourcesManager" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/resources/struct.Manager.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::resources::Manager</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ResourcesManager">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ResourcesManager</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE16ResourcesManagerE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ResourcesManager</span></code>
+</a></div></div> have been redesigned
+to make them more consistent with their underlying representation in the PE
+format.</div><div class="fixed-paragraph">
+For instance, <code class="docutils literal notranslate"><span class="pre">lief.PE.LangCodeItem</span></code> has been renamed and refactored into
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ResourceStringTable" role="button">
+<code><span class="pre">lief.PE.ResourceStringTable</span></code></a><div aria-labelledby="lief-api-lief-PE-ResourceStringTable" class="dropdown-menu"><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ResourceStringTable">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ResourceStringTable</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE19ResourceStringTableE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ResourceStringTable</span></code>
+</a></div></div>.</div><p>Resources-related enums have been re-scoped to avoid definition conflicts
+between Windows’s headers and LIEF:</p>
+<table>
+<thead>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">lief.PE.EXTENDED_WINDOW_STYLES</span></code></p></th>
+<th class="head"><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceDialog.WINDOW_EXTENDED_STYLES" title="lief.PE.ResourceDialog.WINDOW_EXTENDED_STYLES"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceDialog.WINDOW_EXTENDED_STYLES</span></code></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.WINDOW_STYLES</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceDialog.WINDOW_STYLES" title="lief.PE.ResourceDialog.WINDOW_STYLES"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceDialog.WINDOW_STYLES</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.DIALOG_BOX_STYLES</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceDialog.DIALOG_STYLES" title="lief.PE.ResourceDialog.DIALOG_STYLES"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceDialog.DIALOG_STYLES</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.FIXED_VERSION_OS</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceVersion.fixed_file_info_t.VERSION_OS" title="lief.PE.ResourceVersion.fixed_file_info_t.VERSION_OS"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceVersion.fixed_file_info_t.VERSION_OS</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.FIXED_VERSION_FILE_FLAGS</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceVersion.fixed_file_info_t.FILE_FLAGS" title="lief.PE.ResourceVersion.fixed_file_info_t.FILE_FLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceVersion.fixed_file_info_t.FILE_FLAGS</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.FIXED_VERSION_FILE_SUB_TYPES</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceVersion.fixed_file_info_t.FILE_TYPE_DETAILS" title="lief.PE.ResourceVersion.fixed_file_info_t.FILE_TYPE_DETAILS"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceVersion.fixed_file_info_t.FILE_TYPE_DETAILS</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.ACCELERATOR_FLAGS</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ResourceAccelerator.FLAGS" title="lief.PE.ResourceAccelerator.FLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ResourceAccelerator.FLAGS</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lief.PE.ACCELERATOR_VK_CODES</span></code></p></td>
+<td><p><a class="reference internal" href="../formats/pe/python.html#lief.PE.ACCELERATOR_CODES" title="lief.PE.ACCELERATOR_CODES"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.PE.ACCELERATOR_CODES</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exception-info">
+<h2 id="exception-info">Exception Info<a class="headerlink" href="#exception-info" title="Link to this heading">¶</a></h2>
+<p>For x86-64 and ARM64 PE binaries, stack unwinding information is referenced by
+the data directory: <code class="docutils literal notranslate"><span class="pre">IMAGE_DIRECTORY_ENTRY_EXCEPTION</span></code>. Even if your code is
+compiled without exception support, this information may still be generated by the linker.</p>
+<div class="fixed-paragraph">
+The entries of this data directory are represented by the
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ExceptionInfo" role="button">
+<code><span class="pre">lief.PE.ExceptionInfo</span></code></a><div aria-labelledby="lief-api-lief-PE-ExceptionInfo" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/exception/enum.RuntimeExceptionFunction.html">
+<code class="xref rust rust-enum"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::exception::RuntimeExceptionFunction</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ExceptionInfo">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ExceptionInfo</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE13ExceptionInfoE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ExceptionInfo</span></code>
+</a></div></div> structure which is specialized for x64 and
+ARM64 functions. Regardless of the underlying architecture, each entry in this
+table exposes a function RVA.
+From a reverse engineering perspective, these RVAs offer a valuable set of
+function start addresses that can be used to begin disassembling the binary..</div><div class="fixed-paragraph">
+Given a <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Binary" role="button">
+<code><span class="pre">lief.PE.Binary</span></code></a><div aria-labelledby="lief-api-lief-PE-Binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Binary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Binary</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.Binary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Binary</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE6BinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Binary</span></code>
+</a></div></div> instance, one can iterate over these <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ExceptionInfo" role="button">
+<code><span class="pre">lief.PE.ExceptionInfo</span></code></a><div aria-labelledby="lief-api-lief-PE-ExceptionInfo" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/exception/enum.RuntimeExceptionFunction.html">
+<code class="xref rust rust-enum"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::exception::RuntimeExceptionFunction</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ExceptionInfo">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ExceptionInfo</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE13ExceptionInfoE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ExceptionInfo</span></code>
+</a></div></div>
+using <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Binary" role="button">
+<code><span class="pre">lief.PE.Binary</span></code></a><div aria-labelledby="lief-api-lief-PE-Binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Binary.html#method.exceptions">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Binary::exceptions</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.Binary.exceptions">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Binary.exceptions</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE6Binary10exceptionsEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Binary::exceptions()</span></code>
+</a></div></div>:</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pe</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"Windows.Media.Protection.PlayReady.dll"</span><span class="p">,</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">ParserConfgi</span><span class="o">.</span><span class="n">all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pe</span><span class="o">.</span><span class="n">exceptions</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>RuntimeFunctionX64 {
+  RVA: [0x0c9350, 0x0c9382] (50 bytes)
+  Unwind info RVA: 0x68eb5c
+  unwind_info_t {
+    Version: 1
+    Flags: 0
+    Size of prologue: 20
+    Nb opcodes: 8 (6)
+    Opcodes: [
+      0x14 SAVE_NONVOL reg=RDI, offset=0x000078
+      0x14 SAVE_NONVOL reg=RBX, offset=0x000070
+      0x14 ALLOC_SMALL size=64
+      0x10 PUSH_NONVOL reg=R15
+      0x0e PUSH_NONVOL reg=R14
+      0x0c PUSH_NONVOL reg=R12
+    ];
+  }
+}
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pe</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"win11_arm64x_Windows.Media.Protection.PlayReady.dll"</span><span class="p">,</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">ParserConfgi</span><span class="o">.</span><span class="n">all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pe</span><span class="o">.</span><span class="n">exceptions</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Runtime Unpacked AArch64 Function {
+  Range(RVA): 0x00822bb8 - 0x00822c08
+  Unwind location (RVA): 0x00d63838
+  Length=80 Vers=0 X=0 E=0, CodeWords=8
+  Epilogs=1
+  Prolog unwind:
+    0x0000 e1...... mov fp, sp
+    0x0001 81...... stp x29, x30, [sp, #-16]!
+    0x0002 e6...... save next
+    0x0003 e6...... save next
+    0x0004 e6...... save next
+    0x0005 e6...... save next
+    0x0006 e76689.. stp q6, q7, [sp, #-160]!
+    0x0009 fc...... pacibsp
+    0x000a e4...... end
+  Epilog #1 unwind:  (Offset=10, Index=11, Reserved=0)
+    0x0000 81...... ldp x29, x30, [sp], #16
+    0x0001 e74e88.. ldp q14, q15, [sp, #128]
+    0x0004 e74c86.. ldp q12, q13, [sp, #96]
+    0x0007 e74a84.. ldp q10, q11, [sp, #64]
+    0x000a e74882.. ldp q8, q9, [sp, #32]
+    0x000d e76689.. ldp q6, q7, [sp], #160
+    0x0010 fc...... autibsp
+    0x0011 e3...... nop
+    0x0012 e3...... nop
+    0x0013 e4...... end
+}
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">ARM64 - <code class="docutils literal notranslate"><span class="pre">SAVE_ANY_REG</span></code></p>
+<p>Thank you to <a class="reference external" href="https://github.com/efriedma-quic">Eli Friedman</a> and <a class="reference external" href="https://github.com/mstorsjo">Martin Storsjö</a>
+for their work on reverse engineering this undocumented unwind opcode.</p>
+</div>
+<p>LIEF provides a detailed API for the underlying structures involved in PE
+exception and stack unwinding support.</p>
+<div class="warning admonition">
+<p class="admonition-title">Performance Considerations</p>
+<div class="fixed-paragraph">
+In-depth analysis of exceptions metadata can introduce significant overhead.
+Therefore, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ParserConfig-parse_exceptions" role="button">
+<code><span class="pre">lief.PE.ParserConfig.parse_exceptions</span></code></a><div aria-labelledby="lief-api-lief-PE-ParserConfig-parse_exceptions" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.ParserConfig.html#structfield.parse_exceptions">
+<code class="xref rust rust-member"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::ParserConfig::parse_exceptions</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ParserConfig.parse_exceptions">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ParserConfig.parse_exceptions</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE12ParserConfig16parse_exceptionsE">
+<code class="xref cpp cpp-member"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ParserConfig::parse_exceptions</span></code>
+</a></div></div> must be
+<strong>explicitly</strong> enabled.</div></div>
+</section>
+<section id="arm64ec-arm64x">
+<h2 id="arm64ec-arm64x">ARM64EC / ARM64X<a class="headerlink" href="#arm64ec-arm64x" title="Link to this heading">¶</a></h2>
+<p>With the recent release of SnapDragon X, ARM64-based Windows computers are
+becoming increasingly popular. This shift introduces some changes to
+the PE format. One notable change is the introduction of ARM64X binaries, which
+can be compared to the Mach-O FAT concept, where a single binary contains multiple
+architectures.</p>
+<div class="fixed-paragraph">
+In the case of ARM64X, a single PE file encapsulates ARM64 and ARM64EC architectures.
+LIEF v0.17.0 exposes the following helpers to determine whether the binary is
+ARM64X or ARM64EC: <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Binary-is_arm64ec" role="button">
+<code><span class="pre">lief.PE.Binary.is_arm64ec()</span></code></a><div aria-labelledby="lief-api-lief-PE-Binary-is_arm64ec" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Binary.html#method.is_arm64ec">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Binary::is_arm64ec</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.Binary.is_arm64ec">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Binary.is_arm64ec</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4NK4LIEF2PE6Binary10is_arm64ecEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Binary::is_arm64ec()</span></code>
+</a></div></div>, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Binary-is_arm64x" role="button">
+<code><span class="pre">lief.PE.Binary.is_arm64x()</span></code></a><div aria-labelledby="lief-api-lief-PE-Binary-is_arm64x" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Binary.html#method.is_arm64x">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Binary::is_arm64x</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.Binary.is_arm64x">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Binary.is_arm64x</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4NK4LIEF2PE6Binary9is_arm64xEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Binary::is_arm64x()</span></code>
+</a></div></div>.</div><div class="fixed-paragraph">
+For an ARM64X binary, you can use <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Binary-nested_pe_binary" role="button">
+<code><span class="pre">lief.PE.Binary.nested_pe_binary()</span></code></a><div aria-labelledby="lief-api-lief-PE-Binary-nested_pe_binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Binary.html#method.nested_pe_binary">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Binary::nested_pe_binary</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.Binary.nested_pe_binary">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Binary.nested_pe_binary</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4NK4LIEF2PE6Binary16nested_pe_binaryEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Binary::nested_pe_binary()</span></code>
+</a></div></div> to access the
+embedded ARM64EC <strong>representation</strong> of the binary.</div><div class="warning admonition">
+<p class="admonition-title">Performance Considerations</p>
+<div class="fixed-paragraph">
+Parsing nested ARM64EC binary can introduce additional overhead compared to
+the 0.16.X version.
+Therefore, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ParserConfig-parse_arm64x_binary" role="button">
+<code><span class="pre">lief.PE.ParserConfig.parse_arm64x_binary</span></code></a><div aria-labelledby="lief-api-lief-PE-ParserConfig-parse_arm64x_binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.ParserConfig.html#structfield.parse_arm64x_binary">
+<code class="xref rust rust-member"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::ParserConfig::parse_arm64x_binary</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ParserConfig.parse_arm64x_binary">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ParserConfig.parse_arm64x_binary</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE12ParserConfig19parse_arm64x_binaryE">
+<code class="xref cpp cpp-member"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ParserConfig::parse_arm64x_binary</span></code>
+</a></div></div> feature must be
+<strong>explicitly</strong> enabled.</div></div>
+</section>
+<section id="other-changes">
+<h2 id="other-changes">Other Changes<a class="headerlink" href="#other-changes" title="Link to this heading">¶</a></h2>
+<p>The workaround involving <code class="docutils literal notranslate"><span class="pre">undef.h</span></code> has been removed. This file was used to <code class="docutils literal notranslate"><span class="pre">#undef</span></code>
+certain Windows defines that conflicted with LIEF enum definitions. You can now
+safely include Windows headers alongside LIEF headers. If you encounter any
+conflicts, please report the issue..</p>
+<p>The <em>builder</em> engine has been refactored to resolve numerous errors and bugs
+associated with PE modifications. It now uses a more conservative approach.
+For more details, please refer to the <a class="reference internal" href="../formats/pe/index.html#format-pe"><span class="std std-ref">PE</span></a> page.</p>
+<p>The <em>“PE from Scratch”</em> feature is no longer available as it had significant bugs
+that often resulted in corrupted binaries. This feature will be reintroduced
+later in the project. If you rely on this feature, please reach out.</p>
+<dl class="field-list">
+<dt class="field-odd">List of changes<span class="colon">:</span></dt>
+<dd class="field-odd"><ul>
+<li><p>Fix missing original forwarded function name (<a class="reference external" href="https://github.com/lief-project/LIEF/issues/1166">#1166</a>)</p></li>
+<li><div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-DataDirectory" role="button">
+<code><span class="pre">lief.PE.DataDirectory</span></code></a><div aria-labelledby="lief-api-lief-PE-DataDirectory" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.DataDirectory.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::DataDirectory</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.DataDirectory">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.DataDirectory</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE13DataDirectoryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::DataDirectory</span></code>
+</a></div></div> is now exposing <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-DataDirectory-content" role="button">
+<code><span class="pre">lief.PE.DataDirectory.content()</span></code></a><div aria-labelledby="lief-api-lief-PE-DataDirectory-content" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.DataDirectory.html#method.content">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::DataDirectory::content</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.DataDirectory.content">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.DataDirectory.content</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4NK4LIEF2PE13DataDirectory7contentEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::DataDirectory::content()</span></code>
+</a></div></div> to
+access the raw bytes wrapped by the data directory</div></li>
+<li><div class="fixed-paragraph">
+PE’s resource tree can now be parsed in a standalone way using
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-ResourceNode-parse" role="button">
+<code><span class="pre">lief.PE.ResourceNode.parse()</span></code></a><div aria-labelledby="lief-api-lief-PE-ResourceNode-parse" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/enum.ResourceNode.html#method.from_slice">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::ResourceNode::from_slice</span></code>
+</a><a class="dropdown-item" href="../formats/pe/python.html#lief.PE.ResourceNode.parse">
+<code class="xref py py-func"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.ResourceNode.parse()</span></code>
+</a><a class="dropdown-item" href="../formats/pe/cpp.html#_CPPv4N4LIEF2PE12ResourceNode5parseER12BinaryStream8uint64_t">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::ResourceNode::parse()</span></code>
+</a></div></div>.</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resource_tree</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="s2">"...."</span><span class="p">)</span>
+<span class="n">original_rva</span> <span class="o">=</span> <span class="mh">0x20000</span>
+<span class="n">tree</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">ResourceNode</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">ResourceNode</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">resource_tree</span><span class="p">,</span> <span class="n">original_rva</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+  <aside class="border-left pl-5 py-3">
+    <span class="text-uppercase text-muted font-size-sm d-block mb-3">
+      On this page:
+    </span>
+        <a href="#pe-modifications" class="d-block my-2" data-toggle="scroll">PE Modifications</a>
+        <a href="#coff-string-coff-symbol" class="d-block my-2" data-toggle="scroll">COFF String & COFF Symbol</a>
+        <a href="#load-configuration" class="d-block my-2" data-toggle="scroll">Load Configuration</a>
+        <a href="#debug-information" class="d-block my-2" data-toggle="scroll">Debug Information</a>
+        <a href="#resources" class="d-block my-2" data-toggle="scroll">Resources</a>
+        <a href="#exception-info" class="d-block my-2" data-toggle="scroll">Exception Info</a>
+        <a href="#arm64ec-arm64x" class="d-block my-2" data-toggle="scroll">ARM64EC / ARM64X</a>
+        <a href="#other-changes" class="d-block my-2" data-toggle="scroll">Other Changes</a>
+
+  </aside>
+</div>
+    </div>
+  </div>
+  </body>
+</html>

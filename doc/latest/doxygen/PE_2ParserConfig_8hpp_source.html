@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">PE/ParserConfig.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="PE_2ParserConfig_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="PE_2ParserConfig_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -108,34 +108,62 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef LIEF_PE_PARSER_CONFIG_H</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define LIEF_PE_PARSER_CONFIG_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE.html">PE</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">struct </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_struct" href="structLIEF_1_1PE_1_1ParserConfig.html">ParserConfig</a> {</div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#aae8546befd1dddcf9f34c5ac17b15bf5">   25</a></span>  <span class="keyword">static</span> ParserConfig <a class="code hl_function" href="structLIEF_1_1PE_1_1ParserConfig.html#aae8546befd1dddcf9f34c5ac17b15bf5">all</a>() {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> <span class="keyword">const</span> ParserConfig <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE.html">PE</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">struct </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_struct" href="structLIEF_1_1PE_1_1ParserConfig.html">ParserConfig</a> {</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#ad1e3c6fb48df59b47c9aac1d40a7eea2">   27</a></span>  <span class="keyword">static</span> <span class="keyword">const</span> ParserConfig&amp; <a class="code hl_function" href="structLIEF_1_1PE_1_1ParserConfig.html#ad1e3c6fb48df59b47c9aac1d40a7eea2">default_conf</a>() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keyword">const</span> ParserConfig <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#a3df249af5dabce2cde3274ae900d8513">   30</a></span>  <span class="keywordtype">bool</span> parse_signature = <span class="keyword">true</span>; </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#a986b7527c1f652a74896aa1d254a6a55">   31</a></span>  <span class="keywordtype">bool</span> parse_exports   = <span class="keyword">true</span>; </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#a0cb3a727de227388f40a92243084127f">   32</a></span>  <span class="keywordtype">bool</span> parse_imports   = <span class="keyword">true</span>; </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#a42a10da26dd47a102865421e2d9b4394">   33</a></span>  <span class="keywordtype">bool</span> parse_rsrc      = <span class="keyword">true</span>; </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#a7926eb5ffe01dade79aa470837890a5f">   34</a></span>  <span class="keywordtype">bool</span> parse_reloc     = <span class="keyword">true</span>; </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#aae8546befd1dddcf9f34c5ac17b15bf5">   32</a></span>  <span class="keyword">static</span> ParserConfig <a class="code hl_function" href="structLIEF_1_1PE_1_1ParserConfig.html#aae8546befd1dddcf9f34c5ac17b15bf5">all</a>() {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ParserConfig config;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    config.<a class="code hl_variable" href="structLIEF_1_1PE_1_1ParserConfig.html#a3ec51312c78db3ae9b94eea7a8fbce2b">parse_exceptions</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    config.<a class="code hl_variable" href="structLIEF_1_1PE_1_1ParserConfig.html#ae9b7f182b54b91ff5c154aada8a865c2">parse_arm64x_binary</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> config;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
 </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">bool</span> parse_signature = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordtype">bool</span> parse_exports = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">bool</span> parse_imports = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">bool</span> parse_rsrc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">bool</span> parse_reloc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">bool</span> parse_exceptions = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">bool</span> parse_arm64x_binary = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#a628534d85404f15b292271911bc3182e">   66</a></span>  std::string <a class="code hl_function" href="structLIEF_1_1PE_1_1ParserConfig.html#a628534d85404f15b292271911bc3182e">to_string</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structLIEF_1_1PE_1_1ParserConfig.html#aa4338d8c897468eb1834d2d8dba67968">   69</a></span>    std::ostream&amp; <a class="code hl_friend" href="structLIEF_1_1PE_1_1ParserConfig.html#aa4338d8c897468eb1834d2d8dba67968">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> ParserConfig&amp; config)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    os &lt;&lt; config.<a class="code hl_function" href="structLIEF_1_1PE_1_1ParserConfig.html#a628534d85404f15b292271911bc3182e">to_string</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html"><div class="ttname"><a href="namespaceLIEF_1_1PE.html">LIEF::PE</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s PE module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:32</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html_ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee">LIEF::PE::IMPHASH_MODE::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdef"><b>Definition</b> PE/utils.hpp:34</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
-<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html">LIEF::PE::ParserConfig</a></div><div class="ttdoc">This structure is used to tweak the PE Parser (PE::Parser)</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:24</div></div>
-<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_aae8546befd1dddcf9f34c5ac17b15bf5"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#aae8546befd1dddcf9f34c5ac17b15bf5">LIEF::PE::ParserConfig::all</a></div><div class="ttdeci">static ParserConfig all()</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:25</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html">LIEF::PE::ParserConfig</a></div><div class="ttdoc">This structure is used to tweak the PE Parser (PE::Parser)</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:26</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_a3ec51312c78db3ae9b94eea7a8fbce2b"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#a3ec51312c78db3ae9b94eea7a8fbce2b">LIEF::PE::ParserConfig::parse_exceptions</a></div><div class="ttdeci">bool parse_exceptions</div><div class="ttdoc">Whether it should parse in-depth exceptions metadata.</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:58</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_a628534d85404f15b292271911bc3182e"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#a628534d85404f15b292271911bc3182e">LIEF::PE::ParserConfig::to_string</a></div><div class="ttdeci">std::string to_string() const</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_aa4338d8c897468eb1834d2d8dba67968"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#aa4338d8c897468eb1834d2d8dba67968">LIEF::PE::ParserConfig::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const ParserConfig &amp;config)</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:69</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_aae8546befd1dddcf9f34c5ac17b15bf5"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#aae8546befd1dddcf9f34c5ac17b15bf5">LIEF::PE::ParserConfig::all</a></div><div class="ttdeci">static ParserConfig all()</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:32</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_ad1e3c6fb48df59b47c9aac1d40a7eea2"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#ad1e3c6fb48df59b47c9aac1d40a7eea2">LIEF::PE::ParserConfig::default_conf</a></div><div class="ttdeci">static const ParserConfig &amp; default_conf()</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:27</div></div>
+<div class="ttc" id="astructLIEF_1_1PE_1_1ParserConfig_html_ae9b7f182b54b91ff5c154aada8a865c2"><div class="ttname"><a href="structLIEF_1_1PE_1_1ParserConfig.html#ae9b7f182b54b91ff5c154aada8a865c2">LIEF::PE::ParserConfig::parse_arm64x_binary</a></div><div class="ttdeci">bool parse_arm64x_binary</div><div class="ttdoc">Whether it should parse nested ARM64X binary.</div><div class="ttdef"><b>Definition</b> PE/ParserConfig.hpp:64</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->

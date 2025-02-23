@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -165,7 +165,8 @@ class LIEF::iterator_facade_base&lt; DerivedT, IteratorCategoryT, T, DifferenceT
 <div class="line">{ <span class="keywordtype">int</span> *I = &amp;Value; }             <span class="comment">// ReferenceT &#39;int&amp;&#39;</span></div>
 <div class="line">{ <span class="keywordtype">int</span> *<span class="keyword">const</span> I = &amp;Value; }       <span class="comment">// ReferenceT &#39;int&amp;&#39;; const</span></div>
 <div class="line">{ <span class="keyword">const</span> <span class="keywordtype">int</span> *I = &amp;Value; }       <span class="comment">// ReferenceT &#39;const int&amp;&#39;</span></div>
-<div class="line">{ <span class="keyword">const</span> <span class="keywordtype">int</span> *<span class="keyword">const</span> I = &amp;Value; } <span class="comment">// ReferenceT &#39;const int&amp;&#39;; const</span></div>
+<div class="line">{ <span class="keyword">const</span> <span class="keywordtype">int</span> *<span class="keyword">const</span> <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75add7536794b63bf90eccfd37f9b147d7f">I</a> = &amp;Value; } <span class="comment">// ReferenceT &#39;const int&amp;&#39;; const</span></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_aa51bd59492fbc904f489e19d94d85b75add7536794b63bf90eccfd37f9b147d7f"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75add7536794b63bf90eccfd37f9b147d7f">LIEF::PE::ACCELERATOR_CODES::I</a></div><div class="ttdeci">@ I</div><div class="ttdef"><b>Definition</b> AcceleratorCodes.hpp:86</div></div>
 </div><!-- fragment --><p> If an iterator facade returns a handle to its own state, then T (and PointerT and ReferenceT) should usually be const-qualified. Otherwise, if clients are expected to modify the handle itself, the field can be declared mutable or use const_cast.</p>
 <p>Classes wishing to use <code><a class="el" href="classLIEF_1_1iterator__facade__base.html" title="CRTP base class which implements the entire standard iterator facade in terms of a minimal subset of ...">iterator_facade_base</a></code> should implement the following methods:</p>
 <p>Forward Iterators: (All of the following methods)</p><ul>

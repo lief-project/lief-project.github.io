@@ -1,19 +1,1066 @@
-<!doctypehtml><html data-content_root=../../ lang=en><meta charset=utf-8><meta content=width=device-width,initial-scale=1.0 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=ie=edge http-equiv=x-ua-compatible><meta content="Copy to clipboard"name=lang:clipboard.copy><meta content="Copied to clipboard"name=lang:clipboard.copied><meta content=en name=lang:search.language><meta content=True name=lang:search.pipeline.stopwords><meta content=True name=lang:search.pipeline.trimmer><meta content="No matching documents"name=lang:search.result.none><meta content="1 matching document"name=lang:search.result.one><meta content="# matching documents"name=lang:search.result.other><meta content=[\s\-]+ name=lang:search.tokenizer><meta content="LIEF Documentation"name=Description><link crossorigin href=https://fonts.gstatic.com/ rel=preconnect><script src=../../_static/javascripts/vendor.min.js></script><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css rel=stylesheet><link href=../../_static/favicon.ico rel=apple-touch-icon><title>Python — LIEF Documentation</title><link href=../../_static/fonts/material-icons.css rel=stylesheet><link href=../../_static/stylesheets/vendor.min.css rel=stylesheet><link href=../../_static/pygments.css?v=3d3fbe02 rel=stylesheet><link href=../../_static/basic.css?v=fb9458d3 rel=stylesheet><link href=../../_static/graphviz.css?v=fd3f3429 rel=stylesheet><link href=../../_static/css/custom.css?v=49aeed65 rel=stylesheet><script src=../../_static/documentation_options.js?v=7de89ed4></script><script src=../../_static/doctools.js?v=9a2dae69></script><script src=../../_static/sphinx_highlight.js?v=dc90522c></script><link href=../../_static/favicon.ico rel=icon><link href=../../genindex.html rel=index title=Index><link href=../../search.html rel=search title=Search><link href=rust.html rel=next title=Rust><link href=cpp.html rel=prev title=C++><link href=../../_static/stylesheets/theme.css rel=stylesheet><body data-md-color-accent=cyan data-md-color-primary=blue dir=ltr><nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top"role=navigation><a class=navbar-brand href=../../index.html>LIEF Documentation</a><button class=navbar-toggler data-target=#navbar-collapse data-toggle=collapse><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0"id=navbar-collapse><ul class="navbar-nav position-relative px-lg-6 px-xl-8"><li class=nav-item><a class=nav-link href=https://lief.re> <i class="fa-solid fa-house mr-3"></i>Home </a><li class=nav-item><a class=nav-link href=https://lief.re/blog> <i class="fa-solid fa-rss mr-3"></i>Blog </a><li class=nav-item><a class=nav-link href=https://lief.re/download> <i class="fa-solid fa-download mr-3"></i>Download </a><li class="nav-item dropdown"><a class="nav-link dropdown-toggle"aria-expanded=false data-toggle=dropdown href=# role=button> <i class="fa-solid fa-book mr-3"></i>Documentation </a> <div class=dropdown-menu role=menu><a class=dropdown-item href=https://lief.re/doc/latest/doxygen>Doxygen</a></div><li class=nav-item><a class=nav-link href=https://lief.re/about> <i class="fa-solid fa-bars-staggered mr-3"></i>About </a><li class="nav-item ml-lg-3 mt-3 mt-lg-0"><a class="hover-lift-light mt-1"href=https://discord.gg/jGQtyAYChJ target=_blank> <i class="fab fa-2x fa-discord text-darkblue mr-3"></i> </a><li class=nav-item><a class="btn btn-outline-pink"href=https://github.com/sponsors/lief-project target=_blank> <i class="fa-solid fa-heart mr-3"></i> Sponsor </a></ul></div></nav><div class="container-fluid container-docs"><div class=row><div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left"><div class="collapse d-lg-block mb-6 mb-lg-0"id=sidebar-collapse><form action=../../search.html method=GET name=search><input autocapitalize=off autocomplete=off class=form-control data-md-component=query data-md-state=active name=q placeholder=Search spellcheck=false></form><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../intro.html><em class="fa fa-solid fa-door-open"></em> Introduction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../installation.html><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../compilation.html><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-sitemap"> </i>Formats</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/elf/index.html><em class="fa fa-brands fa-linux"></em> ELF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/macho/index.html><em class="fa fa-brands fa-apple"></em> Mach-O</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/pe/index.html><em class="fa fa-brands fa-windows"></em> PE</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../formats/android/index.html><em class="fa fa-brands fa-android"></em> Android</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-code"> </i>API</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/binary_abstraction/index.html><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/utilities/index.html><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/error_handling/index.html><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/logging/index.html><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/cpp/index.html><em class="fa fa-regular fa-file-code"></em> C++</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/rust/index.html><em class="fa fa-brands fa-rust"></em> Rust</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../intro.html><em class="fa fa-cubes"></em> What is LIEF Extended?</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../debug_info/index.html><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../dwarf/index.html><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../pdb/index.html><em class="fa fa-brands fa-windows"></em> PDB</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../objc/index.html><em class="fa fa-brands fa-apple"></em> Objective-C</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=index.html><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../disassembler/index.html><em class="fa fa-solid fa-dna"></em> Disassembler</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../assembler/index.html><em class="fa fa-solid fa-user-secret"></em> Assembler</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-layer-group"> </i>Tutorials</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/01_play_with_formats.html>01 - Parse and manipulate formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/02_pe_from_scratch.html>02 - Create a PE from scratch</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/03_elf_change_symbols.html>03 - Play with ELF symbols</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/04_elf_hooking.html>04 - ELF Hooking</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/05_elf_infect_plt_got.html>05 - Infecting the plt/got</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/06_pe_hooking.html>06 - PE Hooking (Deprecated)</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/07_pe_resource.html>07 - PE Resources</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/08_elf_bin2lib.html>08 - Transforming an ELF executable into a library</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/09_frida_lief.html>09 - How to use frida on a non-rooted device</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/10_android_formats.html>10 - Android formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/11_macho_modification.html>11 - Mach-O Modification</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/12_elf_coredump.html>12 - ELF Coredump</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/13_pe_authenticode.html>13 - PE Authenticode</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-brands fa-space-awesome"> </i>Extra Information</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../references.html><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../changelog.html><em class="fa fa-solid fa-code-compare"></em> Changelog</a></ul></div><hr><span class="svg-icon text-purple mr-1 relative-top--1"> <svg viewbox="0 0 512 512"height=512 width=512 xmlns=http://www.w3.org/2000/svg><title>ionicons-v5-d</title><circle cx=160 cy=96 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><circle cx=160 cy=416 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><line style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px x1=160 x2=160 y1=368 y2=144></line><circle cx=352 cy=160 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><path d=M352,208c0,128-192,48-192,160 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></path></svg> </span><a class=text-darkblue href=https://github.com/lief-project/LIEF/commits/0ff950c0>0.16.0 (0ff950c0)</a><br> Updated on 10/12/2024, 06:48:19.</div><div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8"><nav aria-label=breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a aria-label=Home href=../../index.html><i class="fa-solid fa-home"></i></a><li class=breadcrumb-item><a href=index.html><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a><li class="breadcrumb-item active"aria-current=page><a href=#><em class="fa fa-brands fa-python"></em> Python</a></ol></nav><section id=python><h1 id=extended-dsc-python--page-root><em class="fa fa-brands fa-python"></em> Python<a title="Link to this heading"class=headerlink href=#extended-dsc-python--page-root>¶</a></h1><dl class="py function"><dt class="sig sig-object py"id=lief.dsc.load><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>load</span></span><span class=sig-paren>(</span><em class=sig-param><span class=o><span class=pre>*</span></span><span class=n><span class=pre>args</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.load>¶</a><dt class="sig sig-object py"><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>load</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>path</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>os.PathLike</span></span></em>, <em class=sig-param><span class=n><span class=pre>arch</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span><span class=w> </span><span class=o><span class=pre>=</span></span><span class=w> </span><span class=default_value><span class=pre>''</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief._lief.dsc.DyldSharedCache><span class=pre>lief._lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><dd><p>Overloaded function.</p> <ol class=arabic><li><p><code class="docutils literal notranslate"><span class=pre>load(files:</span> <span class=pre>collections.abc.Sequence[str])</span> <span class=pre>-></span> <span class=pre>Optional[lief._lief.dsc.DyldSharedCache]</span></code></p> <blockquote><div><p>Load a shared cache from a list of files.<div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=n>files</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>[</span>
-<span class=w>  </span><span class=s>"/tmp/dsc/dyld_shared_cache_arm64e"</span><span class=p>,</span>
-<span class=w>  </span><span class=s>"/tmp/dsc/dyld_shared_cache_arm64e.1"</span>
-<span class=p>]</span>
-<span class=n>cache</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>lief</span><span class=p>.</span><span class=n>dsc</span><span class=p>.</span><span class=n>load</span><span class=p>(</span><span class=n>files</span><span class=p>);</span>
-</pre></div></div></div></blockquote><li><p><code class="docutils literal notranslate"><span class=pre>load(path:</span> <span class=pre>os.PathLike,</span> <span class=pre>arch:</span> <span class=pre>str</span> <span class=pre>=</span> <span class=pre>'')</span> <span class=pre>-></span> <span class=pre>Optional[lief._lief.dsc.DyldSharedCache]</span></code></p> <blockquote><div><p>Load a shared cache from the a single file or from a directory specified by the <code class="docutils literal notranslate"><span class=pre>path</span></code> parameter.<p>In the case where multiple architectures are available in the <code class="docutils literal notranslate"><span class=pre>path</span></code> directory, the <code class="docutils literal notranslate"><span class=pre>arch</span></code> parameter can be used to define which architecture should be prefered.<p><strong>Example:</strong><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=o>//</span> <span class=n>From</span> <span class=n>a</span> <span class=n>directory</span> <span class=p>(</span><span class=n>split</span> <span class=n>caches</span><span class=p>)</span>
-<span class=n>cache</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>dsc</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s2>"vision-pro-2.0/"</span><span class=p>);</span>
+<!DOCTYPE html>
 
-<span class=o>//</span> <span class=n>From</span> <span class=n>a</span> <span class=n>single</span> <span class=n>cache</span> <span class=n>file</span>
-<span class=n>cache</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>dsc</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s2>"ios-14.2/dyld_shared_cache_arm64"</span><span class=p>);</span>
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<span class=o>//</span> <span class=n>From</span> <span class=n>a</span> <span class=n>directory</span> <span class=k>with</span> <span class=n>multiple</span> <span class=n>architectures</span>
-<span class=n>cache</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>dsc</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s2>"macos-12.6/"</span><span class=p>,</span> <span class=s2>"x86_64h"</span><span class=p>);</span>
-</pre></div></div></div></blockquote></ol></dl><section id=cache-processing><h2 id=cache-processing>Cache Processing<a title="Link to this heading"class=headerlink href=#cache-processing>¶</a></h2><div class="admonition warning"><p class=admonition-title>Warning<p>If you aim at extracting several libraries from a dyld shared cache, it is <strong>highly</strong> recommended to enable caching. Otherwise, performances can be impacted.</div><dl class="py function"><dt class="sig sig-object py"id=lief.dsc.enable_cache><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>enable_cache</span></span><span class=sig-paren>(</span><em class=sig-param><span class=o><span class=pre>*</span></span><span class=n><span class=pre>args</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.enable_cache>¶</a><dt class="sig sig-object py"><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>enable_cache</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>target_cache_dir</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><dd><p>Overloaded function.</p> <ol class=arabic><li><p><code class="docutils literal notranslate"><span class=pre>enable_cache()</span> <span class=pre>-></span> <span class=pre>bool</span></code></p> <blockquote><div><p>Enable globally cache/memoization. One can also leverage this function by setting the environment variable <code class="docutils literal notranslate"><span class=pre>DYLDSC_ENABLE_CACHE</span></code> to <code class="docutils literal notranslate"><span class=pre>1</span></code><p>By default, LIEF will use the directory specified by the environment variable <code class="docutils literal notranslate"><span class=pre>DYLDSC_CACHE_DIR</span></code> as its cache-root directory:<div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=go>DYLDSC_ENABLE_CACHE=1 DYLDSC_CACHE_DIR=/tmp/my_dir python ./my-script.py</span>
-</pre></div></div><p>Otherwise, if <code class="docutils literal notranslate"><span class=pre>DYLDSC_CACHE_DIR</span></code> is not set, LIEF will use the following directory (in this priority):<ol class="arabic simple"><li><p>System or user cache directory</ol><blockquote><div><ul class=simple><li><p>macOS: <code class="docutils literal notranslate"><span class=pre>DARWIN_USER_TEMP_DIR</span></code> / <code class="docutils literal notranslate"><span class=pre>DARWIN_USER_CACHE_DIR</span></code> + <code class="docutils literal notranslate"><span class=pre>/dyld_shared_cache</span></code><li><p>Linux: <code class="docutils literal notranslate"><span class=pre>${XDG_CACHE_HOME}/dyld_shared_cache</span></code><li><p>Windows: <code class="docutils literal notranslate"><span class=pre>%LOCALAPPDATA%\dyld_shared_cache</span></code></ul></div></blockquote><ol class="arabic simple"start=2><li><p>Home directory</ol><blockquote><div><ul class=simple><li><p>macOS/Linux: <code class="docutils literal notranslate"><span class=pre>$HOME/.dyld_shared_cache</span></code><li><p>Windows: <code class="docutils literal notranslate"><span class=pre>%USERPROFILE%\.dyld_shared_cache</span></code></ul></div></blockquote><p>See <a class="reference internal"href=#lief.dsc.DyldSharedCache.enable_caching title=lief.dsc.DyldSharedCache.enable_caching><code class="xref py py-meth docutils literal notranslate"><span class=pre>lief.dsc.DyldSharedCache.enable_caching()</span></code></a> for a finer granularity</div></blockquote><li><p><code class="docutils literal notranslate"><span class=pre>enable_cache(target_cache_dir:</span> <span class=pre>str)</span> <span class=pre>-></span> <span class=pre>bool</span></code></p> <blockquote><div><p>Same behavior as the other <code class="xref py py-meth docutils literal notranslate"><span class=pre>enable_cache()</span></code> function but using a user-provided cache directory instead of an inferred one.</div></blockquote></ol></dl></section><section id=dyldsharedcache><h2 id=dyldsharedcache>DyldSharedCache<a title="Link to this heading"class=headerlink href=#dyldsharedcache>¶</a></h2><dl class="py class"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>DyldSharedCache</span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>This class represents a dyld shared cache file.</p> <dl class="py class"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>ARCH</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>value</span></span></em>, <em class=sig-param><span class=n><span class=pre>names</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=o><span class=pre>*</span></span></em>, <em class=sig-param><span class=n><span class=pre>module</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>qualname</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>type</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>start</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>1</span></span></em>, <em class=sig-param><span class=n><span class=pre>boundary</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>Enum</span></code></p> <p>Architecture supported by the dyld shared cache</p> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.ARM64><span class="sig-name descname"><span class=pre>ARM64</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>7</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.ARM64>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.ARM64E><span class="sig-name descname"><span class=pre>ARM64E</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>8</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.ARM64E>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.ARMV5><span class="sig-name descname"><span class=pre>ARMV5</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>4</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.ARMV5>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.ARMV6><span class="sig-name descname"><span class=pre>ARMV6</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>5</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.ARMV6>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.ARMV7><span class="sig-name descname"><span class=pre>ARMV7</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>6</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.ARMV7>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.I386><span class="sig-name descname"><span class=pre>I386</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>1</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.I386>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.UNKNOWN><span class="sig-name descname"><span class=pre>UNKNOWN</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>0</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.UNKNOWN>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.X86_64><span class="sig-name descname"><span class=pre>X86_64</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>2</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.X86_64>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.ARCH.X86_64H><span class="sig-name descname"><span class=pre>X86_64H</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>3</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.ARCH.X86_64H>¶</a><dd></dl></dl> <dl class="py class"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>PLATFORM</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>value</span></span></em>, <em class=sig-param><span class=n><span class=pre>names</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=o><span class=pre>*</span></span></em>, <em class=sig-param><span class=n><span class=pre>module</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>qualname</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>type</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>start</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>1</span></span></em>, <em class=sig-param><span class=n><span class=pre>boundary</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>Enum</span></code></p> <p>Platforms supported by the dyld shared cache</p> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.ANY><span class="sig-name descname"><span class=pre>ANY</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>4294967295</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.ANY>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.BRIDGEOS><span class="sig-name descname"><span class=pre>BRIDGEOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>5</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.BRIDGEOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.DRIVERKIT><span class="sig-name descname"><span class=pre>DRIVERKIT</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>10</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.DRIVERKIT>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.FIRMWARE><span class="sig-name descname"><span class=pre>FIRMWARE</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>13</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.FIRMWARE>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.IOS><span class="sig-name descname"><span class=pre>IOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>2</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.IOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.IOSMAC><span class="sig-name descname"><span class=pre>IOSMAC</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>6</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.IOSMAC>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.IOS_SIMULATOR><span class="sig-name descname"><span class=pre>IOS_SIMULATOR</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>7</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.IOS_SIMULATOR>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.MACOS><span class="sig-name descname"><span class=pre>MACOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>1</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.MACOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.SEPOS><span class="sig-name descname"><span class=pre>SEPOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>14</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.SEPOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.TVOS><span class="sig-name descname"><span class=pre>TVOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>3</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.TVOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.TVOS_SIMULATOR><span class="sig-name descname"><span class=pre>TVOS_SIMULATOR</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>8</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.TVOS_SIMULATOR>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.UNKNOWN><span class="sig-name descname"><span class=pre>UNKNOWN</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>0</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.UNKNOWN>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.VISIONOS><span class="sig-name descname"><span class=pre>VISIONOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>11</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.VISIONOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.VISIONOS_SIMULATOR><span class="sig-name descname"><span class=pre>VISIONOS_SIMULATOR</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>12</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.VISIONOS_SIMULATOR>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.WATCHOS><span class="sig-name descname"><span class=pre>WATCHOS</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>4</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.WATCHOS>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.PLATFORM.WATCHOS_SIMULATOR><span class="sig-name descname"><span class=pre>WATCHOS_SIMULATOR</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>9</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.PLATFORM.WATCHOS_SIMULATOR>¶</a><dd></dl></dl> <dl class="py class"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>VERSION</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>value</span></span></em>, <em class=sig-param><span class=n><span class=pre>names</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=o><span class=pre>*</span></span></em>, <em class=sig-param><span class=n><span class=pre>module</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>qualname</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>type</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em>, <em class=sig-param><span class=n><span class=pre>start</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>1</span></span></em>, <em class=sig-param><span class=n><span class=pre>boundary</span></span><span class=o><span class=pre>=</span></span><span class=default_value><span class=pre>None</span></span></em><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>Enum</span></code></p> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_1042_1><span class="sig-name descname"><span class=pre>DYLD_1042_1</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>8</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_1042_1>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_195_5><span class="sig-name descname"><span class=pre>DYLD_195_5</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>2</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_195_5>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_239_3><span class="sig-name descname"><span class=pre>DYLD_239_3</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>3</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_239_3>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_360_14><span class="sig-name descname"><span class=pre>DYLD_360_14</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>4</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_360_14>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_421_1><span class="sig-name descname"><span class=pre>DYLD_421_1</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>5</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_421_1>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_832_7_1><span class="sig-name descname"><span class=pre>DYLD_832_7_1</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>6</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_832_7_1>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_940><span class="sig-name descname"><span class=pre>DYLD_940</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>7</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_940>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.DYLD_95_3><span class="sig-name descname"><span class=pre>DYLD_95_3</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>1</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.DYLD_95_3>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.UNKNOWN><span class="sig-name descname"><span class=pre>UNKNOWN</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>0</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.UNKNOWN>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.VERSION.UNRELEASED><span class="sig-name descname"><span class=pre>UNRELEASED</span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>9</span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.VERSION.UNRELEASED>¶</a><dd></dl></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.arch><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>arch</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache.ARCH title=lief.dsc.DyldSharedCache.ARCH><span class=pre>lief.dsc.DyldSharedCache.ARCH</span></a></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.arch>¶</a><dd><p>Architecture targeted by this cache</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.arch_name><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>arch_name</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.arch_name>¶</a><dd><p>Name of the architecture targeted by this cache (<code class="docutils literal notranslate"><span class=pre>x86_64h</span></code>)</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.cache_for_address><span class="sig-name descname"><span class=pre>cache_for_address</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>address</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.cache_for_address>¶</a><dd><p>Find the sub-DyldSharedCache that wraps the given virtual address</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.disassemble><span class="sig-name descname"><span class=pre>disassemble</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>arg</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>Iterator</span><span class=p><span class=pre>[</span></span><a class="reference internal"href=../disassembler/python/index.html#lief.assembly.Instruction title=lief.assembly.Instruction><span class=pre>lief.assembly.Instruction</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span><span class=p><span class=pre>]</span></span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.disassemble>¶</a><dd><p>Disassemble instructions at the provided virtual address.</p> <p>This function returns an iterator over <a class="reference internal"href=../disassembler/python/index.html#lief.assembly.Instruction title=lief.assembly.Instruction><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.assembly.Instruction</span></code></a>.</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.enable_caching><span class="sig-name descname"><span class=pre>enable_caching</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>target_dir</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.enable_caching>¶</a><dd><p>When enabled, this function allows to record and to keep in <em>cache</em>, dyld shared cache information that are costly to access.</p> <p>For instance, GOT symbols, rebases information, stub symbols, …</p> <p>It is <strong>highly</strong> recommended to enable this function when processing a dyld shared cache several times or when extracting a large number of <a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.dsc.Dylib</span></code></a> with enhanced extraction options (e.g. <a class="reference internal"href=#lief.dsc.Dylib.extract_opt_t.fix_branches title=lief.dsc.Dylib.extract_opt_t.fix_branches><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.dsc.Dylib.extract_opt_t.fix_branches</span></code></a>)</p> <p>One can enable caching by calling this function:</p> <div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>dyld_cache</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>dsc</span><span class=o>.</span><span class=n>load</span><span class=p>(</span><span class=s2>"macos-15.0.1/"</span><span class=p>);</span>
-<span class=n>dyld_cache</span><span class=o>.</span><span class=n>enable_caching</span><span class=p>(</span><span class=s2>"~/.cache/lief-dsc"</span><span class=p>);</span>
-</pre></div></div> <p>One can also enable this cache optimization <strong>globally</strong> using the function: <a class="reference internal"href=#lief.dsc.enable_cache title=lief.dsc.enable_cache><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.dsc.enable_cache()</span></code></a> or by setting the environment variable <code class="docutils literal notranslate"><span class=pre>DYLDSC_ENABLE_CACHE</span></code> to 1.</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.filename><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>filename</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.filename>¶</a><dd><p>Filename of the dyld shared file associated with this object.</p> <p>For instance: <code class="docutils literal notranslate"><span class=pre>dyld_shared_cache_arm64e,</span> <span class=pre>dyld_shared_cache_arm64e.62.dyldlinkedit</span></code></p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.filepath><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>filepath</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.filepath>¶</a><dd><p>Full path to the original dyld shared cache file associated with object (e.g. <code class="docutils literal notranslate"><span class=pre>/cache/visionos/dyld_shared_cache_arm64e.42</span></code>)</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.find_lib_from_name><span class="sig-name descname"><span class=pre>find_lib_from_name</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>name</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><span class=pre>lief.dsc.Dylib</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.find_lib_from_name>¶</a><dd><p>Find the Dylib whose filename of <a class="reference internal"href=#lief.dsc.Dylib.path title=lief.dsc.Dylib.path><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.dsc.Dylib.path</span></code></a> matches the provided name.</p> <p>If multiple libraries have the same name (but with a different path), the <strong>first one</strong> matching the provided name is returned.</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.find_lib_from_path><span class="sig-name descname"><span class=pre>find_lib_from_path</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>path</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><span class=pre>lief.dsc.Dylib</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.find_lib_from_path>¶</a><dd><p>Find the Dylib whose <a class="reference internal"href=#lief.dsc.Dylib.path title=lief.dsc.Dylib.path><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.dsc.Dylib.path</span></code></a> matches the provided path.</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.find_lib_from_va><span class="sig-name descname"><span class=pre>find_lib_from_va</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>virtual_address</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><span class=pre>lief.dsc.Dylib</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.find_lib_from_va>¶</a><dd><p>Find the <a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.dsc.Dylib</span></code></a> that encompasses the given virtual address. It returns <code class="docutils literal notranslate"><span class=pre>None</span></code> if a Dylib can’t be found.</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.find_subcache><span class="sig-name descname"><span class=pre>find_subcache</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>filename</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.find_subcache>¶</a><dd><p>Try to find the DyldSharedCache associated with the filename given in the first parameter.</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.flush_cache><span class="sig-name descname"><span class=pre>flush_cache</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.flush_cache>¶</a><dd><p>Flush internal information into the on-disk cache (see: <code class="xref py py-meth docutils literal notranslate"><span class=pre>enable_caching()</span></code>)</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.from_files><span class="sig-name descname"><span class=pre>from_files</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>files</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>collections.abc.Sequence</span><span class=p><span class=pre>[</span></span><span class=pre>str</span><span class=p><span class=pre>]</span></span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>&LTnanobind.nb_func</span> <span class=pre>object></span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.from_files>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.from_path><span class="sig-name descname"><span class=pre>from_path</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>path</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em>, <em class=sig-param><span class=n><span class=pre>arch</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><em class=property><span class=w> </span><span class=p><span class=pre>=</span></span><span class=w> </span><span class=pre>&LTnanobind.nb_func</span> <span class=pre>object></span></em><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.from_path>¶</a><dd></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.get_content_from_va><span class="sig-name descname"><span class=pre>get_content_from_va</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>addr</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em>, <em class=sig-param><span class=n><span class=pre>size</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bytes</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.get_content_from_va>¶</a><dd><p>Return the content at the specified virtual address</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.has_subcaches><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>has_subcaches</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.has_subcaches>¶</a><dd><p>True if the subcaches are associated with this cache</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.libraries><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>libraries</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>collections.abc.Sequence</span><span class=p><span class=pre>[</span></span><a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><span class=pre>lief.dsc.Dylib</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span><span class=p><span class=pre>]</span></span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.libraries>¶</a><dd><p>Return a list-like of the <a class="reference internal"href=#lief.dsc.Dylib title=lief.dsc.Dylib><code class="xref py py-class docutils literal notranslate"><span class=pre>Dylib</span></code></a> embedded in this dyld shared cache</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.load_address><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>load_address</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.load_address>¶</a><dd><p>Based address of this cache</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.main_cache><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>main_cache</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.main_cache>¶</a><dd><p>Return the principal dyld shared cache in the case of multiple subcaches</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.mapping_info><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>mapping_info</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>collections.abc.Sequence</span><span class=p><span class=pre>[</span></span><a class="reference internal"href=#lief.dsc.MappingInfo title=lief.dsc.MappingInfo><span class=pre>lief.dsc.MappingInfo</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span><span class=p><span class=pre>]</span></span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.mapping_info>¶</a><dd><p>Return a list-like of the <a class="reference internal"href=#lief.dsc.MappingInfo title=lief.dsc.MappingInfo><code class="xref py py-class docutils literal notranslate"><span class=pre>MappingInfo</span></code></a> embedded in this dyld shared cache</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.platform><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>platform</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache.PLATFORM title=lief.dsc.DyldSharedCache.PLATFORM><span class=pre>lief.dsc.DyldSharedCache.PLATFORM</span></a></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.platform>¶</a><dd><p>Platform targeted by this cache (e.g. vision-os)</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.subcaches><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>subcaches</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>collections.abc.Sequence</span><span class=p><span class=pre>[</span></span><a class="reference internal"href=#lief.dsc.SubCache title=lief.dsc.SubCache><span class=pre>lief.dsc.SubCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span><span class=p><span class=pre>]</span></span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.subcaches>¶</a><dd><p>Return a list-like of <a class="reference internal"href=#lief.dsc.SubCache title=lief.dsc.SubCache><code class="xref py py-class docutils literal notranslate"><span class=pre>SubCache</span></code></a> embedded in this (main) dyld shared cache</p></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.va_to_offset><span class="sig-name descname"><span class=pre>va_to_offset</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>virtual_address</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>int</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><a class="reference internal"href=../../api/error_handling/index.html#lief.lief_errors title=lief.lief_errors><span class=pre>lief.lief_errors</span></a></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.va_to_offset>¶</a><dd><p>Convert the given virtual address into an offset.</p> <div class="admonition warning"><p class=admonition-title>Warning<p>If the shared cache contains multiple subcaches, this function needs to be called on the targeted subcache. See <code class="xref py py-func docutils literal notranslate"><span class=pre>cache_for_address()</span></code> to find the associated subcache.</div></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.DyldSharedCache.version><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>version</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache.VERSION title=lief.dsc.DyldSharedCache.VERSION><span class=pre>lief.dsc.DyldSharedCache.VERSION</span></a></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.DyldSharedCache.version>¶</a><dd><p>Version of dyld used by this cache</p></dl></dl></section><section id=dylib><h2 id=dylib>Dylib<a title="Link to this heading"class=headerlink href=#dylib>¶</a></h2><dl class="py class"><dt class="sig sig-object py"id=lief.dsc.Dylib><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>Dylib</span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>This class represents a library embedded in a dyld shared cache. It mirrors the original <code class="docutils literal notranslate"><span class=pre>dyld_cache_image_info</span></code> structure.</p> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.address><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>address</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.address>¶</a><dd><p>In-memory address of the library</p></dl> <dl class="py class"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>extract_opt_t</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em><span class=sig-paren>)</span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>This structure is used to tweak the extraction process while calling <a class="reference internal"href=#lief.dsc.Dylib.get title=lief.dsc.Dylib.get><code class="xref py py-meth docutils literal notranslate"><span class=pre>lief.dsc.Dylib.get()</span></code></a>. These options allow to deoptimize the dylib and get an accurate representation of the origin Mach-O binary.</p> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t.create_dyld_chained_fixup_cmd><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>create_dyld_chained_fixup_cmd</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t.create_dyld_chained_fixup_cmd>¶</a><dd><p>Whether the <code class="docutils literal notranslate"><span class=pre>LC_DYLD_CHAINED_FIXUPS</span></code> command should be (re)created.</p> <p>If this value is not set, LIEF will add the command only if it’s meaningful regarding the other options</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t.fix_branches><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>fix_branches</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t.fix_branches>¶</a><dd><p>Fix call instructions that target addresses outside the current dylib virtual space.</p> <div class="admonition warning"><p class=admonition-title>Warning<p>Enabling this option can have a significant impact on the performances. Make sure to enable the internal cache mechanism: <a class="reference internal"href=#lief.dsc.enable_cache title=lief.dsc.enable_cache><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.dsc.enable_cache()</span></code></a> or <a class="reference internal"href=#lief.dsc.DyldSharedCache.enable_caching title=lief.dsc.DyldSharedCache.enable_caching><code class="xref py py-meth docutils literal notranslate"><span class=pre>lief.dsc.DyldSharedCache.enable_caching()</span></code></a></div></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t.fix_memory><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>fix_memory</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t.fix_memory>¶</a><dd><p>Fix memory accesses performed outside the dylib’s virtual space</p> <div class="admonition warning"><p class=admonition-title>Warning<p>Enabling this option can have a significant impact on the performances. Make sure to enable the internal cache mechanism: <a class="reference internal"href=#lief.dsc.enable_cache title=lief.dsc.enable_cache><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.dsc.enable_cache()</span></code></a> or <a class="reference internal"href=#lief.dsc.DyldSharedCache.enable_caching title=lief.dsc.DyldSharedCache.enable_caching><code class="xref py py-meth docutils literal notranslate"><span class=pre>lief.dsc.DyldSharedCache.enable_caching()</span></code></a></div></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t.fix_objc><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>fix_objc</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t.fix_objc>¶</a><dd><p>Fix Objective-C information</p> <div class="admonition warning"><p class=admonition-title>Warning<p>Enabling this option can have a significant impact on the performances. Make sure to enable the internal cache mechanism: <a class="reference internal"href=#lief.dsc.enable_cache title=lief.dsc.enable_cache><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.dsc.enable_cache()</span></code></a> or <a class="reference internal"href=#lief.dsc.DyldSharedCache.enable_caching title=lief.dsc.DyldSharedCache.enable_caching><code class="xref py py-meth docutils literal notranslate"><span class=pre>lief.dsc.DyldSharedCache.enable_caching()</span></code></a></div></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t.fix_relocations><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>fix_relocations</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t.fix_relocations>¶</a><dd><p>Recover and fix relocations</p> <div class="admonition warning"><p class=admonition-title>Warning<p>Enabling this option can have a significant impact on the performances. Make sure to enable the internal cache mechanism: <a class="reference internal"href=#lief.dsc.enable_cache title=lief.dsc.enable_cache><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.dsc.enable_cache()</span></code></a> or <a class="reference internal"href=#lief.dsc.DyldSharedCache.enable_caching title=lief.dsc.DyldSharedCache.enable_caching><code class="xref py py-meth docutils literal notranslate"><span class=pre>lief.dsc.DyldSharedCache.enable_caching()</span></code></a></div></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.extract_opt_t.pack><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>pack</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.extract_opt_t.pack>¶</a><dd><p>Whether the segment’s offsets should be packed to avoid an in-memory size while writing back the binary.</p> <div class="admonition note"><p class=admonition-title>Note<p>This option does not have an impact on the performances</div></dl></dl> <dl class="py attribute"><dt class="sig sig-object py"id=lief.dsc.Dylib.get><span class="sig-name descname"><span class=pre>get</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>opt</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><a class="reference internal"href=#lief.dsc.Dylib.extract_opt_t title=lief.dsc.Dylib.extract_opt_t><span class=pre>lief.dsc.Dylib.extract_opt_t</span></a></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../../formats/macho/python.html#lief.MachO.Binary title=lief.MachO.Binary><span class=pre>lief.MachO.Binary</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.get>¶</a><dd><p>Get a <a class="reference internal"href=../../formats/macho/python.html#lief.MachO.Binary title=lief.MachO.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.MachO.Binary</span></code></a> representation for this Dylib.</p> <p>One can use this function to write back the Mach-O binary on the disk:</p> <div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=nl>dyld_cache</span><span class=p>:</span><span class=w> </span><span class=n>lief</span><span class=p>.</span><span class=n>dsc</span><span class=p>.</span><span class=n>DyldSharedCache</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>...</span>
-<span class=n>dyld_cache</span><span class=p>.</span><span class=n>libraries</span><span class=p>[</span><span class=mi>10</span><span class=p>].</span><span class=n>get</span><span class=p>().</span><span class=n>write</span><span class=p>(</span><span class=s>"libsystem.dylib"</span><span class=p>)</span>
-</pre></div></div></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.inode><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>inode</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.inode>¶</a><dd><p>File serial number matching <code class="docutils literal notranslate"><span class=pre>stat.st_ino</span></code> or 0</p> <p>Note that for shared cache targeting iOS, this value can hold a hash of the path (if modtime is set to 0)</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.modtime><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>modtime</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.modtime>¶</a><dd><p>Modification time of the library matching <code class="docutils literal notranslate"><span class=pre>stat.st_mtime</span></code>, or 0</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.padding><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>padding</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.padding>¶</a><dd><p>Padding alignment value (should be 0)</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.Dylib.path><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>path</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.Dylib.path>¶</a><dd><p>Original path of the library (e.g. <code class="docutils literal notranslate"><span class=pre>/usr/lib/libcryptex.dylib</span></code>)</p></dl></dl></section><section id=mappinginfo><h2 id=mappinginfo>MappingInfo<a title="Link to this heading"class=headerlink href=#mappinginfo>¶</a></h2><dl class="py class"><dt class="sig sig-object py"id=lief.dsc.MappingInfo><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>MappingInfo</span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>This class represents a <code class="docutils literal notranslate"><span class=pre>dyld_cache_mapping_info</span></code> entry.</p> <p>It provides information about the relationshiop between on-disk shared cache and in-memory shared cache.</p> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.MappingInfo.address><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>address</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo.address>¶</a><dd><p>The in-memory address where this dyld shared cache region is mapped</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.MappingInfo.end_address><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>end_address</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo.end_address>¶</a><dd><p>End virtual address of the region</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.MappingInfo.file_offset><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>file_offset</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo.file_offset>¶</a><dd><p>On-disk file offset</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.MappingInfo.init_prot><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>init_prot</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo.init_prot>¶</a><dd><p>Initial memory protection</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.MappingInfo.max_prot><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>max_prot</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo.max_prot>¶</a><dd><p>Max memory protection</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.MappingInfo.size><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>size</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.MappingInfo.size>¶</a><dd><p>Size of the region being mapped</p></dl></dl></section><section id=subcache><h2 id=subcache>SubCache<a title="Link to this heading"class=headerlink href=#subcache>¶</a></h2><dl class="py class"><dt class="sig sig-object py"id=lief.dsc.SubCache><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.dsc.</span></span><span class="sig-name descname"><span class=pre>SubCache</span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.SubCache>¶</a><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>This class represents a subcache in the case of large/split dyld shared cache.</p> <p>It mirror (and abstracts) the original <code class="docutils literal notranslate"><span class=pre>dyld_subcache_entry</span></code> / <code class="docutils literal notranslate"><span class=pre>dyld_subcache_entry_v1</span></code></p> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.SubCache.cache><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>cache</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><span class=pre>lief.dsc.DyldSharedCache</span></a><span class=w> </span><span class=p><span class=pre>|</span></span><span class=w> </span><span class=pre>None</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.SubCache.cache>¶</a><dd><p>The associated <a class="reference internal"href=#lief.dsc.DyldSharedCache title=lief.dsc.DyldSharedCache><code class="xref py py-class docutils literal notranslate"><span class=pre>DyldSharedCache</span></code></a> object for this subcache</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.SubCache.suffix><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>suffix</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.SubCache.suffix>¶</a><dd><p>The file name suffix of the subCache file (e.g. <code class="docutils literal notranslate"><span class=pre>.25.data</span></code>, <code class="docutils literal notranslate"><span class=pre>.03.development</span></code>)</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.SubCache.uuid><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>uuid</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>list</span><span class=p><span class=pre>[</span></span><span class=pre>int</span><span class=p><span class=pre>]</span></span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.SubCache.uuid>¶</a><dd><p>The uuid of the subcache file</p></dl> <dl class="py property"><dt class="sig sig-object py"id=lief.dsc.SubCache.vm_offset><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>vm_offset</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>int</span></span></span><a title="Link to this definition"class=headerlink href=#lief.dsc.SubCache.vm_offset>¶</a><dd><p>The offset of this subcache from the main cache base address</p></dl></dl></section></section></div><div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right"><aside class="border-left pl-5 py-3"><span class="text-uppercase text-muted font-size-sm d-block mb-3"> On this page: </span><a class="d-block my-2"data-toggle=scroll href=#lief.dsc.load><code class="docutils literal notranslate"><span class=pre>load()</span></code></a><a class="d-block my-2"data-toggle=scroll href=#cache-processing>Cache Processing</a><a class="d-block my-2"data-toggle=scroll href=#dyldsharedcache>DyldSharedCache</a><a class="d-block my-2"data-toggle=scroll href=#dylib>Dylib</a><a class="d-block my-2"data-toggle=scroll href=#mappinginfo>MappingInfo</a><a class="d-block my-2"data-toggle=scroll href=#subcache>SubCache</a></aside></div></div></div>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
+
+  <script src="../../_static/javascripts/vendor.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <title>Python &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/vendor.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=3d3fbe02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=411c5307" />
+    <script src="../../_static/documentation_options.js?v=0c3dd48d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Rust" href="rust.html" />
+    <link rel="prev" title="C++" href="cpp.html" />
+   
+  <link rel="stylesheet" href="../../_static/stylesheets/theme.css"/>
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
+
+    
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/macho/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/pe/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../formats/android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../debug_info/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/10_android_formats.html" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/dd291ae1" class="text-darkblue">0.17.0 (dd291ae1)</a>
+    <br>
+    Updated on 23/02/2025, 12:10:07.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+                
+                <li class="breadcrumb-item"><a href="index.html"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+                
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"><em class="fa fa-brands fa-python"></em> Python</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="python">
+<h1 id="extended-dsc-python--page-root"><em class="fa fa-brands fa-python"></em> Python<a class="headerlink" href="#extended-dsc-python--page-root" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="lief.dsc.load">
+<span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.load" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief._lief.dsc.DyldSharedCache"><span class="pre">lief._lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">load(files:</span> <span class="pre">collections.abc.Sequence[str])</span> <span class="pre">-&gt;</span> <span class="pre">Optional[lief._lief.dsc.DyldSharedCache]</span></code></p>
+<blockquote>
+<div><p>Load a shared cache from a list of files.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s">"/tmp/dsc/dyld_shared_cache_arm64e"</span><span class="p">,</span>
+<span class="w">  </span><span class="s">"/tmp/dsc/dyld_shared_cache_arm64e.1"</span>
+<span class="p">]</span>
+<span class="n">cache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lief</span><span class="p">.</span><span class="n">dsc</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">files</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">load(path:</span> <span class="pre">os.PathLike,</span> <span class="pre">arch:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'')</span> <span class="pre">-&gt;</span> <span class="pre">Optional[lief._lief.dsc.DyldSharedCache]</span></code></p>
+<blockquote>
+<div><p>Load a shared cache from the a single file or from a directory specified
+by the <code class="docutils literal notranslate"><span class="pre">path</span></code> parameter.</p>
+<p>In the case where multiple architectures are
+available in the <code class="docutils literal notranslate"><span class="pre">path</span></code> directory, the <code class="docutils literal notranslate"><span class="pre">arch</span></code> parameter can be used to
+define which architecture should be prefered.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">From</span> <span class="n">a</span> <span class="n">directory</span> <span class="p">(</span><span class="n">split</span> <span class="n">caches</span><span class="p">)</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">dsc</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"vision-pro-2.0/"</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">From</span> <span class="n">a</span> <span class="n">single</span> <span class="n">cache</span> <span class="n">file</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">dsc</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"ios-14.2/dyld_shared_cache_arm64"</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">From</span> <span class="n">a</span> <span class="n">directory</span> <span class="k">with</span> <span class="n">multiple</span> <span class="n">architectures</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">dsc</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"macos-12.6/"</span><span class="p">,</span> <span class="s2">"x86_64h"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+<section id="cache-processing">
+<h2 id="cache-processing">Cache Processing<a class="headerlink" href="#cache-processing" title="Link to this heading">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you aim at extracting several libraries from a dyld shared cache, it is
+<strong>highly</strong> recommended to enable caching. Otherwise, performances can be
+impacted.</p>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="lief.dsc.enable_cache">
+<span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">enable_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.enable_cache" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">enable_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_cache_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_cache()</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code></p>
+<blockquote>
+<div><p>Enable globally cache/memoization. One can also leverage this function
+by setting the environment variable <code class="docutils literal notranslate"><span class="pre">DYLDSC_ENABLE_CACHE</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+<p>By default, LIEF will use the directory specified by the environment
+variable <code class="docutils literal notranslate"><span class="pre">DYLDSC_CACHE_DIR</span></code> as its cache-root directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">DYLDSC_ENABLE_CACHE=1 DYLDSC_CACHE_DIR=/tmp/my_dir python ./my-script.py</span>
+</pre></div>
+</div>
+<p>Otherwise, if <code class="docutils literal notranslate"><span class="pre">DYLDSC_CACHE_DIR</span></code> is not set, LIEF will use the following
+directory (in this priority):</p>
+<ol class="arabic simple">
+<li><p>System or user cache directory</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">DARWIN_USER_TEMP_DIR</span></code> / <code class="docutils literal notranslate"><span class="pre">DARWIN_USER_CACHE_DIR</span></code> + <code class="docutils literal notranslate"><span class="pre">/dyld_shared_cache</span></code></p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">${XDG_CACHE_HOME}/dyld_shared_cache</span></code></p></li>
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\dyld_shared_cache</span></code></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Home directory</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>macOS/Linux: <code class="docutils literal notranslate"><span class="pre">$HOME/.dyld_shared_cache</span></code></p></li>
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%\.dyld_shared_cache</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>See <a class="reference internal" href="#lief.dsc.DyldSharedCache.enable_caching" title="lief.dsc.DyldSharedCache.enable_caching"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.dsc.DyldSharedCache.enable_caching()</span></code></a> for a finer granularity</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_cache(target_cache_dir:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code></p>
+<blockquote>
+<div><p>Same behavior as the other <code class="xref py py-meth docutils literal notranslate"><span class="pre">enable_cache()</span></code> function but using a
+user-provided cache directory instead of an inferred one.</p>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+</section>
+<section id="dyldsharedcache">
+<h2 id="dyldsharedcache">DyldSharedCache<a class="headerlink" href="#dyldsharedcache" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">DyldSharedCache</span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a dyld shared cache file.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ARCH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Architecture supported by the dyld shared cache</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.ARM64">
+<span class="sig-name descname"><span class="pre">ARM64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.ARM64" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.ARM64E">
+<span class="sig-name descname"><span class="pre">ARM64E</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.ARM64E" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.ARMV5">
+<span class="sig-name descname"><span class="pre">ARMV5</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.ARMV5" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.ARMV6">
+<span class="sig-name descname"><span class="pre">ARMV6</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.ARMV6" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.ARMV7">
+<span class="sig-name descname"><span class="pre">ARMV7</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.ARMV7" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.I386">
+<span class="sig-name descname"><span class="pre">I386</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.I386" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.UNKNOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.X86_64">
+<span class="sig-name descname"><span class="pre">X86_64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.X86_64" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.ARCH.X86_64H">
+<span class="sig-name descname"><span class="pre">X86_64H</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.ARCH.X86_64H" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PLATFORM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Platforms supported by the dyld shared cache</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.ANY">
+<span class="sig-name descname"><span class="pre">ANY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967295</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.ANY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.BRIDGEOS">
+<span class="sig-name descname"><span class="pre">BRIDGEOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.BRIDGEOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.DRIVERKIT">
+<span class="sig-name descname"><span class="pre">DRIVERKIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.DRIVERKIT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.FIRMWARE">
+<span class="sig-name descname"><span class="pre">FIRMWARE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.FIRMWARE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.IOS">
+<span class="sig-name descname"><span class="pre">IOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.IOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.IOSMAC">
+<span class="sig-name descname"><span class="pre">IOSMAC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.IOSMAC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.IOS_SIMULATOR">
+<span class="sig-name descname"><span class="pre">IOS_SIMULATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.IOS_SIMULATOR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.MACOS">
+<span class="sig-name descname"><span class="pre">MACOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.MACOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.SEPOS">
+<span class="sig-name descname"><span class="pre">SEPOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.SEPOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.TVOS">
+<span class="sig-name descname"><span class="pre">TVOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.TVOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.TVOS_SIMULATOR">
+<span class="sig-name descname"><span class="pre">TVOS_SIMULATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.TVOS_SIMULATOR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.UNKNOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.VISIONOS">
+<span class="sig-name descname"><span class="pre">VISIONOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.VISIONOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.VISIONOS_SIMULATOR">
+<span class="sig-name descname"><span class="pre">VISIONOS_SIMULATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.VISIONOS_SIMULATOR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.WATCHOS">
+<span class="sig-name descname"><span class="pre">WATCHOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.WATCHOS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.PLATFORM.WATCHOS_SIMULATOR">
+<span class="sig-name descname"><span class="pre">WATCHOS_SIMULATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.PLATFORM.WATCHOS_SIMULATOR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VERSION</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_1042_1">
+<span class="sig-name descname"><span class="pre">DYLD_1042_1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_1042_1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_1231_3">
+<span class="sig-name descname"><span class="pre">DYLD_1231_3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_1231_3" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_195_5">
+<span class="sig-name descname"><span class="pre">DYLD_195_5</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_195_5" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_239_3">
+<span class="sig-name descname"><span class="pre">DYLD_239_3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_239_3" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_360_14">
+<span class="sig-name descname"><span class="pre">DYLD_360_14</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_360_14" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_421_1">
+<span class="sig-name descname"><span class="pre">DYLD_421_1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_421_1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_832_7_1">
+<span class="sig-name descname"><span class="pre">DYLD_832_7_1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_832_7_1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_940">
+<span class="sig-name descname"><span class="pre">DYLD_940</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_940" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.DYLD_95_3">
+<span class="sig-name descname"><span class="pre">DYLD_95_3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.DYLD_95_3" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.UNKNOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.VERSION.UNRELEASED">
+<span class="sig-name descname"><span class="pre">UNRELEASED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.VERSION.UNRELEASED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.arch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">arch</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache.ARCH" title="lief.dsc.DyldSharedCache.ARCH"><span class="pre">lief.dsc.DyldSharedCache.ARCH</span></a></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.arch" title="Link to this definition">¶</a></dt>
+<dd><p>Architecture targeted by this cache</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.arch_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">arch_name</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.arch_name" title="Link to this definition">¶</a></dt>
+<dd><p>Name of the architecture targeted by this cache (<code class="docutils literal notranslate"><span class="pre">x86_64h</span></code>)</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.cache_for_address">
+<span class="sig-name descname"><span class="pre">cache_for_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.cache_for_address" title="Link to this definition">¶</a></dt>
+<dd><p>Find the sub-DyldSharedCache that wraps the given virtual address</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.disassemble">
+<span class="sig-name descname"><span class="pre">disassemble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../disassembler/python/index.html#lief.assembly.Instruction" title="lief.assembly.Instruction"><span class="pre">lief.assembly.Instruction</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.disassemble" title="Link to this definition">¶</a></dt>
+<dd><p>Disassemble instructions at the provided virtual address.</p>
+<p>This function returns an iterator over <a class="reference internal" href="../disassembler/python/index.html#lief.assembly.Instruction" title="lief.assembly.Instruction"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.assembly.Instruction</span></code></a>.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.enable_caching">
+<span class="sig-name descname"><span class="pre">enable_caching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.enable_caching" title="Link to this definition">¶</a></dt>
+<dd><p>When enabled, this function allows to record and to keep in <em>cache</em>,
+dyld shared cache information that are costly to access.</p>
+<p>For instance, GOT symbols, rebases information, stub symbols, …</p>
+<p>It is <strong>highly</strong> recommended to enable this function when processing
+a dyld shared cache several times or when extracting a large number of
+<a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.dsc.Dylib</span></code></a> with enhanced extraction options
+(e.g. <a class="reference internal" href="#lief.dsc.Dylib.extract_opt_t.fix_branches" title="lief.dsc.Dylib.extract_opt_t.fix_branches"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.dsc.Dylib.extract_opt_t.fix_branches</span></code></a>)</p>
+<p>One can enable caching by calling this function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dyld_cache</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">dsc</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"macos-15.0.1/"</span><span class="p">);</span>
+<span class="n">dyld_cache</span><span class="o">.</span><span class="n">enable_caching</span><span class="p">(</span><span class="s2">"~/.cache/lief-dsc"</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>One can also enable this cache optimization <strong>globally</strong> using the
+function: <a class="reference internal" href="#lief.dsc.enable_cache" title="lief.dsc.enable_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.dsc.enable_cache()</span></code></a> or by setting the environment variable
+<code class="docutils literal notranslate"><span class="pre">DYLDSC_ENABLE_CACHE</span></code> to 1.</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.filename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filename</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.filename" title="Link to this definition">¶</a></dt>
+<dd><p>Filename of the dyld shared file associated with this object.</p>
+<p>For instance: <code class="docutils literal notranslate"><span class="pre">dyld_shared_cache_arm64e,</span> <span class="pre">dyld_shared_cache_arm64e.62.dyldlinkedit</span></code></p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.filepath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filepath</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.filepath" title="Link to this definition">¶</a></dt>
+<dd><p>Full path to the original dyld shared cache file associated with object
+(e.g. <code class="docutils literal notranslate"><span class="pre">/cache/visionos/dyld_shared_cache_arm64e.42</span></code>)</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.find_lib_from_name">
+<span class="sig-name descname"><span class="pre">find_lib_from_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><span class="pre">lief.dsc.Dylib</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.find_lib_from_name" title="Link to this definition">¶</a></dt>
+<dd><p>Find the Dylib whose filename of <a class="reference internal" href="#lief.dsc.Dylib.path" title="lief.dsc.Dylib.path"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.dsc.Dylib.path</span></code></a> matches the
+provided name.</p>
+<p>If multiple libraries have the same name (but with a different path),
+the <strong>first one</strong> matching the provided name is returned.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.find_lib_from_path">
+<span class="sig-name descname"><span class="pre">find_lib_from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><span class="pre">lief.dsc.Dylib</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.find_lib_from_path" title="Link to this definition">¶</a></dt>
+<dd><p>Find the Dylib whose <a class="reference internal" href="#lief.dsc.Dylib.path" title="lief.dsc.Dylib.path"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.dsc.Dylib.path</span></code></a> matches the provided path.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.find_lib_from_va">
+<span class="sig-name descname"><span class="pre">find_lib_from_va</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><span class="pre">lief.dsc.Dylib</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.find_lib_from_va" title="Link to this definition">¶</a></dt>
+<dd><p>Find the <a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.dsc.Dylib</span></code></a> that encompasses the given virtual address.
+It returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if a Dylib can’t be found.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.find_subcache">
+<span class="sig-name descname"><span class="pre">find_subcache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.find_subcache" title="Link to this definition">¶</a></dt>
+<dd><p>Try to find the DyldSharedCache associated with the filename given
+in the first parameter.</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.flush_cache">
+<span class="sig-name descname"><span class="pre">flush_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.flush_cache" title="Link to this definition">¶</a></dt>
+<dd><p>Flush internal information into the on-disk cache (see: <code class="xref py py-meth docutils literal notranslate"><span class="pre">enable_caching()</span></code>)</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.from_files">
+<span class="sig-name descname"><span class="pre">from_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nanobind.nb_func</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.from_files" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.from_path">
+<span class="sig-name descname"><span class="pre">from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nanobind.nb_func</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#lief.dsc.DyldSharedCache.from_path" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.get_content_from_va">
+<span class="sig-name descname"><span class="pre">get_content_from_va</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.get_content_from_va" title="Link to this definition">¶</a></dt>
+<dd><p>Return the content at the specified virtual address</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.has_subcaches">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_subcaches</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.has_subcaches" title="Link to this definition">¶</a></dt>
+<dd><p>True if the subcaches are associated with this cache</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.libraries">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">libraries</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><span class="pre">lief.dsc.Dylib</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.libraries" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list-like of the <a class="reference internal" href="#lief.dsc.Dylib" title="lief.dsc.Dylib"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dylib</span></code></a> embedded in this dyld shared cache</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.load_address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_address</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.load_address" title="Link to this definition">¶</a></dt>
+<dd><p>Based address of this cache</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.main_cache">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">main_cache</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.main_cache" title="Link to this definition">¶</a></dt>
+<dd><p>Return the principal dyld shared cache in the case of multiple subcaches</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.mapping_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mapping_info</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lief.dsc.MappingInfo" title="lief.dsc.MappingInfo"><span class="pre">lief.dsc.MappingInfo</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.mapping_info" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list-like of the <a class="reference internal" href="#lief.dsc.MappingInfo" title="lief.dsc.MappingInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">MappingInfo</span></code></a> embedded in this dyld shared cache</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.platform">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">platform</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache.PLATFORM" title="lief.dsc.DyldSharedCache.PLATFORM"><span class="pre">lief.dsc.DyldSharedCache.PLATFORM</span></a></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.platform" title="Link to this definition">¶</a></dt>
+<dd><p>Platform targeted by this cache (e.g. vision-os)</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.subcaches">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subcaches</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lief.dsc.SubCache" title="lief.dsc.SubCache"><span class="pre">lief.dsc.SubCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.subcaches" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list-like of <a class="reference internal" href="#lief.dsc.SubCache" title="lief.dsc.SubCache"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubCache</span></code></a> embedded in this (main)
+dyld shared cache</p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.va_to_offset">
+<span class="sig-name descname"><span class="pre">va_to_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../../api/error_handling/index.html#lief.lief_errors" title="lief.lief_errors"><span class="pre">lief.lief_errors</span></a></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.va_to_offset" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the given virtual address into an offset.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the shared cache contains multiple subcaches,
+this function needs to be called on the targeted subcache.
+See <code class="xref py py-func docutils literal notranslate"><span class="pre">cache_for_address()</span></code> to find the
+associated subcache.</p>
+</div>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.DyldSharedCache.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache.VERSION" title="lief.dsc.DyldSharedCache.VERSION"><span class="pre">lief.dsc.DyldSharedCache.VERSION</span></a></span></span><a class="headerlink" href="#lief.dsc.DyldSharedCache.version" title="Link to this definition">¶</a></dt>
+<dd><p>Version of dyld used by this cache</p>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="dylib">
+<h2 id="dylib">Dylib<a class="headerlink" href="#dylib" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.Dylib">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">Dylib</span></span><a class="headerlink" href="#lief.dsc.Dylib" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a library embedded in a dyld shared cache.
+It mirrors the original <code class="docutils literal notranslate"><span class="pre">dyld_cache_image_info</span></code> structure.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">address</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.address" title="Link to this definition">¶</a></dt>
+<dd><p>In-memory address of the library</p>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_opt_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This structure is used to tweak the extraction process while calling
+<a class="reference internal" href="#lief.dsc.Dylib.get" title="lief.dsc.Dylib.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.dsc.Dylib.get()</span></code></a>. These options allow to deoptimize the dylib and
+get an accurate representation of the origin Mach-O binary.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t.create_dyld_chained_fixup_cmd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_dyld_chained_fixup_cmd</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t.create_dyld_chained_fixup_cmd" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the <code class="docutils literal notranslate"><span class="pre">LC_DYLD_CHAINED_FIXUPS</span></code> command should be (re)created.</p>
+<p>If this value is not set, LIEF will add the command only if it’s
+meaningful regarding the other options</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t.fix_branches">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_branches</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t.fix_branches" title="Link to this definition">¶</a></dt>
+<dd><p>Fix call instructions that target addresses outside the current dylib
+virtual space.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Enabling this option can have a significant impact on the
+performances. Make sure to enable the internal cache mechanism:
+<a class="reference internal" href="#lief.dsc.enable_cache" title="lief.dsc.enable_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.dsc.enable_cache()</span></code></a> or <a class="reference internal" href="#lief.dsc.DyldSharedCache.enable_caching" title="lief.dsc.DyldSharedCache.enable_caching"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.dsc.DyldSharedCache.enable_caching()</span></code></a></p>
+</div>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t.fix_memory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_memory</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t.fix_memory" title="Link to this definition">¶</a></dt>
+<dd><p>Fix memory accesses performed outside the dylib’s virtual space</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Enabling this option can have a significant impact on the
+performances. Make sure to enable the internal cache mechanism:
+<a class="reference internal" href="#lief.dsc.enable_cache" title="lief.dsc.enable_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.dsc.enable_cache()</span></code></a> or <a class="reference internal" href="#lief.dsc.DyldSharedCache.enable_caching" title="lief.dsc.DyldSharedCache.enable_caching"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.dsc.DyldSharedCache.enable_caching()</span></code></a></p>
+</div>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t.fix_objc">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_objc</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t.fix_objc" title="Link to this definition">¶</a></dt>
+<dd><p>Fix Objective-C information</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Enabling this option can have a significant impact on the
+performances. Make sure to enable the internal cache mechanism:
+<a class="reference internal" href="#lief.dsc.enable_cache" title="lief.dsc.enable_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.dsc.enable_cache()</span></code></a> or <a class="reference internal" href="#lief.dsc.DyldSharedCache.enable_caching" title="lief.dsc.DyldSharedCache.enable_caching"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.dsc.DyldSharedCache.enable_caching()</span></code></a></p>
+</div>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t.fix_relocations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_relocations</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t.fix_relocations" title="Link to this definition">¶</a></dt>
+<dd><p>Recover and fix relocations</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Enabling this option can have a significant impact on the
+performances. Make sure to enable the internal cache mechanism:
+<a class="reference internal" href="#lief.dsc.enable_cache" title="lief.dsc.enable_cache"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.dsc.enable_cache()</span></code></a> or <a class="reference internal" href="#lief.dsc.DyldSharedCache.enable_caching" title="lief.dsc.DyldSharedCache.enable_caching"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lief.dsc.DyldSharedCache.enable_caching()</span></code></a></p>
+</div>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.extract_opt_t.pack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pack</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.extract_opt_t.pack" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the segment’s offsets should be packed to avoid
+an in-memory size while writing back the binary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option does not have an impact on the performances</p>
+</div>
+</dd></dl>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lief.dsc.Dylib.extract_opt_t" title="lief.dsc.Dylib.extract_opt_t"><span class="pre">lief.dsc.Dylib.extract_opt_t</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../../formats/macho/python.html#lief.MachO.Binary" title="lief.MachO.Binary"><span class="pre">lief.MachO.Binary</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.get" title="Link to this definition">¶</a></dt>
+<dd><p>Get a <a class="reference internal" href="../../formats/macho/python.html#lief.MachO.Binary" title="lief.MachO.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.MachO.Binary</span></code></a> representation for this Dylib.</p>
+<p>One can use this function to write back the Mach-O binary on the disk:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">dyld_cache</span><span class="p">:</span><span class="w"> </span><span class="n">lief</span><span class="p">.</span><span class="n">dsc</span><span class="p">.</span><span class="n">DyldSharedCache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="n">dyld_cache</span><span class="p">.</span><span class="n">libraries</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">get</span><span class="p">().</span><span class="n">write</span><span class="p">(</span><span class="s">"libsystem.dylib"</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.inode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inode</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.inode" title="Link to this definition">¶</a></dt>
+<dd><p>File serial number matching <code class="docutils literal notranslate"><span class="pre">stat.st_ino</span></code> or 0</p>
+<p>Note that for shared cache targeting iOS, this value can hold a hash of
+the path (if modtime is set to 0)</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.modtime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modtime</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.modtime" title="Link to this definition">¶</a></dt>
+<dd><p>Modification time of the library matching <code class="docutils literal notranslate"><span class="pre">stat.st_mtime</span></code>, or 0</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.padding">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">padding</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.padding" title="Link to this definition">¶</a></dt>
+<dd><p>Padding alignment value (should be 0)</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.Dylib.path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lief.dsc.Dylib.path" title="Link to this definition">¶</a></dt>
+<dd><p>Original path of the library (e.g. <code class="docutils literal notranslate"><span class="pre">/usr/lib/libcryptex.dylib</span></code>)</p>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="mappinginfo">
+<h2 id="mappinginfo">MappingInfo<a class="headerlink" href="#mappinginfo" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">MappingInfo</span></span><a class="headerlink" href="#lief.dsc.MappingInfo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a <code class="docutils literal notranslate"><span class="pre">dyld_cache_mapping_info</span></code> entry.</p>
+<p>It provides information about the relationshiop between on-disk shared cache
+and in-memory shared cache.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo.address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">address</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.MappingInfo.address" title="Link to this definition">¶</a></dt>
+<dd><p>The in-memory address where this dyld shared cache region is mapped</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo.end_address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">end_address</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.MappingInfo.end_address" title="Link to this definition">¶</a></dt>
+<dd><p>End virtual address of the region</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo.file_offset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_offset</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.MappingInfo.file_offset" title="Link to this definition">¶</a></dt>
+<dd><p>On-disk file offset</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo.init_prot">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">init_prot</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.MappingInfo.init_prot" title="Link to this definition">¶</a></dt>
+<dd><p>Initial memory protection</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo.max_prot">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_prot</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.MappingInfo.max_prot" title="Link to this definition">¶</a></dt>
+<dd><p>Max memory protection</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.MappingInfo.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.MappingInfo.size" title="Link to this definition">¶</a></dt>
+<dd><p>Size of the region being mapped</p>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="subcache">
+<h2 id="subcache">SubCache<a class="headerlink" href="#subcache" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lief.dsc.SubCache">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.dsc.</span></span><span class="sig-name descname"><span class="pre">SubCache</span></span><a class="headerlink" href="#lief.dsc.SubCache" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a subcache in the case of large/split dyld shared
+cache.</p>
+<p>It mirror (and abstracts) the original <code class="docutils literal notranslate"><span class="pre">dyld_subcache_entry</span></code> / <code class="docutils literal notranslate"><span class="pre">dyld_subcache_entry_v1</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.SubCache.cache">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cache</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><span class="pre">lief.dsc.DyldSharedCache</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lief.dsc.SubCache.cache" title="Link to this definition">¶</a></dt>
+<dd><p>The associated <a class="reference internal" href="#lief.dsc.DyldSharedCache" title="lief.dsc.DyldSharedCache"><code class="xref py py-class docutils literal notranslate"><span class="pre">DyldSharedCache</span></code></a> object for this subcache</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.SubCache.suffix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suffix</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lief.dsc.SubCache.suffix" title="Link to this definition">¶</a></dt>
+<dd><p>The file name suffix of the subCache file
+(e.g. <code class="docutils literal notranslate"><span class="pre">.25.data</span></code>, <code class="docutils literal notranslate"><span class="pre">.03.development</span></code>)</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.SubCache.uuid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uuid</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lief.dsc.SubCache.uuid" title="Link to this definition">¶</a></dt>
+<dd><p>The uuid of the subcache file</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="lief.dsc.SubCache.vm_offset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vm_offset</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lief.dsc.SubCache.vm_offset" title="Link to this definition">¶</a></dt>
+<dd><p>The offset of this subcache from the main cache base address</p>
+</dd></dl>
+</dd></dl>
+</section>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+  <aside class="border-left pl-5 py-3">
+    <span class="text-uppercase text-muted font-size-sm d-block mb-3">
+      On this page:
+    </span>
+        <a href="#lief.dsc.load" class="d-block my-2" data-toggle="scroll"><code class="docutils literal notranslate"><span class="pre">load()</span></code></a>
+        <a href="#cache-processing" class="d-block my-2" data-toggle="scroll">Cache Processing</a>
+        <a href="#dyldsharedcache" class="d-block my-2" data-toggle="scroll">DyldSharedCache</a>
+        <a href="#dylib" class="d-block my-2" data-toggle="scroll">Dylib</a>
+        <a href="#mappinginfo" class="d-block my-2" data-toggle="scroll">MappingInfo</a>
+        <a href="#subcache" class="d-block my-2" data-toggle="scroll">SubCache</a>
+
+  </aside>
+</div>
+    </div>
+  </div>
+  </body>
+</html>

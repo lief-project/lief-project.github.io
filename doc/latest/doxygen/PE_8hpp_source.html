@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">PE.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="PE_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="PE_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -127,54 +127,79 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceData_8hpp.html">LIEF/PE/ResourceData.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceNode_8hpp.html">LIEF/PE/ResourceNode.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceDirectory_8hpp.html">LIEF/PE/ResourceDirectory.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="LangCodeItem_8hpp.html">LIEF/PE/resources/LangCodeItem.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceAccelerator_8hpp.html">LIEF/PE/resources/ResourceAccelerator.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceDialog_8hpp.html">LIEF/PE/resources/ResourceDialog.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceDialogItem_8hpp.html">LIEF/PE/resources/ResourceDialogItem.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceFixedFileInfo_8hpp.html">LIEF/PE/resources/ResourceFixedFileInfo.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceAccelerator_8hpp.html">LIEF/PE/resources/ResourceAccelerator.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceDialog_8hpp.html">LIEF/PE/resources/ResourceDialog.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceDialogRegular_8hpp.html">LIEF/PE/resources/ResourceDialogRegular.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceDialogExtended_8hpp.html">LIEF/PE/resources/ResourceDialogExtended.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="AcceleratorCodes_8hpp.html">LIEF/PE/resources/AcceleratorCodes.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceIcon_8hpp.html">LIEF/PE/resources/ResourceIcon.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceStringFileInfo_8hpp.html">LIEF/PE/resources/ResourceStringFileInfo.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceStringTable_8hpp.html">LIEF/PE/resources/ResourceStringTable.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceVarFileInfo_8hpp.html">LIEF/PE/resources/ResourceVarFileInfo.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceVersion_8hpp.html">LIEF/PE/resources/ResourceVersion.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &quot;<a class="code" href="RichEntry_8hpp.html">LIEF/PE/RichEntry.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &quot;<a class="code" href="RichHeader_8hpp.html">LIEF/PE/RichHeader.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Symbol_8hpp.html">LIEF/PE/Symbol.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Relocation_8hpp.html">LIEF/PE/Relocation.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &quot;<a class="code" href="RelocationEntry_8hpp.html">LIEF/PE/RelocationEntry.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Builder_8hpp.html">LIEF/PE/Builder.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Binary_8hpp.html">LIEF/PE/Binary.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &quot;<a class="code" href="Debug_8hpp.html">LIEF/PE/Debug.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="DosHeader_8hpp.html">LIEF/PE/DosHeader.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Header_8hpp.html">LIEF/PE/Header.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &quot;<a class="code" href="OptionalHeader_8hpp.html">LIEF/PE/OptionalHeader.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &quot;<a class="code" href="LoadConfigurations_8hpp.html">LIEF/PE/LoadConfigurations.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliarySymbol_8hpp.html">LIEF/PE/AuxiliarySymbol.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &quot;<a class="code" href="CodeIntegrity_8hpp.html">LIEF/PE/CodeIntegrity.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2signature_2Attribute_8hpp.html">LIEF/PE/signature/Attribute.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#include &quot;<a class="code" href="ContentInfo_8hpp.html">LIEF/PE/signature/ContentInfo.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &quot;<a class="code" href="GenericContent_8hpp.html">LIEF/PE/signature/GenericContent.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &quot;<a class="code" href="OIDToString_8hpp.html">LIEF/PE/signature/OIDToString.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &quot;<a class="code" href="Signature_8hpp.html">LIEF/PE/signature/Signature.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &quot;<a class="code" href="SignerInfo_8hpp.html">LIEF/PE/signature/SignerInfo.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#include &quot;<a class="code" href="SpcIndirectData_8hpp.html">LIEF/PE/signature/SpcIndirectData.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#include &quot;<a class="code" href="attributes_8hpp.html">LIEF/PE/signature/attributes.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2signature_2types_8hpp.html">LIEF/PE/signature/types.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="x509_8hpp.html">LIEF/PE/signature/x509.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#include &quot;<a class="code" href="SpcIndirectData_8hpp.html">LIEF/PE/signature/SpcIndirectData.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceVar_8hpp.html">LIEF/PE/resources/ResourceVar.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &quot;<a class="code" href="ResourceVersion_8hpp.html">LIEF/PE/resources/ResourceVersion.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &quot;<a class="code" href="RichEntry_8hpp.html">LIEF/PE/RichEntry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &quot;<a class="code" href="RichHeader_8hpp.html">LIEF/PE/RichHeader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Symbol_8hpp.html">LIEF/PE/Symbol.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Relocation_8hpp.html">LIEF/PE/Relocation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &quot;<a class="code" href="RelocationEntry_8hpp.html">LIEF/PE/RelocationEntry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Builder_8hpp.html">LIEF/PE/Builder.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Binary_8hpp.html">LIEF/PE/Binary.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="Debug_8hpp.html">LIEF/PE/Debug.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="DosHeader_8hpp.html">LIEF/PE/DosHeader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2Header_8hpp.html">LIEF/PE/Header.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &quot;<a class="code" href="OptionalHeader_8hpp.html">LIEF/PE/OptionalHeader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;<a class="code" href="LoadConfigurations_8hpp.html">LIEF/PE/LoadConfigurations.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliarySymbol_8hpp.html">LIEF/PE/AuxiliarySymbol.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#include &quot;<a class="code" href="CodeIntegrity_8hpp.html">LIEF/PE/CodeIntegrity.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#include &quot;<a class="code" href="COFFString_8hpp.html">LIEF/PE/COFFString.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#include &quot;<a class="code" href="Factory_8hpp.html">LIEF/PE/Factory.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &quot;<a class="code" href="ExceptionInfo_8hpp.html">LIEF/PE/ExceptionInfo.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &quot;<a class="code" href="RuntimeFunctionAArch64_8hpp.html">LIEF/PE/exceptions_info/RuntimeFunctionAArch64.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &quot;<a class="code" href="PackedFunction_8hpp.html">LIEF/PE/exceptions_info/AArch64/PackedFunction.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &quot;<a class="code" href="UnpackedFunction_8hpp.html">LIEF/PE/exceptions_info/AArch64/UnpackedFunction.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#include &quot;<a class="code" href="RuntimeFunctionX64_8hpp.html">LIEF/PE/exceptions_info/RuntimeFunctionX64.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#include &quot;<a class="code" href="UnwindCodeX64_8hpp.html">LIEF/PE/exceptions_info/UnwindCodeX64.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2signature_2Attribute_8hpp.html">LIEF/PE/signature/Attribute.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#include &quot;<a class="code" href="ContentInfo_8hpp.html">LIEF/PE/signature/ContentInfo.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include &quot;<a class="code" href="GenericContent_8hpp.html">LIEF/PE/signature/GenericContent.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#include &quot;<a class="code" href="PKCS9TSTInfo_8hpp.html">LIEF/PE/signature/PKCS9TSTInfo.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2hash_8hpp.html">LIEF/PE/hash.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2enums_8hpp.html">LIEF/PE/enums.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2EnumToString_8hpp.html">LIEF/PE/EnumToString.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2utils_8hpp.html">LIEF/PE/utils.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#include &quot;<a class="code" href="OIDToString_8hpp.html">LIEF/PE/signature/OIDToString.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#include &quot;<a class="code" href="Signature_8hpp.html">LIEF/PE/signature/Signature.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#include &quot;<a class="code" href="SignerInfo_8hpp.html">LIEF/PE/signature/SignerInfo.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#include &quot;<a class="code" href="SpcIndirectData_8hpp.html">LIEF/PE/signature/SpcIndirectData.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#include &quot;<a class="code" href="attributes_8hpp.html">LIEF/PE/signature/attributes.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2signature_2types_8hpp.html">LIEF/PE/signature/types.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#include &quot;<a class="code" href="x509_8hpp.html">LIEF/PE/signature/x509.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#include &quot;<a class="code" href="SpcIndirectData_8hpp.html">LIEF/PE/signature/SpcIndirectData.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#include &quot;<a class="code" href="GenericContent_8hpp.html">LIEF/PE/signature/GenericContent.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#include &quot;<a class="code" href="PKCS9TSTInfo_8hpp.html">LIEF/PE/signature/PKCS9TSTInfo.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliarySymbol_8hpp.html">LIEF/PE/AuxiliarySymbol.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliaryCLRToken_8hpp.html">LIEF/PE/AuxiliarySymbols/AuxiliaryCLRToken.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliaryFunctionDefinition_8hpp.html">LIEF/PE/AuxiliarySymbols/AuxiliaryFunctionDefinition.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliaryWeakExternal_8hpp.html">LIEF/PE/AuxiliarySymbols/AuxiliaryWeakExternal.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliarybfAndefSymbol_8hpp.html">LIEF/PE/AuxiliarySymbols/AuxiliarybfAndefSymbol.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliarySectionDefinition_8hpp.html">LIEF/PE/AuxiliarySymbols/AuxiliarySectionDefinition.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#include &quot;<a class="code" href="AuxiliaryFile_8hpp.html">LIEF/PE/AuxiliarySymbols/AuxiliaryFile.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2hash_8hpp.html">LIEF/PE/hash.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2enums_8hpp.html">LIEF/PE/enums.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2EnumToString_8hpp.html">LIEF/PE/EnumToString.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#include &quot;<a class="code" href="PE_2utils_8hpp.html">LIEF/PE/utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aAcceleratorCodes_8hpp_html"><div class="ttname"><a href="AcceleratorCodes_8hpp.html">AcceleratorCodes.hpp</a></div></div>
+<div class="ttc" id="aAuxiliaryCLRToken_8hpp_html"><div class="ttname"><a href="AuxiliaryCLRToken_8hpp.html">AuxiliaryCLRToken.hpp</a></div></div>
+<div class="ttc" id="aAuxiliaryFile_8hpp_html"><div class="ttname"><a href="AuxiliaryFile_8hpp.html">AuxiliaryFile.hpp</a></div></div>
+<div class="ttc" id="aAuxiliaryFunctionDefinition_8hpp_html"><div class="ttname"><a href="AuxiliaryFunctionDefinition_8hpp.html">AuxiliaryFunctionDefinition.hpp</a></div></div>
+<div class="ttc" id="aAuxiliarySectionDefinition_8hpp_html"><div class="ttname"><a href="AuxiliarySectionDefinition_8hpp.html">AuxiliarySectionDefinition.hpp</a></div></div>
 <div class="ttc" id="aAuxiliarySymbol_8hpp_html"><div class="ttname"><a href="AuxiliarySymbol_8hpp.html">AuxiliarySymbol.hpp</a></div></div>
+<div class="ttc" id="aAuxiliaryWeakExternal_8hpp_html"><div class="ttname"><a href="AuxiliaryWeakExternal_8hpp.html">AuxiliaryWeakExternal.hpp</a></div></div>
+<div class="ttc" id="aAuxiliarybfAndefSymbol_8hpp_html"><div class="ttname"><a href="AuxiliarybfAndefSymbol_8hpp.html">AuxiliarybfAndefSymbol.hpp</a></div></div>
+<div class="ttc" id="aCOFFString_8hpp_html"><div class="ttname"><a href="COFFString_8hpp.html">COFFString.hpp</a></div></div>
 <div class="ttc" id="aCodeIntegrity_8hpp_html"><div class="ttname"><a href="CodeIntegrity_8hpp.html">CodeIntegrity.hpp</a></div></div>
 <div class="ttc" id="aContentInfo_8hpp_html"><div class="ttname"><a href="ContentInfo_8hpp.html">ContentInfo.hpp</a></div></div>
 <div class="ttc" id="aDataDirectory_8hpp_html"><div class="ttname"><a href="DataDirectory_8hpp.html">DataDirectory.hpp</a></div></div>
@@ -182,12 +207,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aDelayImportEntry_8hpp_html"><div class="ttname"><a href="DelayImportEntry_8hpp.html">DelayImportEntry.hpp</a></div></div>
 <div class="ttc" id="aDelayImport_8hpp_html"><div class="ttname"><a href="DelayImport_8hpp.html">DelayImport.hpp</a></div></div>
 <div class="ttc" id="aDosHeader_8hpp_html"><div class="ttname"><a href="DosHeader_8hpp.html">DosHeader.hpp</a></div></div>
+<div class="ttc" id="aExceptionInfo_8hpp_html"><div class="ttname"><a href="ExceptionInfo_8hpp.html">ExceptionInfo.hpp</a></div></div>
 <div class="ttc" id="aExportEntry_8hpp_html"><div class="ttname"><a href="ExportEntry_8hpp.html">ExportEntry.hpp</a></div></div>
 <div class="ttc" id="aExport_8hpp_html"><div class="ttname"><a href="Export_8hpp.html">Export.hpp</a></div></div>
+<div class="ttc" id="aFactory_8hpp_html"><div class="ttname"><a href="Factory_8hpp.html">Factory.hpp</a></div></div>
 <div class="ttc" id="aGenericContent_8hpp_html"><div class="ttname"><a href="GenericContent_8hpp.html">GenericContent.hpp</a></div></div>
 <div class="ttc" id="aImportEntry_8hpp_html"><div class="ttname"><a href="ImportEntry_8hpp.html">ImportEntry.hpp</a></div></div>
 <div class="ttc" id="aImport_8hpp_html"><div class="ttname"><a href="Import_8hpp.html">Import.hpp</a></div></div>
-<div class="ttc" id="aLangCodeItem_8hpp_html"><div class="ttname"><a href="LangCodeItem_8hpp.html">LangCodeItem.hpp</a></div></div>
 <div class="ttc" id="aLoadConfigurations_8hpp_html"><div class="ttname"><a href="LoadConfigurations_8hpp.html">LoadConfigurations.hpp</a></div></div>
 <div class="ttc" id="aOIDToString_8hpp_html"><div class="ttname"><a href="OIDToString_8hpp.html">OIDToString.hpp</a></div></div>
 <div class="ttc" id="aOptionalHeader_8hpp_html"><div class="ttname"><a href="OptionalHeader_8hpp.html">OptionalHeader.hpp</a></div></div>
@@ -205,26 +231,32 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aPE_2signature_2types_8hpp_html"><div class="ttname"><a href="PE_2signature_2types_8hpp.html">types.hpp</a></div></div>
 <div class="ttc" id="aPE_2utils_8hpp_html"><div class="ttname"><a href="PE_2utils_8hpp.html">utils.hpp</a></div></div>
 <div class="ttc" id="aPKCS9TSTInfo_8hpp_html"><div class="ttname"><a href="PKCS9TSTInfo_8hpp.html">PKCS9TSTInfo.hpp</a></div></div>
+<div class="ttc" id="aPackedFunction_8hpp_html"><div class="ttname"><a href="PackedFunction_8hpp.html">PackedFunction.hpp</a></div></div>
 <div class="ttc" id="aRelocationEntry_8hpp_html"><div class="ttname"><a href="RelocationEntry_8hpp.html">RelocationEntry.hpp</a></div></div>
 <div class="ttc" id="aResourceAccelerator_8hpp_html"><div class="ttname"><a href="ResourceAccelerator_8hpp.html">ResourceAccelerator.hpp</a></div></div>
 <div class="ttc" id="aResourceData_8hpp_html"><div class="ttname"><a href="ResourceData_8hpp.html">ResourceData.hpp</a></div></div>
-<div class="ttc" id="aResourceDialogItem_8hpp_html"><div class="ttname"><a href="ResourceDialogItem_8hpp.html">ResourceDialogItem.hpp</a></div></div>
+<div class="ttc" id="aResourceDialogExtended_8hpp_html"><div class="ttname"><a href="ResourceDialogExtended_8hpp.html">ResourceDialogExtended.hpp</a></div></div>
+<div class="ttc" id="aResourceDialogRegular_8hpp_html"><div class="ttname"><a href="ResourceDialogRegular_8hpp.html">ResourceDialogRegular.hpp</a></div></div>
 <div class="ttc" id="aResourceDialog_8hpp_html"><div class="ttname"><a href="ResourceDialog_8hpp.html">ResourceDialog.hpp</a></div></div>
 <div class="ttc" id="aResourceDirectory_8hpp_html"><div class="ttname"><a href="ResourceDirectory_8hpp.html">ResourceDirectory.hpp</a></div></div>
-<div class="ttc" id="aResourceFixedFileInfo_8hpp_html"><div class="ttname"><a href="ResourceFixedFileInfo_8hpp.html">ResourceFixedFileInfo.hpp</a></div></div>
 <div class="ttc" id="aResourceIcon_8hpp_html"><div class="ttname"><a href="ResourceIcon_8hpp.html">ResourceIcon.hpp</a></div></div>
 <div class="ttc" id="aResourceNode_8hpp_html"><div class="ttname"><a href="ResourceNode_8hpp.html">ResourceNode.hpp</a></div></div>
 <div class="ttc" id="aResourceStringFileInfo_8hpp_html"><div class="ttname"><a href="ResourceStringFileInfo_8hpp.html">ResourceStringFileInfo.hpp</a></div></div>
 <div class="ttc" id="aResourceStringTable_8hpp_html"><div class="ttname"><a href="ResourceStringTable_8hpp.html">ResourceStringTable.hpp</a></div></div>
 <div class="ttc" id="aResourceVarFileInfo_8hpp_html"><div class="ttname"><a href="ResourceVarFileInfo_8hpp.html">ResourceVarFileInfo.hpp</a></div></div>
+<div class="ttc" id="aResourceVar_8hpp_html"><div class="ttname"><a href="ResourceVar_8hpp.html">ResourceVar.hpp</a></div></div>
 <div class="ttc" id="aResourceVersion_8hpp_html"><div class="ttname"><a href="ResourceVersion_8hpp.html">ResourceVersion.hpp</a></div></div>
 <div class="ttc" id="aResourcesManager_8hpp_html"><div class="ttname"><a href="ResourcesManager_8hpp.html">ResourcesManager.hpp</a></div></div>
 <div class="ttc" id="aRichEntry_8hpp_html"><div class="ttname"><a href="RichEntry_8hpp.html">RichEntry.hpp</a></div></div>
 <div class="ttc" id="aRichHeader_8hpp_html"><div class="ttname"><a href="RichHeader_8hpp.html">RichHeader.hpp</a></div></div>
+<div class="ttc" id="aRuntimeFunctionAArch64_8hpp_html"><div class="ttname"><a href="RuntimeFunctionAArch64_8hpp.html">RuntimeFunctionAArch64.hpp</a></div></div>
+<div class="ttc" id="aRuntimeFunctionX64_8hpp_html"><div class="ttname"><a href="RuntimeFunctionX64_8hpp.html">RuntimeFunctionX64.hpp</a></div></div>
 <div class="ttc" id="aSignature_8hpp_html"><div class="ttname"><a href="Signature_8hpp.html">Signature.hpp</a></div></div>
 <div class="ttc" id="aSignerInfo_8hpp_html"><div class="ttname"><a href="SignerInfo_8hpp.html">SignerInfo.hpp</a></div></div>
 <div class="ttc" id="aSpcIndirectData_8hpp_html"><div class="ttname"><a href="SpcIndirectData_8hpp.html">SpcIndirectData.hpp</a></div></div>
 <div class="ttc" id="aTLS_8hpp_html"><div class="ttname"><a href="TLS_8hpp.html">TLS.hpp</a></div></div>
+<div class="ttc" id="aUnpackedFunction_8hpp_html"><div class="ttname"><a href="UnpackedFunction_8hpp.html">UnpackedFunction.hpp</a></div></div>
+<div class="ttc" id="aUnwindCodeX64_8hpp_html"><div class="ttname"><a href="UnwindCodeX64_8hpp.html">UnwindCodeX64.hpp</a></div></div>
 <div class="ttc" id="aattributes_8hpp_html"><div class="ttname"><a href="attributes_8hpp.html">attributes.hpp</a></div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
 <div class="ttc" id="ax509_8hpp_html"><div class="ttname"><a href="x509_8hpp.html">x509.hpp</a></div></div>

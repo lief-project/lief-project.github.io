@@ -9,5 +9,8 @@ var searchData=
   ['bind24_5fthreshold_6',['BIND24_THRESHOLD',['../classLIEF_1_1MachO_1_1DyldChainedFixupsCreator.html#a5dad56acdb9c7116653071470c8f6b6c',1,'LIEF::MachO::DyldChainedFixupsCreator']]],
   ['binding_7',['binding',['../structElf__Symbol__t.html#ac7934f08f06add42f6e2d9ebce79ca0f',1,'Elf_Symbol_t']]],
   ['bit_5fmask_5fenabled_8',['bit_mask_enabled',['../structEnableBitMaskOperators.html#a6a7a4b0ac3ca5a18248f82ed29eca282',1,'EnableBitMaskOperators']]],
-  ['brooks_5fread_5fbarrier_9',['brooks_read_barrier',['../structLIEF_1_1ART_1_1details_1_1ART__17_1_1Java_1_1jobject__t.html#aa1b2b2747705623afa71ba38ba626fb4',1,'LIEF::ART::details::ART_17::Java::jobject_t']]]
+  ['brooks_5fread_5fbarrier_9',['brooks_read_barrier',['../structLIEF_1_1ART_1_1details_1_1ART__17_1_1Java_1_1jobject__t.html#aa1b2b2747705623afa71ba38ba626fb4',1,'LIEF::ART::details::ART_17::Java::jobject_t']]],
+  ['build_10',['build',['../structLIEF_1_1pdb_1_1BuildMetadata_1_1version__t.html#a9a4242a1aa062e446a7e82758c01b17a',1,'LIEF::pdb::BuildMetadata::version_t']]],
+  ['build_5ftool_11',['build_tool',['../structLIEF_1_1pdb_1_1BuildMetadata_1_1build__info__t.html#aa4ed153bb4d7553dc650973cf6214988',1,'LIEF::pdb::BuildMetadata::build_info_t']]],
+  ['bytes_12',['bytes',['../structLIEF_1_1PE_1_1DynamicFixupARM64X_1_1reloc__entry__t.html#a8e1a49079a9645de4021c3389a08c1eb',1,'LIEF::PE::DynamicFixupARM64X::reloc_entry_t']]]
 ];

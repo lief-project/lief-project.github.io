@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Export.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Export_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="Export_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -136,128 +136,247 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a5a9d7dd7bab51ddac06cf0fcfc2ac374">   45</a></span>  <span class="keyword">using </span>it_const_entries = const_ref_iterator&lt;const entries_t&amp;&gt;;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a3c2c6be730d17a4d1bcf2c4128d19c13">   47</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a3c2c6be730d17a4d1bcf2c4128d19c13">Export</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a55b6d9f6314433a9632b7b42a70f5d60">   48</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a55b6d9f6314433a9632b7b42a70f5d60">Export</a>(<span class="keyword">const</span> details::pe_export_directory_table&amp; header);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a5a0940f2c3bea3377703014bec055a7f">   49</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a5a0940f2c3bea3377703014bec055a7f">Export</a>(<span class="keyword">const</span> Export&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a8090eea47372b0a7a2c4bd6307033244">   50</a></span>  Export&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a8090eea47372b0a7a2c4bd6307033244">operator=</a>(<span class="keyword">const</span> Export&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7f4d2075679954a324738782addbf8f7">   51</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7f4d2075679954a324738782addbf8f7">~Export</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a06c85aef7964db5b247aec81b6eb8464">export_flags</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> export_flags_;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a6c8763984e62cea70850e5af70685596">   49</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a6c8763984e62cea70850e5af70685596">Export</a>(std::string name, <span class="keyword">const</span> entries_t&amp; entries) :</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    name_(std::move(name))</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> ExportEntry&amp; <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75a3a3ea00cfc35332cedf6e5e9a32e94da">E</a> : entries) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      add_entry(<a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75a3a3ea00cfc35332cedf6e5e9a32e94da">E</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#ad632b9d2c485b44c72ce8c1c2253796b">timestamp</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> timestamp_;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a6cc917111b3c4ae09ff8f7d2795f68a1">   57</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a6cc917111b3c4ae09ff8f7d2795f68a1">Export</a>(std::string name) :</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    Export(std::move(name), {})</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  {}</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a27eb24e3cbf72a0585258d4ae07730d4">major_version</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> major_version_;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a55b6d9f6314433a9632b7b42a70f5d60">   61</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a55b6d9f6314433a9632b7b42a70f5d60">Export</a>(<span class="keyword">const</span> details::pe_export_directory_table&amp; header);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a5a0940f2c3bea3377703014bec055a7f">   63</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a5a0940f2c3bea3377703014bec055a7f">Export</a>(<span class="keyword">const</span> Export&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a8090eea47372b0a7a2c4bd6307033244">   64</a></span>  Export&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a8090eea47372b0a7a2c4bd6307033244">operator=</a>(<span class="keyword">const</span> Export&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a3cd7a8580c630e6ba15d6c12f49fc9db">   66</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a3cd7a8580c630e6ba15d6c12f49fc9db">Export</a>(Export&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a2fab5fdbcf077a03a03d2769aabfbded">   67</a></span>  Export&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a2fab5fdbcf077a03a03d2769aabfbded">operator=</a>(Export&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7f4d2075679954a324738782addbf8f7">   69</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7f4d2075679954a324738782addbf8f7">~Export</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a06c85aef7964db5b247aec81b6eb8464">export_flags</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> export_flags_;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a38aa72149eedb92653a3188b2bb61045">minor_version</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> minor_version_;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#ad632b9d2c485b44c72ce8c1c2253796b">timestamp</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> timestamp_;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a3e38b87a166568a78c81dd2bb956b859">ordinal_base</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> ordinal_base_;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a27eb24e3cbf72a0585258d4ae07730d4">major_version</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> major_version_;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#acf2f6a5e08f870933b48e7a5d29d88c0">name</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> name_;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a38aa72149eedb92653a3188b2bb61045">minor_version</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> minor_version_;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
 </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  it_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#ad5b6d01a2d68c0cecec5190671bed57c">entries</a>() {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> entries_;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
-</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7840d154d9b0f81c1b110b641c6679f0">   89</a></span>  it_const_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7840d154d9b0f81c1b110b641c6679f0">entries</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">return</span> entries_;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
-</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7dcc06419c6f4a6ec67a950dba5b4cb1">   93</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7dcc06419c6f4a6ec67a950dba5b4cb1">export_flags</a>(uint32_t flags) {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    export_flags_ = flags;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a3e38b87a166568a78c81dd2bb956b859">ordinal_base</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">return</span> ordinal_base_;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#af4aeeb6109ae23b19351b40aa8a3ce49">   96</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#af4aeeb6109ae23b19351b40aa8a3ce49">timestamp</a>(uint32_t timestamp) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    timestamp_ = timestamp;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#acf2f6a5e08f870933b48e7a5d29d88c0">name</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> name_;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
 </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a4cdbd17e8bd1663b97b20b3e40690013">  100</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a4cdbd17e8bd1663b97b20b3e40690013">major_version</a>(uint16_t major_version) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    major_version_ = major_version;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  it_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#ad5b6d01a2d68c0cecec5190671bed57c">entries</a>() {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> entries_;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
 </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a1d5a9a5ac8c4fb22e5e4fcc5e0553c99">  104</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a1d5a9a5ac8c4fb22e5e4fcc5e0553c99">minor_version</a>(uint16_t minor_version) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    minor_version_ = minor_version;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
-</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#aaad3831581a8895fbb1834b2c91505b2">  107</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#aaad3831581a8895fbb1834b2c91505b2">ordinal_base</a>(uint32_t ordinal_base) {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    ordinal_base_ = ordinal_base;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7840d154d9b0f81c1b110b641c6679f0">  107</a></span>  it_const_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7840d154d9b0f81c1b110b641c6679f0">entries</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> entries_;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  }</div>
 </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a41ad0a33b11769cebf8822562b0b78c2">  111</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a41ad0a33b11769cebf8822562b0b78c2">name</a>(std::string name) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    name_ = std::move(name);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#aa2e9c8e8c6e1fc87dd840a68b142d1d7">name_rva</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> name_rva_;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
 </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7a279fb7c2ec6059548446eca967d97d">  115</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7a279fb7c2ec6059548446eca967d97d">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#abe3b32aba04e2f58d24b7c276416709a">  117</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1Export.html#abe3b32aba04e2f58d24b7c276416709a">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> Export&amp; exp);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  uint32_t export_flags_ = 0;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  uint32_t timestamp_ = 0;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  uint16_t major_version_ = 0;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  uint16_t minor_version_ = 0;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  uint32_t ordinal_base_ = 0;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  entries_t entries_;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  std::string name_;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#aef4e27a498fbb200a07a42e8d94d7e46">export_addr_table_rva</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> exp_addr_table_rva_;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
 </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#endif </span><span class="comment">/* PE_EXPORT_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a95ac16bb7150534ad835186c41dac0f4">export_addr_table_cnt</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">return</span> exp_addr_table_cnt_;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#ac897b1e9b053fe99f67f45ac9c843960">names_addr_table_rva</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">return</span> names_addr_table_rva_;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  }</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#afe541afa87450aa3f9fb19729c838ef8">names_addr_table_cnt</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">return</span> names_addr_table_cnt_;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a029699d62e2f68537bf68b808e0e8c38">ord_addr_table_rva</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">return</span> ord_addr_table_rva_;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7dcc06419c6f4a6ec67a950dba5b4cb1">  141</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7dcc06419c6f4a6ec67a950dba5b4cb1">export_flags</a>(uint32_t flags) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    export_flags_ = flags;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  }</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#af4aeeb6109ae23b19351b40aa8a3ce49">  145</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#af4aeeb6109ae23b19351b40aa8a3ce49">timestamp</a>(uint32_t timestamp) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    timestamp_ = timestamp;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  }</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a4cdbd17e8bd1663b97b20b3e40690013">  149</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a4cdbd17e8bd1663b97b20b3e40690013">major_version</a>(uint16_t major_version) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    major_version_ = major_version;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  }</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a1d5a9a5ac8c4fb22e5e4fcc5e0553c99">  153</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a1d5a9a5ac8c4fb22e5e4fcc5e0553c99">minor_version</a>(uint16_t minor_version) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    minor_version_ = minor_version;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  }</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#aaad3831581a8895fbb1834b2c91505b2">  157</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#aaad3831581a8895fbb1834b2c91505b2">ordinal_base</a>(uint32_t ordinal_base) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    ordinal_base_ = ordinal_base;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  }</div>
+</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a41ad0a33b11769cebf8822562b0b78c2">  161</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a41ad0a33b11769cebf8822562b0b78c2">name</a>(std::string name) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    name_ = std::move(name);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  }</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keyword">const</span> ExportEntry* <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a3fe7af8d56a9bd30388a5752f7943d33">find_entry</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#aa61f6b42ae27bf6e6b2a588cdd198dc2">  168</a></span>  ExportEntry* <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#aa61f6b42ae27bf6e6b2a588cdd198dc2">find_entry</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>ExportEntry*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>Export*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;find_entry(name));</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  }</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keyword">const</span> ExportEntry* <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a59684b986f3f5ce37adb40eb77f31dce">find_entry</a>(uint32_t ordinal) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#af9d131a803358d79c3397fb4e18e3366">  175</a></span>  ExportEntry* <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#af9d131a803358d79c3397fb4e18e3366">find_entry</a>(uint32_t ordinal) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>ExportEntry*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>Export*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;find_entry(ordinal));</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  }</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">const</span> ExportEntry* <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a98fd9a3eafc042058e3efd88f578be78">find_entry_at</a>(uint32_t rva) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#aefea2d23882750d6c792d38147e53429">  182</a></span>  ExportEntry* <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#aefea2d23882750d6c792d38147e53429">find_entry_at</a>(uint32_t rva) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>ExportEntry*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>Export*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;find_entry_at(rva));</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  }</div>
+</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  ExportEntry&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a24155b523cc1108742bfcdb283cb9727">add_entry</a>(<span class="keyword">const</span> ExportEntry&amp; exp);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a48d655b34efa2b0891c1c7bbd318dd6b">  189</a></span>  ExportEntry&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a48d655b34efa2b0891c1c7bbd318dd6b">add_entry</a>(std::string name, uint32_t rva) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> add_entry(ExportEntry(std::move(name), rva));</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }</div>
+</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#abfa31937c1b72372c25d244041a4af9e">remove_entry</a>(<span class="keyword">const</span> ExportEntry&amp; exp);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#ad1c53b63a6c47e22a9f67d2ac0bad617">remove_entry</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> ExportEntry* entry = find_entry(name)) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <span class="keywordflow">return</span> remove_entry(*entry);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  }</div>
+</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a303479aec940f9e5b8837b52859294cb">remove_entry</a>(uint32_t rva) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> ExportEntry* entry = find_entry_at(rva)) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="keywordflow">return</span> remove_entry(*entry);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  }</div>
+</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#a7a279fb7c2ec6059548446eca967d97d">  212</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Export.html#a7a279fb7c2ec6059548446eca967d97d">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Export.html#abe3b32aba04e2f58d24b7c276416709a">  214</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1Export.html#abe3b32aba04e2f58d24b7c276416709a">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> Export&amp; exp);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  uint32_t export_flags_ = 0;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  uint32_t name_rva_ = 0;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  uint32_t timestamp_ = 0;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  uint16_t major_version_ = 0;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  uint16_t minor_version_ = 0;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  uint32_t ordinal_base_ = 0;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  uint32_t exp_addr_table_rva_ = 0;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  uint32_t exp_addr_table_cnt_ = 0;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  uint32_t names_addr_table_rva_ = 0;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  uint32_t names_addr_table_cnt_ = 0;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  uint32_t ord_addr_table_rva_ = 0;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  uint32_t max_ordinal_ = 0;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  entries_t entries_;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  std::string name_;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>};</div>
+</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">#endif </span><span class="comment">/* PE_EXPORT_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aExportEntry_8hpp_html"><div class="ttname"><a href="ExportEntry_8hpp.html">ExportEntry.hpp</a></div></div>
 <div class="ttc" id="aObject_8hpp_html"><div class="ttname"><a href="Object_8hpp.html">Object.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Builder_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Builder.html">LIEF::PE::Builder</a></div><div class="ttdoc">Class that is used to rebuild a raw PE binary from a PE::Binary object.</div><div class="ttdef"><b>Definition</b> PE/Builder.hpp:45</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html">LIEF::PE::Export</a></div><div class="ttdoc">Class which represents a PE Export.</div><div class="ttdef"><b>Definition</b> Export.hpp:38</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a06c85aef7964db5b247aec81b6eb8464"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a06c85aef7964db5b247aec81b6eb8464">LIEF::PE::Export::export_flags</a></div><div class="ttdeci">uint32_t export_flags() const</div><div class="ttdoc">According to the PE specifications this value is reserved and should be set to 0.</div><div class="ttdef"><b>Definition</b> Export.hpp:55</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a1d5a9a5ac8c4fb22e5e4fcc5e0553c99"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a1d5a9a5ac8c4fb22e5e4fcc5e0553c99">LIEF::PE::Export::minor_version</a></div><div class="ttdeci">void minor_version(uint16_t minor_version)</div><div class="ttdef"><b>Definition</b> Export.hpp:104</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a27eb24e3cbf72a0585258d4ae07730d4"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a27eb24e3cbf72a0585258d4ae07730d4">LIEF::PE::Export::major_version</a></div><div class="ttdeci">uint16_t major_version() const</div><div class="ttdoc">The major version number (can be user-defined)</div><div class="ttdef"><b>Definition</b> Export.hpp:65</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a38aa72149eedb92653a3188b2bb61045"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a38aa72149eedb92653a3188b2bb61045">LIEF::PE::Export::minor_version</a></div><div class="ttdeci">uint16_t minor_version() const</div><div class="ttdoc">The minor version number (can be user-defined)</div><div class="ttdef"><b>Definition</b> Export.hpp:70</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a029699d62e2f68537bf68b808e0e8c38"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a029699d62e2f68537bf68b808e0e8c38">LIEF::PE::Export::ord_addr_table_rva</a></div><div class="ttdeci">uint32_t ord_addr_table_rva() const</div><div class="ttdoc">RVA to the list of exported ordinals.</div><div class="ttdef"><b>Definition</b> Export.hpp:137</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a06c85aef7964db5b247aec81b6eb8464"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a06c85aef7964db5b247aec81b6eb8464">LIEF::PE::Export::export_flags</a></div><div class="ttdeci">uint32_t export_flags() const</div><div class="ttdoc">According to the PE specifications this value is reserved and should be set to 0.</div><div class="ttdef"><b>Definition</b> Export.hpp:73</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a1d5a9a5ac8c4fb22e5e4fcc5e0553c99"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a1d5a9a5ac8c4fb22e5e4fcc5e0553c99">LIEF::PE::Export::minor_version</a></div><div class="ttdeci">void minor_version(uint16_t minor_version)</div><div class="ttdef"><b>Definition</b> Export.hpp:153</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a24155b523cc1108742bfcdb283cb9727"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a24155b523cc1108742bfcdb283cb9727">LIEF::PE::Export::add_entry</a></div><div class="ttdeci">ExportEntry &amp; add_entry(const ExportEntry &amp;exp)</div><div class="ttdoc">Add the given export and return the newly created and added export.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a27eb24e3cbf72a0585258d4ae07730d4"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a27eb24e3cbf72a0585258d4ae07730d4">LIEF::PE::Export::major_version</a></div><div class="ttdeci">uint16_t major_version() const</div><div class="ttdoc">The major version number (can be user-defined)</div><div class="ttdef"><b>Definition</b> Export.hpp:83</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a2fab5fdbcf077a03a03d2769aabfbded"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a2fab5fdbcf077a03a03d2769aabfbded">LIEF::PE::Export::operator=</a></div><div class="ttdeci">Export &amp; operator=(Export &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a303479aec940f9e5b8837b52859294cb"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a303479aec940f9e5b8837b52859294cb">LIEF::PE::Export::remove_entry</a></div><div class="ttdeci">bool remove_entry(uint32_t rva)</div><div class="ttdoc">Remove the export entry with the given RVA.</div><div class="ttdef"><b>Definition</b> Export.hpp:205</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a38aa72149eedb92653a3188b2bb61045"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a38aa72149eedb92653a3188b2bb61045">LIEF::PE::Export::minor_version</a></div><div class="ttdeci">uint16_t minor_version() const</div><div class="ttdoc">The minor version number (can be user-defined)</div><div class="ttdef"><b>Definition</b> Export.hpp:88</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a3c2c6be730d17a4d1bcf2c4128d19c13"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a3c2c6be730d17a4d1bcf2c4128d19c13">LIEF::PE::Export::Export</a></div><div class="ttdeci">Export()=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a3e38b87a166568a78c81dd2bb956b859"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a3e38b87a166568a78c81dd2bb956b859">LIEF::PE::Export::ordinal_base</a></div><div class="ttdeci">uint32_t ordinal_base() const</div><div class="ttdoc">The starting number for the exports. Usually this value is set to 1.</div><div class="ttdef"><b>Definition</b> Export.hpp:75</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a41ad0a33b11769cebf8822562b0b78c2"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a41ad0a33b11769cebf8822562b0b78c2">LIEF::PE::Export::name</a></div><div class="ttdeci">void name(std::string name)</div><div class="ttdef"><b>Definition</b> Export.hpp:111</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a4cdbd17e8bd1663b97b20b3e40690013"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a4cdbd17e8bd1663b97b20b3e40690013">LIEF::PE::Export::major_version</a></div><div class="ttdeci">void major_version(uint16_t major_version)</div><div class="ttdef"><b>Definition</b> Export.hpp:100</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a3cd7a8580c630e6ba15d6c12f49fc9db"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a3cd7a8580c630e6ba15d6c12f49fc9db">LIEF::PE::Export::Export</a></div><div class="ttdeci">Export(Export &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a3e38b87a166568a78c81dd2bb956b859"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a3e38b87a166568a78c81dd2bb956b859">LIEF::PE::Export::ordinal_base</a></div><div class="ttdeci">uint32_t ordinal_base() const</div><div class="ttdoc">The starting number for the exports. Usually this value is set to 1.</div><div class="ttdef"><b>Definition</b> Export.hpp:93</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a3fe7af8d56a9bd30388a5752f7943d33"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a3fe7af8d56a9bd30388a5752f7943d33">LIEF::PE::Export::find_entry</a></div><div class="ttdeci">const ExportEntry * find_entry(const std::string &amp;name) const</div><div class="ttdoc">Find the export entry with the given name.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a41ad0a33b11769cebf8822562b0b78c2"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a41ad0a33b11769cebf8822562b0b78c2">LIEF::PE::Export::name</a></div><div class="ttdeci">void name(std::string name)</div><div class="ttdef"><b>Definition</b> Export.hpp:161</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a48d655b34efa2b0891c1c7bbd318dd6b"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a48d655b34efa2b0891c1c7bbd318dd6b">LIEF::PE::Export::add_entry</a></div><div class="ttdeci">ExportEntry &amp; add_entry(std::string name, uint32_t rva)</div><div class="ttdef"><b>Definition</b> Export.hpp:189</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a4cdbd17e8bd1663b97b20b3e40690013"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a4cdbd17e8bd1663b97b20b3e40690013">LIEF::PE::Export::major_version</a></div><div class="ttdeci">void major_version(uint16_t major_version)</div><div class="ttdef"><b>Definition</b> Export.hpp:149</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a55b6d9f6314433a9632b7b42a70f5d60"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a55b6d9f6314433a9632b7b42a70f5d60">LIEF::PE::Export::Export</a></div><div class="ttdeci">Export(const details::pe_export_directory_table &amp;header)</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a59684b986f3f5ce37adb40eb77f31dce"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a59684b986f3f5ce37adb40eb77f31dce">LIEF::PE::Export::find_entry</a></div><div class="ttdeci">const ExportEntry * find_entry(uint32_t ordinal) const</div><div class="ttdoc">Find the export entry with the given ordinal number.</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a5a0940f2c3bea3377703014bec055a7f"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a5a0940f2c3bea3377703014bec055a7f">LIEF::PE::Export::Export</a></div><div class="ttdeci">Export(const Export &amp;)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a7840d154d9b0f81c1b110b641c6679f0"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a7840d154d9b0f81c1b110b641c6679f0">LIEF::PE::Export::entries</a></div><div class="ttdeci">it_const_entries entries() const</div><div class="ttdef"><b>Definition</b> Export.hpp:89</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a6c8763984e62cea70850e5af70685596"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a6c8763984e62cea70850e5af70685596">LIEF::PE::Export::Export</a></div><div class="ttdeci">Export(std::string name, const entries_t &amp;entries)</div><div class="ttdef"><b>Definition</b> Export.hpp:49</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a6cc917111b3c4ae09ff8f7d2795f68a1"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a6cc917111b3c4ae09ff8f7d2795f68a1">LIEF::PE::Export::Export</a></div><div class="ttdeci">Export(std::string name)</div><div class="ttdef"><b>Definition</b> Export.hpp:57</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a7840d154d9b0f81c1b110b641c6679f0"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a7840d154d9b0f81c1b110b641c6679f0">LIEF::PE::Export::entries</a></div><div class="ttdeci">it_const_entries entries() const</div><div class="ttdef"><b>Definition</b> Export.hpp:107</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a7a279fb7c2ec6059548446eca967d97d"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a7a279fb7c2ec6059548446eca967d97d">LIEF::PE::Export::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a7dcc06419c6f4a6ec67a950dba5b4cb1"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a7dcc06419c6f4a6ec67a950dba5b4cb1">LIEF::PE::Export::export_flags</a></div><div class="ttdeci">void export_flags(uint32_t flags)</div><div class="ttdef"><b>Definition</b> Export.hpp:93</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a7dcc06419c6f4a6ec67a950dba5b4cb1"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a7dcc06419c6f4a6ec67a950dba5b4cb1">LIEF::PE::Export::export_flags</a></div><div class="ttdeci">void export_flags(uint32_t flags)</div><div class="ttdef"><b>Definition</b> Export.hpp:141</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a7f4d2075679954a324738782addbf8f7"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a7f4d2075679954a324738782addbf8f7">LIEF::PE::Export::~Export</a></div><div class="ttdeci">~Export() override=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a8090eea47372b0a7a2c4bd6307033244"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a8090eea47372b0a7a2c4bd6307033244">LIEF::PE::Export::operator=</a></div><div class="ttdeci">Export &amp; operator=(const Export &amp;)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_aaad3831581a8895fbb1834b2c91505b2"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#aaad3831581a8895fbb1834b2c91505b2">LIEF::PE::Export::ordinal_base</a></div><div class="ttdeci">void ordinal_base(uint32_t ordinal_base)</div><div class="ttdef"><b>Definition</b> Export.hpp:107</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a95ac16bb7150534ad835186c41dac0f4"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a95ac16bb7150534ad835186c41dac0f4">LIEF::PE::Export::export_addr_table_cnt</a></div><div class="ttdeci">uint32_t export_addr_table_cnt() const</div><div class="ttdoc">Number of entries in the export address table.</div><div class="ttdef"><b>Definition</b> Export.hpp:122</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_a98fd9a3eafc042058e3efd88f578be78"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#a98fd9a3eafc042058e3efd88f578be78">LIEF::PE::Export::find_entry_at</a></div><div class="ttdeci">const ExportEntry * find_entry_at(uint32_t rva) const</div><div class="ttdoc">Find the export entry at the provided RVA.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_aa2e9c8e8c6e1fc87dd840a68b142d1d7"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#aa2e9c8e8c6e1fc87dd840a68b142d1d7">LIEF::PE::Export::name_rva</a></div><div class="ttdeci">uint32_t name_rva() const</div><div class="ttdoc">Address of the ASCII DLL&#39;s name (RVA)</div><div class="ttdef"><b>Definition</b> Export.hpp:112</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_aa61f6b42ae27bf6e6b2a588cdd198dc2"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#aa61f6b42ae27bf6e6b2a588cdd198dc2">LIEF::PE::Export::find_entry</a></div><div class="ttdeci">ExportEntry * find_entry(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> Export.hpp:168</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_aaad3831581a8895fbb1834b2c91505b2"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#aaad3831581a8895fbb1834b2c91505b2">LIEF::PE::Export::ordinal_base</a></div><div class="ttdeci">void ordinal_base(uint32_t ordinal_base)</div><div class="ttdef"><b>Definition</b> Export.hpp:157</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_abe3b32aba04e2f58d24b7c276416709a"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#abe3b32aba04e2f58d24b7c276416709a">LIEF::PE::Export::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Export &amp;exp)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_acf2f6a5e08f870933b48e7a5d29d88c0"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#acf2f6a5e08f870933b48e7a5d29d88c0">LIEF::PE::Export::name</a></div><div class="ttdeci">const std::string &amp; name() const</div><div class="ttdoc">The name of the library exported (e.g. KERNEL32.dll)</div><div class="ttdef"><b>Definition</b> Export.hpp:80</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_ad5b6d01a2d68c0cecec5190671bed57c"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#ad5b6d01a2d68c0cecec5190671bed57c">LIEF::PE::Export::entries</a></div><div class="ttdeci">it_entries entries()</div><div class="ttdoc">Iterator over the ExportEntry.</div><div class="ttdef"><b>Definition</b> Export.hpp:85</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_ad632b9d2c485b44c72ce8c1c2253796b"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#ad632b9d2c485b44c72ce8c1c2253796b">LIEF::PE::Export::timestamp</a></div><div class="ttdeci">uint32_t timestamp() const</div><div class="ttdoc">The time and date that the export data was created.</div><div class="ttdef"><b>Definition</b> Export.hpp:60</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_af4aeeb6109ae23b19351b40aa8a3ce49"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#af4aeeb6109ae23b19351b40aa8a3ce49">LIEF::PE::Export::timestamp</a></div><div class="ttdeci">void timestamp(uint32_t timestamp)</div><div class="ttdef"><b>Definition</b> Export.hpp:96</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:47</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_abfa31937c1b72372c25d244041a4af9e"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#abfa31937c1b72372c25d244041a4af9e">LIEF::PE::Export::remove_entry</a></div><div class="ttdeci">bool remove_entry(const ExportEntry &amp;exp)</div><div class="ttdoc">Remove the given export entry.</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_ac897b1e9b053fe99f67f45ac9c843960"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#ac897b1e9b053fe99f67f45ac9c843960">LIEF::PE::Export::names_addr_table_rva</a></div><div class="ttdeci">uint32_t names_addr_table_rva() const</div><div class="ttdoc">RVA to the list of exported names.</div><div class="ttdef"><b>Definition</b> Export.hpp:127</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_acf2f6a5e08f870933b48e7a5d29d88c0"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#acf2f6a5e08f870933b48e7a5d29d88c0">LIEF::PE::Export::name</a></div><div class="ttdeci">const std::string &amp; name() const</div><div class="ttdoc">The name of the library exported (e.g. KERNEL32.dll)</div><div class="ttdef"><b>Definition</b> Export.hpp:98</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_ad1c53b63a6c47e22a9f67d2ac0bad617"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#ad1c53b63a6c47e22a9f67d2ac0bad617">LIEF::PE::Export::remove_entry</a></div><div class="ttdeci">bool remove_entry(const std::string &amp;name)</div><div class="ttdoc">Remove the export entry with the given name.</div><div class="ttdef"><b>Definition</b> Export.hpp:197</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_ad5b6d01a2d68c0cecec5190671bed57c"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#ad5b6d01a2d68c0cecec5190671bed57c">LIEF::PE::Export::entries</a></div><div class="ttdeci">it_entries entries()</div><div class="ttdoc">Iterator over the ExportEntry.</div><div class="ttdef"><b>Definition</b> Export.hpp:103</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_ad632b9d2c485b44c72ce8c1c2253796b"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#ad632b9d2c485b44c72ce8c1c2253796b">LIEF::PE::Export::timestamp</a></div><div class="ttdeci">uint32_t timestamp() const</div><div class="ttdoc">The time and date that the export data was created.</div><div class="ttdef"><b>Definition</b> Export.hpp:78</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_aef4e27a498fbb200a07a42e8d94d7e46"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#aef4e27a498fbb200a07a42e8d94d7e46">LIEF::PE::Export::export_addr_table_rva</a></div><div class="ttdeci">uint32_t export_addr_table_rva() const</div><div class="ttdoc">RVA of the export address table.</div><div class="ttdef"><b>Definition</b> Export.hpp:117</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_aefea2d23882750d6c792d38147e53429"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#aefea2d23882750d6c792d38147e53429">LIEF::PE::Export::find_entry_at</a></div><div class="ttdeci">ExportEntry * find_entry_at(uint32_t rva)</div><div class="ttdef"><b>Definition</b> Export.hpp:182</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_af4aeeb6109ae23b19351b40aa8a3ce49"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#af4aeeb6109ae23b19351b40aa8a3ce49">LIEF::PE::Export::timestamp</a></div><div class="ttdeci">void timestamp(uint32_t timestamp)</div><div class="ttdef"><b>Definition</b> Export.hpp:145</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_af9d131a803358d79c3397fb4e18e3366"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#af9d131a803358d79c3397fb4e18e3366">LIEF::PE::Export::find_entry</a></div><div class="ttdeci">ExportEntry * find_entry(uint32_t ordinal)</div><div class="ttdef"><b>Definition</b> Export.hpp:175</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Export_html_afe541afa87450aa3f9fb19729c838ef8"><div class="ttname"><a href="classLIEF_1_1PE_1_1Export.html#afe541afa87450aa3f9fb19729c838ef8">LIEF::PE::Export::names_addr_table_cnt</a></div><div class="ttdeci">uint32_t names_addr_table_cnt() const</div><div class="ttdoc">Number of exports by name.</div><div class="ttdef"><b>Definition</b> Export.hpp:132</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:52</div></div>
 <div class="ttc" id="aiterators_8hpp_html"><div class="ttname"><a href="iterators_8hpp.html">iterators.hpp</a></div></div>
-<div class="ttc" id="anamespaceLIEF_1_1PE_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:26</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></div><div class="ttdef"><b>Definition</b> DataDirectory.hpp:37</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html"><div class="ttname"><a href="namespaceLIEF_1_1PE.html">LIEF::PE</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s PE module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:32</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_aa51bd59492fbc904f489e19d94d85b75a3a3ea00cfc35332cedf6e5e9a32e94da"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75a3a3ea00cfc35332cedf6e5e9a32e94da">LIEF::PE::ACCELERATOR_CODES::E</a></div><div class="ttdeci">@ E</div><div class="ttdef"><b>Definition</b> AcceleratorCodes.hpp:82</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>

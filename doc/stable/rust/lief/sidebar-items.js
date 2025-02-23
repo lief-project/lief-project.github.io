@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Binary","DebugInfo","Error"],"fn":["is_extended"],"mod":["debug_info","debug_location","dwarf","elf","error","generic","logging","macho","objc","pdb","pe","range"],"struct":["DebugLocation","Range"],"trait":["Relocation"]};
+window.SIDEBAR_ITEMS = {"enum":["Binary","DebugInfo","Error"],"fn":["demangle","extended_version_info","is_extended"],"mod":["assembly","debug_info","dsc","dwarf","elf","error","generic","logging","macho","objc","pdb","pe"],"struct":["DebugLocation","Range"],"trait":["Relocation"]};

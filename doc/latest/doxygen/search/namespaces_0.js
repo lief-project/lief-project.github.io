@@ -59,6 +59,8 @@ var searchData=
   ['lief_3a_3apdb_3a_3atypes_3a_3adetails_56',['details',['../namespaceLIEF_1_1pdb_1_1types_1_1details.html',1,'LIEF::pdb::types']]],
   ['lief_3a_3ape_57',['PE',['../namespaceLIEF_1_1PE.html',1,'LIEF']]],
   ['lief_3a_3ape_3a_3adetails_58',['details',['../namespaceLIEF_1_1PE_1_1details.html',1,'LIEF::PE']]],
-  ['lief_3a_3avdex_59',['VDEX',['../namespaceLIEF_1_1VDEX.html',1,'LIEF']]],
-  ['llvm_60',['llvm',['../namespacellvm.html',1,'']]]
+  ['lief_3a_3ape_3a_3aunwind_5faarch64_59',['unwind_aarch64',['../namespaceLIEF_1_1PE_1_1unwind__aarch64.html',1,'LIEF::PE']]],
+  ['lief_3a_3ape_3a_3aunwind_5fx64_60',['unwind_x64',['../namespaceLIEF_1_1PE_1_1unwind__x64.html',1,'LIEF::PE']]],
+  ['lief_3a_3avdex_61',['VDEX',['../namespaceLIEF_1_1VDEX.html',1,'LIEF']]],
+  ['llvm_62',['llvm',['../namespacellvm.html',1,'']]]
 ];

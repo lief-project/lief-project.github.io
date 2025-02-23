@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -126,16 +126,21 @@ Collaboration diagram for LIEF::PE::Header:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:afe36b4e388d74732a8f6e64341d4fd4e" id="r_afe36b4e388d74732a8f6e64341d4fd4e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> { <br />
 &#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a> = 0x0
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea002101f8725e5c78d9f30d87f3fa4c87">ALPHA</a> = 0x184
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea3034ac4994288a695e3a4264c8550f53">ALPHA64</a> = 0x284
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea3ced4e1886ff95b7e3813ced0ad3fdf7">AM33</a> = 0x1D3
-, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea895208ffbb7f0c5bad4b69eb61a5d99b">AMD64</a> = 0x8664
+, <br />
+&#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea895208ffbb7f0c5bad4b69eb61a5d99b">AMD64</a> = 0x8664
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea47f45e65244c17ec9fa8771a5c6d60e1">ARM</a> = 0x1C0
-, <br />
-&#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea28664eae29238b4cf66b337bcef6845e">ARMNT</a> = 0x1C4
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea28664eae29238b4cf66b337bcef6845e">ARMNT</a> = 0x1C4
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4eab9b55c80d095761ac7757ced0fedadc4">ARM64</a> = 0xAA64
-, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea5b3299b34e5a0fe69daa2120fa414734">EBC</a> = 0xEBC
-, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ead8b3e50d7c8ecaef026c0ebffd9b5e85">I386</a> = 0x14C
 , <br />
-&#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea4c2c294c51f3230d47a6bf0fb0cbe47a">IA64</a> = 0x200
+&#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea5b3299b34e5a0fe69daa2120fa414734">EBC</a> = 0xEBC
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ead8b3e50d7c8ecaef026c0ebffd9b5e85">I386</a> = 0x14C
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea4c2c294c51f3230d47a6bf0fb0cbe47a">IA64</a> = 0x200
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea3a91efc2ac870d790cd3e6fc9b7c7f9a">LOONGARCH32</a> = 0x6232
+, <br />
+&#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea444899381b9d044c3d148a9e99a3ec9f">LOONGARCH64</a> = 0x6264
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea0bf26e150d44753e59e7001d71cdab08">M32R</a> = 0x9041
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea8c5d21417d0f4fb8b2addecd12b245e9">MIPS16</a> = 0x266
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea55fa5dae13a44bc37dcca5785f4cb462">MIPSFPU</a> = 0x366
@@ -157,6 +162,10 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4eae466500055d2302ad1956d15e96a129a">THUMB</a> = 0x1C2
 , <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea6da917ad41acc498704d33f72d89a6f1">WCEMIPSV2</a> = 0x169
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4ea19dc7195e16964fbcae2b737ecbc5967">ARM64EC</a> = 0xa641
+, <a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4eafb0aad9cb9df21ea4b724c610805a371">ARM64X</a> = 0xa64e
+, <br />
+&#160;&#160;<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4eaa4a69fe1ef94ccf0405a4b347cda0b71">CHPE_X86</a> = 0x3a64
 <br />
  }</td></tr>
 <tr class="separator:afe36b4e388d74732a8f6e64341d4fd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,6 +286,24 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7f6f03c0b7638cb059cb65e61deb03f8" id="r_a7f6f03c0b7638cb059cb65e61deb03f8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f6f03c0b7638cb059cb65e61deb03f8">is_arm</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:a7f6f03c0b7638cb059cb65e61deb03f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a422354ffafb642817ba63926d27c1335" id="r_a422354ffafb642817ba63926d27c1335"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a422354ffafb642817ba63926d27c1335">is_riscv</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:a422354ffafb642817ba63926d27c1335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66a615b627a2fd46fc83ae5519fca1f" id="r_ac66a615b627a2fd46fc83ae5519fca1f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac66a615b627a2fd46fc83ae5519fca1f">is_loonarch</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:ac66a615b627a2fd46fc83ae5519fca1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97d874a764a368d4807deae4c7988e5" id="r_aa97d874a764a368d4807deae4c7988e5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa97d874a764a368d4807deae4c7988e5">is_arm64</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:aa97d874a764a368d4807deae4c7988e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7342926fcdc8f50191a87e4f449a282e" id="r_a7342926fcdc8f50191a87e4f449a282e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7342926fcdc8f50191a87e4f449a282e">is_thumb</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:a7342926fcdc8f50191a87e4f449a282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b91e9ae0c82e96f0a14409ed705ed20" id="r_a9b91e9ae0c82e96f0a14409ed705ed20"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b91e9ae0c82e96f0a14409ed705ed20">x86</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:a9b91e9ae0c82e96f0a14409ed705ed20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17382b6d71fbb4e649904bc20ed488fc" id="r_a17382b6d71fbb4e649904bc20ed488fc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17382b6d71fbb4e649904bc20ed488fc">x86_64</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:a17382b6d71fbb4e649904bc20ed488fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8904ba12a7df545f3eca6ef2335f8e8" id="r_ac8904ba12a7df545f3eca6ef2335f8e8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8904ba12a7df545f3eca6ef2335f8e8">is_mips</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:ac8904ba12a7df545f3eca6ef2335f8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c7d181652af4a2b7b1ec04cef1b918" id="r_a12c7d181652af4a2b7b1ec04cef1b918"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12c7d181652af4a2b7b1ec04cef1b918">is_ppc</a> (<a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a> ty)</td></tr>
+<tr class="separator:a12c7d181652af4a2b7b1ec04cef1b918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1697c5013d6a47126851df45ae56618" id="r_ac1697c5013d6a47126851df45ae56618"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLIEF_1_1PE_1_1Header.html">Header</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1697c5013d6a47126851df45ae56618">create</a> (<a class="el" href="namespaceLIEF_1_1PE.html#ad894955993b3dcbb92923fafcceb28c3">PE_TYPE</a> type)</td></tr>
 <tr class="separator:ac1697c5013d6a47126851df45ae56618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -374,6 +401,10 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea696b031073e74bf2cb98e5ef201d4aa3" name="afe36b4e388d74732a8f6e64341d4fd4ea696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea002101f8725e5c78d9f30d87f3fa4c87" name="afe36b4e388d74732a8f6e64341d4fd4ea002101f8725e5c78d9f30d87f3fa4c87"></a>ALPHA&#160;</td><td class="fielddoc"><p>Alpha AXP, 32-bit address space </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea3034ac4994288a695e3a4264c8550f53" name="afe36b4e388d74732a8f6e64341d4fd4ea3034ac4994288a695e3a4264c8550f53"></a>ALPHA64&#160;</td><td class="fielddoc"><p>Alpha AXP, 64-bit address space </p>
+</td></tr>
 <tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea3ced4e1886ff95b7e3813ced0ad3fdf7" name="afe36b4e388d74732a8f6e64341d4fd4ea3ced4e1886ff95b7e3813ced0ad3fdf7"></a>AM33&#160;</td><td class="fielddoc"><p>Matsushita AM33 <br  />
  </p>
 </td></tr>
@@ -396,6 +427,12 @@ Static Public Member Functions</h2></td></tr>
  </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea4c2c294c51f3230d47a6bf0fb0cbe47a" name="afe36b4e388d74732a8f6e64341d4fd4ea4c2c294c51f3230d47a6bf0fb0cbe47a"></a>IA64&#160;</td><td class="fielddoc"><p>Intel Itanium processor family </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea3a91efc2ac870d790cd3e6fc9b7c7f9a" name="afe36b4e388d74732a8f6e64341d4fd4ea3a91efc2ac870d790cd3e6fc9b7c7f9a"></a>LOONGARCH32&#160;</td><td class="fielddoc"><p>LoongArch 32-bit processor family <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea444899381b9d044c3d148a9e99a3ec9f" name="afe36b4e388d74732a8f6e64341d4fd4ea444899381b9d044c3d148a9e99a3ec9f"></a>LOONGARCH64&#160;</td><td class="fielddoc"><p>LoongArch 64-bit processor family <br  />
+ </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea0bf26e150d44753e59e7001d71cdab08" name="afe36b4e388d74732a8f6e64341d4fd4ea0bf26e150d44753e59e7001d71cdab08"></a>M32R&#160;</td><td class="fielddoc"><p>Mitsubishi M32R little endian <br  />
  </p>
@@ -448,6 +485,9 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea6da917ad41acc498704d33f72d89a6f1" name="afe36b4e388d74732a8f6e64341d4fd4ea6da917ad41acc498704d33f72d89a6f1"></a>WCEMIPSV2&#160;</td><td class="fielddoc"><p>MIPS little-endian WCE v2 <br  />
  </p>
 </td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4ea19dc7195e16964fbcae2b737ecbc5967" name="afe36b4e388d74732a8f6e64341d4fd4ea19dc7195e16964fbcae2b737ecbc5967"></a>ARM64EC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4eafb0aad9cb9df21ea4b724c610805a371" name="afe36b4e388d74732a8f6e64341d4fd4eafb0aad9cb9df21ea4b724c610805a371"></a>ARM64X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afe36b4e388d74732a8f6e64341d4fd4eaa4a69fe1ef94ccf0405a4b347cda0b71" name="afe36b4e388d74732a8f6e64341d4fd4eaa4a69fe1ef94ccf0405a4b347cda0b71"></a>CHPE_X86&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -693,6 +733,181 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if the given <a class="el" href="#a08d38528d74f0baf71291de383c447fd">CHARACTERISTICS</a> is present. </p>
+
+</div>
+</div>
+<a id="a7f6f03c0b7638cb059cb65e61deb03f8" name="a7f6f03c0b7638cb059cb65e61deb03f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6f03c0b7638cb059cb65e61deb03f8">&#9670;&#160;</a></span>is_arm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_arm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa97d874a764a368d4807deae4c7988e5" name="aa97d874a764a368d4807deae4c7988e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97d874a764a368d4807deae4c7988e5">&#9670;&#160;</a></span>is_arm64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_arm64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac66a615b627a2fd46fc83ae5519fca1f" name="ac66a615b627a2fd46fc83ae5519fca1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66a615b627a2fd46fc83ae5519fca1f">&#9670;&#160;</a></span>is_loonarch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_loonarch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8904ba12a7df545f3eca6ef2335f8e8" name="ac8904ba12a7df545f3eca6ef2335f8e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8904ba12a7df545f3eca6ef2335f8e8">&#9670;&#160;</a></span>is_mips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_mips </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12c7d181652af4a2b7b1ec04cef1b918" name="a12c7d181652af4a2b7b1ec04cef1b918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c7d181652af4a2b7b1ec04cef1b918">&#9670;&#160;</a></span>is_ppc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_ppc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a422354ffafb642817ba63926d27c1335" name="a422354ffafb642817ba63926d27c1335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a422354ffafb642817ba63926d27c1335">&#9670;&#160;</a></span>is_riscv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_riscv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7342926fcdc8f50191a87e4f449a282e" name="a7342926fcdc8f50191a87e4f449a282e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7342926fcdc8f50191a87e4f449a282e">&#9670;&#160;</a></span>is_thumb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::is_thumb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1111,6 +1326,56 @@ Static Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b91e9ae0c82e96f0a14409ed705ed20" name="a9b91e9ae0c82e96f0a14409ed705ed20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b91e9ae0c82e96f0a14409ed705ed20">&#9670;&#160;</a></span>x86()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::x86 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17382b6d71fbb4e649904bc20ed488fc" name="a17382b6d71fbb4e649904bc20ed488fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17382b6d71fbb4e649904bc20ed488fc">&#9670;&#160;</a></span>x86_64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LIEF::PE::Header::x86_64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afe36b4e388d74732a8f6e64341d4fd4e">MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

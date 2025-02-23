@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
+
+  <script src="../../../_static/javascripts/vendor.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <title>TLS Modification &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../../../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../../../_static/stylesheets/vendor.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=3d3fbe02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=411c5307" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <script src="../../../_static/documentation_options.js?v=0c3dd48d"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Debug Modification" href="debug.html" />
+    <link rel="prev" title="Resources Modification" href="resources.html" />
+   
+  <link rel="stylesheet" href="../../../_static/stylesheets/theme.css"/>
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../../../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../../../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
+
+    
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../macho/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/debug_info/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/dsc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../extended/assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/10_android_formats.html" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/dd291ae1" class="text-darkblue">0.17.0 (dd291ae1)</a>
+    <br>
+    Updated on 23/02/2025, 12:10:07.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../../../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+                
+                <li class="breadcrumb-item"><a href="../index.html"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+                
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"><em class="fa fa-solid fa-gears"></em> TLS Modification</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="tls-modification">
+<h1 id="formats-pe-modifications-tls--page-root"><em class="fa fa-solid fa-gears"></em> TLS Modification<a class="headerlink" href="#formats-pe-modifications-tls--page-root" title="Link to this heading">¶</a></h1>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/tls.webp"><img alt="PE TLS Overview" src="../../../_images/tls.webp" style="width: 913.0px; height: 624.0px;"/>
+</a>
+</figure>
+<p>LIEF can be used to <strong>modify</strong>, <strong>create</strong>, or <strong>remove</strong> Thread Local Storage (TLS)
+information.</p>
+<section id="tls-modifications">
+<h2 id="tls-modifications">TLS Modifications<a class="headerlink" href="#tls-modifications" title="Link to this heading">¶</a></h2>
+<div class="fixed-paragraph">
+All attributes of the <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-TLS" role="button">
+<code><span class="pre">lief.PE.TLS</span></code></a><div aria-labelledby="lief-api-lief-PE-TLS" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.TLS.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::TLS</span></code>
+</a><a class="dropdown-item" href="../python.html#lief.PE.TLS">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.TLS</span></code>
+</a><a class="dropdown-item" href="../cpp.html#_CPPv4N4LIEF2PE3TLSE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::TLS</span></code>
+</a></div></div> interface can be modified as long as the
+changes are consistent with the layout of the PE binary. For instance, you
+can adjust the TLS callbacks by removing, reordering, or adding addresses:</div><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1"><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">pe</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">Binary</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">callbacks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">pe</span><span class="o">.</span><span class="n">tls</span><span class="o">.</span><span class="n">callbacks</span>
+
+<span class="c1"># Remove the last entry</span>
+<span class="n">callbacks</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+<span class="c1"># Add an address</span>
+<span class="n">callbacks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mh">0x140001010</span><span class="p">)</span>
+
+<span class="n">tls</span><span class="o">.</span><span class="n">callbacks</span> <span class="o">=</span> <span class="n">callbacks</span>
+
+<span class="n">pe</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"tls_modified.exe"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LIEF/PE.hpp&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">PE</span><span class="o">::</span><span class="n">Binary</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pe</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">callbacks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pe</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">();</span>
+
+<span class="cp"># Remove the last entry</span>
+<span class="n">callbacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+
+<span class="cp"># Add an address</span>
+<span class="n">callbacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mh">0x140001010</span><span class="p">);</span>
+
+<span class="n">tls</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">callbacks</span><span class="p">));</span>
+
+<span class="n">pe</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="s">"tls_modified.exe"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">pe</span><span class="p">:</span><span class="w"> </span><span class="nc">lief</span><span class="p">::</span><span class="n">pe</span><span class="p">::</span><span class="n">Binary</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">tls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pe</span><span class="p">.</span><span class="n">tls</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">callbacks</span><span class="p">:</span><span class="w"> </span><span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u64</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tls</span><span class="p">.</span><span class="n">callbacks</span><span class="p">();</span>
+
+<span class="p">#</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">entry</span>
+<span class="n">callbacks</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+
+<span class="p">#</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">address</span>
+<span class="n">callbacks</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mh">0x140001010</span><span class="p">);</span>
+
+<span class="n">tls</span><span class="p">.</span><span class="n">set_callbacks</span><span class="p">(</span><span class="n">callbacks</span><span class="p">);</span>
+
+<span class="n">pe</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"tls_modified.exe"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+<div class="tip admonition">
+<p class="admonition-title">Relocations</p>
+<p>Note that LIEF <strong>automatically</strong> manages the relocations that must be
+created or removed when modifying the TLS callbacks.</p>
+</div>
+</section>
+<section id="tls-creation">
+<h2 id="tls-creation">TLS Creation<a class="headerlink" href="#tls-creation" title="Link to this heading">¶</a></h2>
+<p>If a PE binary does not contain TLS metadata, LIEF can be used to create this
+structure.</p>
+<p>First, we can create and initiate a TLS instance:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1"><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">tls</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">TLS</span><span class="p">()</span>
+
+<span class="n">tls</span><span class="o">.</span><span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mh">0x140001000</span><span class="p">,</span>
+    <span class="mh">0x140001010</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LIEF/PE.hpp&gt;</span>
+
+<span class="n">LIEF</span><span class="o">::</span><span class="n">PE</span><span class="o">::</span><span class="n">TLS</span><span class="w"> </span><span class="n">tls</span><span class="p">;</span>
+
+<span class="n">tls</span><span class="p">.</span><span class="n">callbacks</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="mh">0x140001000</span><span class="p">,</span>
+<span class="w">    </span><span class="mh">0x140001010</span><span class="p">,</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">lief</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">tls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lief</span><span class="p">::</span><span class="n">pe</span><span class="p">::</span><span class="n">TLS</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
+
+<span class="n">tls</span><span class="p">.</span><span class="n">set_callbacks</span><span class="p">(</span><span class="fm">vec!</span><span class="p">[</span>
+<span class="w">  </span><span class="mh">0x140001000</span><span class="p">,</span>
+<span class="w">  </span><span class="mh">0x140001010</span><span class="p">,</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+</div></div>
+<div class="fixed-paragraph">
+And then, we can add this instance to a <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-PE-Binary" role="button">
+<code><span class="pre">lief.PE.Binary</span></code></a><div aria-labelledby="lief-api-lief-PE-Binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/struct.Binary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::Binary</span></code>
+</a><a class="dropdown-item" href="../python.html#lief.PE.Binary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.PE.Binary</span></code>
+</a><a class="dropdown-item" href="../cpp.html#_CPPv4N4LIEF2PE6BinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::PE::Binary</span></code>
+</a></div></div>:</div><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls="panel-2-2-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-2" name="2-2" role="tab" tabindex="-1"><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pe</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">PE</span><span class="o">.</span><span class="n">Binary</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">pe</span><span class="o">.</span><span class="n">tls</span> <span class="o">=</span> <span class="n">tls</span> <span class="c1"># `tls` defined previously</span>
+
+<span class="n">pe</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"tls_demo.exe"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">PE</span><span class="o">::</span><span class="n">Binary</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pe</span><span class="p">;</span>
+
+<span class="n">pe</span><span class="o">-&gt;</span><span class="n">tls</span><span class="p">(</span><span class="n">tls</span><span class="p">);</span><span class="w"> </span><span class="c1">// `tls` defined previously</span>
+
+<span class="n">pe</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="s">"tls_demo.exe"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-2-2" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-2" name="2-2" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">pe</span><span class="p">:</span><span class="w"> </span><span class="nc">lief</span><span class="p">::</span><span class="n">pe</span><span class="p">::</span><span class="n">Binary</span><span class="p">;</span>
+
+<span class="n">pe</span><span class="p">.</span><span class="n">set_tls</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tls</span><span class="p">);</span><span class="w"> </span><span class="c1">// `tls` defined previously</span>
+
+<span class="n">pe</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"tls_demo.exe"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+<div class="tip admonition">
+<p class="admonition-title">Relocations</p>
+<p>Similary to the TLS callbacks modifications, LIEF <strong>automatically</strong> manages the
+relocations. In addition, it automatically initialize (if not set by the user)
+<code class="docutils literal notranslate"><span class="pre">AddressOfIndex</span></code> which is mandatory when defining up TLS metadata.</p>
+</div>
+</section>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+  <aside class="border-left pl-5 py-3">
+    <span class="text-uppercase text-muted font-size-sm d-block mb-3">
+      On this page:
+    </span>
+        <a href="#tls-modifications" class="d-block my-2" data-toggle="scroll">TLS Modifications</a>
+        <a href="#tls-creation" class="d-block my-2" data-toggle="scroll">TLS Creation</a>
+
+  </aside>
+</div>
+    </div>
+  </div>
+  </body>
+</html>

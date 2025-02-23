@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -89,13 +89,16 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classLIEF_1_1PE_1_1Symbol-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LIEF::PE::Symbol Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class that represents a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> symbol.  
+<p>Class that represents a PE-COFF symbol.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="PE_2Symbol_8hpp_source.html">Symbol.hpp</a>&gt;</code></p>
@@ -104,7 +107,7 @@ Inheritance diagram for LIEF::PE::Symbol:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLIEF_1_1PE_1_1Symbol__inherit__graph.png" border="0" usemap="#aLIEF_1_1PE_1_1Symbol_inherit__map" alt="Inheritance graph"/></div>
 <map name="aLIEF_1_1PE_1_1Symbol_inherit__map" id="aLIEF_1_1PE_1_1Symbol_inherit__map">
-<area shape="rect" title="Class that represents a PE symbol." alt="" coords="5,152,135,177"/>
+<area shape="rect" title="Class that represents a PE&#45;COFF symbol." alt="" coords="5,152,135,177"/>
 <area shape="rect" href="classLIEF_1_1Symbol.html" title="This class represents a symbol in an executable format." alt="" coords="17,79,123,104"/>
 <area shape="poly" title=" " alt="" coords="73,118,73,152,67,152,67,118"/>
 <area shape="rect" href="classLIEF_1_1Object.html" title=" " alt="" coords="21,5,119,31"/>
@@ -116,7 +119,7 @@ Collaboration diagram for LIEF::PE::Symbol:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLIEF_1_1PE_1_1Symbol__coll__graph.png" border="0" usemap="#aLIEF_1_1PE_1_1Symbol_coll__map" alt="Collaboration graph"/></div>
 <map name="aLIEF_1_1PE_1_1Symbol_coll__map" id="aLIEF_1_1PE_1_1Symbol_coll__map">
-<area shape="rect" title="Class that represents a PE symbol." alt="" coords="5,152,135,177"/>
+<area shape="rect" title="Class that represents a PE&#45;COFF symbol." alt="" coords="5,152,135,177"/>
 <area shape="rect" href="classLIEF_1_1Symbol.html" title="This class represents a symbol in an executable format." alt="" coords="17,79,123,104"/>
 <area shape="poly" title=" " alt="" coords="73,118,73,152,67,152,67,118"/>
 <area shape="rect" href="classLIEF_1_1Object.html" title=" " alt="" coords="21,5,119,31"/>
@@ -124,43 +127,155 @@ Collaboration diagram for LIEF::PE::Symbol:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2447d3271e504824eacc76738c749476" id="r_a2447d3271e504824eacc76738c749476"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2447d3271e504824eacc76738c749476">STORAGE_CLASS</a> : int32_t { <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476accc0377a8afbf50e7094f5c23a8af223">INVALID</a> = 0xFF
+, <a class="el" href="#a2447d3271e504824eacc76738c749476aa33a2b5176c32a99792f62947326d213">END_OF_FUNCTION</a> = -1
+, <a class="el" href="#a2447d3271e504824eacc76738c749476ab50339a10e1de285ac99d4c3990b8693">NONE</a> = 0
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a008f6cdd0c190839e9885cf9f9e2a652">AUTOMATIC</a> = 1
+, <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476a3932d629fb5e2be9d09b3a4485b3cc9d">EXTERNAL</a> = 2
+, <a class="el" href="#a2447d3271e504824eacc76738c749476afe6f99ef1ec99efbdc19a9786cf1facc">STATIC</a> = 3
+, <a class="el" href="#a2447d3271e504824eacc76738c749476ad17455cfcb88a53f1603fb817e09c2d6">REGISTER</a> = 4
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a1067c057ea27c0ff577f3a20b0005ca1">EXTERNAL_DEF</a> = 5
+, <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476a6f434c508ad901b8667ed22f713e52bb">LABEL</a> = 6
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a8a691bad7a9d91de81491592f14e9489">UNDEFINED_LABEL</a> = 7
+, <a class="el" href="#a2447d3271e504824eacc76738c749476af9c4c14ae28715431c63a4a0cf9c1e0c">MEMBER_OF_STRUCT</a> = 8
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a8dda46c0fff4137b6f660f56255d967e">ARGUMENT</a> = 9
+, <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476aadc69965187c9b3dcf813ebc1276c33e">STRUCT_TAG</a> = 10
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a77cf42299b5d040cad9b987920525b7c">MEMBER_OF_UNION</a> = 11
+, <a class="el" href="#a2447d3271e504824eacc76738c749476abfccbc422d2511f448095fcb048ca72a">UNION_TAG</a> = 12
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a1e5becd55a8e997eb3c1ef063d2cbe27">TYPE_DEFINITION</a> = 13
+, <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476a9e018ba986d3ec97251ae2402a0baef2">UNDEFINED_STATIC</a> = 14
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a3944b41f8641dfb0e8b90cf6052b95a5">ENUM_TAG</a> = 15
+, <a class="el" href="#a2447d3271e504824eacc76738c749476aa13c49720911508993f5bd91ae8792d7">MEMBER_OF_ENUM</a> = 16
+, <a class="el" href="#a2447d3271e504824eacc76738c749476aa1cd91d293f44208095c040e7ed22894">REGISTER_PARAM</a> = 17
+, <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476ab8d5fb82cb73a74a0836e4df8d796519">BIT_FIELD</a> = 18
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a4d34f53389ed7f28ca91fc31ea360a66">BLOCK</a> = 100
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a6a72a6a776662a244f82d31e9274a07b">FUNCTION</a> = 101
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a5322be2081f2695e3fb77ddd2ef0e68f">END_OF_STRUCT</a> = 102
+, <br />
+&#160;&#160;<a class="el" href="#a2447d3271e504824eacc76738c749476a9fc5887c030f7a3e19821ebec457e719">FILE</a> = 103
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a3d0d6f3b89d94934de83ca41b85e6ce4">SECTION</a> = 104
+, <a class="el" href="#a2447d3271e504824eacc76738c749476a957c9a20124ab0d86bab0343feaaf21b">WEAK_EXTERNAL</a> = 105
+, <a class="el" href="#a2447d3271e504824eacc76738c749476aecdeba225464154d57ea509e0fa1a122">CLR_TOKEN</a> = 107
+<br />
+ }</td></tr>
+<tr class="memdesc:a2447d3271e504824eacc76738c749476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference: <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#storage-class">https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#storage-class</a>.  <a href="#a2447d3271e504824eacc76738c749476">More...</a><br /></td></tr>
+<tr class="separator:a2447d3271e504824eacc76738c749476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a3014299e122486a442db3870dfa74" id="r_ad0a3014299e122486a442db3870dfa74"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a3014299e122486a442db3870dfa74">BASE_TYPE</a> : uint32_t { <br />
+&#160;&#160;<a class="el" href="#ad0a3014299e122486a442db3870dfa74a106cd4aee2087ffb2ae88205cdf276c3">TY_NULL</a> = 0
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a775cf064edf66940ba7537fc1c3bb85e">TY_VOID</a> = 1
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74aa1e93e1267821be823e51ac6afef7aca">TY_CHAR</a> = 2
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74ab2f7beb83db555668787a0fce076f83e">TY_SHORT</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#ad0a3014299e122486a442db3870dfa74a867ec0acd56812a5d787d01f1eb79bd3">TY_INT</a> = 4
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a647f84de82e604b42d4e913137012271">TY_LONG</a> = 5
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74ad1a8b5e0f04e7719a623556c4bc6830b">TY_FLOAT</a> = 6
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74ad30730cae5f5285ccca37fb45e227eee">TY_DOUBLE</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="#ad0a3014299e122486a442db3870dfa74a86e7de99e5271052346edebf6fccb60e">TY_STRUCT</a> = 8
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a7c8b396420d2c35491a07d30470816a7">TY_UNION</a> = 9
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a54e5fbd20fa65594ad97898d49ddb65f">TY_ENUM</a> = 10
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a47460f6d0654b245f1b69ffc9be6be61">TY_MOE</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="#ad0a3014299e122486a442db3870dfa74a973e2d7b2376959b401d7b5ed4814848">TY_BYTE</a> = 12
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a5a9e72f88cad1711bb08d08b339b4296">TY_WORD</a> = 13
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a1997429ba113c85603440c4b603271f7">TY_UINT</a> = 14
+, <a class="el" href="#ad0a3014299e122486a442db3870dfa74a83d53879c59499d358cdbc6d580caad3">TY_DWORD</a> = 15
+<br />
+ }</td></tr>
+<tr class="separator:ad0a3014299e122486a442db3870dfa74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e20207be1426efbe6f2003b527e21d" id="r_a46e20207be1426efbe6f2003b527e21d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46e20207be1426efbe6f2003b527e21d">COMPLEX_TYPE</a> : uint32_t { <a class="el" href="#a46e20207be1426efbe6f2003b527e21da106cd4aee2087ffb2ae88205cdf276c3">TY_NULL</a> = 0
+, <a class="el" href="#a46e20207be1426efbe6f2003b527e21da7d21c66b208790d72c9773b160f553ef">TY_POINTER</a> = 1
+, <a class="el" href="#a46e20207be1426efbe6f2003b527e21dac36bb299bcb6872e349836917e295972">TY_FUNCTION</a> = 2
+, <a class="el" href="#a46e20207be1426efbe6f2003b527e21da411229d47f7eabbd7b96450e2d87dfae">TY_ARRAY</a> = 3
+ }</td></tr>
+<tr class="separator:a46e20207be1426efbe6f2003b527e21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf250b54322f8296febfa6b598e6d6c" id="r_a1cf250b54322f8296febfa6b598e6d6c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cf250b54322f8296febfa6b598e6d6c">auxiliary_symbols_t</a> = std::vector&lt;std::unique_ptr&lt;<a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a>&gt;&gt;</td></tr>
+<tr class="separator:a1cf250b54322f8296febfa6b598e6d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9754a4f197bd62702aa43c734918db59" id="r_a9754a4f197bd62702aa43c734918db59"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9754a4f197bd62702aa43c734918db59">it_auxiliary_symbols_t</a> = <a class="el" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>&lt;<a class="el" href="#a1cf250b54322f8296febfa6b598e6d6c">auxiliary_symbols_t</a>&amp;, <a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a>*&gt;</td></tr>
+<tr class="separator:a9754a4f197bd62702aa43c734918db59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884d66a8909c4b2cc7ca646064db82d4" id="r_a884d66a8909c4b2cc7ca646064db82d4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a884d66a8909c4b2cc7ca646064db82d4">it_const_auxiliary_symbols_t</a> = <a class="el" href="namespaceLIEF.html#a8b00ff0290a3d7cdef2fb6502bb54767">const_ref_iterator</a>&lt;const <a class="el" href="#a1cf250b54322f8296febfa6b598e6d6c">auxiliary_symbols_t</a>&amp;, <a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a>*&gt;</td></tr>
+<tr class="separator:a884d66a8909c4b2cc7ca646064db82d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
+<tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object" id="r_abca8d15eca2d1a8ee56d4fdfd4aa7155"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a> = add_pointer_t&lt;decay_t&lt;T&gt;&gt;</td></tr>
+<tr class="separator:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b41db8bedcd30ea4b6d4e849ebb3a5 inherit pub_types_classLIEF_1_1Object" id="r_a16b41db8bedcd30ea4b6d4e849ebb3a5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a16b41db8bedcd30ea4b6d4e849ebb3a5 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a16b41db8bedcd30ea4b6d4e849ebb3a5">output_const_t</a> = add_pointer_t&lt;add_const_t&lt;decay_t&lt;T&gt;&gt;&gt;</td></tr>
+<tr class="separator:a16b41db8bedcd30ea4b6d4e849ebb3a5 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a45c0c3df327383cb6b47a0aa1d96e093" id="r_a45c0c3df327383cb6b47a0aa1d96e093"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c0c3df327383cb6b47a0aa1d96e093">Symbol</a> (const details::pe_symbol &amp;header)</td></tr>
-<tr class="separator:a45c0c3df327383cb6b47a0aa1d96e093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42cba9971a6bb39340d391e9a2858f4" id="r_ac42cba9971a6bb39340d391e9a2858f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac42cba9971a6bb39340d391e9a2858f4">Symbol</a> ()</td></tr>
 <tr class="separator:ac42cba9971a6bb39340d391e9a2858f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca8bb60b9ff7d1e6b8b72062fd12d1c7" id="r_aca8bb60b9ff7d1e6b8b72062fd12d1c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8bb60b9ff7d1e6b8b72062fd12d1c7">~Symbol</a> () override</td></tr>
-<tr class="separator:aca8bb60b9ff7d1e6b8b72062fd12d1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22a1673f81258b185d8d106471100d31" id="r_a22a1673f81258b185d8d106471100d31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22a1673f81258b185d8d106471100d31">operator=</a> (<a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> other)</td></tr>
-<tr class="separator:a22a1673f81258b185d8d106471100d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6e3d42413b38acfd363f457997bc817" id="r_ad6e3d42413b38acfd363f457997bc817"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6e3d42413b38acfd363f457997bc817">Symbol</a> (const <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;other)</td></tr>
-<tr class="separator:ad6e3d42413b38acfd363f457997bc817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc95713dedf3e691255e4e57e04c6394" id="r_afc95713dedf3e691255e4e57e04c6394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc95713dedf3e691255e4e57e04c6394">swap</a> (<a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;other)</td></tr>
-<tr class="separator:afc95713dedf3e691255e4e57e04c6394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8a172a2bb13b0715516ebb0cfc6c8f" id="r_aeb8a172a2bb13b0715516ebb0cfc6c8f"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8a172a2bb13b0715516ebb0cfc6c8f">section_number</a> () const</td></tr>
-<tr class="separator:aeb8a172a2bb13b0715516ebb0cfc6c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a192db07dc2357409ccbe0c096c0088" id="r_a3a192db07dc2357409ccbe0c096c0088"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a192db07dc2357409ccbe0c096c0088">Symbol</a> (const <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;)</td></tr>
+<tr class="separator:a3a192db07dc2357409ccbe0c096c0088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7ddf70cf19da58a2817985ff12b3a2" id="r_a0b7ddf70cf19da58a2817985ff12b3a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b7ddf70cf19da58a2817985ff12b3a2">operator=</a> (const <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;)</td></tr>
+<tr class="separator:a0b7ddf70cf19da58a2817985ff12b3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab65637886a61b53393af210efd123c" id="r_adab65637886a61b53393af210efd123c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adab65637886a61b53393af210efd123c">Symbol</a> (<a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&amp;)</td></tr>
+<tr class="separator:adab65637886a61b53393af210efd123c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d7ec985d84f955bebc8f1f8dc4951a" id="r_ab8d7ec985d84f955bebc8f1f8dc4951a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d7ec985d84f955bebc8f1f8dc4951a">operator=</a> (<a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&amp;)</td></tr>
+<tr class="separator:ab8d7ec985d84f955bebc8f1f8dc4951a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83d56b5a23b2de1fc6d768e6714f70a5" id="r_a83d56b5a23b2de1fc6d768e6714f70a5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83d56b5a23b2de1fc6d768e6714f70a5">type</a> () const</td></tr>
+<tr class="memdesc:a83d56b5a23b2de1fc6d768e6714f70a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The symbol type. The first byte represents the base type (see: <a class="el" href="#aa131808cbe659903eb456404722822c1" title="The simple (base) data type.">base_type()</a>) while the upper byte represents the complex type, if any (see: <a class="el" href="#a5068360e7eb19046bf25b8f5c3d8dfa6" title="The complex type (if any)">complex_type()</a>).  <br /></td></tr>
 <tr class="separator:a83d56b5a23b2de1fc6d768e6714f70a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a005434be3105f7de7474502bc21af24c" id="r_a005434be3105f7de7474502bc21af24c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF_1_1PE.html#a5d277795a4fa5b6b31502211fa4af1f7">SYMBOL_BASE_TYPES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a005434be3105f7de7474502bc21af24c">base_type</a> () const</td></tr>
-<tr class="separator:a005434be3105f7de7474502bc21af24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a530db3b34d238c242ed6e053e8b24350" id="r_a530db3b34d238c242ed6e053e8b24350"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF_1_1PE.html#ad79f0792ac94cc4d9a359b8382c683d6">SYMBOL_COMPLEX_TYPES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a530db3b34d238c242ed6e053e8b24350">complex_type</a> () const</td></tr>
-<tr class="separator:a530db3b34d238c242ed6e053e8b24350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc5e247bf9586da7e5b8df3ac25264f3" id="r_abc5e247bf9586da7e5b8df3ac25264f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF_1_1PE.html#a748c76daa5c3b2c06e0476c6dd92ce53">SYMBOL_STORAGE_CLASS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5e247bf9586da7e5b8df3ac25264f3">storage_class</a> () const</td></tr>
-<tr class="separator:abc5e247bf9586da7e5b8df3ac25264f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c403f814568e618bf1b02d78784aa7" id="r_ac0c403f814568e618bf1b02d78784aa7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c403f814568e618bf1b02d78784aa7">numberof_aux_symbols</a> () const</td></tr>
-<tr class="separator:ac0c403f814568e618bf1b02d78784aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3a495e03f8eb449f06e85a043bc91a7" id="r_ab3a495e03f8eb449f06e85a043bc91a7"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a495e03f8eb449f06e85a043bc91a7">wname</a> () const</td></tr>
-<tr class="separator:ab3a495e03f8eb449f06e85a043bc91a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b20012ae2a84c6a709b3da557c87aa" id="r_a14b20012ae2a84c6a709b3da557c87aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14b20012ae2a84c6a709b3da557c87aa">section</a> ()</td></tr>
-<tr class="separator:a14b20012ae2a84c6a709b3da557c87aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eadc32bde4a9b3c5b9a7eaddc46974d" id="r_a3eadc32bde4a9b3c5b9a7eaddc46974d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eadc32bde4a9b3c5b9a7eaddc46974d">section</a> () const</td></tr>
-<tr class="separator:a3eadc32bde4a9b3c5b9a7eaddc46974d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d516ee269829bddcd190d54f76eec0" id="r_a13d516ee269829bddcd190d54f76eec0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13d516ee269829bddcd190d54f76eec0">has_section</a> () const</td></tr>
-<tr class="memdesc:a13d516ee269829bddcd190d54f76eec0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>True</code> if symbols are located in a section  <br /></td></tr>
-<tr class="separator:a13d516ee269829bddcd190d54f76eec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa911ee2ac968c6befda0cc5d93b73f34" id="r_aa911ee2ac968c6befda0cc5d93b73f34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a2447d3271e504824eacc76738c749476">STORAGE_CLASS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa911ee2ac968c6befda0cc5d93b73f34">storage_class</a> () const</td></tr>
+<tr class="memdesc:aa911ee2ac968c6befda0cc5d93b73f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage class of the symbol which indicates what kind of definition a symbol represents.  <br /></td></tr>
+<tr class="separator:aa911ee2ac968c6befda0cc5d93b73f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa131808cbe659903eb456404722822c1" id="r_aa131808cbe659903eb456404722822c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad0a3014299e122486a442db3870dfa74">BASE_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa131808cbe659903eb456404722822c1">base_type</a> () const</td></tr>
+<tr class="memdesc:aa131808cbe659903eb456404722822c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The simple (base) data type.  <br /></td></tr>
+<tr class="separator:aa131808cbe659903eb456404722822c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5068360e7eb19046bf25b8f5c3d8dfa6" id="r_a5068360e7eb19046bf25b8f5c3d8dfa6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a46e20207be1426efbe6f2003b527e21d">COMPLEX_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5068360e7eb19046bf25b8f5c3d8dfa6">complex_type</a> () const</td></tr>
+<tr class="memdesc:a5068360e7eb19046bf25b8f5c3d8dfa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex type (if any)  <br /></td></tr>
+<tr class="separator:a5068360e7eb19046bf25b8f5c3d8dfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562dda6ccfb1b82aa767315ad021f124" id="r_a562dda6ccfb1b82aa767315ad021f124"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a562dda6ccfb1b82aa767315ad021f124">section_idx</a> () const</td></tr>
+<tr class="memdesc:a562dda6ccfb1b82aa767315ad021f124"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signed integer that identifies the section, using a one-based index into the section table. Some values have special meaning:  <br /></td></tr>
+<tr class="separator:a562dda6ccfb1b82aa767315ad021f124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633c0b84c0d9526cfcb17e1c379a8329" id="r_a633c0b84c0d9526cfcb17e1c379a8329"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a633c0b84c0d9526cfcb17e1c379a8329">is_external</a> () const</td></tr>
+<tr class="separator:a633c0b84c0d9526cfcb17e1c379a8329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e8a36d6ec563886a3ac61bf68b5b7d" id="r_a55e8a36d6ec563886a3ac61bf68b5b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55e8a36d6ec563886a3ac61bf68b5b7d">is_weak_external</a> () const</td></tr>
+<tr class="separator:a55e8a36d6ec563886a3ac61bf68b5b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245384d7fcaf8ced18e8473bd85b0559" id="r_a245384d7fcaf8ced18e8473bd85b0559"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a245384d7fcaf8ced18e8473bd85b0559">is_undefined</a> () const</td></tr>
+<tr class="separator:a245384d7fcaf8ced18e8473bd85b0559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6c5ba82ff30f9f8aba253d80311b2e" id="r_a8c6c5ba82ff30f9f8aba253d80311b2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c6c5ba82ff30f9f8aba253d80311b2e">is_function_line_info</a> () const</td></tr>
+<tr class="separator:a8c6c5ba82ff30f9f8aba253d80311b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b8e79f8415a824fb164565c1e668aa" id="r_a96b8e79f8415a824fb164565c1e668aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96b8e79f8415a824fb164565c1e668aa">is_file_record</a> () const</td></tr>
+<tr class="separator:a96b8e79f8415a824fb164565c1e668aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082140bd0ce1a77e6e660cb979a85435" id="r_a082140bd0ce1a77e6e660cb979a85435"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a9754a4f197bd62702aa43c734918db59">it_auxiliary_symbols_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082140bd0ce1a77e6e660cb979a85435">auxiliary_symbols</a> ()</td></tr>
+<tr class="memdesc:a082140bd0ce1a77e6e660cb979a85435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary symbols associated with this symbol.  <br /></td></tr>
+<tr class="separator:a082140bd0ce1a77e6e660cb979a85435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bd10a5d79167c74cd009519ce26183" id="r_ad4bd10a5d79167c74cd009519ce26183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a884d66a8909c4b2cc7ca646064db82d4">it_const_auxiliary_symbols_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4bd10a5d79167c74cd009519ce26183">auxiliary_symbols</a> () const</td></tr>
+<tr class="separator:ad4bd10a5d79167c74cd009519ce26183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae745a52b3805070bf0a5a020c008518d" id="r_ae745a52b3805070bf0a5a020c008518d"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae745a52b3805070bf0a5a020c008518d">name</a> () const override</td></tr>
+<tr class="memdesc:ae745a52b3805070bf0a5a020c008518d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the symbol. If the symbol does not use a short name, it returns the string pointed by the COFF string offset.  <br /></td></tr>
+<tr class="separator:ae745a52b3805070bf0a5a020c008518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a9bae8f1987ea4636c3ef2a92d8ed5" id="r_ab0a9bae8f1987ea4636c3ef2a92d8ed5"><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0a9bae8f1987ea4636c3ef2a92d8ed5">name</a> () override</td></tr>
+<tr class="separator:ab0a9bae8f1987ea4636c3ef2a92d8ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd2e2cb72b96056fcf92fa27c190056" id="r_affd2e2cb72b96056fcf92fa27c190056"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affd2e2cb72b96056fcf92fa27c190056">coff_name</a> () const</td></tr>
+<tr class="memdesc:affd2e2cb72b96056fcf92fa27c190056"><td class="mdescLeft">&#160;</td><td class="mdescRight">COFF string used to represents the (long) symbol name.  <br /></td></tr>
+<tr class="separator:affd2e2cb72b96056fcf92fa27c190056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85b92d6e2f095ef4526bff1b1080a6aa" id="r_a85b92d6e2f095ef4526bff1b1080a6aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85b92d6e2f095ef4526bff1b1080a6aa">coff_name</a> ()</td></tr>
+<tr class="separator:a85b92d6e2f095ef4526bff1b1080a6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ef69bd352a3160d8add8d95b7c3c36" id="r_a48ef69bd352a3160d8add8d95b7c3c36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48ef69bd352a3160d8add8d95b7c3c36">type</a> (uint16_t ty)</td></tr>
+<tr class="separator:a48ef69bd352a3160d8add8d95b7c3c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05166241d766b73cdb97f55acf901120" id="r_a05166241d766b73cdb97f55acf901120"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05166241d766b73cdb97f55acf901120">storage_class</a> (uint8_t <a class="el" href="classLIEF_1_1Symbol.html#a11068d424dc1255b02cc047e99ad4b60">value</a>)</td></tr>
+<tr class="separator:a05166241d766b73cdb97f55acf901120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9965d97109d5aa2d7a5d3f562f1bd189" id="r_a9965d97109d5aa2d7a5d3f562f1bd189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9965d97109d5aa2d7a5d3f562f1bd189">section_idx</a> (int16_t idx)</td></tr>
+<tr class="separator:a9965d97109d5aa2d7a5d3f562f1bd189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760d9e36973dafa5a93d6389b3c68cc4" id="r_a760d9e36973dafa5a93d6389b3c68cc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a760d9e36973dafa5a93d6389b3c68cc4">add_aux</a> (std::unique_ptr&lt; <a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a> &gt; sym)</td></tr>
+<tr class="memdesc:a760d9e36973dafa5a93d6389b3c68cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new auxiliary record.  <br /></td></tr>
+<tr class="separator:a760d9e36973dafa5a93d6389b3c68cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab93d781da0fa0621271e9f244f0c7e7c" id="r_ab93d781da0fa0621271e9f244f0c7e7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab93d781da0fa0621271e9f244f0c7e7c">accept</a> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
 <tr class="separator:ab93d781da0fa0621271e9f244f0c7e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8bb60b9ff7d1e6b8b72062fd12d1c7" id="r_aca8bb60b9ff7d1e6b8b72062fd12d1c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8bb60b9ff7d1e6b8b72062fd12d1c7">~Symbol</a> () override</td></tr>
+<tr class="separator:aca8bb60b9ff7d1e6b8b72062fd12d1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLIEF_1_1Symbol"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classLIEF_1_1Symbol')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLIEF_1_1Symbol.html">LIEF::Symbol</a></td></tr>
 <tr class="memitem:a0265ca50edece2f2988c42858eceeb99 inherit pub_methods_classLIEF_1_1Symbol" id="r_a0265ca50edece2f2988c42858eceeb99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#a0265ca50edece2f2988c42858eceeb99">Symbol</a> ()=default</td></tr>
 <tr class="separator:a0265ca50edece2f2988c42858eceeb99 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,15 +289,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c7157cac307fc9fd4a78b9d314499d8 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f65d685e4acc81a3abacb850d21b59 inherit pub_methods_classLIEF_1_1Symbol" id="r_ad7f65d685e4acc81a3abacb850d21b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ad7f65d685e4acc81a3abacb850d21b59">operator=</a> (const <a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;)=default</td></tr>
 <tr class="separator:ad7f65d685e4acc81a3abacb850d21b59 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad005adf4d3d40a7f67f10f140ab63c63 inherit pub_methods_classLIEF_1_1Symbol" id="r_ad005adf4d3d40a7f67f10f140ab63c63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ad005adf4d3d40a7f67f10f140ab63c63">Symbol</a> (<a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ad005adf4d3d40a7f67f10f140ab63c63 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f022e1231a673dc28018b13a16865e inherit pub_methods_classLIEF_1_1Symbol" id="r_ac9f022e1231a673dc28018b13a16865e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ac9f022e1231a673dc28018b13a16865e">operator=</a> (<a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ac9f022e1231a673dc28018b13a16865e inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5809b17c60f7383d4f78aedc95f21e7 inherit pub_methods_classLIEF_1_1Symbol" id="r_ac5809b17c60f7383d4f78aedc95f21e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ac5809b17c60f7383d4f78aedc95f21e7">~Symbol</a> () override=default</td></tr>
 <tr class="separator:ac5809b17c60f7383d4f78aedc95f21e7 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af657ab9ededd5e0d8d49ff3a64270210 inherit pub_methods_classLIEF_1_1Symbol" id="r_af657ab9ededd5e0d8d49ff3a64270210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#af657ab9ededd5e0d8d49ff3a64270210">swap</a> (<a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;other) noexcept</td></tr>
 <tr class="separator:af657ab9ededd5e0d8d49ff3a64270210 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af77d34a7aec38f1dea4f9a3c448775a0 inherit pub_methods_classLIEF_1_1Symbol" id="r_af77d34a7aec38f1dea4f9a3c448775a0"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#af77d34a7aec38f1dea4f9a3c448775a0">name</a> () const</td></tr>
-<tr class="memdesc:af77d34a7aec38f1dea4f9a3c448775a0 inherit pub_methods_classLIEF_1_1Symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the symbol's name.  <br /></td></tr>
-<tr class="separator:af77d34a7aec38f1dea4f9a3c448775a0 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1fdeade77778b98eb5d8f6a1f94c685 inherit pub_methods_classLIEF_1_1Symbol" id="r_af1fdeade77778b98eb5d8f6a1f94c685"><td class="memItemLeft" align="right" valign="top">virtual std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#af1fdeade77778b98eb5d8f6a1f94c685">name</a> ()</td></tr>
-<tr class="separator:af1fdeade77778b98eb5d8f6a1f94c685 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb98b2036e56cf387a6ed60eed97afa inherit pub_methods_classLIEF_1_1Symbol" id="r_adfb98b2036e56cf387a6ed60eed97afa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#adfb98b2036e56cf387a6ed60eed97afa">name</a> (std::string name)</td></tr>
 <tr class="memdesc:adfb98b2036e56cf387a6ed60eed97afa inherit pub_methods_classLIEF_1_1Symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set symbol name.  <br /></td></tr>
 <tr class="separator:adfb98b2036e56cf387a6ed60eed97afa inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,38 +332,246 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a15d148d644da2f083ff1d889da25b906 inherit pub_methods_classLIEF_1_1Object" id="r_a15d148d644da2f083ff1d889da25b906"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a15d148d644da2f083ff1d889da25b906">~Object</a> ()</td></tr>
 <tr class="separator:a15d148d644da2f083ff1d889da25b906 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
-<tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object" id="r_abca8d15eca2d1a8ee56d4fdfd4aa7155"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a> = add_pointer_t&lt;decay_t&lt;T&gt;&gt;</td></tr>
-<tr class="separator:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b41db8bedcd30ea4b6d4e849ebb3a5 inherit pub_types_classLIEF_1_1Object" id="r_a16b41db8bedcd30ea4b6d4e849ebb3a5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a16b41db8bedcd30ea4b6d4e849ebb3a5 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a16b41db8bedcd30ea4b6d4e849ebb3a5">output_const_t</a> = add_pointer_t&lt;add_const_t&lt;decay_t&lt;T&gt;&gt;&gt;</td></tr>
-<tr class="separator:a16b41db8bedcd30ea4b6d4e849ebb3a5 inherit pub_types_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4d80ee7cf6790a7c9d6614b4eb903504" id="r_a4d80ee7cf6790a7c9d6614b4eb903504"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d80ee7cf6790a7c9d6614b4eb903504">parse</a> (<a class="el" href="classLIEF_1_1PE_1_1Parser.html">Parser</a> &amp;ctx, <a class="el" href="classLIEF_1_1BinaryStream.html">BinaryStream</a> &amp;stream, size_t *idx)</td></tr>
+<tr class="separator:a4d80ee7cf6790a7c9d6614b4eb903504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d16abc597b2947315d1de68bbc57a06" id="r_a2d16abc597b2947315d1de68bbc57a06"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d16abc597b2947315d1de68bbc57a06">is_reversed_sec_idx</a> (int16_t idx)</td></tr>
+<tr class="memdesc:a2d16abc597b2947315d1de68bbc57a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given section index is a reserved value.  <br /></td></tr>
+<tr class="separator:a2d16abc597b2947315d1de68bbc57a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a7088877d02a9497da6c8e478bdce8848" id="r_a7088877d02a9497da6c8e478bdce8848"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7088877d02a9497da6c8e478bdce8848">SYM_SEC_IDX_DEBUG</a> = -2</td></tr>
+<tr class="memdesc:a7088877d02a9497da6c8e478bdce8848"><td class="mdescLeft">&#160;</td><td class="mdescRight">The symbol provides general type or debugging information but does not correspond to a section. Microsoft tools use this setting along with <code>.file</code> records.  <br /></td></tr>
+<tr class="separator:a7088877d02a9497da6c8e478bdce8848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a3cd17e5a77d8fae41d80a5cedd7a4" id="r_ae5a3cd17e5a77d8fae41d80a5cedd7a4"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a3cd17e5a77d8fae41d80a5cedd7a4">SYM_SEC_IDX_ABS</a> = -1</td></tr>
+<tr class="memdesc:ae5a3cd17e5a77d8fae41d80a5cedd7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The symbol has an absolute (non-relocatable) value and is not an address.  <br /></td></tr>
+<tr class="separator:ae5a3cd17e5a77d8fae41d80a5cedd7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c61acc7c6d032084542b250e40df1c" id="r_ab1c61acc7c6d032084542b250e40df1c"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1c61acc7c6d032084542b250e40df1c">SYM_SEC_IDX_UNDEF</a> = 0</td></tr>
+<tr class="memdesc:ab1c61acc7c6d032084542b250e40df1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The symbol record is not yet assigned a section. A value of zero indicates that a reference to an external symbol is defined elsewhere. A value of non-zero is a common symbol with a size that is specified by the value.  <br /></td></tr>
+<tr class="separator:ab1c61acc7c6d032084542b250e40df1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d07652d2901358a9bd3f0a0bc9a43a" id="r_a03d07652d2901358a9bd3f0a0bc9a43a"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03d07652d2901358a9bd3f0a0bc9a43a">SYM_COMPLEX_TYPE_SHIFT</a> = 4</td></tr>
+<tr class="separator:a03d07652d2901358a9bd3f0a0bc9a43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class that represents a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> symbol. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a45c0c3df327383cb6b47a0aa1d96e093" name="a45c0c3df327383cb6b47a0aa1d96e093"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45c0c3df327383cb6b47a0aa1d96e093">&#9670;&#160;</a></span>Symbol() <span class="overload">[1/3]</span></h2>
+<div class="textblock"><p>Class that represents a PE-COFF symbol. </p>
+<p>Usually <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> debug information (including symbols) are wrapped in a PDB file referenced by the <a class="el" href="classLIEF_1_1PE_1_1CodeViewPDB.html" title="CodeView PDB specialization.">CodeViewPDB</a> object.</p>
+<p>The <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> format allows to define (by COFF inheritance) a symbol table that is different from the regular PDB symbols. This table contains COFF(16) symbols which can reference auxiliary symbols.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The <a class="el" href="classLIEF_1_1Symbol.html#a11068d424dc1255b02cc047e99ad4b60">LIEF::Symbol::value()</a> should be interpreted in perspective of the <a class="el" href="#aa911ee2ac968c6befda0cc5d93b73f34" title="Storage class of the symbol which indicates what kind of definition a symbol represents.">Symbol::storage_class()</a>.</dd></dl>
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#coff-symbol-table">https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#coff-symbol-table</a> </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1cf250b54322f8296febfa6b598e6d6c" name="a1cf250b54322f8296febfa6b598e6d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf250b54322f8296febfa6b598e6d6c">&#9670;&#160;</a></span>auxiliary_symbols_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">LIEF::PE::Symbol::Symbol </td>
-          <td>(</td>
-          <td class="paramtype">const details::pe_symbol &amp;</td>          <td class="paramname"><span class="paramname"><em>header</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="#a1cf250b54322f8296febfa6b598e6d6c">LIEF::PE::Symbol::auxiliary_symbols_t</a> = std::vector&lt;std::unique_ptr&lt;<a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a>&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
+<a id="a9754a4f197bd62702aa43c734918db59" name="a9754a4f197bd62702aa43c734918db59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9754a4f197bd62702aa43c734918db59">&#9670;&#160;</a></span>it_auxiliary_symbols_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a9754a4f197bd62702aa43c734918db59">LIEF::PE::Symbol::it_auxiliary_symbols_t</a> = <a class="el" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>&lt;<a class="el" href="#a1cf250b54322f8296febfa6b598e6d6c">auxiliary_symbols_t</a>&amp;, <a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a>*&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a884d66a8909c4b2cc7ca646064db82d4" name="a884d66a8909c4b2cc7ca646064db82d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884d66a8909c4b2cc7ca646064db82d4">&#9670;&#160;</a></span>it_const_auxiliary_symbols_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a884d66a8909c4b2cc7ca646064db82d4">LIEF::PE::Symbol::it_const_auxiliary_symbols_t</a> = <a class="el" href="namespaceLIEF.html#a8b00ff0290a3d7cdef2fb6502bb54767">const_ref_iterator</a>&lt;const <a class="el" href="#a1cf250b54322f8296febfa6b598e6d6c">auxiliary_symbols_t</a>&amp;, <a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a>*&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ad0a3014299e122486a442db3870dfa74" name="ad0a3014299e122486a442db3870dfa74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a3014299e122486a442db3870dfa74">&#9670;&#160;</a></span>BASE_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad0a3014299e122486a442db3870dfa74">LIEF::PE::Symbol::BASE_TYPE</a> : uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a106cd4aee2087ffb2ae88205cdf276c3" name="ad0a3014299e122486a442db3870dfa74a106cd4aee2087ffb2ae88205cdf276c3"></a>TY_NULL&#160;</td><td class="fielddoc"><p>No type information or unknown base type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a775cf064edf66940ba7537fc1c3bb85e" name="ad0a3014299e122486a442db3870dfa74a775cf064edf66940ba7537fc1c3bb85e"></a>TY_VOID&#160;</td><td class="fielddoc"><p>Used with void pointers and functions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74aa1e93e1267821be823e51ac6afef7aca" name="ad0a3014299e122486a442db3870dfa74aa1e93e1267821be823e51ac6afef7aca"></a>TY_CHAR&#160;</td><td class="fielddoc"><p>A character (signed byte). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74ab2f7beb83db555668787a0fce076f83e" name="ad0a3014299e122486a442db3870dfa74ab2f7beb83db555668787a0fce076f83e"></a>TY_SHORT&#160;</td><td class="fielddoc"><p>A 2-byte signed integer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a867ec0acd56812a5d787d01f1eb79bd3" name="ad0a3014299e122486a442db3870dfa74a867ec0acd56812a5d787d01f1eb79bd3"></a>TY_INT&#160;</td><td class="fielddoc"><p>A natural integer type on the target. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a647f84de82e604b42d4e913137012271" name="ad0a3014299e122486a442db3870dfa74a647f84de82e604b42d4e913137012271"></a>TY_LONG&#160;</td><td class="fielddoc"><p>A 4-byte signed integer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74ad1a8b5e0f04e7719a623556c4bc6830b" name="ad0a3014299e122486a442db3870dfa74ad1a8b5e0f04e7719a623556c4bc6830b"></a>TY_FLOAT&#160;</td><td class="fielddoc"><p>A 4-byte floating-point number. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74ad30730cae5f5285ccca37fb45e227eee" name="ad0a3014299e122486a442db3870dfa74ad30730cae5f5285ccca37fb45e227eee"></a>TY_DOUBLE&#160;</td><td class="fielddoc"><p>An 8-byte floating-point number. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a86e7de99e5271052346edebf6fccb60e" name="ad0a3014299e122486a442db3870dfa74a86e7de99e5271052346edebf6fccb60e"></a>TY_STRUCT&#160;</td><td class="fielddoc"><p>A structure. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a7c8b396420d2c35491a07d30470816a7" name="ad0a3014299e122486a442db3870dfa74a7c8b396420d2c35491a07d30470816a7"></a>TY_UNION&#160;</td><td class="fielddoc"><p>An union. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a54e5fbd20fa65594ad97898d49ddb65f" name="ad0a3014299e122486a442db3870dfa74a54e5fbd20fa65594ad97898d49ddb65f"></a>TY_ENUM&#160;</td><td class="fielddoc"><p>An enumerated type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a47460f6d0654b245f1b69ffc9be6be61" name="ad0a3014299e122486a442db3870dfa74a47460f6d0654b245f1b69ffc9be6be61"></a>TY_MOE&#160;</td><td class="fielddoc"><p>A member of enumeration (a specific value). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a973e2d7b2376959b401d7b5ed4814848" name="ad0a3014299e122486a442db3870dfa74a973e2d7b2376959b401d7b5ed4814848"></a>TY_BYTE&#160;</td><td class="fielddoc"><p>A byte; unsigned 1-byte integer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a5a9e72f88cad1711bb08d08b339b4296" name="ad0a3014299e122486a442db3870dfa74a5a9e72f88cad1711bb08d08b339b4296"></a>TY_WORD&#160;</td><td class="fielddoc"><p>A word; unsigned 2-byte integer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a1997429ba113c85603440c4b603271f7" name="ad0a3014299e122486a442db3870dfa74a1997429ba113c85603440c4b603271f7"></a>TY_UINT&#160;</td><td class="fielddoc"><p>An unsigned integer of natural size. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0a3014299e122486a442db3870dfa74a83d53879c59499d358cdbc6d580caad3" name="ad0a3014299e122486a442db3870dfa74a83d53879c59499d358cdbc6d580caad3"></a>TY_DWORD&#160;</td><td class="fielddoc"><p>An unsigned 4-byte integer. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a46e20207be1426efbe6f2003b527e21d" name="a46e20207be1426efbe6f2003b527e21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e20207be1426efbe6f2003b527e21d">&#9670;&#160;</a></span>COMPLEX_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a46e20207be1426efbe6f2003b527e21d">LIEF::PE::Symbol::COMPLEX_TYPE</a> : uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a46e20207be1426efbe6f2003b527e21da106cd4aee2087ffb2ae88205cdf276c3" name="a46e20207be1426efbe6f2003b527e21da106cd4aee2087ffb2ae88205cdf276c3"></a>TY_NULL&#160;</td><td class="fielddoc"><p>No complex type; simple scalar variable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a46e20207be1426efbe6f2003b527e21da7d21c66b208790d72c9773b160f553ef" name="a46e20207be1426efbe6f2003b527e21da7d21c66b208790d72c9773b160f553ef"></a>TY_POINTER&#160;</td><td class="fielddoc"><p>A pointer to base type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a46e20207be1426efbe6f2003b527e21dac36bb299bcb6872e349836917e295972" name="a46e20207be1426efbe6f2003b527e21dac36bb299bcb6872e349836917e295972"></a>TY_FUNCTION&#160;</td><td class="fielddoc"><p>A function that returns a base type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a46e20207be1426efbe6f2003b527e21da411229d47f7eabbd7b96450e2d87dfae" name="a46e20207be1426efbe6f2003b527e21da411229d47f7eabbd7b96450e2d87dfae"></a>TY_ARRAY&#160;</td><td class="fielddoc"><p>An array of base type. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2447d3271e504824eacc76738c749476" name="a2447d3271e504824eacc76738c749476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2447d3271e504824eacc76738c749476">&#9670;&#160;</a></span>STORAGE_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a2447d3271e504824eacc76738c749476">LIEF::PE::Symbol::STORAGE_CLASS</a> : int32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reference: <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#storage-class">https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#storage-class</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476accc0377a8afbf50e7094f5c23a8af223" name="a2447d3271e504824eacc76738c749476accc0377a8afbf50e7094f5c23a8af223"></a>INVALID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476aa33a2b5176c32a99792f62947326d213" name="a2447d3271e504824eacc76738c749476aa33a2b5176c32a99792f62947326d213"></a>END_OF_FUNCTION&#160;</td><td class="fielddoc"><p>Physical end of function. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476ab50339a10e1de285ac99d4c3990b8693" name="a2447d3271e504824eacc76738c749476ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>No symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a008f6cdd0c190839e9885cf9f9e2a652" name="a2447d3271e504824eacc76738c749476a008f6cdd0c190839e9885cf9f9e2a652"></a>AUTOMATIC&#160;</td><td class="fielddoc"><p>Stack variable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a3932d629fb5e2be9d09b3a4485b3cc9d" name="a2447d3271e504824eacc76738c749476a3932d629fb5e2be9d09b3a4485b3cc9d"></a>EXTERNAL&#160;</td><td class="fielddoc"><p>External symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476afe6f99ef1ec99efbdc19a9786cf1facc" name="a2447d3271e504824eacc76738c749476afe6f99ef1ec99efbdc19a9786cf1facc"></a>STATIC&#160;</td><td class="fielddoc"><p>Static. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476ad17455cfcb88a53f1603fb817e09c2d6" name="a2447d3271e504824eacc76738c749476ad17455cfcb88a53f1603fb817e09c2d6"></a>REGISTER&#160;</td><td class="fielddoc"><p>Register variable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a1067c057ea27c0ff577f3a20b0005ca1" name="a2447d3271e504824eacc76738c749476a1067c057ea27c0ff577f3a20b0005ca1"></a>EXTERNAL_DEF&#160;</td><td class="fielddoc"><p>External definition. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a6f434c508ad901b8667ed22f713e52bb" name="a2447d3271e504824eacc76738c749476a6f434c508ad901b8667ed22f713e52bb"></a>LABEL&#160;</td><td class="fielddoc"><p>Label. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a8a691bad7a9d91de81491592f14e9489" name="a2447d3271e504824eacc76738c749476a8a691bad7a9d91de81491592f14e9489"></a>UNDEFINED_LABEL&#160;</td><td class="fielddoc"><p>Undefined label. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476af9c4c14ae28715431c63a4a0cf9c1e0c" name="a2447d3271e504824eacc76738c749476af9c4c14ae28715431c63a4a0cf9c1e0c"></a>MEMBER_OF_STRUCT&#160;</td><td class="fielddoc"><p>Member of structure. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a8dda46c0fff4137b6f660f56255d967e" name="a2447d3271e504824eacc76738c749476a8dda46c0fff4137b6f660f56255d967e"></a>ARGUMENT&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1Function.html" title="Class that represents a function in the binary.">Function</a> argument. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476aadc69965187c9b3dcf813ebc1276c33e" name="a2447d3271e504824eacc76738c749476aadc69965187c9b3dcf813ebc1276c33e"></a>STRUCT_TAG&#160;</td><td class="fielddoc"><p>Structure tag. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a77cf42299b5d040cad9b987920525b7c" name="a2447d3271e504824eacc76738c749476a77cf42299b5d040cad9b987920525b7c"></a>MEMBER_OF_UNION&#160;</td><td class="fielddoc"><p>Member of union. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476abfccbc422d2511f448095fcb048ca72a" name="a2447d3271e504824eacc76738c749476abfccbc422d2511f448095fcb048ca72a"></a>UNION_TAG&#160;</td><td class="fielddoc"><p>Union tag. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a1e5becd55a8e997eb3c1ef063d2cbe27" name="a2447d3271e504824eacc76738c749476a1e5becd55a8e997eb3c1ef063d2cbe27"></a>TYPE_DEFINITION&#160;</td><td class="fielddoc"><p>Type definition. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a9e018ba986d3ec97251ae2402a0baef2" name="a2447d3271e504824eacc76738c749476a9e018ba986d3ec97251ae2402a0baef2"></a>UNDEFINED_STATIC&#160;</td><td class="fielddoc"><p>Undefined static. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a3944b41f8641dfb0e8b90cf6052b95a5" name="a2447d3271e504824eacc76738c749476a3944b41f8641dfb0e8b90cf6052b95a5"></a>ENUM_TAG&#160;</td><td class="fielddoc"><p>Enumeration tag. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476aa13c49720911508993f5bd91ae8792d7" name="a2447d3271e504824eacc76738c749476aa13c49720911508993f5bd91ae8792d7"></a>MEMBER_OF_ENUM&#160;</td><td class="fielddoc"><p>Member of enumeration. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476aa1cd91d293f44208095c040e7ed22894" name="a2447d3271e504824eacc76738c749476aa1cd91d293f44208095c040e7ed22894"></a>REGISTER_PARAM&#160;</td><td class="fielddoc"><p>Register parameter. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476ab8d5fb82cb73a74a0836e4df8d796519" name="a2447d3271e504824eacc76738c749476ab8d5fb82cb73a74a0836e4df8d796519"></a>BIT_FIELD&#160;</td><td class="fielddoc"><p>Bit field. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a4d34f53389ed7f28ca91fc31ea360a66" name="a2447d3271e504824eacc76738c749476a4d34f53389ed7f28ca91fc31ea360a66"></a>BLOCK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a6a72a6a776662a244f82d31e9274a07b" name="a2447d3271e504824eacc76738c749476a6a72a6a776662a244f82d31e9274a07b"></a>FUNCTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a5322be2081f2695e3fb77ddd2ef0e68f" name="a2447d3271e504824eacc76738c749476a5322be2081f2695e3fb77ddd2ef0e68f"></a>END_OF_STRUCT&#160;</td><td class="fielddoc"><p>End of structure. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a9fc5887c030f7a3e19821ebec457e719" name="a2447d3271e504824eacc76738c749476a9fc5887c030f7a3e19821ebec457e719"></a>FILE&#160;</td><td class="fielddoc"><p>File name. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a3d0d6f3b89d94934de83ca41b85e6ce4" name="a2447d3271e504824eacc76738c749476a3d0d6f3b89d94934de83ca41b85e6ce4"></a>SECTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476a957c9a20124ab0d86bab0343feaaf21b" name="a2447d3271e504824eacc76738c749476a957c9a20124ab0d86bab0343feaaf21b"></a>WEAK_EXTERNAL&#160;</td><td class="fielddoc"><p>Duplicate tag. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2447d3271e504824eacc76738c749476aecdeba225464154d57ea509e0fa1a122" name="a2447d3271e504824eacc76738c749476aecdeba225464154d57ea509e0fa1a122"></a>CLR_TOKEN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac42cba9971a6bb39340d391e9a2858f4" name="ac42cba9971a6bb39340d391e9a2858f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac42cba9971a6bb39340d391e9a2858f4">&#9670;&#160;</a></span>Symbol() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42cba9971a6bb39340d391e9a2858f4">&#9670;&#160;</a></span>Symbol() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,6 +580,40 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">LIEF::PE::Symbol::Symbol </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a192db07dc2357409ccbe0c096c0088" name="a3a192db07dc2357409ccbe0c096c0088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a192db07dc2357409ccbe0c096c0088">&#9670;&#160;</a></span>Symbol() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIEF::PE::Symbol::Symbol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adab65637886a61b53393af210efd123c" name="adab65637886a61b53393af210efd123c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab65637886a61b53393af210efd123c">&#9670;&#160;</a></span>Symbol() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIEF::PE::Symbol::Symbol </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -290,23 +646,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad6e3d42413b38acfd363f457997bc817" name="ad6e3d42413b38acfd363f457997bc817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6e3d42413b38acfd363f457997bc817">&#9670;&#160;</a></span>Symbol() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIEF::PE::Symbol::Symbol </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab93d781da0fa0621271e9f244f0c7e7c" name="ab93d781da0fa0621271e9f244f0c7e7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab93d781da0fa0621271e9f244f0c7e7c">&#9670;&#160;</a></span>accept()</h2>
@@ -335,78 +674,393 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a005434be3105f7de7474502bc21af24c" name="a005434be3105f7de7474502bc21af24c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a005434be3105f7de7474502bc21af24c">&#9670;&#160;</a></span>base_type()</h2>
+<a id="a760d9e36973dafa5a93d6389b3c68cc4" name="a760d9e36973dafa5a93d6389b3c68cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760d9e36973dafa5a93d6389b3c68cc4">&#9670;&#160;</a></span>add_aux()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceLIEF_1_1PE.html#a5d277795a4fa5b6b31502211fa4af1f7">SYMBOL_BASE_TYPES</a> LIEF::PE::Symbol::base_type </td>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a> &amp; LIEF::PE::Symbol::add_aux </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classLIEF_1_1PE_1_1AuxiliarySymbol.html">AuxiliarySymbol</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>sym</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Add a new auxiliary record. </p>
+
 </div>
 </div>
-<a id="a530db3b34d238c242ed6e053e8b24350" name="a530db3b34d238c242ed6e053e8b24350"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a530db3b34d238c242ed6e053e8b24350">&#9670;&#160;</a></span>complex_type()</h2>
+<a id="a082140bd0ce1a77e6e660cb979a85435" name="a082140bd0ce1a77e6e660cb979a85435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a082140bd0ce1a77e6e660cb979a85435">&#9670;&#160;</a></span>auxiliary_symbols() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceLIEF_1_1PE.html#ad79f0792ac94cc4d9a359b8382c683d6">SYMBOL_COMPLEX_TYPES</a> LIEF::PE::Symbol::complex_type </td>
+          <td class="memname"><a class="el" href="#a9754a4f197bd62702aa43c734918db59">it_auxiliary_symbols_t</a> LIEF::PE::Symbol::auxiliary_symbols </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Auxiliary symbols associated with this symbol. </p>
 
 </div>
 </div>
-<a id="a13d516ee269829bddcd190d54f76eec0" name="a13d516ee269829bddcd190d54f76eec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13d516ee269829bddcd190d54f76eec0">&#9670;&#160;</a></span>has_section()</h2>
+<a id="ad4bd10a5d79167c74cd009519ce26183" name="ad4bd10a5d79167c74cd009519ce26183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4bd10a5d79167c74cd009519ce26183">&#9670;&#160;</a></span>auxiliary_symbols() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool LIEF::PE::Symbol::has_section </td>
+          <td class="memname"><a class="el" href="#a884d66a8909c4b2cc7ca646064db82d4">it_const_auxiliary_symbols_t</a> LIEF::PE::Symbol::auxiliary_symbols </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p><code>True</code> if symbols are located in a section </p>
-
 </div>
 </div>
-<a id="ac0c403f814568e618bf1b02d78784aa7" name="ac0c403f814568e618bf1b02d78784aa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c403f814568e618bf1b02d78784aa7">&#9670;&#160;</a></span>numberof_aux_symbols()</h2>
+<a id="aa131808cbe659903eb456404722822c1" name="aa131808cbe659903eb456404722822c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa131808cbe659903eb456404722822c1">&#9670;&#160;</a></span>base_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t LIEF::PE::Symbol::numberof_aux_symbols </td>
+          <td class="memname"><a class="el" href="#ad0a3014299e122486a442db3870dfa74">BASE_TYPE</a> LIEF::PE::Symbol::base_type </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The simple (base) data type. </p>
+
+</div>
+</div>
+<a id="a85b92d6e2f095ef4526bff1b1080a6aa" name="a85b92d6e2f095ef4526bff1b1080a6aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85b92d6e2f095ef4526bff1b1080a6aa">&#9670;&#160;</a></span>coff_name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> * LIEF::PE::Symbol::coff_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a22a1673f81258b185d8d106471100d31" name="a22a1673f81258b185d8d106471100d31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22a1673f81258b185d8d106471100d31">&#9670;&#160;</a></span>operator=()</h2>
+<a id="affd2e2cb72b96056fcf92fa27c190056" name="affd2e2cb72b96056fcf92fa27c190056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd2e2cb72b96056fcf92fa27c190056">&#9670;&#160;</a></span>coff_name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> * LIEF::PE::Symbol::coff_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>COFF string used to represents the (long) symbol name. </p>
+
+</div>
+</div>
+<a id="a5068360e7eb19046bf25b8f5c3d8dfa6" name="a5068360e7eb19046bf25b8f5c3d8dfa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5068360e7eb19046bf25b8f5c3d8dfa6">&#9670;&#160;</a></span>complex_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a46e20207be1426efbe6f2003b527e21d">COMPLEX_TYPE</a> LIEF::PE::Symbol::complex_type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The complex type (if any) </p>
+
+</div>
+</div>
+<a id="a633c0b84c0d9526cfcb17e1c379a8329" name="a633c0b84c0d9526cfcb17e1c379a8329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633c0b84c0d9526cfcb17e1c379a8329">&#9670;&#160;</a></span>is_external()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Symbol::is_external </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96b8e79f8415a824fb164565c1e668aa" name="a96b8e79f8415a824fb164565c1e668aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b8e79f8415a824fb164565c1e668aa">&#9670;&#160;</a></span>is_file_record()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Symbol::is_file_record </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c6c5ba82ff30f9f8aba253d80311b2e" name="a8c6c5ba82ff30f9f8aba253d80311b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6c5ba82ff30f9f8aba253d80311b2e">&#9670;&#160;</a></span>is_function_line_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Symbol::is_function_line_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d16abc597b2947315d1de68bbc57a06" name="a2d16abc597b2947315d1de68bbc57a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d16abc597b2947315d1de68bbc57a06">&#9670;&#160;</a></span>is_reversed_sec_idx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool LIEF::PE::Symbol::is_reversed_sec_idx </td>
+          <td>(</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the given section index is a reserved value. </p>
+
+</div>
+</div>
+<a id="a245384d7fcaf8ced18e8473bd85b0559" name="a245384d7fcaf8ced18e8473bd85b0559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245384d7fcaf8ced18e8473bd85b0559">&#9670;&#160;</a></span>is_undefined()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Symbol::is_undefined </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55e8a36d6ec563886a3ac61bf68b5b7d" name="a55e8a36d6ec563886a3ac61bf68b5b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e8a36d6ec563886a3ac61bf68b5b7d">&#9670;&#160;</a></span>is_weak_external()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Symbol::is_weak_external </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae745a52b3805070bf0a5a020c008518d" name="ae745a52b3805070bf0a5a020c008518d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae745a52b3805070bf0a5a020c008518d">&#9670;&#160;</a></span>name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; LIEF::PE::Symbol::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Name of the symbol. If the symbol does not use a short name, it returns the string pointed by the COFF string offset. </p>
+
+<p>Reimplemented from <a class="el" href="classLIEF_1_1Symbol.html#af77d34a7aec38f1dea4f9a3c448775a0">LIEF::Symbol</a>.</p>
+
+</div>
+</div>
+<a id="ab0a9bae8f1987ea4636c3ef2a92d8ed5" name="ab0a9bae8f1987ea4636c3ef2a92d8ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a9bae8f1987ea4636c3ef2a92d8ed5">&#9670;&#160;</a></span>name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string &amp; LIEF::PE::Symbol::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classLIEF_1_1Symbol.html#af1fdeade77778b98eb5d8f6a1f94c685">LIEF::Symbol</a>.</p>
+
+</div>
+</div>
+<a id="a0b7ddf70cf19da58a2817985ff12b3a2" name="a0b7ddf70cf19da58a2817985ff12b3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7ddf70cf19da58a2817985ff12b3a2">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,7 +1068,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp; LIEF::PE::Symbol::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -422,16 +1076,16 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a14b20012ae2a84c6a709b3da557c87aa" name="a14b20012ae2a84c6a709b3da557c87aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14b20012ae2a84c6a709b3da557c87aa">&#9670;&#160;</a></span>section() <span class="overload">[1/2]</span></h2>
+<a id="ab8d7ec985d84f955bebc8f1f8dc4951a" name="ab8d7ec985d84f955bebc8f1f8dc4951a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d7ec985d84f955bebc8f1f8dc4951a">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> * LIEF::PE::Symbol::section </td>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp; LIEF::PE::Symbol::operator= </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -439,79 +1093,157 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3eadc32bde4a9b3c5b9a7eaddc46974d" name="a3eadc32bde4a9b3c5b9a7eaddc46974d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eadc32bde4a9b3c5b9a7eaddc46974d">&#9670;&#160;</a></span>section() <span class="overload">[2/2]</span></h2>
+<a id="a4d80ee7cf6790a7c9d6614b4eb903504" name="a4d80ee7cf6790a7c9d6614b4eb903504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d80ee7cf6790a7c9d6614b4eb903504">&#9670;&#160;</a></span>parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> * LIEF::PE::Symbol::section </td>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &gt; LIEF::PE::Symbol::parse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Parser.html">Parser</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1BinaryStream.html">BinaryStream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a562dda6ccfb1b82aa767315ad021f124" name="a562dda6ccfb1b82aa767315ad021f124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562dda6ccfb1b82aa767315ad021f124">&#9670;&#160;</a></span>section_idx() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t LIEF::PE::Symbol::section_idx </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>The signed integer that identifies the section, using a one-based index into the section table. Some values have special meaning: </p>
+<ul>
+<li>0: The symbol record is not yet assigned a section. A value of zero indicates that a reference to an external symbol is defined elsewhere. A value of non-zero is a common symbol with a size that is specified by the value.</li>
+<li>-1: The symbol has an absolute (non-relocatable) value and is not an address.</li>
+<li>-2: The symbol provides general type or debugging information but does not correspond to a section. Microsoft tools use this setting along with <code>.file</code> records </li>
+</ul>
 
 </div>
 </div>
-<a id="aeb8a172a2bb13b0715516ebb0cfc6c8f" name="aeb8a172a2bb13b0715516ebb0cfc6c8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb8a172a2bb13b0715516ebb0cfc6c8f">&#9670;&#160;</a></span>section_number()</h2>
+<a id="a9965d97109d5aa2d7a5d3f562f1bd189" name="a9965d97109d5aa2d7a5d3f562f1bd189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9965d97109d5aa2d7a5d3f562f1bd189">&#9670;&#160;</a></span>section_idx() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int16_t LIEF::PE::Symbol::section_number </td>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp; LIEF::PE::Symbol::section_idx </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abc5e247bf9586da7e5b8df3ac25264f3" name="abc5e247bf9586da7e5b8df3ac25264f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc5e247bf9586da7e5b8df3ac25264f3">&#9670;&#160;</a></span>storage_class()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceLIEF_1_1PE.html#a748c76daa5c3b2c06e0476c6dd92ce53">SYMBOL_STORAGE_CLASS</a> LIEF::PE::Symbol::storage_class </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afc95713dedf3e691255e4e57e04c6394" name="afc95713dedf3e691255e4e57e04c6394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc95713dedf3e691255e4e57e04c6394">&#9670;&#160;</a></span>swap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LIEF::PE::Symbol::swap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa911ee2ac968c6befda0cc5d93b73f34" name="aa911ee2ac968c6befda0cc5d93b73f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa911ee2ac968c6befda0cc5d93b73f34">&#9670;&#160;</a></span>storage_class() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a2447d3271e504824eacc76738c749476">STORAGE_CLASS</a> LIEF::PE::Symbol::storage_class </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Storage class of the symbol which indicates what kind of definition a symbol represents. </p>
+
+</div>
+</div>
+<a id="a05166241d766b73cdb97f55acf901120" name="a05166241d766b73cdb97f55acf901120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05166241d766b73cdb97f55acf901120">&#9670;&#160;</a></span>storage_class() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp; LIEF::PE::Symbol::storage_class </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a id="a83d56b5a23b2de1fc6d768e6714f70a5" name="a83d56b5a23b2de1fc6d768e6714f70a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83d56b5a23b2de1fc6d768e6714f70a5">&#9670;&#160;</a></span>type()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d56b5a23b2de1fc6d768e6714f70a5">&#9670;&#160;</a></span>type() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint16_t LIEF::PE::Symbol::type </td>
@@ -520,24 +1252,134 @@ Additional Inherited Members</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>The symbol type. The first byte represents the base type (see: <a class="el" href="#aa131808cbe659903eb456404722822c1" title="The simple (base) data type.">base_type()</a>) while the upper byte represents the complex type, if any (see: <a class="el" href="#a5068360e7eb19046bf25b8f5c3d8dfa6" title="The complex type (if any)">complex_type()</a>). </p>
 
 </div>
 </div>
-<a id="ab3a495e03f8eb449f06e85a043bc91a7" name="ab3a495e03f8eb449f06e85a043bc91a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3a495e03f8eb449f06e85a043bc91a7">&#9670;&#160;</a></span>wname()</h2>
+<a id="a48ef69bd352a3160d8add8d95b7c3c36" name="a48ef69bd352a3160d8add8d95b7c3c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ef69bd352a3160d8add8d95b7c3c36">&#9670;&#160;</a></span>type() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::wstring LIEF::PE::Symbol::wname </td>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Symbol.html">Symbol</a> &amp; LIEF::PE::Symbol::type </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ty</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a03d07652d2901358a9bd3f0a0bc9a43a" name="a03d07652d2901358a9bd3f0a0bc9a43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d07652d2901358a9bd3f0a0bc9a43a">&#9670;&#160;</a></span>SYM_COMPLEX_TYPE_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::PE::Symbol::SYM_COMPLEX_TYPE_SHIFT = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5a3cd17e5a77d8fae41d80a5cedd7a4" name="ae5a3cd17e5a77d8fae41d80a5cedd7a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a3cd17e5a77d8fae41d80a5cedd7a4">&#9670;&#160;</a></span>SYM_SEC_IDX_ABS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::PE::Symbol::SYM_SEC_IDX_ABS = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The symbol has an absolute (non-relocatable) value and is not an address. </p>
+
+</div>
+</div>
+<a id="a7088877d02a9497da6c8e478bdce8848" name="a7088877d02a9497da6c8e478bdce8848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7088877d02a9497da6c8e478bdce8848">&#9670;&#160;</a></span>SYM_SEC_IDX_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::PE::Symbol::SYM_SEC_IDX_DEBUG = -2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The symbol provides general type or debugging information but does not correspond to a section. Microsoft tools use this setting along with <code>.file</code> records. </p>
+
+</div>
+</div>
+<a id="ab1c61acc7c6d032084542b250e40df1c" name="ab1c61acc7c6d032084542b250e40df1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c61acc7c6d032084542b250e40df1c">&#9670;&#160;</a></span>SYM_SEC_IDX_UNDEF</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::PE::Symbol::SYM_SEC_IDX_UNDEF = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The symbol record is not yet assigned a section. A value of zero indicates that a reference to an external symbol is defined elsewhere. A value of non-zero is a common symbol with a size that is specified by the value. </p>
 
 </div>
 </div>

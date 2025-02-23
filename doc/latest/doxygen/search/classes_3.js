@@ -41,6 +41,15 @@ var searchData=
   ['dynamicentrylibrary_38',['DynamicEntryLibrary',['../classLIEF_1_1ELF_1_1DynamicEntryLibrary.html',1,'LIEF::ELF']]],
   ['dynamicentryrpath_39',['DynamicEntryRpath',['../classLIEF_1_1ELF_1_1DynamicEntryRpath.html',1,'LIEF::ELF']]],
   ['dynamicentryrunpath_40',['DynamicEntryRunPath',['../classLIEF_1_1ELF_1_1DynamicEntryRunPath.html',1,'LIEF::ELF']]],
-  ['dynamicsharedobject_41',['DynamicSharedObject',['../classLIEF_1_1ELF_1_1DynamicSharedObject.html',1,'LIEF::ELF']]],
-  ['dynamicsymbolcommand_42',['DynamicSymbolCommand',['../classLIEF_1_1MachO_1_1DynamicSymbolCommand.html',1,'LIEF::MachO']]]
+  ['dynamicfixup_41',['DynamicFixup',['../classLIEF_1_1PE_1_1DynamicFixup.html',1,'LIEF::PE']]],
+  ['dynamicfixuparm64kernel_42',['DynamicFixupARM64Kernel',['../classLIEF_1_1PE_1_1DynamicFixupARM64Kernel.html',1,'LIEF::PE']]],
+  ['dynamicfixuparm64x_43',['DynamicFixupARM64X',['../classLIEF_1_1PE_1_1DynamicFixupARM64X.html',1,'LIEF::PE']]],
+  ['dynamicfixupcontroltransfer_44',['DynamicFixupControlTransfer',['../classLIEF_1_1PE_1_1DynamicFixupControlTransfer.html',1,'LIEF::PE']]],
+  ['dynamicfixupgeneric_45',['DynamicFixupGeneric',['../classLIEF_1_1PE_1_1DynamicFixupGeneric.html',1,'LIEF::PE']]],
+  ['dynamicfixupunknown_46',['DynamicFixupUnknown',['../classLIEF_1_1PE_1_1DynamicFixupUnknown.html',1,'LIEF::PE']]],
+  ['dynamicrelocation_47',['DynamicRelocation',['../classLIEF_1_1PE_1_1DynamicRelocation.html',1,'LIEF::PE']]],
+  ['dynamicrelocationv1_48',['DynamicRelocationV1',['../classLIEF_1_1PE_1_1DynamicRelocationV1.html',1,'LIEF::PE']]],
+  ['dynamicrelocationv2_49',['DynamicRelocationV2',['../classLIEF_1_1PE_1_1DynamicRelocationV2.html',1,'LIEF::PE']]],
+  ['dynamicsharedobject_50',['DynamicSharedObject',['../classLIEF_1_1ELF_1_1DynamicSharedObject.html',1,'LIEF::ELF']]],
+  ['dynamicsymbolcommand_51',['DynamicSymbolCommand',['../classLIEF_1_1MachO_1_1DynamicSymbolCommand.html',1,'LIEF::MachO']]]
 ];

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -182,8 +182,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afcbc6999149b22bdf96789f307825665"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the content.  <br /></td></tr>
 <tr class="separator:afcbc6999149b22bdf96789f307825665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c9e855c7782beba7b5d3226add70c0" id="r_a84c9e855c7782beba7b5d3226add70c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84c9e855c7782beba7b5d3226add70c0">has_section</a> () const</td></tr>
-<tr class="memdesc:a84c9e855c7782beba7b5d3226add70c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the content of this data directory is associated with a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> Cection.  <br /></td></tr>
+<tr class="memdesc:a84c9e855c7782beba7b5d3226add70c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the content of this data directory is associated with a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> <a class="el" href="classLIEF_1_1PE_1_1Section.html" title="Class which represents a PE section.">Section</a>.  <br /></td></tr>
 <tr class="separator:a84c9e855c7782beba7b5d3226add70c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98436ec3b23123c55f31e5a76487482e" id="r_a98436ec3b23123c55f31e5a76487482e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; const uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98436ec3b23123c55f31e5a76487482e">content</a> () const</td></tr>
+<tr class="memdesc:a98436ec3b23123c55f31e5a76487482e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw content (bytes) referenced by this data directory.  <br /></td></tr>
+<tr class="separator:a98436ec3b23123c55f31e5a76487482e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0968d972cacb49261b7b6b2048d739fb" id="r_a0968d972cacb49261b7b6b2048d739fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0968d972cacb49261b7b6b2048d739fb">content</a> ()</td></tr>
+<tr class="separator:a0968d972cacb49261b7b6b2048d739fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec2819a9d8431c9c6bc86df01943bd86" id="r_aec2819a9d8431c9c6bc86df01943bd86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec2819a9d8431c9c6bc86df01943bd86">section</a> ()</td></tr>
 <tr class="memdesc:aec2819a9d8431c9c6bc86df01943bd86"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1PE_1_1Section.html" title="Class which represents a PE section.">Section</a> associated with the <a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html" title="Class that represents a PE data directory entry.">DataDirectory</a>.  <br /></td></tr>
 <tr class="separator:aec2819a9d8431c9c6bc86df01943bd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,6 +447,50 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0968d972cacb49261b7b6b2048d739fb" name="a0968d972cacb49261b7b6b2048d739fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0968d972cacb49261b7b6b2048d739fb">&#9670;&#160;</a></span>content() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; uint8_t &gt; LIEF::PE::DataDirectory::content </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98436ec3b23123c55f31e5a76487482e" name="a98436ec3b23123c55f31e5a76487482e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98436ec3b23123c55f31e5a76487482e">&#9670;&#160;</a></span>content() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; const uint8_t &gt; LIEF::PE::DataDirectory::content </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Raw content (bytes) referenced by this data directory. </p>
+
+</div>
+</div>
 <a id="a84c9e855c7782beba7b5d3226add70c0" name="a84c9e855c7782beba7b5d3226add70c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84c9e855c7782beba7b5d3226add70c0">&#9670;&#160;</a></span>has_section()</h2>
 
@@ -465,7 +514,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if the content of this data directory is associated with a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> Cection. </p>
+<p>Check if the content of this data directory is associated with a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> <a class="el" href="classLIEF_1_1PE_1_1Section.html" title="Class which represents a PE section.">Section</a>. </p>
 
 </div>
 </div>

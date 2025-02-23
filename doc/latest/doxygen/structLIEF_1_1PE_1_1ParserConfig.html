@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -89,6 +89,7 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structLIEF_1_1PE_1_1ParserConfig-members.html">List of all members</a>  </div>
@@ -101,8 +102,15 @@ $(function(){ initResizable(false); });
 
 <p><code>#include &lt;<a class="el" href="PE_2ParserConfig_8hpp_source.html">ParserConfig.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a628534d85404f15b292271911bc3182e" id="r_a628534d85404f15b292271911bc3182e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a628534d85404f15b292271911bc3182e">to_string</a> () const</td></tr>
+<tr class="separator:a628534d85404f15b292271911bc3182e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad1e3c6fb48df59b47c9aac1d40a7eea2" id="r_ad1e3c6fb48df59b47c9aac1d40a7eea2"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structLIEF_1_1PE_1_1ParserConfig.html">ParserConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e3c6fb48df59b47c9aac1d40a7eea2">default_conf</a> ()</td></tr>
+<tr class="separator:ad1e3c6fb48df59b47c9aac1d40a7eea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae8546befd1dddcf9f34c5ac17b15bf5" id="r_aae8546befd1dddcf9f34c5ac17b15bf5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structLIEF_1_1PE_1_1ParserConfig.html">ParserConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae8546befd1dddcf9f34c5ac17b15bf5">all</a> ()</td></tr>
 <tr class="separator:aae8546befd1dddcf9f34c5ac17b15bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -123,6 +131,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7926eb5ffe01dade79aa470837890a5f" id="r_a7926eb5ffe01dade79aa470837890a5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7926eb5ffe01dade79aa470837890a5f">parse_reloc</a> = true</td></tr>
 <tr class="memdesc:a7926eb5ffe01dade79aa470837890a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> relocations.  <br /></td></tr>
 <tr class="separator:a7926eb5ffe01dade79aa470837890a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec51312c78db3ae9b94eea7a8fbce2b" id="r_a3ec51312c78db3ae9b94eea7a8fbce2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ec51312c78db3ae9b94eea7a8fbce2b">parse_exceptions</a> = false</td></tr>
+<tr class="memdesc:a3ec51312c78db3ae9b94eea7a8fbce2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it should parse in-depth exceptions metadata.  <br /></td></tr>
+<tr class="separator:a3ec51312c78db3ae9b94eea7a8fbce2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b7f182b54b91ff5c154aada8a865c2" id="r_ae9b7f182b54b91ff5c154aada8a865c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9b7f182b54b91ff5c154aada8a865c2">parse_arm64x_binary</a> = false</td></tr>
+<tr class="memdesc:ae9b7f182b54b91ff5c154aada8a865c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it should parse nested ARM64X binary.  <br /></td></tr>
+<tr class="separator:ae9b7f182b54b91ff5c154aada8a865c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This structure is used to tweak the <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> <a class="el" href="classLIEF_1_1PE_1_1Parser.html" title="Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...">Parser</a> (<a class="el" href="classLIEF_1_1PE_1_1Parser.html" title="Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...">PE::Parser</a>) </p>
@@ -150,11 +164,95 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">References <a class="el" href="#ae9b7f182b54b91ff5c154aada8a865c2">parse_arm64x_binary</a>, and <a class="el" href="#a3ec51312c78db3ae9b94eea7a8fbce2b">parse_exceptions</a>.</p>
+
+</div>
+</div>
+<a id="ad1e3c6fb48df59b47c9aac1d40a7eea2" name="ad1e3c6fb48df59b47c9aac1d40a7eea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e3c6fb48df59b47c9aac1d40a7eea2">&#9670;&#160;</a></span>default_conf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="structLIEF_1_1PE_1_1ParserConfig.html">ParserConfig</a> &amp; LIEF::PE::ParserConfig::default_conf </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p class="reference">References <a class="el" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea5b39c8b553c821e7cddc6da64b5bd2ee">LIEF::PE::DEFAULT</a>.</p>
 
 </div>
 </div>
+<a id="a628534d85404f15b292271911bc3182e" name="a628534d85404f15b292271911bc3182e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628534d85404f15b292271911bc3182e">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LIEF::PE::ParserConfig::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#aa4338d8c897468eb1834d2d8dba67968">operator&lt;&lt;</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae9b7f182b54b91ff5c154aada8a865c2" name="ae9b7f182b54b91ff5c154aada8a865c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b7f182b54b91ff5c154aada8a865c2">&#9670;&#160;</a></span>parse_arm64x_binary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::ParserConfig::parse_arm64x_binary = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether it should parse nested ARM64X binary. </p>
+<p>This option is set to off by default since it can introduce a certain overhead. </p>
+
+<p class="reference">Referenced by <a class="el" href="#aae8546befd1dddcf9f34c5ac17b15bf5">all()</a>.</p>
+
+</div>
+</div>
+<a id="a3ec51312c78db3ae9b94eea7a8fbce2b" name="a3ec51312c78db3ae9b94eea7a8fbce2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec51312c78db3ae9b94eea7a8fbce2b">&#9670;&#160;</a></span>parse_exceptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::ParserConfig::parse_exceptions = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether it should parse in-depth exceptions metadata. </p>
+<p>This option is set to off by default since it can introduce a certain overhead. </p>
+
+<p class="reference">Referenced by <a class="el" href="#aae8546befd1dddcf9f34c5ac17b15bf5">all()</a>.</p>
+
+</div>
+</div>
 <a id="a986b7527c1f652a74896aa1d254a6a55" name="a986b7527c1f652a74896aa1d254a6a55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a986b7527c1f652a74896aa1d254a6a55">&#9670;&#160;</a></span>parse_exports</h2>
 

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -144,6 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a18a7df115fe3066b0b92673630295ad7" id="r_a18a7df115fe3066b0b92673630295ad7"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18a7df115fe3066b0b92673630295ad7">path</a> () const</td></tr>
 <tr class="memdesc:a18a7df115fe3066b0b92673630295ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rpath value as a string.  <br /></td></tr>
 <tr class="separator:a18a7df115fe3066b0b92673630295ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0ef1d2af07a7741a1c5686e688db67" id="r_a8f0ef1d2af07a7741a1c5686e688db67"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f0ef1d2af07a7741a1c5686e688db67">path_offset</a> () const</td></tr>
+<tr class="memdesc:a8f0ef1d2af07a7741a1c5686e688db67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Original string offset of the path.  <br /></td></tr>
+<tr class="separator:a8f0ef1d2af07a7741a1c5686e688db67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a2e7417ee18bcb0a956ff84f38a333c" id="r_a2a2e7417ee18bcb0a956ff84f38a333c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a2e7417ee18bcb0a956ff84f38a333c">path</a> (std::string path)</td></tr>
 <tr class="separator:a2a2e7417ee18bcb0a956ff84f38a333c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b8c5a4b28d37aa4efe6082393c19ac4" id="r_a9b8c5a4b28d37aa4efe6082393c19ac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b8c5a4b28d37aa4efe6082393c19ac4">accept</a> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
@@ -294,7 +297,9 @@ Additional Inherited Members</h2></td></tr>
 &#160;&#160;<a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a2bfb0c26b5242030337116bef725445f">DYLD_EXPORTS_TRIE</a> = 0x80000033u
 , <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a43421aa3f39ed767ac14308f083fec09">DYLD_CHAINED_FIXUPS</a> = 0x80000034u
 , <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1abb5507cbd8f714f00428e09c76c72787">FILESET_ENTRY</a> = 0x80000035u
-, <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a6acb7808b348218dec2274b1382a33fb">LIEF_UNKNOWN</a> = 0xffee0001u
+, <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a336e12fbb309dcdd0adae25d7b68e3ae">ATOM_INFO</a> = 0x00000036u
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a6acb7808b348218dec2274b1382a33fb">LIEF_UNKNOWN</a> = 0xffee0001u
 <br />
  }</td></tr>
 <tr class="separator:ae233a759e54dbc70715dcfb6465637b1 inherit pub_types_classLIEF_1_1MachO_1_1LoadCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -604,6 +609,33 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f0ef1d2af07a7741a1c5686e688db67" name="a8f0ef1d2af07a7741a1c5686e688db67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f0ef1d2af07a7741a1c5686e688db67">&#9670;&#160;</a></span>path_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LIEF::MachO::RPathCommand::path_offset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Original string offset of the path. </p>
 
 </div>
 </div>

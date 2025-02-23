@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -142,16 +142,39 @@ Public Types</h2></td></tr>
 , <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caf13e853068ec6bfb9b8d0acd7bdd3c29">GNU_PROPERTY</a> = 0x6474e553
 , <br />
 &#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca66bfd08cbded01fc63d849b19f5dc325">GNU_RELRO</a> = 0x6474e552
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caad66354e87c5a1989d8a9e44d8d89e8b">PAX_FLAGS</a> = 0x65041580
 , <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca3832bb3c3825d2b4c2894ddf85066b57">ARM_ARCHEXT</a> = 0x70000000 | PT_ARM
 , <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca747b2b250229f41d3c0b494e0d12ba7d">ARM_EXIDX</a> = 0x70000001 | PT_ARM
-, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca771731c5f192cff83459c2b30f388e38">AARCH64_MEMTAG_MTE</a> = 0x70000002 | PT_AARCH64
 , <br />
-&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca9d4f079b6799e873829a5293234342df">MIPS_REGINFO</a> = 0x70000000 | PT_MIPS
+&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca771731c5f192cff83459c2b30f388e38">AARCH64_MEMTAG_MTE</a> = 0x70000002 | PT_AARCH64
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca9d4f079b6799e873829a5293234342df">MIPS_REGINFO</a> = 0x70000000 | PT_MIPS
 , <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cadc443fe00dddbb546051447fe710e2c9">MIPS_RTPROC</a> = 0x70000001 | PT_MIPS
 , <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca7f395fff54c42c0024f0bcdb158b7dad">MIPS_OPTIONS</a> = 0x70000002 | PT_MIPS
-, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cac700157163749c944bda1d2bcfab2695">MIPS_ABIFLAGS</a> = 0x70000003 | PT_MIPS
 , <br />
-&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caac1f9aa6780ea7fa7797d87031858122">RISCV_ATTRIBUTES</a> = 0x70000003 | PT_RISCV
+&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cac700157163749c944bda1d2bcfab2695">MIPS_ABIFLAGS</a> = 0x70000003 | PT_MIPS
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caac1f9aa6780ea7fa7797d87031858122">RISCV_ATTRIBUTES</a> = 0x70000003 | PT_RISCV
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cab0ab3739f22b0415e23d3833c006b0ff">IA_64_EXT</a> = (0x70000000 + 0x0) | PT_IA_64
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca9fcd2d0f6ba787e0b6223b78a9be2565">IA_64_UNWIND</a> = (0x70000000 + 0x1) | PT_IA_64
+, <br />
+&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca7fda50e9f304a6b50427aa27deb7d1d9">HP_TLS</a> = (0x60000000 + 0x0) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca21820273d2484681bd732ce92f7a07f2">HP_CORE_NONE</a> = (0x60000000 + 0x1) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca917fc78be4f9ee6cf0ceed43d8385f91">HP_CORE_VERSION</a> = (0x60000000 + 0x2) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cafb197e1a79b5bb8f1645cc1745f3e8ee">HP_CORE_KERNEL</a> = (0x60000000 + 0x3) | PT_HPUX
+, <br />
+&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca2f5a00723cc14de377d22db7d5940ea2">HP_CORE_COMM</a> = (0x60000000 + 0x4) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca1aa7276e95081209a2afc32e783292a1">HP_CORE_PROC</a> = (0x60000000 + 0x5) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cad4b9bddb1f291273a3e7b517ca2370dd">HP_CORE_LOADABLE</a> = (0x60000000 + 0x6) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caf8cdc7fbbedbadaef55efe0c1a21b08f">HP_CORE_STACK</a> = (0x60000000 + 0x7) | PT_HPUX
+, <br />
+&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caffae708d095c4987e300fec25d705ded">HP_CORE_SHM</a> = (0x60000000 + 0x8) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca38362253612e99e1cff2bc7dd6f11297">HP_CORE_MMF</a> = (0x60000000 + 0x9) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cadbf9295a29e0c14795172544ad0202c2">HP_PARALLEL</a> = (0x60000000 + 0x10) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caefea7bb8b062efa9b194b7203c58148a">HP_FASTBIND</a> = (0x60000000 + 0x11) | PT_HPUX
+, <br />
+&#160;&#160;<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caaee44955adebc8b3f5ec759a96c1f3eb">HP_OPT_ANNOT</a> = (0x60000000 + 0x12) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889cacd1546c441458d0f5cb475b7fb73bc7c">HP_HSL_ANNOT</a> = (0x60000000 + 0x13) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889ca536e5f713551e80e2cd6419861896c1c">HP_STACK</a> = (0x60000000 + 0x14) | PT_HPUX
+, <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889caf95ffaf437f23c6d2a1b8127c695aab6">HP_CORE_UTSNAME</a> = (0x60000000 + 0x15) | PT_HPUX
 <br />
  }</td></tr>
 <tr class="separator:ab9e5337a2630d6e2112b800c4dbd889c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,8 +327,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab32423afb7305cae6ab0d3b501e30cd3" id="r_ab32423afb7305cae6ab0d3b501e30cd3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889c">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab32423afb7305cae6ab0d3b501e30cd3">type_from</a> (uint64_t value, <a class="el" href="namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2e">ARCH</a> arch)</td></tr>
-<tr class="separator:ab32423afb7305cae6ab0d3b501e30cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914fcf85983562deea9546bb34e9d6b6" id="r_a914fcf85983562deea9546bb34e9d6b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889c">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a914fcf85983562deea9546bb34e9d6b6">type_from</a> (uint64_t value, <a class="el" href="namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2e">ARCH</a> arch, <a class="el" href="classLIEF_1_1ELF_1_1Header.html#acecec836b3b9811c5d65b3634e1533d7">Header::OS_ABI</a> os)</td></tr>
+<tr class="separator:a914fcf85983562deea9546bb34e9d6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad659bf18f43b2ff661b6ba67f51e4237" id="r_ad659bf18f43b2ff661b6ba67f51e4237"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad659bf18f43b2ff661b6ba67f51e4237">to_value</a> (<a class="el" href="#ab9e5337a2630d6e2112b800c4dbd889c">TYPE</a> <a class="el" href="#a9152294a3f0566e701bcfaa22cd3ec82">type</a>)</td></tr>
 <tr class="separator:ad659bf18f43b2ff661b6ba67f51e4237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5f055f681cb4f5427a81297f73a4f11" id="r_ae5f055f681cb4f5427a81297f73a4f11"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceLIEF.html#ae870038bb7ca9cc4686ab28ae94aa45a">result</a>&lt; <a class="el" href="classLIEF_1_1ELF_1_1Segment.html">Segment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f055f681cb4f5427a81297f73a4f11">from_raw</a> (const uint8_t *ptr, size_t size)</td></tr>
@@ -317,6 +340,8 @@ Static Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a2004fb14f165fe5264506ff487065017" id="r_a2004fb14f165fe5264506ff487065017"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a> = 33</td></tr>
 <tr class="separator:a2004fb14f165fe5264506ff487065017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae412a0fa4a4429523237772955972340" id="r_ae412a0fa4a4429523237772955972340"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae412a0fa4a4429523237772955972340">PT_OS_BIT</a> = 53</td></tr>
+<tr class="separator:ae412a0fa4a4429523237772955972340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc180f882feac44f4d51f429954a69d" id="r_a1cc180f882feac44f4d51f429954a69d"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cc180f882feac44f4d51f429954a69d">PT_MASK</a> = (uint64_t(1) &lt;&lt; <a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a>) - 1</td></tr>
 <tr class="separator:a1cc180f882feac44f4d51f429954a69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07dd284d66b34eb9c74ef0a51a3cf5e5" id="r_a07dd284d66b34eb9c74ef0a51a3cf5e5"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07dd284d66b34eb9c74ef0a51a3cf5e5">PT_ARM</a> = uint64_t(1) &lt;&lt; <a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a></td></tr>
@@ -327,6 +352,10 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a742a3084d5e963c290d5c9c1b1da1faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa4fc91110232d3b83ca91f2da3538b7" id="r_aaa4fc91110232d3b83ca91f2da3538b7"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa4fc91110232d3b83ca91f2da3538b7">PT_RISCV</a> = uint64_t(4) &lt;&lt; <a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a></td></tr>
 <tr class="separator:aaa4fc91110232d3b83ca91f2da3538b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d648dc9627e4af49b8e4715d9e44df" id="r_ac0d648dc9627e4af49b8e4715d9e44df"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0d648dc9627e4af49b8e4715d9e44df">PT_IA_64</a> = uint64_t(5) &lt;&lt; <a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a></td></tr>
+<tr class="separator:ac0d648dc9627e4af49b8e4715d9e44df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce4e23d03577d7bf696f98002952aeb" id="r_acce4e23d03577d7bf696f98002952aeb"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acce4e23d03577d7bf696f98002952aeb">PT_HPUX</a> = uint64_t(1) &lt;&lt; <a class="el" href="#ae412a0fa4a4429523237772955972340">PT_OS_BIT</a></td></tr>
+<tr class="separator:acce4e23d03577d7bf696f98002952aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class which represents the <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> segments. </p>
@@ -446,6 +475,7 @@ Static Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca66bfd08cbded01fc63d849b19f5dc325" name="ab9e5337a2630d6e2112b800c4dbd889ca66bfd08cbded01fc63d849b19f5dc325"></a>GNU_RELRO&#160;</td><td class="fielddoc"><p>Read-only after relocation. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caad66354e87c5a1989d8a9e44d8d89e8b" name="ab9e5337a2630d6e2112b800c4dbd889caad66354e87c5a1989d8a9e44d8d89e8b"></a>PAX_FLAGS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca3832bb3c3825d2b4c2894ddf85066b57" name="ab9e5337a2630d6e2112b800c4dbd889ca3832bb3c3825d2b4c2894ddf85066b57"></a>ARM_ARCHEXT&#160;</td><td class="fielddoc"><p>Platform architecture compatibility info </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca747b2b250229f41d3c0b494e0d12ba7d" name="ab9e5337a2630d6e2112b800c4dbd889ca747b2b250229f41d3c0b494e0d12ba7d"></a>ARM_EXIDX&#160;</td><td class="fielddoc"></td></tr>
@@ -459,6 +489,24 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889cac700157163749c944bda1d2bcfab2695" name="ab9e5337a2630d6e2112b800c4dbd889cac700157163749c944bda1d2bcfab2695"></a>MIPS_ABIFLAGS&#160;</td><td class="fielddoc"><p>Abiflags segment. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caac1f9aa6780ea7fa7797d87031858122" name="ab9e5337a2630d6e2112b800c4dbd889caac1f9aa6780ea7fa7797d87031858122"></a>RISCV_ATTRIBUTES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889cab0ab3739f22b0415e23d3833c006b0ff" name="ab9e5337a2630d6e2112b800c4dbd889cab0ab3739f22b0415e23d3833c006b0ff"></a>IA_64_EXT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca9fcd2d0f6ba787e0b6223b78a9be2565" name="ab9e5337a2630d6e2112b800c4dbd889ca9fcd2d0f6ba787e0b6223b78a9be2565"></a>IA_64_UNWIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca7fda50e9f304a6b50427aa27deb7d1d9" name="ab9e5337a2630d6e2112b800c4dbd889ca7fda50e9f304a6b50427aa27deb7d1d9"></a>HP_TLS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca21820273d2484681bd732ce92f7a07f2" name="ab9e5337a2630d6e2112b800c4dbd889ca21820273d2484681bd732ce92f7a07f2"></a>HP_CORE_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca917fc78be4f9ee6cf0ceed43d8385f91" name="ab9e5337a2630d6e2112b800c4dbd889ca917fc78be4f9ee6cf0ceed43d8385f91"></a>HP_CORE_VERSION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889cafb197e1a79b5bb8f1645cc1745f3e8ee" name="ab9e5337a2630d6e2112b800c4dbd889cafb197e1a79b5bb8f1645cc1745f3e8ee"></a>HP_CORE_KERNEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca2f5a00723cc14de377d22db7d5940ea2" name="ab9e5337a2630d6e2112b800c4dbd889ca2f5a00723cc14de377d22db7d5940ea2"></a>HP_CORE_COMM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca1aa7276e95081209a2afc32e783292a1" name="ab9e5337a2630d6e2112b800c4dbd889ca1aa7276e95081209a2afc32e783292a1"></a>HP_CORE_PROC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889cad4b9bddb1f291273a3e7b517ca2370dd" name="ab9e5337a2630d6e2112b800c4dbd889cad4b9bddb1f291273a3e7b517ca2370dd"></a>HP_CORE_LOADABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caf8cdc7fbbedbadaef55efe0c1a21b08f" name="ab9e5337a2630d6e2112b800c4dbd889caf8cdc7fbbedbadaef55efe0c1a21b08f"></a>HP_CORE_STACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caffae708d095c4987e300fec25d705ded" name="ab9e5337a2630d6e2112b800c4dbd889caffae708d095c4987e300fec25d705ded"></a>HP_CORE_SHM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca38362253612e99e1cff2bc7dd6f11297" name="ab9e5337a2630d6e2112b800c4dbd889ca38362253612e99e1cff2bc7dd6f11297"></a>HP_CORE_MMF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889cadbf9295a29e0c14795172544ad0202c2" name="ab9e5337a2630d6e2112b800c4dbd889cadbf9295a29e0c14795172544ad0202c2"></a>HP_PARALLEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caefea7bb8b062efa9b194b7203c58148a" name="ab9e5337a2630d6e2112b800c4dbd889caefea7bb8b062efa9b194b7203c58148a"></a>HP_FASTBIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caaee44955adebc8b3f5ec759a96c1f3eb" name="ab9e5337a2630d6e2112b800c4dbd889caaee44955adebc8b3f5ec759a96c1f3eb"></a>HP_OPT_ANNOT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889cacd1546c441458d0f5cb475b7fb73bc7c" name="ab9e5337a2630d6e2112b800c4dbd889cacd1546c441458d0f5cb475b7fb73bc7c"></a>HP_HSL_ANNOT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889ca536e5f713551e80e2cd6419861896c1c" name="ab9e5337a2630d6e2112b800c4dbd889ca536e5f713551e80e2cd6419861896c1c"></a>HP_STACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9e5337a2630d6e2112b800c4dbd889caf95ffaf437f23c6d2a1b8127c695aab6" name="ab9e5337a2630d6e2112b800c4dbd889caf95ffaf437f23c6d2a1b8127c695aab6"></a>HP_CORE_UTSNAME&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -1461,8 +1509,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab32423afb7305cae6ab0d3b501e30cd3" name="ab32423afb7305cae6ab0d3b501e30cd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab32423afb7305cae6ab0d3b501e30cd3">&#9670;&#160;</a></span>type_from()</h2>
+<a id="a914fcf85983562deea9546bb34e9d6b6" name="a914fcf85983562deea9546bb34e9d6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914fcf85983562deea9546bb34e9d6b6">&#9670;&#160;</a></span>type_from()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1478,7 +1526,12 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2e">ARCH</a></td>          <td class="paramname"><span class="paramname"><em>arch</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2e">ARCH</a></td>          <td class="paramname"><span class="paramname"><em>arch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1ELF_1_1Header.html#acecec836b3b9811c5d65b3634e1533d7">Header::OS_ABI</a></td>          <td class="paramname"><span class="paramname"><em>os</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1661,6 +1714,50 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="acce4e23d03577d7bf696f98002952aeb" name="acce4e23d03577d7bf696f98002952aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce4e23d03577d7bf696f98002952aeb">&#9670;&#160;</a></span>PT_HPUX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::ELF::Segment::PT_HPUX = uint64_t(1) &lt;&lt; <a class="el" href="#ae412a0fa4a4429523237772955972340">PT_OS_BIT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0d648dc9627e4af49b8e4715d9e44df" name="ac0d648dc9627e4af49b8e4715d9e44df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d648dc9627e4af49b8e4715d9e44df">&#9670;&#160;</a></span>PT_IA_64</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::ELF::Segment::PT_IA_64 = uint64_t(5) &lt;&lt; <a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1cc180f882feac44f4d51f429954a69d" name="a1cc180f882feac44f4d51f429954a69d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1cc180f882feac44f4d51f429954a69d">&#9670;&#160;</a></span>PT_MASK</h2>
 
@@ -1694,6 +1791,28 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">uint64_t LIEF::ELF::Segment::PT_MIPS = uint64_t(3) &lt;&lt; <a class="el" href="#a2004fb14f165fe5264506ff487065017">PT_BIT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae412a0fa4a4429523237772955972340" name="ae412a0fa4a4429523237772955972340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae412a0fa4a4429523237772955972340">&#9670;&#160;</a></span>PT_OS_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::ELF::Segment::PT_OS_BIT = 53</td>
         </tr>
       </table>
   </td>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -189,10 +189,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adc5e513f267a0dade5217d4a803e225d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0609db57ff4c3edafc7b559c066698" id="r_a8b0609db57ff4c3edafc7b559c066698"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b0609db57ff4c3edafc7b559c066698">Section</a> ()=default</td></tr>
 <tr class="separator:a8b0609db57ff4c3edafc7b559c066698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a18d9cbad57211d68c1916d637b5235" id="r_a6a18d9cbad57211d68c1916d637b5235"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a18d9cbad57211d68c1916d637b5235">Section</a> (const std::vector&lt; uint8_t &gt; &amp;data, const std::string &amp;<a class="el" href="#a9d1ec4d4651a6558f655c5a155181b3a">name</a>=&quot;&quot;, uint32_t <a class="el" href="#a9c5306bfd944b2e82ab92c62b01f2332">characteristics</a>=0)</td></tr>
-<tr class="separator:a6a18d9cbad57211d68c1916d637b5235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e98402fce1b7e9ebb30bc7d579c7855" id="r_a9e98402fce1b7e9ebb30bc7d579c7855"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e98402fce1b7e9ebb30bc7d579c7855">Section</a> (const std::string &amp;<a class="el" href="#a9d1ec4d4651a6558f655c5a155181b3a">name</a>)</td></tr>
-<tr class="separator:a9e98402fce1b7e9ebb30bc7d579c7855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b923afe3aa2a32103df5f83bc51a766" id="r_a1b923afe3aa2a32103df5f83bc51a766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b923afe3aa2a32103df5f83bc51a766">Section</a> (std::string <a class="el" href="#a9d1ec4d4651a6558f655c5a155181b3a">name</a>)</td></tr>
+<tr class="separator:a1b923afe3aa2a32103df5f83bc51a766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed357d8c642d8fd2058a86c519df3cdd" id="r_aed357d8c642d8fd2058a86c519df3cdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed357d8c642d8fd2058a86c519df3cdd">Section</a> (std::string <a class="el" href="#a9d1ec4d4651a6558f655c5a155181b3a">name</a>, std::vector&lt; uint8_t &gt; <a class="el" href="#a8c1e3af9025872f6e80a585d28c42065">content</a>)</td></tr>
+<tr class="separator:aed357d8c642d8fd2058a86c519df3cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c06bed857a938ad14cfefa826ffd4d" id="r_a50c06bed857a938ad14cfefa826ffd4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50c06bed857a938ad14cfefa826ffd4d">operator=</a> (const <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;)=default</td></tr>
 <tr class="separator:a50c06bed857a938ad14cfefa826ffd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a123e199d6b744f7fd8537e32556e9419" id="r_a123e199d6b744f7fd8537e32556e9419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123e199d6b744f7fd8537e32556e9419">Section</a> (const <a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;)=default</td></tr>
@@ -229,18 +229,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c5306bfd944b2e82ab92c62b01f2332" id="r_a9c5306bfd944b2e82ab92c62b01f2332"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c5306bfd944b2e82ab92c62b01f2332">characteristics</a> () const</td></tr>
 <tr class="memdesc:a9c5306bfd944b2e82ab92c62b01f2332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristics of the section: it provides information about the permissions of the section when mapped. It can also provide information about the <em>purpose</em> of the section (contain code, BSS-like, ...)  <br /></td></tr>
 <tr class="separator:a9c5306bfd944b2e82ab92c62b01f2332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb4b2edc966d8e8841568b394759362a" id="r_aeb4b2edc966d8e8841568b394759362a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb4b2edc966d8e8841568b394759362a">is_type</a> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> <a class="el" href="#a00796614fbcb37aa68343e3cdbc81a57">type</a>) const</td></tr>
-<tr class="memdesc:aeb4b2edc966d8e8841568b394759362a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated do not use. It will likely change in a future release of <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>.  <br /></td></tr>
-<tr class="separator:aeb4b2edc966d8e8841568b394759362a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a364e4ea292c4aac42e33f2218dad2a7b" id="r_a364e4ea292c4aac42e33f2218dad2a7b"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364e4ea292c4aac42e33f2218dad2a7b">types</a> () const</td></tr>
-<tr class="memdesc:a364e4ea292c4aac42e33f2218dad2a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated do not use. It will likely change in a future release of <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>.  <br /></td></tr>
-<tr class="separator:a364e4ea292c4aac42e33f2218dad2a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a594bd37825f0d966b83fe54354532731" id="r_a594bd37825f0d966b83fe54354532731"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a594bd37825f0d966b83fe54354532731">has_characteristic</a> (<a class="el" href="#a802580e157009845c3859c02554bc6be">CHARACTERISTICS</a> c) const</td></tr>
 <tr class="memdesc:a594bd37825f0d966b83fe54354532731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the section has the given <a class="el" href="#a802580e157009845c3859c02554bc6be">CHARACTERISTICS</a>.  <br /></td></tr>
 <tr class="separator:a594bd37825f0d966b83fe54354532731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b63fa8786a7f3ed15d9f42b6d851d0c" id="r_a9b63fa8786a7f3ed15d9f42b6d851d0c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="#a802580e157009845c3859c02554bc6be">CHARACTERISTICS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b63fa8786a7f3ed15d9f42b6d851d0c">characteristics_list</a> () const</td></tr>
-<tr class="memdesc:a9b63fa8786a7f3ed15d9f42b6d851d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the section characteristics as a std::set.  <br /></td></tr>
+<tr class="memdesc:a9b63fa8786a7f3ed15d9f42b6d851d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the section characteristics.  <br /></td></tr>
 <tr class="separator:a9b63fa8786a7f3ed15d9f42b6d851d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d945fe7f7f00f5ba6ff8d841c988f26" id="r_a6d945fe7f7f00f5ba6ff8d841c988f26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d945fe7f7f00f5ba6ff8d841c988f26">is_discardable</a> () const</td></tr>
+<tr class="memdesc:a6d945fe7f7f00f5ba6ff8d841c988f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the section can be discarded as needed.  <br /></td></tr>
+<tr class="separator:a6d945fe7f7f00f5ba6ff8d841c988f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96f08ecf1f9cce14ca4b13d9a0730c88" id="r_a96f08ecf1f9cce14ca4b13d9a0730c88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96f08ecf1f9cce14ca4b13d9a0730c88">clear</a> (uint8_t c)</td></tr>
 <tr class="memdesc:a96f08ecf1f9cce14ca4b13d9a0730c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the content of the section with the given <code>char</code>  <br /></td></tr>
 <tr class="separator:a96f08ecf1f9cce14ca4b13d9a0730c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,22 +259,23 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afd9bcff292a7f036fecaa388c9d8e92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5f27ad5cbbd4fbaf9704621067d73e1" id="r_ad5f27ad5cbbd4fbaf9704621067d73e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f27ad5cbbd4fbaf9704621067d73e1">numberof_line_numbers</a> (uint16_t nb)</td></tr>
 <tr class="separator:ad5f27ad5cbbd4fbaf9704621067d73e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d1b30d7d1d51a2ed9ffdd952457f27" id="r_a11d1b30d7d1d51a2ed9ffdd952457f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11d1b30d7d1d51a2ed9ffdd952457f27">sizeof_raw_data</a> (uint32_t sizeOfRawData)</td></tr>
-<tr class="separator:a11d1b30d7d1d51a2ed9ffdd952457f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5239fe126d987cc940b0ab3a0ccdad" id="r_a1a5239fe126d987cc940b0ab3a0ccdad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a5239fe126d987cc940b0ab3a0ccdad">sizeof_raw_data</a> (uint32_t <a class="el" href="classLIEF_1_1Section.html#a065c691a85640ccd06a1634b2c219940">size</a>)</td></tr>
+<tr class="separator:a1a5239fe126d987cc940b0ab3a0ccdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaebbddd6f52d1791810f0051b39807b" id="r_abaebbddd6f52d1791810f0051b39807b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaebbddd6f52d1791810f0051b39807b">characteristics</a> (uint32_t characteristics)</td></tr>
 <tr class="separator:abaebbddd6f52d1791810f0051b39807b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00796614fbcb37aa68343e3cdbc81a57" id="r_a00796614fbcb37aa68343e3cdbc81a57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00796614fbcb37aa68343e3cdbc81a57">type</a> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> type)</td></tr>
-<tr class="separator:a00796614fbcb37aa68343e3cdbc81a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6210a4fd7e3a56ae295946b73784d12" id="r_ac6210a4fd7e3a56ae295946b73784d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6210a4fd7e3a56ae295946b73784d12">add_type</a> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> <a class="el" href="#a00796614fbcb37aa68343e3cdbc81a57">type</a>)</td></tr>
-<tr class="separator:ac6210a4fd7e3a56ae295946b73784d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf9d2fbe67d3d57875a143179f751159" id="r_acf9d2fbe67d3d57875a143179f751159"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf9d2fbe67d3d57875a143179f751159">remove_type</a> (<a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> <a class="el" href="#a00796614fbcb37aa68343e3cdbc81a57">type</a>)</td></tr>
-<tr class="separator:acf9d2fbe67d3d57875a143179f751159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c807b45e2ff25a36a0cd405a827c4b" id="r_a05c807b45e2ff25a36a0cd405a827c4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05c807b45e2ff25a36a0cd405a827c4b">coff_string</a> ()</td></tr>
+<tr class="memdesc:a05c807b45e2ff25a36a0cd405a827c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the COFF string associated with the section's name (or a nullptr)  <br /></td></tr>
+<tr class="separator:a05c807b45e2ff25a36a0cd405a827c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d534faede3d4cd69dd639691a71114c" id="r_a4d534faede3d4cd69dd639691a71114c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d534faede3d4cd69dd639691a71114c">coff_string</a> () const</td></tr>
+<tr class="separator:a4d534faede3d4cd69dd639691a71114c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34afd2fea3961728da24555ebe9ba4b8" id="r_a34afd2fea3961728da24555ebe9ba4b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34afd2fea3961728da24555ebe9ba4b8">remove_characteristic</a> (<a class="el" href="#a802580e157009845c3859c02554bc6be">CHARACTERISTICS</a> characteristic)</td></tr>
 <tr class="separator:a34afd2fea3961728da24555ebe9ba4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1f27538036f26e5164471869643d82" id="r_afd1f27538036f26e5164471869643d82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Section.html">Section</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd1f27538036f26e5164471869643d82">add_characteristic</a> (<a class="el" href="#a802580e157009845c3859c02554bc6be">CHARACTERISTICS</a> characteristic)</td></tr>
 <tr class="separator:afd1f27538036f26e5164471869643d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab367693796e659ec7a1941c835838bef" id="r_ab367693796e659ec7a1941c835838bef"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classLIEF_1_1SpanStream.html">SpanStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab367693796e659ec7a1941c835838bef">stream</a> () const</td></tr>
 <tr class="separator:ab367693796e659ec7a1941c835838bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e5f79ee6a32bde5251a5bb468a188f" id="r_ab4e5f79ee6a32bde5251a5bb468a188f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4e5f79ee6a32bde5251a5bb468a188f">writable_content</a> ()</td></tr>
+<tr class="separator:ab4e5f79ee6a32bde5251a5bb468a188f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec43d81230e43af91d9af7ba852ac5c6" id="r_aec43d81230e43af91d9af7ba852ac5c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec43d81230e43af91d9af7ba852ac5c6">accept</a> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
 <tr class="separator:aec43d81230e43af91d9af7ba852ac5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee2070095471a75d5c37978135c3525" id="r_a8ee2070095471a75d5c37978135c3525"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ee2070095471a75d5c37978135c3525">name</a> () const</td></tr>
@@ -466,45 +464,56 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a18d9cbad57211d68c1916d637b5235" name="a6a18d9cbad57211d68c1916d637b5235"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a18d9cbad57211d68c1916d637b5235">&#9670;&#160;</a></span>Section() <span class="overload">[3/5]</span></h2>
+<a id="a1b923afe3aa2a32103df5f83bc51a766" name="a1b923afe3aa2a32103df5f83bc51a766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b923afe3aa2a32103df5f83bc51a766">&#9670;&#160;</a></span>Section() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LIEF::PE::Section::Section </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>characteristics</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9e98402fce1b7e9ebb30bc7d579c7855" name="a9e98402fce1b7e9ebb30bc7d579c7855"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e98402fce1b7e9ebb30bc7d579c7855">&#9670;&#160;</a></span>Section() <span class="overload">[4/5]</span></h2>
+<a id="aed357d8c642d8fd2058a86c519df3cdd" name="aed357d8c642d8fd2058a86c519df3cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed357d8c642d8fd2058a86c519df3cdd">&#9670;&#160;</a></span>Section() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LIEF::PE::Section::Section </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>content</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -612,23 +621,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6210a4fd7e3a56ae295946b73784d12" name="ac6210a4fd7e3a56ae295946b73784d12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6210a4fd7e3a56ae295946b73784d12">&#9670;&#160;</a></span>add_type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LIEF::PE::Section::add_type </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9c5306bfd944b2e82ab92c62b01f2332" name="a9c5306bfd944b2e82ab92c62b01f2332"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c5306bfd944b2e82ab92c62b01f2332">&#9670;&#160;</a></span>characteristics() <span class="overload">[1/2]</span></h2>
 
@@ -696,7 +688,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>List of the section characteristics as a std::set. </p>
+<p>List of the section characteristics. </p>
 
 </div>
 </div>
@@ -716,6 +708,59 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fill the content of the section with the given <code>char</code> </p>
+
+</div>
+</div>
+<a id="a05c807b45e2ff25a36a0cd405a827c4b" name="a05c807b45e2ff25a36a0cd405a827c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c807b45e2ff25a36a0cd405a827c4b">&#9670;&#160;</a></span>coff_string() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> * LIEF::PE::Section::coff_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the COFF string associated with the section's name (or a nullptr) </p>
+<p>This coff string is usually present for long section names whose length does not fit in the 8 bytes allocated by the <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> format. </p>
+
+</div>
+</div>
+<a id="a4d534faede3d4cd69dd639691a71114c" name="a4d534faede3d4cd69dd639691a71114c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d534faede3d4cd69dd639691a71114c">&#9670;&#160;</a></span>coff_string() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLIEF_1_1PE_1_1COFFString.html">COFFString</a> * LIEF::PE::Section::coff_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -804,22 +849,31 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb4b2edc966d8e8841568b394759362a" name="aeb4b2edc966d8e8841568b394759362a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb4b2edc966d8e8841568b394759362a">&#9670;&#160;</a></span>is_type()</h2>
+<a id="a6d945fe7f7f00f5ba6ff8d841c988f26" name="a6d945fe7f7f00f5ba6ff8d841c988f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d945fe7f7f00f5ba6ff8d841c988f26">&#9670;&#160;</a></span>is_discardable()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool LIEF::PE::Section::is_type </td>
+          <td class="memname">bool LIEF::PE::Section::is_discardable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Deprecated do not use. It will likely change in a future release of <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>. </p>
+<p>True if the section can be discarded as needed. </p>
+<p>This is typically the case for debug-related sections </p>
 
 </div>
 </div>
@@ -1113,6 +1167,9 @@ Static Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void LIEF::PE::Section::pointerto_raw_data </td>
@@ -1121,6 +1178,11 @@ Static Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1203,23 +1265,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acf9d2fbe67d3d57875a143179f751159" name="acf9d2fbe67d3d57875a143179f751159"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf9d2fbe67d3d57875a143179f751159">&#9670;&#160;</a></span>remove_type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LIEF::PE::Section::remove_type </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa3e15d79b5eb9f1381cacae3363139f4" name="aa3e15d79b5eb9f1381cacae3363139f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3e15d79b5eb9f1381cacae3363139f4">&#9670;&#160;</a></span>sizeof_raw_data() <span class="overload">[1/2]</span></h2>
 
@@ -1239,19 +1284,27 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a11d1b30d7d1d51a2ed9ffdd952457f27" name="a11d1b30d7d1d51a2ed9ffdd952457f27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11d1b30d7d1d51a2ed9ffdd952457f27">&#9670;&#160;</a></span>sizeof_raw_data() <span class="overload">[2/2]</span></h2>
+<a id="a1a5239fe126d987cc940b0ab3a0ccdad" name="a1a5239fe126d987cc940b0ab3a0ccdad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5239fe126d987cc940b0ab3a0ccdad">&#9670;&#160;</a></span>sizeof_raw_data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void LIEF::PE::Section::sizeof_raw_data </td>
           <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>sizeOfRawData</em></span></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1270,42 +1323,6 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a00796614fbcb37aa68343e3cdbc81a57" name="a00796614fbcb37aa68343e3cdbc81a57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00796614fbcb37aa68343e3cdbc81a57">&#9670;&#160;</a></span>type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LIEF::PE::Section::type </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a364e4ea292c4aac42e33f2218dad2a7b" name="a364e4ea292c4aac42e33f2218dad2a7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a364e4ea292c4aac42e33f2218dad2a7b">&#9670;&#160;</a></span>types()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2">PE_SECTION_TYPES</a> &gt; &amp; LIEF::PE::Section::types </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deprecated do not use. It will likely change in a future release of <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>. </p>
 
 </div>
 </div>
@@ -1350,6 +1367,31 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">void LIEF::PE::Section::virtual_size </td>
           <td>(</td>
           <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>virtual_sz</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4e5f79ee6a32bde5251a5bb468a188f" name="ab4e5f79ee6a32bde5251a5bb468a188f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e5f79ee6a32bde5251a5bb468a188f">&#9670;&#160;</a></span>writable_content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; uint8_t &gt; LIEF::PE::Section::writable_content </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

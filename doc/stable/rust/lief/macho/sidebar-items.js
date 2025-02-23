@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["BindingInfo","Commands","Relocation"],"mod":["binary","binding_info","commands","export_info","fat_binary","header","relocation","section","symbol"],"struct":["Binary","ExportInfo","FatBinary","Header","Section","Symbol"]};
+window.SIDEBAR_ITEMS = {"enum":["BindingInfo","Commands","Relocation"],"fn":["parse"],"mod":["binary","binding_info","builder","commands","export_info","fat_binary","header","relocation","section","stub","symbol"],"struct":["Binary","ExportInfo","FatBinary","Header","Section","Stub","Symbol"]};

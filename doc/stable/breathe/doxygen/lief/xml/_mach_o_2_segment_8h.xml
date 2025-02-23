@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_mach_o_2_segment_8h" kind="file" language="C++">
     <compoundname>Segment.h</compoundname>
     <includes local="no">inttypes.h</includes>
@@ -128,7 +128,7 @@
 <codeline lineno="35"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>content;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/>sections;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>Macho_Section_t**<sp/>sections;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>;</highlight></codeline>

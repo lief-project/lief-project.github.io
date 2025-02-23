@@ -1,0 +1,11 @@
+<map id="inheritance9bad2f3b9f" name="inheritance9bad2f3b9f">
+<area shape="rect" id="node1" href="#lief.PE.unwind_x64.Alloc" target="_top" title="This class represents a stack&#45;allocation operation" alt="" coords="228,5,364,31"/>
+<area shape="rect" id="node2" href="#lief.PE.unwind_x64.Code" target="_top" title="Base class for all unwind operations" alt="" coords="5,179,143,204"/>
+<area shape="rect" id="node3" href="#lief.PE.unwind_x64.Epilog" target="_top" title="Describes the function&#39;s epilog" alt="" coords="224,55,368,80"/>
+<area shape="rect" id="node4" href="#lief.PE.unwind_x64.PushMachFrame" target="_top" title="Push a machine frame" alt="" coords="191,104,401,129"/>
+<area shape="rect" id="node5" href="#lief.PE.unwind_x64.PushNonVol" target="_top" title="Push a nonvolatile integer register, decrementing RSP by 8" alt="" coords="205,153,387,179"/>
+<area shape="rect" id="node6" href="#lief.PE.unwind_x64.SaveNonVolatile" target="_top" title="Save a nonvolatile integer register on the stack using a MOV instead of a" alt="" coords="191,203,401,228"/>
+<area shape="rect" id="node7" href="#lief.PE.unwind_x64.SaveXMM128" target="_top" title="Save all 128 bits of a nonvolatile XMM register on the stack" alt="" coords="199,252,393,277"/>
+<area shape="rect" id="node8" href="#lief.PE.unwind_x64.SetFPReg" target="_top" title="Establish the frame pointer register by setting the register to some offset" alt="" coords="213,301,379,327"/>
+<area shape="rect" id="node9" href="#lief.PE.unwind_x64.Spare" target="_top" title="unwind_x64.Spare" alt="" coords="225,351,367,376"/>
+</map>

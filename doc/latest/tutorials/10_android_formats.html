@@ -1,126 +1,818 @@
-<!doctypehtml><html data-content_root=../ lang=en><meta charset=utf-8><meta content=width=device-width,initial-scale=1.0 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=ie=edge http-equiv=x-ua-compatible><meta content="Copy to clipboard"name=lang:clipboard.copy><meta content="Copied to clipboard"name=lang:clipboard.copied><meta content=en name=lang:search.language><meta content=True name=lang:search.pipeline.stopwords><meta content=True name=lang:search.pipeline.trimmer><meta content="No matching documents"name=lang:search.result.none><meta content="1 matching document"name=lang:search.result.one><meta content="# matching documents"name=lang:search.result.other><meta content=[\s\-]+ name=lang:search.tokenizer><meta content="LIEF Documentation"name=Description><link crossorigin href=https://fonts.gstatic.com/ rel=preconnect><script src=../_static/javascripts/vendor.min.js></script><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css rel=stylesheet><link href=../_static/favicon.ico rel=apple-touch-icon><title>10 - Android formats — LIEF Documentation</title><link href=../_static/fonts/material-icons.css rel=stylesheet><link href=../_static/stylesheets/vendor.min.css rel=stylesheet><link href=../_static/pygments.css?v=3d3fbe02 rel=stylesheet><link href=../_static/basic.css?v=fb9458d3 rel=stylesheet><link href=../_static/graphviz.css?v=fd3f3429 rel=stylesheet><link href=../_static/css/custom.css?v=49aeed65 rel=stylesheet><script src=../_static/documentation_options.js?v=7de89ed4></script><script src=../_static/doctools.js?v=9a2dae69></script><script src=../_static/sphinx_highlight.js?v=dc90522c></script><link href=../_static/favicon.ico rel=icon><link href=../genindex.html rel=index title=Index><link href=../search.html rel=search title=Search><link title="11 - Mach-O Modification"href=11_macho_modification.html rel=next><link title="09 - How to use frida on a non-rooted device"href=09_frida_lief.html rel=prev><link href=../_static/stylesheets/theme.css rel=stylesheet><body data-md-color-accent=cyan data-md-color-primary=blue dir=ltr><nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top"role=navigation><a class=navbar-brand href=../index.html>LIEF Documentation</a><button class=navbar-toggler data-target=#navbar-collapse data-toggle=collapse><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0"id=navbar-collapse><ul class="navbar-nav position-relative px-lg-6 px-xl-8"><li class=nav-item><a class=nav-link href=https://lief.re> <i class="fa-solid fa-house mr-3"></i>Home </a><li class=nav-item><a class=nav-link href=https://lief.re/blog> <i class="fa-solid fa-rss mr-3"></i>Blog </a><li class=nav-item><a class=nav-link href=https://lief.re/download> <i class="fa-solid fa-download mr-3"></i>Download </a><li class="nav-item dropdown"><a class="nav-link dropdown-toggle"aria-expanded=false data-toggle=dropdown href=# role=button> <i class="fa-solid fa-book mr-3"></i>Documentation </a> <div class=dropdown-menu role=menu><a class=dropdown-item href=https://lief.re/doc/latest/doxygen>Doxygen</a></div><li class=nav-item><a class=nav-link href=https://lief.re/about> <i class="fa-solid fa-bars-staggered mr-3"></i>About </a><li class="nav-item ml-lg-3 mt-3 mt-lg-0"><a class="hover-lift-light mt-1"href=https://discord.gg/jGQtyAYChJ target=_blank> <i class="fab fa-2x fa-discord text-darkblue mr-3"></i> </a><li class=nav-item><a class="btn btn-outline-pink"href=https://github.com/sponsors/lief-project target=_blank> <i class="fa-solid fa-heart mr-3"></i> Sponsor </a></ul></div></nav><div class="container-fluid container-docs"><div class=row><div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left"><div class="collapse d-lg-block mb-6 mb-lg-0"id=sidebar-collapse><form action=../search.html method=GET name=search><input autocapitalize=off autocomplete=off class=form-control data-md-component=query data-md-state=active name=q placeholder=Search spellcheck=false></form><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../intro.html><em class="fa fa-solid fa-door-open"></em> Introduction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../installation.html><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../compilation.html><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-sitemap"> </i>Formats</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../formats/elf/index.html><em class="fa fa-brands fa-linux"></em> ELF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../formats/macho/index.html><em class="fa fa-brands fa-apple"></em> Mach-O</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../formats/pe/index.html><em class="fa fa-brands fa-windows"></em> PE</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../formats/android/index.html><em class="fa fa-brands fa-android"></em> Android</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-code"> </i>API</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../api/binary_abstraction/index.html><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../api/utilities/index.html><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../api/error_handling/index.html><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../api/logging/index.html><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../api/cpp/index.html><em class="fa fa-regular fa-file-code"></em> C++</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../api/rust/index.html><em class="fa fa-brands fa-rust"></em> Rust</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/intro.html><em class="fa fa-cubes"></em> What is LIEF Extended?</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/debug_info/index.html><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/dwarf/index.html><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/pdb/index.html><em class="fa fa-brands fa-windows"></em> PDB</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/objc/index.html><em class="fa fa-brands fa-apple"></em> Objective-C</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/dsc/index.html><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/disassembler/index.html><em class="fa fa-solid fa-dna"></em> Disassembler</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../extended/assembler/index.html><em class="fa fa-solid fa-user-secret"></em> Assembler</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-layer-group"> </i>Tutorials</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=01_play_with_formats.html>01 - Parse and manipulate formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=02_pe_from_scratch.html>02 - Create a PE from scratch</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=03_elf_change_symbols.html>03 - Play with ELF symbols</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=04_elf_hooking.html>04 - ELF Hooking</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=05_elf_infect_plt_got.html>05 - Infecting the plt/got</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=06_pe_hooking.html>06 - PE Hooking (Deprecated)</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=07_pe_resource.html>07 - PE Resources</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=08_elf_bin2lib.html>08 - Transforming an ELF executable into a library</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=09_frida_lief.html>09 - How to use frida on a non-rooted device</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=#>10 - Android formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=11_macho_modification.html>11 - Mach-O Modification</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=12_elf_coredump.html>12 - ELF Coredump</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=13_pe_authenticode.html>13 - PE Authenticode</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-brands fa-space-awesome"> </i>Extra Information</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../references.html><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../changelog.html><em class="fa fa-solid fa-code-compare"></em> Changelog</a></ul></div><hr><span class="svg-icon text-purple mr-1 relative-top--1"> <svg viewbox="0 0 512 512"height=512 width=512 xmlns=http://www.w3.org/2000/svg><title>ionicons-v5-d</title><circle cx=160 cy=96 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><circle cx=160 cy=416 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><line style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px x1=160 x2=160 y1=368 y2=144></line><circle cx=352 cy=160 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><path d=M352,208c0,128-192,48-192,160 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></path></svg> </span><a class=text-darkblue href=https://github.com/lief-project/LIEF/commits/0ff950c0>0.16.0 (0ff950c0)</a><br> Updated on 10/12/2024, 06:48:19.</div><div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8"><nav aria-label=breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a aria-label=Home href=../index.html><i class="fa-solid fa-home"></i></a><li class="breadcrumb-item active"aria-current=page><a href=#>10 - Android formats</a></ol></nav><section id=android-formats><span id=tuto-android-formats></span><h1 id=tutorials-10-android-formats--page-root>10 - Android formats<a title="Link to this heading"class=headerlink href=#tutorials-10-android-formats--page-root>¶</a></h1><p>This tutorial introduces Android formats as well as the API to use them. We are talking about DEX, OAT, VDEX and ART.<p>Files used in this tutorial are available on the <a class="reference external"href=https://github.com/lief-project/tutorials/tree/master/10_android_formats>tutorials repository</a><p>By Romain Thomas - <a class="reference external"href=https://twitter.com/rh0main>@rh0main</a><hr class=docutils><section id=introduction><h2 id=introduction>Introduction<a title="Link to this heading"class=headerlink href=#introduction>¶</a></h2><p>Let’s start with a quick reminder about <em>compilation</em>, installation and the execution of Android applications.<p>When dealing with application development, the main part of the code is usually written in Java. Developers can also write native code (<code class="docutils literal notranslate"><span class=pre>C/C++</span></code>) through the Java Native Interface (JNI) interface.<p>In the APK building process, the Java code is eventually transformed in the Dalvik bytecode which is interpreted by the Android Java virtual machine. The Android JVM is different from the implementation by Oracle and, among the differences, it is based on registers whereas the one from Oracle is based on a stack.<p>To produce the Dalvik bytecode, Java sources are first compiled with <code class="docutils literal notranslate"><span class=pre>javac</span></code> into the Java bytecode and then Android transforms this bytecode into the Dalvik one by using the <code class="docutils literal notranslate"><span class=pre>dx</span></code> compiler (or the new one: <code class="docutils literal notranslate"><span class=pre>D8</span></code>). This bytecode is finally wrapped in a DEX file(s) such as <code class="docutils literal notranslate"><span class=pre>classes.dex</span></code>. The DEX format is specific to Android and the documentation is available <a class="reference external"href=https://source.android.com/devices/tech/dalvik/dex-format>here</a>.<p>During the installation of the APK, the system applies optimizations on this DEX file in order to speed-up the execution. Indeed interpreting bytecode is not as efficient as executing native code and the Dalvik virtual machine is based on registers that are 32-bits width size whereas most of the recent CPU are 64-bits width.<p>To address this issue and prior to Android 4.4 (KitKat), the runtime used JIT compilation to transform Dalvik bytecode into assembly. The JIT ocurred <strong>during the execution</strong> and it was done each time the application was executed. Since Android 4.4 they moved to a new runtime which, among other features, performs the optimizations <strong>during the installation</strong>. Consequently the installation takes more time but transformations to native code are done once.<p>To optimize the Dalvik bytecode, the original DEX file (e.g. <code class="docutils literal notranslate"><span class=pre>classes.dex</span></code>) is transformed into another file that will contain the native code. This new file usually has the <code class="docutils literal notranslate"><span class=pre>.odex</span></code>, <code class="docutils literal notranslate"><span class=pre>.oat</span></code> extension and is wrapped by the ELF format. Using ELF format makes sense for mainly two reasons:<ul class=simple><li><p>It’s the default format used by Linux and Android to <em>package</em> assembly code.<li><p>It enables to use the same loader: <code class="docutils literal notranslate"><span class=pre>/system/bin/linker{64}</span></code></ul><p>OAT files are in fact ELF and this is why, we choose to add this new format in LIEF. This ELF format is actually used as a wrapper over another format which is specific to Android: the OAT format.<p>Basically the ELF associated exports few symbols:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=kn>import</span> <span class=nn>lief</span>
+<!DOCTYPE html>
 
-<span class=n>oat</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"SomeOAT"</span><span class=p>)</span>
-<span class=k>for</span> <span class=n>s</span> <span class=ow>in</span> <span class=n>oat</span><span class=o>.</span><span class=n>dynamic_symbols</span><span class=p>:</span>
-  <span class=nb>print</span><span class=p>(</span><span class=n>s</span><span class=p>)</span>
-</pre></div></div><div class="highlight-text notranslate"><div class=highlight><pre><span></span>oatdata                       OBJECT    GLOBAL    1000      1262000
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
+
+  <script src="../_static/javascripts/vendor.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <title>10 - Android formats &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/vendor.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3d3fbe02" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=411c5307" />
+    <script src="../_static/documentation_options.js?v=0c3dd48d"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11 - Mach-O Modification" href="11_macho_modification.html" />
+    <link rel="prev" title="09 - How to use frida on a non-rooted device" href="09_frida_lief.html" />
+   
+  <link rel="stylesheet" href="../_static/stylesheets/theme.css"/>
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
+
+    
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/macho/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/pe/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../formats/android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/debug_info/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/dsc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../extended/assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/dd291ae1" class="text-darkblue">0.17.0 (dd291ae1)</a>
+    <br>
+    Updated on 23/02/2025, 12:10:07.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">10 - Android formats</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="android-formats">
+<span id="tuto-android-formats"></span><h1 id="tutorials-10-android-formats--page-root">10 - Android formats<a class="headerlink" href="#tutorials-10-android-formats--page-root" title="Link to this heading">¶</a></h1>
+<p>This tutorial introduces Android formats as well as the API to use them. We are talking about DEX, OAT, VDEX and ART.</p>
+<p>Files used in this tutorial are available on the <a class="reference external" href="https://github.com/lief-project/tutorials/tree/master/10_android_formats">tutorials repository</a></p>
+<p>By Romain Thomas - <a class="reference external" href="https://twitter.com/rh0main">@rh0main</a></p>
+<hr class="docutils"/>
+<section id="introduction">
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Let’s start with a quick reminder about <em>compilation</em>, installation and the execution of Android applications.</p>
+<p>When dealing with application development, the main part of the code is usually written in Java. Developers can also write native code (<code class="docutils literal notranslate"><span class="pre">C/C++</span></code>) through
+the Java Native Interface (JNI) interface.</p>
+<p>In the APK building process, the Java code is eventually transformed in the Dalvik bytecode which is interpreted by the Android Java virtual machine. The Android JVM is different from
+the implementation by Oracle and, among the differences, it is based on registers whereas the one from Oracle is based on a stack.</p>
+<p>To produce the Dalvik bytecode, Java sources are first compiled with <code class="docutils literal notranslate"><span class="pre">javac</span></code> into the Java bytecode and then Android transforms this
+bytecode into the Dalvik one by using the <code class="docutils literal notranslate"><span class="pre">dx</span></code> compiler (or the new one: <code class="docutils literal notranslate"><span class="pre">D8</span></code>). This bytecode is finally wrapped in a DEX file(s) such as <code class="docutils literal notranslate"><span class="pre">classes.dex</span></code>. The DEX format is specific
+to Android and the documentation is available <a class="reference external" href="https://source.android.com/devices/tech/dalvik/dex-format">here</a>.</p>
+<p>During the installation of the APK, the system applies optimizations on this DEX file in order to speed-up the execution. Indeed interpreting  bytecode is not as
+efficient as executing native code and the Dalvik virtual machine is based on registers that are 32-bits width size whereas most of the recent CPU are 64-bits width.</p>
+<p>To address this issue and prior to Android 4.4 (KitKat), the runtime used JIT compilation to transform Dalvik bytecode into assembly. The JIT ocurred <strong>during the execution</strong> and it was done
+each time the application was executed. Since Android 4.4 they moved to a new runtime which, among other features, performs the optimizations <strong>during the installation</strong>.
+Consequently the installation takes more time but transformations to native code are done once.</p>
+<p>To optimize the Dalvik bytecode, the original DEX file (e.g. <code class="docutils literal notranslate"><span class="pre">classes.dex</span></code>) is transformed into another file that will contain the native code. This new file usually has
+the <code class="docutils literal notranslate"><span class="pre">.odex</span></code>, <code class="docutils literal notranslate"><span class="pre">.oat</span></code> extension and is wrapped by the ELF format. Using ELF format makes sense for mainly two reasons:</p>
+<ul class="simple">
+<li><p>It’s the default format used by Linux and Android to <em>package</em> assembly code.</p></li>
+<li><p>It enables to use the same loader: <code class="docutils literal notranslate"><span class="pre">/system/bin/linker{64}</span></code></p></li>
+</ul>
+<p>OAT files are in fact ELF and this is why, we choose to add this new format in LIEF.
+This ELF format is actually used as a wrapper over another format which is specific to Android: the OAT format.</p>
+<p>Basically the ELF associated exports few symbols:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="n">oat</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"SomeOAT"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">oat</span><span class="o">.</span><span class="n">dynamic_symbols</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>oatdata                       OBJECT    GLOBAL    1000      1262000
 oatexec                       OBJECT    GLOBAL    1263000   10d4060
 oatlastword                   OBJECT    GLOBAL    233705c   4
 oatbss                        OBJECT    GLOBAL    2338000   f5050
 oatbsslastword                OBJECT    GLOBAL    242d04c   4
-</pre></div></div><p>These symbols are a kind of pointers to specific part of the OAT format. For example, <code class="docutils literal notranslate"><span class=pre>oatdata</span></code> will point to the begining of the underlying OAT format whereas <code class="docutils literal notranslate"><span class=pre>oatexec</span></code> points to the native code. For those who are interested in a deeper understand of OAT internal structures, See:<ul class=simple><li><p><a class="reference external"href=https://www.blackhat.com/docs/asia-15/materials/asia-15-Sabanal-Hiding-Behind-ART-wp.pdf>Hiding Behind ART - Black Hat 2015</a><li><p><a class="reference external"href=http://newandroidbook.com/files/ArtOfDalvik.pdf>Dalvik and ART</a><li><p><a class="reference external"href=http://romainthomas.fr/oat/>OAT internal structures</a></ul><p>These different formats can be a bit confusing and to summarize:<p class=centered><strong>DEX are transformed into <code class="docutils literal notranslate"><span class=pre>.odex</span></code> files that are primarily ELF files wrapping a custom OAT format.</strong><figure class=align-center><a class="reference internal image-reference"href=../_images/elf_oat.png><img style="width: 512.0px; height: 248.5px;"alt=../_images/elf_oat.png src=../_images/elf_oat.png> </a></figure><p>The structure of the OAT is poorly documented and its internal structures change for <strong>each version</strong> of Android without backward compatibility. It means that OAT files produced on Android 6.0.1 can only be used on this version.<hr class=docutils><p>In the Android framework the <code class="docutils literal notranslate"><span class=pre>dex2oat</span></code> executable is responsible to convert and optimize the APK DEX files into OATs. This executable is located in the <code class="docutils literal notranslate"><span class=pre>/system/bin/</span></code> directory and we can have its output through logcat:<div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=gp>$ </span>adb<span class=w> </span>logcat<span class=w> </span>-s<span class=w> </span><span class=s2>"dex2oat:I"</span>
-<span class=go>...</span>
-<span class=go>05-04 10:16:37.218  1987  1987 I dex2oat : /system/bin/dex2oat --compiler-filter=speed --dex-file=/data/user/0/com.google.android.gms/snet/installed/snet.jar --oat-file=/data/user/0/com.google.android.gms/snet/dalvik-cache/snet.dex</span>
-<span class=go>05-04 10:16:37.688  1987  1998 W dex2oat : Compilation of void com.google.android.snet.Snet.enterSnetIdle(android.content.Context, android.os.Bundle) took 116.995ms</span>
-<span class=go>05-04 10:16:37.768  1987  1987 I dex2oat : ----------------------------------------------------</span>
-<span class=go>05-04 10:16:37.768  1987  1987 I dex2oat : &LTSS>: S T A R T I N G . . .</span>
-<span class=go>05-04 10:16:37.768  1987  1987 E dex2oat : &LTSS>: oat location is not valid /data/user/0/com.google.android.gms/snet/dalvik-cache/snet.dex</span>
-<span class=go>05-04 10:16:37.768  1987  1987 I dex2oat : dex2oat took 552.045ms (threads: 8) arena alloc=3MB java alloc=1150KB native alloc=8MB free=3MB</span>
-<span class=go>05-04 12:25:50.878 10460 10460 I dex2oat : /system/bin/dex2oat --compiler-filter=speed</span>
-<span class=go>...</span>
-</pre></div></div><p>The output above is the transformation of SaftyNet DEX files, located in <code class="docutils literal notranslate"><span class=pre>/data/user/0/com.google.android.gms/snet/installed/snet.jar</span></code>, into an <strong>OAT</strong> saved in <code class="docutils literal notranslate"><span class=pre>/data/user/0/com.google.android.gms/snet/dalvik-cache/snet.dex</span></code>.<p>One can notice that the extension is <code class="docutils literal notranslate"><span class=pre>.dex</span></code> so it should be a DEX file and not an OAT. Actually if we check the type:<div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=gp>$ </span>file<span class=w> </span>snet.dex
-<span class=go>snet.dex: ELF 64-bit LSB shared object, ARM aarch64, version 1 (GNU/Linux), dynamically linked, stripped</span>
-</pre></div></div><p>We can see an ELF.<div class="admonition warning"><p class=admonition-title>Warning<p>Do not trust extensions: <strong>.dex</strong> can be <strong>DEX</strong> or <strong>OAT</strong>, <strong>.odex</strong> are <strong>OAT</strong>, <strong>.oat</strong> are <strong>OAT</strong>, …</div><p>The process of converting Java sources into the OAT can be simplified with the following diagram:<figure class=align-center><img alt=../_images/java2oat.png src=../_images/java2oat.png></figure></section><section id=the-missing-dex><h2 id=the-missing-dex>The Missing DEX<a title="Link to this heading"class=headerlink href=#the-missing-dex>¶</a></h2><p>If we analyze applications from the Google PlayStore, we usually have the <code class="docutils literal notranslate"><span class=pre>classes.dex</span></code> file(s) in APK. As this file contains the Dalvik bytecode, most of the tools rely on this file to perform the analysis (decompilation, static analysis, …)<p>However when analyzing constructor firmwares (or ROM) these DEX files could miss. For example, if we are interested in <code class="docutils literal notranslate"><span class=pre>com.android.settings</span></code> from Samsung, the application is associated with the <code class="docutils literal notranslate"><span class=pre>/system/priv-app/SecSettings2</span></code> directory which has the following structure:<div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=gp>$ </span>tree<span class=w> </span>system/priv-app/SecSettings2
+</pre></div>
+</div>
+<p>These symbols are a kind of pointers to specific part of the OAT format. For example, <code class="docutils literal notranslate"><span class="pre">oatdata</span></code> will point to the begining of the underlying OAT format whereas <code class="docutils literal notranslate"><span class="pre">oatexec</span></code> points
+to the native code. For those who are interested in a deeper understand of OAT internal structures, See:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.blackhat.com/docs/asia-15/materials/asia-15-Sabanal-Hiding-Behind-ART-wp.pdf">Hiding Behind ART  - Black Hat 2015</a></p></li>
+<li><p><a class="reference external" href="http://newandroidbook.com/files/ArtOfDalvik.pdf">Dalvik and ART</a></p></li>
+<li><p><a class="reference external" href="http://romainthomas.fr/oat/">OAT internal structures</a></p></li>
+</ul>
+<p>These different formats can be a bit confusing and to summarize:</p>
+<p class="centered">
+<strong>DEX are transformed into <code class="docutils literal notranslate"><span class="pre">.odex</span></code> files that are primarily ELF files wrapping a custom OAT format.</strong></p><figure class="align-center">
+<a class="reference internal image-reference" href="../_images/elf_oat.png"><img alt="../_images/elf_oat.png" src="../_images/elf_oat.png" style="width: 512.0px; height: 248.5px;"/>
+</a>
+</figure>
+<p>The structure of the OAT is poorly documented and its internal structures change for <strong>each version</strong> of Android without backward compatibility.
+It means that OAT files produced on Android 6.0.1 can only be used on this version.</p>
+<hr class="docutils"/>
+<p>In the Android framework the <code class="docutils literal notranslate"><span class="pre">dex2oat</span></code> executable is responsible to convert and optimize the APK DEX files into OATs. This executable is located in the
+<code class="docutils literal notranslate"><span class="pre">/system/bin/</span></code> directory and we can have its output through logcat:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>adb<span class="w"> </span>logcat<span class="w"> </span>-s<span class="w"> </span><span class="s2">"dex2oat:I"</span>
+<span class="go">...</span>
+<span class="go">05-04 10:16:37.218  1987  1987 I dex2oat : /system/bin/dex2oat --compiler-filter=speed --dex-file=/data/user/0/com.google.android.gms/snet/installed/snet.jar --oat-file=/data/user/0/com.google.android.gms/snet/dalvik-cache/snet.dex</span>
+<span class="go">05-04 10:16:37.688  1987  1998 W dex2oat : Compilation of void com.google.android.snet.Snet.enterSnetIdle(android.content.Context, android.os.Bundle) took 116.995ms</span>
+<span class="go">05-04 10:16:37.768  1987  1987 I dex2oat : ----------------------------------------------------</span>
+<span class="go">05-04 10:16:37.768  1987  1987 I dex2oat : &lt;SS&gt;: S T A R T I N G . . .</span>
+<span class="go">05-04 10:16:37.768  1987  1987 E dex2oat : &lt;SS&gt;: oat location is not valid /data/user/0/com.google.android.gms/snet/dalvik-cache/snet.dex</span>
+<span class="go">05-04 10:16:37.768  1987  1987 I dex2oat : dex2oat took 552.045ms (threads: 8) arena alloc=3MB java alloc=1150KB native alloc=8MB free=3MB</span>
+<span class="go">05-04 12:25:50.878 10460 10460 I dex2oat : /system/bin/dex2oat --compiler-filter=speed</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>The output above is the transformation of SaftyNet DEX files, located in <code class="docutils literal notranslate"><span class="pre">/data/user/0/com.google.android.gms/snet/installed/snet.jar</span></code>, into an <strong>OAT</strong> saved in <code class="docutils literal notranslate"><span class="pre">/data/user/0/com.google.android.gms/snet/dalvik-cache/snet.dex</span></code>.</p>
+<p>One can notice that the extension is <code class="docutils literal notranslate"><span class="pre">.dex</span></code> so it should be a DEX file and not an OAT. Actually if we check the type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>file<span class="w"> </span>snet.dex
+<span class="go">snet.dex: ELF 64-bit LSB shared object, ARM aarch64, version 1 (GNU/Linux), dynamically linked, stripped</span>
+</pre></div>
+</div>
+<p>We can see an ELF.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not trust extensions:
+<strong>.dex</strong> can be <strong>DEX</strong> or <strong>OAT</strong>, <strong>.odex</strong> are <strong>OAT</strong>, <strong>.oat</strong> are <strong>OAT</strong>, …</p>
+</div>
+<p>The process of converting Java sources into the OAT can be simplified with the following diagram:</p>
+<figure class="align-center">
+<img alt="../_images/java2oat.png" src="../_images/java2oat.png"/>
+</figure>
+</section>
+<section id="the-missing-dex">
+<h2 id="the-missing-dex">The Missing DEX<a class="headerlink" href="#the-missing-dex" title="Link to this heading">¶</a></h2>
+<p>If we analyze applications from the Google PlayStore, we usually have the <code class="docutils literal notranslate"><span class="pre">classes.dex</span></code> file(s) in APK. As this file contains the Dalvik bytecode, most of the tools rely
+on this file to perform the analysis (decompilation, static analysis, …)</p>
+<p>However when analyzing constructor firmwares (or ROM) these DEX files could miss. For example, if we are interested in <code class="docutils literal notranslate"><span class="pre">com.android.settings</span></code> from Samsung,
+the application is associated with the <code class="docutils literal notranslate"><span class="pre">/system/priv-app/SecSettings2</span></code> directory which has the following structure:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tree<span class="w"> </span>system/priv-app/SecSettings2
 
-<span class=go>├── oat</span>
-<span class=go>│   └── arm64</span>
-<span class=go>│       └── SecSettings2.odex</span>
-<span class=go>└── SecSettings2.apk</span>
+<span class="go">├── oat</span>
+<span class="go">│   └── arm64</span>
+<span class="go">│       └── SecSettings2.odex</span>
+<span class="go">└── SecSettings2.apk</span>
 
-<span class=go>2 directories, 2 files</span>
-</pre></div></div><p>By looking at the files in <code class="docutils literal notranslate"><span class=pre>SecSettings2.apk</span></code>, we can’t find <code class="docutils literal notranslate"><span class=pre>.dex</span></code> files:<div class="highlight-console notranslate"><div class=highlight><pre><span></span><span class=gp>$ </span>unzip<span class=w> </span>-l<span class=w> </span>./SecSettings2.apk<span class=p>|</span>grep<span class=w> </span>-c<span class=w> </span><span class=s2>"classes.dex"</span>
-<span class=go>0</span>
-</pre></div></div><p>Next to the <code class="docutils literal notranslate"><span class=pre>SecSettings2.apk</span></code>, we find <code class="docutils literal notranslate"><span class=pre>SecSettings2.odex</span></code> which is the OAT file resulting of the optimization of the missing DEX file. As ROM developers control the Android <strong>version</strong> and the target architecture, they just have to provide the OAT file.<p>They can also use this <em>“feature”</em> to avoid analysis and reverse engineering of the application. As the Dalvik bytecode is located in the DEX file, without this file the analysis is quite limited.<p>Thankfully there is a copy of the original DEX within the OAT! Actually it’s not an exact copy as <code class="docutils literal notranslate"><span class=pre>dex2oat</span></code> replaces some Dalvik instructions (like <code class="docutils literal notranslate"><span class=pre>invoke-virtual</span></code>) with optimized ones <a class="footnote-reference brackets"href=#id9 id=id1 role=doc-noteref><span class=fn-bracket>[</span>1<span class=fn-bracket>]</span></a> but starting from <strong>Android N</strong>, we can also recover the original instructions.<p>Prior Android Oreo (8.0.0) DEX files were embedded in the OAT itself and after Oreo, the transformation performed by <code class="docutils literal notranslate"><span class=pre>dex2oat</span></code> generates two files:<ul class=simple><li><p><strong>classes.odex</strong>: OAT containing native code<li><p><strong>classes.vdex</strong>: VDEX file containing copy of original DEX files</ul><p>The DEX files originally located in the OAT has been exported <strong>in a new file</strong> with <strong>a new format</strong>: the VDEX format. This new format is completely different from OAT, especially it’s not an ELF.<p>In the same way as OAT format, VDEX internal structures change for each version of Android without backward compatibility.<p>It also exists tools <a class="footnote-reference brackets"href=#id12 id=id2 role=doc-noteref><span class=fn-bracket>[</span>4<span class=fn-bracket>]</span></a> <a class="footnote-reference brackets"href=#id13 id=id3 role=doc-noteref><span class=fn-bracket>[</span>5<span class=fn-bracket>]</span></a> <a class="footnote-reference brackets"href=#id14 id=id4 role=doc-noteref><span class=fn-bracket>[</span>6<span class=fn-bracket>]</span></a> to extract DEX from OAT/VDEX files but the <strong>extraction</strong> <a class="footnote-reference brackets"href=#id11 id=id5 role=doc-noteref><span class=fn-bracket>[</span>3<span class=fn-bracket>]</span></a> is either limited to OAT <a class="footnote-reference brackets"href=#id12 id=id6 role=doc-noteref><span class=fn-bracket>[</span>4<span class=fn-bracket>]</span></a> or to VDEX <a class="footnote-reference brackets"href=#id13 id=id7 role=doc-noteref><span class=fn-bracket>[</span>5<span class=fn-bracket>]</span></a>. With LIEF we aim to provide a single framework to deal with these formats.</section><section id=oat-and-vdex><h2 id=oat-and-vdex>OAT and VDEX<a title="Link to this heading"class=headerlink href=#oat-and-vdex>¶</a></h2><p>As explained in the previous part, internal structures of the formats change for each version of Android. LIEF provides an abstraction of these modifications and the user can deal with OAT or VDEX without carrying of the underlying version of the OAT.<p>It currently supports OAT files from Android 6.0 Marshmallow (OAT v64) to Android 8.0.1 Oreo (OAT v131).<p>The OAT version is available with the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.version title=lief.OAT.version><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.OAT.version()</span></code></a> function:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=kn>import</span> <span class=nn>lief</span>
-<span class=gp>>>> </span><span class=n>lief</span><span class=o>.</span><span class=n>OAT</span><span class=o>.</span><span class=n>version</span><span class=p>(</span><span class=s2>"classes.odex"</span><span class=p>)</span> <span class=c1># From Android 6</span>
-<span class=go>64</span>
-<span class=gp>>>> </span><span class=n>lief</span><span class=o>.</span><span class=n>OAT</span><span class=o>.</span><span class=n>version</span><span class=p>(</span><span class=s2>"classes.odex"</span><span class=p>)</span> <span class=c1># From Android 7</span>
-<span class=go>88</span>
-</pre></div></div><p>One can also access to the associated Android version by using <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.android_version title=lief.OAT.android_version><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.OAT.android_version()</span></code></a>:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=n>lief</span><span class=o>.</span><span class=n>OAT</span><span class=o>.</span><span class=n>android_version</span><span class=p>(</span><span class=mi>64</span><span class=p>)</span>
-<span class=go>ANDROID_VERSIONS.VERSION_601</span>
-<span class=gp>>>> </span><span class=n>lief</span><span class=o>.</span><span class=n>OAT</span><span class=o>.</span><span class=n>android_version</span><span class=p>(</span><span class=mi>124</span><span class=p>)</span>
-<span class=go>ANDROID_VERSIONS.VERSION_800</span>
-<span class=gp>>>> </span><span class=n>lief</span><span class=o>.</span><span class=n>Android</span><span class=o>.</span><span class=n>code_name</span><span class=p>(</span><span class=n>lief</span><span class=o>.</span><span class=n>Android</span><span class=o>.</span><span class=n>ANDROID_VERSIONS</span><span class=o>.</span><span class=n>VERSION_800</span><span class=p>)</span>
-<span class=go>'Oreo'</span>
-<span class=gp>>>> </span><span class=n>lief</span><span class=o>.</span><span class=n>Android</span><span class=o>.</span><span class=n>version_string</span><span class=p>(</span><span class=n>lief</span><span class=o>.</span><span class=n>Android</span><span class=o>.</span><span class=n>ANDROID_VERSIONS</span><span class=o>.</span><span class=n>VERSION_800</span><span class=p>)</span>
-<span class=go>"8.0.0"</span>
-</pre></div></div><p>To express the fact that OAT files are first ELF, the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary title=lief.OAT.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.OAT.Binary</span></code></a> class extends the <a class="reference internal"href=../formats/elf/python.html#lief.ELF.Binary title=lief.ELF.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.ELF.Binary</span></code></a><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=kn>import</span> <span class=nn>lief</span>
-<span class=gp>>>> </span><span class=n>oat</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"classes.odex"</span><span class=p>)</span>
-<span class=gp>>>> </span><span class=nb>type</span><span class=p>(</span><span class=n>oat</span><span class=p>)</span>
-<span class=go>_pylief.OAT.Binary</span>
-<span class=gp>>>> </span><span class=nb>isinstance</span><span class=p>(</span><span class=n>oat</span><span class=p>,</span> <span class=n>lief</span><span class=o>.</span><span class=n>ELF</span><span class=o>.</span><span class=n>Binary</span><span class=p>)</span>
-<span class=go>True</span>
-</pre></div></div><p>Thus the same ELF API is available: adding sections, modifying dynamic entries, etc and the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary title=lief.OAT.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.OAT.Binary</span></code></a> object adds the following methods:<dl class="py class"><dt class="sig sig-object py"><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-prename descclassname"><span class=pre>lief.OAT.</span></span><span class="sig-name descname"><span class=pre>Binary</span></span><dd><p>Bases: <a class="reference internal"href=../formats/elf/python.html#lief.ELF.Binary title=lief._lief.ELF.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>Binary</span></code></a></p> <p>OAT binary representation</p> <dl class="py property"><dt class="sig sig-object py"><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>classes</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary.it_classes title=lief.OAT.Binary.it_classes><span class=pre>lief.OAT.Binary.it_classes</span></a></span></span><dd><p>Return an iterator over <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Class title=lief.OAT.Class><code class="xref py py-class docutils literal notranslate"><span class=pre>Class</span></code></a></p></dl> <dl class="py property"><dt class="sig sig-object py"><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>dex2dex_json_info</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>str</span></span></span><dd></dl> <dl class="py property"><dt class="sig sig-object py"><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>dex_files</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary.it_dex_files title=lief.OAT.Binary.it_dex_files><span class=pre>lief.OAT.Binary.it_dex_files</span></a></span></span><dd><p>Return an iterator over <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File title=lief.DEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>File</span></code></a></p></dl> <dl class="py attribute"><dt class="sig sig-object py"><span class="sig-name descname"><span class=pre>get_class</span></span><span class=sig-paren>(</span><em class=sig-param><span class=o><span class=pre>*</span></span><span class=n><span class=pre>args</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Class title=lief.OAT.Class><span class=pre>lief.OAT.Class</span></a></span></span><dd><p>Overloaded function.</p> <ol class="arabic simple"><li><p><code class="docutils literal notranslate"><span class=pre>get_class(self,</span> <span class=pre>class_name:</span> <span class=pre>str)</span> <span class=pre>-></span> <span class=pre>lief._lief.OAT.Class</span></code></ol> <p>Return the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Class title=lief.OAT.Class><code class="xref py py-class docutils literal notranslate"><span class=pre>Class</span></code></a> from its name</p> <ol class="arabic simple"start=2><li><p><code class="docutils literal notranslate"><span class=pre>get_class(self,</span> <span class=pre>class_index:</span> <span class=pre>int)</span> <span class=pre>-></span> <span class=pre>lief._lief.OAT.Class</span></code></ol> <p>Return the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Class title=lief.OAT.Class><code class="xref py py-class docutils literal notranslate"><span class=pre>Class</span></code></a> from its <strong>index</strong></p></dl> <dl class="py attribute"><dt class="sig sig-object py"><span class="sig-name descname"><span class=pre>has_class</span></span><span class=sig-paren>(</span><em class=sig-param><span class=n><span class=pre>self</span></span></em>, <em class=sig-param><span class=n><span class=pre>arg</span></span><span class=p><span class=pre>:</span></span><span class=w> </span><span class=n><span class=pre>str</span></span></em><span class=sig-paren>)</span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><span class=pre>bool</span></span></span><dd><p>Check if the class if the given name is present in the current OAT binary</p></dl> <dl class="py property"><dt class="sig sig-object py"><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>header</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Header title=lief.OAT.Header><span class=pre>lief.OAT.Header</span></a></span></span><dd><p>Return the OAT <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Header title=lief.OAT.Header><code class="xref py py-class docutils literal notranslate"><span class=pre>Header</span></code></a></p></dl> <dl class="py class"><dt class="sig sig-object py"><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>it_classes</span></span><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>Iterator over <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Class title=lief._lief.OAT.Class><code class="xref py py-class docutils literal notranslate"><span class=pre>lief._lief.OAT.Class</span></code></a></p></dl> <dl class="py class"><dt class="sig sig-object py"><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>it_dex_files</span></span><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>Iterator over <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File title=lief._lief.DEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief._lief.DEX.File</span></code></a></p></dl> <dl class="py class"><dt class="sig sig-object py"><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>it_methods</span></span><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>Iterator over <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Method title=lief._lief.OAT.Method><code class="xref py py-class docutils literal notranslate"><span class=pre>lief._lief.OAT.Method</span></code></a></p></dl> <dl class="py class"><dt class="sig sig-object py"><em class=property><span class=pre>class</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>it_oat_dex_files</span></span><dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class=pre>object</span></code></p> <p>Iterator over <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.DexFile title=lief._lief.OAT.DexFile><code class="xref py py-class docutils literal notranslate"><span class=pre>lief._lief.OAT.DexFile</span></code></a></p></dl> <dl class="py property"><dt class="sig sig-object py"><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>methods</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary.it_methods title=lief.OAT.Binary.it_methods><span class=pre>lief.OAT.Binary.it_methods</span></a></span></span><dd><p>Return an iterator over <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Method title=lief.OAT.Method><code class="xref py py-class docutils literal notranslate"><span class=pre>Method</span></code></a></p></dl> <dl class="py property"><dt class="sig sig-object py"><em class=property><span class=pre>property</span><span class=w> </span></em><span class="sig-name descname"><span class=pre>oat_dex_files</span></span> <span class=sig-return><span class=sig-return-icon>→</span> <span class=sig-return-typehint><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary.it_oat_dex_files title=lief.OAT.Binary.it_oat_dex_files><span class=pre>lief.OAT.Binary.it_oat_dex_files</span></a></span></span><dd><p>Return an iterator over <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.DexFile title=lief.OAT.DexFile><code class="xref py py-class docutils literal notranslate"><span class=pre>DexFile</span></code></a></p></dl></dl><p>If the given OAT targets Android Marshmallow or Nougat (6 or 7) then DEX files can be retrieved with the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary.dex_files title=lief.OAT.Binary.dex_files><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.OAT.Binary.dex_files</span></code></a> attribute:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=nb>len</span><span class=p>(</span><span class=n>oat</span><span class=o>.</span><span class=n>dex_files</span><span class=p>)</span> <span class=c1># > 1 if multi-dex</span>
-<span class=go>1</span>
-<span class=gp>>>> </span><span class=n>dex</span> <span class=o>=</span> <span class=n>oat</span><span class=o>.</span><span class=n>dex_files</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
-<span class=gp>>>> </span><span class=n>dex</span><span class=o>.</span><span class=n>save</span><span class=p>(</span><span class=s2>"/tmp/classes.dex"</span><span class=p>)</span>
-</pre></div></div><p>From the code above, the <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File title=lief.DEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.DEX.File</span></code></a> has been extracted to <code class="docutils literal notranslate"><span class=pre>/tmp/classes.dex</span></code> (with de-optimization).<p>If the given OAT targets Android Oreo or above, then extraction is done by using the VDEX file. The <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.parse title=lief.OAT.parse><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.OAT.parse()</span></code></a> function accepts an OAT file or an OAT <strong>and</strong> a VDEX file. By providing the VDEX file in the second parameter, the <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary title=lief.OAT.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.OAT.Binary</span></code></a> object will have the same functionalities as the one for OAT pre-Oreo.<p>If the VDEX file is not provided then <a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary title=lief.OAT.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.OAT.Binary</span></code></a> will have limited information:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=c1># Without VDEX file</span>
-<span class=o>>>></span> <span class=n>oat_oreo</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"KeyChain.odex"</span><span class=p>)</span>
-<span class=o>>>></span> <span class=nb>len</span><span class=p>(</span><span class=n>oat_oreo</span><span class=o>.</span><span class=n>dex_files</span><span class=p>)</span>
-<span class=mi>0</span>
-<span class=o>>>></span> <span class=nb>len</span><span class=p>(</span><span class=n>oat_oreo</span><span class=o>.</span><span class=n>classes</span><span class=p>)</span>
-<span class=mi>0</span>
-<span class=o>>>></span> <span class=nb>len</span><span class=p>(</span><span class=n>oat_oreo</span><span class=o>.</span><span class=n>oat_dex_files</span><span class=p>)</span>
-<span class=mi>1</span>
-<span class=o>>>></span> <span class=n>oat_dex_file</span> <span class=o>=</span> <span class=n>oat_oreo</span><span class=o>.</span><span class=n>oat_dex_files</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
-<span class=o>>>></span> <span class=nb>print</span><span class=p>(</span><span class=n>oat_dex_file</span><span class=p>)</span>
-<span class=o>/</span><span class=n>system</span><span class=o>/</span><span class=n>app</span><span class=o>/</span><span class=n>KeyChain</span><span class=o>/</span><span class=n>KeyChain</span><span class=o>.</span><span class=n>apk</span> <span class=o>-</span> <span class=p>(</span><span class=n>Checksum</span><span class=p>:</span> <span class=mh>0x206c8ab1</span><span class=p>)</span>
-</pre></div></div><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=c1># With VDEX file</span>
-<span class=o>>>></span> <span class=n>oat_oreo</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>OAT</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"KeyChain.odex"</span><span class=p>,</span> <span class=s2>"KeyChain.vdex"</span><span class=p>)</span>
-<span class=o>>>></span> <span class=nb>len</span><span class=p>(</span><span class=n>oat_oreo</span><span class=o>.</span><span class=n>dex_files</span><span class=p>)</span>
-<span class=mi>1</span>
-<span class=o>>>></span> <span class=nb>len</span><span class=p>(</span><span class=n>oat_oreo</span><span class=o>.</span><span class=n>classes</span><span class=p>)</span>
-<span class=mi>17</span>
-<span class=o>>>></span> <span class=n>oat_oreo</span><span class=o>.</span><span class=n>dex_files</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>.</span><span class=n>save</span><span class=p>(</span><span class=s2>"/tmp/classes.dex"</span><span class=p>)</span>
-</pre></div></div><p>We can also use the LIEF’s VDEX module directly:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=n>vdex</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>VDEX</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"KeyChain.vdex"</span><span class=p>)</span>
-</pre></div></div><p>As the VDEX format is completely different from OAT, ELF, PE and Mach-O the VDEX parser creates a <a class="reference internal"href=../formats/android/vdex/python.html#lief.VDEX.File title=lief.VDEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.VDEX.File</span></code></a> object and not a <a class="reference internal"href=../api/binary_abstraction/python.html#lief.Binary title=lief.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>Binary</span></code></a>. We can also extract DEX files with the <a class="reference internal"href=../formats/android/vdex/python.html#lief.VDEX.File.dex_files title=lief.VDEX.File.dex_files><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.VDEX.File.dex_files</span></code></a> attribute:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=nb>len</span><span class=p>(</span><span class=n>vdex</span><span class=o>.</span><span class=n>dex_files</span><span class=p>)</span>
-<span class=go>1</span>
-<span class=gp>>>> </span><span class=n>vdex</span><span class=o>.</span><span class=n>dex_files</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>.</span><span class=n>save</span><span class=p>(</span><span class=s2>"/tmp/KeyChain.dex"</span><span class=p>)</span> <span class=c1># With de-optimization</span>
-</pre></div></div></section><section id=dex><h2 id=dex>DEX<a title="Link to this heading"class=headerlink href=#dex>¶</a></h2><p>The previous part was about the OAT/VDEX formats and how to access to the underlying DEX. This part introduces the main API for the <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File title=lief.DEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.DEX.File</span></code></a> object.<p>The LIEF DEX module enables to get information about Java code such as String, classes name, dalvik bytecodes, …<div class="admonition note"><p class=admonition-title>Note<p>As LIEF project is only focused on formats, there won’t be Dalvik disassembler in the DEX module.</div><p>The main API for a DEX file is in the <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File title=lief.DEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.DEX.File</span></code></a> object. This object can be generated using:<blockquote><div><ul class=simple><li><p><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary.dex_files title=lief.OAT.Binary.dex_files><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.OAT.Binary.dex_files</span></code></a><li><p><a class="reference internal"href=../formats/android/vdex/python.html#lief.VDEX.File.dex_files title=lief.VDEX.File.dex_files><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.VDEX.File.dex_files</span></code></a><li><p><a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.parse title=lief.DEX.parse><code class="xref py py-func docutils literal notranslate"><span class=pre>lief.DEX.parse()</span></code></a></ul></div></blockquote><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=n>oat</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"SecSettings2.odex"</span><span class=p>)</span>
-<span class=gp>>>> </span><span class=nb>type</span><span class=p>(</span><span class=n>oat</span><span class=o>.</span><span class=n>dex_files</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
-<span class=go>_pylief.DEX.File</span>
+<span class="go">2 directories, 2 files</span>
+</pre></div>
+</div>
+<p>By looking at the files in <code class="docutils literal notranslate"><span class="pre">SecSettings2.apk</span></code>, we can’t find <code class="docutils literal notranslate"><span class="pre">.dex</span></code> files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>unzip<span class="w"> </span>-l<span class="w"> </span>./SecSettings2.apk<span class="p">|</span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">"classes.dex"</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>Next to the <code class="docutils literal notranslate"><span class="pre">SecSettings2.apk</span></code>, we find <code class="docutils literal notranslate"><span class="pre">SecSettings2.odex</span></code> which is the OAT file resulting of the optimization of the missing DEX file.
+As ROM developers control the Android <strong>version</strong> and the target architecture, they just have to provide the OAT file.</p>
+<p>They can also use this <em>“feature”</em> to avoid analysis and reverse engineering of the application. As the Dalvik bytecode is located in the DEX file, without this file the analysis
+is quite limited.</p>
+<p>Thankfully there is a copy of the original DEX within the OAT! Actually it’s not an exact copy as <code class="docutils literal notranslate"><span class="pre">dex2oat</span></code> replaces some Dalvik instructions (like <code class="docutils literal notranslate"><span class="pre">invoke-virtual</span></code>) with optimized ones <a class="footnote-reference brackets" href="#id9" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> but starting from <strong>Android N</strong>, we can also recover the original instructions.</p>
+<p>Prior Android Oreo (8.0.0) DEX files were embedded in the OAT itself and after Oreo, the transformation performed by <code class="docutils literal notranslate"><span class="pre">dex2oat</span></code> generates two files:</p>
+<ul class="simple">
+<li><p><strong>classes.odex</strong>: OAT containing native code</p></li>
+<li><p><strong>classes.vdex</strong>: VDEX file containing copy of original DEX files</p></li>
+</ul>
+<p>The DEX files originally located in the OAT has been exported <strong>in a new file</strong> with <strong>a new format</strong>: the VDEX format. This new format is completely
+different from OAT, especially it’s not an ELF.</p>
+<p>In the same way as OAT format, VDEX internal structures change for each version of Android without backward compatibility.</p>
+<p>It also exists tools <a class="footnote-reference brackets" href="#id12" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id13" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id14" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> to extract DEX from OAT/VDEX files but the <strong>extraction</strong> <a class="footnote-reference brackets" href="#id11" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> is either limited to OAT <a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> or to VDEX <a class="footnote-reference brackets" href="#id13" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. With LIEF we aim to provide a single framework to deal with these formats.</p>
+</section>
+<section id="oat-and-vdex">
+<h2 id="oat-and-vdex">OAT and VDEX<a class="headerlink" href="#oat-and-vdex" title="Link to this heading">¶</a></h2>
+<p>As explained in the previous part, internal structures of the formats change for each version of Android. LIEF provides an abstraction
+of these modifications and the user can deal with OAT or VDEX without carrying of the underlying version of the OAT.</p>
+<p>It currently supports OAT files from Android 6.0 Marshmallow (OAT v64) to Android 8.0.1 Oreo (OAT v131).</p>
+<p>The OAT version is available with the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.version" title="lief.OAT.version"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.OAT.version()</span></code></a> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lief</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lief</span><span class="o">.</span><span class="n">OAT</span><span class="o">.</span><span class="n">version</span><span class="p">(</span><span class="s2">"classes.odex"</span><span class="p">)</span> <span class="c1"># From Android 6</span>
+<span class="go">64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lief</span><span class="o">.</span><span class="n">OAT</span><span class="o">.</span><span class="n">version</span><span class="p">(</span><span class="s2">"classes.odex"</span><span class="p">)</span> <span class="c1"># From Android 7</span>
+<span class="go">88</span>
+</pre></div>
+</div>
+<p>One can also access to the associated Android version by using <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.android_version" title="lief.OAT.android_version"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.OAT.android_version()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lief</span><span class="o">.</span><span class="n">OAT</span><span class="o">.</span><span class="n">android_version</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+<span class="go">ANDROID_VERSIONS.VERSION_601</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lief</span><span class="o">.</span><span class="n">OAT</span><span class="o">.</span><span class="n">android_version</span><span class="p">(</span><span class="mi">124</span><span class="p">)</span>
+<span class="go">ANDROID_VERSIONS.VERSION_800</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lief</span><span class="o">.</span><span class="n">Android</span><span class="o">.</span><span class="n">code_name</span><span class="p">(</span><span class="n">lief</span><span class="o">.</span><span class="n">Android</span><span class="o">.</span><span class="n">ANDROID_VERSIONS</span><span class="o">.</span><span class="n">VERSION_800</span><span class="p">)</span>
+<span class="go">'Oreo'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lief</span><span class="o">.</span><span class="n">Android</span><span class="o">.</span><span class="n">version_string</span><span class="p">(</span><span class="n">lief</span><span class="o">.</span><span class="n">Android</span><span class="o">.</span><span class="n">ANDROID_VERSIONS</span><span class="o">.</span><span class="n">VERSION_800</span><span class="p">)</span>
+<span class="go">"8.0.0"</span>
+</pre></div>
+</div>
+<p>To express the fact that OAT files are first ELF, the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary" title="lief.OAT.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.OAT.Binary</span></code></a> class extends the <a class="reference internal" href="../formats/elf/python.html#lief.ELF.Binary" title="lief.ELF.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ELF.Binary</span></code></a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lief</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oat</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"classes.odex"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">oat</span><span class="p">)</span>
+<span class="go">_pylief.OAT.Binary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">oat</span><span class="p">,</span> <span class="n">lief</span><span class="o">.</span><span class="n">ELF</span><span class="o">.</span><span class="n">Binary</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Thus the same ELF API is available: adding sections, modifying dynamic entries, etc and the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary" title="lief.OAT.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.OAT.Binary</span></code></a> object adds the following methods:</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lief.OAT.</span></span><span class="sig-name descname"><span class="pre">Binary</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="../formats/elf/python.html#lief.ELF.Binary" title="lief._lief.ELF.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a></p>
+<p>OAT binary representation</p>
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">classes</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary.it_classes" title="lief.OAT.Binary.it_classes"><span class="pre">lief.OAT.Binary.it_classes</span></a></span></span></dt>
+<dd><p>Return an iterator over <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Class" title="lief.OAT.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">Class</span></code></a></p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dex2dex_json_info</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span></dt>
+<dd></dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dex_files</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary.it_dex_files" title="lief.OAT.Binary.it_dex_files"><span class="pre">lief.OAT.Binary.it_dex_files</span></a></span></span></dt>
+<dd><p>Return an iterator over <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a></p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Class" title="lief.OAT.Class"><span class="pre">lief.OAT.Class</span></a></span></span></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_class(self,</span> <span class="pre">class_name:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">lief._lief.OAT.Class</span></code></p></li>
+</ol>
+<p>Return the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Class" title="lief.OAT.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">Class</span></code></a> from its name</p>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_class(self,</span> <span class="pre">class_index:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">lief._lief.OAT.Class</span></code></p></li>
+</ol>
+<p>Return the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Class" title="lief.OAT.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">Class</span></code></a> from its <strong>index</strong></p>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">has_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span></dt>
+<dd><p>Check if the class if the given name is present in the current OAT binary</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">header</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Header" title="lief.OAT.Header"><span class="pre">lief.OAT.Header</span></a></span></span></dt>
+<dd><p>Return the OAT <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Header" title="lief.OAT.Header"><code class="xref py py-class docutils literal notranslate"><span class="pre">Header</span></code></a></p>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">it_classes</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Iterator over <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Class" title="lief._lief.OAT.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief._lief.OAT.Class</span></code></a></p>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">it_dex_files</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Iterator over <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File" title="lief._lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief._lief.DEX.File</span></code></a></p>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">it_methods</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Iterator over <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Method" title="lief._lief.OAT.Method"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief._lief.OAT.Method</span></code></a></p>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">it_oat_dex_files</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Iterator over <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.DexFile" title="lief._lief.OAT.DexFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief._lief.OAT.DexFile</span></code></a></p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">methods</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary.it_methods" title="lief.OAT.Binary.it_methods"><span class="pre">lief.OAT.Binary.it_methods</span></a></span></span></dt>
+<dd><p>Return an iterator over <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Method" title="lief.OAT.Method"><code class="xref py py-class docutils literal notranslate"><span class="pre">Method</span></code></a></p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">oat_dex_files</span></span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary.it_oat_dex_files" title="lief.OAT.Binary.it_oat_dex_files"><span class="pre">lief.OAT.Binary.it_oat_dex_files</span></a></span></span></dt>
+<dd><p>Return an iterator over <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.DexFile" title="lief.OAT.DexFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">DexFile</span></code></a></p>
+</dd></dl>
+</dd></dl>
+<p>If the given OAT targets Android Marshmallow or Nougat (6 or 7) then DEX files can be retrieved with the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary.dex_files" title="lief.OAT.Binary.dex_files"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.OAT.Binary.dex_files</span></code></a> attribute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">oat</span><span class="o">.</span><span class="n">dex_files</span><span class="p">)</span> <span class="c1"># &gt; 1 if multi-dex</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dex</span> <span class="o">=</span> <span class="n">oat</span><span class="o">.</span><span class="n">dex_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dex</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"/tmp/classes.dex"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>From the code above, the <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.DEX.File</span></code></a> has been extracted to <code class="docutils literal notranslate"><span class="pre">/tmp/classes.dex</span></code> (with de-optimization).</p>
+<p>If the given OAT targets Android Oreo or above, then extraction is done by using the VDEX file. The <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.parse" title="lief.OAT.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.OAT.parse()</span></code></a> function accepts an OAT file or
+an OAT <strong>and</strong> a VDEX file. By providing the VDEX file in the second parameter, the <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary" title="lief.OAT.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.OAT.Binary</span></code></a> object will have the same functionalities as the one for OAT pre-Oreo.</p>
+<p>If the VDEX file is not provided then <a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary" title="lief.OAT.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.OAT.Binary</span></code></a> will have limited information:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Without VDEX file</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">oat_oreo</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"KeyChain.odex"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">oat_oreo</span><span class="o">.</span><span class="n">dex_files</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">oat_oreo</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">oat_oreo</span><span class="o">.</span><span class="n">oat_dex_files</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">oat_dex_file</span> <span class="o">=</span> <span class="n">oat_oreo</span><span class="o">.</span><span class="n">oat_dex_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">oat_dex_file</span><span class="p">)</span>
+<span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">KeyChain</span><span class="o">/</span><span class="n">KeyChain</span><span class="o">.</span><span class="n">apk</span> <span class="o">-</span> <span class="p">(</span><span class="n">Checksum</span><span class="p">:</span> <span class="mh">0x206c8ab1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># With VDEX file</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">oat_oreo</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">OAT</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"KeyChain.odex"</span><span class="p">,</span> <span class="s2">"KeyChain.vdex"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">oat_oreo</span><span class="o">.</span><span class="n">dex_files</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">oat_oreo</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
+<span class="mi">17</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">oat_oreo</span><span class="o">.</span><span class="n">dex_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"/tmp/classes.dex"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can also use the LIEF’s VDEX module directly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vdex</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">VDEX</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"KeyChain.vdex"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>As the VDEX format is completely different from OAT, ELF, PE and Mach-O the VDEX parser creates a <a class="reference internal" href="../formats/android/vdex/python.html#lief.VDEX.File" title="lief.VDEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.VDEX.File</span></code></a> object and not a <a class="reference internal" href="../api/binary_abstraction/python.html#lief.Binary" title="lief.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binary</span></code></a>.
+We can also extract DEX files with the  <a class="reference internal" href="../formats/android/vdex/python.html#lief.VDEX.File.dex_files" title="lief.VDEX.File.dex_files"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.VDEX.File.dex_files</span></code></a> attribute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">vdex</span><span class="o">.</span><span class="n">dex_files</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vdex</span><span class="o">.</span><span class="n">dex_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"/tmp/KeyChain.dex"</span><span class="p">)</span> <span class="c1"># With de-optimization</span>
+</pre></div>
+</div>
+</section>
+<section id="dex">
+<h2 id="dex">DEX<a class="headerlink" href="#dex" title="Link to this heading">¶</a></h2>
+<p>The previous part was about the OAT/VDEX formats and how to access to the underlying DEX. This part introduces the main API for the <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.DEX.File</span></code></a> object.</p>
+<p>The LIEF DEX module enables to get information about Java code such as String, classes name, dalvik bytecodes, …</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As LIEF project is only focused on formats, there won’t be Dalvik disassembler in the DEX module.</p>
+</div>
+<p>The main API for a DEX file is in the <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.DEX.File</span></code></a> object. This object can be generated using:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary.dex_files" title="lief.OAT.Binary.dex_files"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.OAT.Binary.dex_files</span></code></a></p></li>
+<li><p><a class="reference internal" href="../formats/android/vdex/python.html#lief.VDEX.File.dex_files" title="lief.VDEX.File.dex_files"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.VDEX.File.dex_files</span></code></a></p></li>
+<li><p><a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.parse" title="lief.DEX.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">lief.DEX.parse()</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">oat</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"SecSettings2.odex"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">oat</span><span class="o">.</span><span class="n">dex_files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">_pylief.DEX.File</span>
 
-<span class=gp>>>> </span><span class=n>vdex</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>VDEX</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"SecSettings2.odex"</span><span class=p>)</span>
-<span class=gp>>>> </span><span class=nb>type</span><span class=p>(</span><span class=n>vdex</span><span class=o>.</span><span class=n>dex_files</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
-<span class=go>_pylief.DEX.File</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vdex</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">VDEX</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"SecSettings2.odex"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">vdex</span><span class="o">.</span><span class="n">dex_files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">_pylief.DEX.File</span>
 
-<span class=gp>>>> </span><span class=n>dex</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>DEX</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"classes.dex"</span><span class=p>)</span>
-<span class=gp>>>> </span><span class=nb>type</span><span class=p>(</span><span class=n>dex</span><span class=p>)</span>
-<span class=go>_pylief.DEX.File</span>
-</pre></div></div><p>Once created, we can access to the strings with the <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File.strings title=lief.DEX.File.strings><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.DEX.File.strings</span></code></a> attribute:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=gp>>>> </span><span class=nb>len</span><span class=p>(</span><span class=n>dex</span><span class=o>.</span><span class=n>strings</span><span class=p>)</span>
-<span class=go>23529</span>
-<span class=gp>>>> </span><span class=k>for</span> <span class=n>s</span> <span class=ow>in</span> <span class=n>dex</span><span class=o>.</span><span class=n>strings</span><span class=p>:</span>
-<span class=gp>... </span>  <span class=k>if</span> <span class=n>http</span> <span class=ow>in</span> <span class=n>s</span><span class=p>:</span>
-<span class=gp>... </span>    <span class=nb>print</span><span class=p>(</span><span class=n>s</span><span class=p>)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dex</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">DEX</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"classes.dex"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">dex</span><span class="p">)</span>
+<span class="go">_pylief.DEX.File</span>
+</pre></div>
+</div>
+<p>Once created, we can access to the strings with the <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File.strings" title="lief.DEX.File.strings"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.DEX.File.strings</span></code></a> attribute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">dex</span><span class="o">.</span><span class="n">strings</span><span class="p">)</span>
+<span class="go">23529</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dex</span><span class="o">.</span><span class="n">strings</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="k">if</span> <span class="n">http</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-<span class=go>https://analytics.mopub.com/i/jot/exchange_client_event</span>
-<span class=go>https://app-measurement.com/a</span>
-<span class=go>https://mobilecrashreporting.googleapis.com/v1/crashes:batchCreate?key=</span>
-<span class=go>https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps</span>
-<span class=go>https://plus.google.com/</span>
-<span class=go>https://ssl.google-analytics.com</span>
-<span class=go>https://support.google.com/dfp_premium/answer/7160685#push</span>
-<span class=go>https://www.google.com</span>
-<span class=go>...</span>
-</pre></div></div><p>Similarly, methods and classes are available with the <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File.classes title=lief.DEX.File.classes><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.DEX.File.classes</span></code></a> / <a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File.methods title=lief.DEX.File.methods><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.DEX.File.methods</span></code></a> attributes:<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=k>for</span> <span class=bp>cls</span> <span class=ow>in</span> <span class=n>dex</span><span class=o>.</span><span class=n>classes</span><span class=p>:</span>
-  <span class=k>if</span> <span class=bp>cls</span><span class=o>.</span><span class=n>source_filename</span><span class=p>:</span>
-    <span class=nb>print</span><span class=p>(</span><span class=bp>cls</span><span class=p>)</span>
-</pre></div></div><div class="highlight-text notranslate"><div class=highlight><pre><span></span>com.avast.android.sdk.antitheft.internal.protection.wipe.a - CalendarWiper.java - 3 Methods
+<span class="go">https://analytics.mopub.com/i/jot/exchange_client_event</span>
+<span class="go">https://app-measurement.com/a</span>
+<span class="go">https://mobilecrashreporting.googleapis.com/v1/crashes:batchCreate?key=</span>
+<span class="go">https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps</span>
+<span class="go">https://plus.google.com/</span>
+<span class="go">https://ssl.google-analytics.com</span>
+<span class="go">https://support.google.com/dfp_premium/answer/7160685#push</span>
+<span class="go">https://www.google.com</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>Similarly, methods and classes are available with the <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File.classes" title="lief.DEX.File.classes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.DEX.File.classes</span></code></a> / <a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File.methods" title="lief.DEX.File.methods"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.DEX.File.methods</span></code></a> attributes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">dex</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+  <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">source_filename</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>com.avast.android.sdk.antitheft.internal.protection.wipe.a - CalendarWiper.java - 3 Methods
 com.avast.android.account.internal.identity.a - AvastIdentityProvider.java - 17 Methods
 com.avast.android.account.internal.identity.d - FacebookIdentityProvider.java - 19 Methods
 com.avast.android.lib.wifiscanner.internal.b$a - WifiScannerComponentFactory.java - 1 Methods
-</pre></div></div><p>In the DEX file format, there is a special attribute for classes that register the original source filename: <a class="reference external"href=https://source.android.com/devices/tech/dalvik/dex-format#class-def-item>source_file_idx</a>. Some <em>obfuscators</em> mangle classes but keep this attribute! Since Java source filenames are associated with class names, we can easily recover the deobfuscated name using:<blockquote><div><ul class=simple><li><p><a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.Class.source_filename title=lief.DEX.Class.source_filename><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.DEX.Class.source_filename</span></code></a><li><p><a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.Class.pretty_name title=lief.DEX.Class.pretty_name><code class="xref py py-attr docutils literal notranslate"><span class=pre>lief.DEX.Class.pretty_name</span></code></a></ul></div></blockquote><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=k>for</span> <span class=bp>cls</span> <span class=ow>in</span> <span class=n>dex</span><span class=o>.</span><span class=n>classes</span><span class=p>:</span>
-  <span class=k>if</span> <span class=bp>cls</span><span class=o>.</span><span class=n>source_filename</span><span class=p>:</span>
-    <span class=nb>print</span><span class=p>(</span><span class=bp>cls</span><span class=o>.</span><span class=n>pretty_name</span> <span class=o>+</span> <span class=s2>": ---> "</span> <span class=o>+</span> <span class=bp>cls</span><span class=o>.</span><span class=n>source_filename</span><span class=p>)</span>
-</pre></div></div><div class="highlight-text notranslate"><div class=highlight><pre><span></span>com.avast.android.sdk.antitheft.internal.protection.wipe.a: ---> CalendarWiper.java
-com.avast.android.account.internal.identity.a               ---> AvastIdentityProvider.java
-com.avast.android.account.internal.identity.d               ---> FacebookIdentityProvider.java
-com.avast.android.lib.wifiscanner.internal.b$a              ---> WifiScannerComponentFactory.java
+</pre></div>
+</div>
+<p>In the DEX file format, there is a special attribute for classes that register the original source filename: <a class="reference external" href="https://source.android.com/devices/tech/dalvik/dex-format#class-def-item">source_file_idx</a>.
+Some <em>obfuscators</em> mangle classes but keep this attribute! Since Java source filenames are associated with class names, we can easily recover the deobfuscated name using:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.Class.source_filename" title="lief.DEX.Class.source_filename"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.DEX.Class.source_filename</span></code></a></p></li>
+<li><p><a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.Class.pretty_name" title="lief.DEX.Class.pretty_name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lief.DEX.Class.pretty_name</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">dex</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+  <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">source_filename</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">pretty_name</span> <span class="o">+</span> <span class="s2">": ---&gt; "</span> <span class="o">+</span> <span class="bp">cls</span><span class="o">.</span><span class="n">source_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>com.avast.android.sdk.antitheft.internal.protection.wipe.a: ---&gt; CalendarWiper.java
+com.avast.android.account.internal.identity.a               ---&gt; AvastIdentityProvider.java
+com.avast.android.account.internal.identity.d               ---&gt; FacebookIdentityProvider.java
+com.avast.android.lib.wifiscanner.internal.b$a              ---&gt; WifiScannerComponentFactory.java
 
 
 If we are interested with DEX methods, they are represented with the :class:`~lief.DEX.Method` object and we can access to the **raw** Dalvik bytecode through :attr:`lief.DEX.Method.bytecode`
-</pre></div></div></section><section id=art><h2 id=art>ART<a title="Link to this heading"class=headerlink href=#art>¶</a></h2><p><strong>ART</strong> is the name of the <strong>Android Runtime</strong> but it’s also a <strong>format</strong>! This format is used for optimization purpose by the Android’s <strong>framework</strong>.<p>As discussed previously, Android has its own implementation of the Java virtual based on the Dalvik bytecode. This JVM is implemented in C++ and Java primitives (<code class="docutils literal notranslate"><span class=pre>java.lang.String</span></code>, <code class="docutils literal notranslate"><span class=pre>java.lang.Object</span></code>, etc) are mirrored with C++ objects:<ul class=simple><li><p><code class="docutils literal notranslate"><span class=pre>java.lang.Class</span></code>: <code class="docutils literal notranslate"><span class=pre>art::mirror::Class</span></code><li><p><code class="docutils literal notranslate"><span class=pre>java.lang.String</span></code>: <code class="docutils literal notranslate"><span class=pre>art::mirror::String</span></code><li><p><code class="docutils literal notranslate"><span class=pre>java.lang.reflect.Method</span></code>: <code class="docutils literal notranslate"><span class=pre>art::mirror::Method</span></code><li><p>…</ul><p>When instantiating a <strong>new</strong> Java class, it creates a mirrored C++ object (Memory allocation, calling constructors, …) and the JVM handles a reference on this C++ object. To speed up the boot process and to avoid instantiation of well-known classes <a class="footnote-reference brackets"href=#id10 id=id8 role=doc-noteref><span class=fn-bracket>[</span>2<span class=fn-bracket>]</span></a> at each boot, Android uses the ART format to store instances of C++ objects. To simplify, it can be seen as a heap dump of C++ objects.<p>In the same way as OAT and VDEX, the internal structures of this format change for each version of Android.<p>LIEF 0.9 has a very basic support for this format and only exposes the ART <a class="reference internal"href=../formats/android/art/python.html#lief.ART.Header title=lief.ART.Header><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.ART.Header</span></code></a>. The main API is available in the <a class="reference internal"href=../formats/android/art/python.html#lief.ART.File title=lief.ART.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.ART.File</span></code></a> object.<div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>art</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>ART</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"boot.art"</span><span class=p>)</span>
-<span class=nb>print</span><span class=p>(</span><span class=n>art</span><span class=o>.</span><span class=n>header</span><span class=p>)</span>
-</pre></div></div><div class="highlight-text notranslate"><div class=highlight><pre><span></span>Version:                         46
+</pre></div>
+</div>
+</section>
+<section id="art">
+<h2 id="art">ART<a class="headerlink" href="#art" title="Link to this heading">¶</a></h2>
+<p><strong>ART</strong> is the name of the <strong>Android Runtime</strong> but it’s also a <strong>format</strong>! This format is used for optimization purpose by the Android’s <strong>framework</strong>.</p>
+<p>As discussed previously, Android has its own implementation of the Java virtual based on the Dalvik bytecode.
+This JVM is implemented in C++ and Java primitives (<code class="docutils literal notranslate"><span class="pre">java.lang.String</span></code>, <code class="docutils literal notranslate"><span class="pre">java.lang.Object</span></code>, etc) are mirrored with C++ objects:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">java.lang.Class</span></code>: <code class="docutils literal notranslate"><span class="pre">art::mirror::Class</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">java.lang.String</span></code>: <code class="docutils literal notranslate"><span class="pre">art::mirror::String</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">java.lang.reflect.Method</span></code>: <code class="docutils literal notranslate"><span class="pre">art::mirror::Method</span></code></p></li>
+<li><p>…</p></li>
+</ul>
+<p>When instantiating a <strong>new</strong> Java class, it creates a mirrored C++ object (Memory allocation, calling constructors, …) and the JVM handles a reference on this C++ object. To speed up the boot process and to avoid instantiation of well-known classes <a class="footnote-reference brackets" href="#id10" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> at each boot, Android uses the ART format to store instances of C++ objects. To simplify, it can be seen as a heap dump of C++ objects.</p>
+<p>In the same way as OAT and VDEX, the internal structures of this format change for each version of Android.</p>
+<p>LIEF 0.9 has a very basic support for this format and only exposes the ART <a class="reference internal" href="../formats/android/art/python.html#lief.ART.Header" title="lief.ART.Header"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ART.Header</span></code></a>. The main API is available in the <a class="reference internal" href="../formats/android/art/python.html#lief.ART.File" title="lief.ART.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ART.File</span></code></a> object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">art</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">ART</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"boot.art"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">art</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Version:                         46
 Image Begin:                     0x70000000
 Image Size:                      0x238ac8
 Checksum:                        0x997c0fb0
@@ -139,4 +831,74 @@ Boot OAT Begin:                  0
 Boot OAT Size:                   0
 Storage Mode:                    UNCOMPRESSED
 Data Size:                       0x2389f0
-</pre></div></div></section><section id=oatlastword><h2 id=oatlastword>oatlastword<a title="Link to this heading"class=headerlink href=#oatlastword>¶</a></h2><p>LIEF 0.9 is <em>read-only</em> on these formats but further versions should enable to modify them (Add methods, change names, patch checksum, …)<p>Enjoy!<p class=rubric>Notes<aside class="footnote-list brackets"><aside class="footnote brackets"id=id9 role=doc-footnote><span class=label><span class=fn-bracket>[</span><a href=#id1 role=doc-backlink>1</a><span class=fn-bracket>]</span></span><ul class=simple><li><p><a class="reference external"href=http://mylifewithandroid.blogspot.com/2009/05/about-quick-method-invocation.html>http://mylifewithandroid.blogspot.com/2009/05/about-quick-method-invocation.html</a><li><p><a class="reference external"href=https://github.com/JesusFreke/smali/wiki/UnresolvableOdexInstruction>https://github.com/JesusFreke/smali/wiki/UnresolvableOdexInstruction</a></ul></aside><aside class="footnote brackets"id=id10 role=doc-footnote><span class=label><span class=fn-bracket>[</span><a href=#id8 role=doc-backlink>2</a><span class=fn-bracket>]</span></span><p>Usually the ones from the Android Framework</aside><aside class="footnote brackets"id=id11 role=doc-footnote><span class=label><span class=fn-bracket>[</span><a href=#id5 role=doc-backlink>3</a><span class=fn-bracket>]</span></span><p>They have other nices features like a disassembler, pseudo-code, … that are not cover in LIEF</aside><aside class="footnote brackets"id=id12 role=doc-footnote><span class=label><span class=fn-bracket>[</span>4<span class=fn-bracket>]</span></span><span class=backrefs>(<a href=#id2 role=doc-backlink>1</a>,<a href=#id6 role=doc-backlink>2</a>)</span><p>Dextra by Jonathan Levin: <a class="reference external"href=http://newandroidbook.com/tools/dextra.html>http://newandroidbook.com/tools/dextra.html</a></aside><aside class="footnote brackets"id=id13 role=doc-footnote><span class=label><span class=fn-bracket>[</span>5<span class=fn-bracket>]</span></span><span class=backrefs>(<a href=#id3 role=doc-backlink>1</a>,<a href=#id7 role=doc-backlink>2</a>)</span><p>vdexExtractor by Anestis Bechtsoudis: <a class="reference external"href=https://github.com/anestisb/vdexExtractor>https://github.com/anestisb/vdexExtractor</a></aside><aside class="footnote brackets"id=id14 role=doc-footnote><span class=label><span class=fn-bracket>[</span><a href=#id4 role=doc-backlink>6</a><span class=fn-bracket>]</span></span><p>smali by JesusFreke: <a class="reference external"href=https://github.com/JesusFreke/smali/wiki/DeodexInstructions>https://github.com/JesusFreke/smali/wiki/DeodexInstructions</a></aside></aside><p class=rubric>API<ul class=simple><li><p><a class="reference internal"href=../formats/android/oat/python.html#lief.OAT.Binary title=lief.OAT.Binary><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.OAT.Binary</span></code></a><li><p><a class="reference internal"href=../formats/android/vdex/python.html#lief.VDEX.File title=lief.VDEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.VDEX.File</span></code></a><li><p><a class="reference internal"href=../formats/android/dex/python.html#lief.DEX.File title=lief.DEX.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.DEX.File</span></code></a><li><p><a class="reference internal"href=../formats/android/art/python.html#lief.ART.File title=lief.ART.File><code class="xref py py-class docutils literal notranslate"><span class=pre>lief.ART.File</span></code></a></ul></section></section></div><div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right"><aside class="border-left pl-5 py-3"><span class="text-uppercase text-muted font-size-sm d-block mb-3"> On this page: </span><a class="d-block my-2"data-toggle=scroll href=#introduction>Introduction</a><a class="d-block my-2"data-toggle=scroll href=#the-missing-dex>The Missing DEX</a><a class="d-block my-2"data-toggle=scroll href=#oat-and-vdex>OAT and VDEX</a><a class="d-block my-2"data-toggle=scroll href=#dex>DEX</a><a class="d-block my-2"data-toggle=scroll href=#art>ART</a><a class="d-block my-2"data-toggle=scroll href=#oatlastword>oatlastword</a></aside></div></div></div>
+</pre></div>
+</div>
+</section>
+<section id="oatlastword">
+<h2 id="oatlastword">oatlastword<a class="headerlink" href="#oatlastword" title="Link to this heading">¶</a></h2>
+<p>LIEF 0.9 is <em>read-only</em> on these formats but further versions should enable to modify them (Add methods, change names, patch checksum, …)</p>
+<p>Enjoy!</p>
+<p class="rubric">Notes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id9" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id1" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+<ul class="simple">
+<li><p><a class="reference external" href="http://mylifewithandroid.blogspot.com/2009/05/about-quick-method-invocation.html">http://mylifewithandroid.blogspot.com/2009/05/about-quick-method-invocation.html</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JesusFreke/smali/wiki/UnresolvableOdexInstruction">https://github.com/JesusFreke/smali/wiki/UnresolvableOdexInstruction</a></p></li>
+</ul>
+</aside>
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id8" role="doc-backlink">2</a><span class="fn-bracket">]</span></span>
+<p>Usually the ones from the Android Framework</p>
+</aside>
+<aside class="footnote brackets" id="id11" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id5" role="doc-backlink">3</a><span class="fn-bracket">]</span></span>
+<p>They have other nices features like a disassembler, pseudo-code, … that are not cover in LIEF</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a href="#id2" role="doc-backlink">1</a>,<a href="#id6" role="doc-backlink">2</a>)</span>
+<p>Dextra by Jonathan Levin: <a class="reference external" href="http://newandroidbook.com/tools/dextra.html">http://newandroidbook.com/tools/dextra.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a href="#id3" role="doc-backlink">1</a>,<a href="#id7" role="doc-backlink">2</a>)</span>
+<p>vdexExtractor by Anestis Bechtsoudis: <a class="reference external" href="https://github.com/anestisb/vdexExtractor">https://github.com/anestisb/vdexExtractor</a></p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id4" role="doc-backlink">6</a><span class="fn-bracket">]</span></span>
+<p>smali by JesusFreke: <a class="reference external" href="https://github.com/JesusFreke/smali/wiki/DeodexInstructions">https://github.com/JesusFreke/smali/wiki/DeodexInstructions</a></p>
+</aside>
+</aside>
+<p class="rubric">API</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../formats/android/oat/python.html#lief.OAT.Binary" title="lief.OAT.Binary"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.OAT.Binary</span></code></a></p></li>
+<li><p><a class="reference internal" href="../formats/android/vdex/python.html#lief.VDEX.File" title="lief.VDEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.VDEX.File</span></code></a></p></li>
+<li><p><a class="reference internal" href="../formats/android/dex/python.html#lief.DEX.File" title="lief.DEX.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.DEX.File</span></code></a></p></li>
+<li><p><a class="reference internal" href="../formats/android/art/python.html#lief.ART.File" title="lief.ART.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">lief.ART.File</span></code></a></p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+  <aside class="border-left pl-5 py-3">
+    <span class="text-uppercase text-muted font-size-sm d-block mb-3">
+      On this page:
+    </span>
+        <a href="#introduction" class="d-block my-2" data-toggle="scroll">Introduction</a>
+        <a href="#the-missing-dex" class="d-block my-2" data-toggle="scroll">The Missing DEX</a>
+        <a href="#oat-and-vdex" class="d-block my-2" data-toggle="scroll">OAT and VDEX</a>
+        <a href="#dex" class="d-block my-2" data-toggle="scroll">DEX</a>
+        <a href="#art" class="d-block my-2" data-toggle="scroll">ART</a>
+        <a href="#oatlastword" class="d-block my-2" data-toggle="scroll">oatlastword</a>
+
+  </aside>
+</div>
+    </div>
+  </div>
+  </body>
+</html>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -90,46 +90,45 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ResourceAccelerator.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;set&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="visibility_8h_source.html">LIEF/visibility.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Object_8hpp_source.html">LIEF/Object.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="PE_2enums_8hpp_source.html">LIEF/PE/enums.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AcceleratorCodes_8hpp_source.html">LIEF/PE/resources/AcceleratorCodes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="enums_8hpp_source.html">LIEF/enums.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ResourceAccelerator.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceAccelerator_8hpp__incl.png" border="0" usemap="#aResourceAccelerator_8hpp" alt=""/></div>
 <map name="aResourceAccelerator_8hpp" id="aResourceAccelerator_8hpp">
-<area shape="rect" title=" " alt="" coords="139,5,322,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,64,104"/>
-<area shape="poly" title=" " alt="" coords="200,33,78,77,76,72,198,28"/>
-<area shape="rect" title=" " alt="" coords="88,79,131,104"/>
-<area shape="poly" title=" " alt="" coords="213,33,142,74,139,69,210,28"/>
-<area shape="rect" title=" " alt="" coords="155,79,231,104"/>
-<area shape="poly" title=" " alt="" coords="227,32,208,68,203,65,222,30"/>
-<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="210,152,329,177"/>
-<area shape="poly" title=" " alt="" coords="236,30,265,138,260,139,231,32"/>
-<area shape="rect" href="Object_8hpp.html" title=" " alt="" coords="307,79,429,104"/>
-<area shape="poly" title=" " alt="" coords="254,28,335,70,332,75,252,33"/>
-<area shape="rect" href="PE_2enums_8hpp.html" title=" " alt="" coords="474,79,619,104"/>
-<area shape="poly" title=" " alt="" coords="282,28,483,73,482,78,281,33"/>
-<area shape="poly" title=" " alt="" coords="354,106,298,146,295,142,351,102"/>
-<area shape="rect" title=" " alt="" coords="471,225,563,251"/>
-<area shape="poly" title=" " alt="" coords="371,104,376,139,383,158,394,176,424,201,460,218,457,223,421,205,390,179,378,161,371,140,366,105"/>
-<area shape="rect" title=" " alt="" coords="404,152,487,177"/>
-<area shape="poly" title=" " alt="" coords="532,106,475,146,472,142,529,102"/>
-<area shape="rect" title=" " alt="" coords="511,152,582,177"/>
-<area shape="poly" title=" " alt="" coords="549,104,549,138,544,138,544,104"/>
-<area shape="rect" href="enums_8hpp.html" title=" " alt="" coords="607,152,732,177"/>
-<area shape="poly" title=" " alt="" coords="568,102,639,143,636,147,565,106"/>
-<area shape="rect" href="PE_2undef_8h.html" title=" " alt="" coords="757,152,878,177"/>
-<area shape="poly" title=" " alt="" coords="591,101,761,146,760,151,589,107"/>
-<area shape="poly" title=" " alt="" coords="646,180,555,222,553,217,644,175"/>
+<area shape="rect" title=" " alt="" coords="291,5,474,31"/>
+<area shape="rect" title=" " alt="" coords="5,86,64,111"/>
+<area shape="poly" title=" " alt="" coords="296,33,190,52,77,81,71,83,69,78,75,76,189,47,295,28"/>
+<area shape="rect" title=" " alt="" coords="89,86,165,111"/>
+<area shape="poly" title=" " alt="" coords="340,33,177,81,169,84,168,79,175,76,338,28"/>
+<area shape="rect" title=" " alt="" coords="189,86,251,111"/>
+<area shape="poly" title=" " alt="" coords="360,33,257,83,255,78,358,28"/>
+<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="469,167,587,192"/>
+<area shape="poly" title=" " alt="" coords="427,28,468,47,488,60,505,77,516,95,523,115,530,152,525,153,518,116,511,97,501,80,485,64,466,51,425,33"/>
+<area shape="rect" href="Object_8hpp.html" title=" " alt="" coords="565,86,688,111"/>
+<area shape="poly" title=" " alt="" coords="419,28,579,79,577,84,417,33"/>
+<area shape="rect" href="AcceleratorCodes_8hpp.html" title=" " alt="" coords="275,79,490,119"/>
+<area shape="poly" title=" " alt="" coords="385,31,385,65,380,65,380,31"/>
+<area shape="rect" href="enums_8hpp.html" title=" " alt="" coords="712,86,837,111"/>
+<area shape="poly" title=" " alt="" coords="450,28,701,76,718,80,717,85,699,81,449,33"/>
+<area shape="poly" title=" " alt="" coords="614,114,555,160,552,156,610,109"/>
+<area shape="rect" title=" " alt="" coords="670,167,762,192"/>
+<area shape="poly" title=" " alt="" coords="642,110,694,156,691,160,638,114"/>
+<area shape="poly" title=" " alt="" coords="419,116,496,158,493,162,416,121"/>
+<area shape="rect" title=" " alt="" coords="349,167,416,192"/>
+<area shape="poly" title=" " alt="" coords="385,119,385,153,380,153,380,119"/>
+<area shape="poly" title=" " alt="" coords="768,113,735,157,731,154,764,110"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -137,19 +136,22 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceAccelerator_8hpp__dep__incl.png" border="0" usemap="#aResourceAccelerator_8hppdep" alt=""/></div>
 <map name="aResourceAccelerator_8hppdep" id="aResourceAccelerator_8hppdep">
-<area shape="rect" title=" " alt="" coords="17,5,199,31"/>
-<area shape="rect" href="PE_8hpp.html" title=" " alt="" coords="64,225,131,251"/>
-<area shape="poly" title=" " alt="" coords="93,43,75,79,70,120,75,161,85,198,95,224,90,226,80,199,70,162,65,120,69,78,88,41"/>
-<area shape="rect" href="ResourcesManager_8hpp.html" title=" " alt="" coords="84,79,257,104"/>
-<area shape="poly" title=" " alt="" coords="129,39,163,77,159,80,125,43"/>
-<area shape="rect" href="LIEF_8hpp.html" title=" " alt="" coords="5,299,80,324"/>
-<area shape="poly" title=" " alt="" coords="82,263,54,300,49,297,78,260"/>
-<area shape="rect" href="to__json_8hpp.html" title=" " alt="" coords="105,299,202,324"/>
-<area shape="poly" title=" " alt="" coords="117,260,146,297,142,300,113,263"/>
-<area shape="poly" title=" " alt="" coords="152,116,125,153,110,192,102,226,97,225,105,191,120,151,148,113"/>
-<area shape="rect" href="PE_2Binary_8hpp.html" title=" " alt="" coords="135,152,225,177"/>
-<area shape="poly" title=" " alt="" coords="177,117,181,152,176,152,171,118"/>
-<area shape="poly" title=" " alt="" coords="158,188,113,227,109,223,155,184"/>
+<area shape="rect" title=" " alt="" coords="5,5,188,31"/>
+<area shape="rect" href="PE_8hpp.html" title=" " alt="" coords="78,299,145,324"/>
+<area shape="poly" title=" " alt="" coords="81,43,63,79,58,111,58,143,70,206,89,260,107,297,102,299,84,262,65,208,53,144,52,110,58,78,77,41"/>
+<area shape="rect" href="ResourcesManager_8hpp.html" title=" " alt="" coords="73,79,246,104"/>
+<area shape="poly" title=" " alt="" coords="118,39,151,77,147,80,114,43"/>
+<area shape="rect" href="LIEF_8hpp.html" title=" " alt="" coords="19,372,94,397"/>
+<area shape="poly" title=" " alt="" coords="96,337,68,374,63,370,92,333"/>
+<area shape="rect" href="to__json_8hpp.html" title=" " alt="" coords="119,372,216,397"/>
+<area shape="poly" title=" " alt="" coords="131,333,160,370,156,374,127,337"/>
+<area shape="poly" title=" " alt="" coords="138,116,124,133,114,153,105,193,104,235,111,298,106,299,98,235,100,193,109,151,120,130,134,113"/>
+<area shape="rect" href="PE_2Binary_8hpp.html" title=" " alt="" coords="123,152,214,177"/>
+<area shape="poly" title=" " alt="" coords="165,117,170,152,165,152,160,118"/>
+<area shape="poly" title=" " alt="" coords="161,191,118,299,113,297,156,190"/>
+<area shape="rect" href="Factory_8hpp.html" title=" " alt="" coords="175,225,269,251"/>
+<area shape="poly" title=" " alt="" coords="188,187,215,224,211,227,183,190"/>
+<area shape="poly" title=" " alt="" coords="194,260,131,301,128,296,191,256"/>
 </map>
 </div>
 </div>
@@ -158,6 +160,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ResourceAccelerator.html">LIEF::PE::ResourceAccelerator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnableBitMaskOperators.html">EnableBitMaskOperators&lt; LIEF::PE::ResourceAccelerator::FLAGS &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -170,6 +174,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a161dedbaedd54ca50e53edbf4fd0c513" id="r_a161dedbaedd54ca50e53edbf4fd0c513"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html#a161dedbaedd54ca50e53edbf4fd0c513">LIEF::PE::to_string</a> (<a class="el" href="classLIEF_1_1PE_1_1ResourceAccelerator.html#aae1f8474b9573d4d02424959441a013a">ResourceAccelerator::FLAGS</a> e)</td></tr>
+<tr class="separator:a161dedbaedd54ca50e53edbf4fd0c513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -170,6 +170,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad88d886c7f6b0772a67e9e0f90bd4031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd8a0d982018067d8059b55e6d991af7" id="r_afd8a0d982018067d8059b55e6d991af7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd8a0d982018067d8059b55e6d991af7">read_data</a> (std::vector&lt; uint8_t &gt; &amp;container, uint64_t <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size</a>)</td></tr>
 <tr class="separator:afd8a0d982018067d8059b55e6d991af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f2cf935de42d8d532eac675ffae1fe" id="r_af3f2cf935de42d8d532eac675ffae1fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f2cf935de42d8d532eac675ffae1fe">read_data</a> (std::vector&lt; uint8_t &gt; &amp;container)</td></tr>
+<tr class="separator:af3f2cf935de42d8d532eac675ffae1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ccd7b706cb092478dd2806f82d931fa" id="r_a3ccd7b706cb092478dd2806f82d931fa"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a3ccd7b706cb092478dd2806f82d931fa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3ccd7b706cb092478dd2806f82d931fa">read_objects</a> (std::vector&lt; T &gt; &amp;container, uint64_t count)</td></tr>
 <tr class="separator:a3ccd7b706cb092478dd2806f82d931fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,8 +183,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a439c9a8680e2e2c96ac37b376447328b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c224907eb3be986a58c09899654023" id="r_aa3c224907eb3be986a58c09899654023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3c224907eb3be986a58c09899654023">setpos</a> (size_t <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos</a>) const</td></tr>
 <tr class="separator:aa3c224907eb3be986a58c09899654023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a869420693c0f0cc6cd2268bd80d6c" id="r_a01a869420693c0f0cc6cd2268bd80d6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a869420693c0f0cc6cd2268bd80d6c">increment_pos</a> (size_t value) const</td></tr>
-<tr class="separator:a01a869420693c0f0cc6cd2268bd80d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73359915cd0c3faf0bfea06785f94d48" id="r_a73359915cd0c3faf0bfea06785f94d48"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLIEF_1_1BinaryStream.html">BinaryStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73359915cd0c3faf0bfea06785f94d48">increment_pos</a> (size_t value) const</td></tr>
+<tr class="separator:a73359915cd0c3faf0bfea06785f94d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada06dd72c8ee83777e811b73062d1f83" id="r_ada06dd72c8ee83777e811b73062d1f83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada06dd72c8ee83777e811b73062d1f83">decrement_pos</a> (size_t value) const</td></tr>
 <tr class="separator:ada06dd72c8ee83777e811b73062d1f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf57947550b154d11a0104dfe9579ca" id="r_a8cf57947550b154d11a0104dfe9579ca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos</a> () const</td></tr>
@@ -192,6 +194,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a348ef024f32077c89a349490cfea6cdf" id="r_a348ef024f32077c89a349490cfea6cdf"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a348ef024f32077c89a349490cfea6cdf"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a348ef024f32077c89a349490cfea6cdf">read_array</a> (size_t <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size</a>) const</td></tr>
 <tr class="separator:a348ef024f32077c89a349490cfea6cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ff6e7d78dd7377796dc1405462fb85" id="r_a01ff6e7d78dd7377796dc1405462fb85"><td class="memTemplParams" colspan="2">template&lt;class T , size_t N&gt; </td></tr>
+<tr class="memitem:a01ff6e7d78dd7377796dc1405462fb85"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a01ff6e7d78dd7377796dc1405462fb85">peek_array</a> (std::array&lt; T, N &gt; &amp;dst) const</td></tr>
+<tr class="separator:a01ff6e7d78dd7377796dc1405462fb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae891f4a828bb2449458330f555c53cf0" id="r_ae891f4a828bb2449458330f555c53cf0"><td class="memTemplParams" colspan="2">template&lt;class T , size_t N&gt; </td></tr>
+<tr class="memitem:ae891f4a828bb2449458330f555c53cf0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae891f4a828bb2449458330f555c53cf0">read_array</a> (std::array&lt; T, N &gt; &amp;dst) const</td></tr>
+<tr class="separator:ae891f4a828bb2449458330f555c53cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a3b7ddf87742a78c993a86b876a58d0" id="r_a1a3b7ddf87742a78c993a86b876a58d0"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1a3b7ddf87742a78c993a86b876a58d0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#ae870038bb7ca9cc4686ab28ae94aa45a">result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1a3b7ddf87742a78c993a86b876a58d0">peek</a> () const</td></tr>
 <tr class="separator:a1a3b7ddf87742a78c993a86b876a58d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,6 +241,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae38b9b820d2500a363e578a3236d814d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6bf4f1cd16888c2619219a02761ef1a" id="r_ab6bf4f1cd16888c2619219a02761ef1a"><td class="memItemLeft" align="right" valign="top">virtual const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6bf4f1cd16888c2619219a02761ef1a">end</a> () const</td></tr>
 <tr class="separator:ab6bf4f1cd16888c2619219a02761ef1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e11b2356c8a3b0ef6629099bb0249d" id="r_a95e11b2356c8a3b0ef6629099bb0249d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceLIEF.html#ae870038bb7ca9cc4686ab28ae94aa45a">result</a>&lt; const void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95e11b2356c8a3b0ef6629099bb0249d">read_at</a> (uint64_t offset, uint64_t <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size</a>, uint64_t virtual_address=0) const =0</td></tr>
+<tr class="separator:a95e11b2356c8a3b0ef6629099bb0249d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0511720ad3d558499feae96f60c85df" id="r_ad0511720ad3d558499feae96f60c85df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0511720ad3d558499feae96f60c85df">peek_in</a> (void *dst, uint64_t offset, uint64_t <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size</a>, uint64_t virtual_address=0) const</td></tr>
+<tr class="separator:ad0511720ad3d558499feae96f60c85df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -492,8 +504,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a01a869420693c0f0cc6cd2268bd80d6c" name="a01a869420693c0f0cc6cd2268bd80d6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01a869420693c0f0cc6cd2268bd80d6c">&#9670;&#160;</a></span>increment_pos()</h2>
+<a id="a73359915cd0c3faf0bfea06785f94d48" name="a73359915cd0c3faf0bfea06785f94d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73359915cd0c3faf0bfea06785f94d48">&#9670;&#160;</a></span>increment_pos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +514,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void LIEF::BinaryStream::increment_pos </td>
+          <td class="memname">const <a class="el" href="classLIEF_1_1BinaryStream.html">BinaryStream</a> &amp; LIEF::BinaryStream::increment_pos </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
@@ -642,7 +654,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos()</a>, <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8ac1ca8a1d20d289789a6de0474c94d9ad">read_error</a>, <a class="el" href="#aa3c224907eb3be986a58c09899654023">setpos()</a>, and <a class="el" href="namespaceLIEF.html#a58db7e00b01d344a7bfc0d5b63a74391">LIEF::swap_endian()</a>.</p>
+<p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, <a class="el" href="#ad0511720ad3d558499feae96f60c85df">peek_in()</a>, <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos()</a>, <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8ac1ca8a1d20d289789a6de0474c94d9ad">read_error</a>, <a class="el" href="#aa3c224907eb3be986a58c09899654023">setpos()</a>, and <a class="el" href="namespaceLIEF.html#a58db7e00b01d344a7bfc0d5b63a74391">LIEF::swap_endian()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ad0f984cfc8ad4b371e26a5126f4af911">peek()</a>, and <a class="el" href="#adb3f73144ad277a83b216fb3bc7433d3">read()</a>.</p>
 
@@ -670,7 +682,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="a61226fee84bf2fc4ab2103916dddd591" name="a61226fee84bf2fc4ab2103916dddd591"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61226fee84bf2fc4ab2103916dddd591">&#9670;&#160;</a></span>peek_array() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a61226fee84bf2fc4ab2103916dddd591">&#9670;&#160;</a></span>peek_array() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -690,12 +702,12 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="#a9d5f996ffa67c9bd7a675e99a8fa7184">peek_array()</a>, <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos()</a>, <a class="el" href="#aa3c224907eb3be986a58c09899654023">setpos()</a>, and <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size()</a>.</p>
+<p class="reference">References <a class="el" href="#a01ff6e7d78dd7377796dc1405462fb85">peek_array()</a>, <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos()</a>, <a class="el" href="#aa3c224907eb3be986a58c09899654023">setpos()</a>, and <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size()</a>.</p>
 
 </div>
 </div>
 <a id="a9d5f996ffa67c9bd7a675e99a8fa7184" name="a9d5f996ffa67c9bd7a675e99a8fa7184"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d5f996ffa67c9bd7a675e99a8fa7184">&#9670;&#160;</a></span>peek_array() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5f996ffa67c9bd7a675e99a8fa7184">&#9670;&#160;</a></span>peek_array() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -711,7 +723,36 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos()</a>, and <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size()</a>.</p>
+<p class="reference">References <a class="el" href="#a8cf57947550b154d11a0104dfe9579ca">pos()</a>, <a class="el" href="#a95e11b2356c8a3b0ef6629099bb0249d">read_at()</a>, and <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size()</a>.</p>
+
+</div>
+</div>
+<a id="a01ff6e7d78dd7377796dc1405462fb85" name="a01ff6e7d78dd7377796dc1405462fb85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ff6e7d78dd7377796dc1405462fb85">&#9670;&#160;</a></span>peek_array() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> LIEF::BinaryStream::peek_array </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; T, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dst</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, <a class="el" href="namespaceLIEF.html#a2cc78044f8aaf88116b39c37c0acc20b">LIEF::ok()</a>, and <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8ac1ca8a1d20d289789a6de0474c94d9ad">read_error</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a61226fee84bf2fc4ab2103916dddd591">peek_array()</a>, and <a class="el" href="#a348ef024f32077c89a349490cfea6cdf">read_array()</a>.</p>
 
@@ -755,6 +796,51 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, <a class="el" href="namespaceLIEF.html#a2cc78044f8aaf88116b39c37c0acc20b">LIEF::ok()</a>, and <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8ac1ca8a1d20d289789a6de0474c94d9ad">read_error</a>.</p>
+
+</div>
+</div>
+<a id="ad0511720ad3d558499feae96f60c85df" name="ad0511720ad3d558499feae96f60c85df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0511720ad3d558499feae96f60c85df">&#9670;&#160;</a></span>peek_in()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> LIEF::BinaryStream::peek_in </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>virtual_address</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classLIEF_1_1FileStream.html#a3362198197cd3cc0a2b5d272f814ed83">LIEF::FileStream</a>.</p>
+
+<p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, <a class="el" href="namespaceLIEF.html#a2cc78044f8aaf88116b39c37c0acc20b">LIEF::ok()</a>, and <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8ac1ca8a1d20d289789a6de0474c94d9ad">read_error</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a1a3b7ddf87742a78c993a86b876a58d0">peek()</a>.</p>
 
 </div>
 </div>
@@ -964,12 +1050,12 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="#a01a869420693c0f0cc6cd2268bd80d6c">increment_pos()</a>, and <a class="el" href="#a1a3b7ddf87742a78c993a86b876a58d0">peek()</a>.</p>
+<p class="reference">References <a class="el" href="#a73359915cd0c3faf0bfea06785f94d48">increment_pos()</a>, and <a class="el" href="#a1a3b7ddf87742a78c993a86b876a58d0">peek()</a>.</p>
 
 </div>
 </div>
 <a id="a348ef024f32077c89a349490cfea6cdf" name="a348ef024f32077c89a349490cfea6cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a348ef024f32077c89a349490cfea6cdf">&#9670;&#160;</a></span>read_array()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a348ef024f32077c89a349490cfea6cdf">&#9670;&#160;</a></span>read_array() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -985,12 +1071,104 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="#a01a869420693c0f0cc6cd2268bd80d6c">increment_pos()</a>, <a class="el" href="#a9d5f996ffa67c9bd7a675e99a8fa7184">peek_array()</a>, and <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size()</a>.</p>
+<p class="reference">References <a class="el" href="#a73359915cd0c3faf0bfea06785f94d48">increment_pos()</a>, <a class="el" href="#a01ff6e7d78dd7377796dc1405462fb85">peek_array()</a>, and <a class="el" href="#a34e8a0c11094dd0ddc4fdcad2224750a">size()</a>.</p>
+
+</div>
+</div>
+<a id="ae891f4a828bb2449458330f555c53cf0" name="ae891f4a828bb2449458330f555c53cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae891f4a828bb2449458330f555c53cf0">&#9670;&#160;</a></span>read_array() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> LIEF::BinaryStream::read_array </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; T, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dst</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="errors_8hpp.html#afa9844b7404935b708e60af6f13c453e">make_error_code()</a>, <a class="el" href="namespaceLIEF.html#a2cc78044f8aaf88116b39c37c0acc20b">LIEF::ok()</a>, and <a class="el" href="errors_8hpp.html#a5ff5508856d306cf99479195f4f7ddd8ac1ca8a1d20d289789a6de0474c94d9ad">read_error</a>.</p>
+
+</div>
+</div>
+<a id="a95e11b2356c8a3b0ef6629099bb0249d" name="a95e11b2356c8a3b0ef6629099bb0249d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e11b2356c8a3b0ef6629099bb0249d">&#9670;&#160;</a></span>read_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceLIEF.html#ae870038bb7ca9cc4686ab28ae94aa45a">result</a>&lt; const void * &gt; LIEF::BinaryStream::read_at </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>virtual_address</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classLIEF_1_1FileStream.html#a9c865c2425241b8323a6fb98cc034ed9">LIEF::FileStream</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a9d5f996ffa67c9bd7a675e99a8fa7184">peek_array()</a>.</p>
+
+</div>
+</div>
+<a id="af3f2cf935de42d8d532eac675ffae1fe" name="af3f2cf935de42d8d532eac675ffae1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f2cf935de42d8d532eac675ffae1fe">&#9670;&#160;</a></span>read_data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> LIEF::BinaryStream::read_data </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>container</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <a id="afd8a0d982018067d8059b55e6d991af7" name="afd8a0d982018067d8059b55e6d991af7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd8a0d982018067d8059b55e6d991af7">&#9670;&#160;</a></span>read_data()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd8a0d982018067d8059b55e6d991af7">&#9670;&#160;</a></span>read_data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

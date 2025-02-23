@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">SpcIndirectData.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="SpcIndirectData_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="SpcIndirectData_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -155,35 +155,42 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
 </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">   64</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a4a14b27422014fce013af98371368376">   66</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a4a14b27422014fce013af98371368376">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a89a2c275e6b5cc03a57494f3e1f2a66e">   64</a></span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a89a2c275e6b5cc03a57494f3e1f2a66e">url</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> url_;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
+</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#af39b096eb3011dfe433e6d39514b795f">   68</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1SpcIndirectData.html#af39b096eb3011dfe433e6d39514b795f">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> SpcIndirectData&amp; content) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    content.<a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">print</a>(os);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> os;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">   68</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a4a14b27422014fce013af98371368376">   70</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a4a14b27422014fce013af98371368376">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#af39b096eb3011dfe433e6d39514b795f">   72</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1SpcIndirectData.html#af39b096eb3011dfe433e6d39514b795f">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> SpcIndirectData&amp; content) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    content.<a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">print</a>(os);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a8ea5f7247ac6d4a0afbe6d09c130e83e">   73</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a8ea5f7247ac6d4a0afbe6d09c130e83e">~SpcIndirectData</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#ab0e99387412ffd4c8f4455308280c325">   75</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#ab0e99387412ffd4c8f4455308280c325">classof</a>(<span class="keyword">const</span> ContentInfo::Content* content) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> content-&gt;<a class="code hl_function" href="classLIEF_1_1PE_1_1ContentInfo_1_1Content.html#a0ad754d1567ba08169a1f8cb13aea5dd">content_type</a>() == SPC_INDIRECT_DATA_OBJID;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
-</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a8ea5f7247ac6d4a0afbe6d09c130e83e">   77</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#a8ea5f7247ac6d4a0afbe6d09c130e83e">~SpcIndirectData</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  std::string file_;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  uint8_t flags_ = 0;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_enumeration" href="namespaceLIEF_1_1PE.html#a1c5f3b8e095b12e474ad1e5f2446d103">ALGORITHMS</a> digest_algorithm_ = ALGORITHMS::UNKNOWN;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  std::vector&lt;uint8_t&gt; digest_;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1SpcIndirectData.html#ab0e99387412ffd4c8f4455308280c325">   79</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1SpcIndirectData.html#ab0e99387412ffd4c8f4455308280c325">classof</a>(<span class="keyword">const</span> ContentInfo::Content* content) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> content-&gt;<a class="code hl_function" href="classLIEF_1_1PE_1_1ContentInfo_1_1Content.html#a0ad754d1567ba08169a1f8cb13aea5dd">content_type</a>() == SPC_INDIRECT_DATA_OBJID;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
 </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  std::string file_;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  std::string url_;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  uint8_t flags_ = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_enumeration" href="namespaceLIEF_1_1PE.html#a1c5f3b8e095b12e474ad1e5f2446d103">ALGORITHMS</a> digest_algorithm_ = ALGORITHMS::UNKNOWN;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  std::vector&lt;uint8_t&gt; digest_;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aContentInfo_8hpp_html"><div class="ttname"><a href="ContentInfo_8hpp.html">ContentInfo.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ContentInfo_1_1Content_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1ContentInfo_1_1Content.html">LIEF::PE::ContentInfo::Content</a></div><div class="ttdef"><b>Definition</b> ContentInfo.hpp:83</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1ContentInfo_1_1Content_html_a0ad754d1567ba08169a1f8cb13aea5dd"><div class="ttname"><a href="classLIEF_1_1PE_1_1ContentInfo_1_1Content.html#a0ad754d1567ba08169a1f8cb13aea5dd">LIEF::PE::ContentInfo::Content::content_type</a></div><div class="ttdeci">const oid_t &amp; content_type() const</div><div class="ttdef"><b>Definition</b> ContentInfo.hpp:89</div></div>
@@ -195,13 +202,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_a5fe47ae885d857f6283e12f3e88e19d4"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#a5fe47ae885d857f6283e12f3e88e19d4">LIEF::PE::SpcIndirectData::print</a></div><div class="ttdeci">void print(std::ostream &amp;os) const override</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_a6d29b837eb120d3dc3d25a36e62e631b"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#a6d29b837eb120d3dc3d25a36e62e631b">LIEF::PE::SpcIndirectData::file</a></div><div class="ttdeci">const std::string &amp; file() const</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:60</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_a6e939a4d85c1a883cbf93483d10af14a"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#a6e939a4d85c1a883cbf93483d10af14a">LIEF::PE::SpcIndirectData::SpcIndirectData</a></div><div class="ttdeci">SpcIndirectData(const SpcIndirectData &amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_a89a2c275e6b5cc03a57494f3e1f2a66e"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#a89a2c275e6b5cc03a57494f3e1f2a66e">LIEF::PE::SpcIndirectData::url</a></div><div class="ttdeci">const std::string &amp; url() const</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:64</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_a8ea5f7247ac6d4a0afbe6d09c130e83e"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#a8ea5f7247ac6d4a0afbe6d09c130e83e">LIEF::PE::SpcIndirectData::~SpcIndirectData</a></div><div class="ttdeci">~SpcIndirectData() override=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_ab0e99387412ffd4c8f4455308280c325"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#ab0e99387412ffd4c8f4455308280c325">LIEF::PE::SpcIndirectData::classof</a></div><div class="ttdeci">static bool classof(const ContentInfo::Content *content)</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:75</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_ab0e99387412ffd4c8f4455308280c325"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#ab0e99387412ffd4c8f4455308280c325">LIEF::PE::SpcIndirectData::classof</a></div><div class="ttdeci">static bool classof(const ContentInfo::Content *content)</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:79</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_ada65ef2d90ebe0a4a7ee148711393d29"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#ada65ef2d90ebe0a4a7ee148711393d29">LIEF::PE::SpcIndirectData::SpcIndirectData</a></div><div class="ttdeci">SpcIndirectData()</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:36</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_af39b096eb3011dfe433e6d39514b795f"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#af39b096eb3011dfe433e6d39514b795f">LIEF::PE::SpcIndirectData::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const SpcIndirectData &amp;content)</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:68</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_af39b096eb3011dfe433e6d39514b795f"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#af39b096eb3011dfe433e6d39514b795f">LIEF::PE::SpcIndirectData::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const SpcIndirectData &amp;content)</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:72</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1SpcIndirectData_html_afb5c88e1d857e824598ba2d0056c3a64"><div class="ttname"><a href="classLIEF_1_1PE_1_1SpcIndirectData.html#afb5c88e1d857e824598ba2d0056c3a64">LIEF::PE::SpcIndirectData::digest</a></div><div class="ttdeci">span&lt; const uint8_t &gt; digest() const</div><div class="ttdoc">PE&#39;s authentihash.</div><div class="ttdef"><b>Definition</b> SpcIndirectData.hpp:56</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html"><div class="ttname"><a href="namespaceLIEF_1_1PE.html">LIEF::PE</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s PE module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:32</div></div>
-<div class="ttc" id="anamespaceLIEF_1_1PE_html_a1c5f3b8e095b12e474ad1e5f2446d103"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a1c5f3b8e095b12e474ad1e5f2446d103">LIEF::PE::ALGORITHMS</a></div><div class="ttdeci">ALGORITHMS</div><div class="ttdoc">Cryptography algorithms.</div><div class="ttdef"><b>Definition</b> PE/enums.hpp:686</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_a1c5f3b8e095b12e474ad1e5f2446d103"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a1c5f3b8e095b12e474ad1e5f2446d103">LIEF::PE::ALGORITHMS</a></div><div class="ttdeci">ALGORITHMS</div><div class="ttdoc">Cryptography algorithms.</div><div class="ttdef"><b>Definition</b> PE/enums.hpp:28</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="aspan_8hpp_html"><div class="ttname"><a href="span_8hpp.html">span.hpp</a></div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>

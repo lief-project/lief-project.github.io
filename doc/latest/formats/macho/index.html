@@ -1,80 +1,757 @@
-<!doctypehtml><html data-content_root=../../ lang=en><meta charset=utf-8><meta content=width=device-width,initial-scale=1.0 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=width=device-width,initial-scale=1 name=viewport><meta content=ie=edge http-equiv=x-ua-compatible><meta content="Copy to clipboard"name=lang:clipboard.copy><meta content="Copied to clipboard"name=lang:clipboard.copied><meta content=en name=lang:search.language><meta content=True name=lang:search.pipeline.stopwords><meta content=True name=lang:search.pipeline.trimmer><meta content="No matching documents"name=lang:search.result.none><meta content="1 matching document"name=lang:search.result.one><meta content="# matching documents"name=lang:search.result.other><meta content=[\s\-]+ name=lang:search.tokenizer><meta content="LIEF Documentation"name=Description><link crossorigin href=https://fonts.gstatic.com/ rel=preconnect><script src=../../_static/javascripts/vendor.min.js></script><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css rel=stylesheet><link href=../../_static/favicon.ico rel=apple-touch-icon><title>Mach-O — LIEF Documentation</title><link href=../../_static/fonts/material-icons.css rel=stylesheet><link href=../../_static/stylesheets/vendor.min.css rel=stylesheet><link href=../../_static/pygments.css?v=3d3fbe02 rel=stylesheet><link href=../../_static/basic.css?v=fb9458d3 rel=stylesheet><link href=../../_static/graphviz.css?v=fd3f3429 rel=stylesheet><link href=../../_static/css/custom.css?v=49aeed65 rel=stylesheet><link href=../../_static/tabs.css?v=a5c4661c rel=stylesheet><script src=../../_static/documentation_options.js?v=7de89ed4></script><script src=../../_static/doctools.js?v=9a2dae69></script><script src=../../_static/sphinx_highlight.js?v=dc90522c></script><script src=../../_static/tabs.js?v=3030b3cb></script><link href=../../_static/favicon.ico rel=icon><link href=../../genindex.html rel=index title=Index><link href=../../search.html rel=search title=Search><link href=cpp.html rel=next title=C++><link href=../elf/rust.html rel=prev title=Rust><link href=../../_static/stylesheets/theme.css rel=stylesheet><body data-md-color-accent=cyan data-md-color-primary=blue dir=ltr><nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top"role=navigation><a class=navbar-brand href=../../index.html>LIEF Documentation</a><button class=navbar-toggler data-target=#navbar-collapse data-toggle=collapse><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0"id=navbar-collapse><ul class="navbar-nav position-relative px-lg-6 px-xl-8"><li class=nav-item><a class=nav-link href=https://lief.re> <i class="fa-solid fa-house mr-3"></i>Home </a><li class=nav-item><a class=nav-link href=https://lief.re/blog> <i class="fa-solid fa-rss mr-3"></i>Blog </a><li class=nav-item><a class=nav-link href=https://lief.re/download> <i class="fa-solid fa-download mr-3"></i>Download </a><li class="nav-item dropdown"><a class="nav-link dropdown-toggle"aria-expanded=false data-toggle=dropdown href=# role=button> <i class="fa-solid fa-book mr-3"></i>Documentation </a> <div class=dropdown-menu role=menu><a class=dropdown-item href=https://lief.re/doc/latest/doxygen>Doxygen</a></div><li class=nav-item><a class=nav-link href=https://lief.re/about> <i class="fa-solid fa-bars-staggered mr-3"></i>About </a><li class="nav-item ml-lg-3 mt-3 mt-lg-0"><a class="hover-lift-light mt-1"href=https://discord.gg/jGQtyAYChJ target=_blank> <i class="fab fa-2x fa-discord text-darkblue mr-3"></i> </a><li class=nav-item><a class="btn btn-outline-pink"href=https://github.com/sponsors/lief-project target=_blank> <i class="fa-solid fa-heart mr-3"></i> Sponsor </a></ul></div></nav><div class="container-fluid container-docs"><div class=row><div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left"><div class="collapse d-lg-block mb-6 mb-lg-0"id=sidebar-collapse><form action=../../search.html method=GET name=search><input autocapitalize=off autocomplete=off class=form-control data-md-component=query data-md-state=active name=q placeholder=Search spellcheck=false></form><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../intro.html><em class="fa fa-solid fa-door-open"></em> Introduction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../installation.html><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../compilation.html><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-sitemap"> </i>Formats</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../elf/index.html><em class="fa fa-brands fa-linux"></em> ELF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=#><em class="fa fa-brands fa-apple"></em> Mach-O</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../pe/index.html><em class="fa fa-brands fa-windows"></em> PE</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../android/index.html><em class="fa fa-brands fa-android"></em> Android</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-code"> </i>API</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/binary_abstraction/index.html><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/utilities/index.html><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/error_handling/index.html><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/logging/index.html><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/cpp/index.html><em class="fa fa-regular fa-file-code"></em> C++</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../api/rust/index.html><em class="fa fa-brands fa-rust"></em> Rust</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/intro.html><em class="fa fa-cubes"></em> What is LIEF Extended?</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/debug_info/index.html><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/dwarf/index.html><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/pdb/index.html><em class="fa fa-brands fa-windows"></em> PDB</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/objc/index.html><em class="fa fa-brands fa-apple"></em> Objective-C</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/dsc/index.html><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/disassembler/index.html><em class="fa fa-solid fa-dna"></em> Disassembler</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../extended/assembler/index.html><em class="fa fa-solid fa-user-secret"></em> Assembler</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-solid fa-layer-group"> </i>Tutorials</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/01_play_with_formats.html>01 - Parse and manipulate formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/02_pe_from_scratch.html>02 - Create a PE from scratch</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/03_elf_change_symbols.html>03 - Play with ELF symbols</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/04_elf_hooking.html>04 - ELF Hooking</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/05_elf_infect_plt_got.html>05 - Infecting the plt/got</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/06_pe_hooking.html>06 - PE Hooking (Deprecated)</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/07_pe_resource.html>07 - PE Resources</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/08_elf_bin2lib.html>08 - Transforming an ELF executable into a library</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/09_frida_lief.html>09 - How to use frida on a non-rooted device</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/10_android_formats.html>10 - Android formats</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/11_macho_modification.html>11 - Mach-O Modification</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/12_elf_coredump.html>12 - ELF Coredump</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../tutorials/13_pe_authenticode.html>13 - PE Authenticode</a></ul><div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2"><span class=caption-text><i class="fa-brands fa-space-awesome"> </i>Extra Information</span></div><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../references.html><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></ul><ul class="list-unstyled mt-3"><li><a class="text-darkblue font-size-sm d-block mb-2"href=../../changelog.html><em class="fa fa-solid fa-code-compare"></em> Changelog</a></ul></div><hr><span class="svg-icon text-purple mr-1 relative-top--1"> <svg viewbox="0 0 512 512"height=512 width=512 xmlns=http://www.w3.org/2000/svg><title>ionicons-v5-d</title><circle cx=160 cy=96 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><circle cx=160 cy=416 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><line style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px x1=160 x2=160 y1=368 y2=144></line><circle cx=352 cy=160 r=48 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></circle><path d=M352,208c0,128-192,48-192,160 style=fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px></path></svg> </span><a class=text-darkblue href=https://github.com/lief-project/LIEF/commits/0ff950c0>0.16.0 (0ff950c0)</a><br> Updated on 10/12/2024, 06:48:19.</div><div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8"><nav aria-label=breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a aria-label=Home href=../../index.html><i class="fa-solid fa-home"></i></a><li class="breadcrumb-item active"aria-current=page><a href=#><em class="fa fa-brands fa-apple"></em> Mach-O</a></ol></nav><section id=mach-o><span id=format-macho></span><h1 id=formats-macho-index--page-root><em class="fa fa-brands fa-apple"></em> Mach-O<a title="Link to this heading"class=headerlink href=#formats-macho-index--page-root>¶</a></h1><div class="toctree-wrapper compound"><p class=caption role=heading><span class=caption-text><i class="fa-solid fa-code"> </i>API</span><ul><li class=toctree-l1><a class="reference internal"href=cpp.html><em class="fa fa-regular fa-file-code"></em> C++</a><li class=toctree-l1><a class="reference internal"href=python.html><em class="fa fa-brands fa-python"></em> Python</a><li class=toctree-l1><a class="reference internal"href=rust.html><em class="fa fa-brands fa-rust"></em> Rust</a></ul></div><hr class=docutils><section id=introduction><h2 id=introduction>Introduction<a title="Link to this heading"class=headerlink href=#introduction>¶</a></h2><div class=fixed-paragraph>Mach-O binaries can be parsed with LIEF using the <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-parse role=button> <code><span class=pre>lief.MachO.parse()</span></code></a><div aria-labelledby=lief-api-lief-MachO-parse class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html#method.parse> <code class="xref rust rust-method"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary::parse</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.parse> <code class="xref py py-func"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.parse()</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6Parser5parseERKNSt6stringERK12ParserConfig> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Parser::parse()</span></code> </a></div></div> function.</div><div class="admonition note"><p class=admonition-title>Note<div class=fixed-paragraph>The Mach-O format defines the notion of FAT binaries which can embed different architectures into a single file. <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-parse role=button> <code><span class=pre>lief.MachO.parse()</span></code></a><div aria-labelledby=lief-api-lief-MachO-parse class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html#method.parse> <code class="xref rust rust-method"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary::parse</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.parse> <code class="xref py py-func"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.parse()</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6Parser5parseERKNSt6stringERK12ParserConfig> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Parser::parse()</span></code> </a></div></div> always returns a <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-FatBinary role=button> <code><span class=pre>lief.MachO.FatBinary</span></code></a><div aria-labelledby=lief-api-lief-MachO-FatBinary class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.FatBinary> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code> </a></div></div> with the assumption that a non-fat Mach-O can be represented as a <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-FatBinary role=button> <code><span class=pre>lief.MachO.FatBinary</span></code></a><div aria-labelledby=lief-api-lief-MachO-FatBinary class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.FatBinary> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code> </a></div></div> with <strong>one</strong> architecture.</div></div><div class="sphinx-tabs docutils container"><div aria-label="Tabbed content"class=closeable role=tablist><button aria-controls=panel-0-0-0 aria-selected=true class=sphinx-tabs-tab id=tab-0-0-0 name=0-0 role=tab tabindex=0><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls=panel-0-0-1 aria-selected=false class=sphinx-tabs-tab id=tab-0-0-1 name=0-1 role=tab tabindex=-1><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls=panel-0-0-2 aria-selected=false class=sphinx-tabs-tab id=tab-0-0-2 name=0-2 role=tab tabindex=-1><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby=tab-0-0-0 class=sphinx-tabs-panel id=panel-0-0-0 name=0-0 role=tabpanel tabindex=0><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=kn>import</span> <span class=nn>lief</span>
+<!DOCTYPE html>
 
-<span class=c1># Using filepath</span>
-<span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>FatBinary</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"/bin/ls"</span><span class=p>)</span>
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<span class=c1># Using a Path from pathlib</span>
-<span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>FatBinary</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=n>pathlib</span><span class=o>.</span><span class=n>Path</span><span class=p>(</span><span class=sa>r</span><span class=s2>"C:\Users\test.macho"</span><span class=p>))</span>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
 
-<span class=c1># Using a io object</span>
-<span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=s2>"/bin/ssh"</span><span class=p>,</span> <span class=s1>'rb'</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
-  <span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>FatBinary</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=n>f</span><span class=p>)</span>
-</pre></div></div></div><div aria-labelledby=tab-0-0-1 class=sphinx-tabs-panel hidden id=panel-0-0-1 name=0-1 role=tabpanel tabindex=0><div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=cp>#include</span><span class=w> </span><span class=cpf>&LTLIEF/MachO.hpp></span>
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
 
-<span class=c1>// Using a file path as a std::string</span>
-<span class=n>std</span><span class=o>::</span><span class=n>unique_ptr</span><span class=o><</span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>FatBinary</span><span class=o>></span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Parser</span><span class=o>::</span><span class=n>parse</span><span class=p>(</span><span class=s>"/bin/ls"</span><span class=p>);</span>
+  <script src="../../_static/javascripts/vendor.min.js"></script>
 
-<span class=c1>// Using a vector</span>
-<span class=n>std</span><span class=o>::</span><span class=n>vector</span><span class=o><</span><span class=kt>uint8_t</span><span class=o>></span><span class=w> </span><span class=n>my_raw_macho</span><span class=p>;</span>
-<span class=n>std</span><span class=o>::</span><span class=n>unique_ptr</span><span class=o><</span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>FatBinary</span><span class=o>></span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Parser</span><span class=o>::</span><span class=n>parse</span><span class=p>(</span><span class=n>my_raw_macho</span><span class=p>);</span>
-</pre></div></div></div><div aria-labelledby=tab-0-0-2 class=sphinx-tabs-panel hidden id=panel-0-0-2 name=0-2 role=tabpanel tabindex=0><div class="highlight-rust notranslate"><div class=highlight><pre><span></span><span class=kd>let</span><span class=w> </span><span class=n>macho</span><span class=p>:</span><span class=w> </span><span class=nc>lief</span><span class=p>::</span><span class=n>macho</span><span class=p>::</span><span class=n>FatBinary</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>lief</span><span class=p>::</span><span class=n>macho</span><span class=p>::</span><span class=n>FatBinary</span><span class=p>::</span><span class=n>parse</span><span class=p>(</span><span class=s>"/bin/ls"</span><span class=p>);</span>
-</pre></div></div></div></div><div class=fixed-paragraph>This <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-FatBinary role=button> <code><span class=pre>lief.MachO.FatBinary</span></code></a><div aria-labelledby=lief-api-lief-MachO-FatBinary class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.FatBinary> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code> </a></div></div> object exposes facilities to either iterate over the different <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Binary role=button> <code><span class=pre>lief.MachO.Binary</span></code></a><div aria-labelledby=lief-api-lief-MachO-Binary class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::Binary</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.Binary> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Binary</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6BinaryE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary</span></code> </a></div></div> or pick/take a specific one:</div><div class="sphinx-tabs docutils container"><div aria-label="Tabbed content"class=closeable role=tablist><button aria-controls=panel-1-1-0 aria-selected=true class=sphinx-tabs-tab id=tab-1-1-0 name=1-0 role=tab tabindex=0><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls=panel-1-1-1 aria-selected=false class=sphinx-tabs-tab id=tab-1-1-1 name=1-1 role=tab tabindex=-1><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls=panel-1-1-2 aria-selected=false class=sphinx-tabs-tab id=tab-1-1-2 name=1-2 role=tab tabindex=-1><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby=tab-1-1-0 class=sphinx-tabs-panel id=panel-1-1-0 name=1-0 role=tabpanel tabindex=0><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>fat</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>FatBinary</span>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <title>Mach-O &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/vendor.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=3d3fbe02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=411c5307" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <script src="../../_static/documentation_options.js?v=0c3dd48d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/tabs.js?v=3030b3cb"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C++" href="cpp.html" />
+    <link rel="prev" title="Rust" href="../elf/rust.html" />
+   
+  <link rel="stylesheet" href="../../_static/stylesheets/theme.css"/>
 
-<span class=c1># Iterate</span>
-<span class=k>for</span> <span class=n>macho</span> <span class=ow>in</span> <span class=n>fat</span><span class=p>:</span>
-    <span class=nb>print</span><span class=p>(</span><span class=n>macho</span><span class=o>.</span><span class=n>entrypoint</span><span class=p>)</span>
-    <span class=nb>print</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>macho</span><span class=o>.</span><span class=n>commands</span><span class=p>))</span>
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
 
-<span class=c1># Pick one at the specified index</span>
-<span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>Binary</span> <span class=o>=</span> <span class=n>fat</span><span class=o>.</span><span class=n>at</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
 
-<span class=c1># Pick one based on the architecture</span>
-<span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>Binary</span> <span class=o>=</span> <span class=n>fat</span><span class=o>.</span><span class=n>take</span><span class=p>(</span><span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>Header</span><span class=o>.</span><span class=n>CPU_TYPE</span><span class=o>.</span><span class=n>ARM64</span><span class=p>)</span>
-</pre></div></div></div><div aria-labelledby=tab-1-1-1 class=sphinx-tabs-panel hidden id=panel-1-1-1 name=1-1 role=tabpanel tabindex=0><div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=n>std</span><span class=o>::</span><span class=n>unique_ptr</span><span class=o><</span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>FatBinary</span><span class=o>></span><span class=w> </span><span class=n>fat</span><span class=p>;</span>
 
-<span class=c1>// Iterate</span>
-<span class=k>for</span><span class=w> </span><span class=p>(</span><span class=k>const</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Binary</span><span class=o>&</span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>:</span><span class=w> </span><span class=o>*</span><span class=n>fat</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
-<span class=w>  </span><span class=n>std</span><span class=o>::</span><span class=n>cout</span><span class=w> </span><span class=o><<</span><span class=w> </span><span class=n>macho</span><span class=p>.</span><span class=n>entrypoint</span><span class=p>()</span><span class=w> </span><span class=o><<</span><span class=w> </span><span class=sc>'\n'</span><span class=p>;</span>
-<span class=w>  </span><span class=n>std</span><span class=o>::</span><span class=n>cout</span><span class=w> </span><span class=o><<</span><span class=w> </span><span class=n>macho</span><span class=p>.</span><span class=n>commands</span><span class=p>().</span><span class=n>size</span><span class=p>()</span><span class=w> </span><span class=o><<</span><span class=w> </span><span class=sc>'\n'</span><span class=p>;</span>
-<span class=p>}</span>
 
-<span class=c1>// Pick one at the specified index (without take the ownership)</span>
-<span class=k>const</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Binary</span><span class=o>*</span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>fat</span><span class=o>-></span><span class=n>at</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
 
-<span class=c1>// Pick one at the specified index and take the ownership</span>
-<span class=k>const</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Binary</span><span class=o>*</span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>fat</span><span class=o>-></span><span class=n>take</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
+    
 
-<span class=c1>// Pick one with the given arch and take the ownership</span>
-<span class=k>const</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Binary</span><span class=o>*</span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>fat</span><span class=o>-></span><span class=n>take</span><span class=p>(</span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Header</span><span class=o>::</span><span class=n>CPU_TYPE</span><span class=o>::</span><span class=n>ARM64</span><span class=p>);</span>
-</pre></div></div></div><div aria-labelledby=tab-1-1-2 class=sphinx-tabs-panel hidden id=panel-1-1-2 name=1-2 role=tabpanel tabindex=0><div class="highlight-rust notranslate"><div class=highlight><pre><span></span><span class=kd>let</span><span class=w> </span><span class=n>fat</span><span class=p>:</span><span class=w> </span><span class=nc>lief</span><span class=p>::</span><span class=n>macho</span><span class=p>::</span><span class=n>FatBinary</span><span class=p>;</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
 
-<span class=c1>// Iterate</span>
-<span class=k>for</span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=k>in</span><span class=w> </span><span class=n>fat</span><span class=w> </span><span class=p>{</span>
-<span class=w>    </span><span class=fm>println!</span><span class=p>(</span><span class=s>"{}"</span><span class=p>,</span><span class=w> </span><span class=n>macho</span><span class=p>.</span><span class=n>entrypoint</span><span class=p>());</span>
-<span class=p>}</span>
-</pre></div></div></div></div><div class=fixed-paragraph>Upon a <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Binary role=button> <code><span class=pre>lief.MachO.Binary</span></code></a><div aria-labelledby=lief-api-lief-MachO-Binary class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::Binary</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.Binary> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Binary</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6BinaryE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary</span></code> </a></div></div> or <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-FatBinary role=button> <code><span class=pre>lief.MachO.FatBinary</span></code></a><div aria-labelledby=lief-api-lief-MachO-FatBinary class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.FatBinary> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code> </a></div></div> modification, one can use either <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Binary-write role=button> <code><span class=pre>lief.MachO.Binary.write()</span></code></a><div aria-labelledby=lief-api-lief-MachO-Binary-write class=dropdown-menu><a class=dropdown-item href=python.html#lief.MachO.Binary.write> <code class="xref py py-meth"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.write()</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6Binary5writeERKNSt6stringE> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::write()</span></code> </a></div></div> or <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-FatBinary-write role=button> <code><span class=pre>lief.MachO.FatBinary.write()</span></code></a><div aria-labelledby=lief-api-lief-MachO-FatBinary-write class=dropdown-menu><a class=dropdown-item href=#> <code class="xref py py-meth"><span class=pre><i class="fa fa-brands fa-python"></i> lief.FatBinary.Binary.write()</span></code> </a><a class=dropdown-item href=#> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::FatBinary::Binary::write()</span></code> </a></div></div> to write back the (FAT) MachO binary object into a raw MachO file.</div><div class="sphinx-tabs docutils container"><div aria-label="Tabbed content"class=closeable role=tablist><button aria-controls=panel-2-2-0 aria-selected=true class=sphinx-tabs-tab id=tab-2-2-0 name=2-0 role=tab tabindex=0><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls=panel-2-2-1 aria-selected=false class=sphinx-tabs-tab id=tab-2-2-1 name=2-1 role=tab tabindex=-1><em class="fa fa-regular fa-file-code"></em> C++</button></div><div aria-labelledby=tab-2-2-0 class=sphinx-tabs-panel id=panel-2-2-0 name=2-0 role=tabpanel tabindex=0><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>FatBinary</span> <span class=o>=</span> <span class=o>...</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
 
-<span class=n>macho</span><span class=o>.</span><span class=n>at</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=s2>"fit.macho"</span><span class=p>)</span>
-<span class=n>macho</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=s2>"fat.macho"</span><span class=p>)</span> <span class=c1># write-back the whole FAT binary</span>
-</pre></div></div></div><div aria-labelledby=tab-2-2-1 class=sphinx-tabs-panel hidden id=panel-2-2-1 name=2-1 role=tabpanel tabindex=0><div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=n>std</span><span class=o>::</span><span class=n>unique_ptr</span><span class=o><</span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>FatBinary</span><span class=o>></span><span class=w> </span><span class=n>macho</span><span class=p>;</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
 
-<span class=n>macho</span><span class=o>-></span><span class=n>at</span><span class=p>(</span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Header</span><span class=o>::</span><span class=n>CPU_TYPE</span><span class=o>::</span><span class=n>ARM64</span><span class=p>)</span><span class=o>-></span><span class=n>write</span><span class=p>(</span><span class=s>"fit.macho"</span><span class=p>);</span>
-<span class=n>macho</span><span class=o>-></span><span class=n>write</span><span class=p>(</span><span class=s>"fat.macho"</span><span class=p>);</span>
-</pre></div></div></div></div></section><section id=advance-parsing-writing><h2 id=advance-parsing-writing>Advance Parsing/Writing<a title="Link to this heading"class=headerlink href=#advance-parsing-writing>¶</a></h2><div class=fixed-paragraph><div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-parse role=button> <code><span class=pre>lief.MachO.parse()</span></code></a><div aria-labelledby=lief-api-lief-MachO-parse class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html#method.parse> <code class="xref rust rust-method"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary::parse</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.parse> <code class="xref py py-func"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.parse()</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6Parser5parseERKNSt6stringERK12ParserConfig> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Parser::parse()</span></code> </a></div></div> can take an extra <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-ParserConfig role=button> <code><span class=pre>lief.MachO.ParserConfig</span></code></a><div aria-labelledby=lief-api-lief-MachO-ParserConfig class=dropdown-menu><a class=dropdown-item href=python.html#lief.MachO.ParserConfig> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.ParserConfig</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO12ParserConfigE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::ParserConfig</span></code> </a></div></div> parameter to specify some parts of the MachO format to skip during parsing.</div><div class="admonition warning"><p class=admonition-title>Warning<div class=fixed-paragraph>Generally speaking, <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Binary-write role=button> <code><span class=pre>lief.MachO.Binary.write()</span></code></a><div aria-labelledby=lief-api-lief-MachO-Binary-write class=dropdown-menu><a class=dropdown-item href=python.html#lief.MachO.Binary.write> <code class="xref py py-meth"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.write()</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6Binary5writeERKNSt6stringE> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::write()</span></code> </a></div></div> and <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-FatBinary-write role=button> <code><span class=pre>lief.MachO.FatBinary.write()</span></code></a><div aria-labelledby=lief-api-lief-MachO-FatBinary-write class=dropdown-menu><a class=dropdown-item href=#> <code class="xref py py-meth"><span class=pre><i class="fa fa-brands fa-python"></i> lief.FatBinary.Binary.write()</span></code> </a><a class=dropdown-item href=#> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::FatBinary::Binary::write()</span></code> </a></div></div> require a <strong>complete</strong> initial parsing of the MachO file.</div></div><div class=fixed-paragraph>Similarly, <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Binary-write role=button> <code><span class=pre>lief.MachO.Binary.write()</span></code></a><div aria-labelledby=lief-api-lief-MachO-Binary-write class=dropdown-menu><a class=dropdown-item href=python.html#lief.MachO.Binary.write> <code class="xref py py-meth"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.write()</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO6Binary5writeERKNSt6stringE> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::write()</span></code> </a></div></div> can also take an extra <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Builder-config_t role=button> <code><span class=pre>lief.MachO.Builder.config_t</span></code></a><div aria-labelledby=lief-api-lief-MachO-Builder-config_t class=dropdown-menu><a class=dropdown-item href=python.html#lief.MachO.Builder.config_t> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Builder.config_t</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4N4LIEF5MachO7Builder8config_tE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Builder::config_t</span></code> </a></div></div> to specify which parts of the MachO should be re-built or not.</div><div class="sphinx-tabs docutils container"><div aria-label="Tabbed content"class=closeable role=tablist><button aria-controls=panel-3-3-0 aria-selected=true class=sphinx-tabs-tab id=tab-3-3-0 name=3-0 role=tab tabindex=0><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls=panel-3-3-1 aria-selected=false class=sphinx-tabs-tab id=tab-3-3-1 name=3-1 role=tab tabindex=-1><em class="fa fa-regular fa-file-code"></em> C++</button></div><div aria-labelledby=tab-3-3-0 class=sphinx-tabs-panel id=panel-3-3-0 name=3-0 role=tabpanel tabindex=0><div class="highlight-python notranslate"><div class=highlight><pre><span></span><span class=n>parser_config</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>ParserConfig</span><span class=p>()</span>
-<span class=n>parser_config</span><span class=o>.</span><span class=n>parse_dyld_bindings</span> <span class=o>=</span> <span class=kc>False</span>
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
 
-<span class=n>macho</span><span class=p>:</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>FatBinary</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s2>"my.macho"</span><span class=p>,</span> <span class=n>parser_config</span><span class=p>)</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
 
-<span class=n>builder_config</span> <span class=o>=</span> <span class=n>lief</span><span class=o>.</span><span class=n>MachO</span><span class=o>.</span><span class=n>Builder</span><span class=o>.</span><span class=n>config_t</span><span class=p>()</span>
-<span class=n>builder_config</span><span class=o>.</span><span class=n>linkedit</span> <span class=o>=</span> <span class=kc>False</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
 
-<span class=n>macho</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=s2>"new.macho"</span><span class=p>,</span> <span class=n>builder_config</span><span class=p>)</span>
-</pre></div></div></div><div aria-labelledby=tab-3-3-1 class=sphinx-tabs-panel hidden id=panel-3-3-1 name=3-1 role=tabpanel tabindex=0><div class="highlight-cpp notranslate"><div class=highlight><pre><span></span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>ParserConfig</span><span class=w> </span><span class=n>parser_config</span><span class=p>;</span>
-<span class=n>parser_config</span><span class=p>.</span><span class=n>parse_dyld_bindings</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nb>false</span><span class=p>;</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../pe/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
 
-<span class=k>auto</span><span class=w> </span><span class=n>macho</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Parser</span><span class=o>::</span><span class=n>parse</span><span class=p>(</span><span class=s>"my.macho"</span><span class=p>,</span><span class=w> </span><span class=n>parser_config</span><span class=p>);</span>
-<span class=n>LIEF</span><span class=o>::</span><span class=n>MachO</span><span class=o>::</span><span class=n>Builder</span><span class=o>::</span><span class=n>config_t</span><span class=w> </span><span class=n>builder_config</span><span class=p>;</span>
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
 
-<span class=n>builder_config</span><span class=p>.</span><span class=n>linkedit</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nb>false</span><span class=p>;</span>
-<span class=n>macho</span><span class=o>-></span><span class=n>write</span><span class=p>(</span><span class=s>"new.macho"</span><span class=p>,</span><span class=w> </span><span class=n>builder_config</span><span class=p>);</span>
-</pre></div></div></div></div><div class="admonition seealso"><p class=admonition-title>See also<p><a class="reference internal"href=../../api/binary_abstraction/index.html#binary-abstraction><span class="std std-ref"> Binary Abstraction</span></a></div></section><section id=objective-c-support><h2 id=objective-c-support>Objective-C Support<a title="Link to this heading"class=headerlink href=#objective-c-support>¶</a></h2><div class=fixed-paragraph>If a Mach-O binary is compiled from Objetive-C sources, it could contain metadata which are represented by the <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-ObjC-Metadata role=button> <code><span class=pre>lief.ObjC.Metadata</span></code></a><div aria-labelledby=lief-api-lief-ObjC-Metadata class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/objc/struct.Metadata.html> <code class="xref rust rust-struct"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::objc::Metadata</span></code> </a><a class=dropdown-item href=../../extended/objc/python.html#lief.objc.Metadata> <code class="xref py py-class"><span class=pre><i class="fa fa-brands fa-python"></i> lief.objc.Metadata</span></code> </a><a class=dropdown-item href=../../extended/objc/cpp.html#_CPPv4N4LIEF4objc8MetadataE> <code class="xref cpp cpp-class"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::objc::Metadata</span></code> </a></div></div> object.</div><div class=fixed-paragraph>This metadata can help understand the underlying structures of the binary and <a class="reference internal"href=../../extended/intro.html#extended-intro><span class="std std-ref">LIEF extended</span></a> provides the support for accessing this information through: <div class=dropdown style=display:inline;><a aria-expanded=false aria-haspopup=true data-toggle=dropdown href=# id=lief-api-lief-MachO-Binary-objc_metadata role=button> <code><span class=pre>lief.MachO.Binary.objc_metadata</span></code></a><div aria-labelledby=lief-api-lief-MachO-Binary-objc_metadata class=dropdown-menu><a class=dropdown-item href=https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.objc_metadata> <code class="xref rust rust-method"><span class=pre><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::objc_metadata</span></code> </a><a class=dropdown-item href=python.html#lief.MachO.Binary.objc_metadata> <code class="xref py py-attr"><span class=pre><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.objc_metadata</span></code> </a><a class=dropdown-item href=cpp.html#_CPPv4NK4LIEF5MachO6Binary13objc_metadataEv> <code class="xref cpp cpp-func"><span class=pre><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::objc_metadata()</span></code> </a></div></div>.</div><p>For more details, you can check the <a class="reference internal"href=../../extended/objc/index.html#extended-objc><span class="std std-ref">Obj-C section</span></a>.</section></section></div><div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right"><aside class="border-left pl-5 py-3"><span class="text-uppercase text-muted font-size-sm d-block mb-3"> On this page: </span><a class="d-block my-2"data-toggle=scroll href=#introduction>Introduction</a><a class="d-block my-2"data-toggle=scroll href=#advance-parsing-writing>Advance Parsing/Writing</a><a class="d-block my-2"data-toggle=scroll href=#objective-c-support>Objective-C Support</a></aside></div></div></div>
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/debug_info/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/dsc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../extended/assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/10_android_formats.html" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/dd291ae1" class="text-darkblue">0.17.0 (dd291ae1)</a>
+    <br>
+    Updated on 23/02/2025, 12:10:07.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="mach-o">
+<span id="format-macho"></span><h1 id="formats-macho-index--page-root"><em class="fa fa-brands fa-apple"></em>  Mach-O<a class="headerlink" href="#formats-macho-index--page-root" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text"><i class="fa-solid fa-code"> </i>API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cpp.html"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html"><em class="fa fa-brands fa-python"></em> Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rust.html"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+</ul>
+</div>
+<hr class="docutils"/>
+<section id="introduction">
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<div class="fixed-paragraph">
+Mach-O binaries can be parsed with LIEF using the <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-parse" role="button">
+<code><span class="pre">lief.MachO.parse()</span></code></a><div aria-labelledby="lief-api-lief-MachO-parse" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html#method.parse">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary::parse</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.parse">
+<code class="xref py py-func"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.parse()</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6Parser5parseERKNSt6stringERK12ParserConfig">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Parser::parse()</span></code>
+</a></div></div> function.</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="fixed-paragraph">
+The Mach-O format defines the notion of FAT binaries which can embed different
+architectures into a single file. <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-parse" role="button">
+<code><span class="pre">lief.MachO.parse()</span></code></a><div aria-labelledby="lief-api-lief-MachO-parse" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html#method.parse">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary::parse</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.parse">
+<code class="xref py py-func"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.parse()</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6Parser5parseERKNSt6stringERK12ParserConfig">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Parser::parse()</span></code>
+</a></div></div> always returns a
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-FatBinary" role="button">
+<code><span class="pre">lief.MachO.FatBinary</span></code></a><div aria-labelledby="lief-api-lief-MachO-FatBinary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.FatBinary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code>
+</a></div></div> with the assumption that a non-fat Mach-O can be
+represented as a <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-FatBinary" role="button">
+<code><span class="pre">lief.MachO.FatBinary</span></code></a><div aria-labelledby="lief-api-lief-MachO-FatBinary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.FatBinary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code>
+</a></div></div> with <strong>one</strong> architecture.</div></div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1"><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lief</span>
+
+<span class="c1"># Using filepath</span>
+<span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">FatBinary</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"/bin/ls"</span><span class="p">)</span>
+
+<span class="c1"># Using a Path from pathlib</span>
+<span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">FatBinary</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">"C:\Users\test.macho"</span><span class="p">))</span>
+
+<span class="c1"># Using a io object</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/bin/ssh"</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">FatBinary</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LIEF/MachO.hpp&gt;</span>
+
+<span class="c1">// Using a file path as a std::string</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">FatBinary</span><span class="o">&gt;</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Parser</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="s">"/bin/ls"</span><span class="p">);</span>
+
+<span class="c1">// Using a vector</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">my_raw_macho</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">FatBinary</span><span class="o">&gt;</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Parser</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="n">my_raw_macho</span><span class="p">);</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">macho</span><span class="p">:</span><span class="w"> </span><span class="nc">lief</span><span class="p">::</span><span class="n">macho</span><span class="p">::</span><span class="n">FatBinary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lief</span><span class="p">::</span><span class="n">macho</span><span class="p">::</span><span class="n">FatBinary</span><span class="p">::</span><span class="n">parse</span><span class="p">(</span><span class="s">"/bin/ls"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+<div class="fixed-paragraph">
+This <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-FatBinary" role="button">
+<code><span class="pre">lief.MachO.FatBinary</span></code></a><div aria-labelledby="lief-api-lief-MachO-FatBinary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.FatBinary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code>
+</a></div></div> object exposes facilities to either iterate over the
+different <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Binary" role="button">
+<code><span class="pre">lief.MachO.Binary</span></code></a><div aria-labelledby="lief-api-lief-MachO-Binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Binary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Binary</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6BinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary</span></code>
+</a></div></div> or pick/take a specific one:</div><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1"><em class="fa fa-brands fa-rust"></em> Rust</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fat</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">FatBinary</span>
+
+<span class="c1"># Iterate</span>
+<span class="k">for</span> <span class="n">macho</span> <span class="ow">in</span> <span class="n">fat</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">macho</span><span class="o">.</span><span class="n">entrypoint</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">macho</span><span class="o">.</span><span class="n">commands</span><span class="p">))</span>
+
+<span class="c1"># Pick one at the specified index</span>
+<span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">Binary</span> <span class="o">=</span> <span class="n">fat</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Pick one based on the architecture</span>
+<span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">Binary</span> <span class="o">=</span> <span class="n">fat</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">CPU_TYPE</span><span class="o">.</span><span class="n">ARM64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">FatBinary</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fat</span><span class="p">;</span>
+
+<span class="c1">// Iterate</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Binary</span><span class="o">&amp;</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">*</span><span class="n">fat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">macho</span><span class="p">.</span><span class="n">entrypoint</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">macho</span><span class="p">.</span><span class="n">commands</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Pick one at the specified index (without take the ownership)</span>
+<span class="k">const</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Binary</span><span class="o">*</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fat</span><span class="o">-&gt;</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// Pick one at the specified index and take the ownership</span>
+<span class="k">const</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Binary</span><span class="o">*</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fat</span><span class="o">-&gt;</span><span class="n">take</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// Pick one with the given arch and take the ownership</span>
+<span class="k">const</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Binary</span><span class="o">*</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fat</span><span class="o">-&gt;</span><span class="n">take</span><span class="p">(</span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Header</span><span class="o">::</span><span class="n">CPU_TYPE</span><span class="o">::</span><span class="n">ARM64</span><span class="p">);</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">fat</span><span class="p">:</span><span class="w"> </span><span class="nc">lief</span><span class="p">::</span><span class="n">macho</span><span class="p">::</span><span class="n">FatBinary</span><span class="p">;</span>
+
+<span class="c1">// Iterate</span>
+<span class="k">for</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">fat</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="w"> </span><span class="n">macho</span><span class="p">.</span><span class="n">entrypoint</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+<div class="fixed-paragraph">
+Upon a <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Binary" role="button">
+<code><span class="pre">lief.MachO.Binary</span></code></a><div aria-labelledby="lief-api-lief-MachO-Binary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Binary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Binary</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6BinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary</span></code>
+</a></div></div> or <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-FatBinary" role="button">
+<code><span class="pre">lief.MachO.FatBinary</span></code></a><div aria-labelledby="lief-api-lief-MachO-FatBinary" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.FatBinary">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.FatBinary</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO9FatBinaryE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::FatBinary</span></code>
+</a></div></div> modification, one can use
+either <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Binary-write" role="button">
+<code><span class="pre">lief.MachO.Binary.write()</span></code></a><div aria-labelledby="lief-api-lief-MachO-Binary-write" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.write">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::write</span></code>
+</a><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.write_with_config">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::write_with_config</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Binary.write">
+<code class="xref py py-meth"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.write()</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6Binary5writeERKNSt6stringE">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::write()</span></code>
+</a></div></div> or <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-FatBinary-write" role="button">
+<code><span class="pre">lief.MachO.FatBinary.write()</span></code></a><div aria-labelledby="lief-api-lief-MachO-FatBinary-write" class="dropdown-menu"><a class="dropdown-item" href="#">
+<code class="xref py py-meth"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.FatBinary.Binary.write()</span></code>
+</a><a class="dropdown-item" href="#">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::FatBinary::Binary::write()</span></code>
+</a></div></div> to write back
+the (FAT) MachO binary object into a raw MachO file.</div><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">FatBinary</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">macho</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"fit.macho"</span><span class="p">)</span>
+<span class="n">macho</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"fat.macho"</span><span class="p">)</span> <span class="c1"># write-back the whole FAT binary</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">FatBinary</span><span class="o">&gt;</span><span class="w"> </span><span class="n">macho</span><span class="p">;</span>
+
+<span class="n">macho</span><span class="o">-&gt;</span><span class="n">at</span><span class="p">(</span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Header</span><span class="o">::</span><span class="n">CPU_TYPE</span><span class="o">::</span><span class="n">ARM64</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="s">"fit.macho"</span><span class="p">);</span>
+<span class="n">macho</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="s">"fat.macho"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="advance-parsing-writing">
+<h2 id="advance-parsing-writing">Advance Parsing/Writing<a class="headerlink" href="#advance-parsing-writing" title="Link to this heading">¶</a></h2>
+<div class="fixed-paragraph">
+<div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-parse" role="button">
+<code><span class="pre">lief.MachO.parse()</span></code></a><div aria-labelledby="lief-api-lief-MachO-parse" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.FatBinary.html#method.parse">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::FatBinary::parse</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.parse">
+<code class="xref py py-func"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.parse()</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6Parser5parseERKNSt6stringERK12ParserConfig">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Parser::parse()</span></code>
+</a></div></div> can take an extra <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-ParserConfig" role="button">
+<code><span class="pre">lief.MachO.ParserConfig</span></code></a><div aria-labelledby="lief-api-lief-MachO-ParserConfig" class="dropdown-menu"><a class="dropdown-item" href="python.html#lief.MachO.ParserConfig">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.ParserConfig</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO12ParserConfigE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::ParserConfig</span></code>
+</a></div></div> parameter to specify
+some parts of the MachO format to skip during parsing.</div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="fixed-paragraph">
+Generally speaking, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Binary-write" role="button">
+<code><span class="pre">lief.MachO.Binary.write()</span></code></a><div aria-labelledby="lief-api-lief-MachO-Binary-write" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.write">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::write</span></code>
+</a><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.write_with_config">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::write_with_config</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Binary.write">
+<code class="xref py py-meth"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.write()</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6Binary5writeERKNSt6stringE">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::write()</span></code>
+</a></div></div> and <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-FatBinary-write" role="button">
+<code><span class="pre">lief.MachO.FatBinary.write()</span></code></a><div aria-labelledby="lief-api-lief-MachO-FatBinary-write" class="dropdown-menu"><a class="dropdown-item" href="#">
+<code class="xref py py-meth"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.FatBinary.Binary.write()</span></code>
+</a><a class="dropdown-item" href="#">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::FatBinary::Binary::write()</span></code>
+</a></div></div>
+require a <strong>complete</strong> initial parsing of the MachO file.</div></div>
+<div class="fixed-paragraph">
+Similarly, <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Binary-write" role="button">
+<code><span class="pre">lief.MachO.Binary.write()</span></code></a><div aria-labelledby="lief-api-lief-MachO-Binary-write" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.write">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::write</span></code>
+</a><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.write_with_config">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::write_with_config</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Binary.write">
+<code class="xref py py-meth"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.write()</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO6Binary5writeERKNSt6stringE">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::write()</span></code>
+</a></div></div> can also take an extra <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Builder-config_t" role="button">
+<code><span class="pre">lief.MachO.Builder.config_t</span></code></a><div aria-labelledby="lief-api-lief-MachO-Builder-config_t" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/pe/builder/struct.Config.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::pe::builder::Config</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Builder.config_t">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Builder.config_t</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4N4LIEF5MachO7Builder8config_tE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Builder::config_t</span></code>
+</a></div></div>
+to specify which parts of the MachO should be re-built or not.</div><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0"><em class="fa fa-brands fa-python"></em> Python</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1"><em class="fa fa-regular fa-file-code"></em> C++</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">parser_config</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">ParserConfig</span><span class="p">()</span>
+<span class="n">parser_config</span><span class="o">.</span><span class="n">parse_dyld_bindings</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">macho</span><span class="p">:</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">FatBinary</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"my.macho"</span><span class="p">,</span> <span class="n">parser_config</span><span class="p">)</span>
+
+<span class="n">builder_config</span> <span class="o">=</span> <span class="n">lief</span><span class="o">.</span><span class="n">MachO</span><span class="o">.</span><span class="n">Builder</span><span class="o">.</span><span class="n">config_t</span><span class="p">()</span>
+<span class="n">builder_config</span><span class="o">.</span><span class="n">linkedit</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">macho</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"new.macho"</span><span class="p">,</span> <span class="n">builder_config</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-3-1" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-1" name="3-1" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">ParserConfig</span><span class="w"> </span><span class="n">parser_config</span><span class="p">;</span>
+<span class="n">parser_config</span><span class="p">.</span><span class="n">parse_dyld_bindings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">macho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Parser</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="s">"my.macho"</span><span class="p">,</span><span class="w"> </span><span class="n">parser_config</span><span class="p">);</span>
+<span class="n">LIEF</span><span class="o">::</span><span class="n">MachO</span><span class="o">::</span><span class="n">Builder</span><span class="o">::</span><span class="n">config_t</span><span class="w"> </span><span class="n">builder_config</span><span class="p">;</span>
+
+<span class="n">builder_config</span><span class="p">.</span><span class="n">linkedit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="n">macho</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="s">"new.macho"</span><span class="p">,</span><span class="w"> </span><span class="n">builder_config</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../api/binary_abstraction/index.html#binary-abstraction"><span class="std std-ref"> Binary Abstraction</span></a></p>
+</div>
+</section>
+<section id="objective-c-support">
+<h2 id="objective-c-support">Objective-C Support<a class="headerlink" href="#objective-c-support" title="Link to this heading">¶</a></h2>
+<div class="fixed-paragraph">
+If a Mach-O binary is compiled from Objetive-C sources, it could contain
+metadata which are represented by the <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-ObjC-Metadata" role="button">
+<code><span class="pre">lief.ObjC.Metadata</span></code></a><div aria-labelledby="lief-api-lief-ObjC-Metadata" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/objc/struct.Metadata.html">
+<code class="xref rust rust-struct"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::objc::Metadata</span></code>
+</a><a class="dropdown-item" href="../../extended/objc/python.html#lief.objc.Metadata">
+<code class="xref py py-class"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.objc.Metadata</span></code>
+</a><a class="dropdown-item" href="../../extended/objc/cpp.html#_CPPv4N4LIEF4objc8MetadataE">
+<code class="xref cpp cpp-class"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::objc::Metadata</span></code>
+</a></div></div> object.</div><div class="fixed-paragraph">
+This metadata can help understand the underlying structures of the binary and
+<a class="reference internal" href="../../extended/intro.html#extended-intro"><span class="std std-ref">LIEF extended</span></a> provides the support for accessing this
+information through: <div class="dropdown" style="display:inline;">
+<a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lief-api-lief-MachO-Binary-objc_metadata" role="button">
+<code><span class="pre">lief.MachO.Binary.objc_metadata</span></code></a><div aria-labelledby="lief-api-lief-MachO-Binary-objc_metadata" class="dropdown-menu"><a class="dropdown-item" href="https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/macho/struct.Binary.html#method.objc_metadata">
+<code class="xref rust rust-method"><span class="pre"><i class="fa fa-brands fa-rust"></i> lief::macho::Binary::objc_metadata</span></code>
+</a><a class="dropdown-item" href="python.html#lief.MachO.Binary.objc_metadata">
+<code class="xref py py-attr"><span class="pre"><i class="fa fa-brands fa-python"></i> lief.MachO.Binary.objc_metadata</span></code>
+</a><a class="dropdown-item" href="cpp.html#_CPPv4NK4LIEF5MachO6Binary13objc_metadataEv">
+<code class="xref cpp cpp-func"><span class="pre"><i class="fa fa-regular fa-file-code"></i> LIEF::MachO::Binary::objc_metadata()</span></code>
+</a></div></div>.</div><p>For more details, you can check the <a class="reference internal" href="../../extended/objc/index.html#extended-objc"><span class="std std-ref">Obj-C section</span></a>.</p>
+</section>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+  <aside class="border-left pl-5 py-3">
+    <span class="text-uppercase text-muted font-size-sm d-block mb-3">
+      On this page:
+    </span>
+        <a href="#introduction" class="d-block my-2" data-toggle="scroll">Introduction</a>
+        <a href="#advance-parsing-writing" class="d-block my-2" data-toggle="scroll">Advance Parsing/Writing</a>
+        <a href="#objective-c-support" class="d-block my-2" data-toggle="scroll">Objective-C Support</a>
+
+  </aside>
+</div>
+    </div>
+  </div>
+  </body>
+</html>

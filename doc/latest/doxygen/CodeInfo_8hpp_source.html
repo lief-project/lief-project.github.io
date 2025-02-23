@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">CodeInfo.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="CodeInfo_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="CodeInfo_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -138,27 +138,29 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1CodeInfo.html#a5630ad0482100d8d89b30d49f937f9ee">   43</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1DEX_1_1CodeInfo.html#a5630ad0482100d8d89b30d49f937f9ee">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1CodeInfo.html#a2b1ee292784d7827d84d25f20b199e23">   46</a></span>  <a class="code hl_function" href="classLIEF_1_1DEX_1_1CodeInfo.html#a2b1ee292784d7827d84d25f20b199e23">~CodeInfo</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1CodeInfo.html#aee1d06809fa3440d5543ee6e9ad0eca2">   48</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1DEX_1_1CodeInfo.html#aee1d06809fa3440d5543ee6e9ad0eca2">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> CodeInfo&amp; cinfo);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  uint16_t nb_registers_ = 0;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  uint16_t args_input_sizes_ = 0;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  uint16_t output_sizes_ = 0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1CodeInfo.html#a5f94a4070df08fbc58c4a3594492249c">   45</a></span>  uint16_t <a class="code hl_function" href="classLIEF_1_1DEX_1_1CodeInfo.html#a5f94a4070df08fbc58c4a3594492249c">nb_registers</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1CodeInfo.html#a2b1ee292784d7827d84d25f20b199e23">   47</a></span>  <a class="code hl_function" href="classLIEF_1_1DEX_1_1CodeInfo.html#a2b1ee292784d7827d84d25f20b199e23">~CodeInfo</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1CodeInfo.html#aee1d06809fa3440d5543ee6e9ad0eca2">   49</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1DEX_1_1CodeInfo.html#aee1d06809fa3440d5543ee6e9ad0eca2">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> CodeInfo&amp; cinfo);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  uint16_t nb_registers_ = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  uint16_t args_input_sizes_ = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  uint16_t output_sizes_ = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// Namespace DEX</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// Namespace LIEF</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// Namespace DEX</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// Namespace LIEF</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aObject_8hpp_html"><div class="ttname"><a href="Object_8hpp.html">Object.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html">LIEF::DEX::CodeInfo</a></div><div class="ttdef"><b>Definition</b> CodeInfo.hpp:33</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_a2b1ee292784d7827d84d25f20b199e23"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#a2b1ee292784d7827d84d25f20b199e23">LIEF::DEX::CodeInfo::~CodeInfo</a></div><div class="ttdeci">~CodeInfo() override</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_a2c2769f7e2e1952fe7c5885ec1a0993f"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#a2c2769f7e2e1952fe7c5885ec1a0993f">LIEF::DEX::CodeInfo::CodeInfo</a></div><div class="ttdeci">CodeInfo(const CodeInfo &amp;)</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_a5630ad0482100d8d89b30d49f937f9ee"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#a5630ad0482100d8d89b30d49f937f9ee">LIEF::DEX::CodeInfo::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
+<div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_a5f94a4070df08fbc58c4a3594492249c"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#a5f94a4070df08fbc58c4a3594492249c">LIEF::DEX::CodeInfo::nb_registers</a></div><div class="ttdeci">uint16_t nb_registers() const</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_a95deb42f646ae9ae2ca7bd6731dd7b65"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#a95deb42f646ae9ae2ca7bd6731dd7b65">LIEF::DEX::CodeInfo::CodeInfo</a></div><div class="ttdeci">CodeInfo()</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_ad041b2baf864b75e0fffe2ec13c8be4a"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#ad041b2baf864b75e0fffe2ec13c8be4a">LIEF::DEX::CodeInfo::operator=</a></div><div class="ttdeci">CodeInfo &amp; operator=(const CodeInfo &amp;)</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1CodeInfo_html_aee1d06809fa3440d5543ee6e9ad0eca2"><div class="ttname"><a href="classLIEF_1_1DEX_1_1CodeInfo.html#aee1d06809fa3440d5543ee6e9ad0eca2">LIEF::DEX::CodeInfo::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const CodeInfo &amp;cinfo)</div></div>
