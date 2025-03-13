@@ -100,7 +100,7 @@ object to inspect or modify the binary itself.
         }
 
         for (const LIEF::PE::Section& section : pe->sections()) {
-          std::cout << section.name() << section.content().size() << '\n'
+          std::cout << section.name() << section.content().size() << '\n';
         }
 
   .. tab:: :fa:`brands fa-rust` Rust
