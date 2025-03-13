@@ -46,7 +46,7 @@ functions that is exposed in the abstraction layer:
 
         std::unique_ptr<LIEF::assembly::Instruction> inst;
 
-        for (inst : pe->disassemble("_WinRT")) {
+        for (auto inst : pe->disassemble("_WinRT")) {
           std::cout << inst->to_string() << '\n';
         }
 

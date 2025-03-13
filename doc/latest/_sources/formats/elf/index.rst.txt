@@ -87,7 +87,7 @@ object to inspect or modify the binary itself.
         std::cout << elf->header().entrypoint();
 
         for (const LIEF::ELF::Section& section : elf->sections()) {
-          std::cout << section.name() << section.content().size() << '\n'
+          std::cout << section.name() << section.content().size() << '\n';
         }
 
   .. tab:: :fa:`brands fa-rust` Rust
