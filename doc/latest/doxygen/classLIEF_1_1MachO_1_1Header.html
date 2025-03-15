@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -185,9 +185,14 @@ Public Types</h2></td></tr>
 , <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332a16c8e070f0f6edd7ac0ae016e9bf2997">MIPS</a> = 8
 , <br />
 &#160;&#160;<a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332a781b445325b7883b68e5f1d5bfddab41">MC98000</a> = 10
+, <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332ae140730d8a0b420f58f60e05ea61573a">HPPA</a> = 11
 , <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332a47f45e65244c17ec9fa8771a5c6d60e1">ARM</a> = 12
 , <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332ab9b55c80d095761ac7757ced0fedadc4">ARM64</a> = 12 | ABI64
+, <br />
+&#160;&#160;<a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332ab7627579b6a0b7a6e4a1c2a6adeaee39">MC88000</a> = 13
 , <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332aa940ec34170cc4c7600e0304fd7f841e">SPARC</a> = 14
+, <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332a01035b9949ce56a64b976441ac2aeaad">I860</a> = 15
+, <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332a002101f8725e5c78d9f30d87f3fa4c87">ALPHA</a> = 16
 , <br />
 &#160;&#160;<a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332ada6f398add893e002d59c17f6b5f4d88">POWERPC</a> = 18
 , <a class="el" href="#ac6ba4ef6166df7dbfb54dcfee3157332ac98f6beb91bd4d83d1a7f1544077bb18">POWERPC64</a> = 18 | ABI64
@@ -258,6 +263,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a383016bc67ab22c3421c9a30b64f6d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedb886ebc80d1de50d1340fd8dfc5e0c" id="r_aedb886ebc80d1de50d1340fd8dfc5e0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedb886ebc80d1de50d1340fd8dfc5e0c">flags</a> (uint32_t flags)</td></tr>
 <tr class="separator:aedb886ebc80d1de50d1340fd8dfc5e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0ea9f88534a7592bce2dd05000ba53" id="r_a6b0ea9f88534a7592bce2dd05000ba53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b0ea9f88534a7592bce2dd05000ba53">is_32bit</a> () const</td></tr>
+<tr class="memdesc:a6b0ea9f88534a7592bce2dd05000ba53"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the binary is 32-bit.  <br /></td></tr>
+<tr class="separator:a6b0ea9f88534a7592bce2dd05000ba53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ecb4e4b4d323598aa18b792e77c6e3d" id="r_a1ecb4e4b4d323598aa18b792e77c6e3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ecb4e4b4d323598aa18b792e77c6e3d">is_64bit</a> () const</td></tr>
+<tr class="memdesc:a1ecb4e4b4d323598aa18b792e77c6e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the binary is 64-bit.  <br /></td></tr>
+<tr class="separator:a1ecb4e4b4d323598aa18b792e77c6e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45e47c7514344ee4b323c33449559594" id="r_a45e47c7514344ee4b323c33449559594"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45e47c7514344ee4b323c33449559594">remove</a> (<a class="el" href="#a2c24a862254e0c4b030c72ad03a98478">FLAGS</a> flag)</td></tr>
 <tr class="separator:a45e47c7514344ee4b323c33449559594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a371c2706a00743bf1f30b307cc9e5e55" id="r_a371c2706a00743bf1f30b307cc9e5e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a371c2706a00743bf1f30b307cc9e5e55">reserved</a> (uint32_t reserved)</td></tr>
@@ -327,9 +338,13 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332a840030b2e70cfe0155e29ee926dbd8ae" name="ac6ba4ef6166df7dbfb54dcfee3157332a840030b2e70cfe0155e29ee926dbd8ae"></a>X86_64&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332a16c8e070f0f6edd7ac0ae016e9bf2997" name="ac6ba4ef6166df7dbfb54dcfee3157332a16c8e070f0f6edd7ac0ae016e9bf2997"></a>MIPS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332a781b445325b7883b68e5f1d5bfddab41" name="ac6ba4ef6166df7dbfb54dcfee3157332a781b445325b7883b68e5f1d5bfddab41"></a>MC98000&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332ae140730d8a0b420f58f60e05ea61573a" name="ac6ba4ef6166df7dbfb54dcfee3157332ae140730d8a0b420f58f60e05ea61573a"></a>HPPA&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332a47f45e65244c17ec9fa8771a5c6d60e1" name="ac6ba4ef6166df7dbfb54dcfee3157332a47f45e65244c17ec9fa8771a5c6d60e1"></a>ARM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332ab9b55c80d095761ac7757ced0fedadc4" name="ac6ba4ef6166df7dbfb54dcfee3157332ab9b55c80d095761ac7757ced0fedadc4"></a>ARM64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332ab7627579b6a0b7a6e4a1c2a6adeaee39" name="ac6ba4ef6166df7dbfb54dcfee3157332ab7627579b6a0b7a6e4a1c2a6adeaee39"></a>MC88000&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332aa940ec34170cc4c7600e0304fd7f841e" name="ac6ba4ef6166df7dbfb54dcfee3157332aa940ec34170cc4c7600e0304fd7f841e"></a>SPARC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332a01035b9949ce56a64b976441ac2aeaad" name="ac6ba4ef6166df7dbfb54dcfee3157332a01035b9949ce56a64b976441ac2aeaad"></a>I860&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332a002101f8725e5c78d9f30d87f3fa4c87" name="ac6ba4ef6166df7dbfb54dcfee3157332a002101f8725e5c78d9f30d87f3fa4c87"></a>ALPHA&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332ada6f398add893e002d59c17f6b5f4d88" name="ac6ba4ef6166df7dbfb54dcfee3157332ada6f398add893e002d59c17f6b5f4d88"></a>POWERPC&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac6ba4ef6166df7dbfb54dcfee3157332ac98f6beb91bd4d83d1a7f1544077bb18" name="ac6ba4ef6166df7dbfb54dcfee3157332ac98f6beb91bd4d83d1a7f1544077bb18"></a>POWERPC64&#160;</td><td class="fielddoc"></td></tr>
 </table>
@@ -787,6 +802,60 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if the given HEADER_FLAGS is present in the header's flags. </p>
+
+</div>
+</div>
+<a id="a6b0ea9f88534a7592bce2dd05000ba53" name="a6b0ea9f88534a7592bce2dd05000ba53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0ea9f88534a7592bce2dd05000ba53">&#9670;&#160;</a></span>is_32bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::MachO::Header::is_32bit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if the binary is 32-bit. </p>
+
+</div>
+</div>
+<a id="a1ecb4e4b4d323598aa18b792e77c6e3d" name="a1ecb4e4b4d323598aa18b792e77c6e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ecb4e4b4d323598aa18b792e77c6e3d">&#9670;&#160;</a></span>is_64bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::MachO::Header::is_64bit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if the binary is 64-bit. </p>
 
 </div>
 </div>

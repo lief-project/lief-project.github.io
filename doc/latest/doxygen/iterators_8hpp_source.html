@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">iterators.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="iterators_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="iterators_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright 2017 - 2021, NVIDIA CORPORATION. All rights reserved.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
@@ -669,7 +669,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span> </div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>  <span class="keyword">mutable</span> <span class="keywordtype">size_t</span> size_c_ = 0;</div>
-<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>  T container_;</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>  <a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> container_;</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>  ITERATOR_T it_;</div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>  std::vector&lt;filter_t&gt; filters_;</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classLIEF_1_1filter__iterator.html#a9e252286c827a5a282776ab3d67ce687">filter_iterator::difference_type</a> distance_ = 0;</div>
@@ -1191,6 +1191,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassLIEF_1_1ref__iterator_html_af3fe66243fc21a0486ab853b1fdca9d3"><div class="ttname"><a href="classLIEF_1_1ref__iterator.html#af3fe66243fc21a0486ab853b1fdca9d3">LIEF::ref_iterator::operator-&gt;</a></div><div class="ttdeci">add_const_t&lt; pointer_t &gt; operator-&gt;() const</div><div class="ttdef"><b>Definition</b> iterators.hpp:244</div></div>
 <div class="ttc" id="aclassLIEF_1_1ref__iterator_html_afdd0db525cf51637227eb804babc0ff1"><div class="ttname"><a href="classLIEF_1_1ref__iterator.html#afdd0db525cf51637227eb804babc0ff1">LIEF::ref_iterator::operator==</a></div><div class="ttdeci">bool operator==(const ref_iterator &amp;other) const</div><div class="ttdef"><b>Definition</b> iterators.hpp:204</div></div>
 <div class="ttc" id="aclassLIEF_1_1ref__iterator_html_afe61102b039b58c23bf836c1400349cf"><div class="ttname"><a href="classLIEF_1_1ref__iterator.html#afe61102b039b58c23bf836c1400349cf">LIEF::ref_iterator::DT</a></div><div class="ttdeci">decay_t&lt; T &gt; DT</div><div class="ttdef"><b>Definition</b> iterators.hpp:56</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_aa51bd59492fbc904f489e19d94d85b75ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75ab9ece18c950afbfa6b0fdbfa4ff731d3">LIEF::PE::ACCELERATOR_CODES::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>Definition</b> AcceleratorCodes.hpp:97</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="anamespaceLIEF_html_a098c14902b6bcf9afd936c1a640136d1"><div class="ttname"><a href="namespaceLIEF.html#a098c14902b6bcf9afd936c1a640136d1">LIEF::const_filter_iterator</a></div><div class="ttdeci">filter_iterator&lt; CT, U, typename decay_t&lt; CT &gt;::const_iterator &gt; const_filter_iterator</div><div class="ttdoc">Iterator which return a const ref on container&#39;s values given predicates.</div><div class="ttdef"><b>Definition</b> iterators.hpp:479</div></div>
 <div class="ttc" id="anamespaceLIEF_html_a0effd2676d366e5b2078e9300018823c"><div class="ttname"><a href="namespaceLIEF.html#a0effd2676d366e5b2078e9300018823c">LIEF::add_lvalue_reference_t</a></div><div class="ttdeci">typename std::add_lvalue_reference&lt; T &gt;::type add_lvalue_reference_t</div><div class="ttdef"><b>Definition</b> iterators.hpp:40</div></div>

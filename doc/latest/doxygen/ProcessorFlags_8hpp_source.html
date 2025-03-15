@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ProcessorFlags.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ProcessorFlags_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="ProcessorFlags_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -115,7 +115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1ELF.html">ELF</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t PFLAGS_BIT = 43;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t PFLAGS_MASK = (1LLU &lt;&lt; PFLAGS_BIT) - 1;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t PFLAGS_MASK = (1LL<a class="code hl_enumvalue" href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75a4c614360da93c0a041b22e537de151eb">U</a> &lt;&lt; PFLAGS_BIT) - 1;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t PF_ARM_ID = 1;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t PF_HEX_ID = 2;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t PF_LOONGARCH_ID = 3;</div>
@@ -291,6 +291,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_abe54c27a4eac69fee37fe8694eea10f2af63d56f0db105854a088094670c54102"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#abe54c27a4eac69fee37fe8694eea10f2af63d56f0db105854a088094670c54102">LIEF::ELF::PROCESSOR_FLAGS::RISCV_RVC</a></div><div class="ttdeci">@ RISCV_RVC</div><div class="ttdef"><b>Definition</b> ProcessorFlags.hpp:110</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_abe54c27a4eac69fee37fe8694eea10f2af8accffda6c67b95e1cf129ec0b453a9"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#abe54c27a4eac69fee37fe8694eea10f2af8accffda6c67b95e1cf129ec0b453a9">LIEF::ELF::PROCESSOR_FLAGS::HEXAGON_ISA_V5</a></div><div class="ttdeci">@ HEXAGON_ISA_V5</div><div class="ttdef"><b>Definition</b> ProcessorFlags.hpp:50</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html_abe54c27a4eac69fee37fe8694eea10f2afb1945af2bec00e078c3a6465daa8176"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html#abe54c27a4eac69fee37fe8694eea10f2afb1945af2bec00e078c3a6465daa8176">LIEF::ELF::PROCESSOR_FLAGS::MIPS_MACH_5900</a></div><div class="ttdeci">@ MIPS_MACH_5900</div><div class="ttdef"><b>Definition</b> ProcessorFlags.hpp:85</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_aa51bd59492fbc904f489e19d94d85b75a4c614360da93c0a041b22e537de151eb"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aa51bd59492fbc904f489e19d94d85b75a4c614360da93c0a041b22e537de151eb">LIEF::PE::ACCELERATOR_CODES::U</a></div><div class="ttdeci">@ U</div><div class="ttdef"><b>Definition</b> AcceleratorCodes.hpp:98</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Stub.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Stub_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="Stub_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -243,7 +243,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  target_info_t target_info_;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  uint64_t address_ = 0;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keyword">mutable</span> uint64_t target_addr_ = 0;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  [[maybe_unused]] <span class="keyword">mutable</span> uint64_t target_addr_ = 0;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  std::vector&lt;uint8_t&gt; raw_;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>};</div>
 </div>
@@ -252,7 +252,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aMachO_2Header_8hpp_html"><div class="ttname"><a href="MachO_2Header_8hpp.html">Header.hpp</a></div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Binary.html">LIEF::MachO::Binary</a></div><div class="ttdoc">Class which represents a MachO binary.</div><div class="ttdef"><b>Definition</b> MachO/Binary.hpp:85</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Binary.html">LIEF::MachO::Binary</a></div><div class="ttdoc">Class which represents a MachO binary.</div><div class="ttdef"><b>Definition</b> MachO/Binary.hpp:86</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1Section_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Section.html">LIEF::MachO::Section</a></div><div class="ttdoc">Class that represents a Mach-O section.</div><div class="ttdef"><b>Definition</b> MachO/Section.hpp:46</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1Stub_1_1Iterator_html_a1bcf1b5e2bf13ec03527ec8532be87c7"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Stub_1_1Iterator.html#a1bcf1b5e2bf13ec03527ec8532be87c7">LIEF::MachO::Stub::Iterator::operator-=</a></div><div class="ttdeci">Iterator &amp; operator-=(std::ptrdiff_t n)</div><div class="ttdef"><b>Definition</b> Stub.hpp:96</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1Stub_1_1Iterator_html_a208e277fbee4b000fe16bfb1eda4ceee"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Stub_1_1Iterator.html#a208e277fbee4b000fe16bfb1eda4ceee">LIEF::MachO::Stub::Iterator::Iterator</a></div><div class="ttdeci">Iterator(const Iterator &amp;)=default</div></div>
