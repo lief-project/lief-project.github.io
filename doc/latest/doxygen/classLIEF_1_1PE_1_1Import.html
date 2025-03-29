@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -186,6 +186,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad937618c5242c7a5306443abc8b9b4ae" id="r_ad937618c5242c7a5306443abc8b9b4ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad937618c5242c7a5306443abc8b9b4ae">name</a> (std::string name)</td></tr>
 <tr class="memdesc:ad937618c5242c7a5306443abc8b9b4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current import name.  <br /></td></tr>
 <tr class="separator:ad937618c5242c7a5306443abc8b9b4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cac067824ee92877d10c57004712974" id="r_a2cac067824ee92877d10c57004712974"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cac067824ee92877d10c57004712974">name_rva</a> () const</td></tr>
+<tr class="memdesc:a2cac067824ee92877d10c57004712974"><td class="mdescLeft">&#160;</td><td class="mdescRight">The original name rva.  <br /></td></tr>
+<tr class="separator:a2cac067824ee92877d10c57004712974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310c366668c424e299380b6d51a02e08" id="r_a310c366668c424e299380b6d51a02e08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html">DataDirectory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310c366668c424e299380b6d51a02e08">directory</a> ()</td></tr>
 <tr class="memdesc:a310c366668c424e299380b6d51a02e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html" title="Class that represents a PE data directory entry.">PE::DataDirectory</a> associated with this import. It should be the one at index <a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html#abc50978a5afaff445650cf12221fe879af2d38be552c367cab91be62244d8c893">PE::DataDirectory::TYPES::IMPORT_TABLE</a>.  <br /></td></tr>
 <tr class="separator:a310c366668c424e299380b6d51a02e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +205,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c2c4cea19c26cb86e83c31b88ff81e6" id="r_a4c2c4cea19c26cb86e83c31b88ff81e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c2c4cea19c26cb86e83c31b88ff81e6">add_entry</a> (const std::string &amp;<a class="el" href="#ab1799cce36346c95e8bee77b526e95b8">name</a>)</td></tr>
 <tr class="memdesc:a4c2c4cea19c26cb86e83c31b88ff81e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new import entry with the given name (i.e. an imported function)  <br /></td></tr>
 <tr class="separator:a4c2c4cea19c26cb86e83c31b88ff81e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42227998843b2d6c413b3c556d3f7833" id="r_a42227998843b2d6c413b3c556d3f7833"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42227998843b2d6c413b3c556d3f7833">remove_entry</a> (const std::string &amp;<a class="el" href="#ab1799cce36346c95e8bee77b526e95b8">name</a>)</td></tr>
+<tr class="memdesc:a42227998843b2d6c413b3c556d3f7833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the import entry with the given name.  <br /></td></tr>
+<tr class="separator:a42227998843b2d6c413b3c556d3f7833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685ebe60668386f04c4239014d27636c" id="r_a685ebe60668386f04c4239014d27636c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a685ebe60668386f04c4239014d27636c">remove_entry</a> (uint32_t ordinal)</td></tr>
+<tr class="memdesc:a685ebe60668386f04c4239014d27636c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the import entry with the given ordinal number.  <br /></td></tr>
+<tr class="separator:a685ebe60668386f04c4239014d27636c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50baec9e7b568b143b099bbac05d60ef" id="r_a50baec9e7b568b143b099bbac05d60ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50baec9e7b568b143b099bbac05d60ef">import_lookup_table_rva</a> (uint32_t rva)</td></tr>
 <tr class="separator:a50baec9e7b568b143b099bbac05d60ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a45831cdd83e89114d2863fe5ddf6b9" id="r_a6a45831cdd83e89114d2863fe5ddf6b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a45831cdd83e89114d2863fe5ddf6b9">import_address_table_rva</a> (uint32_t rva)</td></tr>
@@ -907,6 +916,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2cac067824ee92877d10c57004712974" name="a2cac067824ee92877d10c57004712974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cac067824ee92877d10c57004712974">&#9670;&#160;</a></span>name_rva()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LIEF::PE::Import::name_rva </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The original name rva. </p>
+
+</div>
+</div>
 <a id="a8940f1a40c0a2bf7010cc296e410d847" name="a8940f1a40c0a2bf7010cc296e410d847"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8940f1a40c0a2bf7010cc296e410d847">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -954,6 +990,46 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42227998843b2d6c413b3c556d3f7833" name="a42227998843b2d6c413b3c556d3f7833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42227998843b2d6c413b3c556d3f7833">&#9670;&#160;</a></span>remove_entry() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Import::remove_entry </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the import entry with the given name. </p>
+<p>Return true if the deletion succeed, false otherwise </p>
+
+</div>
+</div>
+<a id="a685ebe60668386f04c4239014d27636c" name="a685ebe60668386f04c4239014d27636c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685ebe60668386f04c4239014d27636c">&#9670;&#160;</a></span>remove_entry() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Import::remove_entry </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ordinal</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the import entry with the given ordinal number. </p>
+<p>Return true if the deletion succeed, false otherwise </p>
 
 </div>
 </div>

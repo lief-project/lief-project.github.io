@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">CodeIntegrity.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="CodeIntegrity_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="CodeIntegrity_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -111,100 +111,114 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="Object_8hpp.html">LIEF/Object.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE.html">PE</a> {</div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE_1_1details.html">   26</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE_1_1details.html">details</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">struct </span>pe_code_integrity;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html">   30</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1PE_1_1CodeIntegrity.html">CodeIntegrity</a> : <span class="keyword">public</span> Object {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a0f7cd4e995b0453cf0fd98d6c7e7eb68">   32</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a0f7cd4e995b0453cf0fd98d6c7e7eb68">CodeIntegrity</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#aff8b5fa9f37351f64119cbf910253891">   33</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#aff8b5fa9f37351f64119cbf910253891">CodeIntegrity</a>(<span class="keyword">const</span> details::pe_code_integrity&amp; header);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#acf212b7ec05a5b06077dc234028b93d3">   34</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#acf212b7ec05a5b06077dc234028b93d3">~CodeIntegrity</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="errors_8hpp.html">LIEF/errors.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="Object_8hpp.html">LIEF/Object.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1BinaryStream.html">BinaryStream</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1PE.html">PE</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1PE_1_1Parser.html">Parser</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html">   31</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1PE_1_1CodeIntegrity.html">CodeIntegrity</a> : <span class="keyword">public</span> Object {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a19ed4c77d953c5ff4eb23deba6fdb2cf">   33</a></span>  <span class="keyword">static</span> result&lt;CodeIntegrity&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a19ed4c77d953c5ff4eb23deba6fdb2cf">parse</a>(Parser&amp; ctx, BinaryStream&amp; stream);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a0f7cd4e995b0453cf0fd98d6c7e7eb68">   34</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a0f7cd4e995b0453cf0fd98d6c7e7eb68">CodeIntegrity</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a223eb1c4965a2a686de7eab58977fa96">   36</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a223eb1c4965a2a686de7eab58977fa96">operator=</a>(<span class="keyword">const</span> CodeIntegrity&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a66a9d65b827e1745cbeabe0fc0c8070a">   37</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a66a9d65b827e1745cbeabe0fc0c8070a">CodeIntegrity</a>(<span class="keyword">const</span> CodeIntegrity&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a359a8507f6c0eff2c4a9fb55999634d5">flags</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> flags_;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  }</div>
-</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a3b48943df401216e409cd80e27399454">catalog</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> catalog_;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#acf212b7ec05a5b06077dc234028b93d3">   36</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#acf212b7ec05a5b06077dc234028b93d3">~CodeIntegrity</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a223eb1c4965a2a686de7eab58977fa96">   38</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a223eb1c4965a2a686de7eab58977fa96">operator=</a>(<span class="keyword">const</span> CodeIntegrity&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a66a9d65b827e1745cbeabe0fc0c8070a">   39</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a66a9d65b827e1745cbeabe0fc0c8070a">CodeIntegrity</a>(<span class="keyword">const</span> CodeIntegrity&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a37e7f2791ba6706f3d76ab94ee78c74d">   41</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a37e7f2791ba6706f3d76ab94ee78c74d">operator=</a>(CodeIntegrity&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a011b6af8f25e12d0ca97fb1f793e981f">   42</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a011b6af8f25e12d0ca97fb1f793e981f">CodeIntegrity</a>(CodeIntegrity&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a359a8507f6c0eff2c4a9fb55999634d5">flags</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> flags_;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a8cd2655a695654fba9fdc93b364d99e2">   48</a></span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a8cd2655a695654fba9fdc93b364d99e2">catalog_offset</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> catalog_offset_;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  uint16_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a3b48943df401216e409cd80e27399454">catalog</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> catalog_;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af9009c44169b763398619b268881ed96">reserved</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> reserved_;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a8cd2655a695654fba9fdc93b364d99e2">   54</a></span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a8cd2655a695654fba9fdc93b364d99e2">catalog_offset</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> catalog_offset_;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#aef25ce6f6b767697491c1dd8f73089ce">   57</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#aef25ce6f6b767697491c1dd8f73089ce">flags</a>(uint16_t flags) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    flags_ = flags;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af9009c44169b763398619b268881ed96">reserved</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">return</span> reserved_;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a56f19715707b3be4f39d14af1a932780">   60</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a56f19715707b3be4f39d14af1a932780">catalog</a>(uint16_t catalog) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    catalog_ = catalog;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
-</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a6fea20231690dc268cefcb357910e327">   63</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a6fea20231690dc268cefcb357910e327">catalog_offset</a>(uint32_t catalog_offset) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    catalog_offset_ = catalog_offset;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af7cb9fbed5389bca0854968613a4e64f">   63</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af7cb9fbed5389bca0854968613a4e64f">flags</a>(uint16_t flags) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    flags_ = flags;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#ae532b338bbe1346cedc8a4488e4e4892">   66</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#ae532b338bbe1346cedc8a4488e4e4892">reserved</a>(uint32_t reserved) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    reserved_ = reserved;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a32e40a9871c4fdc1e3a4e92e896c49ea">   68</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a32e40a9871c4fdc1e3a4e92e896c49ea">catalog</a>(uint16_t catalog) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    catalog_ = catalog;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
 </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a041a804ca4d54f3dbb0c662172a5cdc6">   70</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a041a804ca4d54f3dbb0c662172a5cdc6">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af92b77d6c7df529fed4c00548391bb85">   72</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af92b77d6c7df529fed4c00548391bb85">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> CodeIntegrity&amp; entry);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  uint16_t flags_ = 0;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  uint16_t catalog_ = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a558197bcf766dac822e11d7c4f27d9c7">   73</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a558197bcf766dac822e11d7c4f27d9c7">catalog_offset</a>(uint32_t catalog_offset) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    catalog_offset_ = catalog_offset;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
+</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  uint32_t catalog_offset_ = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  uint32_t reserved_ = 0;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#aeed7940aae5125212f5de8acc2ad14d7">   78</a></span>  CodeIntegrity&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#aeed7940aae5125212f5de8acc2ad14d7">reserved</a>(uint32_t reserved) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    reserved_ = reserved;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a041a804ca4d54f3dbb0c662172a5cdc6">   83</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1CodeIntegrity.html#a041a804ca4d54f3dbb0c662172a5cdc6">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af92b77d6c7df529fed4c00548391bb85">   85</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1CodeIntegrity.html#af92b77d6c7df529fed4c00548391bb85">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> CodeIntegrity&amp; entry);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  uint16_t flags_ = 0;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  uint16_t catalog_ = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  uint32_t catalog_offset_ = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  uint32_t reserved_ = 0;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aObject_8hpp_html"><div class="ttname"><a href="Object_8hpp.html">Object.hpp</a></div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html">LIEF::PE::CodeIntegrity</a></div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:30</div></div>
+<div class="ttc" id="aclassLIEF_1_1BinaryStream_html"><div class="ttname"><a href="classLIEF_1_1BinaryStream.html">LIEF::BinaryStream</a></div><div class="ttdoc">Class that is used to a read stream of data from different sources.</div><div class="ttdef"><b>Definition</b> BinaryStream.hpp:33</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html">LIEF::PE::CodeIntegrity</a></div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:31</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a011b6af8f25e12d0ca97fb1f793e981f"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a011b6af8f25e12d0ca97fb1f793e981f">LIEF::PE::CodeIntegrity::CodeIntegrity</a></div><div class="ttdeci">CodeIntegrity(CodeIntegrity &amp;&amp;)=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a041a804ca4d54f3dbb0c662172a5cdc6"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a041a804ca4d54f3dbb0c662172a5cdc6">LIEF::PE::CodeIntegrity::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a0f7cd4e995b0453cf0fd98d6c7e7eb68"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a0f7cd4e995b0453cf0fd98d6c7e7eb68">LIEF::PE::CodeIntegrity::CodeIntegrity</a></div><div class="ttdeci">CodeIntegrity()=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a19ed4c77d953c5ff4eb23deba6fdb2cf"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a19ed4c77d953c5ff4eb23deba6fdb2cf">LIEF::PE::CodeIntegrity::parse</a></div><div class="ttdeci">static result&lt; CodeIntegrity &gt; parse(Parser &amp;ctx, BinaryStream &amp;stream)</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a223eb1c4965a2a686de7eab58977fa96"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a223eb1c4965a2a686de7eab58977fa96">LIEF::PE::CodeIntegrity::operator=</a></div><div class="ttdeci">CodeIntegrity &amp; operator=(const CodeIntegrity &amp;)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a359a8507f6c0eff2c4a9fb55999634d5"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a359a8507f6c0eff2c4a9fb55999634d5">LIEF::PE::CodeIntegrity::flags</a></div><div class="ttdeci">uint16_t flags() const</div><div class="ttdoc">Flags to indicate if CI information is available, etc.</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:40</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a3b48943df401216e409cd80e27399454"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a3b48943df401216e409cd80e27399454">LIEF::PE::CodeIntegrity::catalog</a></div><div class="ttdeci">uint16_t catalog() const</div><div class="ttdoc">0xFFFF means not available</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:45</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a56f19715707b3be4f39d14af1a932780"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a56f19715707b3be4f39d14af1a932780">LIEF::PE::CodeIntegrity::catalog</a></div><div class="ttdeci">void catalog(uint16_t catalog)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:60</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a32e40a9871c4fdc1e3a4e92e896c49ea"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a32e40a9871c4fdc1e3a4e92e896c49ea">LIEF::PE::CodeIntegrity::catalog</a></div><div class="ttdeci">CodeIntegrity &amp; catalog(uint16_t catalog)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:68</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a359a8507f6c0eff2c4a9fb55999634d5"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a359a8507f6c0eff2c4a9fb55999634d5">LIEF::PE::CodeIntegrity::flags</a></div><div class="ttdeci">uint16_t flags() const</div><div class="ttdoc">Flags to indicate if CI information is available, etc.</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:45</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a37e7f2791ba6706f3d76ab94ee78c74d"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a37e7f2791ba6706f3d76ab94ee78c74d">LIEF::PE::CodeIntegrity::operator=</a></div><div class="ttdeci">CodeIntegrity &amp; operator=(CodeIntegrity &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a3b48943df401216e409cd80e27399454"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a3b48943df401216e409cd80e27399454">LIEF::PE::CodeIntegrity::catalog</a></div><div class="ttdeci">uint16_t catalog() const</div><div class="ttdoc">0xFFFF means not available</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:50</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a558197bcf766dac822e11d7c4f27d9c7"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a558197bcf766dac822e11d7c4f27d9c7">LIEF::PE::CodeIntegrity::catalog_offset</a></div><div class="ttdeci">CodeIntegrity &amp; catalog_offset(uint32_t catalog_offset)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:73</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a66a9d65b827e1745cbeabe0fc0c8070a"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a66a9d65b827e1745cbeabe0fc0c8070a">LIEF::PE::CodeIntegrity::CodeIntegrity</a></div><div class="ttdeci">CodeIntegrity(const CodeIntegrity &amp;)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a6fea20231690dc268cefcb357910e327"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a6fea20231690dc268cefcb357910e327">LIEF::PE::CodeIntegrity::catalog_offset</a></div><div class="ttdeci">void catalog_offset(uint32_t catalog_offset)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:63</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a8cd2655a695654fba9fdc93b364d99e2"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a8cd2655a695654fba9fdc93b364d99e2">LIEF::PE::CodeIntegrity::catalog_offset</a></div><div class="ttdeci">uint32_t catalog_offset() const</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:48</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_a8cd2655a695654fba9fdc93b364d99e2"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#a8cd2655a695654fba9fdc93b364d99e2">LIEF::PE::CodeIntegrity::catalog_offset</a></div><div class="ttdeci">uint32_t catalog_offset() const</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:54</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_acf212b7ec05a5b06077dc234028b93d3"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#acf212b7ec05a5b06077dc234028b93d3">LIEF::PE::CodeIntegrity::~CodeIntegrity</a></div><div class="ttdeci">~CodeIntegrity() override=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_ae532b338bbe1346cedc8a4488e4e4892"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#ae532b338bbe1346cedc8a4488e4e4892">LIEF::PE::CodeIntegrity::reserved</a></div><div class="ttdeci">void reserved(uint32_t reserved)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:66</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_aef25ce6f6b767697491c1dd8f73089ce"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#aef25ce6f6b767697491c1dd8f73089ce">LIEF::PE::CodeIntegrity::flags</a></div><div class="ttdeci">void flags(uint16_t flags)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:57</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_af9009c44169b763398619b268881ed96"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#af9009c44169b763398619b268881ed96">LIEF::PE::CodeIntegrity::reserved</a></div><div class="ttdeci">uint32_t reserved() const</div><div class="ttdoc">Additional bitmask to be defined later.</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:53</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_aeed7940aae5125212f5de8acc2ad14d7"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#aeed7940aae5125212f5de8acc2ad14d7">LIEF::PE::CodeIntegrity::reserved</a></div><div class="ttdeci">CodeIntegrity &amp; reserved(uint32_t reserved)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:78</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_af7cb9fbed5389bca0854968613a4e64f"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#af7cb9fbed5389bca0854968613a4e64f">LIEF::PE::CodeIntegrity::flags</a></div><div class="ttdeci">CodeIntegrity &amp; flags(uint16_t flags)</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:63</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_af9009c44169b763398619b268881ed96"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#af9009c44169b763398619b268881ed96">LIEF::PE::CodeIntegrity::reserved</a></div><div class="ttdeci">uint32_t reserved() const</div><div class="ttdoc">Additional bitmask to be defined later.</div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:59</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_af92b77d6c7df529fed4c00548391bb85"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#af92b77d6c7df529fed4c00548391bb85">LIEF::PE::CodeIntegrity::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const CodeIntegrity &amp;entry)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1CodeIntegrity_html_aff8b5fa9f37351f64119cbf910253891"><div class="ttname"><a href="classLIEF_1_1PE_1_1CodeIntegrity.html#aff8b5fa9f37351f64119cbf910253891">LIEF::PE::CodeIntegrity::CodeIntegrity</a></div><div class="ttdeci">CodeIntegrity(const details::pe_code_integrity &amp;header)</div></div>
-<div class="ttc" id="anamespaceLIEF_1_1PE_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></div><div class="ttdef"><b>Definition</b> CodeIntegrity.hpp:26</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:52</div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="errors_8hpp.html">errors.hpp</a></div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html"><div class="ttname"><a href="namespaceLIEF_1_1PE.html">LIEF::PE</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s PE module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:32</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>

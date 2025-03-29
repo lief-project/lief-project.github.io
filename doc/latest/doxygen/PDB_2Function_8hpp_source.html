@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,7 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">PDB/Function.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="PDB_2Function_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2022 - 2024 R. Thomas</span></div>
+<a href="PDB_2Function_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2022 - 2025 R. Thomas</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -109,119 +109,133 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define LIEF_PDB_FUNCTION_H</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="debug__loc_8hpp.html">LIEF/debug_loc.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1pdb.html">pdb</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1pdb_1_1details.html">details</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span>Function;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">class </span>FunctionIt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html">   31</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1pdb_1_1Function.html">Function</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html">   33</a></span>  <span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> Iterator {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a385d5a6e937280be0b720d91c32139da">   35</a></span>    <span class="keyword">using </span>iterator_category = std::forward_iterator_tag;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a04ea61fdef431ffffe8277248f3061c4">   36</a></span>    <span class="keyword">using </span>value_type = std::unique_ptr&lt;Function&gt;;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ac83d841456c5d76a62b9c569ab052941">   37</a></span>    <span class="keyword">using </span>difference_type = std::ptrdiff_t;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#add2f77d7af703a9250d4baea6cb70fda">   38</a></span>    <span class="keyword">using </span>pointer = Function*;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a4d0d490e85cdaa2b09f810abf9d58981">   39</a></span>    <span class="keyword">using </span>reference = Function&amp;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a4bcc4f348ec4d04685f4adde263e6122">   40</a></span>    <span class="keyword">using </span>implementation = details::FunctionIt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html">   42</a></span>    <span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> PointerProxy {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="comment">// Inspired from LLVM&#39;s iterator_facade_base</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a9830fc407400559db7e7783cc10a9394">   44</a></span>      <span class="keyword">friend</span> <span class="keyword">class </span>Iterator;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a0bb75f523422200e263e78891710ae44">   46</a></span>      pointer <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a0bb75f523422200e263e78891710ae44">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> R.get(); }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      value_type R;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">template</span> &lt;<span class="keyword">typename</span> RefT&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      PointerProxy(RefT &amp;&amp;R) : R(std::forward&lt;RefT&gt;(R)) {} <span class="comment">// NOLINT(bugprone-forwarding-reference-overload)</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="visibility_8h.html">LIEF/visibility.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="debug__loc_8hpp.html">LIEF/debug_loc.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1pdb.html">pdb</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1pdb_1_1details.html">details</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">class </span>Function;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span>FunctionIt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html">   32</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1pdb_1_1Function.html">Function</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html">   34</a></span>  <span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> Iterator {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a385d5a6e937280be0b720d91c32139da">   36</a></span>    <span class="keyword">using </span>iterator_category = std::forward_iterator_tag;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a04ea61fdef431ffffe8277248f3061c4">   37</a></span>    <span class="keyword">using </span>value_type = std::unique_ptr&lt;Function&gt;;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ac83d841456c5d76a62b9c569ab052941">   38</a></span>    <span class="keyword">using </span>difference_type = std::ptrdiff_t;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#add2f77d7af703a9250d4baea6cb70fda">   39</a></span>    <span class="keyword">using </span>pointer = Function*;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a4d0d490e85cdaa2b09f810abf9d58981">   40</a></span>    <span class="keyword">using </span>reference = Function&amp;;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a4bcc4f348ec4d04685f4adde263e6122">   41</a></span>    <span class="keyword">using </span>implementation = details::FunctionIt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html">   43</a></span>    <span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> PointerProxy {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="comment">// Inspired from LLVM&#39;s iterator_facade_base</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a9830fc407400559db7e7783cc10a9394">   45</a></span>      <span class="keyword">friend</span> <span class="keyword">class </span>Iterator;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a0bb75f523422200e263e78891710ae44">   47</a></span>      pointer <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a0bb75f523422200e263e78891710ae44">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> R.get(); }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      value_type R;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keyword">template</span> &lt;<span class="keyword">typename</span> RefT&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      PointerProxy(RefT &amp;&amp;R) : R(std::forward&lt;RefT&gt;(R)) {} <span class="comment">// NOLINT(bugprone-forwarding-reference-overload)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    };</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a53575e63bc91dc054ab4aedca6635685">   55</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a53575e63bc91dc054ab4aedca6635685">Iterator</a>(<span class="keyword">const</span> Iterator&amp;);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa8672268526e905c57fe41fcd576eeb2">   56</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa8672268526e905c57fe41fcd576eeb2">Iterator</a>(Iterator&amp;&amp;);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aeb7b9c28e09bce6f26234378eb03b5d9">   57</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aeb7b9c28e09bce6f26234378eb03b5d9">Iterator</a>(std::unique_ptr&lt;details::FunctionIt&gt; impl);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa23271b72f41d89276c792e565e331e0">   58</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa23271b72f41d89276c792e565e331e0">~Iterator</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a287ad3a6bd1f713d9aa5440f8f04eb27">   60</a></span>    <span class="keyword">friend</span> <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keywordtype">bool</span> <a class="code hl_friend" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a287ad3a6bd1f713d9aa5440f8f04eb27">operator==</a>(<span class="keyword">const</span> Iterator&amp; LHS, <span class="keyword">const</span> Iterator&amp; RHS);</div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ae9bcaf0b683f96c35d4f1656e4200325">   61</a></span>    <span class="keyword">friend</span> <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keywordtype">bool</span> <a class="code hl_friend" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ae9bcaf0b683f96c35d4f1656e4200325">operator!=</a>(<span class="keyword">const</span> Iterator&amp; LHS, <span class="keyword">const</span> Iterator&amp; RHS) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">return</span> !(LHS == RHS);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a53575e63bc91dc054ab4aedca6635685">   56</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a53575e63bc91dc054ab4aedca6635685">Iterator</a>(<span class="keyword">const</span> Iterator&amp;);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa8672268526e905c57fe41fcd576eeb2">   57</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa8672268526e905c57fe41fcd576eeb2">Iterator</a>(Iterator&amp;&amp;);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aeb7b9c28e09bce6f26234378eb03b5d9">   58</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aeb7b9c28e09bce6f26234378eb03b5d9">Iterator</a>(std::unique_ptr&lt;details::FunctionIt&gt; impl);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa23271b72f41d89276c792e565e331e0">   59</a></span>    <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa23271b72f41d89276c792e565e331e0">~Iterator</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a287ad3a6bd1f713d9aa5440f8f04eb27">   61</a></span>    <span class="keyword">friend</span> <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keywordtype">bool</span> <a class="code hl_friend" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a287ad3a6bd1f713d9aa5440f8f04eb27">operator==</a>(<span class="keyword">const</span> Iterator&amp; LHS, <span class="keyword">const</span> Iterator&amp; RHS);</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ae9bcaf0b683f96c35d4f1656e4200325">   62</a></span>    <span class="keyword">friend</span> <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keywordtype">bool</span> <a class="code hl_friend" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ae9bcaf0b683f96c35d4f1656e4200325">operator!=</a>(<span class="keyword">const</span> Iterator&amp; LHS, <span class="keyword">const</span> Iterator&amp; RHS) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordflow">return</span> !(LHS == RHS);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a1f7c36fbdb85e44bf667624b2f12ae6f">   65</a></span>    Iterator&amp; <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a1f7c36fbdb85e44bf667624b2f12ae6f">operator++</a>();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a239a633230475b24dd972bdbf598deed">   67</a></span>    Iterator <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a239a633230475b24dd972bdbf598deed">operator++</a>(<span class="keywordtype">int</span>) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      Iterator tmp = *<span class="keyword">static_cast&lt;</span>Iterator*<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      ++*<span class="keyword">static_cast&lt;</span>Iterator *<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keywordflow">return</span> tmp;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a1f7c36fbdb85e44bf667624b2f12ae6f">   66</a></span>    Iterator&amp; <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a1f7c36fbdb85e44bf667624b2f12ae6f">operator++</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a239a633230475b24dd972bdbf598deed">   68</a></span>    Iterator <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a239a633230475b24dd972bdbf598deed">operator++</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      Iterator tmp = *<span class="keyword">static_cast&lt;</span>Iterator*<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      ++*<span class="keyword">static_cast&lt;</span>Iterator *<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a73dca59df8f18364ddf3db5fc0ff0401">   73</a></span>    std::unique_ptr&lt;Function&gt; <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a73dca59df8f18364ddf3db5fc0ff0401">operator*</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ab8c9638444bcfcd6762decc609abe4c3">   75</a></span>    PointerProxy <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ab8c9638444bcfcd6762decc609abe4c3">operator-&gt;</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>Iterator*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;<span class="keyword">operator</span>*();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a73dca59df8f18364ddf3db5fc0ff0401">   74</a></span>    std::unique_ptr&lt;Function&gt; <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a73dca59df8f18364ddf3db5fc0ff0401">operator*</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ab8c9638444bcfcd6762decc609abe4c3">   76</a></span>    PointerProxy <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ab8c9638444bcfcd6762decc609abe4c3">operator-&gt;</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>Iterator*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;<span class="keyword">operator</span>*();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::unique_ptr&lt;details::FunctionIt&gt; impl_;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  };</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::unique_ptr&lt;details::FunctionIt&gt; impl_;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  };</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html#a5ca030d1c0767ad858e4fc9fe855f34a">   82</a></span>  <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a5ca030d1c0767ad858e4fc9fe855f34a">Function</a>(std::unique_ptr&lt;details::Function&gt; impl);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html#add9ee0a8275704f8ff6dde1e09096b3c">   83</a></span>  <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#add9ee0a8275704f8ff6dde1e09096b3c">~Function</a>();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  std::string <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a6462ad294eae70e2f7a8c7accd511cc4">name</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#ab195502dcd5ed00a868ed0597a8fbc77">RVA</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a44100cc99dbf662914a637d22a97fd18">code_size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  std::string <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a1ff95ac3ce0fad7e6bf8feb1c172e1fa">section_name</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  debug_location_t <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a75e34ed62c22d5fc50e2a7f76132cc50">debug_location</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  std::unique_ptr&lt;details::Function&gt; impl_;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html#a5ca030d1c0767ad858e4fc9fe855f34a">   83</a></span>  <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a5ca030d1c0767ad858e4fc9fe855f34a">Function</a>(std::unique_ptr&lt;details::Function&gt; impl);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html#add9ee0a8275704f8ff6dde1e09096b3c">   84</a></span>  <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#add9ee0a8275704f8ff6dde1e09096b3c">~Function</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  std::string <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a6462ad294eae70e2f7a8c7accd511cc4">name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#ab195502dcd5ed00a868ed0597a8fbc77">RVA</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a44100cc99dbf662914a637d22a97fd18">code_size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  std::string <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a1ff95ac3ce0fad7e6bf8feb1c172e1fa">section_name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  debug_location_t <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#a75e34ed62c22d5fc50e2a7f76132cc50">debug_location</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html#aebd639ca6413eca78a94bae7123e6bd6">  101</a></span>  std::string <a class="code hl_function" href="classLIEF_1_1pdb_1_1Function.html#aebd639ca6413eca78a94bae7123e6bd6">to_string</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classLIEF_1_1pdb_1_1Function.html#a2b282f80d6ade8de4a989718be3149eb">  104</a></span>    std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1pdb_1_1Function.html#a2b282f80d6ade8de4a989718be3149eb">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> Function&amp; F)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    os &lt;&lt; F.to_string();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  }</div>
 </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy_html_a0bb75f523422200e263e78891710ae44"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a0bb75f523422200e263e78891710ae44">LIEF::pdb::Function::Iterator::PointerProxy::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:46</div></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  std::unique_ptr&lt;details::Function&gt; impl_;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy_html_a0bb75f523422200e263e78891710ae44"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator_1_1PointerProxy.html#a0bb75f523422200e263e78891710ae44">LIEF::pdb::Function::Iterator::PointerProxy::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:47</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_a1f7c36fbdb85e44bf667624b2f12ae6f"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a1f7c36fbdb85e44bf667624b2f12ae6f">LIEF::pdb::Function::Iterator::operator++</a></div><div class="ttdeci">Iterator &amp; operator++()</div></div>
-<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_a239a633230475b24dd972bdbf598deed"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a239a633230475b24dd972bdbf598deed">LIEF::pdb::Function::Iterator::operator++</a></div><div class="ttdeci">Iterator operator++(int)</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:67</div></div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_a239a633230475b24dd972bdbf598deed"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a239a633230475b24dd972bdbf598deed">LIEF::pdb::Function::Iterator::operator++</a></div><div class="ttdeci">Iterator operator++(int)</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:68</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_a287ad3a6bd1f713d9aa5440f8f04eb27"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a287ad3a6bd1f713d9aa5440f8f04eb27">LIEF::pdb::Function::Iterator::operator==</a></div><div class="ttdeci">friend bool operator==(const Iterator &amp;LHS, const Iterator &amp;RHS)</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_a53575e63bc91dc054ab4aedca6635685"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a53575e63bc91dc054ab4aedca6635685">LIEF::pdb::Function::Iterator::Iterator</a></div><div class="ttdeci">Iterator(const Iterator &amp;)</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_a73dca59df8f18364ddf3db5fc0ff0401"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#a73dca59df8f18364ddf3db5fc0ff0401">LIEF::pdb::Function::Iterator::operator*</a></div><div class="ttdeci">std::unique_ptr&lt; Function &gt; operator*() const</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_aa23271b72f41d89276c792e565e331e0"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa23271b72f41d89276c792e565e331e0">LIEF::pdb::Function::Iterator::~Iterator</a></div><div class="ttdeci">~Iterator()</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_aa8672268526e905c57fe41fcd576eeb2"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aa8672268526e905c57fe41fcd576eeb2">LIEF::pdb::Function::Iterator::Iterator</a></div><div class="ttdeci">Iterator(Iterator &amp;&amp;)</div></div>
-<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_ab8c9638444bcfcd6762decc609abe4c3"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ab8c9638444bcfcd6762decc609abe4c3">LIEF::pdb::Function::Iterator::operator-&gt;</a></div><div class="ttdeci">PointerProxy operator-&gt;() const</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:75</div></div>
-<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_ae9bcaf0b683f96c35d4f1656e4200325"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ae9bcaf0b683f96c35d4f1656e4200325">LIEF::pdb::Function::Iterator::operator!=</a></div><div class="ttdeci">friend bool operator!=(const Iterator &amp;LHS, const Iterator &amp;RHS)</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:61</div></div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_ab8c9638444bcfcd6762decc609abe4c3"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ab8c9638444bcfcd6762decc609abe4c3">LIEF::pdb::Function::Iterator::operator-&gt;</a></div><div class="ttdeci">PointerProxy operator-&gt;() const</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:76</div></div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_ae9bcaf0b683f96c35d4f1656e4200325"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#ae9bcaf0b683f96c35d4f1656e4200325">LIEF::pdb::Function::Iterator::operator!=</a></div><div class="ttdeci">friend bool operator!=(const Iterator &amp;LHS, const Iterator &amp;RHS)</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:62</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_1_1Iterator_html_aeb7b9c28e09bce6f26234378eb03b5d9"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function_1_1Iterator.html#aeb7b9c28e09bce6f26234378eb03b5d9">LIEF::pdb::Function::Iterator::Iterator</a></div><div class="ttdeci">Iterator(std::unique_ptr&lt; details::FunctionIt &gt; impl)</div></div>
-<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html">LIEF::pdb::Function</a></div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:31</div></div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html">LIEF::pdb::Function</a></div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:32</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_a1ff95ac3ce0fad7e6bf8feb1c172e1fa"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#a1ff95ac3ce0fad7e6bf8feb1c172e1fa">LIEF::pdb::Function::section_name</a></div><div class="ttdeci">std::string section_name() const</div><div class="ttdoc">The name of the section in which this function is defined.</div></div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_a2b282f80d6ade8de4a989718be3149eb"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#a2b282f80d6ade8de4a989718be3149eb">LIEF::pdb::Function::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Function &amp;F)</div><div class="ttdef"><b>Definition</b> PDB/Function.hpp:104</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_a44100cc99dbf662914a637d22a97fd18"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#a44100cc99dbf662914a637d22a97fd18">LIEF::pdb::Function::code_size</a></div><div class="ttdeci">uint32_t code_size() const</div><div class="ttdoc">The size of the function.</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_a5ca030d1c0767ad858e4fc9fe855f34a"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#a5ca030d1c0767ad858e4fc9fe855f34a">LIEF::pdb::Function::Function</a></div><div class="ttdeci">Function(std::unique_ptr&lt; details::Function &gt; impl)</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_a6462ad294eae70e2f7a8c7accd511cc4"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#a6462ad294eae70e2f7a8c7accd511cc4">LIEF::pdb::Function::name</a></div><div class="ttdeci">std::string name() const</div><div class="ttdoc">The name of the function (this name is usually demangled)</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_a75e34ed62c22d5fc50e2a7f76132cc50"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#a75e34ed62c22d5fc50e2a7f76132cc50">LIEF::pdb::Function::debug_location</a></div><div class="ttdeci">debug_location_t debug_location() const</div><div class="ttdoc">Original source code location.</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_ab195502dcd5ed00a868ed0597a8fbc77"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#ab195502dcd5ed00a868ed0597a8fbc77">LIEF::pdb::Function::RVA</a></div><div class="ttdeci">uint32_t RVA() const</div><div class="ttdoc">The Relative Virtual Address of the function.</div></div>
 <div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_add9ee0a8275704f8ff6dde1e09096b3c"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#add9ee0a8275704f8ff6dde1e09096b3c">LIEF::pdb::Function::~Function</a></div><div class="ttdeci">~Function()</div></div>
+<div class="ttc" id="aclassLIEF_1_1pdb_1_1Function_html_aebd639ca6413eca78a94bae7123e6bd6"><div class="ttname"><a href="classLIEF_1_1pdb_1_1Function.html#aebd639ca6413eca78a94bae7123e6bd6">LIEF::pdb::Function::to_string</a></div><div class="ttdeci">std::string to_string() const</div></div>
 <div class="ttc" id="adebug__loc_8hpp_html"><div class="ttname"><a href="debug__loc_8hpp.html">debug_loc.hpp</a></div></div>
-<div class="ttc" id="anamespaceLIEF_1_1pdb_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1pdb_1_1details.html">LIEF::pdb::details</a></div><div class="ttdef"><b>Definition</b> PDB/CompilationUnit.hpp:29</div></div>
-<div class="ttc" id="anamespaceLIEF_1_1pdb_html"><div class="ttname"><a href="namespaceLIEF_1_1pdb.html">LIEF::pdb</a></div><div class="ttdef"><b>Definition</b> PDB/CompilationUnit.hpp:27</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1pdb_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1pdb_1_1details.html">LIEF::pdb::details</a></div><div class="ttdef"><b>Definition</b> BuildMetadata.hpp:26</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1pdb_html"><div class="ttname"><a href="namespaceLIEF_1_1pdb.html">LIEF::pdb</a></div><div class="ttdef"><b>Definition</b> BuildMetadata.hpp:24</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>
