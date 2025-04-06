@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,7 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Parameter.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Parameter_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2022 - 2024 R. Thomas</span></div>
+<a href="Parameter_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2022 - 2025 R. Thomas</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -169,7 +169,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keyword">using </span>Parameter::Parameter;</div>
 <div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classLIEF_1_1dwarf_1_1parameters_1_1Formal.html#a1e1e33c75a4df63e2d02eebf4aa2dd26">   94</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1dwarf_1_1parameters_1_1Formal.html#a1e1e33c75a4df63e2d02eebf4aa2dd26">classof</a>(<span class="keyword">const</span> Parameter* P) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> P-&gt;<a class="code hl_function" href="classLIEF_1_1dwarf_1_1Parameter.html#ac7bf528a45917f9185d4a13b6c353a4d">kind</a>() == Parameter::KIND::FORMAL;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> P-&gt;kind() == Parameter::KIND::FORMAL;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  }</div>
 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
@@ -182,7 +182,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">using </span>Parameter::Parameter;</div>
 <div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classLIEF_1_1dwarf_1_1parameters_1_1TemplateValue.html#ac7b14600a66f41b665feb5f0b4935ada">  115</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1dwarf_1_1parameters_1_1TemplateValue.html#ac7b14600a66f41b665feb5f0b4935ada">classof</a>(<span class="keyword">const</span> Parameter* P) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span> P-&gt;<a class="code hl_function" href="classLIEF_1_1dwarf_1_1Parameter.html#ac7bf528a45917f9185d4a13b6c353a4d">kind</a>() == Parameter::KIND::TEMPLATE_VALUE;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span> P-&gt;kind() == Parameter::KIND::TEMPLATE_VALUE;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  }</div>
 </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
@@ -194,7 +194,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keyword">using </span>Parameter::Parameter;</div>
 <div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classLIEF_1_1dwarf_1_1parameters_1_1TemplateType.html#a7db87fc67bd84e44a21280c834e608b7">  135</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1dwarf_1_1parameters_1_1TemplateType.html#a7db87fc67bd84e44a21280c834e608b7">classof</a>(<span class="keyword">const</span> Parameter* P) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> P-&gt;<a class="code hl_function" href="classLIEF_1_1dwarf_1_1Parameter.html#ac7bf528a45917f9185d4a13b6c353a4d">kind</a>() == Parameter::KIND::TEMPLATE_TYPE;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> P-&gt;kind() == Parameter::KIND::TEMPLATE_TYPE;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
 </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>

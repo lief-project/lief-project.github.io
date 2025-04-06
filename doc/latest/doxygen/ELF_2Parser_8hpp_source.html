@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ELF/Parser.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ELF_2Parser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="ELF_2Parser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -194,9 +194,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ELF_T&gt;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <a class="code hl_typedef" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> parse_segments();</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> uint64_t get_dynamic_string_table() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> uint64_t get_dynamic_string_table(BinaryStream* stream = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> result&lt;uint64_t&gt; get_dynamic_string_table_from_segments() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> result&lt;uint64_t&gt; get_dynamic_string_table_from_segments(BinaryStream* stream = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> uint64_t get_dynamic_string_table_from_sections() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ELF_T&gt;</div>
@@ -214,7 +214,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> result&lt;uint32_t&gt; nb_dynsym_relocations() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ELF_T&gt;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <a class="code hl_typedef" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> parse_dynamic_entries(uint64_t offset, uint64_t size);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <a class="code hl_typedef" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> parse_dynamic_entries(BinaryStream&amp; stream);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ELF_T&gt;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <a class="code hl_typedef" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> parse_dynamic_symbols(uint64_t offset);</div>
@@ -264,23 +264,26 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keywordtype">bool</span> bind_symbol(Relocation&amp; R);</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> Relocation&amp; insert_relocation(std::unique_ptr&lt;Relocation&gt; R);</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  std::unique_ptr&lt;BinaryStream&gt; stream_;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  std::unique_ptr&lt;Binary&gt; binary_;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  ParserConfig config_;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="comment">/*</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">   * parse_sections() may skip some sections so that</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">   * binary_-&gt;sections_ is not contiguous based on the index of the sections.</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="comment">   *</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment">   * On the other hand, we need these indexes to bind symbols that</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">   * reference sections. That&#39;s why we have this unordered_map.</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  std::unordered_map&lt;size_t, Section*&gt; sections_idx_;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>};</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="keyword">template</span>&lt;<span class="keyword">class</span> ELF_T&gt;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <a class="code hl_typedef" href="namespaceLIEF.html#a17850ae3551b619133b0f6300f9c9d7f">ok_error_t</a> parse_dyn_table(Segment&amp; pt_dyn);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  std::unique_ptr&lt;BinaryStream&gt; stream_;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  std::unique_ptr&lt;Binary&gt; binary_;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  ParserConfig config_;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  <span class="comment">/*</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment">   * parse_sections() may skip some sections so that</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">   * binary_-&gt;sections_ is not contiguous based on the index of the sections.</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">   *</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">   * On the other hand, we need these indexes to bind symbols that</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">   * reference sections. That&#39;s why we have this unordered_map.</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  std::unordered_map&lt;size_t, Section*&gt; sections_idx_;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>};</div>
 </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>} <span class="comment">// namespace ELF</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>} <span class="comment">// namespace LIEF</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>} <span class="comment">// namespace ELF</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>} <span class="comment">// namespace LIEF</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aAbstract_2Parser_8hpp_html"><div class="ttname"><a href="Abstract_2Parser_8hpp.html">Parser.hpp</a></div></div>
 <div class="ttc" id="aELF_2ParserConfig_8hpp_html"><div class="ttname"><a href="ELF_2ParserConfig_8hpp.html">ParserConfig.hpp</a></div></div>
 <div class="ttc" id="aELF_2enums_8hpp_html"><div class="ttname"><a href="ELF_2enums_8hpp.html">enums.hpp</a></div></div>
@@ -296,7 +299,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassLIEF_1_1ELF_1_1Parser_html_af2cfdd2d4efc19ce129325b4e6a310d9"><div class="ttname"><a href="classLIEF_1_1ELF_1_1Parser.html#af2cfdd2d4efc19ce129325b4e6a310d9">LIEF::ELF::Parser::operator=</a></div><div class="ttdeci">Parser &amp; operator=(const Parser &amp;)=delete</div></div>
 <div class="ttc" id="aclassLIEF_1_1ELF_1_1Relocation_html"><div class="ttname"><a href="classLIEF_1_1ELF_1_1Relocation.html">LIEF::ELF::Relocation</a></div><div class="ttdoc">Class that represents an ELF relocation.</div><div class="ttdef"><b>Definition</b> ELF/Relocation.hpp:40</div></div>
 <div class="ttc" id="aclassLIEF_1_1ELF_1_1Section_html"><div class="ttname"><a href="classLIEF_1_1ELF_1_1Section.html">LIEF::ELF::Section</a></div><div class="ttdoc">Class wich represents an ELF Section.</div><div class="ttdef"><b>Definition</b> ELF/Section.hpp:48</div></div>
-<div class="ttc" id="aclassLIEF_1_1ELF_1_1Segment_html"><div class="ttname"><a href="classLIEF_1_1ELF_1_1Segment.html">LIEF::ELF::Segment</a></div><div class="ttdoc">Class which represents the ELF segments.</div><div class="ttdef"><b>Definition</b> Segment.hpp:46</div></div>
+<div class="ttc" id="aclassLIEF_1_1ELF_1_1Segment_html"><div class="ttname"><a href="classLIEF_1_1ELF_1_1Segment.html">LIEF::ELF::Segment</a></div><div class="ttdoc">Class which represents the ELF segments.</div><div class="ttdef"><b>Definition</b> Segment.hpp:48</div></div>
 <div class="ttc" id="aclassLIEF_1_1ELF_1_1Symbol_html"><div class="ttname"><a href="classLIEF_1_1ELF_1_1Symbol.html">LIEF::ELF::Symbol</a></div><div class="ttdoc">Class which represents an ELF symbol.</div><div class="ttdef"><b>Definition</b> ELF/Symbol.hpp:35</div></div>
 <div class="ttc" id="aclassLIEF_1_1OAT_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1OAT_1_1Parser.html">LIEF::OAT::Parser</a></div><div class="ttdoc">Class to parse an OAT file to produce an OAT::Binary.</div><div class="ttdef"><b>Definition</b> OAT/Parser.hpp:38</div></div>
 <div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="errors_8hpp.html">errors.hpp</a></div></div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">LinkEdit.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="LinkEdit_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="LinkEdit_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -117,83 +117,86 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF.html">LIEF</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1MachO.html">MachO</a> {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1BinaryParser.html">BinaryParser</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1Builder.html">Builder</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1CodeSignatureDir.html">CodeSignatureDir</a>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DataInCode.html">DataInCode</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DyldChainedFixups.html">DyldChainedFixups</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DyldExportsTrie.html">DyldExportsTrie</a>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DyldInfo.html">DyldInfo</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1FunctionStarts.html">FunctionStarts</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1LinkerOptHint.html">LinkerOptHint</a>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1SymbolCommand.html">SymbolCommand</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1TwoLevelHints.html">TwoLevelHints</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1SegmentSplitInfo.html">SegmentSplitInfo</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1CodeSignature.html">CodeSignature</a>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html">   42</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1MachO_1_1LinkEdit.html">LinkEdit</a> : <span class="keyword">public</span> <a class="code hl_class" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a49ce7b4edb121c0761b9a00bbc11a689">   44</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>BinaryParser;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#aa1945d739ab2f7c25e53a7d15acfe6dc">   45</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>Binary;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a870e4066b979b9cef642eb091f8f3d95">   46</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>Builder;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">using </span>SegmentCommand::SegmentCommand;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#aeccb840d1323df47ccdd6b5b9d79856b">   51</a></span>  LinkEdit&amp; <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#aeccb840d1323df47ccdd6b5b9d79856b">operator=</a>(LinkEdit other);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#ae7fa7c50195c999de8287ea6718003cf">   52</a></span>  <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#ae7fa7c50195c999de8287ea6718003cf">LinkEdit</a>(<span class="keyword">const</span> LinkEdit&amp; copy) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a1258fdba22b5d8443dea7635e62e4591">   54</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#a1258fdba22b5d8443dea7635e62e4591">swap</a>(LinkEdit&amp; other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a534295be95dc0c67e0b3177992d534cc">   56</a></span>  std::unique_ptr&lt;LoadCommand&gt; <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#a534295be95dc0c67e0b3177992d534cc">clone</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;LinkEdit&gt;(<span class="keyword">new</span> LinkEdit(*<span class="keyword">this</span>));</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1AtomInfo.html">AtomInfo</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1BinaryParser.html">BinaryParser</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1Builder.html">Builder</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1CodeSignatureDir.html">CodeSignatureDir</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DataInCode.html">DataInCode</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DyldChainedFixups.html">DyldChainedFixups</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DyldExportsTrie.html">DyldExportsTrie</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1DyldInfo.html">DyldInfo</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1FunctionStarts.html">FunctionStarts</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1LinkerOptHint.html">LinkerOptHint</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1SymbolCommand.html">SymbolCommand</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1TwoLevelHints.html">TwoLevelHints</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1SegmentSplitInfo.html">SegmentSplitInfo</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">class </span><a class="code hl_class" href="classLIEF_1_1MachO_1_1CodeSignature.html">CodeSignature</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html">   43</a></span><span class="keyword">class </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_class" href="classLIEF_1_1MachO_1_1LinkEdit.html">LinkEdit</a> : <span class="keyword">public</span> <a class="code hl_class" href="classLIEF_1_1MachO_1_1SegmentCommand.html">SegmentCommand</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a49ce7b4edb121c0761b9a00bbc11a689">   45</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>BinaryParser;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#aa1945d739ab2f7c25e53a7d15acfe6dc">   46</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>Binary;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a870e4066b979b9cef642eb091f8f3d95">   47</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span>Builder;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">using </span>SegmentCommand::SegmentCommand;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#aeccb840d1323df47ccdd6b5b9d79856b">   52</a></span>  LinkEdit&amp; <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#aeccb840d1323df47ccdd6b5b9d79856b">operator=</a>(LinkEdit other);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#ae7fa7c50195c999de8287ea6718003cf">   53</a></span>  <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#ae7fa7c50195c999de8287ea6718003cf">LinkEdit</a>(<span class="keyword">const</span> LinkEdit&amp; copy) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a1258fdba22b5d8443dea7635e62e4591">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#a1258fdba22b5d8443dea7635e62e4591">swap</a>(LinkEdit&amp; other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a534295be95dc0c67e0b3177992d534cc">   57</a></span>  std::unique_ptr&lt;LoadCommand&gt; <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#a534295be95dc0c67e0b3177992d534cc">clone</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;LinkEdit&gt;(<span class="keyword">new</span> LinkEdit(*<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#acdd003988ba2b339f86f8de90e83ee21">   60</a></span>  <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#acdd003988ba2b339f86f8de90e83ee21">~LinkEdit</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a6033f2ad20a15632edcd5ae36fcc47d7">   62</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#a6033f2ad20a15632edcd5ae36fcc47d7">classof</a>(<span class="keyword">const</span> LoadCommand* cmd) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> SegmentCommand::classof(cmd);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#acdd003988ba2b339f86f8de90e83ee21">   61</a></span>  <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#acdd003988ba2b339f86f8de90e83ee21">~LinkEdit</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#a6033f2ad20a15632edcd5ae36fcc47d7">   63</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#a6033f2ad20a15632edcd5ae36fcc47d7">classof</a>(<span class="keyword">const</span> LoadCommand* cmd) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> SegmentCommand::classof(cmd);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
 </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#adb1bb0e8107a9ea49dbac6c2db098352">   66</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#adb1bb0e8107a9ea49dbac6c2db098352">segmentof</a>(<span class="keyword">const</span> SegmentCommand&amp; segment) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> segment.<a class="code hl_function" href="classLIEF_1_1MachO_1_1SegmentCommand.html#a77a953ebb1fe9fba64d44d39b95bc188">name</a>() == <span class="stringliteral">&quot;__LINKEDIT&quot;</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1LinkEdit.html#adb1bb0e8107a9ea49dbac6c2db098352">   67</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1LinkEdit.html#adb1bb0e8107a9ea49dbac6c2db098352">segmentof</a>(<span class="keyword">const</span> SegmentCommand&amp; segment) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> segment.<a class="code hl_function" href="classLIEF_1_1MachO_1_1SegmentCommand.html#a77a953ebb1fe9fba64d44d39b95bc188">name</a>() == <span class="stringliteral">&quot;__LINKEDIT&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
 </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keywordtype">void</span> update_data(<span class="keyword">const</span> update_fnc_t&amp; f) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keywordtype">void</span> update_data(<span class="keyword">const</span> update_fnc_ws_t&amp; f,</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                              <span class="keywordtype">size_t</span> where, <span class="keywordtype">size_t</span> size) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">//x-ref to keep the spans in a consistent state</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  DyldInfo* dyld_                    = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  DyldChainedFixups* chained_fixups_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  DyldExportsTrie* exports_trie_     = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  SegmentSplitInfo* seg_split_       = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  FunctionStarts* fstarts_           = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  DataInCode* data_code_             = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  CodeSignatureDir* code_sig_dir_    = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  LinkerOptHint* linker_opt_         = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  SymbolCommand* symtab_             = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  TwoLevelHints* two_lvl_hint_       = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  CodeSignature* code_sig_           = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keywordtype">void</span> update_data(<span class="keyword">const</span> update_fnc_t&amp; f) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_define" href="visibility_8h.html#accc13722cbe5d108166d8281f020621c">LIEF_LOCAL</a> <span class="keywordtype">void</span> update_data(<span class="keyword">const</span> update_fnc_ws_t&amp; f,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                              <span class="keywordtype">size_t</span> where, <span class="keywordtype">size_t</span> size) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">//x-ref to keep the spans in a consistent state</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  DyldInfo* dyld_                    = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  DyldChainedFixups* chained_fixups_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  DyldExportsTrie* exports_trie_     = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  SegmentSplitInfo* seg_split_       = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  FunctionStarts* fstarts_           = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  DataInCode* data_code_             = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  CodeSignatureDir* code_sig_dir_    = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  LinkerOptHint* linker_opt_         = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  SymbolCommand* symtab_             = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  TwoLevelHints* two_lvl_hint_       = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  CodeSignature* code_sig_           = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  AtomInfo* atom_info_               = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aSegmentCommand_8hpp_html"><div class="ttname"><a href="SegmentCommand_8hpp.html">SegmentCommand.hpp</a></div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1BinaryParser_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1BinaryParser.html">LIEF::MachO::BinaryParser</a></div><div class="ttdoc">Class used to parse a single binary (i.e. non-FAT)</div><div class="ttdef"><b>Definition</b> BinaryParser.hpp:74</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Binary.html">LIEF::MachO::Binary</a></div><div class="ttdoc">Class which represents a MachO binary.</div><div class="ttdef"><b>Definition</b> MachO/Binary.hpp:85</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1Builder_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Builder.html">LIEF::MachO::Builder</a></div><div class="ttdoc">Class used to rebuild a Mach-O file.</div><div class="ttdef"><b>Definition</b> MachO/Builder.hpp:57</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1AtomInfo_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1AtomInfo.html">LIEF::MachO::AtomInfo</a></div><div class="ttdoc">Class which represents the LC_ATOM_INFO command.</div><div class="ttdef"><b>Definition</b> AtomInfo.hpp:36</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1BinaryParser_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1BinaryParser.html">LIEF::MachO::BinaryParser</a></div><div class="ttdoc">Class used to parse a single binary (i.e. non-FAT)</div><div class="ttdef"><b>Definition</b> BinaryParser.hpp:75</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Binary.html">LIEF::MachO::Binary</a></div><div class="ttdoc">Class which represents a MachO binary.</div><div class="ttdef"><b>Definition</b> MachO/Binary.hpp:86</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1Builder_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Builder.html">LIEF::MachO::Builder</a></div><div class="ttdoc">Class used to rebuild a Mach-O file.</div><div class="ttdef"><b>Definition</b> MachO/Builder.hpp:58</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1CodeSignatureDir_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1CodeSignatureDir.html">LIEF::MachO::CodeSignatureDir</a></div><div class="ttdef"><b>Definition</b> CodeSignatureDir.hpp:36</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1CodeSignature_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1CodeSignature.html">LIEF::MachO::CodeSignature</a></div><div class="ttdef"><b>Definition</b> CodeSignature.hpp:37</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DataInCode_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DataInCode.html">LIEF::MachO::DataInCode</a></div><div class="ttdoc">Interface of the LC_DATA_IN_CODE command This command is used to list slices of code sections that co...</div><div class="ttdef"><b>Definition</b> DataInCode.hpp:42</div></div>
@@ -201,12 +204,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DyldExportsTrie_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DyldExportsTrie.html">LIEF::MachO::DyldExportsTrie</a></div><div class="ttdoc">Class that represents the LC_DYLD_EXPORTS_TRIE command.</div><div class="ttdef"><b>Definition</b> DyldExportsTrie.hpp:40</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1DyldInfo_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1DyldInfo.html">LIEF::MachO::DyldInfo</a></div><div class="ttdoc">Class that represents the LC_DYLD_INFO and LC_DYLD_INFO_ONLY commands.</div><div class="ttdef"><b>Definition</b> DyldInfo.hpp:50</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1FunctionStarts_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1FunctionStarts.html">LIEF::MachO::FunctionStarts</a></div><div class="ttdoc">Class which represents the LC_FUNCTION_STARTS command.</div><div class="ttdef"><b>Definition</b> FunctionStarts.hpp:39</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html">LIEF::MachO::LinkEdit</a></div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:42</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html">LIEF::MachO::LinkEdit</a></div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:43</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_a1258fdba22b5d8443dea7635e62e4591"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#a1258fdba22b5d8443dea7635e62e4591">LIEF::MachO::LinkEdit::swap</a></div><div class="ttdeci">void swap(LinkEdit &amp;other) noexcept</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_a534295be95dc0c67e0b3177992d534cc"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#a534295be95dc0c67e0b3177992d534cc">LIEF::MachO::LinkEdit::clone</a></div><div class="ttdeci">std::unique_ptr&lt; LoadCommand &gt; clone() const override</div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:56</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_a6033f2ad20a15632edcd5ae36fcc47d7"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#a6033f2ad20a15632edcd5ae36fcc47d7">LIEF::MachO::LinkEdit::classof</a></div><div class="ttdeci">static bool classof(const LoadCommand *cmd)</div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:62</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_a534295be95dc0c67e0b3177992d534cc"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#a534295be95dc0c67e0b3177992d534cc">LIEF::MachO::LinkEdit::clone</a></div><div class="ttdeci">std::unique_ptr&lt; LoadCommand &gt; clone() const override</div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:57</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_a6033f2ad20a15632edcd5ae36fcc47d7"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#a6033f2ad20a15632edcd5ae36fcc47d7">LIEF::MachO::LinkEdit::classof</a></div><div class="ttdeci">static bool classof(const LoadCommand *cmd)</div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:63</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_acdd003988ba2b339f86f8de90e83ee21"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#acdd003988ba2b339f86f8de90e83ee21">LIEF::MachO::LinkEdit::~LinkEdit</a></div><div class="ttdeci">~LinkEdit() override=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_adb1bb0e8107a9ea49dbac6c2db098352"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#adb1bb0e8107a9ea49dbac6c2db098352">LIEF::MachO::LinkEdit::segmentof</a></div><div class="ttdeci">static bool segmentof(const SegmentCommand &amp;segment)</div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:66</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_adb1bb0e8107a9ea49dbac6c2db098352"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#adb1bb0e8107a9ea49dbac6c2db098352">LIEF::MachO::LinkEdit::segmentof</a></div><div class="ttdeci">static bool segmentof(const SegmentCommand &amp;segment)</div><div class="ttdef"><b>Definition</b> LinkEdit.hpp:67</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_ae7fa7c50195c999de8287ea6718003cf"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#ae7fa7c50195c999de8287ea6718003cf">LIEF::MachO::LinkEdit::LinkEdit</a></div><div class="ttdeci">LinkEdit(const LinkEdit &amp;copy)=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkEdit_html_aeccb840d1323df47ccdd6b5b9d79856b"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkEdit.html#aeccb840d1323df47ccdd6b5b9d79856b">LIEF::MachO::LinkEdit::operator=</a></div><div class="ttdeci">LinkEdit &amp; operator=(LinkEdit other)</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LinkerOptHint_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LinkerOptHint.html">LIEF::MachO::LinkerOptHint</a></div><div class="ttdoc">Class which represents the LC_LINKER_OPTIMIZATION_HINT command.</div><div class="ttdef"><b>Definition</b> LinkerOptHint.hpp:37</div></div>

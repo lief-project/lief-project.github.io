@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -106,15 +106,16 @@ $(function(){ initResizable(false); });
 <code>#include &quot;<a class="el" href="ResourceData_8hpp_source.html">LIEF/PE/ResourceData.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceNode_8hpp_source.html">LIEF/PE/ResourceNode.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceDirectory_8hpp_source.html">LIEF/PE/ResourceDirectory.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="LangCodeItem_8hpp_source.html">LIEF/PE/resources/LangCodeItem.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceAccelerator_8hpp_source.html">LIEF/PE/resources/ResourceAccelerator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceDialog_8hpp_source.html">LIEF/PE/resources/ResourceDialog.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ResourceDialogItem_8hpp_source.html">LIEF/PE/resources/ResourceDialogItem.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ResourceFixedFileInfo_8hpp_source.html">LIEF/PE/resources/ResourceFixedFileInfo.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ResourceDialogRegular_8hpp_source.html">LIEF/PE/resources/ResourceDialogRegular.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ResourceDialogExtended_8hpp_source.html">LIEF/PE/resources/ResourceDialogExtended.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AcceleratorCodes_8hpp_source.html">LIEF/PE/resources/AcceleratorCodes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceIcon_8hpp_source.html">LIEF/PE/resources/ResourceIcon.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceStringFileInfo_8hpp_source.html">LIEF/PE/resources/ResourceStringFileInfo.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceStringTable_8hpp_source.html">LIEF/PE/resources/ResourceStringTable.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceVarFileInfo_8hpp_source.html">LIEF/PE/resources/ResourceVarFileInfo.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ResourceVar_8hpp_source.html">LIEF/PE/resources/ResourceVar.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ResourceVersion_8hpp_source.html">LIEF/PE/resources/ResourceVersion.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="RichEntry_8hpp_source.html">LIEF/PE/RichEntry.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="RichHeader_8hpp_source.html">LIEF/PE/RichHeader.hpp</a>&quot;</code><br />
@@ -130,6 +131,14 @@ $(function(){ initResizable(false); });
 <code>#include &quot;<a class="el" href="LoadConfigurations_8hpp_source.html">LIEF/PE/LoadConfigurations.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AuxiliarySymbol_8hpp_source.html">LIEF/PE/AuxiliarySymbol.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CodeIntegrity_8hpp_source.html">LIEF/PE/CodeIntegrity.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="COFFString_8hpp_source.html">LIEF/PE/COFFString.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Factory_8hpp_source.html">LIEF/PE/Factory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ExceptionInfo_8hpp_source.html">LIEF/PE/ExceptionInfo.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="RuntimeFunctionAArch64_8hpp_source.html">LIEF/PE/exceptions_info/RuntimeFunctionAArch64.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PackedFunction_8hpp_source.html">LIEF/PE/exceptions_info/AArch64/PackedFunction.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="UnpackedFunction_8hpp_source.html">LIEF/PE/exceptions_info/AArch64/UnpackedFunction.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="RuntimeFunctionX64_8hpp_source.html">LIEF/PE/exceptions_info/RuntimeFunctionX64.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="UnwindCodeX64_8hpp_source.html">LIEF/PE/exceptions_info/UnwindCodeX64.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PE_2signature_2Attribute_8hpp_source.html">LIEF/PE/signature/Attribute.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ContentInfo_8hpp_source.html">LIEF/PE/signature/ContentInfo.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GenericContent_8hpp_source.html">LIEF/PE/signature/GenericContent.hpp</a>&quot;</code><br />
@@ -141,6 +150,12 @@ $(function(){ initResizable(false); });
 <code>#include &quot;<a class="el" href="PE_2signature_2types_8hpp_source.html">LIEF/PE/signature/types.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="x509_8hpp_source.html">LIEF/PE/signature/x509.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PKCS9TSTInfo_8hpp_source.html">LIEF/PE/signature/PKCS9TSTInfo.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AuxiliaryCLRToken_8hpp_source.html">LIEF/PE/AuxiliarySymbols/AuxiliaryCLRToken.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AuxiliaryFunctionDefinition_8hpp_source.html">LIEF/PE/AuxiliarySymbols/AuxiliaryFunctionDefinition.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AuxiliaryWeakExternal_8hpp_source.html">LIEF/PE/AuxiliarySymbols/AuxiliaryWeakExternal.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AuxiliarybfAndefSymbol_8hpp_source.html">LIEF/PE/AuxiliarySymbols/AuxiliarybfAndefSymbol.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AuxiliarySectionDefinition_8hpp_source.html">LIEF/PE/AuxiliarySymbols/AuxiliarySectionDefinition.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AuxiliaryFile_8hpp_source.html">LIEF/PE/AuxiliarySymbols/AuxiliaryFile.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PE_2hash_8hpp_source.html">LIEF/PE/hash.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PE_2enums_8hpp_source.html">LIEF/PE/enums.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PE_2EnumToString_8hpp_source.html">LIEF/PE/EnumToString.hpp</a>&quot;</code><br />

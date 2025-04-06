@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
   <compounddef id="_mach_o_2_binary_8h" kind="file" language="C++">
     <compoundname>Binary.h</compoundname>
     <includes local="no">stdint.h</includes>
@@ -206,11 +206,11 @@
 <codeline lineno="34" refid="struct_macho___binary__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___header__t" kindref="compound">Macho_Header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___command__t" kindref="compound">Macho_Command_t</ref>**<sp/><sp/><sp/>commands;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___symbol__t" kindref="compound">Macho_Symbol_t</ref>**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/><sp/><sp/>sections;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>**<sp/><sp/><sp/>segments;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>Macho_Header_t<sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>Macho_Command_t**<sp/><sp/><sp/>commands;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>Macho_Symbol_t**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>Macho_Section_t**<sp/><sp/><sp/>sections;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>Macho_Segment_t**<sp/><sp/><sp/>segments;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>

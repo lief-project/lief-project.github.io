@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">DEX/Method.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="DEX_2Method_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="DEX_2Method_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -155,35 +155,37 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1DEX_1_1Method.html#aacd982e83d969cd223a67319490a9eb7">has</a>(ACCESS_FLAGS f) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  access_flags_list_t <a class="code hl_function" href="classLIEF_1_1DEX_1_1Method.html#aaadcf646212566ec40dd555abd7cad4a">access_flags</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1Method.html#a33c2b6d69d9dc5e927ce2c935c0d244c">   90</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1DEX_1_1Method.html#a33c2b6d69d9dc5e927ce2c935c0d244c">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> Method&amp; mtd);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">// CodeInfo to get additional data about a method i.e. argument count</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1Method.html#aad93c1e4df3bd3cbfab4b8ee3935d248">   90</a></span>  <span class="keyword">const</span> CodeInfo&amp; <a class="code hl_function" href="classLIEF_1_1DEX_1_1Method.html#aad93c1e4df3bd3cbfab4b8ee3935d248">code_info</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1Method.html#a5b813a02bab4c17bc33cdc0201e80061">   92</a></span>  <a class="code hl_function" href="classLIEF_1_1DEX_1_1Method.html#a5b813a02bab4c17bc33cdc0201e80061">~Method</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1Method.html#a33c2b6d69d9dc5e927ce2c935c0d244c">   92</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1DEX_1_1Method.html#a33c2b6d69d9dc5e927ce2c935c0d244c">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> Method&amp; mtd);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">void</span> set_virtual(<span class="keywordtype">bool</span> v);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  std::string name_;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  Class* parent_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  Prototype* prototype_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  uint32_t access_flags_ = ACCESS_FLAGS::ACC_UNKNOWN;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  uint32_t original_index_ = UINT_MAX;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordtype">bool</span> is_virtual_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  uint64_t code_offset_ = 0;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  std::vector&lt;uint8_t&gt; bytecode_;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  CodeInfo code_info_;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classLIEF_1_1DEX_1_1Method.html#a5b813a02bab4c17bc33cdc0201e80061">   94</a></span>  <a class="code hl_function" href="classLIEF_1_1DEX_1_1Method.html#a5b813a02bab4c17bc33cdc0201e80061">~Method</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordtype">void</span> set_virtual(<span class="keywordtype">bool</span> v);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  std::string name_;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  Class* parent_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  Prototype* prototype_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  uint32_t access_flags_ = ACCESS_FLAGS::ACC_UNKNOWN;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  uint32_t original_index_ = UINT_MAX;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">bool</span> is_virtual_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  uint64_t code_offset_ = 0;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  std::vector&lt;uint8_t&gt; bytecode_;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_typedef" href="namespaceLIEF_1_1DEX.html#a445d19038e92db5833fe73815bd31bb9">dex2dex_method_info_t</a> dex2dex_info_;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  CodeInfo code_info_;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
-</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_typedef" href="namespaceLIEF_1_1DEX.html#a445d19038e92db5833fe73815bd31bb9">dex2dex_method_info_t</a> dex2dex_info_;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>} <span class="comment">// Namespace DEX</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>} <span class="comment">// Namespace LIEF</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} <span class="comment">// Namespace DEX</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>} <span class="comment">// Namespace LIEF</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aCodeInfo_8hpp_html"><div class="ttname"><a href="CodeInfo_8hpp.html">CodeInfo.hpp</a></div></div>
 <div class="ttc" id="aDEX_2enums_8hpp_html"><div class="ttname"><a href="DEX_2enums_8hpp.html">enums.hpp</a></div></div>
 <div class="ttc" id="aObject_8hpp_html"><div class="ttname"><a href="Object_8hpp.html">Object.hpp</a></div></div>
@@ -207,6 +209,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_aaadcf646212566ec40dd555abd7cad4a"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#aaadcf646212566ec40dd555abd7cad4a">LIEF::DEX::Method::access_flags</a></div><div class="ttdeci">access_flags_list_t access_flags() const</div><div class="ttdoc">ACCESS_FLAGS as an std::set.</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_aacd982e83d969cd223a67319490a9eb7"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#aacd982e83d969cd223a67319490a9eb7">LIEF::DEX::Method::has</a></div><div class="ttdeci">bool has(ACCESS_FLAGS f) const</div><div class="ttdoc">Check if the current method has the given ACCESS_FLAGS.</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_aacdf29074a6429db52a39696720d3c1e"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#aacdf29074a6429db52a39696720d3c1e">LIEF::DEX::Method::index</a></div><div class="ttdeci">size_t index() const</div><div class="ttdoc">Index in the DEX Methods pool.</div></div>
+<div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_aad93c1e4df3bd3cbfab4b8ee3935d248"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#aad93c1e4df3bd3cbfab4b8ee3935d248">LIEF::DEX::Method::code_info</a></div><div class="ttdeci">const CodeInfo &amp; code_info() const</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_ab59239701b9f2a24334497159a0f9e9d"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#ab59239701b9f2a24334497159a0f9e9d">LIEF::DEX::Method::prototype</a></div><div class="ttdeci">const Prototype * prototype() const</div><div class="ttdoc">Method&#39;s prototype or a nullptr if it is not resolved.</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_adbe6489fac5c3488085a63dbbea3f39f"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#adbe6489fac5c3488085a63dbbea3f39f">LIEF::DEX::Method::has_class</a></div><div class="ttdeci">bool has_class() const</div><div class="ttdoc">True if a class is associated with this method.</div></div>
 <div class="ttc" id="aclassLIEF_1_1DEX_1_1Method_html_af53bfa303e229fe0386f12d56aa66005"><div class="ttname"><a href="classLIEF_1_1DEX_1_1Method.html#af53bfa303e229fe0386f12d56aa66005">LIEF::DEX::Method::code_offset</a></div><div class="ttdeci">uint64_t code_offset() const</div><div class="ttdoc">Offset to the Dalvik Bytecode.</div></div>
