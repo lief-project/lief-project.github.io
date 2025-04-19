@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,7 @@ $(function(){ initResizable(false); });
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classLIEF_1_1PE_1_1RelocationEntry-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LIEF::PE::RelocationEntry Class Reference</div></div>
 </div><!--header-->
@@ -136,25 +137,23 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71aef16a55f057d2213256358532cc0de4b">HIGHLOW</a> = 3
 , <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a9a6bee7cce4d8d09cd8b158b3fb64675">HIGHADJ</a> = 4
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71abe2f3001ed8844795824a02291c7e819">MIPS_JMPADDR</a> = 5
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a7c0341c74ceee00b159f19e2c5bd81f1">ARM_MOV32A</a> = 5 + 0x101
+, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71abe2f3001ed8844795824a02291c7e819">MIPS_JMPADDR</a> = 5 | (1 &lt;&lt; 8)
+, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a89bc7d14f8682d904f3108f82b6b5dcf">ARM_MOV32</a> = 5 | (1 &lt;&lt; 9)
 , <br />
-&#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71a89bc7d14f8682d904f3108f82b6b5dcf">ARM_MOV32</a> = 5 + 0x102
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a81ecff883781d992253b98f1d914761a">RISCV_HI20</a> = 5 + 0x103
+&#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71a81ecff883781d992253b98f1d914761a">RISCV_HI20</a> = 5 | (1 &lt;&lt; 10)
 , <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a3d0d6f3b89d94934de83ca41b85e6ce4">SECTION</a> = 6
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71ae76f78a754cd06573b145266a956cfdf">REL</a> = 7
+, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a20ab6cb0c750bffbcd21a07f3b65c7ab">THUMB_MOV32</a> = 7 | (1 &lt;&lt; 11)
+, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a8fa0831411a53d97a4bac8c8372fdf58">RISCV_LOW12I</a> = 7 | (1 &lt;&lt; 12)
 , <br />
-&#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71acf64ada364ac3378160801d6fc44cabe">ARM_MOV32T</a> = 7 + 0x201
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a20ab6cb0c750bffbcd21a07f3b65c7ab">THUMB_MOV32</a> = 7 + 0x202
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a8fa0831411a53d97a4bac8c8372fdf58">RISCV_LOW12I</a> = 7 + 0x203
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a157a723a504f26897171674113582067">RISCV_LOW12S</a> = 8
-, <br />
-&#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71a36d96517805dbf5a443fbdcdcee48239">IA64_IMM64</a> = 9
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71aaf536ae0492988e422ece477cde2a9a8">MIPS_JMPADDR16</a> = 9 + 0x300
+&#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71a157a723a504f26897171674113582067">RISCV_LOW12S</a> = 8 | (1 &lt;&lt; 13)
+, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a0d3226aeed5ec21f93f70adb47dc91e2">LOONARCH_MARK_LA</a> = 8 | (1 &lt;&lt; 14)
+, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71aaf536ae0492988e422ece477cde2a9a8">MIPS_JMPADDR16</a> = 9
 , <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a6789afedd2ad58900fe080e019c192d1">DIR64</a> = 10
-, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71a48bc5db5eb9de3369cb63bb6a556d568">HIGH3ADJ</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="#a9fe70efef277d3113016d29feefb6a71a48bc5db5eb9de3369cb63bb6a556d568">HIGH3ADJ</a> = 11
 <br />
  }</td></tr>
+<tr class="memdesc:a9fe70efef277d3113016d29feefb6a71"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1PE_1_1Relocation.html" title="Class which represents the Base Relocation Block We usually find this structure in the ....">Relocation</a> type as described in <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#base-relocation-types">https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#base-relocation-types</a>.  <a href="#a9fe70efef277d3113016d29feefb6a71">More...</a><br /></td></tr>
 <tr class="separator:a9fe70efef277d3113016d29feefb6a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
 <tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object" id="r_abca8d15eca2d1a8ee56d4fdfd4aa7155"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
@@ -172,6 +171,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6be14cf41a5c1cace3277577794e7318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10da584081fa0cfcb4c80e96ee0b8ebe" id="r_a10da584081fa0cfcb4c80e96ee0b8ebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10da584081fa0cfcb4c80e96ee0b8ebe">operator=</a> (<a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> other)</td></tr>
 <tr class="separator:a10da584081fa0cfcb4c80e96ee0b8ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4baadc18b32c6b6a0c24c4cee3c918" id="r_abf4baadc18b32c6b6a0c24c4cee3c918"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf4baadc18b32c6b6a0c24c4cee3c918">RelocationEntry</a> (<a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp;&amp;other)=default</td></tr>
+<tr class="separator:abf4baadc18b32c6b6a0c24c4cee3c918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48593a92df0d2c2f46f7c71603a54ab" id="r_ae48593a92df0d2c2f46f7c71603a54ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48593a92df0d2c2f46f7c71603a54ab">operator=</a> (<a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp;&amp;other)=default</td></tr>
+<tr class="separator:ae48593a92df0d2c2f46f7c71603a54ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527e387c7e948b88fd569d826d1f79d6" id="r_a527e387c7e948b88fd569d826d1f79d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a527e387c7e948b88fd569d826d1f79d6">RelocationEntry</a> (uint16_t <a class="el" href="#a244e7d2efe3efe62e0344f2f622819d2">position</a>, <a class="el" href="#a9fe70efef277d3113016d29feefb6a71">BASE_TYPES</a> <a class="el" href="#adb6ebda77417beecabf0a3af0a128672">type</a>)</td></tr>
 <tr class="separator:a527e387c7e948b88fd569d826d1f79d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871f87fb3cecb53c9bd5c0c804a8979a" id="r_a871f87fb3cecb53c9bd5c0c804a8979a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a871f87fb3cecb53c9bd5c0c804a8979a">~RelocationEntry</a> () override=default</td></tr>
@@ -197,8 +200,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb6ebda77417beecabf0a3af0a128672" id="r_adb6ebda77417beecabf0a3af0a128672"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a9fe70efef277d3113016d29feefb6a71">BASE_TYPES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb6ebda77417beecabf0a3af0a128672">type</a> () const</td></tr>
 <tr class="memdesc:adb6ebda77417beecabf0a3af0a128672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the relocation.  <br /></td></tr>
 <tr class="separator:adb6ebda77417beecabf0a3af0a128672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33670e2d5cd669e5c73071d292870046" id="r_a33670e2d5cd669e5c73071d292870046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33670e2d5cd669e5c73071d292870046">data</a> (uint16_t data)</td></tr>
-<tr class="separator:a33670e2d5cd669e5c73071d292870046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a34104c8c0f60c02f9d1140324873fd" id="r_a7a34104c8c0f60c02f9d1140324873fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a34104c8c0f60c02f9d1140324873fd">position</a> (uint16_t position)</td></tr>
 <tr class="separator:a7a34104c8c0f60c02f9d1140324873fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4ffb68293d1484c06317bae87eddb8b" id="r_ac4ffb68293d1484c06317bae87eddb8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4ffb68293d1484c06317bae87eddb8b">type</a> (<a class="el" href="#a9fe70efef277d3113016d29feefb6a71">BASE_TYPES</a> type)</td></tr>
@@ -254,8 +255,17 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa899bd0974bbddc169b9bfbdc43064dc" id="r_aa899bd0974bbddc169b9bfbdc43064dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa899bd0974bbddc169b9bfbdc43064dc">from_raw</a> (<a class="el" href="classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4e">Header::MACHINE_TYPES</a> arch, uint16_t raw)</td></tr>
-<tr class="separator:aa899bd0974bbddc169b9bfbdc43064dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50ed07dc74122f4eed0e4071789431e" id="r_aa50ed07dc74122f4eed0e4071789431e"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa50ed07dc74122f4eed0e4071789431e">get_position</a> (uint16_t <a class="el" href="#a366f3ebf096a421820f87509d35aaac1">data</a>)</td></tr>
+<tr class="separator:aa50ed07dc74122f4eed0e4071789431e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aef19954939f441baaa037e4a4c5537" id="r_a8aef19954939f441baaa037e4a4c5537"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aef19954939f441baaa037e4a4c5537">get_type</a> (uint16_t <a class="el" href="#a366f3ebf096a421820f87509d35aaac1">data</a>)</td></tr>
+<tr class="separator:a8aef19954939f441baaa037e4a4c5537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cd63ceedfd81ff8d7570e683e17437" id="r_a81cd63ceedfd81ff8d7570e683e17437"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a9fe70efef277d3113016d29feefb6a71">BASE_TYPES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81cd63ceedfd81ff8d7570e683e17437">type_from_data</a> (<a class="el" href="classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4e">Header::MACHINE_TYPES</a> arch, uint16_t <a class="el" href="#a366f3ebf096a421820f87509d35aaac1">data</a>)</td></tr>
+<tr class="separator:a81cd63ceedfd81ff8d7570e683e17437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ac4742b1e55b8aee6d68b604bf4239bfc" id="r_ac4742b1e55b8aee6d68b604bf4239bfc"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4742b1e55b8aee6d68b604bf4239bfc">MAX_ADDR</a> = 1 &lt;&lt; 12</td></tr>
+<tr class="separator:ac4742b1e55b8aee6d68b604bf4239bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class which represents an entry of the <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> relocation table. </p>
@@ -280,26 +290,42 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classLIEF_1_1PE_1_1Relocation.html" title="Class which represents the Base Relocation Block We usually find this structure in the ....">Relocation</a> type as described in <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#base-relocation-types">https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#base-relocation-types</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a696b031073e74bf2cb98e5ef201d4aa3" name="a9fe70efef277d3113016d29feefb6a71a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a7d8a220d2262f9d6c658d549ee12cf2c" name="a9fe70efef277d3113016d29feefb6a71a7d8a220d2262f9d6c658d549ee12cf2c"></a>ABS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71ab89de3b4b81c4facfac906edf29aec8c" name="a9fe70efef277d3113016d29feefb6a71ab89de3b4b81c4facfac906edf29aec8c"></a>HIGH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a41bc94cbd8eebea13ce0491b2ac11b88" name="a9fe70efef277d3113016d29feefb6a71a41bc94cbd8eebea13ce0491b2ac11b88"></a>LOW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71aef16a55f057d2213256358532cc0de4b" name="a9fe70efef277d3113016d29feefb6a71aef16a55f057d2213256358532cc0de4b"></a>HIGHLOW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a9a6bee7cce4d8d09cd8b158b3fb64675" name="a9fe70efef277d3113016d29feefb6a71a9a6bee7cce4d8d09cd8b158b3fb64675"></a>HIGHADJ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a7d8a220d2262f9d6c658d549ee12cf2c" name="a9fe70efef277d3113016d29feefb6a71a7d8a220d2262f9d6c658d549ee12cf2c"></a>ABS&#160;</td><td class="fielddoc"><p>This value matches: <code>IMAGE_REL_BASED_ABSOLUTE</code> The base relocation is skipped. This type can be used to pad a block. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71ab89de3b4b81c4facfac906edf29aec8c" name="a9fe70efef277d3113016d29feefb6a71ab89de3b4b81c4facfac906edf29aec8c"></a>HIGH&#160;</td><td class="fielddoc"><p>This value matches: <code>IMAGE_REL_BASED_HIGH</code> The base relocation adds the high 16 bits of the difference to the 16-bit field at offset. The 16-bit field represents the high value of a 32-bit word. </p>
+<p>Operation:</p>
+<div class="fragment"><div class="line">write&lt;int16_t&gt;(ADDR, ((read&lt;int16_t&gt;(ADDR) &lt;&lt; 16) + DELTA) &gt;&gt; 16)</div>
+</div><!-- fragment --> </td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a41bc94cbd8eebea13ce0491b2ac11b88" name="a9fe70efef277d3113016d29feefb6a71a41bc94cbd8eebea13ce0491b2ac11b88"></a>LOW&#160;</td><td class="fielddoc"><p>The base relocation adds the low 16 bits of the difference to the 16-bit field at offset. The 16-bit field represents the low half of a 32-bit word. </p>
+<p>Operation:</p>
+<div class="fragment"><div class="line">write&lt;int16_t&gt;(ADDR, ((int32_t_t)read&lt;int16_t&gt;(ADDR) + DELTA))</div>
+</div><!-- fragment --> </td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71aef16a55f057d2213256358532cc0de4b" name="a9fe70efef277d3113016d29feefb6a71aef16a55f057d2213256358532cc0de4b"></a>HIGHLOW&#160;</td><td class="fielddoc"><p>This value matches <code>IMAGE_REL_BASED_HIGHLOW</code> </p>
+<p>The base relocation applies all 32 bits of the difference to the 32-bit field at offset.</p>
+<p>Operation:</p>
+<div class="fragment"><div class="line">write&lt;int32_t_t&gt;(ADDR, read&lt;int32_t_t&gt;(ADDR) + DELTA)</div>
+</div><!-- fragment --> </td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a9a6bee7cce4d8d09cd8b158b3fb64675" name="a9fe70efef277d3113016d29feefb6a71a9a6bee7cce4d8d09cd8b158b3fb64675"></a>HIGHADJ&#160;</td><td class="fielddoc"><p>This value matches <code>IMAGE_REL_BASED_HIGHADJ</code> </p>
+<p>The base relocation adds the high 16 bits of the difference to the 16-bit field at offset. The 16-bit field represents the high value of a 32-bit word. The low 16 bits of the 32-bit value are stored in the 16-bit word that follows this base relocation. This means that this base relocation occupies two slots. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71abe2f3001ed8844795824a02291c7e819" name="a9fe70efef277d3113016d29feefb6a71abe2f3001ed8844795824a02291c7e819"></a>MIPS_JMPADDR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a7c0341c74ceee00b159f19e2c5bd81f1" name="a9fe70efef277d3113016d29feefb6a71a7c0341c74ceee00b159f19e2c5bd81f1"></a>ARM_MOV32A&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a89bc7d14f8682d904f3108f82b6b5dcf" name="a9fe70efef277d3113016d29feefb6a71a89bc7d14f8682d904f3108f82b6b5dcf"></a>ARM_MOV32&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a81ecff883781d992253b98f1d914761a" name="a9fe70efef277d3113016d29feefb6a71a81ecff883781d992253b98f1d914761a"></a>RISCV_HI20&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a3d0d6f3b89d94934de83ca41b85e6ce4" name="a9fe70efef277d3113016d29feefb6a71a3d0d6f3b89d94934de83ca41b85e6ce4"></a>SECTION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71ae76f78a754cd06573b145266a956cfdf" name="a9fe70efef277d3113016d29feefb6a71ae76f78a754cd06573b145266a956cfdf"></a>REL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71acf64ada364ac3378160801d6fc44cabe" name="a9fe70efef277d3113016d29feefb6a71acf64ada364ac3378160801d6fc44cabe"></a>ARM_MOV32T&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a20ab6cb0c750bffbcd21a07f3b65c7ab" name="a9fe70efef277d3113016d29feefb6a71a20ab6cb0c750bffbcd21a07f3b65c7ab"></a>THUMB_MOV32&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a8fa0831411a53d97a4bac8c8372fdf58" name="a9fe70efef277d3113016d29feefb6a71a8fa0831411a53d97a4bac8c8372fdf58"></a>RISCV_LOW12I&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a157a723a504f26897171674113582067" name="a9fe70efef277d3113016d29feefb6a71a157a723a504f26897171674113582067"></a>RISCV_LOW12S&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a36d96517805dbf5a443fbdcdcee48239" name="a9fe70efef277d3113016d29feefb6a71a36d96517805dbf5a443fbdcdcee48239"></a>IA64_IMM64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a0d3226aeed5ec21f93f70adb47dc91e2" name="a9fe70efef277d3113016d29feefb6a71a0d3226aeed5ec21f93f70adb47dc91e2"></a>LOONARCH_MARK_LA&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71aaf536ae0492988e422ece477cde2a9a8" name="a9fe70efef277d3113016d29feefb6a71aaf536ae0492988e422ece477cde2a9a8"></a>MIPS_JMPADDR16&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a6789afedd2ad58900fe080e019c192d1" name="a9fe70efef277d3113016d29feefb6a71a6789afedd2ad58900fe080e019c192d1"></a>DIR64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a6789afedd2ad58900fe080e019c192d1" name="a9fe70efef277d3113016d29feefb6a71a6789afedd2ad58900fe080e019c192d1"></a>DIR64&#160;</td><td class="fielddoc"><p>This value matches <code>IMAGE_REL_BASED_DIR64</code> </p>
+<p>The base relocation applies the difference to the 64-bit field at offset.</p>
+<p>Operation:</p>
+<div class="fragment"><div class="line">write&lt;int64_t_t&gt;(ADDR, read&lt;int64_t_t&gt;(ADDR) + DELTA)</div>
+</div><!-- fragment --> </td></tr>
 <tr><td class="fieldname"><a id="a9fe70efef277d3113016d29feefb6a71a48bc5db5eb9de3369cb63bb6a556d568" name="a9fe70efef277d3113016d29feefb6a71a48bc5db5eb9de3369cb63bb6a556d568"></a>HIGH3ADJ&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -307,7 +333,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a29d30d48b6ff1c3079f595597c60d428" name="a29d30d48b6ff1c3079f595597c60d428"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d30d48b6ff1c3079f595597c60d428">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d30d48b6ff1c3079f595597c60d428">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,10 +358,13 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a6be14cf41a5c1cace3277577794e7318" name="a6be14cf41a5c1cace3277577794e7318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6be14cf41a5c1cace3277577794e7318">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be14cf41a5c1cace3277577794e7318">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LIEF::PE::RelocationEntry::RelocationEntry </td>
@@ -344,15 +373,50 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea6b2b497c6f5b7ab1c6d2353c781da652">LIEF::PE::LIEF</a>.</p>
+
+</div>
+</div>
+<a id="abf4baadc18b32c6b6a0c24c4cee3c918" name="abf4baadc18b32c6b6a0c24c4cee3c918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4baadc18b32c6b6a0c24c4cee3c918">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIEF::PE::RelocationEntry::RelocationEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a id="a527e387c7e948b88fd569d826d1f79d6" name="a527e387c7e948b88fd569d826d1f79d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a527e387c7e948b88fd569d826d1f79d6">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a527e387c7e948b88fd569d826d1f79d6">&#9670;&#160;</a></span>RelocationEntry() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LIEF::PE::RelocationEntry::RelocationEntry </td>
@@ -365,6 +429,11 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="#a9fe70efef277d3113016d29feefb6a71">BASE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -481,10 +550,13 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a366f3ebf096a421820f87509d35aaac1" name="a366f3ebf096a421820f87509d35aaac1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a366f3ebf096a421820f87509d35aaac1">&#9670;&#160;</a></span>data() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a366f3ebf096a421820f87509d35aaac1">&#9670;&#160;</a></span>data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint16_t LIEF::PE::RelocationEntry::data </td>
@@ -493,6 +565,11 @@ Static Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Raw data of the relocation: </p>
@@ -503,25 +580,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a33670e2d5cd669e5c73071d292870046" name="a33670e2d5cd669e5c73071d292870046"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33670e2d5cd669e5c73071d292870046">&#9670;&#160;</a></span>data() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LIEF::PE::RelocationEntry::data </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa899bd0974bbddc169b9bfbdc43064dc" name="aa899bd0974bbddc169b9bfbdc43064dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa899bd0974bbddc169b9bfbdc43064dc">&#9670;&#160;</a></span>from_raw()</h2>
+<a id="aa50ed07dc74122f4eed0e4071789431e" name="aa50ed07dc74122f4eed0e4071789431e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50ed07dc74122f4eed0e4071789431e">&#9670;&#160;</a></span>get_position()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -530,14 +590,10 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> LIEF::PE::RelocationEntry::from_raw </td>
+          <td class="memname">static uint16_t LIEF::PE::RelocationEntry::get_position </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4e">Header::MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>arch</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>raw</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -549,11 +605,64 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a10da584081fa0cfcb4c80e96ee0b8ebe" name="a10da584081fa0cfcb4c80e96ee0b8ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10da584081fa0cfcb4c80e96ee0b8ebe">&#9670;&#160;</a></span>operator=()</h2>
+<a id="a8aef19954939f441baaa037e4a4c5537" name="a8aef19954939f441baaa037e4a4c5537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aef19954939f441baaa037e4a4c5537">&#9670;&#160;</a></span>get_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t LIEF::PE::RelocationEntry::get_type </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae48593a92df0d2c2f46f7c71603a54ab" name="ae48593a92df0d2c2f46f7c71603a54ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48593a92df0d2c2f46f7c71603a54ab">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp; LIEF::PE::RelocationEntry::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10da584081fa0cfcb4c80e96ee0b8ebe" name="a10da584081fa0cfcb4c80e96ee0b8ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10da584081fa0cfcb4c80e96ee0b8ebe">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1RelocationEntry.html">RelocationEntry</a> &amp; LIEF::PE::RelocationEntry::operator= </td>
@@ -562,6 +671,11 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -679,6 +793,9 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void LIEF::PE::RelocationEntry::swap </td>
@@ -687,7 +804,14 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="classLIEF_1_1Relocation.html#a0722a5bc0c4b7a08be14da7e19218b67">LIEF::Relocation::swap()</a>.</p>
 
 </div>
 </div>
@@ -737,6 +861,58 @@ Static Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81cd63ceedfd81ff8d7570e683e17437" name="a81cd63ceedfd81ff8d7570e683e17437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81cd63ceedfd81ff8d7570e683e17437">&#9670;&#160;</a></span>type_from_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a9fe70efef277d3113016d29feefb6a71">BASE_TYPES</a> LIEF::PE::RelocationEntry::type_from_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1Header.html#afe36b4e388d74732a8f6e64341d4fd4e">Header::MACHINE_TYPES</a></td>          <td class="paramname"><span class="paramname"><em>arch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac4742b1e55b8aee6d68b604bf4239bfc" name="ac4742b1e55b8aee6d68b604bf4239bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4742b1e55b8aee6d68b604bf4239bfc">&#9670;&#160;</a></span>MAX_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::PE::RelocationEntry::MAX_ADDR = 1 &lt;&lt; 12</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

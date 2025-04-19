@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Pogo.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Pogo_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="Pogo_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -139,94 +139,110 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  };</div>
 </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a8d87e1669602e69a70ade2ac35045548">   50</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a8d87e1669602e69a70ade2ac35045548">Pogo</a>();</div>
-<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a119f659f0301a91ceb4ff590cb466866">   51</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a119f659f0301a91ceb4ff590cb466866">Pogo</a>(SIGNATURES sig) :</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Debug{Debug::TYPES::POGO},</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    sig_{sig}</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  {}</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a8d87e1669602e69a70ade2ac35045548">   50</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a8d87e1669602e69a70ade2ac35045548">Pogo</a>() {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    type_ = Debug::TYPES::POGO;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#aa3aa8e767c3a366b626b0ce9995f125a">   56</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#aa3aa8e767c3a366b626b0ce9995f125a">Pogo</a>(<span class="keyword">const</span> details::pe_debug&amp; debug, SIGNATURES sig);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a5b31f0693c1d058a8ec06c2feca40bef">   57</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a5b31f0693c1d058a8ec06c2feca40bef">Pogo</a>(<span class="keyword">const</span> Pogo&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a7d1e9774d4b686c1d38a2017f415954b">   58</a></span>  Pogo&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a7d1e9774d4b686c1d38a2017f415954b">operator=</a>(<span class="keyword">const</span> Pogo&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a1e51f7bfe8cab98f09b3fa04ab139eab">   60</a></span>  std::unique_ptr&lt;Debug&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a1e51f7bfe8cab98f09b3fa04ab139eab">clone</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;Debug&gt;(<span class="keyword">new</span> Pogo(*<span class="keyword">this</span>));</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a119f659f0301a91ceb4ff590cb466866">   54</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a119f659f0301a91ceb4ff590cb466866">Pogo</a>(SIGNATURES sig) :</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    Debug{Debug::TYPES::POGO},</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    sig_{sig}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {}</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#ad655b18e763becc1f896d600533974e1">   59</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#ad655b18e763becc1f896d600533974e1">Pogo</a>(<span class="keyword">const</span> details::pe_debug&amp; debug, SIGNATURES sig, Section* sec) :</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    Debug(debug, sec),</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    sig_(sig)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {}</div>
 </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#ad34528f5c2899e8b24c1902ee133d875">   64</a></span>  SIGNATURES <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#ad34528f5c2899e8b24c1902ee133d875">signature</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> sig_;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a5b31f0693c1d058a8ec06c2feca40bef">   64</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a5b31f0693c1d058a8ec06c2feca40bef">Pogo</a>(<span class="keyword">const</span> Pogo&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a7d1e9774d4b686c1d38a2017f415954b">   65</a></span>  Pogo&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a7d1e9774d4b686c1d38a2017f415954b">operator=</a>(<span class="keyword">const</span> Pogo&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#ad69bee9c0604d7d0f8f6bd09c607ff7f">   67</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#ad69bee9c0604d7d0f8f6bd09c607ff7f">Pogo</a>(Pogo&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#ab820d1e7fb96c6b3088f786aa143596a">   68</a></span>  Pogo&amp; <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#ab820d1e7fb96c6b3088f786aa143596a">operator=</a>(Pogo&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a1e51f7bfe8cab98f09b3fa04ab139eab">   70</a></span>  std::unique_ptr&lt;Debug&gt; <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a1e51f7bfe8cab98f09b3fa04ab139eab">clone</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;Debug&gt;(<span class="keyword">new</span> Pogo(*<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
 </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  it_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a7fee056418e39463b134416e021886a0">entries</a>() {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> entries_;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#ad34528f5c2899e8b24c1902ee133d875">   74</a></span>  SIGNATURES <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#ad34528f5c2899e8b24c1902ee133d875">signature</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">return</span> sig_;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a836fbe1a8d6bd8babac88ed560722229">   73</a></span>  it_const_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a836fbe1a8d6bd8babac88ed560722229">entries</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> entries_;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  it_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a7fee056418e39463b134416e021886a0">entries</a>() {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> entries_;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#aae54b1c8aaaa91a570c42197475dd044">   77</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#aae54b1c8aaaa91a570c42197475dd044">add</a>(PogoEntry entry) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    entries_.push_back(std::move(entry));</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a836fbe1a8d6bd8babac88ed560722229">   83</a></span>  it_const_entries <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a836fbe1a8d6bd8babac88ed560722229">entries</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> entries_;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a4c3cb4e63101ea6ef10da6171ea95cd7">   81</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a4c3cb4e63101ea6ef10da6171ea95cd7">classof</a>(<span class="keyword">const</span> Debug* debug) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> debug-&gt;type() == Debug::TYPES::POGO;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  }</div>
-</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a6dbaf7a262d579a49f4411f68abb2c46">   85</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a6dbaf7a262d579a49f4411f68abb2c46">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#ac1a7461270963409c425513841acaadf">   87</a></span>  <a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classLIEF_1_1PE_1_1Pogo.html#ac1a7461270963409c425513841acaadf">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> Pogo&amp; entry);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a495eca1c226919c012ea12227eebd445">   89</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a495eca1c226919c012ea12227eebd445">~Pogo</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  SIGNATURES sig_ = SIGNATURES::UNKNOWN;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  entries_t entries_;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#aae54b1c8aaaa91a570c42197475dd044">   87</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#aae54b1c8aaaa91a570c42197475dd044">add</a>(PogoEntry entry) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    entries_.push_back(std::move(entry));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
 </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#afb76f88e56d6a48c8312b5938be54e65">   96</a></span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespaceLIEF_1_1PE.html#a4993acdbbc05c26b53166fc5fd5fa835">to_string</a>(<a class="code hl_enumeration" href="classLIEF_1_1PE_1_1Pogo.html#a4c56919feeffe58830abaf3e5f9c1f7e">Pogo::SIGNATURES</a> e);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>} <span class="comment">// Namespace PE</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// Namespace LIEF</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a4c3cb4e63101ea6ef10da6171ea95cd7">   91</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a4c3cb4e63101ea6ef10da6171ea95cd7">classof</a>(<span class="keyword">const</span> Debug* debug) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> debug-&gt;type() == Debug::TYPES::POGO;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a6dbaf7a262d579a49f4411f68abb2c46">   95</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a6dbaf7a262d579a49f4411f68abb2c46">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#af5aa57c01167e813e274ca2112f837e4">   97</a></span>  std::string <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#af5aa57c01167e813e274ca2112f837e4">to_string</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classLIEF_1_1PE_1_1Pogo.html#a495eca1c226919c012ea12227eebd445">   99</a></span>  <a class="code hl_function" href="classLIEF_1_1PE_1_1Pogo.html#a495eca1c226919c012ea12227eebd445">~Pogo</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  SIGNATURES sig_ = SIGNATURES::UNKNOWN;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  entries_t entries_;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="namespaceLIEF_1_1PE.html#afb76f88e56d6a48c8312b5938be54e65">  106</a></span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespaceLIEF_1_1PE.html#aaf67c4ef1492f27887db7a28127c5fa5">to_string</a>(<a class="code hl_enumeration" href="classLIEF_1_1PE_1_1Pogo.html#a4c56919feeffe58830abaf3e5f9c1f7e">Pogo::SIGNATURES</a> e);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// Namespace PE</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>} <span class="comment">// Namespace LIEF</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aPogoEntry_8hpp_html"><div class="ttname"><a href="PogoEntry_8hpp.html">PogoEntry.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Builder_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Builder.html">LIEF::PE::Builder</a></div><div class="ttdoc">Class that is used to rebuild a raw PE binary from a PE::Binary object.</div><div class="ttdef"><b>Definition</b> PE/Builder.hpp:45</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Debug_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Debug.html">LIEF::PE::Debug</a></div><div class="ttdoc">This class represents a generic entry in the debug data directory. For known types,...</div><div class="ttdef"><b>Definition</b> debug/Debug.hpp:38</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:47</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Debug_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Debug.html">LIEF::PE::Debug</a></div><div class="ttdoc">This class represents a generic entry in the debug data directory. For known types,...</div><div class="ttdef"><b>Definition</b> debug/Debug.hpp:40</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Parser.html">LIEF::PE::Parser</a></div><div class="ttdoc">Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used...</div><div class="ttdef"><b>Definition</b> PE/Parser.hpp:52</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html">LIEF::PE::Pogo</a></div><div class="ttdoc">This class represents a Profile Guided Optimization entry from the debug directory (IMAGE_DEBUG_TYPE_...</div><div class="ttdef"><b>Definition</b> Pogo.hpp:33</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a119f659f0301a91ceb4ff590cb466866"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a119f659f0301a91ceb4ff590cb466866">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo(SIGNATURES sig)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:51</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a1e51f7bfe8cab98f09b3fa04ab139eab"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a1e51f7bfe8cab98f09b3fa04ab139eab">LIEF::PE::Pogo::clone</a></div><div class="ttdeci">std::unique_ptr&lt; Debug &gt; clone() const override</div><div class="ttdef"><b>Definition</b> Pogo.hpp:60</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a119f659f0301a91ceb4ff590cb466866"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a119f659f0301a91ceb4ff590cb466866">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo(SIGNATURES sig)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:54</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a1e51f7bfe8cab98f09b3fa04ab139eab"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a1e51f7bfe8cab98f09b3fa04ab139eab">LIEF::PE::Pogo::clone</a></div><div class="ttdeci">std::unique_ptr&lt; Debug &gt; clone() const override</div><div class="ttdef"><b>Definition</b> Pogo.hpp:70</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a495eca1c226919c012ea12227eebd445"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a495eca1c226919c012ea12227eebd445">LIEF::PE::Pogo::~Pogo</a></div><div class="ttdeci">~Pogo() override=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a4c3cb4e63101ea6ef10da6171ea95cd7"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a4c3cb4e63101ea6ef10da6171ea95cd7">LIEF::PE::Pogo::classof</a></div><div class="ttdeci">static bool classof(const Debug *debug)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:81</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a4c3cb4e63101ea6ef10da6171ea95cd7"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a4c3cb4e63101ea6ef10da6171ea95cd7">LIEF::PE::Pogo::classof</a></div><div class="ttdeci">static bool classof(const Debug *debug)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:91</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a4c56919feeffe58830abaf3e5f9c1f7e"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a4c56919feeffe58830abaf3e5f9c1f7e">LIEF::PE::Pogo::SIGNATURES</a></div><div class="ttdeci">SIGNATURES</div><div class="ttdef"><b>Definition</b> Pogo.hpp:43</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a5b31f0693c1d058a8ec06c2feca40bef"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a5b31f0693c1d058a8ec06c2feca40bef">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo(const Pogo &amp;)=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a6dbaf7a262d579a49f4411f68abb2c46"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a6dbaf7a262d579a49f4411f68abb2c46">LIEF::PE::Pogo::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
 <div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a7d1e9774d4b686c1d38a2017f415954b"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a7d1e9774d4b686c1d38a2017f415954b">LIEF::PE::Pogo::operator=</a></div><div class="ttdeci">Pogo &amp; operator=(const Pogo &amp;)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a7fee056418e39463b134416e021886a0"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a7fee056418e39463b134416e021886a0">LIEF::PE::Pogo::entries</a></div><div class="ttdeci">it_entries entries()</div><div class="ttdoc">An iterator over the different POGO elements.</div><div class="ttdef"><b>Definition</b> Pogo.hpp:69</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a836fbe1a8d6bd8babac88ed560722229"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a836fbe1a8d6bd8babac88ed560722229">LIEF::PE::Pogo::entries</a></div><div class="ttdeci">it_const_entries entries() const</div><div class="ttdef"><b>Definition</b> Pogo.hpp:73</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a8d87e1669602e69a70ade2ac35045548"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a8d87e1669602e69a70ade2ac35045548">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo()</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_aa3aa8e767c3a366b626b0ce9995f125a"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#aa3aa8e767c3a366b626b0ce9995f125a">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo(const details::pe_debug &amp;debug, SIGNATURES sig)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_aae54b1c8aaaa91a570c42197475dd044"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#aae54b1c8aaaa91a570c42197475dd044">LIEF::PE::Pogo::add</a></div><div class="ttdeci">void add(PogoEntry entry)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:77</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_ac1a7461270963409c425513841acaadf"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#ac1a7461270963409c425513841acaadf">LIEF::PE::Pogo::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Pogo &amp;entry)</div></div>
-<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_ad34528f5c2899e8b24c1902ee133d875"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#ad34528f5c2899e8b24c1902ee133d875">LIEF::PE::Pogo::signature</a></div><div class="ttdeci">SIGNATURES signature() const</div><div class="ttdef"><b>Definition</b> Pogo.hpp:64</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a7fee056418e39463b134416e021886a0"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a7fee056418e39463b134416e021886a0">LIEF::PE::Pogo::entries</a></div><div class="ttdeci">it_entries entries()</div><div class="ttdoc">An iterator over the different POGO elements.</div><div class="ttdef"><b>Definition</b> Pogo.hpp:79</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a836fbe1a8d6bd8babac88ed560722229"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a836fbe1a8d6bd8babac88ed560722229">LIEF::PE::Pogo::entries</a></div><div class="ttdeci">it_const_entries entries() const</div><div class="ttdef"><b>Definition</b> Pogo.hpp:83</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_a8d87e1669602e69a70ade2ac35045548"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#a8d87e1669602e69a70ade2ac35045548">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo()</div><div class="ttdef"><b>Definition</b> Pogo.hpp:50</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_aae54b1c8aaaa91a570c42197475dd044"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#aae54b1c8aaaa91a570c42197475dd044">LIEF::PE::Pogo::add</a></div><div class="ttdeci">void add(PogoEntry entry)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:87</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_ab820d1e7fb96c6b3088f786aa143596a"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#ab820d1e7fb96c6b3088f786aa143596a">LIEF::PE::Pogo::operator=</a></div><div class="ttdeci">Pogo &amp; operator=(Pogo &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_ad34528f5c2899e8b24c1902ee133d875"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#ad34528f5c2899e8b24c1902ee133d875">LIEF::PE::Pogo::signature</a></div><div class="ttdeci">SIGNATURES signature() const</div><div class="ttdef"><b>Definition</b> Pogo.hpp:74</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_ad655b18e763becc1f896d600533974e1"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#ad655b18e763becc1f896d600533974e1">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo(const details::pe_debug &amp;debug, SIGNATURES sig, Section *sec)</div><div class="ttdef"><b>Definition</b> Pogo.hpp:59</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_ad69bee9c0604d7d0f8f6bd09c607ff7f"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#ad69bee9c0604d7d0f8f6bd09c607ff7f">LIEF::PE::Pogo::Pogo</a></div><div class="ttdeci">Pogo(Pogo &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1PE_1_1Pogo_html_af5aa57c01167e813e274ca2112f837e4"><div class="ttname"><a href="classLIEF_1_1PE_1_1Pogo.html#af5aa57c01167e813e274ca2112f837e4">LIEF::PE::Pogo::to_string</a></div><div class="ttdeci">std::string to_string() const override</div></div>
 <div class="ttc" id="adebug_2Debug_8hpp_html"><div class="ttname"><a href="debug_2Debug_8hpp.html">Debug.hpp</a></div></div>
 <div class="ttc" id="aiterators_8hpp_html"><div class="ttname"><a href="iterators_8hpp.html">iterators.hpp</a></div></div>
 <div class="ttc" id="anamespaceLIEF_1_1PE_html"><div class="ttname"><a href="namespaceLIEF_1_1PE.html">LIEF::PE</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s PE module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:32</div></div>
-<div class="ttc" id="anamespaceLIEF_1_1PE_html_a4993acdbbc05c26b53166fc5fd5fa835"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#a4993acdbbc05c26b53166fc5fd5fa835">LIEF::PE::to_string</a></div><div class="ttdeci">const char * to_string(DataDirectory::TYPES e)</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1PE_html_aaf67c4ef1492f27887db7a28127c5fa5"><div class="ttname"><a href="namespaceLIEF_1_1PE.html#aaf67c4ef1492f27887db7a28127c5fa5">LIEF::PE::to_string</a></div><div class="ttdeci">const char * to_string(AuxiliaryWeakExternal::CHARACTERISTICS e)</div></div>
 <div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>

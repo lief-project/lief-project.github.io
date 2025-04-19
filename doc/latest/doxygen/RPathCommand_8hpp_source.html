@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -92,7 +92,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="RPathCommand_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2021 J. Rieck (based on R. Thomas&#39;s work)</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -145,43 +145,49 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> path_;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
 </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#a2a2e7417ee18bcb0a956ff84f38a333c">   61</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a2a2e7417ee18bcb0a956ff84f38a333c">path</a>(std::string path) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    path_ = std::move(path);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  uint32_t <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a8f0ef1d2af07a7741a1c5686e688db67">path_offset</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> path_offset_;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#a9b8c5a4b28d37aa4efe6082393c19ac4">   65</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a9b8c5a4b28d37aa4efe6082393c19ac4">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#ac13b0e0ed22238960894796156132011">   67</a></span>  std::ostream&amp; <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#ac13b0e0ed22238960894796156132011">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#a70cc7ab2cb64ecad8e4e5f16b4a42830">   69</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a70cc7ab2cb64ecad8e4e5f16b4a42830">classof</a>(<span class="keyword">const</span> LoadCommand* cmd) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> cmd-&gt;<a class="code hl_function" href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">command</a>() == LoadCommand::TYPE::RPATH;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#a2a2e7417ee18bcb0a956ff84f38a333c">   66</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a2a2e7417ee18bcb0a956ff84f38a333c">path</a>(std::string path) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    path_ = std::move(path);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  std::string path_;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#a9b8c5a4b28d37aa4efe6082393c19ac4">   70</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a9b8c5a4b28d37aa4efe6082393c19ac4">accept</a>(Visitor&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#ac13b0e0ed22238960894796156132011">   72</a></span>  std::ostream&amp; <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#ac13b0e0ed22238960894796156132011">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1RPathCommand.html#a70cc7ab2cb64ecad8e4e5f16b4a42830">   74</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classLIEF_1_1MachO_1_1RPathCommand.html#a70cc7ab2cb64ecad8e4e5f16b4a42830">classof</a>(<span class="keyword">const</span> LoadCommand* cmd) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">return</span> cmd-&gt;<a class="code hl_function" href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">command</a>() == LoadCommand::TYPE::RPATH;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  uint32_t path_offset_ = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  std::string path_;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aLoadCommand_8hpp_html"><div class="ttname"><a href="LoadCommand_8hpp.html">LoadCommand.hpp</a></div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1LoadCommand_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LoadCommand.html">LIEF::MachO::LoadCommand</a></div><div class="ttdoc">Based class for the Mach-O load commands.</div><div class="ttdef"><b>Definition</b> LoadCommand.hpp:37</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1LoadCommand_html_a8a0d5263f3f65d0646593c2620d39121"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">LIEF::MachO::LoadCommand::command</a></div><div class="ttdeci">LoadCommand::TYPE command() const</div><div class="ttdoc">Command type.</div><div class="ttdef"><b>Definition</b> LoadCommand.hpp:124</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1LoadCommand_html_a8a0d5263f3f65d0646593c2620d39121"><div class="ttname"><a href="classLIEF_1_1MachO_1_1LoadCommand.html#a8a0d5263f3f65d0646593c2620d39121">LIEF::MachO::LoadCommand::command</a></div><div class="ttdeci">LoadCommand::TYPE command() const</div><div class="ttdoc">Command type.</div><div class="ttdef"><b>Definition</b> LoadCommand.hpp:125</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html">LIEF::MachO::RPathCommand</a></div><div class="ttdoc">Class that represents the LC_RPATH command.</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:36</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a188eba0fff43b75194c445a9d42c6642"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a188eba0fff43b75194c445a9d42c6642">LIEF::MachO::RPathCommand::RPathCommand</a></div><div class="ttdeci">RPathCommand(const details::rpath_command &amp;rpathCmd)</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a18a7df115fe3066b0b92673630295ad7"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a18a7df115fe3066b0b92673630295ad7">LIEF::MachO::RPathCommand::path</a></div><div class="ttdeci">const std::string &amp; path() const</div><div class="ttdoc">The rpath value as a string.</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:57</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a2a2e7417ee18bcb0a956ff84f38a333c"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a2a2e7417ee18bcb0a956ff84f38a333c">LIEF::MachO::RPathCommand::path</a></div><div class="ttdeci">void path(std::string path)</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:61</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a2a2e7417ee18bcb0a956ff84f38a333c"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a2a2e7417ee18bcb0a956ff84f38a333c">LIEF::MachO::RPathCommand::path</a></div><div class="ttdeci">void path(std::string path)</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:66</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a3e9e595da5d96927dfffb1f5ed8eb22f"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a3e9e595da5d96927dfffb1f5ed8eb22f">LIEF::MachO::RPathCommand::RPathCommand</a></div><div class="ttdeci">RPathCommand(const RPathCommand &amp;copy)=default</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a43012eb4ab872a406074e298c6c4fc10"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a43012eb4ab872a406074e298c6c4fc10">LIEF::MachO::RPathCommand::operator=</a></div><div class="ttdeci">RPathCommand &amp; operator=(const RPathCommand &amp;copy)=default</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a70cc7ab2cb64ecad8e4e5f16b4a42830"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a70cc7ab2cb64ecad8e4e5f16b4a42830">LIEF::MachO::RPathCommand::classof</a></div><div class="ttdeci">static bool classof(const LoadCommand *cmd)</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:69</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a70cc7ab2cb64ecad8e4e5f16b4a42830"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a70cc7ab2cb64ecad8e4e5f16b4a42830">LIEF::MachO::RPathCommand::classof</a></div><div class="ttdeci">static bool classof(const LoadCommand *cmd)</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:74</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a74dc2cfdf86a3860508fed18d9be39bc"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a74dc2cfdf86a3860508fed18d9be39bc">LIEF::MachO::RPathCommand::clone</a></div><div class="ttdeci">std::unique_ptr&lt; LoadCommand &gt; clone() const override</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:45</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a8c59bf301b1fb4ccd940e0ae7ff6f8ab"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a8c59bf301b1fb4ccd940e0ae7ff6f8ab">LIEF::MachO::RPathCommand::RPathCommand</a></div><div class="ttdeci">RPathCommand()=default</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a8f0ef1d2af07a7741a1c5686e688db67"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a8f0ef1d2af07a7741a1c5686e688db67">LIEF::MachO::RPathCommand::path_offset</a></div><div class="ttdeci">uint32_t path_offset() const</div><div class="ttdoc">Original string offset of the path.</div><div class="ttdef"><b>Definition</b> RPathCommand.hpp:62</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_a9b8c5a4b28d37aa4efe6082393c19ac4"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#a9b8c5a4b28d37aa4efe6082393c19ac4">LIEF::MachO::RPathCommand::accept</a></div><div class="ttdeci">void accept(Visitor &amp;visitor) const override</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_aa3ec8215a03f563d0d1a676fa76c68ec"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#aa3ec8215a03f563d0d1a676fa76c68ec">LIEF::MachO::RPathCommand::RPathCommand</a></div><div class="ttdeci">RPathCommand(std::string path)</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1RPathCommand_html_ac13b0e0ed22238960894796156132011"><div class="ttname"><a href="classLIEF_1_1MachO_1_1RPathCommand.html#ac13b0e0ed22238960894796156132011">LIEF::MachO::RPathCommand::print</a></div><div class="ttdeci">std::ostream &amp; print(std::ostream &amp;os) const override</div></div>

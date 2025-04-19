@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -97,44 +97,52 @@ $(function(){ initResizable(false); });
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="Object_8hpp_source.html">LIEF/Object.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="visibility_8h_source.html">LIEF/visibility.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="iterators_8hpp_source.html">LIEF/iterators.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="span_8hpp_source.html">LIEF/span.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ResourceNode.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceNode_8hpp__incl.png" border="0" usemap="#aResourceNode_8hpp" alt=""/></div>
 <map name="aResourceNode_8hpp" id="aResourceNode_8hpp">
-<area shape="rect" title=" " alt="" coords="177,5,321,31"/>
+<area shape="rect" title=" " alt="" coords="280,5,424,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,64,104"/>
-<area shape="poly" title=" " alt="" coords="216,33,78,79,76,73,214,28"/>
-<area shape="rect" title=" " alt="" coords="270,152,333,177"/>
-<area shape="poly" title=" " alt="" coords="257,30,276,78,296,138,291,139,271,80,252,32"/>
-<area shape="rect" title=" " alt="" coords="541,79,619,104"/>
-<area shape="poly" title=" " alt="" coords="305,28,529,76,528,81,304,33"/>
+<area shape="poly" title=" " alt="" coords="300,33,83,81,78,82,77,77,82,76,299,28"/>
+<area shape="rect" title=" " alt="" coords="269,152,331,177"/>
+<area shape="poly" title=" " alt="" coords="349,32,328,80,309,139,304,138,323,78,344,30"/>
+<area shape="rect" title=" " alt="" coords="497,79,575,104"/>
+<area shape="poly" title=" " alt="" coords="383,28,494,71,492,76,381,33"/>
+<area shape="rect" title=" " alt="" coords="599,79,673,104"/>
+<area shape="poly" title=" " alt="" coords="398,28,586,75,585,80,397,33"/>
 <area shape="rect" href="Object_8hpp.html" title=" " alt="" coords="139,79,261,104"/>
-<area shape="poly" title=" " alt="" coords="243,33,218,69,214,66,239,29"/>
-<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="11,152,130,177"/>
-<area shape="poly" title=" " alt="" coords="215,33,171,52,128,81,103,110,84,141,80,138,99,107,125,77,169,48,213,28"/>
-<area shape="rect" href="iterators_8hpp.html" title=" " alt="" coords="381,79,517,104"/>
-<area shape="poly" title=" " alt="" coords="282,28,404,71,403,76,281,33"/>
-<area shape="rect" title=" " alt="" coords="154,152,246,177"/>
-<area shape="poly" title=" " alt="" coords="203,104,203,138,197,138,197,104"/>
-<area shape="poly" title=" " alt="" coords="180,106,105,147,103,143,178,102"/>
-<area shape="poly" title=" " alt="" coords="427,106,339,148,337,144,424,102"/>
-<area shape="poly" title=" " alt="" coords="410,107,254,151,253,146,409,101"/>
-<area shape="rect" title=" " alt="" coords="673,152,735,177"/>
-<area shape="poly" title=" " alt="" coords="491,101,660,148,658,153,490,107"/>
-<area shape="rect" title=" " alt="" coords="759,152,830,177"/>
-<area shape="poly" title=" " alt="" coords="511,101,746,149,745,154,510,107"/>
-<area shape="rect" title=" " alt="" coords="855,152,924,177"/>
-<area shape="poly" title=" " alt="" coords="518,100,841,149,840,155,517,105"/>
-<area shape="rect" title=" " alt="" coords="357,152,427,177"/>
-<area shape="poly" title=" " alt="" coords="442,106,412,143,408,139,438,103"/>
-<area shape="rect" title=" " alt="" coords="451,152,538,177"/>
-<area shape="poly" title=" " alt="" coords="459,103,482,139,478,142,455,106"/>
-<area shape="rect" title=" " alt="" coords="563,152,648,177"/>
-<area shape="poly" title=" " alt="" coords="475,102,568,144,566,149,473,106"/>
+<area shape="poly" title=" " alt="" coords="329,33,238,75,236,70,326,28"/>
+<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="10,152,129,177"/>
+<area shape="poly" title=" " alt="" coords="281,28,203,45,164,60,128,81,101,109,82,140,78,138,97,106,125,77,162,55,202,40,279,23"/>
+<area shape="rect" href="iterators_8hpp.html" title=" " alt="" coords="337,79,473,104"/>
+<area shape="poly" title=" " alt="" coords="363,29,391,66,386,69,359,33"/>
+<area shape="rect" href="span_8hpp.html" title=" " alt="" coords="840,79,952,104"/>
+<area shape="poly" title=" " alt="" coords="425,26,827,78,826,84,424,31"/>
+<area shape="rect" title=" " alt="" coords="153,152,245,177"/>
+<area shape="poly" title=" " alt="" coords="202,104,202,139,196,138,197,104"/>
+<area shape="poly" title=" " alt="" coords="180,106,104,148,101,143,178,102"/>
+<area shape="poly" title=" " alt="" coords="390,106,330,147,327,142,387,102"/>
+<area shape="poly" title=" " alt="" coords="373,107,246,150,244,145,371,101"/>
+<area shape="rect" title=" " alt="" coords="355,152,418,177"/>
+<area shape="poly" title=" " alt="" coords="405,105,396,140,391,138,400,104"/>
+<area shape="rect" title=" " alt="" coords="442,152,513,177"/>
+<area shape="poly" title=" " alt="" coords="419,102,458,140,454,144,415,106"/>
+<area shape="rect" title=" " alt="" coords="537,152,607,177"/>
+<area shape="poly" title=" " alt="" coords="433,102,533,144,531,149,431,106"/>
+<area shape="rect" title=" " alt="" coords="631,152,702,177"/>
+<area shape="poly" title=" " alt="" coords="448,101,619,148,617,153,447,107"/>
+<area shape="rect" title=" " alt="" coords="726,152,813,177"/>
+<area shape="poly" title=" " alt="" coords="467,101,713,149,712,154,466,107"/>
+<area shape="rect" title=" " alt="" coords="837,152,923,177"/>
+<area shape="poly" title=" " alt="" coords="474,100,486,101,653,123,824,149,823,154,653,129,485,107,473,105"/>
+<area shape="rect" title=" " alt="" coords="947,152,1133,177"/>
+<area shape="poly" title=" " alt="" coords="920,102,1005,143,1003,148,918,106"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -173,6 +181,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html">LIEF::PE</a></td></tr>
 <tr class="memdesc:namespaceLIEF_1_1PE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace related to the <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>'s <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> module. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

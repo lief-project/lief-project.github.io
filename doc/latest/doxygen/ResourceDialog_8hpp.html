@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -90,72 +90,51 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ResourceDialog.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;ostream&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;set&gt;</code><br />
-<code>#include &quot;<a class="el" href="visibility_8h_source.html">LIEF/visibility.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="visibility_8h_source.html">LIEF/visibility.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Object_8hpp_source.html">LIEF/Object.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="iterators_8hpp_source.html">LIEF/iterators.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="PE_2enums_8hpp_source.html">LIEF/PE/enums.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ResourceDialogItem_8hpp_source.html">LIEF/PE/resources/ResourceDialogItem.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="enums_8hpp_source.html">LIEF/enums.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="errors_8hpp_source.html">LIEF/errors.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="span_8hpp_source.html">LIEF/span.hpp</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ResourceDialog.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceDialog_8hpp__incl.png" border="0" usemap="#aResourceDialog_8hpp" alt=""/></div>
 <map name="aResourceDialog_8hpp" id="aResourceDialog_8hpp">
-<area shape="rect" title=" " alt="" coords="270,5,422,31"/>
-<area shape="rect" title=" " alt="" coords="5,167,81,192"/>
-<area shape="poly" title=" " alt="" coords="271,33,204,51,170,64,138,81,115,98,94,118,61,157,57,153,90,114,112,94,135,76,168,60,202,46,269,28"/>
-<area shape="rect" title=" " alt="" coords="109,167,183,192"/>
-<area shape="poly" title=" " alt="" coords="270,26,239,33,209,43,181,59,157,80,148,97,144,115,144,153,139,153,138,115,143,95,153,77,178,54,207,38,238,27,269,21"/>
-<area shape="rect" title=" " alt="" coords="209,167,251,192"/>
-<area shape="poly" title=" " alt="" coords="271,27,242,33,214,44,189,59,168,80,162,98,168,118,183,139,202,157,198,161,179,143,164,120,157,98,164,77,185,55,212,39,240,28,269,22"/>
-<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="239,240,357,265"/>
-<area shape="poly" title=" " alt="" coords="360,29,378,50,393,78,397,99,393,119,379,153,360,183,321,232,317,228,356,180,374,150,387,118,391,99,387,80,373,53,356,32"/>
-<area shape="rect" href="Object_8hpp.html" title=" " alt="" coords="403,167,526,192"/>
-<area shape="poly" title=" " alt="" coords="373,29,406,48,436,77,455,115,464,152,459,153,450,117,432,80,403,53,371,33"/>
-<area shape="rect" href="iterators_8hpp.html" title=" " alt="" coords="1067,167,1203,192"/>
-<area shape="poly" title=" " alt="" coords="403,28,1066,161,1065,167,402,33"/>
-<area shape="rect" href="PE_2enums_8hpp.html" title=" " alt="" coords="551,167,696,192"/>
-<area shape="poly" title=" " alt="" coords="371,28,465,76,596,157,593,161,462,81,369,33"/>
-<area shape="rect" href="ResourceDialogItem_8hpp.html" title=" " alt="" coords="178,79,378,119"/>
-<area shape="poly" title=" " alt="" coords="338,33,305,70,301,66,334,29"/>
-<area shape="poly" title=" " alt="" coords="439,194,339,237,337,232,437,190"/>
-<area shape="rect" title=" " alt="" coords="449,313,541,339"/>
-<area shape="poly" title=" " alt="" coords="453,194,427,226,420,245,423,264,440,287,462,304,458,308,436,290,418,266,415,245,422,223,449,190"/>
-<area shape="poly" title=" " alt="" coords="1101,195,971,242,946,256,919,268,821,292,721,309,555,325,555,320,720,304,819,287,917,263,943,251,969,238,1099,190"/>
-<area shape="rect" title=" " alt="" coords="1289,240,1352,265"/>
-<area shape="poly" title=" " alt="" coords="1166,190,1279,233,1277,237,1164,195"/>
-<area shape="rect" title=" " alt="" coords="835,240,905,265"/>
-<area shape="poly" title=" " alt="" coords="1093,195,920,241,918,236,1092,189"/>
-<area shape="rect" title=" " alt="" coords="1377,240,1446,265"/>
-<area shape="poly" title=" " alt="" coords="1180,189,1364,236,1363,242,1179,195"/>
-<area shape="rect" title=" " alt="" coords="1471,240,1541,265"/>
-<area shape="poly" title=" " alt="" coords="1203,189,1457,237,1456,243,1202,195"/>
-<area shape="rect" title=" " alt="" coords="981,240,1068,265"/>
-<area shape="poly" title=" " alt="" coords="1119,194,1056,235,1053,230,1116,190"/>
-<area shape="rect" title=" " alt="" coords="1093,240,1178,265"/>
-<area shape="poly" title=" " alt="" coords="1138,192,1138,226,1133,226,1133,192"/>
-<area shape="rect" title=" " alt="" coords="1203,240,1265,265"/>
-<area shape="poly" title=" " alt="" coords="1153,190,1208,230,1205,234,1150,194"/>
-<area shape="poly" title=" " alt="" coords="664,189,822,235,821,240,662,195"/>
-<area shape="rect" title=" " alt="" coords="582,240,665,265"/>
-<area shape="poly" title=" " alt="" coords="626,192,626,226,621,226,621,192"/>
-<area shape="rect" href="enums_8hpp.html" title=" " alt="" coords="433,240,558,265"/>
-<area shape="poly" title=" " alt="" coords="604,194,530,235,527,231,601,190"/>
-<area shape="rect" href="PE_2undef_8h.html" title=" " alt="" coords="689,240,811,265"/>
-<area shape="poly" title=" " alt="" coords="645,190,719,231,716,235,642,194"/>
-<area shape="poly" title=" " alt="" coords="498,266,498,300,493,300,493,266"/>
-<area shape="poly" title=" " alt="" coords="223,121,91,165,90,160,221,116"/>
-<area shape="poly" title=" " alt="" coords="248,121,179,162,176,157,245,116"/>
-<area shape="poly" title=" " alt="" coords="269,120,247,156,242,153,264,117"/>
-<area shape="poly" title=" " alt="" coords="283,119,297,226,292,227,278,120"/>
-<area shape="poly" title=" " alt="" coords="324,116,426,159,424,164,322,121"/>
-<area shape="poly" title=" " alt="" coords="361,116,560,161,559,166,360,121"/>
+<area shape="rect" title=" " alt="" coords="451,5,603,31"/>
+<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="5,152,124,177"/>
+<area shape="poly" title=" " alt="" coords="451,23,356,27,249,36,154,53,117,66,92,81,81,93,74,108,68,139,63,138,69,106,77,90,88,77,115,61,153,48,249,31,355,21,451,17"/>
+<area shape="rect" href="Object_8hpp.html" title=" " alt="" coords="102,79,225,104"/>
+<area shape="poly" title=" " alt="" coords="469,33,236,79,235,73,468,28"/>
+<area shape="rect" href="enums_8hpp.html" title=" " alt="" coords="249,79,374,104"/>
+<area shape="poly" title=" " alt="" coords="493,33,360,77,358,72,492,28"/>
+<area shape="rect" href="errors_8hpp.html" title=" " alt="" coords="399,79,517,104"/>
+<area shape="poly" title=" " alt="" coords="518,33,481,71,477,67,514,29"/>
+<area shape="rect" href="span_8hpp.html" title=" " alt="" coords="541,79,653,104"/>
+<area shape="poly" title=" " alt="" coords="541,29,578,67,574,71,537,33"/>
+<area shape="rect" title=" " alt="" coords="677,79,754,104"/>
+<area shape="poly" title=" " alt="" coords="558,28,673,71,671,76,557,33"/>
+<area shape="rect" title=" " alt="" coords="779,79,841,104"/>
+<area shape="poly" title=" " alt="" coords="574,28,766,76,765,81,573,33"/>
+<area shape="rect" title=" " alt="" coords="865,79,941,104"/>
+<area shape="poly" title=" " alt="" coords="596,28,852,76,851,81,595,33"/>
+<area shape="poly" title=" " alt="" coords="149,106,93,146,90,142,146,102"/>
+<area shape="rect" title=" " alt="" coords="148,152,240,177"/>
+<area shape="poly" title=" " alt="" coords="171,103,186,139,181,141,166,105"/>
+<area shape="poly" title=" " alt="" coords="294,106,226,147,224,142,291,102"/>
+<area shape="rect" title=" " alt="" coords="265,152,331,177"/>
+<area shape="poly" title=" " alt="" coords="433,106,338,149,336,144,431,102"/>
+<area shape="rect" title=" " alt="" coords="356,152,571,177"/>
+<area shape="poly" title=" " alt="" coords="462,104,464,138,459,139,456,105"/>
+<area shape="rect" title=" " alt="" coords="595,152,780,177"/>
+<area shape="poly" title=" " alt="" coords="613,102,663,141,660,145,610,106"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -163,19 +142,28 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceDialog_8hpp__dep__incl.png" border="0" usemap="#aResourceDialog_8hppdep" alt=""/></div>
 <map name="aResourceDialog_8hppdep" id="aResourceDialog_8hppdep">
-<area shape="rect" title=" " alt="" coords="32,5,184,31"/>
-<area shape="rect" href="PE_8hpp.html" title=" " alt="" coords="64,225,131,251"/>
-<area shape="poly" title=" " alt="" coords="93,43,75,79,70,120,75,161,85,198,95,224,90,226,80,199,70,162,65,120,69,78,88,41"/>
-<area shape="rect" href="ResourcesManager_8hpp.html" title=" " alt="" coords="84,79,257,104"/>
-<area shape="poly" title=" " alt="" coords="129,39,163,77,159,80,125,43"/>
-<area shape="rect" href="LIEF_8hpp.html" title=" " alt="" coords="5,299,80,324"/>
-<area shape="poly" title=" " alt="" coords="82,263,54,300,49,297,78,260"/>
-<area shape="rect" href="to__json_8hpp.html" title=" " alt="" coords="105,299,202,324"/>
-<area shape="poly" title=" " alt="" coords="117,260,146,297,142,300,113,263"/>
-<area shape="poly" title=" " alt="" coords="152,116,125,153,110,192,102,226,97,225,105,191,120,151,148,113"/>
-<area shape="rect" href="PE_2Binary_8hpp.html" title=" " alt="" coords="135,152,225,177"/>
-<area shape="poly" title=" " alt="" coords="177,117,181,152,176,152,171,118"/>
-<area shape="poly" title=" " alt="" coords="158,188,113,227,109,223,155,184"/>
+<area shape="rect" title=" " alt="" coords="165,5,317,31"/>
+<area shape="rect" href="PE_8hpp.html" title=" " alt="" coords="302,299,369,324"/>
+<area shape="poly" title=" " alt="" coords="178,37,113,58,51,89,28,107,13,128,8,151,16,176,42,211,75,239,113,261,154,278,236,298,302,306,301,311,235,303,153,283,111,266,72,243,38,214,12,179,3,151,8,126,24,104,48,84,111,53,176,32"/>
+<area shape="rect" href="ResourceDialogExtended_8hpp.html" title=" " alt="" coords="26,152,239,177"/>
+<area shape="poly" title=" " alt="" coords="226,44,143,153,139,150,221,41"/>
+<area shape="rect" href="ResourceDialogRegular_8hpp.html" title=" " alt="" coords="165,225,367,251"/>
+<area shape="poly" title=" " alt="" coords="246,45,267,225,262,225,241,45"/>
+<area shape="rect" href="ResourcesManager_8hpp.html" title=" " alt="" coords="318,79,491,104"/>
+<area shape="poly" title=" " alt="" coords="281,34,379,76,377,81,279,39"/>
+<area shape="rect" href="LIEF_8hpp.html" title=" " alt="" coords="243,372,318,397"/>
+<area shape="poly" title=" " alt="" coords="320,337,292,374,287,370,316,333"/>
+<area shape="rect" href="to__json_8hpp.html" title=" " alt="" coords="343,372,440,397"/>
+<area shape="poly" title=" " alt="" coords="355,333,384,370,380,374,351,337"/>
+<area shape="poly" title=" " alt="" coords="135,191,140,221,146,236,155,249,188,275,227,292,267,301,302,306,301,311,266,307,225,297,185,279,151,252,141,239,135,223,130,192"/>
+<area shape="poly" title=" " alt="" coords="289,259,326,297,322,300,285,263"/>
+<area shape="poly" title=" " alt="" coords="407,118,400,180,392,216,380,252,365,279,348,300,344,297,361,276,376,250,387,215,395,179,401,118"/>
+<area shape="rect" href="PE_2Binary_8hpp.html" title=" " alt="" coords="442,152,533,177"/>
+<area shape="poly" title=" " alt="" coords="430,111,476,150,472,154,427,115"/>
+<area shape="poly" title=" " alt="" coords="475,191,453,221,425,253,391,280,358,301,355,296,388,276,421,249,449,218,471,187"/>
+<area shape="rect" href="Factory_8hpp.html" title=" " alt="" coords="493,225,588,251"/>
+<area shape="poly" title=" " alt="" coords="506,187,534,224,530,227,502,190"/>
+<area shape="poly" title=" " alt="" coords="496,258,369,301,368,296,494,253"/>
 </map>
 </div>
 </div>
@@ -184,7 +172,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ResourceDialog.html">LIEF::PE::ResourceDialog</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representation of a dialog box.  <a href="classLIEF_1_1PE_1_1ResourceDialog.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is the base class for either a regular (legacy) Dialog or an extended Dialog. These different kinds of Dialogs are documented by MS at the following addresses:  <a href="classLIEF_1_1PE_1_1ResourceDialog.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLIEF_1_1PE_1_1ResourceDialog_1_1ordinal__or__str__t.html">LIEF::PE::ResourceDialog::ordinal_or_str_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure wraps either an ordinal value (<code>uint16_t</code>) or a string. The ordinal value should refer to an existing resource id in the resource tree.  <a href="structLIEF_1_1PE_1_1ResourceDialog_1_1ordinal__or__str__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1ResourceDialog_1_1Item.html">LIEF::PE::ResourceDialog::Item</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents an element of the dialog. It can be for instance, a button, or a caption.  <a href="classLIEF_1_1PE_1_1ResourceDialog_1_1Item.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnableBitMaskOperators.html">EnableBitMaskOperators&lt; LIEF::PE::ResourceDialog::DIALOG_STYLES &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnableBitMaskOperators.html">EnableBitMaskOperators&lt; LIEF::PE::ResourceDialog::WINDOW_STYLES &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnableBitMaskOperators.html">EnableBitMaskOperators&lt; LIEF::PE::ResourceDialog::WINDOW_EXTENDED_STYLES &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnableBitMaskOperators.html">EnableBitMaskOperators&lt; LIEF::PE::ResourceDialog::CONTROL_STYLES &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -195,8 +197,17 @@ Namespaces</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html">LIEF::PE</a></td></tr>
 <tr class="memdesc:namespaceLIEF_1_1PE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace related to the <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>'s <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> module. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE_1_1details.html">LIEF::PE::details</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa65ee3a788fcb52fc7cd972bc3c29c6a" id="r_aa65ee3a788fcb52fc7cd972bc3c29c6a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html#aa65ee3a788fcb52fc7cd972bc3c29c6a">LIEF::PE::to_string</a> (<a class="el" href="classLIEF_1_1PE_1_1ResourceDialog.html#a513fe6ee6a802c83284be212924f91c1">ResourceDialog::DIALOG_STYLES</a> s)</td></tr>
+<tr class="separator:aa65ee3a788fcb52fc7cd972bc3c29c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cf53a81a0e21901541c9c2816bc042" id="r_a47cf53a81a0e21901541c9c2816bc042"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html#a47cf53a81a0e21901541c9c2816bc042">LIEF::PE::to_string</a> (<a class="el" href="classLIEF_1_1PE_1_1ResourceDialog.html#aad84190693091472d28929ff57f4c18c">ResourceDialog::WINDOW_STYLES</a> s)</td></tr>
+<tr class="separator:a47cf53a81a0e21901541c9c2816bc042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5036dfd8d48c579e625f520e4b41a123" id="r_a5036dfd8d48c579e625f520e4b41a123"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html#a5036dfd8d48c579e625f520e4b41a123">LIEF::PE::to_string</a> (<a class="el" href="classLIEF_1_1PE_1_1ResourceDialog.html#a26014fc8c57659990c532ee5118e91e6">ResourceDialog::WINDOW_EXTENDED_STYLES</a> s)</td></tr>
+<tr class="separator:a5036dfd8d48c579e625f520e4b41a123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906a168e90eee31a36a843b79f953bff" id="r_a906a168e90eee31a36a843b79f953bff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1PE.html#a906a168e90eee31a36a843b79f953bff">LIEF::PE::to_string</a> (<a class="el" href="classLIEF_1_1PE_1_1ResourceDialog.html#a213a3726706ddfa613da7842113c485d">ResourceDialog::CONTROL_STYLES</a> s)</td></tr>
+<tr class="separator:a906a168e90eee31a36a843b79f953bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

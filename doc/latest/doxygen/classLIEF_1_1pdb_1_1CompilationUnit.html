@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -133,6 +133,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac52ec07316cd5e0f3e5b91bae5163d89" id="r_ac52ec07316cd5e0f3e5b91bae5163d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a59125844f3c04530abf390749dc4cdf3">function_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52ec07316cd5e0f3e5b91bae5163d89">functions</a> () const</td></tr>
 <tr class="memdesc:ac52ec07316cd5e0f3e5b91bae5163d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator over the function defined in this compilation unit. If the PDB does not contain or has an empty DBI stream, it returns an empty iterator.  <br /></td></tr>
 <tr class="separator:ac52ec07316cd5e0f3e5b91bae5163d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872d2cb5e2cf3ba6b5df9b1f76e20daf" id="r_a872d2cb5e2cf3ba6b5df9b1f76e20daf"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classLIEF_1_1pdb_1_1BuildMetadata.html">BuildMetadata</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a872d2cb5e2cf3ba6b5df9b1f76e20daf">build_metadata</a> () const</td></tr>
+<tr class="memdesc:a872d2cb5e2cf3ba6b5df9b1f76e20daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return build metadata such as the version of the compiler or the original source language of this compilation unit.  <br /></td></tr>
+<tr class="separator:a872d2cb5e2cf3ba6b5df9b1f76e20daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efbf7b27e1ebc249d9d098e6e5c64d3" id="r_a2efbf7b27e1ebc249d9d098e6e5c64d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2efbf7b27e1ebc249d9d098e6e5c64d3">to_string</a> () const</td></tr>
+<tr class="separator:a2efbf7b27e1ebc249d9d098e6e5c64d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents a <a class="el" href="classLIEF_1_1pdb_1_1CompilationUnit.html" title="This class represents a CompilationUnit (or Module) in a PDB file.">CompilationUnit</a> (or Module) in a PDB file. </p>
@@ -203,6 +208,25 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a872d2cb5e2cf3ba6b5df9b1f76e20daf" name="a872d2cb5e2cf3ba6b5df9b1f76e20daf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872d2cb5e2cf3ba6b5df9b1f76e20daf">&#9670;&#160;</a></span>build_metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classLIEF_1_1pdb_1_1BuildMetadata.html">BuildMetadata</a> &gt; LIEF::pdb::CompilationUnit::build_metadata </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return build metadata such as the version of the compiler or the original source language of this compilation unit. </p>
+
+</div>
+</div>
 <a id="ac52ec07316cd5e0f3e5b91bae5163d89" name="ac52ec07316cd5e0f3e5b91bae5163d89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac52ec07316cd5e0f3e5b91bae5163d89">&#9670;&#160;</a></span>functions()</h2>
 
@@ -276,6 +300,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classLIEF_1_1pdb_1_1CompilationUnit_1_1Iterator.html">Iterator</a> over the sources files that compose this compilation unit. These files also include <b>headers</b> (<code>.h, .hpp</code>, ...). </p>
+
+</div>
+</div>
+<a id="a2efbf7b27e1ebc249d9d098e6e5c64d3" name="a2efbf7b27e1ebc249d9d098e6e5c64d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efbf7b27e1ebc249d9d098e6e5c64d3">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LIEF::pdb::CompilationUnit::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#a625bce16c04d6c79664adf392960d130">operator&lt;&lt;</a>.</p>
 
 </div>
 </div>

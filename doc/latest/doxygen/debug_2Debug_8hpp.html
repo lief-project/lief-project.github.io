@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -100,25 +100,30 @@ $(function(){ initResizable(false); });
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="Object_8hpp_source.html">LIEF/Object.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="visibility_8h_source.html">LIEF/visibility.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="span_8hpp_source.html">LIEF/span.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for debug/Debug.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_2Debug_8hpp__incl.png" border="0" usemap="#aDebug_8hpp" alt=""/></div>
 <map name="aDebug_8hpp" id="aDebug_8hpp">
-<area shape="rect" title=" " alt="" coords="190,5,282,31"/>
+<area shape="rect" title=" " alt="" coords="251,5,343,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,72,104"/>
-<area shape="poly" title=" " alt="" coords="205,33,85,76,83,71,203,28"/>
+<area shape="poly" title=" " alt="" coords="256,33,86,80,85,75,255,28"/>
 <area shape="rect" title=" " alt="" coords="97,79,173,104"/>
-<area shape="poly" title=" " alt="" coords="221,33,164,73,161,68,218,28"/>
+<area shape="poly" title=" " alt="" coords="272,33,175,75,173,71,270,28"/>
 <area shape="rect" title=" " alt="" coords="197,79,275,104"/>
-<area shape="poly" title=" " alt="" coords="239,31,239,65,233,65,233,31"/>
+<area shape="poly" title=" " alt="" coords="289,33,257,70,253,66,285,29"/>
 <area shape="rect" href="Object_8hpp.html" title=" " alt="" coords="299,79,421,104"/>
-<area shape="poly" title=" " alt="" coords="257,28,329,69,327,74,255,33"/>
-<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="399,152,518,177"/>
-<area shape="poly" title=" " alt="" coords="283,18,319,24,360,34,400,51,435,77,446,91,453,107,460,138,455,139,448,108,441,93,431,81,398,56,359,39,318,29,282,24"/>
-<area shape="rect" title=" " alt="" coords="283,152,375,177"/>
-<area shape="poly" title=" " alt="" coords="357,105,342,141,337,139,352,103"/>
-<area shape="poly" title=" " alt="" coords="377,102,433,142,430,146,374,106"/>
+<area shape="poly" title=" " alt="" coords="310,29,343,66,339,70,306,33"/>
+<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="378,152,497,177"/>
+<area shape="poly" title=" " alt="" coords="345,24,394,42,417,57,436,77,443,92,446,108,445,138,440,138,441,108,438,94,431,80,413,61,391,47,343,29"/>
+<area shape="rect" href="span_8hpp.html" title=" " alt="" coords="537,79,649,104"/>
+<area shape="poly" title=" " alt="" coords="344,28,533,73,532,78,343,33"/>
+<area shape="rect" title=" " alt="" coords="262,152,354,177"/>
+<area shape="poly" title=" " alt="" coords="354,106,327,142,322,139,349,103"/>
+<area shape="poly" title=" " alt="" coords="374,102,416,141,413,144,371,106"/>
+<area shape="rect" title=" " alt="" coords="521,152,706,177"/>
+<area shape="poly" title=" " alt="" coords="599,104,609,138,604,140,594,105"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -126,27 +131,38 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_2Debug_8hpp__dep__incl.png" border="0" usemap="#aDebug_8hppdep" alt=""/></div>
 <map name="aDebug_8hppdep" id="aDebug_8hppdep">
-<area shape="rect" title=" " alt="" coords="216,5,308,31"/>
+<area shape="rect" title=" " alt="" coords="407,5,499,31"/>
 <area shape="rect" href="CodeView_8hpp.html" title=" " alt="" coords="85,79,199,104"/>
-<area shape="poly" title=" " alt="" coords="232,40,163,81,160,76,229,35"/>
-<area shape="rect" href="Debug_8hpp.html" title=" " alt="" coords="191,225,283,251"/>
-<area shape="poly" title=" " alt="" coords="262,45,241,225,235,225,256,45"/>
-<area shape="rect" href="Pogo_8hpp.html" title=" " alt="" coords="274,152,357,177"/>
-<area shape="poly" title=" " alt="" coords="274,43,314,151,309,153,269,45"/>
-<area shape="rect" href="Repro_8hpp.html" title=" " alt="" coords="343,79,431,104"/>
-<area shape="poly" title=" " alt="" coords="295,35,368,76,366,81,293,40"/>
+<area shape="poly" title=" " alt="" coords="394,35,193,81,191,76,393,30"/>
+<area shape="rect" href="Debug_8hpp.html" title=" " alt="" coords="395,225,487,251"/>
+<area shape="poly" title=" " alt="" coords="409,38,371,56,331,82,293,114,264,153,260,171,264,185,277,198,295,208,344,223,395,230,394,236,343,228,293,213,273,202,260,188,254,171,260,151,289,110,328,77,369,52,407,33"/>
+<area shape="rect" href="ExDllCharacteristics_8hpp.html" title=" " alt="" coords="274,152,455,177"/>
+<area shape="poly" title=" " alt="" coords="440,44,416,80,373,153,369,150,412,77,435,41"/>
+<area shape="rect" href="FPO_8hpp.html" title=" " alt="" coords="480,152,556,177"/>
+<area shape="poly" title=" " alt="" coords="438,43,424,73,423,88,427,103,438,118,453,131,486,150,484,154,450,135,434,122,422,105,418,89,419,72,433,41"/>
+<area shape="rect" href="PDBChecksum_8hpp.html" title=" " alt="" coords="436,79,581,104"/>
+<area shape="poly" title=" " alt="" coords="473,40,502,77,498,80,468,43"/>
+<area shape="rect" href="Pogo_8hpp.html" title=" " alt="" coords="581,152,663,177"/>
+<area shape="poly" title=" " alt="" coords="513,30,557,48,578,61,596,77,609,95,617,116,624,151,619,152,612,117,604,98,592,80,574,65,554,52,511,34"/>
+<area shape="rect" href="Repro_8hpp.html" title=" " alt="" coords="657,79,745,104"/>
+<area shape="poly" title=" " alt="" coords="506,32,661,76,660,81,505,37"/>
+<area shape="rect" href="VCFeature_8hpp.html" title=" " alt="" coords="769,79,886,104"/>
+<area shape="poly" title=" " alt="" coords="513,28,769,76,768,81,512,33"/>
 <area shape="rect" href="CodeViewPDB_8hpp.html" title=" " alt="" coords="5,152,148,177"/>
 <area shape="poly" title=" " alt="" coords="124,116,89,154,85,150,120,113"/>
-<area shape="poly" title=" " alt="" coords="160,114,231,224,227,227,155,117"/>
-<area shape="poly" title=" " alt="" coords="116,180,212,223,209,228,114,185"/>
-<area shape="rect" href="PE_8hpp.html" title=" " alt="" coords="203,299,270,324"/>
-<area shape="poly" title=" " alt="" coords="239,264,239,299,234,299,234,264"/>
-<area shape="rect" href="LIEF_8hpp.html" title=" " alt="" coords="145,372,219,397"/>
-<area shape="poly" title=" " alt="" coords="221,337,193,374,189,370,217,333"/>
-<area shape="rect" href="to__json_8hpp.html" title=" " alt="" coords="244,372,341,397"/>
-<area shape="poly" title=" " alt="" coords="257,333,286,370,282,374,252,337"/>
-<area shape="poly" title=" " alt="" coords="294,189,251,227,248,223,291,185"/>
-<area shape="poly" title=" " alt="" coords="390,119,385,149,371,179,352,197,330,211,284,230,282,225,327,207,349,193,367,176,380,148,385,118"/>
+<area shape="poly" title=" " alt="" coords="159,114,185,146,219,175,263,197,310,212,395,230,394,235,309,218,261,202,217,180,181,150,155,118"/>
+<area shape="poly" title=" " alt="" coords="149,177,395,225,394,230,148,183"/>
+<area shape="rect" href="PE_8hpp.html" title=" " alt="" coords="407,299,474,324"/>
+<area shape="poly" title=" " alt="" coords="443,264,443,299,438,299,438,264"/>
+<area shape="rect" href="LIEF_8hpp.html" title=" " alt="" coords="349,372,423,397"/>
+<area shape="poly" title=" " alt="" coords="425,337,397,374,393,370,421,333"/>
+<area shape="rect" href="to__json_8hpp.html" title=" " alt="" coords="448,372,545,397"/>
+<area shape="poly" title=" " alt="" coords="461,333,490,370,486,374,456,337"/>
+<area shape="poly" title=" " alt="" coords="389,185,430,223,426,227,385,189"/>
+<area shape="poly" title=" " alt="" coords="497,189,455,227,452,223,494,185"/>
+<area shape="poly" title=" " alt="" coords="581,185,471,228,469,223,579,180"/>
+<area shape="poly" title=" " alt="" coords="702,118,695,150,688,166,677,179,656,196,633,210,582,228,532,237,487,240,487,235,531,232,581,223,631,205,653,192,673,175,683,163,690,148,697,117"/>
+<area shape="poly" title=" " alt="" coords="805,115,759,148,702,180,646,200,588,216,487,234,486,229,586,210,644,195,700,175,756,144,802,111"/>
 </map>
 </div>
 </div>
@@ -155,7 +171,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1PE_1_1Debug.html">LIEF::PE::Debug</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a generic entry in the debug data directory. For known types, this class is extended to provide a dedicated API (see: ! CodeCodeView)  <a href="classLIEF_1_1PE_1_1Debug.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a generic entry in the debug data directory. For known types, this class is extended to provide a dedicated API (see: CodeCodeView)  <a href="classLIEF_1_1PE_1_1Debug.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
