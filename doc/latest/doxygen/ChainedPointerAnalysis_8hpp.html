@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -97,6 +97,7 @@ $(function(){ initResizable(false); });
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &quot;<a class="el" href="DyldChainedFormat_8hpp_source.html">LIEF/MachO/DyldChainedFormat.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="errors_8hpp_source.html">LIEF/errors.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="visibility_8h_source.html">LIEF/visibility.h</a>&quot;</code><br />
@@ -105,24 +106,26 @@ Include dependency graph for ChainedPointerAnalysis.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="ChainedPointerAnalysis_8hpp__incl.png" border="0" usemap="#aChainedPointerAnalysis_8hpp" alt=""/></div>
 <map name="aChainedPointerAnalysis_8hpp" id="aChainedPointerAnalysis_8hpp">
-<area shape="rect" title=" " alt="" coords="247,5,451,31"/>
+<area shape="rect" title=" " alt="" coords="250,5,454,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,83,104"/>
-<area shape="poly" title=" " alt="" coords="301,33,96,81,95,75,300,28"/>
+<area shape="poly" title=" " alt="" coords="303,33,97,81,96,75,302,28"/>
 <area shape="rect" title=" " alt="" coords="107,79,183,104"/>
-<area shape="poly" title=" " alt="" coords="317,33,192,77,190,72,316,28"/>
+<area shape="poly" title=" " alt="" coords="320,33,193,77,191,72,318,28"/>
 <area shape="rect" title=" " alt="" coords="207,79,294,104"/>
-<area shape="poly" title=" " alt="" coords="335,33,279,73,276,68,332,29"/>
-<area shape="rect" href="DyldChainedFormat_8hpp.html" title=" " alt="" coords="319,79,577,104"/>
-<area shape="poly" title=" " alt="" coords="367,29,422,68,419,73,364,33"/>
-<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="462,152,581,177"/>
-<area shape="poly" title=" " alt="" coords="444,28,533,47,568,60,591,77,598,96,590,115,574,132,555,147,552,143,571,128,585,112,592,96,587,80,566,65,531,52,443,33"/>
-<area shape="rect" href="errors_8hpp.html" title=" " alt="" coords="653,79,771,104"/>
-<area shape="poly" title=" " alt="" coords="408,28,641,73,640,79,407,33"/>
-<area shape="poly" title=" " alt="" coords="462,102,501,140,498,144,458,106"/>
-<area shape="rect" title=" " alt="" coords="641,152,708,177"/>
-<area shape="poly" title=" " alt="" coords="708,106,689,141,685,139,703,103"/>
-<area shape="rect" title=" " alt="" coords="733,152,947,177"/>
-<area shape="poly" title=" " alt="" coords="734,102,808,143,806,147,731,106"/>
+<area shape="poly" title=" " alt="" coords="337,33,280,73,277,68,334,28"/>
+<area shape="rect" title=" " alt="" coords="319,79,385,104"/>
+<area shape="poly" title=" " alt="" coords="355,31,355,65,349,65,349,31"/>
+<area shape="rect" href="DyldChainedFormat_8hpp.html" title=" " alt="" coords="409,79,668,104"/>
+<area shape="poly" title=" " alt="" coords="383,28,496,71,495,76,381,33"/>
+<area shape="rect" href="visibility_8h.html" title=" " alt="" coords="553,152,671,177"/>
+<area shape="poly" title=" " alt="" coords="455,21,522,28,589,38,646,54,667,65,682,77,689,96,681,115,665,132,646,147,642,143,661,128,676,112,683,96,678,80,664,69,644,59,588,43,521,33,454,27"/>
+<area shape="rect" href="errors_8hpp.html" title=" " alt="" coords="743,79,862,104"/>
+<area shape="poly" title=" " alt="" coords="425,28,730,76,729,81,424,33"/>
+<area shape="poly" title=" " alt="" coords="553,102,592,140,588,144,549,106"/>
+<area shape="rect" title=" " alt="" coords="732,152,799,177"/>
+<area shape="poly" title=" " alt="" coords="799,106,780,141,775,139,794,103"/>
+<area shape="rect" title=" " alt="" coords="823,152,1038,177"/>
+<area shape="poly" title=" " alt="" coords="825,102,899,143,896,147,822,106"/>
 </map>
 </div>
 </div>

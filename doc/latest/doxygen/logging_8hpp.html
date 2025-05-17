@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -146,6 +146,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging.html">LIEF::logging</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html">LIEF::logging::named</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -231,6 +233,43 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f3997b33796837260d18a1e713ba978" id="r_a9f3997b33796837260d18a1e713ba978"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a9f3997b33796837260d18a1e713ba978"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging.html#a9f3997b33796837260d18a1e713ba978">LIEF::logging::critical</a> (const std::string &amp;fmt, const Args &amp;... args)</td></tr>
 <tr class="separator:a9f3997b33796837260d18a1e713ba978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4537325dab30eb8ca5c17486b8fe22" id="r_a5a4537325dab30eb8ca5c17486b8fe22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF_1_1logging.html#a230493bc81492dbab126e605538624f6">LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#a5a4537325dab30eb8ca5c17486b8fe22">LIEF::logging::named::get_level</a> (const char *name)</td></tr>
+<tr class="memdesc:a5a4537325dab30eb8ca5c17486b8fe22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the logging level for the logger with the given name.  <br /></td></tr>
+<tr class="separator:a5a4537325dab30eb8ca5c17486b8fe22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd34557f959c9dcde8d90f5fd507320b" id="r_acd34557f959c9dcde8d90f5fd507320b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#acd34557f959c9dcde8d90f5fd507320b">LIEF::logging::named::disable</a> (const char *name)</td></tr>
+<tr class="memdesc:acd34557f959c9dcde8d90f5fd507320b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the logger with the given name.  <br /></td></tr>
+<tr class="separator:acd34557f959c9dcde8d90f5fd507320b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b3a8e5083cc6d749850d478d256ed1" id="r_ad5b3a8e5083cc6d749850d478d256ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#ad5b3a8e5083cc6d749850d478d256ed1">LIEF::logging::named::enable</a> (const char *name)</td></tr>
+<tr class="memdesc:ad5b3a8e5083cc6d749850d478d256ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the logger with the given name.  <br /></td></tr>
+<tr class="separator:ad5b3a8e5083cc6d749850d478d256ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e22b6c83664bb41df81fb048ded34c6" id="r_a7e22b6c83664bb41df81fb048ded34c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#a7e22b6c83664bb41df81fb048ded34c6">LIEF::logging::named::set_level</a> (const char *name, <a class="el" href="namespaceLIEF_1_1logging.html#a230493bc81492dbab126e605538624f6">LEVEL</a> level)</td></tr>
+<tr class="memdesc:a7e22b6c83664bb41df81fb048ded34c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level for the logger with the given name.  <br /></td></tr>
+<tr class="separator:a7e22b6c83664bb41df81fb048ded34c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0671e4e21a01141f2e2668ad1d6e967" id="r_ac0671e4e21a01141f2e2668ad1d6e967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#ac0671e4e21a01141f2e2668ad1d6e967">LIEF::logging::named::set_path</a> (const char *name, const std::string &amp;path)</td></tr>
+<tr class="memdesc:ac0671e4e21a01141f2e2668ad1d6e967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the logger with the given as a file-base logging and set its path.  <br /></td></tr>
+<tr class="separator:ac0671e4e21a01141f2e2668ad1d6e967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af582a5d20854e6494ebb8878379b4090" id="r_af582a5d20854e6494ebb8878379b4090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#af582a5d20854e6494ebb8878379b4090">LIEF::logging::named::log</a> (const char *name, <a class="el" href="namespaceLIEF_1_1logging.html#a230493bc81492dbab126e605538624f6">LEVEL</a> level, const std::string &amp;msg)</td></tr>
+<tr class="memdesc:af582a5d20854e6494ebb8878379b4090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message with the logger whose name in provided in the first parameter.  <br /></td></tr>
+<tr class="separator:af582a5d20854e6494ebb8878379b4090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af810e721868bc5d71f0477f5d407bb65" id="r_af810e721868bc5d71f0477f5d407bb65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#af810e721868bc5d71f0477f5d407bb65">LIEF::logging::named::set_logger</a> (const char *name, std::shared_ptr&lt; spdlog::logger &gt; logger)</td></tr>
+<tr class="memdesc:af810e721868bc5d71f0477f5d407bb65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a spdlog sink for the logger with the given name.  <br /></td></tr>
+<tr class="separator:af810e721868bc5d71f0477f5d407bb65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542cf083774c65ebfb28dda28ce4ecbe" id="r_a542cf083774c65ebfb28dda28ce4ecbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#a542cf083774c65ebfb28dda28ce4ecbe">LIEF::logging::named::reset</a> (const char *name)</td></tr>
+<tr class="memdesc:a542cf083774c65ebfb28dda28ce4ecbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the logger with the given name.  <br /></td></tr>
+<tr class="separator:a542cf083774c65ebfb28dda28ce4ecbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986e4e9a7397331fdd1027682daa19be" id="r_a986e4e9a7397331fdd1027682daa19be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#a986e4e9a7397331fdd1027682daa19be">LIEF::logging::named::enable_debug</a> (const char *name)</td></tr>
+<tr class="memdesc:a986e4e9a7397331fdd1027682daa19be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable debug logging for the logger with the given name.  <br /></td></tr>
+<tr class="separator:a986e4e9a7397331fdd1027682daa19be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9978f3ab6b2e883198c763c3bc34ab92" id="r_a9978f3ab6b2e883198c763c3bc34ab92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#a9978f3ab6b2e883198c763c3bc34ab92">LIEF::logging::named::debug</a> (const char *name, const std::string &amp;msg)</td></tr>
+<tr class="separator:a9978f3ab6b2e883198c763c3bc34ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e645d0cbc20cbfbea1b82d4587d4e3" id="r_ae5e645d0cbc20cbfbea1b82d4587d4e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#ae5e645d0cbc20cbfbea1b82d4587d4e3">LIEF::logging::named::info</a> (const char *name, const std::string &amp;msg)</td></tr>
+<tr class="separator:ae5e645d0cbc20cbfbea1b82d4587d4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11edb4df1c582542a184f7fb88bdd982" id="r_a11edb4df1c582542a184f7fb88bdd982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#a11edb4df1c582542a184f7fb88bdd982">LIEF::logging::named::warn</a> (const char *name, const std::string &amp;msg)</td></tr>
+<tr class="separator:a11edb4df1c582542a184f7fb88bdd982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30d2f5e9d93b3bc8cc674b55cf2c10b" id="r_ac30d2f5e9d93b3bc8cc674b55cf2c10b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#ac30d2f5e9d93b3bc8cc674b55cf2c10b">LIEF::logging::named::err</a> (const char *name, const std::string &amp;msg)</td></tr>
+<tr class="separator:ac30d2f5e9d93b3bc8cc674b55cf2c10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9916ca75b00d3c9fdbacb54950035c1" id="r_ac9916ca75b00d3c9fdbacb54950035c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLIEF_1_1logging_1_1named.html#ac9916ca75b00d3c9fdbacb54950035c1">LIEF::logging::named::critical</a> (const char *name, const std::string &amp;msg)</td></tr>
+<tr class="separator:ac9916ca75b00d3c9fdbacb54950035c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

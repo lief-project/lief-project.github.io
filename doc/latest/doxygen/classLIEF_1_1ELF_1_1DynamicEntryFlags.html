@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -329,6 +329,45 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deae960524602348eaf4d5e539592103209">X86_64_PLTSZ</a> = X86_64_DISC + 0x70000001
 , <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deafb8330666cc58d3fa066c79cbca9a3b7">X86_64_PLTENT</a> = X86_64_DISC + 0x70000003
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dead97db9864a593406b6981e71339771f0">IA_64_PLT_RESERVE</a> = IA_64_DISC + (0x70000000 + 0)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea6f420e97209c32c620eaf535f94d7c0f">IA_64_VMS_SUBTYPE</a> = IA_64_DISC + (0x60000000 + 0)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaa0c3eb78836651b8baf90e54da9184ae">IA_64_VMS_IMGIOCNT</a> = IA_64_DISC + (0x60000000 + 2)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea03f925af8830b29b5581be6394835057">IA_64_VMS_LNKFLAGS</a> = IA_64_DISC + (0x60000000 + 8)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea4b8866047cbfcd9a5c03f53ed993c5b7">IA_64_VMS_VIR_MEM_BLK_SIZ</a> = IA_64_DISC + (0x60000000 + 10)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea8595077e96cfcbef1e89ffc13d207655">IA_64_VMS_IDENT</a> = IA_64_DISC + (0x60000000 + 12)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaa9e5953a24e2aa0158159240024fa842">IA_64_VMS_NEEDED_IDENT</a> = IA_64_DISC + (0x60000000 + 16)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea9c08b43cb475ddabe8ecd26551238a6d">IA_64_VMS_IMG_RELA_CNT</a> = IA_64_DISC + (0x60000000 + 18)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dead8b4700aa807e045759fd4da0eb85bf8">IA_64_VMS_SEG_RELA_CNT</a> = IA_64_DISC + (0x60000000 + 20)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaa68ad23ea064db58e89bf523a00a3e3b">IA_64_VMS_FIXUP_RELA_CNT</a> = IA_64_DISC + (0x60000000 + 22)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea5497992b91f8cae3506cc675eae55bfc">IA_64_VMS_FIXUP_NEEDED</a> = IA_64_DISC + (0x60000000 + 24)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea9d12726545631d1bf82dca264e255c53">IA_64_VMS_SYMVEC_CNT</a> = IA_64_DISC + (0x60000000 + 26)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea8d7ca443833b31049c1339713022649e">IA_64_VMS_XLATED</a> = IA_64_DISC + (0x60000000 + 30)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea90327844bb58f44b69a3b799eaa8de24">IA_64_VMS_STACKSIZE</a> = IA_64_DISC + (0x60000000 + 32)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea8edd1c39dd5aa5951e529124c9d73c31">IA_64_VMS_UNWINDSZ</a> = IA_64_DISC + (0x60000000 + 34)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea51f45eacb03ead39fc37e23590d17cab">IA_64_VMS_UNWIND_CODSEG</a> = IA_64_DISC + (0x60000000 + 36)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea76d813f791b99dd5e71d67f0b3c4b246">IA_64_VMS_UNWIND_INFOSEG</a> = IA_64_DISC + (0x60000000 + 38)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea88de12fce9333d395906b69324eeab60">IA_64_VMS_LINKTIME</a> = IA_64_DISC + (0x60000000 + 40)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deab866f213784193b457a138049ef656fb">IA_64_VMS_SEG_NO</a> = IA_64_DISC + (0x60000000 + 42)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea2ed7fc00cb799a41dbc4944e45360c5a">IA_64_VMS_SYMVEC_OFFSET</a> = IA_64_DISC + (0x60000000 + 44)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea48c8024001c7d5350cd92dcb27b6097d">IA_64_VMS_SYMVEC_SEG</a> = IA_64_DISC + (0x60000000 + 46)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaece18fbfb751e71268ee1018d803e935">IA_64_VMS_UNWIND_OFFSET</a> = IA_64_DISC + (0x60000000 + 48)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea9b95bab2fc315be32baef1524f31ac66">IA_64_VMS_UNWIND_SEG</a> = IA_64_DISC + (0x60000000 + 50)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaf9ad7a871a0e2543b4faa3f989225e8e">IA_64_VMS_STRTAB_OFFSET</a> = IA_64_DISC + (0x60000000 + 52)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deacc1eac442e9bdf18c07ab88a3bdec99c">IA_64_VMS_SYSVER_OFFSET</a> = IA_64_DISC + (0x60000000 + 54)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaa8d63525a1686e8b72a2816bc9ff2c1a">IA_64_VMS_IMG_RELA_OFF</a> = IA_64_DISC + (0x60000000 + 56)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dead6465e7c2ac3e68f32d746a2c0271a9a">IA_64_VMS_SEG_RELA_OFF</a> = IA_64_DISC + (0x60000000 + 58)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dead96d9df80aae266f342cc1acbf6dc8a1">IA_64_VMS_FIXUP_RELA_OFF</a> = IA_64_DISC + (0x60000000 + 60)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961dea7edc54201e8fcbda4010a257a9723222">IA_64_VMS_PLTGOT_OFFSET</a> = IA_64_DISC + (0x60000000 + 62)
+, <a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deaf07e7f1d7b98fc7b4cf83f15e6c1bc96">IA_64_VMS_PLTGOT_SEG</a> = IA_64_DISC + (0x60000000 + 64)
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a24bed30c51ea8b4ef9d31c18160961deae22b034d0141b704982d3cb6cd204348">IA_64_VMS_FPMODE</a> = IA_64_DISC + (0x60000000 + 66)
 <br />
  }</td></tr>
 <tr class="separator:a24bed30c51ea8b4ef9d31c18160961de inherit pub_types_classLIEF_1_1ELF_1_1DynamicEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -468,6 +507,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a756b7b4ae8456e041dee33d1f857d3d8 inherit pub_static_attribs_classLIEF_1_1ELF_1_1DynamicEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af742f858f0165470c1f0b753ea1cd230 inherit pub_static_attribs_classLIEF_1_1ELF_1_1DynamicEntry" id="r_af742f858f0165470c1f0b753ea1cd230"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#af742f858f0165470c1f0b753ea1cd230">X86_64_DISC</a> = 0x700000000</td></tr>
 <tr class="separator:af742f858f0165470c1f0b753ea1cd230 inherit pub_static_attribs_classLIEF_1_1ELF_1_1DynamicEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001963a60404f12bf9d9157a6016b912 inherit pub_static_attribs_classLIEF_1_1ELF_1_1DynamicEntry" id="r_a001963a60404f12bf9d9157a6016b912"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1ELF_1_1DynamicEntry.html#a001963a60404f12bf9d9157a6016b912">IA_64_DISC</a> = 0x800000000</td></tr>
+<tr class="separator:a001963a60404f12bf9d9157a6016b912 inherit pub_static_attribs_classLIEF_1_1ELF_1_1DynamicEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a436a6d76dfc9e11621510820379f8022" name="a436a6d76dfc9e11621510820379f8022"></a>

@@ -18,7 +18,8 @@ var searchData=
   ['initial_5frelative_5fss_15',['initial_relative_ss',['../structPe__DosHeader__t.html#a3d5a133e02322b64c146e2a61c278b0b',1,'Pe_DosHeader_t']]],
   ['initial_5fsp_16',['initial_sp',['../structPe__DosHeader__t.html#ac533021689aab34e4dd61c25f65880f1',1,'Pe_DosHeader_t']]],
   ['interpreter_17',['interpreter',['../structElf__Binary__t.html#a9426da861b49ec60f95949a7ed6f361c',1,'Elf_Binary_t::interpreter'],['../structLIEF_1_1ELF_1_1Builder_1_1config__t.html#ac2251ea28fd937d02576852a8aa0bfbf',1,'LIEF::ELF::Builder::config_t::interpreter']]],
-  ['is_5fexported_18',['is_exported',['../structElf__Symbol__t.html#adef9075f9d3da985e4dd244f2818e237',1,'Elf_Symbol_t']]],
-  ['is_5fimported_19',['is_imported',['../structElf__Symbol__t.html#a63a5120f852cd3973d1cc94472552d1a',1,'Elf_Symbol_t']]],
-  ['is_5fordinal_20',['is_ordinal',['../structPe__ImportEntry__t.html#adaa3d1932e7fa6b937d2f077f6b99d6f',1,'Pe_ImportEntry_t']]]
+  ['is_5fauth_18',['is_auth',['../structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__kernel__cache__rebase__t.html#aa7b03891fac60ddbce16e3a1b073124c',1,'LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_64_kernel_cache_rebase_t']]],
+  ['is_5fexported_19',['is_exported',['../structElf__Symbol__t.html#adef9075f9d3da985e4dd244f2818e237',1,'Elf_Symbol_t']]],
+  ['is_5fimported_20',['is_imported',['../structElf__Symbol__t.html#a63a5120f852cd3973d1cc94472552d1a',1,'Elf_Symbol_t']]],
+  ['is_5fordinal_21',['is_ordinal',['../structPe__ImportEntry__t.html#adaa3d1932e7fa6b937d2f077f6b99d6f',1,'Pe_ImportEntry_t']]]
 ];
