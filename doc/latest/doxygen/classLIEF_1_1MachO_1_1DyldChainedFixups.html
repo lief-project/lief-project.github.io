@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -223,7 +223,9 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a2bfb0c26b5242030337116bef725445f">DYLD_EXPORTS_TRIE</a> = 0x80000033u
 , <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a43421aa3f39ed767ac14308f083fec09">DYLD_CHAINED_FIXUPS</a> = 0x80000034u
 , <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1abb5507cbd8f714f00428e09c76c72787">FILESET_ENTRY</a> = 0x80000035u
-, <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a6acb7808b348218dec2274b1382a33fb">LIEF_UNKNOWN</a> = 0xffee0001u
+, <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a336e12fbb309dcdd0adae25d7b68e3ae">ATOM_INFO</a> = 0x00000036u
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a6acb7808b348218dec2274b1382a33fb">LIEF_UNKNOWN</a> = 0xffee0001u
 <br />
  }</td></tr>
 <tr class="separator:ae233a759e54dbc70715dcfb6465637b1 inherit pub_types_classLIEF_1_1MachO_1_1LoadCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,6 +308,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaaf5abc54e02a6bd1a1ef380d623beac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e016437d1c4913a37e55210cd7880a" id="r_ab1e016437d1c4913a37e55210cd7880a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1e016437d1c4913a37e55210cd7880a">imports_format</a> (<a class="el" href="namespaceLIEF_1_1MachO.html#a149380ab7a475a5054569ea7b227ac19">DYLD_CHAINED_FORMAT</a> fmt)</td></tr>
 <tr class="separator:ab1e016437d1c4913a37e55210cd7880a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b788d95f14975be5a24b99ca18939a5" id="r_a5b788d95f14975be5a24b99ca18939a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment.html">chained_starts_in_segment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b788d95f14975be5a24b99ca18939a5">add</a> (<a class="el" href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment.html">chained_starts_in_segment</a> start_info)</td></tr>
+<tr class="separator:a5b788d95f14975be5a24b99ca18939a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaee77b1dec7c51ddf5c244846853db7" id="r_abaee77b1dec7c51ddf5c244846853db7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaee77b1dec7c51ddf5c244846853db7">accept</a> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
 <tr class="separator:abaee77b1dec7c51ddf5c244846853db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5c3b2be4ac1e600b6f488981de49b85" id="r_ad5c3b2be4ac1e600b6f488981de49b85"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5c3b2be4ac1e600b6f488981de49b85">print</a> (std::ostream &amp;os) const override</td></tr>
@@ -566,6 +570,31 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classLIEF_1_1Object.html#a117a59566f66ec953de6bef4526f98b2">LIEF::Object</a>.</p>
+
+</div>
+</div>
+<a id="a5b788d95f14975be5a24b99ca18939a5" name="a5b788d95f14975be5a24b99ca18939a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b788d95f14975be5a24b99ca18939a5">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment.html">chained_starts_in_segment</a> &amp; LIEF::MachO::DyldChainedFixups::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLIEF_1_1MachO_1_1DyldChainedFixups_1_1chained__starts__in__segment.html">chained_starts_in_segment</a></td>          <td class="paramname"><span class="paramname"><em>start_info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
