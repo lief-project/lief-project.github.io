@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -136,18 +136,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab8e320bd252f401114d722df229db37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6faf2c34d7f945e85272e710b33fa03c" id="r_a6faf2c34d7f945e85272e710b33fa03c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6faf2c34d7f945e85272e710b33fa03c">ExportEntry</a> (uint32_t <a class="el" href="#a51908c0071b666cde430ff036a52c2d9">address</a>, bool <a class="el" href="#a4cfbd6580f2c88afed1ff51cfcebb0d3">is_extern</a>, uint16_t <a class="el" href="#a9a7e485f7dec7fd644bc55a29c5952e5">ordinal</a>, uint32_t <a class="el" href="#ab40eb4a251adf05d9a890cefffa0da8c">function_rva</a>)</td></tr>
 <tr class="separator:a6faf2c34d7f945e85272e710b33fa03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6880dc21c90af62455fc2e16958f5991" id="r_a6880dc21c90af62455fc2e16958f5991"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6880dc21c90af62455fc2e16958f5991">ExportEntry</a> (std::string <a class="el" href="classLIEF_1_1Symbol.html#af77d34a7aec38f1dea4f9a3c448775a0">name</a>, uint32_t rva)</td></tr>
+<tr class="separator:a6880dc21c90af62455fc2e16958f5991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b6da4b78b14cc1b73c910874a05b1f5" id="r_a8b6da4b78b14cc1b73c910874a05b1f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b6da4b78b14cc1b73c910874a05b1f5">ExportEntry</a> (const <a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;)=default</td></tr>
 <tr class="separator:a8b6da4b78b14cc1b73c910874a05b1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a685037f0545c8c0c9190922705501a" id="r_a0a685037f0545c8c0c9190922705501a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a685037f0545c8c0c9190922705501a">operator=</a> (const <a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;)=default</td></tr>
 <tr class="separator:a0a685037f0545c8c0c9190922705501a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1307e184989e68b186f3a76fc971fb8c" id="r_a1307e184989e68b186f3a76fc971fb8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1307e184989e68b186f3a76fc971fb8c">ExportEntry</a> (<a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a1307e184989e68b186f3a76fc971fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a299aa02f3b9559f972b1d2d22da07ab5" id="r_a299aa02f3b9559f972b1d2d22da07ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a299aa02f3b9559f972b1d2d22da07ab5">operator=</a> (<a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a299aa02f3b9559f972b1d2d22da07ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95526d5708f9737e0f744f8906e83c67" id="r_a95526d5708f9737e0f744f8906e83c67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95526d5708f9737e0f744f8906e83c67">~ExportEntry</a> () override=default</td></tr>
 <tr class="separator:a95526d5708f9737e0f744f8906e83c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeb190bcb893ee1c10b1a790a1ecf4da" id="r_adeb190bcb893ee1c10b1a790a1ecf4da"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb190bcb893ee1c10b1a790a1ecf4da">demangled_name</a> () const</td></tr>
 <tr class="memdesc:adeb190bcb893ee1c10b1a790a1ecf4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangled representation of the symbol or an empty string if it can't be demangled.  <br /></td></tr>
 <tr class="separator:adeb190bcb893ee1c10b1a790a1ecf4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7e485f7dec7fd644bc55a29c5952e5" id="r_a9a7e485f7dec7fd644bc55a29c5952e5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a7e485f7dec7fd644bc55a29c5952e5">ordinal</a> () const</td></tr>
+<tr class="memdesc:a9a7e485f7dec7fd644bc55a29c5952e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordinal value associated with this exported entry.  <br /></td></tr>
 <tr class="separator:a9a7e485f7dec7fd644bc55a29c5952e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51908c0071b666cde430ff036a52c2d9" id="r_a51908c0071b666cde430ff036a52c2d9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51908c0071b666cde430ff036a52c2d9">address</a> () const</td></tr>
+<tr class="memdesc:a51908c0071b666cde430ff036a52c2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the current exported function in the DLL.  <br /></td></tr>
 <tr class="separator:a51908c0071b666cde430ff036a52c2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cfbd6580f2c88afed1ff51cfcebb0d3" id="r_a4cfbd6580f2c88afed1ff51cfcebb0d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cfbd6580f2c88afed1ff51cfcebb0d3">is_extern</a> () const</td></tr>
 <tr class="separator:a4cfbd6580f2c88afed1ff51cfcebb0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +192,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c7157cac307fc9fd4a78b9d314499d8 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f65d685e4acc81a3abacb850d21b59 inherit pub_methods_classLIEF_1_1Symbol" id="r_ad7f65d685e4acc81a3abacb850d21b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ad7f65d685e4acc81a3abacb850d21b59">operator=</a> (const <a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;)=default</td></tr>
 <tr class="separator:ad7f65d685e4acc81a3abacb850d21b59 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad005adf4d3d40a7f67f10f140ab63c63 inherit pub_methods_classLIEF_1_1Symbol" id="r_ad005adf4d3d40a7f67f10f140ab63c63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ad005adf4d3d40a7f67f10f140ab63c63">Symbol</a> (<a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ad005adf4d3d40a7f67f10f140ab63c63 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f022e1231a673dc28018b13a16865e inherit pub_methods_classLIEF_1_1Symbol" id="r_ac9f022e1231a673dc28018b13a16865e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ac9f022e1231a673dc28018b13a16865e">operator=</a> (<a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ac9f022e1231a673dc28018b13a16865e inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5809b17c60f7383d4f78aedc95f21e7 inherit pub_methods_classLIEF_1_1Symbol" id="r_ac5809b17c60f7383d4f78aedc95f21e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#ac5809b17c60f7383d4f78aedc95f21e7">~Symbol</a> () override=default</td></tr>
 <tr class="separator:ac5809b17c60f7383d4f78aedc95f21e7 inherit pub_methods_classLIEF_1_1Symbol"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af657ab9ededd5e0d8d49ff3a64270210 inherit pub_methods_classLIEF_1_1Symbol" id="r_af657ab9ededd5e0d8d49ff3a64270210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Symbol.html#af657ab9ededd5e0d8d49ff3a64270210">swap</a> (<a class="el" href="classLIEF_1_1Symbol.html">Symbol</a> &amp;other) noexcept</td></tr>
@@ -238,7 +250,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Class which represents a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> <a class="el" href="classLIEF_1_1PE_1_1Export.html" title="Class which represents a PE Export.">Export</a> entry (cf. <a class="el" href="classLIEF_1_1PE_1_1Export.html" title="Class which represents a PE Export.">PE::Export</a>) </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab8e320bd252f401114d722df229db37b" name="ab8e320bd252f401114d722df229db37b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8e320bd252f401114d722df229db37b">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8e320bd252f401114d722df229db37b">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +275,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a6faf2c34d7f945e85272e710b33fa03c" name="a6faf2c34d7f945e85272e710b33fa03c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6faf2c34d7f945e85272e710b33fa03c">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6faf2c34d7f945e85272e710b33fa03c">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,8 +313,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a6880dc21c90af62455fc2e16958f5991" name="a6880dc21c90af62455fc2e16958f5991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6880dc21c90af62455fc2e16958f5991">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIEF::PE::ExportEntry::ExportEntry </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>rva</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="namespaceLIEF_1_1PE.html#ad689456500a7ad0248d56b60c91e9baea6b2b497c6f5b7ab1c6d2353c781da652">LIEF::PE::LIEF</a>.</p>
+
+</div>
+</div>
 <a id="a8b6da4b78b14cc1b73c910874a05b1f5" name="a8b6da4b78b14cc1b73c910874a05b1f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b6da4b78b14cc1b73c910874a05b1f5">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6da4b78b14cc1b73c910874a05b1f5">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,6 +357,31 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">LIEF::PE::ExportEntry::ExportEntry </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1307e184989e68b186f3a76fc971fb8c" name="a1307e184989e68b186f3a76fc971fb8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1307e184989e68b186f3a76fc971fb8c">&#9670;&#160;</a></span>ExportEntry() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIEF::PE::ExportEntry::ExportEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -401,6 +469,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Address of the current exported function in the DLL. </p>
+<dl class="section warning"><dt>Warning</dt><dd>If this entry is <b>external</b> to the DLL then it returns 0 and the external address is returned by <a class="el" href="#ab40eb4a251adf05d9a890cefffa0da8c">function_rva()</a> </dd></dl>
 
 </div>
 </div>
@@ -574,7 +645,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a0a685037f0545c8c0c9190922705501a" name="a0a685037f0545c8c0c9190922705501a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a685037f0545c8c0c9190922705501a">&#9670;&#160;</a></span>operator=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a685037f0545c8c0c9190922705501a">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,6 +657,31 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp; LIEF::PE::ExportEntry::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a299aa02f3b9559f972b1d2d22da07ab5" name="a299aa02f3b9559f972b1d2d22da07ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299aa02f3b9559f972b1d2d22da07ab5">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp; LIEF::PE::ExportEntry::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1PE_1_1ExportEntry.html">ExportEntry</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -620,6 +716,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ordinal value associated with this exported entry. </p>
+<p>This value is computed as the index of this entry in the address table plus the ordinal base (<a class="el" href="classLIEF_1_1PE_1_1Export.html#a3e38b87a166568a78c81dd2bb956b859" title="The starting number for the exports. Usually this value is set to 1.">Export::ordinal_base</a>) </p>
 
 </div>
 </div>

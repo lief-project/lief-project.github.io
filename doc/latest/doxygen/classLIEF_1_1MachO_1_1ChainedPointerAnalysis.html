@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -133,27 +133,27 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a53303732931a7b55159521ed73f11fee" id="r_a53303732931a7b55159521ed73f11fee"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53303732931a7b55159521ed73f11fee">PTR_TYPE</a> { <br />
-&#160;&#160;<a class="el" href="#a53303732931a7b55159521ed73f11feea696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a> = 0
-, <a class="el" href="#a53303732931a7b55159521ed73f11feeaffc447efd79835e2e8d30aaf96447157">DYLD_CHAINED_PTR_ARM64E_REBASE</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feead0129fd6d4d58a21d9bffbd76f63f335">DYLD_CHAINED_PTR_ARM64E_BIND</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feeaa58fa7e1918d8b514fc5eb13efa2d08f">DYLD_CHAINED_PTR_ARM64E_AUTH_REBASE</a>
+<tr class="memitem:a007602b6dffe1c62a3fd584ee40eedd8" id="r_a007602b6dffe1c62a3fd584ee40eedd8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8">PTR_TYPE</a> : uint64_t { <br />
+&#160;&#160;<a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a> = 0
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8affc447efd79835e2e8d30aaf96447157">DYLD_CHAINED_PTR_ARM64E_REBASE</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8ad0129fd6d4d58a21d9bffbd76f63f335">DYLD_CHAINED_PTR_ARM64E_BIND</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8aa58fa7e1918d8b514fc5eb13efa2d08f">DYLD_CHAINED_PTR_ARM64E_AUTH_REBASE</a>
 , <br />
-&#160;&#160;<a class="el" href="#a53303732931a7b55159521ed73f11feeacde05c347462fb96812a03f7a853a6c0">DYLD_CHAINED_PTR_ARM64E_AUTH_BIND</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feea8cf000c36b1d67eb0c44590e8cc9c9f2">DYLD_CHAINED_PTR_64_REBASE</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feeaf3d281e401c9eed4788c6983986657c7">DYLD_CHAINED_PTR_ARM64E_BIND24</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feea9eaf4fae09acdfb45d2b9558e923e670">DYLD_CHAINED_PTR_ARM64E_AUTH_BIND24</a>
+&#160;&#160;<a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8acde05c347462fb96812a03f7a853a6c0">DYLD_CHAINED_PTR_ARM64E_AUTH_BIND</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a8cf000c36b1d67eb0c44590e8cc9c9f2">DYLD_CHAINED_PTR_64_REBASE</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8af3d281e401c9eed4788c6983986657c7">DYLD_CHAINED_PTR_ARM64E_BIND24</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a9eaf4fae09acdfb45d2b9558e923e670">DYLD_CHAINED_PTR_ARM64E_AUTH_BIND24</a>
 , <br />
-&#160;&#160;<a class="el" href="#a53303732931a7b55159521ed73f11feea74c2ca93c8c39acc9490fc03226f7249">DYLD_CHAINED_PTR_64_BIND</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feea2cc6f96ba6b0eef55a74345a00163f88">DYLD_CHAINED_PTR_64_KERNEL_CACHE_REBASE</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feea5b1e8f4032e42a9accd92b9f41055e6e">DYLD_CHAINED_PTR_32_REBASE</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feea57d78af1c03073931fae9a230ecbc592">DYLD_CHAINED_PTR_32_BIND</a>
+&#160;&#160;<a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a74c2ca93c8c39acc9490fc03226f7249">DYLD_CHAINED_PTR_64_BIND</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a2cc6f96ba6b0eef55a74345a00163f88">DYLD_CHAINED_PTR_64_KERNEL_CACHE_REBASE</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a5b1e8f4032e42a9accd92b9f41055e6e">DYLD_CHAINED_PTR_32_REBASE</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8a57d78af1c03073931fae9a230ecbc592">DYLD_CHAINED_PTR_32_BIND</a>
 , <br />
-&#160;&#160;<a class="el" href="#a53303732931a7b55159521ed73f11feeabd93d0adb96269d03ba2c97ebad7af07">DYLD_CHAINED_PTR_32_CACHE_REBASE</a>
-, <a class="el" href="#a53303732931a7b55159521ed73f11feead191f6fbe9a80faca6136cb388bc2e20">DYLD_CHAINED_PTR_32_FIRMWARE_REBASE</a>
+&#160;&#160;<a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8abd93d0adb96269d03ba2c97ebad7af07">DYLD_CHAINED_PTR_32_CACHE_REBASE</a>
+, <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8ad191f6fbe9a80faca6136cb388bc2e20">DYLD_CHAINED_PTR_32_FIRMWARE_REBASE</a>
 <br />
  }</td></tr>
-<tr class="separator:a53303732931a7b55159521ed73f11fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a007602b6dffe1c62a3fd584ee40eedd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -175,8 +175,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a489aa403b8dc54285d8db6c9b6e49e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4929f95f6ce5187330b4c1596ec843a5" id="r_a4929f95f6ce5187330b4c1596ec843a5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__rebase__t.html">dyld_chained_ptr_arm64e_rebase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4929f95f6ce5187330b4c1596ec843a5">dyld_chained_ptr_arm64e_rebase</a> () const</td></tr>
 <tr class="separator:a4929f95f6ce5187330b4c1596ec843a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e863c0d9fc9e6685bb71e25b3f62a01" id="r_a8e863c0d9fc9e6685bb71e25b3f62a01"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html">dyld_chained_ptr_arm64e_bind_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e863c0d9fc9e6685bb71e25b3f62a01">dyld_chained_ptr_arm64e_bind</a> () const</td></tr>
-<tr class="separator:a8e863c0d9fc9e6685bb71e25b3f62a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa869715e51320f75a7b86ac327d7a679" id="r_aa869715e51320f75a7b86ac327d7a679"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html">dyld_chained_ptr_arm64e_bind_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa869715e51320f75a7b86ac327d7a679">dyld_chained_ptr_arm64e_bind</a> () const</td></tr>
+<tr class="separator:aa869715e51320f75a7b86ac327d7a679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60ea25ad99708b657f91002154271ec0" id="r_a60ea25ad99708b657f91002154271ec0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__rebase__t.html">dyld_chained_ptr_arm64e_auth_rebase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60ea25ad99708b657f91002154271ec0">dyld_chained_ptr_arm64e_auth_rebase</a> () const</td></tr>
 <tr class="separator:a60ea25ad99708b657f91002154271ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafcc586d941ecc444097a4a1fbf11388" id="r_aafcc586d941ecc444097a4a1fbf11388"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind__t.html">dyld_chained_ptr_arm64e_auth_bind_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafcc586d941ecc444097a4a1fbf11388">dyld_chained_ptr_arm64e_auth_bind</a> () const</td></tr>
@@ -214,8 +214,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aec2646b8bb88efb9c43b64699d58aa15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a53303732931a7b55159521ed73f11fee" name="a53303732931a7b55159521ed73f11fee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53303732931a7b55159521ed73f11fee">&#9670;&#160;</a></span>PTR_TYPE</h2>
+<a id="a007602b6dffe1c62a3fd584ee40eedd8" name="a007602b6dffe1c62a3fd584ee40eedd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007602b6dffe1c62a3fd584ee40eedd8">&#9670;&#160;</a></span>PTR_TYPE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +224,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#a53303732931a7b55159521ed73f11fee">LIEF::MachO::ChainedPointerAnalysis::PTR_TYPE</a></td>
+          <td class="memname">enum class <a class="el" href="#a007602b6dffe1c62a3fd584ee40eedd8">LIEF::MachO::ChainedPointerAnalysis::PTR_TYPE</a> : uint64_t</td>
         </tr>
       </table>
   </td>
@@ -234,20 +234,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea696b031073e74bf2cb98e5ef201d4aa3" name="a53303732931a7b55159521ed73f11feea696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feeaffc447efd79835e2e8d30aaf96447157" name="a53303732931a7b55159521ed73f11feeaffc447efd79835e2e8d30aaf96447157"></a>DYLD_CHAINED_PTR_ARM64E_REBASE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feead0129fd6d4d58a21d9bffbd76f63f335" name="a53303732931a7b55159521ed73f11feead0129fd6d4d58a21d9bffbd76f63f335"></a>DYLD_CHAINED_PTR_ARM64E_BIND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feeaa58fa7e1918d8b514fc5eb13efa2d08f" name="a53303732931a7b55159521ed73f11feeaa58fa7e1918d8b514fc5eb13efa2d08f"></a>DYLD_CHAINED_PTR_ARM64E_AUTH_REBASE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feeacde05c347462fb96812a03f7a853a6c0" name="a53303732931a7b55159521ed73f11feeacde05c347462fb96812a03f7a853a6c0"></a>DYLD_CHAINED_PTR_ARM64E_AUTH_BIND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea8cf000c36b1d67eb0c44590e8cc9c9f2" name="a53303732931a7b55159521ed73f11feea8cf000c36b1d67eb0c44590e8cc9c9f2"></a>DYLD_CHAINED_PTR_64_REBASE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feeaf3d281e401c9eed4788c6983986657c7" name="a53303732931a7b55159521ed73f11feeaf3d281e401c9eed4788c6983986657c7"></a>DYLD_CHAINED_PTR_ARM64E_BIND24&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea9eaf4fae09acdfb45d2b9558e923e670" name="a53303732931a7b55159521ed73f11feea9eaf4fae09acdfb45d2b9558e923e670"></a>DYLD_CHAINED_PTR_ARM64E_AUTH_BIND24&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea74c2ca93c8c39acc9490fc03226f7249" name="a53303732931a7b55159521ed73f11feea74c2ca93c8c39acc9490fc03226f7249"></a>DYLD_CHAINED_PTR_64_BIND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea2cc6f96ba6b0eef55a74345a00163f88" name="a53303732931a7b55159521ed73f11feea2cc6f96ba6b0eef55a74345a00163f88"></a>DYLD_CHAINED_PTR_64_KERNEL_CACHE_REBASE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea5b1e8f4032e42a9accd92b9f41055e6e" name="a53303732931a7b55159521ed73f11feea5b1e8f4032e42a9accd92b9f41055e6e"></a>DYLD_CHAINED_PTR_32_REBASE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feea57d78af1c03073931fae9a230ecbc592" name="a53303732931a7b55159521ed73f11feea57d78af1c03073931fae9a230ecbc592"></a>DYLD_CHAINED_PTR_32_BIND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feeabd93d0adb96269d03ba2c97ebad7af07" name="a53303732931a7b55159521ed73f11feeabd93d0adb96269d03ba2c97ebad7af07"></a>DYLD_CHAINED_PTR_32_CACHE_REBASE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a53303732931a7b55159521ed73f11feead191f6fbe9a80faca6136cb388bc2e20" name="a53303732931a7b55159521ed73f11feead191f6fbe9a80faca6136cb388bc2e20"></a>DYLD_CHAINED_PTR_32_FIRMWARE_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a696b031073e74bf2cb98e5ef201d4aa3" name="a007602b6dffe1c62a3fd584ee40eedd8a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8affc447efd79835e2e8d30aaf96447157" name="a007602b6dffe1c62a3fd584ee40eedd8affc447efd79835e2e8d30aaf96447157"></a>DYLD_CHAINED_PTR_ARM64E_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8ad0129fd6d4d58a21d9bffbd76f63f335" name="a007602b6dffe1c62a3fd584ee40eedd8ad0129fd6d4d58a21d9bffbd76f63f335"></a>DYLD_CHAINED_PTR_ARM64E_BIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8aa58fa7e1918d8b514fc5eb13efa2d08f" name="a007602b6dffe1c62a3fd584ee40eedd8aa58fa7e1918d8b514fc5eb13efa2d08f"></a>DYLD_CHAINED_PTR_ARM64E_AUTH_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8acde05c347462fb96812a03f7a853a6c0" name="a007602b6dffe1c62a3fd584ee40eedd8acde05c347462fb96812a03f7a853a6c0"></a>DYLD_CHAINED_PTR_ARM64E_AUTH_BIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a8cf000c36b1d67eb0c44590e8cc9c9f2" name="a007602b6dffe1c62a3fd584ee40eedd8a8cf000c36b1d67eb0c44590e8cc9c9f2"></a>DYLD_CHAINED_PTR_64_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8af3d281e401c9eed4788c6983986657c7" name="a007602b6dffe1c62a3fd584ee40eedd8af3d281e401c9eed4788c6983986657c7"></a>DYLD_CHAINED_PTR_ARM64E_BIND24&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a9eaf4fae09acdfb45d2b9558e923e670" name="a007602b6dffe1c62a3fd584ee40eedd8a9eaf4fae09acdfb45d2b9558e923e670"></a>DYLD_CHAINED_PTR_ARM64E_AUTH_BIND24&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a74c2ca93c8c39acc9490fc03226f7249" name="a007602b6dffe1c62a3fd584ee40eedd8a74c2ca93c8c39acc9490fc03226f7249"></a>DYLD_CHAINED_PTR_64_BIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a2cc6f96ba6b0eef55a74345a00163f88" name="a007602b6dffe1c62a3fd584ee40eedd8a2cc6f96ba6b0eef55a74345a00163f88"></a>DYLD_CHAINED_PTR_64_KERNEL_CACHE_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a5b1e8f4032e42a9accd92b9f41055e6e" name="a007602b6dffe1c62a3fd584ee40eedd8a5b1e8f4032e42a9accd92b9f41055e6e"></a>DYLD_CHAINED_PTR_32_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8a57d78af1c03073931fae9a230ecbc592" name="a007602b6dffe1c62a3fd584ee40eedd8a57d78af1c03073931fae9a230ecbc592"></a>DYLD_CHAINED_PTR_32_BIND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8abd93d0adb96269d03ba2c97ebad7af07" name="a007602b6dffe1c62a3fd584ee40eedd8abd93d0adb96269d03ba2c97ebad7af07"></a>DYLD_CHAINED_PTR_32_CACHE_REBASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a007602b6dffe1c62a3fd584ee40eedd8ad191f6fbe9a80faca6136cb388bc2e20" name="a007602b6dffe1c62a3fd584ee40eedd8ad191f6fbe9a80faca6136cb388bc2e20"></a>DYLD_CHAINED_PTR_32_FIRMWARE_REBASE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -608,8 +608,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e863c0d9fc9e6685bb71e25b3f62a01" name="a8e863c0d9fc9e6685bb71e25b3f62a01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e863c0d9fc9e6685bb71e25b3f62a01">&#9670;&#160;</a></span>dyld_chained_ptr_arm64e_bind()</h2>
+<a id="aa869715e51320f75a7b86ac327d7a679" name="aa869715e51320f75a7b86ac327d7a679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa869715e51320f75a7b86ac327d7a679">&#9670;&#160;</a></span>dyld_chained_ptr_arm64e_bind()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,7 +618,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html">dyld_chained_ptr_arm64e_bind_t</a> &amp; LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_arm64e_bind </td>
+          <td class="memname">const <a class="el" href="structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html">dyld_chained_ptr_arm64e_bind_t</a> LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_arm64e_bind </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
