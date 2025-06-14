@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -141,6 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c0f33dec7307d7aa77197420760626c" id="r_a4c0f33dec7307d7aa77197420760626c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; uint64_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c0f33dec7307d7aa77197420760626c">callbacks</a> () const</td></tr>
 <tr class="memdesc:a4c0f33dec7307d7aa77197420760626c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the callback associated with the current <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a>.  <br /></td></tr>
 <tr class="separator:a4c0f33dec7307d7aa77197420760626c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd7a5bdff3fba84dc37e2430e2f4db7" id="r_a1cd7a5bdff3fba84dc37e2430e2f4db7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1TLS.html">TLS</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cd7a5bdff3fba84dc37e2430e2f4db7">add_callback</a> (uint64_t addr)</td></tr>
+<tr class="memdesc:a1cd7a5bdff3fba84dc37e2430e2f4db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a> callback.  <br /></td></tr>
+<tr class="separator:a1cd7a5bdff3fba84dc37e2430e2f4db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d4d223671393c58bfe902673ef5352a" id="r_a1d4d223671393c58bfe902673ef5352a"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; uint64_t, uint64_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d4d223671393c58bfe902673ef5352a">addressof_raw_data</a> () const</td></tr>
 <tr class="memdesc:a1d4d223671393c58bfe902673ef5352a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair <code>(start address, end address)</code> of the <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a> template. The template is a block of data that is used to initialize <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a> data. The system copies all of this data each time a thread is created, so it must not be corrupted.  <br /></td></tr>
 <tr class="separator:a1d4d223671393c58bfe902673ef5352a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,6 +390,33 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a1cd7a5bdff3fba84dc37e2430e2f4db7" name="a1cd7a5bdff3fba84dc37e2430e2f4db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd7a5bdff3fba84dc37e2430e2f4db7">&#9670;&#160;</a></span>add_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1TLS.html">TLS</a> &amp; LIEF::PE::TLS::add_callback </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a new <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a> callback. </p>
+
+</div>
+</div>
 <a id="a771969d7d180d7198ffd5635a9fccd44" name="a771969d7d180d7198ffd5635a9fccd44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a771969d7d180d7198ffd5635a9fccd44">&#9670;&#160;</a></span>addressof_callbacks() <span class="overload">[1/2]</span></h2>
 
@@ -411,7 +441,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to an array of <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a> callback functions. </p>
-<p>The array is null-terminated, so if there is no callback function this field points to 4 bytes set to zero. </p>
+<p>The array is null-terminated, so if there is no callback function this field points to <b>4 bytes</b> set to zero. </p>
 
 </div>
 </div>
@@ -569,7 +599,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>List of the callback associated with the current <a class="el" href="classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage.">TLS</a>. </p>
-<p>These functions are called before any other functions . </p>
+<p>These functions are called before any other functions. </p>
 
 </div>
 </div>
@@ -831,8 +861,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2a099d7d04319e5191b7473e016c55e320">LIEF::PE::TLS</a>.</p>
-
 </div>
 </div>
 <a id="ada1509600ba87e1fe20f10c49069dd8f" name="ada1509600ba87e1fe20f10c49069dd8f"></a>
@@ -857,8 +885,6 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="reference">References <a class="el" href="namespaceLIEF_1_1PE.html#a094f1b260e5a0c95e02d25ceb18894d2a099d7d04319e5191b7473e016c55e320">LIEF::PE::TLS</a>.</p>
 
 </div>
 </div>

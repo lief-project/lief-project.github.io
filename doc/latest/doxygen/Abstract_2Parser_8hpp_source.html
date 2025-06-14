@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_df0195cd2ca2e0c21745a325736f5d1b.html">lief-static-install</a></li><li class="navelem"><a class="el" href="dir_7145bacf3a7cca48a44f8485ad2b4266.html">include</a></li><li class="navelem"><a class="el" href="dir_60447c28a6dd3011785b73fb04007ce1.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_364e894de078c7e9d3f8fceab54c2725.html">Abstract</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5d06edf140ddde00de1bd5033d8f5460.html">lief-install</a></li><li class="navelem"><a class="el" href="dir_ce314a7eb6a8f053031eda14426e5e1d.html">x86_64</a></li><li class="navelem"><a class="el" href="dir_9aa033f3e5c51990121360ad2c9a694f.html">static</a></li><li class="navelem"><a class="el" href="dir_b9e4cbc5cf2689b69241baa67994bfa9.html">include</a></li><li class="navelem"><a class="el" href="dir_339e1e303b82f23c80ad9c5c62fd0438.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_a7312385aa5510cfb063c46240b718dc.html">Abstract</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Abstract/Parser.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Abstract_2Parser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="Abstract_2Parser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -136,12 +136,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassLIEF_1_1BinaryStream_html"><div class="ttname"><a href="classLIEF_1_1BinaryStream.html">LIEF::BinaryStream</a></div><div class="ttdoc">Class that is used to a read stream of data from different sources.</div><div class="ttdef"><b>Definition</b> BinaryStream.hpp:33</div></div>
-<div class="ttc" id="aclassLIEF_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1Binary.html">LIEF::Binary</a></div><div class="ttdoc">Abstract binary that exposes an uniform API for the different executable file formats.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:49</div></div>
+<div class="ttc" id="aclassLIEF_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1Binary.html">LIEF::Binary</a></div><div class="ttdoc">Abstract binary that exposes an uniform API for the different executable file formats.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:52</div></div>
 <div class="ttc" id="aclassLIEF_1_1Parser_html"><div class="ttname"><a href="classLIEF_1_1Parser.html">LIEF::Parser</a></div><div class="ttdoc">Main interface to parse an executable regardless of its format.</div><div class="ttdef"><b>Definition</b> Abstract/Parser.hpp:30</div></div>
 <div class="ttc" id="aclassLIEF_1_1Parser_html_a2e1b0c954ad9deacf27c687994d8feea"><div class="ttname"><a href="classLIEF_1_1Parser.html#a2e1b0c954ad9deacf27c687994d8feea">LIEF::Parser::parse</a></div><div class="ttdeci">static std::unique_ptr&lt; Binary &gt; parse(const std::vector&lt; uint8_t &gt; &amp;raw)</div><div class="ttdoc">Construct an LIEF::Binary from the given raw data.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Parser_html_a3c9b8a8917f7120f05342a955ddf37f2"><div class="ttname"><a href="classLIEF_1_1Parser.html#a3c9b8a8917f7120f05342a955ddf37f2">LIEF::Parser::parse</a></div><div class="ttdeci">static std::unique_ptr&lt; Binary &gt; parse(std::unique_ptr&lt; BinaryStream &gt; stream)</div><div class="ttdoc">Construct an LIEF::Binary from the given stream.</div></div>
 <div class="ttc" id="aclassLIEF_1_1Parser_html_ac73690bf348ac191a5310ba9ad370a17"><div class="ttname"><a href="classLIEF_1_1Parser.html#ac73690bf348ac191a5310ba9ad370a17">LIEF::Parser::parse</a></div><div class="ttdeci">static std::unique_ptr&lt; Binary &gt; parse(const std::string &amp;filename)</div><div class="ttdoc">Construct an LIEF::Binary from the given filename.</div></div>
-<div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
+<div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:39</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->

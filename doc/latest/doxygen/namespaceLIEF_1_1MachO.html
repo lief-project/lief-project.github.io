@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1AtomInfo.html">AtomInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which represents the LC_ATOM_INFO command.  <a href="classLIEF_1_1MachO_1_1AtomInfo.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1MachO_1_1Binary.html">Binary</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which represents a <a class="el" href="namespaceLIEF_1_1MachO.html" title="Namespace related to the LIEF&#39;s Mach-O module.">MachO</a> binary.  <a href="classLIEF_1_1MachO_1_1Binary.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,18 +307,19 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#a9c5f2df0cec49ae9876b35d69d75f451aa9f8db7ec5f43a533e4a2af2983f89d5">PTR_X86_64_KERNEL_CACHE</a> = 11
 , <a class="el" href="#a9c5f2df0cec49ae9876b35d69d75f451a4523068dd0f76995163fc008d63bda4e">PTR_ARM64E_USERLAND24</a> = 12
+, <a class="el" href="#a9c5f2df0cec49ae9876b35d69d75f451a3fa53e47981a284712fe7cb91b36948c">PTR_ARM64E_SHARED_CACHE</a> = 13
 <br />
  }</td></tr>
 <tr class="separator:a9c5f2df0cec49ae9876b35d69d75f451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e64b90420e0320b1fe1c17c914fbd2f" id="r_a5e64b90420e0320b1fe1c17c914fbd2f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2f">MACHO_TYPES</a> : uint32_t { <br />
 &#160;&#160;<a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a> = 0
-, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa9f0a6ae1c19ce4f3cb59580fa8ba3f35">MH_MAGIC</a> = 0xFEEDFACEu
-, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa9f2d25728716e48b64ea04f56b0cfcd3">MH_CIGAM</a> = 0xCEFAEDFEu
-, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2faca2aab1a1ec949169200663d9f24ba3c">MH_MAGIC_64</a> = 0xFEEDFACFu
+, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2facff42d769fc6a027224a1a20c4ab567a">MAGIC</a> = 0xFEEDFACEu
+, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fad6bcec732dfa1919de8d5ebd7d91169c">CIGAM</a> = 0xCEFAEDFEu
+, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa15681ec9000d9bc092c34b991344169f">MAGIC_64</a> = 0xFEEDFACFu
 , <br />
-&#160;&#160;<a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa083df8bc725f02afc8bcf7ca17ca58ec">MH_CIGAM_64</a> = 0xCFFAEDFEu
-, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa26578eeda18dc6b2540f16e5bcaac78b">FAT_MAGIC</a> = 0xCAFEBABEu
-, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa435a307300c92cefbb41f2c85bd71bf6">FAT_CIGAM</a> = 0xBEBAFECAu
+&#160;&#160;<a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa39ef9ee35cd314921c50d945a39ca4f9">CIGAM_64</a> = 0xCFFAEDFEu
+, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa4dff416c7fc9dd6cab7d0505120e5fd9">MAGIC_FAT</a> = 0xCAFEBABEu
+, <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa626fcdfaa5df49e1da2ea07d0253ded4">CIGAM_FAT</a> = 0xBEBAFECAu
 , <a class="el" href="#a5e64b90420e0320b1fe1c17c914fbd2fa2381a4575863642bf7b54caff46f4624">NEURAL_MODEL</a> = 0xbeeffaceu
 <br />
  }</td></tr>
@@ -686,6 +690,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a9c5f2df0cec49ae9876b35d69d75f451a94a9c0e2b2e44fedaa28c00d0ae30f2e" name="a9c5f2df0cec49ae9876b35d69d75f451a94a9c0e2b2e44fedaa28c00d0ae30f2e"></a>PTR_ARM64E_FIRMWARE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9c5f2df0cec49ae9876b35d69d75f451aa9f8db7ec5f43a533e4a2af2983f89d5" name="a9c5f2df0cec49ae9876b35d69d75f451aa9f8db7ec5f43a533e4a2af2983f89d5"></a>PTR_X86_64_KERNEL_CACHE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9c5f2df0cec49ae9876b35d69d75f451a4523068dd0f76995163fc008d63bda4e" name="a9c5f2df0cec49ae9876b35d69d75f451a4523068dd0f76995163fc008d63bda4e"></a>PTR_ARM64E_USERLAND24&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9c5f2df0cec49ae9876b35d69d75f451a3fa53e47981a284712fe7cb91b36948c" name="a9c5f2df0cec49ae9876b35d69d75f451a3fa53e47981a284712fe7cb91b36948c"></a>PTR_ARM64E_SHARED_CACHE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -711,17 +716,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa696b031073e74bf2cb98e5ef201d4aa3" name="a5e64b90420e0320b1fe1c17c914fbd2fa696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa9f0a6ae1c19ce4f3cb59580fa8ba3f35" name="a5e64b90420e0320b1fe1c17c914fbd2fa9f0a6ae1c19ce4f3cb59580fa8ba3f35"></a>MH_MAGIC&#160;</td><td class="fielddoc"><p>32-bit big-endian magic </p>
+<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2facff42d769fc6a027224a1a20c4ab567a" name="a5e64b90420e0320b1fe1c17c914fbd2facff42d769fc6a027224a1a20c4ab567a"></a>MAGIC&#160;</td><td class="fielddoc"><p>32-bit big-endian magic </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa9f2d25728716e48b64ea04f56b0cfcd3" name="a5e64b90420e0320b1fe1c17c914fbd2fa9f2d25728716e48b64ea04f56b0cfcd3"></a>MH_CIGAM&#160;</td><td class="fielddoc"><p>32-bit little-endian magic </p>
+<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fad6bcec732dfa1919de8d5ebd7d91169c" name="a5e64b90420e0320b1fe1c17c914fbd2fad6bcec732dfa1919de8d5ebd7d91169c"></a>CIGAM&#160;</td><td class="fielddoc"><p>32-bit little-endian magic </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2faca2aab1a1ec949169200663d9f24ba3c" name="a5e64b90420e0320b1fe1c17c914fbd2faca2aab1a1ec949169200663d9f24ba3c"></a>MH_MAGIC_64&#160;</td><td class="fielddoc"><p>64-bit big-endian magic </p>
+<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa15681ec9000d9bc092c34b991344169f" name="a5e64b90420e0320b1fe1c17c914fbd2fa15681ec9000d9bc092c34b991344169f"></a>MAGIC_64&#160;</td><td class="fielddoc"><p>64-bit big-endian magic </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa083df8bc725f02afc8bcf7ca17ca58ec" name="a5e64b90420e0320b1fe1c17c914fbd2fa083df8bc725f02afc8bcf7ca17ca58ec"></a>MH_CIGAM_64&#160;</td><td class="fielddoc"><p>64-bit little-endian magic </p>
+<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa39ef9ee35cd314921c50d945a39ca4f9" name="a5e64b90420e0320b1fe1c17c914fbd2fa39ef9ee35cd314921c50d945a39ca4f9"></a>CIGAM_64&#160;</td><td class="fielddoc"><p>64-bit little-endian magic </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa26578eeda18dc6b2540f16e5bcaac78b" name="a5e64b90420e0320b1fe1c17c914fbd2fa26578eeda18dc6b2540f16e5bcaac78b"></a>FAT_MAGIC&#160;</td><td class="fielddoc"><p>big-endian fat magic </p>
+<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa4dff416c7fc9dd6cab7d0505120e5fd9" name="a5e64b90420e0320b1fe1c17c914fbd2fa4dff416c7fc9dd6cab7d0505120e5fd9"></a>MAGIC_FAT&#160;</td><td class="fielddoc"><p>big-endian fat magic </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa435a307300c92cefbb41f2c85bd71bf6" name="a5e64b90420e0320b1fe1c17c914fbd2fa435a307300c92cefbb41f2c85bd71bf6"></a>FAT_CIGAM&#160;</td><td class="fielddoc"><p>little-endian fat magic </p>
+<tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa626fcdfaa5df49e1da2ea07d0253ded4" name="a5e64b90420e0320b1fe1c17c914fbd2fa626fcdfaa5df49e1da2ea07d0253ded4"></a>CIGAM_FAT&#160;</td><td class="fielddoc"><p>little-endian fat magic </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e64b90420e0320b1fe1c17c914fbd2fa2381a4575863642bf7b54caff46f4624" name="a5e64b90420e0320b1fe1c17c914fbd2fa2381a4575863642bf7b54caff46f4624"></a>NEURAL_MODEL&#160;</td><td class="fielddoc"></td></tr>
 </table>

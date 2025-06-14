@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_df0195cd2ca2e0c21745a325736f5d1b.html">lief-static-install</a></li><li class="navelem"><a class="el" href="dir_7145bacf3a7cca48a44f8485ad2b4266.html">include</a></li><li class="navelem"><a class="el" href="dir_60447c28a6dd3011785b73fb04007ce1.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_1551c3e172b518607acf61d7aa2a1cdf.html">MachO</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5d06edf140ddde00de1bd5033d8f5460.html">lief-install</a></li><li class="navelem"><a class="el" href="dir_ce314a7eb6a8f053031eda14426e5e1d.html">x86_64</a></li><li class="navelem"><a class="el" href="dir_9aa033f3e5c51990121360ad2c9a694f.html">static</a></li><li class="navelem"><a class="el" href="dir_b9e4cbc5cf2689b69241baa67994bfa9.html">include</a></li><li class="navelem"><a class="el" href="dir_339e1e303b82f23c80ad9c5c62fd0438.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_f9ab10b8228506b5df85b12982163bee.html">MachO</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">MachO/Section.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="MachO_2Section_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="MachO_2Section_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -154,8 +154,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a820ead78f0fa32544c7ba38fe7ff53d9">   68</a></span>    REGULAR                             = 0x00u, </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a2ebdc44efd75676945954a615d67408c">   69</a></span>    ZEROFILL                            = 0x01u, </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325af73d5c1409dc15adade26f5c7fe16234">   70</a></span>    CSTRING_LITERALS                    = 0x02u, </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a656a359eb90c4a2bca320a8b96a106ae">   71</a></span>    S_4BYTE_LITERALS                    = 0x03u, </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a84de9077979b3557da5d6ad4e5888ffe">   72</a></span>    S_8BYTE_LITERALS                    = 0x04u, </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a1d563e01d24a72ae46b334de6c833f91">   71</a></span>    IS_4BYTE_LITERALS                    = 0x03u, </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a9fdd3db47d03ed781dc9880d78f04064">   72</a></span>    IS_8BYTE_LITERALS                    = 0x04u, </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a3dab854aa3c15514a693eb12886e323a">   73</a></span>    LITERAL_POINTERS                    = 0x05u, </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a696a37946204913d4016a995b7fa07e5">   74</a></span>    NON_LAZY_SYMBOL_POINTERS            = 0x06u, </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a1cdc0f0c9077e65145264e02d4d579e7">   75</a></span>    LAZY_SYMBOL_POINTERS                = 0x07u, </div>
@@ -165,7 +165,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a9dd9ec1f9ee19a3a04a680db79019ba2">   79</a></span>    COALESCED                           = 0x0bu, </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a4e3d3cec9aa47f3fa5bdd88c795cac81">   80</a></span>    GB_ZEROFILL                         = 0x0cu, </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325aa42bbb9ad90bbc111b71c4473c72a526">   81</a></span>    INTERPOSING                         = 0x0du, </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a9d87495a263a1419db13f3a61e1c6975">   82</a></span>    S_16BYTE_LITERALS                   = 0x0eu, </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325adb4e97cc413e2c34d687deb0ed803c5f">   82</a></span>    IS_16BYTE_LITERALS                   = 0x0eu, </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325af842901821b4af16ba76c71c68f7018e">   83</a></span>    DTRACE_DOF                          = 0x0fu, </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325a20d7fa87bbc085061804b0835d588f33">   84</a></span>    LAZY_DYLIB_SYMBOL_POINTERS          = 0x10u, </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classLIEF_1_1MachO_1_1Section.html#acab865f363d8ce9cd5444d2098510325aa5ea88ed8f42fb2462668195b02fee4a">   85</a></span>    THREAD_LOCAL_REGULAR                = 0x11u, </div>
@@ -370,8 +370,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="structEnableBitMaskOperators.html#a52019c4d4e26ca23c2d78b87a3228cd4">  301</a></span><a class="code hl_define" href="enums_8hpp.html#aace24b3da790a5293909a3728355c50f">ENABLE_BITMASK_OPERATORS</a>(<a class="code hl_enumeration" href="classLIEF_1_1MachO_1_1Section.html#aa38bb45cc5f893c97bdf65aa6acd95c1">LIEF::MachO::Section::FLAGS</a>)</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aAbstract_2Section_8hpp_html"><div class="ttname"><a href="Abstract_2Section_8hpp.html">Section.hpp</a></div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1BinaryParser_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1BinaryParser.html">LIEF::MachO::BinaryParser</a></div><div class="ttdoc">Class used to parse a single binary (i.e. non-FAT)</div><div class="ttdef"><b>Definition</b> BinaryParser.hpp:74</div></div>
-<div class="ttc" id="aclassLIEF_1_1MachO_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Binary.html">LIEF::MachO::Binary</a></div><div class="ttdoc">Class which represents a MachO binary.</div><div class="ttdef"><b>Definition</b> MachO/Binary.hpp:85</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1BinaryParser_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1BinaryParser.html">LIEF::MachO::BinaryParser</a></div><div class="ttdoc">Class used to parse a single binary (i.e. non-FAT)</div><div class="ttdef"><b>Definition</b> BinaryParser.hpp:75</div></div>
+<div class="ttc" id="aclassLIEF_1_1MachO_1_1Binary_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Binary.html">LIEF::MachO::Binary</a></div><div class="ttdoc">Class which represents a MachO binary.</div><div class="ttdef"><b>Definition</b> MachO/Binary.hpp:86</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1Relocation_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Relocation.html">LIEF::MachO::Relocation</a></div><div class="ttdoc">Class that represents a Mach-O relocation.</div><div class="ttdef"><b>Definition</b> MachO/Relocation.hpp:40</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1Section_html"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Section.html">LIEF::MachO::Section</a></div><div class="ttdoc">Class that represents a Mach-O section.</div><div class="ttdef"><b>Definition</b> MachO/Section.hpp:46</div></div>
 <div class="ttc" id="aclassLIEF_1_1MachO_1_1Section_html_a019e189016ce7d493780771d9996deb5"><div class="ttname"><a href="classLIEF_1_1MachO_1_1Section.html#a019e189016ce7d493780771d9996deb5">LIEF::MachO::Section::content</a></div><div class="ttdeci">span&lt; const uint8_t &gt; content() const override</div><div class="ttdoc">section&#39;s content</div></div>
@@ -432,8 +432,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespaceLIEF_1_1MachO_1_1details_html"><div class="ttname"><a href="namespaceLIEF_1_1MachO_1_1details.html">LIEF::MachO::details</a></div><div class="ttdef"><b>Definition</b> endianness_support.hpp:59</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1MachO_html"><div class="ttname"><a href="namespaceLIEF_1_1MachO.html">LIEF::MachO</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s Mach-O module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:36</div></div>
 <div class="ttc" id="anamespaceLIEF_1_1MachO_html_ac401f67039795b7df103b52dd7834b54"><div class="ttname"><a href="namespaceLIEF_1_1MachO.html#ac401f67039795b7df103b52dd7834b54">LIEF::MachO::to_string</a></div><div class="ttdeci">const char * to_string(BuildToolVersion::TOOLS tool)</div></div>
-<div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
-<div class="ttc" id="anamespaceLIEF_html_a17dd2c8831ebf7cd7e134f30d9365579"><div class="ttname"><a href="namespaceLIEF.html#a17dd2c8831ebf7cd7e134f30d9365579">LIEF::align</a></div><div class="ttdeci">uint64_t align(uint64_t value, uint64_t align_on)</div><div class="ttdef"><b>Definition</b> utils.hpp:25</div></div>
+<div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:39</div></div>
+<div class="ttc" id="anamespaceLIEF_html_a17dd2c8831ebf7cd7e134f30d9365579"><div class="ttname"><a href="namespaceLIEF.html#a17dd2c8831ebf7cd7e134f30d9365579">LIEF::align</a></div><div class="ttdeci">uint64_t align(uint64_t value, uint64_t align_on)</div><div class="ttdef"><b>Definition</b> utils.hpp:28</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>
 <div class="ttc" id="avisibility_8h_html_a124223db120f189558659cd2a78e9e95"><div class="ttname"><a href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a></div><div class="ttdeci">#define LIEF_API</div><div class="ttdef"><b>Definition</b> visibility.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
