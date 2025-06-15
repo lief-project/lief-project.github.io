@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -165,6 +165,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad0596df44aaa56148d479fce7304d757" id="r_ad0596df44aaa56148d479fce7304d757"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0596df44aaa56148d479fce7304d757">guid</a> () const</td></tr>
 <tr class="memdesc:ad0596df44aaa56148d479fce7304d757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier of the PDB file.  <br /></td></tr>
 <tr class="separator:ad0596df44aaa56148d479fce7304d757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0608cc25ce06736aedc5fb6a252bcbe9" id="r_a0608cc25ce06736aedc5fb6a252bcbe9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0608cc25ce06736aedc5fb6a252bcbe9">to_string</a> () const</td></tr>
+<tr class="memdesc:a0608cc25ce06736aedc5fb6a252bcbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretty representation.  <br /></td></tr>
+<tr class="separator:a0608cc25ce06736aedc5fb6a252bcbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f34492126e0a03881647d67f0e1e5e7" id="r_a1f34492126e0a03881647d67f0e1e5e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f34492126e0a03881647d67f0e1e5e7">~DebugInfo</a> () override=default</td></tr>
 <tr class="separator:a1f34492126e0a03881647d67f0e1e5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c5e2dde22fba4f3d1b32bd525b49b52" id="r_a0c5e2dde22fba4f3d1b32bd525b49b52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c5e2dde22fba4f3d1b32bd525b49b52">DebugInfo</a> (std::unique_ptr&lt; details::DebugInfo &gt; impl)</td></tr>
@@ -484,6 +487,27 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return an iterator over the public symbol stream. </p>
+
+</div>
+</div>
+<a id="a0608cc25ce06736aedc5fb6a252bcbe9" name="a0608cc25ce06736aedc5fb6a252bcbe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0608cc25ce06736aedc5fb6a252bcbe9">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LIEF::pdb::DebugInfo::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pretty representation. </p>
+
+<p class="reference">Referenced by <a class="el" href="#a57c4b61da0287086b2a851d8336a0326">operator&lt;&lt;</a>.</p>
 
 </div>
 </div>
