@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_df0195cd2ca2e0c21745a325736f5d1b.html">lief-static-install</a></li><li class="navelem"><a class="el" href="dir_7145bacf3a7cca48a44f8485ad2b4266.html">include</a></li><li class="navelem"><a class="el" href="dir_60447c28a6dd3011785b73fb04007ce1.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_54caa9a71571e3c5ff6405f6b9bcbc5b.html">ELF</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5d06edf140ddde00de1bd5033d8f5460.html">lief-install</a></li><li class="navelem"><a class="el" href="dir_ce314a7eb6a8f053031eda14426e5e1d.html">x86_64</a></li><li class="navelem"><a class="el" href="dir_9aa033f3e5c51990121360ad2c9a694f.html">static</a></li><li class="navelem"><a class="el" href="dir_b9e4cbc5cf2689b69241baa67994bfa9.html">include</a></li><li class="navelem"><a class="el" href="dir_339e1e303b82f23c80ad9c5c62fd0438.html">LIEF</a></li><li class="navelem"><a class="el" href="dir_ba946b25974056fdd52071b75dd5d5ae.html">ELF</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -91,8 +91,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ELF/ParserConfig.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ELF_2ParserConfig_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2024 R. Thomas</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2024 Quarkslab</span></div>
+<a href="ELF_2ParserConfig_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2017 - 2025 R. Thomas</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2017 - 2025 Quarkslab</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
@@ -115,7 +115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLIEF_1_1ELF.html">ELF</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">struct </span><a class="code hl_define" href="visibility_8h.html#a124223db120f189558659cd2a78e9e95">LIEF_API</a> <a class="code hl_struct" href="structLIEF_1_1ELF_1_1ParserConfig.html">ParserConfig</a> {</div>
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#ace7257c7907f80d47e293b69349c4d4c">   28</a></span>  <span class="keyword">enum class</span> DYNSYM_COUNT  {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#ace7257c7907f80d47e293b69349c4d4c">   28</a></span>  <span class="keyword">enum class</span> DYNSYM_COUNT {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#ace7257c7907f80d47e293b69349c4d4cae1f2d5134ed2543d38a0de9751cf75d9">   29</a></span>    AUTO        = 0, </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#ace7257c7907f80d47e293b69349c4d4ca3d0d6f3b89d94934de83ca41b85e6ce4">   30</a></span>    SECTION     = 1, </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#ace7257c7907f80d47e293b69349c4d4ca50b7748612b28db487d115f220bb77ab">   31</a></span>    HASH        = 2, </div>
@@ -136,15 +136,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#a8908c03f6b362d160b763406379f1dea">   47</a></span>  <span class="keywordtype">bool</span> parse_overlay         = <span class="keyword">true</span>; </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structLIEF_1_1ELF_1_1ParserConfig.html#a634738c6e56e6302c5f3efcac64fac10">   50</a></span>  DYNSYM_COUNT count_mtd = DYNSYM_COUNT::AUTO;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  uint64_t page_size = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aELF_2enums_8hpp_html"><div class="ttname"><a href="ELF_2enums_8hpp.html">enums.hpp</a></div></div>
 <div class="ttc" id="anamespaceLIEF_1_1ELF_html"><div class="ttname"><a href="namespaceLIEF_1_1ELF.html">LIEF::ELF</a></div><div class="ttdoc">Namespace related to the LIEF&#39;s ELF module.</div><div class="ttdef"><b>Definition</b> Abstract/Header.hpp:28</div></div>
-<div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:36</div></div>
+<div class="ttc" id="anamespaceLIEF_html"><div class="ttname"><a href="namespaceLIEF.html">LIEF</a></div><div class="ttdoc">LIEF namespace.</div><div class="ttdef"><b>Definition</b> Abstract/Binary.hpp:39</div></div>
 <div class="ttc" id="astructLIEF_1_1ELF_1_1ParserConfig_html"><div class="ttname"><a href="structLIEF_1_1ELF_1_1ParserConfig.html">LIEF::ELF::ParserConfig</a></div><div class="ttdoc">This structure is used to tweak the ELF Parser (ELF::Parser)</div><div class="ttdef"><b>Definition</b> ELF/ParserConfig.hpp:25</div></div>
 <div class="ttc" id="astructLIEF_1_1ELF_1_1ParserConfig_html_ade6751a2aef08fe397758d851007acb5"><div class="ttname"><a href="structLIEF_1_1ELF_1_1ParserConfig.html#ade6751a2aef08fe397758d851007acb5">LIEF::ELF::ParserConfig::all</a></div><div class="ttdeci">static ParserConfig all()</div><div class="ttdoc">This returns a ParserConfig object configured to process all the ELF elements.</div><div class="ttdef"><b>Definition</b> ELF/ParserConfig.hpp:37</div></div>
 <div class="ttc" id="avisibility_8h_html"><div class="ttname"><a href="visibility_8h.html">visibility.h</a></div></div>

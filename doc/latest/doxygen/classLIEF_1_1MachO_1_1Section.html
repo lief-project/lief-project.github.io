@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -132,9 +132,9 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="#acab865f363d8ce9cd5444d2098510325a820ead78f0fa32544c7ba38fe7ff53d9">REGULAR</a> = 0x00u
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325a2ebdc44efd75676945954a615d67408c">ZEROFILL</a> = 0x01u
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325af73d5c1409dc15adade26f5c7fe16234">CSTRING_LITERALS</a> = 0x02u
-, <a class="el" href="#acab865f363d8ce9cd5444d2098510325a656a359eb90c4a2bca320a8b96a106ae">S_4BYTE_LITERALS</a> = 0x03u
+, <a class="el" href="#acab865f363d8ce9cd5444d2098510325a1d563e01d24a72ae46b334de6c833f91">IS_4BYTE_LITERALS</a> = 0x03u
 , <br />
-&#160;&#160;<a class="el" href="#acab865f363d8ce9cd5444d2098510325a84de9077979b3557da5d6ad4e5888ffe">S_8BYTE_LITERALS</a> = 0x04u
+&#160;&#160;<a class="el" href="#acab865f363d8ce9cd5444d2098510325a9fdd3db47d03ed781dc9880d78f04064">IS_8BYTE_LITERALS</a> = 0x04u
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325a3dab854aa3c15514a693eb12886e323a">LITERAL_POINTERS</a> = 0x05u
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325a696a37946204913d4016a995b7fa07e5">NON_LAZY_SYMBOL_POINTERS</a> = 0x06u
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325a1cdc0f0c9077e65145264e02d4d579e7">LAZY_SYMBOL_POINTERS</a> = 0x07u
@@ -146,7 +146,7 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#acab865f363d8ce9cd5444d2098510325a4e3d3cec9aa47f3fa5bdd88c795cac81">GB_ZEROFILL</a> = 0x0cu
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325aa42bbb9ad90bbc111b71c4473c72a526">INTERPOSING</a> = 0x0du
-, <a class="el" href="#acab865f363d8ce9cd5444d2098510325a9d87495a263a1419db13f3a61e1c6975">S_16BYTE_LITERALS</a> = 0x0eu
+, <a class="el" href="#acab865f363d8ce9cd5444d2098510325adb4e97cc413e2c34d687deb0ed803c5f">IS_16BYTE_LITERALS</a> = 0x0eu
 , <a class="el" href="#acab865f363d8ce9cd5444d2098510325af842901821b4af16ba76c71c68f7018e">DTRACE_DOF</a> = 0x0fu
 , <br />
 &#160;&#160;<a class="el" href="#acab865f363d8ce9cd5444d2098510325a20d7fa87bbc085061804b0835d588f33">LAZY_DYLIB_SYMBOL_POINTERS</a> = 0x10u
@@ -240,7 +240,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afdbea2af4e8cbc4f144649cbad3cedd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a>'s flags masked with SECTION_FLAGS_MASK (see: <a class="el" href="#aa38bb45cc5f893c97bdf65aa6acd95c1">Section::FLAGS</a>)  <br /></td></tr>
 <tr class="separator:afdbea2af4e8cbc4f144649cbad3cedd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5ccf7aec62d98b0449b81990ffbd440" id="r_ab5ccf7aec62d98b0449b81990ffbd440"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#acab865f363d8ce9cd5444d2098510325">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5ccf7aec62d98b0449b81990ffbd440">type</a> () const</td></tr>
-<tr class="memdesc:ab5ccf7aec62d98b0449b81990ffbd440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the section. This value can help to determine the purpose of the section (e.g. MACHO_SECTION_TYPES::MACHO_SECTION_TYPES)  <br /></td></tr>
+<tr class="memdesc:ab5ccf7aec62d98b0449b81990ffbd440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the section. This value can help to determine the purpose of the section (e.g. <a class="el" href="#acab865f363d8ce9cd5444d2098510325aa42bbb9ad90bbc111b71c4473c72a526" title="Section with only pairs of function pointers for interposing.">TYPE::INTERPOSING</a>)  <br /></td></tr>
 <tr class="separator:ab5ccf7aec62d98b0449b81990ffbd440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ff1909fab13692a999bbd620e184f12" id="r_a0ff1909fab13692a999bbd620e184f12"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ff1909fab13692a999bbd620e184f12">reserved1</a> () const</td></tr>
 <tr class="memdesc:a0ff1909fab13692a999bbd620e184f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">According to the official <code>loader.h</code> file, this value is reserved for <em>offset</em> or <em>index</em>  <br /></td></tr>
@@ -376,6 +376,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -535,9 +539,9 @@ Static Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325af73d5c1409dc15adade26f5c7fe16234" name="acab865f363d8ce9cd5444d2098510325af73d5c1409dc15adade26f5c7fe16234"></a>CSTRING_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with literal C strings. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325a656a359eb90c4a2bca320a8b96a106ae" name="acab865f363d8ce9cd5444d2098510325a656a359eb90c4a2bca320a8b96a106ae"></a>S_4BYTE_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with 4 byte literals. </p>
+<tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325a1d563e01d24a72ae46b334de6c833f91" name="acab865f363d8ce9cd5444d2098510325a1d563e01d24a72ae46b334de6c833f91"></a>IS_4BYTE_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with 4 byte literals. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325a84de9077979b3557da5d6ad4e5888ffe" name="acab865f363d8ce9cd5444d2098510325a84de9077979b3557da5d6ad4e5888ffe"></a>S_8BYTE_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with 8 byte literals. </p>
+<tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325a9fdd3db47d03ed781dc9880d78f04064" name="acab865f363d8ce9cd5444d2098510325a9fdd3db47d03ed781dc9880d78f04064"></a>IS_8BYTE_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with 8 byte literals. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325a3dab854aa3c15514a693eb12886e323a" name="acab865f363d8ce9cd5444d2098510325a3dab854aa3c15514a693eb12886e323a"></a>LITERAL_POINTERS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with pointers to literals. </p>
 </td></tr>
@@ -557,7 +561,7 @@ Static Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325aa42bbb9ad90bbc111b71c4473c72a526" name="acab865f363d8ce9cd5444d2098510325aa42bbb9ad90bbc111b71c4473c72a526"></a>INTERPOSING&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with only pairs of function pointers for interposing. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325a9d87495a263a1419db13f3a61e1c6975" name="acab865f363d8ce9cd5444d2098510325a9d87495a263a1419db13f3a61e1c6975"></a>S_16BYTE_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with only 16 byte literals. </p>
+<tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325adb4e97cc413e2c34d687deb0ed803c5f" name="acab865f363d8ce9cd5444d2098510325adb4e97cc413e2c34d687deb0ed803c5f"></a>IS_16BYTE_LITERALS&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> with only 16 byte literals. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acab865f363d8ce9cd5444d2098510325af842901821b4af16ba76c71c68f7018e" name="acab865f363d8ce9cd5444d2098510325af842901821b4af16ba76c71c68f7018e"></a>DTRACE_DOF&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1MachO_1_1Section.html" title="Class that represents a Mach-O section.">Section</a> contains DTrace <a class="el" href="classLIEF_1_1Object.html">Object</a> Format. </p>
 </td></tr>
@@ -1662,7 +1666,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Type of the section. This value can help to determine the purpose of the section (e.g. MACHO_SECTION_TYPES::MACHO_SECTION_TYPES) </p>
+<p>Type of the section. This value can help to determine the purpose of the section (e.g. <a class="el" href="#acab865f363d8ce9cd5444d2098510325aa42bbb9ad90bbc111b71c4473c72a526" title="Section with only pairs of function pointers for interposing.">TYPE::INTERPOSING</a>) </p>
 
 </div>
 </div>

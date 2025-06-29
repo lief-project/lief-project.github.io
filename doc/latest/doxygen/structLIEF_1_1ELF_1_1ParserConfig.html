@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -139,6 +139,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8908c03f6b362d160b763406379f1dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a634738c6e56e6302c5f3efcac64fac10" id="r_a634738c6e56e6302c5f3efcac64fac10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ace7257c7907f80d47e293b69349c4d4c">DYNSYM_COUNT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634738c6e56e6302c5f3efcac64fac10">count_mtd</a> = <a class="el" href="#ace7257c7907f80d47e293b69349c4d4cae1f2d5134ed2543d38a0de9751cf75d9">DYNSYM_COUNT::AUTO</a></td></tr>
 <tr class="separator:a634738c6e56e6302c5f3efcac64fac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09288241e022fc8b61f769d8dc799d5b" id="r_a09288241e022fc8b61f769d8dc799d5b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09288241e022fc8b61f769d8dc799d5b">page_size</a> = 0</td></tr>
+<tr class="memdesc:a09288241e022fc8b61f769d8dc799d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory page size if the binary uses a non-standard value.  <br /></td></tr>
+<tr class="separator:a09288241e022fc8b61f769d8dc799d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This structure is used to tweak the <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> <a class="el" href="classLIEF_1_1ELF_1_1Parser.html" title="Class which parses and transforms an ELF file into a ELF::Binary object.">Parser</a> (<a class="el" href="classLIEF_1_1ELF_1_1Parser.html" title="Class which parses and transforms an ELF file into a ELF::Binary object.">ELF::Parser</a>) </p>
@@ -217,6 +220,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The method used to count the number of dynamic symbols </p>
+
+</div>
+</div>
+<a id="a09288241e022fc8b61f769d8dc799d5b" name="a09288241e022fc8b61f769d8dc799d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09288241e022fc8b61f769d8dc799d5b">&#9670;&#160;</a></span>page_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::ELF::ParserConfig::page_size = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Memory page size if the binary uses a non-standard value. </p>
+<p>For instance, SPARCV9 binary can use page size from 0x2000 to 0x100000. </p>
 
 </div>
 </div>
