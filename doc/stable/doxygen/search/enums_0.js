@@ -8,7 +8,7 @@ var searchData=
   ['algorithms_5',['ALGORITHMS',['../namespaceLIEF_1_1PE.html#a1c5f3b8e095b12e474ad1e5f2446d103',1,'LIEF::PE']]],
   ['android_5fversions_6',['ANDROID_VERSIONS',['../namespaceLIEF_1_1Android.html#a6d60b8a3def969f73ee96540f5dddcde',1,'LIEF::Android']]],
   ['arch_7',['ARCH',['../namespaceLIEF_1_1ELF.html#a18ce0fe195ef4b5628f9f5e88f948f2e',1,'LIEF::ELF']]],
-  ['architectures_8',['ARCHITECTURES',['../namespaceLIEF.html#abf0e4f7c217ae0754a00afd9eaf46593',1,'LIEF']]],
+  ['architectures_8',['ARCHITECTURES',['../classLIEF_1_1Header.html#a2be5bae993003aea827c795306f6b90f',1,'LIEF::Header']]],
   ['arm_9',['ARM',['../structLIEF_1_1ELF_1_1CorePrStatus_1_1Registers.html#a267beea8b681ce98734f4a3b3967407d',1,'LIEF::ELF::CorePrStatus::Registers']]],
   ['arm64_5frelocation_10',['ARM64_RELOCATION',['../namespaceLIEF_1_1MachO.html#a07b1f370e9f3cbed3e8c646c8738e044',1,'LIEF::MachO']]],
   ['arm_5frelocation_11',['ARM_RELOCATION',['../namespaceLIEF_1_1MachO.html#a0d949b1c320c38787d6a8dfea0907e9d',1,'LIEF::MachO']]],

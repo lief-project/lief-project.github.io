@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -161,6 +161,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1b134fd6f45126eb12816d29ceef957c" id="r_a1b134fd6f45126eb12816d29ceef957c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b134fd6f45126eb12816d29ceef957c">force_relocate</a> = false</td></tr>
 <tr class="memdesc:a1b134fd6f45126eb12816d29ceef957c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild the Coredump notes.  <br /></td></tr>
 <tr class="separator:a1b134fd6f45126eb12816d29ceef957c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e2e3782975e06f2ffd5c27b967a269" id="r_ad4e2e3782975e06f2ffd5c27b967a269"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4e2e3782975e06f2ffd5c27b967a269">skip_dynamic</a> = false</td></tr>
+<tr class="memdesc:ad4e2e3782975e06f2ffd5c27b967a269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force to relocating all the <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> structures that are supported by <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a> (mostly for testing)  <br /></td></tr>
+<tr class="separator:ad4e2e3782975e06f2ffd5c27b967a269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0070e88390ffcdb7041be3295dfb9da5" id="r_a0070e88390ffcdb7041be3295dfb9da5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0070e88390ffcdb7041be3295dfb9da5">keep_empty_version_requirement</a> = false</td></tr>
+<tr class="memdesc:a0070e88390ffcdb7041be3295dfb9da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skip relocating the PT_DYNAMIC segment (only relevant if force_relocate is set)  <br /></td></tr>
+<tr class="separator:a0070e88390ffcdb7041be3295dfb9da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Configuration options to tweak the building process. </p>
@@ -339,6 +345,23 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0070e88390ffcdb7041be3295dfb9da5" name="a0070e88390ffcdb7041be3295dfb9da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0070e88390ffcdb7041be3295dfb9da5">&#9670;&#160;</a></span>keep_empty_version_requirement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::ELF::Builder::config_t::keep_empty_version_requirement = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Skip relocating the PT_DYNAMIC segment (only relevant if force_relocate is set) </p>
+<p>Remove entries in <code>.gnu.version_r</code> if they are not associated with at least one version </p>
+
+</div>
+</div>
 <a id="ae869c789809a0b794c96887e2e51f9c6" name="ae869c789809a0b794c96887e2e51f9c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae869c789809a0b794c96887e2e51f9c6">&#9670;&#160;</a></span>notes</h2>
 
@@ -400,6 +423,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rebuild DT_PREINIT_ARRAY. </p>
+
+</div>
+</div>
+<a id="ad4e2e3782975e06f2ffd5c27b967a269" name="ad4e2e3782975e06f2ffd5c27b967a269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e2e3782975e06f2ffd5c27b967a269">&#9670;&#160;</a></span>skip_dynamic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::ELF::Builder::config_t::skip_dynamic = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force to relocating all the <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> structures that are supported by <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a> (mostly for testing) </p>
 
 </div>
 </div>

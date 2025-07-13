@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -98,7 +98,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Class wich represents an <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> <a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a>.  
+<p>Class which represents an <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> <a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a>.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ELF_2Section_8hpp_source.html">Section.hpp</a>&gt;</code></p>
@@ -107,7 +107,7 @@ Inheritance diagram for LIEF::ELF::Section:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLIEF_1_1ELF_1_1Section__inherit__graph.png" border="0" usemap="#aLIEF_1_1ELF_1_1Section_inherit__map" alt="Inheritance graph"/></div>
 <map name="aLIEF_1_1ELF_1_1Section_inherit__map" id="aLIEF_1_1ELF_1_1Section_inherit__map">
-<area shape="rect" title="Class wich represents an ELF Section." alt="" coords="5,152,140,177"/>
+<area shape="rect" title="Class which represents an ELF Section." alt="" coords="5,152,140,177"/>
 <area shape="rect" href="classLIEF_1_1Section.html" title="Class which represents an abstracted section." alt="" coords="21,79,125,104"/>
 <area shape="poly" title=" " alt="" coords="75,118,75,152,70,152,70,118"/>
 <area shape="rect" href="classLIEF_1_1Object.html" title=" " alt="" coords="23,5,122,31"/>
@@ -119,7 +119,7 @@ Collaboration diagram for LIEF::ELF::Section:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLIEF_1_1ELF_1_1Section__coll__graph.png" border="0" usemap="#aLIEF_1_1ELF_1_1Section_coll__map" alt="Collaboration graph"/></div>
 <map name="aLIEF_1_1ELF_1_1Section_coll__map" id="aLIEF_1_1ELF_1_1Section_coll__map">
-<area shape="rect" title="Class wich represents an ELF Section." alt="" coords="5,152,140,177"/>
+<area shape="rect" title="Class which represents an ELF Section." alt="" coords="5,152,140,177"/>
 <area shape="rect" href="classLIEF_1_1Section.html" title="Class which represents an abstracted section." alt="" coords="21,79,125,104"/>
 <area shape="poly" title=" " alt="" coords="75,118,75,152,70,152,70,118"/>
 <area shape="rect" href="classLIEF_1_1Object.html" title=" " alt="" coords="23,5,122,31"/>
@@ -180,9 +180,57 @@ Public Types</h2></td></tr>
 , <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afabc64f04b43f460d112e25dac3c838057">HEX_ORDERED</a> = 0x70000000 + (_HEX_ID_ &lt;&lt; _ID_SHIFT_)
 , <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afafce66beef5ad579628255aeb6731d732">X86_64_UNWIND</a> = 0x70000001 + (_X86_64_ID_ &lt;&lt; _ID_SHIFT_)
 , <br />
-&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa9d4f079b6799e873829a5293234342df">MIPS_REGINFO</a> = 0x70000006 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
-, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa7f395fff54c42c0024f0bcdb158b7dad">MIPS_OPTIONS</a> = 0x7000000d + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa155ec67b295b6b50c50be8d4d482cc82">MIPS_LIBLIST</a> = 0x70000000 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afac531f07cd4a6c2d33000b34cd956d1d6">MIPS_MSYM</a> = 0x70000001 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afaa2c5c483bc29b1c39d3838727650b5ec">MIPS_CONFLICT</a> = 0x70000002 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa588f43f25c1a4a8c4be10aa4c014d4e8">MIPS_GPTAB</a> = 0x70000003 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afaf48f1dc324ea409bb7c1fa650b60bdaa">MIPS_UCODE</a> = 0x70000004 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afabad5f816793e5a9dab7c5ef92007955f">MIPS_DEBUG</a> = 0x70000005 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa9d4f079b6799e873829a5293234342df">MIPS_REGINFO</a> = 0x70000006 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa5b3dabb7bf6e315dce86ebd2fa90e8e1">MIPS_PACKAGE</a> = 0x70000007 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afad385fdc51bea0c0e65fb17f79dab367e">MIPS_PACKSYM</a> = 0x70000008 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa98d5ec7df2ae016f23de08f5e7b9d7ff">MIPS_RELD</a> = 0x70000009 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa3793681770f0012dd494e0d9c4659633">MIPS_IFACE</a> = 0x7000000b + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa2a99bb5374624d1afea849f13ce3f023">MIPS_CONTENT</a> = 0x7000000c + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa7f395fff54c42c0024f0bcdb158b7dad">MIPS_OPTIONS</a> = 0x7000000d + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afae2de3bb587578848259a40c460e4c6c3">MIPS_SHDR</a> = 0x70000010 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa7ac07dccaca3870a4de81f5a993bdcf9">MIPS_FDESC</a> = 0x70000011 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afabebf9dfb6a1a1146018c34f455df491f">MIPS_EXTSYM</a> = 0x70000012 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa039fd197b145a90ca9b34cb6f346edc1">MIPS_DENSE</a> = 0x70000013 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa38b2d85d749877daa6b432a742a3c712">MIPS_PDESC</a> = 0x70000014 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa5e1d4f0ef145a8aca7c0756de109aebf">MIPS_LOCSYM</a> = 0x70000015 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa066cd80f521cc766bc4abb60eba57992">MIPS_AUXSYM</a> = 0x70000016 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa18fdd9aaf8167d28e8c4da870a044755">MIPS_OPTSYM</a> = 0x70000017 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa29b5beac439a2adf9c14d745369915ad">MIPS_LOCSTR</a> = 0x70000018 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa288f93b2077145ddff75ed4329f5dc9d">MIPS_LINE</a> = 0x70000019 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa4ae9511e9a071b5b08f2112cad24f33d">MIPS_RFDESC</a> = 0x7000001a + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afabe807815cfa55653d0d73c7413d639a4">MIPS_DELTASYM</a> = 0x7000001b + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa2e91b664b248e42226695301e3cfdfd3">MIPS_DELTAINST</a> = 0x7000001c + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa3c972b59bec7ddab9e37cc293e6cccd7">MIPS_DELTACLASS</a> = 0x7000001d + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa1c6ea1b5659aa091c8213973bdeae0af">MIPS_DWARF</a> = 0x7000001e + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa92ad9b6aedcb3aaa519e50f6a6129491">MIPS_DELTADECL</a> = 0x7000001f + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afafef54941295dec989c196ee177a27241">MIPS_SYMBOL_LIB</a> = 0x70000020 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa6577c35023e2187858c4229b3506758c">MIPS_EVENTS</a> = 0x70000021 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afaffa4fbc131458b66ea2423ac9c5796fe">MIPS_TRANSLATE</a> = 0x70000022 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa86922aa5e212176b6d5cad6dc2d3a605">MIPS_PIXIE</a> = 0x70000023 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa2464370f4ce6a69aa28a8ba5dd6126f9">MIPS_XLATE</a> = 0x70000024 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afac5966fbec36657fc451f24727ca6149b">MIPS_XLATE_DEBUG</a> = 0x70000025 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afaa56a498fb1c46df2ca194a689bdfadd5">MIPS_WHIRL</a> = 0x70000026 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa181910dc951a300386dd1aa3ecb97c7e">MIPS_EH_REGION</a> = 0x70000027 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa309e06dfa55b69f8e0617e74de4cca2c">MIPS_XLATE_OLD</a> = 0x70000028 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa9807df6e998f0311c92b4b62ef8f0d1c">MIPS_PDR_EXCEPTION</a> = 0x70000029 + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
 , <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afac700157163749c944bda1d2bcfab2695">MIPS_ABIFLAGS</a> = 0x7000002a + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
+, <br />
+&#160;&#160;<a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afa07a505f6e690f2c0b49e4fa5b45d5388">MIPS_XHASH</a> = 0x7000002b + (_MIPS_ID_ &lt;&lt; _ID_SHIFT_)
 , <a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7afaac1f9aa6780ea7fa7797d87031858122">RISCV_ATTRIBUTES</a> = 0x70000003 + (_RISCV_ID_ &lt;&lt; _ID_SHIFT_)
 <br />
  }</td></tr>
@@ -263,7 +311,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f269eabff01556b831780369e8dd8ff" id="r_a7f269eabff01556b831780369e8dd8ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8a7f94673ad26470c3a0b7fbad41d7af">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f269eabff01556b831780369e8dd8ff">type</a> () const</td></tr>
 <tr class="separator:a7f269eabff01556b831780369e8dd8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16a53ab50b1eb42a4fb2098f1247d41e" id="r_a16a53ab50b1eb42a4fb2098f1247d41e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">span</a>&lt; const uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16a53ab50b1eb42a4fb2098f1247d41e">content</a> () const override</td></tr>
-<tr class="memdesc:a16a53ab50b1eb42a4fb2098f1247d41e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a>'s content.  <br /></td></tr>
+<tr class="memdesc:a16a53ab50b1eb42a4fb2098f1247d41e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a>'s content.  <br /></td></tr>
 <tr class="separator:a16a53ab50b1eb42a4fb2098f1247d41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1ceb88d131d8812e412ccd80876effc" id="r_aa1ceb88d131d8812e412ccd80876effc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1ceb88d131d8812e412ccd80876effc">content</a> (const std::vector&lt; uint8_t &gt; &amp;data) override</td></tr>
 <tr class="memdesc:aa1ceb88d131d8812e412ccd80876effc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set section content.  <br /></td></tr>
@@ -271,7 +319,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a909869fb62dd3b2d33f1a27927482cce" id="r_a909869fb62dd3b2d33f1a27927482cce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a909869fb62dd3b2d33f1a27927482cce">content</a> (std::vector&lt; uint8_t &gt; &amp;&amp;data)</td></tr>
 <tr class="separator:a909869fb62dd3b2d33f1a27927482cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30617fa1e382afd4da7a4665cc7295dd" id="r_a30617fa1e382afd4da7a4665cc7295dd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30617fa1e382afd4da7a4665cc7295dd">flags</a> () const</td></tr>
-<tr class="memdesc:a30617fa1e382afd4da7a4665cc7295dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> flags.  <br /></td></tr>
+<tr class="memdesc:a30617fa1e382afd4da7a4665cc7295dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> flags.  <br /></td></tr>
 <tr class="separator:a30617fa1e382afd4da7a4665cc7295dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec2f9afe1249e80af7b84b7f27890ee0" id="r_aec2f9afe1249e80af7b84b7f27890ee0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec2f9afe1249e80af7b84b7f27890ee0">has</a> (<a class="el" href="#abb57f404fc75bc74d261801f50ebe744">FLAGS</a> flag) const</td></tr>
 <tr class="memdesc:aec2f9afe1249e80af7b84b7f27890ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>True</code> if the section has the given flag  <br /></td></tr>
@@ -299,10 +347,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a19789350397acd8086847da20d6287ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Original size of the section's data.  <br /></td></tr>
 <tr class="separator:a19789350397acd8086847da20d6287ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae31cc2cbe2f8d1a3e8c9fe08e02d3d7f" id="r_ae31cc2cbe2f8d1a3e8c9fe08e02d3d7f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae31cc2cbe2f8d1a3e8c9fe08e02d3d7f">alignment</a> () const</td></tr>
-<tr class="memdesc:ae31cc2cbe2f8d1a3e8c9fe08e02d3d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> file alignment.  <br /></td></tr>
+<tr class="memdesc:ae31cc2cbe2f8d1a3e8c9fe08e02d3d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> file alignment.  <br /></td></tr>
 <tr class="separator:ae31cc2cbe2f8d1a3e8c9fe08e02d3d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e4415c349dfaebcd6d877d1da9e7a1" id="r_ac2e4415c349dfaebcd6d877d1da9e7a1"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e4415c349dfaebcd6d877d1da9e7a1">information</a> () const</td></tr>
-<tr class="memdesc:ac2e4415c349dfaebcd6d877d1da9e7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> information. The meaning of this value depends on the section's type.  <br /></td></tr>
+<tr class="memdesc:ac2e4415c349dfaebcd6d877d1da9e7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> information. The meaning of this value depends on the section's type.  <br /></td></tr>
 <tr class="separator:ac2e4415c349dfaebcd6d877d1da9e7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a7bd6ebcc629cfb39d6bf48617c7da" id="r_af3a7bd6ebcc629cfb39d6bf48617c7da"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3a7bd6ebcc629cfb39d6bf48617c7da">entry_size</a> () const</td></tr>
 <tr class="memdesc:af3a7bd6ebcc629cfb39d6bf48617c7da"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the size of an element in the case of a section that contains an array.  <br /></td></tr>
@@ -404,6 +452,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,7 +489,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a0c9c4f80498dc0d950a39dc034e901f1 inherit pub_static_attribs_classLIEF_1_1Section"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class wich represents an <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> <a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a>. </p>
+<div class="textblock"><p>Class which represents an <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> <a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a>. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a770b61e22351b085dcc8e78a8606bd46" name="a770b61e22351b085dcc8e78a8606bd46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a770b61e22351b085dcc8e78a8606bd46">&#9670;&#160;</a></span>it_const_segments</h2>
@@ -503,11 +555,11 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744ab50339a10e1de285ac99d4c3990b8693" name="abb57f404fc75bc74d261801f50ebe744ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744ad4b9e47f65b6e79b010582f15785867e" name="abb57f404fc75bc74d261801f50ebe744ad4b9e47f65b6e79b010582f15785867e"></a>WRITE&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> data should be writable during execution. </p>
+<tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744ad4b9e47f65b6e79b010582f15785867e" name="abb57f404fc75bc74d261801f50ebe744ad4b9e47f65b6e79b010582f15785867e"></a>WRITE&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> data should be writable during execution. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744a7b055565b4ef34c2a521009ad1eb4e4c" name="abb57f404fc75bc74d261801f50ebe744a7b055565b4ef34c2a521009ad1eb4e4c"></a>ALLOC&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> occupies memory during program execution. </p>
+<tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744a7b055565b4ef34c2a521009ad1eb4e4c" name="abb57f404fc75bc74d261801f50ebe744a7b055565b4ef34c2a521009ad1eb4e4c"></a>ALLOC&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> occupies memory during program execution. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744a25818a44fc26f2a2ea3381e30f552568" name="abb57f404fc75bc74d261801f50ebe744a25818a44fc26f2a2ea3381e30f552568"></a>EXECINSTR&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> contains executable machine instructions. </p>
+<tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744a25818a44fc26f2a2ea3381e30f552568" name="abb57f404fc75bc74d261801f50ebe744a25818a44fc26f2a2ea3381e30f552568"></a>EXECINSTR&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> contains executable machine instructions. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="abb57f404fc75bc74d261801f50ebe744a97c51054c5ed46d2f88641ac57ff6347" name="abb57f404fc75bc74d261801f50ebe744a97c51054c5ed46d2f88641ac57ff6347"></a>MERGE&#160;</td><td class="fielddoc"><p>The data in this section may be merged. </p>
 </td></tr>
@@ -599,7 +651,7 @@ Static Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa4b5ac8523624cdb3d178b5e2d81a988f" name="a8a7f94673ad26470c3a0b7fbad41d7afa4b5ac8523624cdb3d178b5e2d81a988f"></a>PREINIT_ARRAY&#160;</td><td class="fielddoc"><p>Pointers to pre-init functions. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa720909a4b948fc9e33633b61960d6b3c" name="a8a7f94673ad26470c3a0b7fbad41d7afa720909a4b948fc9e33633b61960d6b3c"></a>GROUP&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> group. </p>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa720909a4b948fc9e33633b61960d6b3c" name="a8a7f94673ad26470c3a0b7fbad41d7afa720909a4b948fc9e33633b61960d6b3c"></a>GROUP&#160;</td><td class="fielddoc"><p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> group. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa00bfedea89a354fc57a5f62797e03af0" name="a8a7f94673ad26470c3a0b7fbad41d7afa00bfedea89a354fc57a5f62797e03af0"></a>SYMTAB_SHNDX&#160;</td><td class="fielddoc"><p>Indices for SHN_XINDEX entries. </p>
 </td></tr>
@@ -641,12 +693,47 @@ Static Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afafce66beef5ad579628255aeb6731d732" name="a8a7f94673ad26470c3a0b7fbad41d7afafce66beef5ad579628255aeb6731d732"></a>X86_64_UNWIND&#160;</td><td class="fielddoc"><p>Unwind information </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa9d4f079b6799e873829a5293234342df" name="a8a7f94673ad26470c3a0b7fbad41d7afa9d4f079b6799e873829a5293234342df"></a>MIPS_REGINFO&#160;</td><td class="fielddoc"><p>Register usage information </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa7f395fff54c42c0024f0bcdb158b7dad" name="a8a7f94673ad26470c3a0b7fbad41d7afa7f395fff54c42c0024f0bcdb158b7dad"></a>MIPS_OPTIONS&#160;</td><td class="fielddoc"><p>General options </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afac700157163749c944bda1d2bcfab2695" name="a8a7f94673ad26470c3a0b7fbad41d7afac700157163749c944bda1d2bcfab2695"></a>MIPS_ABIFLAGS&#160;</td><td class="fielddoc"><p>ABI information. </p>
-</td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa155ec67b295b6b50c50be8d4d482cc82" name="a8a7f94673ad26470c3a0b7fbad41d7afa155ec67b295b6b50c50be8d4d482cc82"></a>MIPS_LIBLIST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afac531f07cd4a6c2d33000b34cd956d1d6" name="a8a7f94673ad26470c3a0b7fbad41d7afac531f07cd4a6c2d33000b34cd956d1d6"></a>MIPS_MSYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afaa2c5c483bc29b1c39d3838727650b5ec" name="a8a7f94673ad26470c3a0b7fbad41d7afaa2c5c483bc29b1c39d3838727650b5ec"></a>MIPS_CONFLICT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa588f43f25c1a4a8c4be10aa4c014d4e8" name="a8a7f94673ad26470c3a0b7fbad41d7afa588f43f25c1a4a8c4be10aa4c014d4e8"></a>MIPS_GPTAB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afaf48f1dc324ea409bb7c1fa650b60bdaa" name="a8a7f94673ad26470c3a0b7fbad41d7afaf48f1dc324ea409bb7c1fa650b60bdaa"></a>MIPS_UCODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afabad5f816793e5a9dab7c5ef92007955f" name="a8a7f94673ad26470c3a0b7fbad41d7afabad5f816793e5a9dab7c5ef92007955f"></a>MIPS_DEBUG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa9d4f079b6799e873829a5293234342df" name="a8a7f94673ad26470c3a0b7fbad41d7afa9d4f079b6799e873829a5293234342df"></a>MIPS_REGINFO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa5b3dabb7bf6e315dce86ebd2fa90e8e1" name="a8a7f94673ad26470c3a0b7fbad41d7afa5b3dabb7bf6e315dce86ebd2fa90e8e1"></a>MIPS_PACKAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afad385fdc51bea0c0e65fb17f79dab367e" name="a8a7f94673ad26470c3a0b7fbad41d7afad385fdc51bea0c0e65fb17f79dab367e"></a>MIPS_PACKSYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa98d5ec7df2ae016f23de08f5e7b9d7ff" name="a8a7f94673ad26470c3a0b7fbad41d7afa98d5ec7df2ae016f23de08f5e7b9d7ff"></a>MIPS_RELD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa3793681770f0012dd494e0d9c4659633" name="a8a7f94673ad26470c3a0b7fbad41d7afa3793681770f0012dd494e0d9c4659633"></a>MIPS_IFACE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa2a99bb5374624d1afea849f13ce3f023" name="a8a7f94673ad26470c3a0b7fbad41d7afa2a99bb5374624d1afea849f13ce3f023"></a>MIPS_CONTENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa7f395fff54c42c0024f0bcdb158b7dad" name="a8a7f94673ad26470c3a0b7fbad41d7afa7f395fff54c42c0024f0bcdb158b7dad"></a>MIPS_OPTIONS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afae2de3bb587578848259a40c460e4c6c3" name="a8a7f94673ad26470c3a0b7fbad41d7afae2de3bb587578848259a40c460e4c6c3"></a>MIPS_SHDR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa7ac07dccaca3870a4de81f5a993bdcf9" name="a8a7f94673ad26470c3a0b7fbad41d7afa7ac07dccaca3870a4de81f5a993bdcf9"></a>MIPS_FDESC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afabebf9dfb6a1a1146018c34f455df491f" name="a8a7f94673ad26470c3a0b7fbad41d7afabebf9dfb6a1a1146018c34f455df491f"></a>MIPS_EXTSYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa039fd197b145a90ca9b34cb6f346edc1" name="a8a7f94673ad26470c3a0b7fbad41d7afa039fd197b145a90ca9b34cb6f346edc1"></a>MIPS_DENSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa38b2d85d749877daa6b432a742a3c712" name="a8a7f94673ad26470c3a0b7fbad41d7afa38b2d85d749877daa6b432a742a3c712"></a>MIPS_PDESC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa5e1d4f0ef145a8aca7c0756de109aebf" name="a8a7f94673ad26470c3a0b7fbad41d7afa5e1d4f0ef145a8aca7c0756de109aebf"></a>MIPS_LOCSYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa066cd80f521cc766bc4abb60eba57992" name="a8a7f94673ad26470c3a0b7fbad41d7afa066cd80f521cc766bc4abb60eba57992"></a>MIPS_AUXSYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa18fdd9aaf8167d28e8c4da870a044755" name="a8a7f94673ad26470c3a0b7fbad41d7afa18fdd9aaf8167d28e8c4da870a044755"></a>MIPS_OPTSYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa29b5beac439a2adf9c14d745369915ad" name="a8a7f94673ad26470c3a0b7fbad41d7afa29b5beac439a2adf9c14d745369915ad"></a>MIPS_LOCSTR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa288f93b2077145ddff75ed4329f5dc9d" name="a8a7f94673ad26470c3a0b7fbad41d7afa288f93b2077145ddff75ed4329f5dc9d"></a>MIPS_LINE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa4ae9511e9a071b5b08f2112cad24f33d" name="a8a7f94673ad26470c3a0b7fbad41d7afa4ae9511e9a071b5b08f2112cad24f33d"></a>MIPS_RFDESC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afabe807815cfa55653d0d73c7413d639a4" name="a8a7f94673ad26470c3a0b7fbad41d7afabe807815cfa55653d0d73c7413d639a4"></a>MIPS_DELTASYM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa2e91b664b248e42226695301e3cfdfd3" name="a8a7f94673ad26470c3a0b7fbad41d7afa2e91b664b248e42226695301e3cfdfd3"></a>MIPS_DELTAINST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa3c972b59bec7ddab9e37cc293e6cccd7" name="a8a7f94673ad26470c3a0b7fbad41d7afa3c972b59bec7ddab9e37cc293e6cccd7"></a>MIPS_DELTACLASS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa1c6ea1b5659aa091c8213973bdeae0af" name="a8a7f94673ad26470c3a0b7fbad41d7afa1c6ea1b5659aa091c8213973bdeae0af"></a>MIPS_DWARF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa92ad9b6aedcb3aaa519e50f6a6129491" name="a8a7f94673ad26470c3a0b7fbad41d7afa92ad9b6aedcb3aaa519e50f6a6129491"></a>MIPS_DELTADECL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afafef54941295dec989c196ee177a27241" name="a8a7f94673ad26470c3a0b7fbad41d7afafef54941295dec989c196ee177a27241"></a>MIPS_SYMBOL_LIB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa6577c35023e2187858c4229b3506758c" name="a8a7f94673ad26470c3a0b7fbad41d7afa6577c35023e2187858c4229b3506758c"></a>MIPS_EVENTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afaffa4fbc131458b66ea2423ac9c5796fe" name="a8a7f94673ad26470c3a0b7fbad41d7afaffa4fbc131458b66ea2423ac9c5796fe"></a>MIPS_TRANSLATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa86922aa5e212176b6d5cad6dc2d3a605" name="a8a7f94673ad26470c3a0b7fbad41d7afa86922aa5e212176b6d5cad6dc2d3a605"></a>MIPS_PIXIE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa2464370f4ce6a69aa28a8ba5dd6126f9" name="a8a7f94673ad26470c3a0b7fbad41d7afa2464370f4ce6a69aa28a8ba5dd6126f9"></a>MIPS_XLATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afac5966fbec36657fc451f24727ca6149b" name="a8a7f94673ad26470c3a0b7fbad41d7afac5966fbec36657fc451f24727ca6149b"></a>MIPS_XLATE_DEBUG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afaa56a498fb1c46df2ca194a689bdfadd5" name="a8a7f94673ad26470c3a0b7fbad41d7afaa56a498fb1c46df2ca194a689bdfadd5"></a>MIPS_WHIRL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa181910dc951a300386dd1aa3ecb97c7e" name="a8a7f94673ad26470c3a0b7fbad41d7afa181910dc951a300386dd1aa3ecb97c7e"></a>MIPS_EH_REGION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa309e06dfa55b69f8e0617e74de4cca2c" name="a8a7f94673ad26470c3a0b7fbad41d7afa309e06dfa55b69f8e0617e74de4cca2c"></a>MIPS_XLATE_OLD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa9807df6e998f0311c92b4b62ef8f0d1c" name="a8a7f94673ad26470c3a0b7fbad41d7afa9807df6e998f0311c92b4b62ef8f0d1c"></a>MIPS_PDR_EXCEPTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afac700157163749c944bda1d2bcfab2695" name="a8a7f94673ad26470c3a0b7fbad41d7afac700157163749c944bda1d2bcfab2695"></a>MIPS_ABIFLAGS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afa07a505f6e690f2c0b49e4fa5b45d5388" name="a8a7f94673ad26470c3a0b7fbad41d7afa07a505f6e690f2c0b49e4fa5b45d5388"></a>MIPS_XHASH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8a7f94673ad26470c3a0b7fbad41d7afaac1f9aa6780ea7fa7797d87031858122" name="a8a7f94673ad26470c3a0b7fbad41d7afaac1f9aa6780ea7fa7797d87031858122"></a>RISCV_ATTRIBUTES&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -819,7 +906,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> file alignment. </p>
+<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> file alignment. </p>
 
 </div>
 </div>
@@ -940,7 +1027,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a>'s content. </p>
+<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a>'s content. </p>
 
 <p>Reimplemented from <a class="el" href="classLIEF_1_1Section.html#aa61b96aa1b1a74e97a24ecc264f4fa06">LIEF::Section</a>.</p>
 
@@ -1119,7 +1206,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> flags. </p>
+<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> flags. </p>
 
 </div>
 </div>
@@ -1228,7 +1315,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class wich represents an ELF Section.">Section</a> information. The meaning of this value depends on the section's type. </p>
+<p><a class="el" href="classLIEF_1_1ELF_1_1Section.html" title="Class which represents an ELF Section.">Section</a> information. The meaning of this value depends on the section's type. </p>
 
 </div>
 </div>
@@ -1489,7 +1576,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Original size of the section's data. </p>
-<p>This value is used by the <a class="el" href="classLIEF_1_1ELF_1_1Builder.html" title="Class which takes an ELF::Binary object and reconstructs a valid binary.">ELF::Builder</a> to determines if it needs to be relocated to avoid an override of the data </p>
+<p>This value is used by the <a class="el" href="classLIEF_1_1ELF_1_1Builder.html" title="Class which takes an ELF::Binary object and reconstructs a valid binary.">ELF::Builder</a> to determine if it needs to be relocated to avoid an override of the data </p>
 
 </div>
 </div>

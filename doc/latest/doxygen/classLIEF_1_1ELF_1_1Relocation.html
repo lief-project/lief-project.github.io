@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -1338,6 +1338,11 @@ Public Types</h2></td></tr>
 , <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a5f03070fbc26babfd7ab998e6f1d34cb">SYSZ_TLS_GOTIE20</a> = (60 | R_SYSZ)
 , <br />
 &#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a3ea05ea161ee0713f968d6e6589700fe">SYSZ_IRELATIVE</a> = (61 | R_SYSZ)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1fd780a6707d6c5146b50a7370f5cbb0">SYSZ_PC12DBL</a> = (62 | R_SYSZ)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad6218ae78d70f3d9f94d711987a575de">SYSZ_PLT12DBL</a> = (63 | R_SYSZ)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a9594c883fa3729dd78f2122c32d06207">SYSZ_PC24DBL</a> = (64 | R_SYSZ)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa90132bd5c63ac1cc96ea46e66389041">SYSZ_PLT24DBL</a> = (65 | R_SYSZ)
 , <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a48d07f4b872f67d82f4d14c3f185ea94">RISCV_NONE</a> = (0 | R_RISCV)
 , <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a9eeda9ae50679c11b53ca80f364d8450">RISCV_32</a> = (1 | R_RISCV)
 , <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070abae1918e1dc43e8d8951f31abe2c14e0">RISCV_64</a> = (2 | R_RISCV)
@@ -1418,6 +1423,143 @@ Public Types</h2></td></tr>
 , <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a18b7d4d61af028728fc9c6228b9fe155">BPF_64_NODYLD32</a> = (4 | R_BPF)
 , <br />
 &#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a48b4145a7b50b64a8feec7113ad30bdf">BPF_64_32</a> = (10 | R_BPF)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af62a439a7610aa1d6125f0f06fb456d5">SH_NONE</a> = (0 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070acd0190bcb931d8f7e69f9f31e809bda2">SH_DIR32</a> = (1 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa464467f92219196c709f9c61a4a89d1">SH_REL32</a> = (2 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad6ceacc078295185525b0e524c188a95">SH_DIR8WPN</a> = (3 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a18953f8d550b2d7e0280cc180676a285">SH_IND12W</a> = (4 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a2d6a4ddf3b7946c554a6ac44f12ac3dc">SH_DIR8WPL</a> = (5 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a2c1363da4512336e5782f322285a013c">SH_DIR8WPZ</a> = (6 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ac60f5901105b8874d7b3b3f1fd30f52d">SH_DIR8BP</a> = (7 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ac261b598d1ece1c69dcc81e7d86f3fa9">SH_DIR8W</a> = (8 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070afbccdf09a61b6c844f3fe08f4ed68d6e">SH_DIR8L</a> = (9 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a47cf79cb41020fd92b23f4c29345932d">SH_LOOP_START</a> = (10 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ab7a19eb21999498f13f6e4acda54f046">SH_LOOP_END</a> = (11 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a3c7bf9bee40ae57512e0c3e251df6f03">SH_GNU_VTINHERIT</a> = (22 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ab5418228be7f24161abdbef7f8b6d0aa">SH_GNU_VTENTRY</a> = (23 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af4ff3042329ae60223795dace57be383">SH_SWITCH8</a> = (24 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a401fd2545808453992ca85b73e76d0fb">SH_SWITCH16</a> = (25 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a15aa5822e693792fce6dac748bfbd4b0">SH_SWITCH32</a> = (26 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa6c67655c374d3f52461e6093434e514">SH_USES</a> = (27 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a80eeb463f4372d343638a045718f98f8">SH_COUNT</a> = (28 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad663bedd17c4ca06489461115dd00ac4">SH_ALIGN</a> = (29 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a971e717d33003173a55784cd7ccc268b">SH_CODE</a> = (30 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ac2a211ff9756e1115ab1ef998072978d">SH_DATA</a> = (31 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a706eb0faa6853069ab00c726897891dc">SH_LABEL</a> = (32 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a3c1c4deb74277426c00a5b0e913e8e7f">SH_DIR16</a> = (33 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a9ef30de7440d088235b451fc6385d087">SH_DIR8</a> = (34 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a88cdae9d2c0ceb3628de318e8d8349a9">SH_DIR8UL</a> = (35 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1dfe9b7ef1536a4016065c52ed87e268">SH_DIR8UW</a> = (36 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a5034e39a1a53c0e4cb68060651b382fd">SH_DIR8U</a> = (37 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070acc7c06c1907a6b474481a61545f1f793">SH_DIR8SW</a> = (38 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ae4c4546e2bdf547894029e76a4c4102c">SH_DIR8S</a> = (39 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ac19cecda2abd5509cd0a34b3857293ea">SH_DIR4UL</a> = (40 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a4047fd49cc734808d78e8008f3b76aca">SH_DIR4UW</a> = (41 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af4c369610a4e953cf95d061878e1f0dc">SH_DIR4U</a> = (42 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a955ebf8b570fb7a342c3b80cc25d643d">SH_PSHA</a> = (43 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070adf8625afd348b7385767b366cfe4eb4f">SH_PSHL</a> = (44 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070acfa8bb86472e56de08bbc8dc925e4872">SH_DIR5U</a> = (45 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1040f7985fc251c00de9874c62171cbd">SH_DIR6U</a> = (46 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa9e35a9908f0a6551d25858211baed01">SH_DIR6S</a> = (47 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1004c1e65d6cb315b3057505ce41e932">SH_DIR10S</a> = (48 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a4b84ca6471cf2e40dc4d3019882245c5">SH_DIR10SW</a> = (49 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aada7220e767f2f2398f6e008bad4a718">SH_DIR10SL</a> = (50 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a331df05964da242c178c33491036731f">SH_DIR10SQ</a> = (51 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ac3fc43833151abad47cb9a01f3ce5a3b">SH_DIR16S</a> = (53 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af5971f12a875990faf33fad3f232c4eb">SH_TLS_GD_32</a> = (144 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a57f52478b668bf44a7bd1d73b0e74855">SH_TLS_LD_32</a> = (145 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8bcb31a476161d21225ab3790a66ccd8">SH_TLS_LDO_32</a> = (146 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070adb7c5ea526829c2a75c83266968683f1">SH_TLS_IE_32</a> = (147 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1de443360d5a9c63bd016d976621a8ba">SH_TLS_LE_32</a> = (148 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1bd3db47c7abd360e870703c4c3b71e8">SH_TLS_DTPMOD32</a> = (149 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a9a86e64597745c4efd651da91f551f8c">SH_TLS_DTPOFF32</a> = (150 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a58275a04b10eb2b24a950301856e62ae">SH_TLS_TPOFF32</a> = (151 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a4fefb06f9a2e6c8155f91f552808bc29">SH_GOT32</a> = (160 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a9b2bf936edff6a3312ec28c71ed07695">SH_PLT32</a> = (161 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af8dc5834e2f5f1e4c2e623b282def34b">SH_COPY</a> = (162 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a3142cfbb9584107f22f490df4d65cc64">SH_GLOB_DAT</a> = (163 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aaf6281351e33ab4a4e9b74067ac89f43">SH_JMP_SLOT</a> = (164 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af53ea274a0c76c6ae1658dafed1e7aa0">SH_RELATIVE</a> = (165 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8c30e14e97db03cdaffd8e30c3aaf1e0">SH_GOTOFF</a> = (166 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad018e16fbaa11747be660ce5345cd495">SH_GOTPC</a> = (167 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ab2d0c40dd75d2f12deba07c5e0e49cc1">SH_GOTPLT32</a> = (168 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070abdee098db3e803b40aa316aad5ddeef5">SH_GOT_LOW16</a> = (169 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a60ec4bd1beb6f6d2f3e96d926c2f3ba5">SH_GOT_MEDLOW16</a> = (170 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ae62322750c80d6097fc2e784c250da28">SH_GOT_MEDHI16</a> = (171 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa08214c256e03b09690857700637d9c5">SH_GOT_HI16</a> = (172 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a0a1886ecaa7502ae6e1ac6abab05394a">SH_GOTPLT_LOW16</a> = (173 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af28853cf72ff04c09c372cd2890a76c3">SH_GOTPLT_MEDLOW16</a> = (174 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a5e8769f18ebdcabcce3c24011b73c9a8">SH_GOTPLT_MEDHI16</a> = (175 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a9a7190cc9debe80a5b76f626f34b20aa">SH_GOTPLT_HI16</a> = (176 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ab0d4d5b69f378d8fcd3020f9a5093898">SH_PLT_LOW16</a> = (177 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af9287d0192142aff5d7ce98f45bfd25d">SH_PLT_MEDLOW16</a> = (178 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aafdf64bd13fd01f1b0d9b18ca88cb423">SH_PLT_MEDHI16</a> = (179 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a08eb309918af56e677a71c90b776da07">SH_PLT_HI16</a> = (180 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad77d0a0be84f3e33f8013ee56d36130b">SH_GOTOFF_LOW16</a> = (181 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a71150a6c8021d0410338e196cf71b33c">SH_GOTOFF_MEDLOW16</a> = (182 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a6bfb918510e7df8923dcb01d8c5abc85">SH_GOTOFF_MEDHI16</a> = (183 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af52aea6664aaf2384caf631860d0b1f3">SH_GOTOFF_HI16</a> = (184 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa016ac298a4959a08340fdfe7cc7e983">SH_GOTPC_LOW16</a> = (185 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8712bb283079624be3d3360ebcf56240">SH_GOTPC_MEDLOW16</a> = (186 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070acafb0deb7cda9763d160e90ff2778bf8">SH_GOTPC_MEDHI16</a> = (187 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ab9a06fd944b02e9a2d7b4d75e6459890">SH_GOTPC_HI16</a> = (188 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aba28d5387018aea42beb5146dae79f11">SH_GOT10BY4</a> = (189 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8b0e8af30aec2fed7b08c1122ed3c586">SH_GOTPLT10BY4</a> = (190 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a3a3e8559e847a178232269f9560c0709">SH_GOT10BY8</a> = (191 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8656de01d275207f5d76f57920330a64">SH_GOTPLT10BY8</a> = (192 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ae7bf5a78881989740cb293af253eaf8c">SH_COPY64</a> = (193 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ab5a1486eb3d050439f7bf5adcf081ba5">SH_GLOB_DAT64</a> = (194 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad2db8ae14c58c5255f88d4c8cf750115">SH_JMP_SLOT64</a> = (195 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a401d5298900e4b54ff8a98f435e19eac">SH_RELATIVE64</a> = (196 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a0ca977ab31d41ca5c87d4be71ce3bb8a">SH_GOT20</a> = (201 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a3e998b2d305deabe968be2fa125ac022">SH_GOTOFF20</a> = (202 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8a495f58e6bad2b77f39941f936ba9fc">SH_GOTFUNCDESC</a> = (203 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a1b420dd5394d767e984362819dc3d305">SH_GOTFUNCDESC20</a> = (204 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070adfe0575bf177c725db5ea8de63451e2e">SH_GOTOFFFUNCDESC</a> = (205 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a5775b99361f73f0f1e330f74f2377fed">SH_GOTOFFFUNCDESC20</a> = (206 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af8cd36a71c096eaa3dbf86dd1cd51b2e">SH_FUNCDESC</a> = (207 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ad2f859b3e57ff2f68955fd268079cae8">SH_FUNCDESC_VALUE</a> = (208 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8584f3f4c51de9adfa44b3d9df960c7e">SH_SHMEDIA_CODE</a> = (242 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aea3789fe4f2702bc1fdbc12ca59cb409">SH_PT_16</a> = (243 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aedfb997ea41f9d1e9212cbe0a205a7bf">SH_IMMS16</a> = (244 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070af27608566a6da84ee42cac316ac50d66">SH_IMMU16</a> = (245 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a8c9bfa1e34dd62abbbe7f08a15402b72">SH_IMM_LOW16</a> = (246 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa7e1fd42d4c3b3193fcf390a7e2c76f7">SH_IMM_LOW16_PCREL</a> = (247 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070adb47586eb8e7e12912ed380e06666942">SH_IMM_MEDLOW16</a> = (248 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a4141ec22774ad75decdac1820cebabe3">SH_IMM_MEDLOW16_PCREL</a> = (249 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aec0a9e7934d0ef9ba8d78232866a5bbf">SH_IMM_MEDHI16</a> = (250 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070a7883379267f0cbacf2d10a991bd53574">SH_IMM_MEDHI16_PCREL</a> = (251 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070ac2fbdfa65613fc8c9d7c39c7575604a4">SH_IMM_HI16</a> = (252 | R_SH4)
+, <br />
+&#160;&#160;<a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070adeae13adeb7794880a00357e6bb1d82b">SH_IMM_HI16_PCREL</a> = (253 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aea2d924ed7829a69cb1cc7607314c476">SH_64</a> = (254 | R_SH4)
+, <a class="el" href="#a02d2d4fe67fd71db94ddc5036b00a070aa9215ed7291fdaea907d8b1c73605316">SH_64_PCREL</a> = (255 | R_SH4)
 <br />
  }</td></tr>
 <tr class="memdesc:a02d2d4fe67fd71db94ddc5036b00a070"><td class="mdescLeft">&#160;</td><td class="mdescRight">The different types of the relocation.  <a href="#a02d2d4fe67fd71db94ddc5036b00a070">More...</a><br /></td></tr>
@@ -1569,6 +1711,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1621,6 +1767,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a7d88fa499698b7b9daf4b1c2b9cda975"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7794ebd464848559d182a5756a9a0d41" id="r_a7794ebd464848559d182a5756a9a0d41"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7794ebd464848559d182a5756a9a0d41">R_BPF</a> = uint64_t(13) &lt;&lt; <a class="el" href="#abbc5b515b557d00ab9641874db17f9f6">R_BIT</a></td></tr>
 <tr class="separator:a7794ebd464848559d182a5756a9a0d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d5a0a25c9e33639cf88f403c4b1b95" id="r_ab4d5a0a25c9e33639cf88f403c4b1b95"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d5a0a25c9e33639cf88f403c4b1b95">R_SH4</a> = uint64_t(14) &lt;&lt; <a class="el" href="#abbc5b515b557d00ab9641874db17f9f6">R_BIT</a></td></tr>
+<tr class="separator:ab4d5a0a25c9e33639cf88f403c4b1b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents an <a class="el" href="namespaceLIEF_1_1ELF.html" title="Namespace related to the LIEF&#39;s ELF module.">ELF</a> relocation. </p>
@@ -2666,6 +2814,10 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a2e57ab62c89354758c1abfa393b12749" name="a02d2d4fe67fd71db94ddc5036b00a070a2e57ab62c89354758c1abfa393b12749"></a>SYSZ_GOTPLT20&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a5f03070fbc26babfd7ab998e6f1d34cb" name="a02d2d4fe67fd71db94ddc5036b00a070a5f03070fbc26babfd7ab998e6f1d34cb"></a>SYSZ_TLS_GOTIE20&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a3ea05ea161ee0713f968d6e6589700fe" name="a02d2d4fe67fd71db94ddc5036b00a070a3ea05ea161ee0713f968d6e6589700fe"></a>SYSZ_IRELATIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1fd780a6707d6c5146b50a7370f5cbb0" name="a02d2d4fe67fd71db94ddc5036b00a070a1fd780a6707d6c5146b50a7370f5cbb0"></a>SYSZ_PC12DBL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad6218ae78d70f3d9f94d711987a575de" name="a02d2d4fe67fd71db94ddc5036b00a070ad6218ae78d70f3d9f94d711987a575de"></a>SYSZ_PLT12DBL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a9594c883fa3729dd78f2122c32d06207" name="a02d2d4fe67fd71db94ddc5036b00a070a9594c883fa3729dd78f2122c32d06207"></a>SYSZ_PC24DBL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa90132bd5c63ac1cc96ea46e66389041" name="a02d2d4fe67fd71db94ddc5036b00a070aa90132bd5c63ac1cc96ea46e66389041"></a>SYSZ_PLT24DBL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a48d07f4b872f67d82f4d14c3f185ea94" name="a02d2d4fe67fd71db94ddc5036b00a070a48d07f4b872f67d82f4d14c3f185ea94"></a>RISCV_NONE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a9eeda9ae50679c11b53ca80f364d8450" name="a02d2d4fe67fd71db94ddc5036b00a070a9eeda9ae50679c11b53ca80f364d8450"></a>RISCV_32&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070abae1918e1dc43e8d8951f31abe2c14e0" name="a02d2d4fe67fd71db94ddc5036b00a070abae1918e1dc43e8d8951f31abe2c14e0"></a>RISCV_64&#160;</td><td class="fielddoc"></td></tr>
@@ -2730,6 +2882,116 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af2a59a5353b2cdb507c24bbfc21c5587" name="a02d2d4fe67fd71db94ddc5036b00a070af2a59a5353b2cdb507c24bbfc21c5587"></a>BPF_64_ABS32&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a18b7d4d61af028728fc9c6228b9fe155" name="a02d2d4fe67fd71db94ddc5036b00a070a18b7d4d61af028728fc9c6228b9fe155"></a>BPF_64_NODYLD32&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a48b4145a7b50b64a8feec7113ad30bdf" name="a02d2d4fe67fd71db94ddc5036b00a070a48b4145a7b50b64a8feec7113ad30bdf"></a>BPF_64_32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af62a439a7610aa1d6125f0f06fb456d5" name="a02d2d4fe67fd71db94ddc5036b00a070af62a439a7610aa1d6125f0f06fb456d5"></a>SH_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070acd0190bcb931d8f7e69f9f31e809bda2" name="a02d2d4fe67fd71db94ddc5036b00a070acd0190bcb931d8f7e69f9f31e809bda2"></a>SH_DIR32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa464467f92219196c709f9c61a4a89d1" name="a02d2d4fe67fd71db94ddc5036b00a070aa464467f92219196c709f9c61a4a89d1"></a>SH_REL32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad6ceacc078295185525b0e524c188a95" name="a02d2d4fe67fd71db94ddc5036b00a070ad6ceacc078295185525b0e524c188a95"></a>SH_DIR8WPN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a18953f8d550b2d7e0280cc180676a285" name="a02d2d4fe67fd71db94ddc5036b00a070a18953f8d550b2d7e0280cc180676a285"></a>SH_IND12W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a2d6a4ddf3b7946c554a6ac44f12ac3dc" name="a02d2d4fe67fd71db94ddc5036b00a070a2d6a4ddf3b7946c554a6ac44f12ac3dc"></a>SH_DIR8WPL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a2c1363da4512336e5782f322285a013c" name="a02d2d4fe67fd71db94ddc5036b00a070a2c1363da4512336e5782f322285a013c"></a>SH_DIR8WPZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ac60f5901105b8874d7b3b3f1fd30f52d" name="a02d2d4fe67fd71db94ddc5036b00a070ac60f5901105b8874d7b3b3f1fd30f52d"></a>SH_DIR8BP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ac261b598d1ece1c69dcc81e7d86f3fa9" name="a02d2d4fe67fd71db94ddc5036b00a070ac261b598d1ece1c69dcc81e7d86f3fa9"></a>SH_DIR8W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070afbccdf09a61b6c844f3fe08f4ed68d6e" name="a02d2d4fe67fd71db94ddc5036b00a070afbccdf09a61b6c844f3fe08f4ed68d6e"></a>SH_DIR8L&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a47cf79cb41020fd92b23f4c29345932d" name="a02d2d4fe67fd71db94ddc5036b00a070a47cf79cb41020fd92b23f4c29345932d"></a>SH_LOOP_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ab7a19eb21999498f13f6e4acda54f046" name="a02d2d4fe67fd71db94ddc5036b00a070ab7a19eb21999498f13f6e4acda54f046"></a>SH_LOOP_END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a3c7bf9bee40ae57512e0c3e251df6f03" name="a02d2d4fe67fd71db94ddc5036b00a070a3c7bf9bee40ae57512e0c3e251df6f03"></a>SH_GNU_VTINHERIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ab5418228be7f24161abdbef7f8b6d0aa" name="a02d2d4fe67fd71db94ddc5036b00a070ab5418228be7f24161abdbef7f8b6d0aa"></a>SH_GNU_VTENTRY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af4ff3042329ae60223795dace57be383" name="a02d2d4fe67fd71db94ddc5036b00a070af4ff3042329ae60223795dace57be383"></a>SH_SWITCH8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a401fd2545808453992ca85b73e76d0fb" name="a02d2d4fe67fd71db94ddc5036b00a070a401fd2545808453992ca85b73e76d0fb"></a>SH_SWITCH16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a15aa5822e693792fce6dac748bfbd4b0" name="a02d2d4fe67fd71db94ddc5036b00a070a15aa5822e693792fce6dac748bfbd4b0"></a>SH_SWITCH32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa6c67655c374d3f52461e6093434e514" name="a02d2d4fe67fd71db94ddc5036b00a070aa6c67655c374d3f52461e6093434e514"></a>SH_USES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a80eeb463f4372d343638a045718f98f8" name="a02d2d4fe67fd71db94ddc5036b00a070a80eeb463f4372d343638a045718f98f8"></a>SH_COUNT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad663bedd17c4ca06489461115dd00ac4" name="a02d2d4fe67fd71db94ddc5036b00a070ad663bedd17c4ca06489461115dd00ac4"></a>SH_ALIGN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a971e717d33003173a55784cd7ccc268b" name="a02d2d4fe67fd71db94ddc5036b00a070a971e717d33003173a55784cd7ccc268b"></a>SH_CODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ac2a211ff9756e1115ab1ef998072978d" name="a02d2d4fe67fd71db94ddc5036b00a070ac2a211ff9756e1115ab1ef998072978d"></a>SH_DATA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a706eb0faa6853069ab00c726897891dc" name="a02d2d4fe67fd71db94ddc5036b00a070a706eb0faa6853069ab00c726897891dc"></a>SH_LABEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a3c1c4deb74277426c00a5b0e913e8e7f" name="a02d2d4fe67fd71db94ddc5036b00a070a3c1c4deb74277426c00a5b0e913e8e7f"></a>SH_DIR16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a9ef30de7440d088235b451fc6385d087" name="a02d2d4fe67fd71db94ddc5036b00a070a9ef30de7440d088235b451fc6385d087"></a>SH_DIR8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a88cdae9d2c0ceb3628de318e8d8349a9" name="a02d2d4fe67fd71db94ddc5036b00a070a88cdae9d2c0ceb3628de318e8d8349a9"></a>SH_DIR8UL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1dfe9b7ef1536a4016065c52ed87e268" name="a02d2d4fe67fd71db94ddc5036b00a070a1dfe9b7ef1536a4016065c52ed87e268"></a>SH_DIR8UW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a5034e39a1a53c0e4cb68060651b382fd" name="a02d2d4fe67fd71db94ddc5036b00a070a5034e39a1a53c0e4cb68060651b382fd"></a>SH_DIR8U&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070acc7c06c1907a6b474481a61545f1f793" name="a02d2d4fe67fd71db94ddc5036b00a070acc7c06c1907a6b474481a61545f1f793"></a>SH_DIR8SW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ae4c4546e2bdf547894029e76a4c4102c" name="a02d2d4fe67fd71db94ddc5036b00a070ae4c4546e2bdf547894029e76a4c4102c"></a>SH_DIR8S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ac19cecda2abd5509cd0a34b3857293ea" name="a02d2d4fe67fd71db94ddc5036b00a070ac19cecda2abd5509cd0a34b3857293ea"></a>SH_DIR4UL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a4047fd49cc734808d78e8008f3b76aca" name="a02d2d4fe67fd71db94ddc5036b00a070a4047fd49cc734808d78e8008f3b76aca"></a>SH_DIR4UW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af4c369610a4e953cf95d061878e1f0dc" name="a02d2d4fe67fd71db94ddc5036b00a070af4c369610a4e953cf95d061878e1f0dc"></a>SH_DIR4U&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a955ebf8b570fb7a342c3b80cc25d643d" name="a02d2d4fe67fd71db94ddc5036b00a070a955ebf8b570fb7a342c3b80cc25d643d"></a>SH_PSHA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070adf8625afd348b7385767b366cfe4eb4f" name="a02d2d4fe67fd71db94ddc5036b00a070adf8625afd348b7385767b366cfe4eb4f"></a>SH_PSHL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070acfa8bb86472e56de08bbc8dc925e4872" name="a02d2d4fe67fd71db94ddc5036b00a070acfa8bb86472e56de08bbc8dc925e4872"></a>SH_DIR5U&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1040f7985fc251c00de9874c62171cbd" name="a02d2d4fe67fd71db94ddc5036b00a070a1040f7985fc251c00de9874c62171cbd"></a>SH_DIR6U&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa9e35a9908f0a6551d25858211baed01" name="a02d2d4fe67fd71db94ddc5036b00a070aa9e35a9908f0a6551d25858211baed01"></a>SH_DIR6S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1004c1e65d6cb315b3057505ce41e932" name="a02d2d4fe67fd71db94ddc5036b00a070a1004c1e65d6cb315b3057505ce41e932"></a>SH_DIR10S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a4b84ca6471cf2e40dc4d3019882245c5" name="a02d2d4fe67fd71db94ddc5036b00a070a4b84ca6471cf2e40dc4d3019882245c5"></a>SH_DIR10SW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aada7220e767f2f2398f6e008bad4a718" name="a02d2d4fe67fd71db94ddc5036b00a070aada7220e767f2f2398f6e008bad4a718"></a>SH_DIR10SL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a331df05964da242c178c33491036731f" name="a02d2d4fe67fd71db94ddc5036b00a070a331df05964da242c178c33491036731f"></a>SH_DIR10SQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ac3fc43833151abad47cb9a01f3ce5a3b" name="a02d2d4fe67fd71db94ddc5036b00a070ac3fc43833151abad47cb9a01f3ce5a3b"></a>SH_DIR16S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af5971f12a875990faf33fad3f232c4eb" name="a02d2d4fe67fd71db94ddc5036b00a070af5971f12a875990faf33fad3f232c4eb"></a>SH_TLS_GD_32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a57f52478b668bf44a7bd1d73b0e74855" name="a02d2d4fe67fd71db94ddc5036b00a070a57f52478b668bf44a7bd1d73b0e74855"></a>SH_TLS_LD_32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8bcb31a476161d21225ab3790a66ccd8" name="a02d2d4fe67fd71db94ddc5036b00a070a8bcb31a476161d21225ab3790a66ccd8"></a>SH_TLS_LDO_32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070adb7c5ea526829c2a75c83266968683f1" name="a02d2d4fe67fd71db94ddc5036b00a070adb7c5ea526829c2a75c83266968683f1"></a>SH_TLS_IE_32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1de443360d5a9c63bd016d976621a8ba" name="a02d2d4fe67fd71db94ddc5036b00a070a1de443360d5a9c63bd016d976621a8ba"></a>SH_TLS_LE_32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1bd3db47c7abd360e870703c4c3b71e8" name="a02d2d4fe67fd71db94ddc5036b00a070a1bd3db47c7abd360e870703c4c3b71e8"></a>SH_TLS_DTPMOD32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a9a86e64597745c4efd651da91f551f8c" name="a02d2d4fe67fd71db94ddc5036b00a070a9a86e64597745c4efd651da91f551f8c"></a>SH_TLS_DTPOFF32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a58275a04b10eb2b24a950301856e62ae" name="a02d2d4fe67fd71db94ddc5036b00a070a58275a04b10eb2b24a950301856e62ae"></a>SH_TLS_TPOFF32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a4fefb06f9a2e6c8155f91f552808bc29" name="a02d2d4fe67fd71db94ddc5036b00a070a4fefb06f9a2e6c8155f91f552808bc29"></a>SH_GOT32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a9b2bf936edff6a3312ec28c71ed07695" name="a02d2d4fe67fd71db94ddc5036b00a070a9b2bf936edff6a3312ec28c71ed07695"></a>SH_PLT32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af8dc5834e2f5f1e4c2e623b282def34b" name="a02d2d4fe67fd71db94ddc5036b00a070af8dc5834e2f5f1e4c2e623b282def34b"></a>SH_COPY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a3142cfbb9584107f22f490df4d65cc64" name="a02d2d4fe67fd71db94ddc5036b00a070a3142cfbb9584107f22f490df4d65cc64"></a>SH_GLOB_DAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aaf6281351e33ab4a4e9b74067ac89f43" name="a02d2d4fe67fd71db94ddc5036b00a070aaf6281351e33ab4a4e9b74067ac89f43"></a>SH_JMP_SLOT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af53ea274a0c76c6ae1658dafed1e7aa0" name="a02d2d4fe67fd71db94ddc5036b00a070af53ea274a0c76c6ae1658dafed1e7aa0"></a>SH_RELATIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8c30e14e97db03cdaffd8e30c3aaf1e0" name="a02d2d4fe67fd71db94ddc5036b00a070a8c30e14e97db03cdaffd8e30c3aaf1e0"></a>SH_GOTOFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad018e16fbaa11747be660ce5345cd495" name="a02d2d4fe67fd71db94ddc5036b00a070ad018e16fbaa11747be660ce5345cd495"></a>SH_GOTPC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ab2d0c40dd75d2f12deba07c5e0e49cc1" name="a02d2d4fe67fd71db94ddc5036b00a070ab2d0c40dd75d2f12deba07c5e0e49cc1"></a>SH_GOTPLT32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070abdee098db3e803b40aa316aad5ddeef5" name="a02d2d4fe67fd71db94ddc5036b00a070abdee098db3e803b40aa316aad5ddeef5"></a>SH_GOT_LOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a60ec4bd1beb6f6d2f3e96d926c2f3ba5" name="a02d2d4fe67fd71db94ddc5036b00a070a60ec4bd1beb6f6d2f3e96d926c2f3ba5"></a>SH_GOT_MEDLOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ae62322750c80d6097fc2e784c250da28" name="a02d2d4fe67fd71db94ddc5036b00a070ae62322750c80d6097fc2e784c250da28"></a>SH_GOT_MEDHI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa08214c256e03b09690857700637d9c5" name="a02d2d4fe67fd71db94ddc5036b00a070aa08214c256e03b09690857700637d9c5"></a>SH_GOT_HI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a0a1886ecaa7502ae6e1ac6abab05394a" name="a02d2d4fe67fd71db94ddc5036b00a070a0a1886ecaa7502ae6e1ac6abab05394a"></a>SH_GOTPLT_LOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af28853cf72ff04c09c372cd2890a76c3" name="a02d2d4fe67fd71db94ddc5036b00a070af28853cf72ff04c09c372cd2890a76c3"></a>SH_GOTPLT_MEDLOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a5e8769f18ebdcabcce3c24011b73c9a8" name="a02d2d4fe67fd71db94ddc5036b00a070a5e8769f18ebdcabcce3c24011b73c9a8"></a>SH_GOTPLT_MEDHI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a9a7190cc9debe80a5b76f626f34b20aa" name="a02d2d4fe67fd71db94ddc5036b00a070a9a7190cc9debe80a5b76f626f34b20aa"></a>SH_GOTPLT_HI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ab0d4d5b69f378d8fcd3020f9a5093898" name="a02d2d4fe67fd71db94ddc5036b00a070ab0d4d5b69f378d8fcd3020f9a5093898"></a>SH_PLT_LOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af9287d0192142aff5d7ce98f45bfd25d" name="a02d2d4fe67fd71db94ddc5036b00a070af9287d0192142aff5d7ce98f45bfd25d"></a>SH_PLT_MEDLOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aafdf64bd13fd01f1b0d9b18ca88cb423" name="a02d2d4fe67fd71db94ddc5036b00a070aafdf64bd13fd01f1b0d9b18ca88cb423"></a>SH_PLT_MEDHI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a08eb309918af56e677a71c90b776da07" name="a02d2d4fe67fd71db94ddc5036b00a070a08eb309918af56e677a71c90b776da07"></a>SH_PLT_HI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad77d0a0be84f3e33f8013ee56d36130b" name="a02d2d4fe67fd71db94ddc5036b00a070ad77d0a0be84f3e33f8013ee56d36130b"></a>SH_GOTOFF_LOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a71150a6c8021d0410338e196cf71b33c" name="a02d2d4fe67fd71db94ddc5036b00a070a71150a6c8021d0410338e196cf71b33c"></a>SH_GOTOFF_MEDLOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a6bfb918510e7df8923dcb01d8c5abc85" name="a02d2d4fe67fd71db94ddc5036b00a070a6bfb918510e7df8923dcb01d8c5abc85"></a>SH_GOTOFF_MEDHI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af52aea6664aaf2384caf631860d0b1f3" name="a02d2d4fe67fd71db94ddc5036b00a070af52aea6664aaf2384caf631860d0b1f3"></a>SH_GOTOFF_HI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa016ac298a4959a08340fdfe7cc7e983" name="a02d2d4fe67fd71db94ddc5036b00a070aa016ac298a4959a08340fdfe7cc7e983"></a>SH_GOTPC_LOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8712bb283079624be3d3360ebcf56240" name="a02d2d4fe67fd71db94ddc5036b00a070a8712bb283079624be3d3360ebcf56240"></a>SH_GOTPC_MEDLOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070acafb0deb7cda9763d160e90ff2778bf8" name="a02d2d4fe67fd71db94ddc5036b00a070acafb0deb7cda9763d160e90ff2778bf8"></a>SH_GOTPC_MEDHI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ab9a06fd944b02e9a2d7b4d75e6459890" name="a02d2d4fe67fd71db94ddc5036b00a070ab9a06fd944b02e9a2d7b4d75e6459890"></a>SH_GOTPC_HI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aba28d5387018aea42beb5146dae79f11" name="a02d2d4fe67fd71db94ddc5036b00a070aba28d5387018aea42beb5146dae79f11"></a>SH_GOT10BY4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8b0e8af30aec2fed7b08c1122ed3c586" name="a02d2d4fe67fd71db94ddc5036b00a070a8b0e8af30aec2fed7b08c1122ed3c586"></a>SH_GOTPLT10BY4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a3a3e8559e847a178232269f9560c0709" name="a02d2d4fe67fd71db94ddc5036b00a070a3a3e8559e847a178232269f9560c0709"></a>SH_GOT10BY8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8656de01d275207f5d76f57920330a64" name="a02d2d4fe67fd71db94ddc5036b00a070a8656de01d275207f5d76f57920330a64"></a>SH_GOTPLT10BY8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ae7bf5a78881989740cb293af253eaf8c" name="a02d2d4fe67fd71db94ddc5036b00a070ae7bf5a78881989740cb293af253eaf8c"></a>SH_COPY64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ab5a1486eb3d050439f7bf5adcf081ba5" name="a02d2d4fe67fd71db94ddc5036b00a070ab5a1486eb3d050439f7bf5adcf081ba5"></a>SH_GLOB_DAT64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad2db8ae14c58c5255f88d4c8cf750115" name="a02d2d4fe67fd71db94ddc5036b00a070ad2db8ae14c58c5255f88d4c8cf750115"></a>SH_JMP_SLOT64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a401d5298900e4b54ff8a98f435e19eac" name="a02d2d4fe67fd71db94ddc5036b00a070a401d5298900e4b54ff8a98f435e19eac"></a>SH_RELATIVE64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a0ca977ab31d41ca5c87d4be71ce3bb8a" name="a02d2d4fe67fd71db94ddc5036b00a070a0ca977ab31d41ca5c87d4be71ce3bb8a"></a>SH_GOT20&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a3e998b2d305deabe968be2fa125ac022" name="a02d2d4fe67fd71db94ddc5036b00a070a3e998b2d305deabe968be2fa125ac022"></a>SH_GOTOFF20&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8a495f58e6bad2b77f39941f936ba9fc" name="a02d2d4fe67fd71db94ddc5036b00a070a8a495f58e6bad2b77f39941f936ba9fc"></a>SH_GOTFUNCDESC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a1b420dd5394d767e984362819dc3d305" name="a02d2d4fe67fd71db94ddc5036b00a070a1b420dd5394d767e984362819dc3d305"></a>SH_GOTFUNCDESC20&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070adfe0575bf177c725db5ea8de63451e2e" name="a02d2d4fe67fd71db94ddc5036b00a070adfe0575bf177c725db5ea8de63451e2e"></a>SH_GOTOFFFUNCDESC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a5775b99361f73f0f1e330f74f2377fed" name="a02d2d4fe67fd71db94ddc5036b00a070a5775b99361f73f0f1e330f74f2377fed"></a>SH_GOTOFFFUNCDESC20&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af8cd36a71c096eaa3dbf86dd1cd51b2e" name="a02d2d4fe67fd71db94ddc5036b00a070af8cd36a71c096eaa3dbf86dd1cd51b2e"></a>SH_FUNCDESC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ad2f859b3e57ff2f68955fd268079cae8" name="a02d2d4fe67fd71db94ddc5036b00a070ad2f859b3e57ff2f68955fd268079cae8"></a>SH_FUNCDESC_VALUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8584f3f4c51de9adfa44b3d9df960c7e" name="a02d2d4fe67fd71db94ddc5036b00a070a8584f3f4c51de9adfa44b3d9df960c7e"></a>SH_SHMEDIA_CODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aea3789fe4f2702bc1fdbc12ca59cb409" name="a02d2d4fe67fd71db94ddc5036b00a070aea3789fe4f2702bc1fdbc12ca59cb409"></a>SH_PT_16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aedfb997ea41f9d1e9212cbe0a205a7bf" name="a02d2d4fe67fd71db94ddc5036b00a070aedfb997ea41f9d1e9212cbe0a205a7bf"></a>SH_IMMS16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070af27608566a6da84ee42cac316ac50d66" name="a02d2d4fe67fd71db94ddc5036b00a070af27608566a6da84ee42cac316ac50d66"></a>SH_IMMU16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a8c9bfa1e34dd62abbbe7f08a15402b72" name="a02d2d4fe67fd71db94ddc5036b00a070a8c9bfa1e34dd62abbbe7f08a15402b72"></a>SH_IMM_LOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa7e1fd42d4c3b3193fcf390a7e2c76f7" name="a02d2d4fe67fd71db94ddc5036b00a070aa7e1fd42d4c3b3193fcf390a7e2c76f7"></a>SH_IMM_LOW16_PCREL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070adb47586eb8e7e12912ed380e06666942" name="a02d2d4fe67fd71db94ddc5036b00a070adb47586eb8e7e12912ed380e06666942"></a>SH_IMM_MEDLOW16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a4141ec22774ad75decdac1820cebabe3" name="a02d2d4fe67fd71db94ddc5036b00a070a4141ec22774ad75decdac1820cebabe3"></a>SH_IMM_MEDLOW16_PCREL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aec0a9e7934d0ef9ba8d78232866a5bbf" name="a02d2d4fe67fd71db94ddc5036b00a070aec0a9e7934d0ef9ba8d78232866a5bbf"></a>SH_IMM_MEDHI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070a7883379267f0cbacf2d10a991bd53574" name="a02d2d4fe67fd71db94ddc5036b00a070a7883379267f0cbacf2d10a991bd53574"></a>SH_IMM_MEDHI16_PCREL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070ac2fbdfa65613fc8c9d7c39c7575604a4" name="a02d2d4fe67fd71db94ddc5036b00a070ac2fbdfa65613fc8c9d7c39c7575604a4"></a>SH_IMM_HI16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070adeae13adeb7794880a00357e6bb1d82b" name="a02d2d4fe67fd71db94ddc5036b00a070adeae13adeb7794880a00357e6bb1d82b"></a>SH_IMM_HI16_PCREL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aea2d924ed7829a69cb1cc7607314c476" name="a02d2d4fe67fd71db94ddc5036b00a070aea2d924ed7829a69cb1cc7607314c476"></a>SH_64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02d2d4fe67fd71db94ddc5036b00a070aa9215ed7291fdaea907d8b1c73605316" name="a02d2d4fe67fd71db94ddc5036b00a070aa9215ed7291fdaea907d8b1c73605316"></a>SH_64_PCREL&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -3986,6 +4248,28 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">uint64_t LIEF::ELF::Relocation::R_RISCV = uint64_t(12) &lt;&lt; <a class="el" href="#abbc5b515b557d00ab9641874db17f9f6">R_BIT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4d5a0a25c9e33639cf88f403c4b1b95" name="ab4d5a0a25c9e33639cf88f403c4b1b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d5a0a25c9e33639cf88f403c4b1b95">&#9670;&#160;</a></span>R_SH4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t LIEF::ELF::Relocation::R_SH4 = uint64_t(14) &lt;&lt; <a class="el" href="#abbc5b515b557d00ab9641874db17f9f6">R_BIT</a></td>
         </tr>
       </table>
   </td>

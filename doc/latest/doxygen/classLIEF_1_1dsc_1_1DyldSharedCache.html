@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -116,6 +116,7 @@ Public Types</h2></td></tr>
 , <a class="el" href="#a8105805c5456d01853167c3bbb9887e5ae46ca329a3d3750e27670f274890af74">DYLD_940</a>
 , <br />
 &#160;&#160;<a class="el" href="#a8105805c5456d01853167c3bbb9887e5afa1f373e65e2f1c7de71376e941a019c">DYLD_1042_1</a>
+, <a class="el" href="#a8105805c5456d01853167c3bbb9887e5ae2b3114325c1086c871f904d6a441c86">DYLD_1231_3</a>
 , <a class="el" href="#a8105805c5456d01853167c3bbb9887e5aba831bdb8ababafc116eb72a52df0b90">UNRELEASED</a>
 <br />
  }</td></tr>
@@ -443,6 +444,8 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a8105805c5456d01853167c3bbb9887e5afa1f373e65e2f1c7de71376e941a019c" name="a8105805c5456d01853167c3bbb9887e5afa1f373e65e2f1c7de71376e941a019c"></a>DYLD_1042_1&#160;</td><td class="fielddoc"><p>dyld-1042.1 (2022-10-19) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a8105805c5456d01853167c3bbb9887e5ae2b3114325c1086c871f904d6a441c86" name="a8105805c5456d01853167c3bbb9887e5ae2b3114325c1086c871f904d6a441c86"></a>DYLD_1231_3&#160;</td><td class="fielddoc"><p>dyld-1231.3 (2024-09-24) </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a8105805c5456d01853167c3bbb9887e5aba831bdb8ababafc116eb72a52df0b90" name="a8105805c5456d01853167c3bbb9887e5aba831bdb8ababafc116eb72a52df0b90"></a>UNRELEASED&#160;</td><td class="fielddoc"><p>This value is used for versions of dyld not publicly released or not yet supported by <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a>. </p>
 </td></tr>
 </table>
@@ -582,7 +585,7 @@ Static Public Member Functions</h2></td></tr>
 <p>One can enable caching by calling this function:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> dyld_cache = <a class="code hl_function" href="namespaceLIEF_1_1dsc.html#aed80f6f2025bd9212805063bdc4dc3d6">LIEF::dsc::load</a>(<span class="stringliteral">&quot;macos-15.0.1/&quot;</span>);</div>
 <div class="line">dyld_cache-&gt;enable_caching(<span class="stringliteral">&quot;/home/user/.cache/lief-dsc&quot;</span>);</div>
-<div class="ttc" id="anamespaceLIEF_1_1dsc_html_aed80f6f2025bd9212805063bdc4dc3d6"><div class="ttname"><a href="namespaceLIEF_1_1dsc.html#aed80f6f2025bd9212805063bdc4dc3d6">LIEF::dsc::load</a></div><div class="ttdeci">std::unique_ptr&lt; DyldSharedCache &gt; load(const std::string &amp;path, const std::string &amp;arch=&quot;&quot;)</div><div class="ttdoc">Load a shared cache from a single file or from a directory specified by the path parameter.</div><div class="ttdef"><b>Definition</b> DyldSharedCache/DyldSharedCache.hpp:281</div></div>
+<div class="ttc" id="anamespaceLIEF_1_1dsc_html_aed80f6f2025bd9212805063bdc4dc3d6"><div class="ttname"><a href="namespaceLIEF_1_1dsc.html#aed80f6f2025bd9212805063bdc4dc3d6">LIEF::dsc::load</a></div><div class="ttdeci">std::unique_ptr&lt; DyldSharedCache &gt; load(const std::string &amp;path, const std::string &amp;arch=&quot;&quot;)</div><div class="ttdoc">Load a shared cache from a single file or from a directory specified by the path parameter.</div><div class="ttdef"><b>Definition</b> DyldSharedCache/DyldSharedCache.hpp:282</div></div>
 </div><!-- fragment --><p>One can also enable this cache optimization <b>globally</b> using the function: <a class="el" href="namespaceLIEF_1_1dsc.html#a1315e214f5697b1988ff64c0a93b237b" title="Enable globally cache/memoization. One can also leverage this function by setting the environment var...">LIEF::dsc::enable_cache</a> or by setting the environment variable <code>DYLDSC_ENABLE_CACHE</code> to 1. </p>
 
 </div>

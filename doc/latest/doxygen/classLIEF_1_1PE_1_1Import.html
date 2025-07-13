@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -123,12 +123,12 @@ Collaboration diagram for LIEF::PE::Import:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac1c9491064940299092c5a7cca719daa" id="r_ac1c9491064940299092c5a7cca719daa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1c9491064940299092c5a7cca719daa">entries_t</a> = std::vector&lt;<a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&gt;</td></tr>
-<tr class="separator:ac1c9491064940299092c5a7cca719daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8dd1edea76de6dce205646d9e21ced8" id="r_ae8dd1edea76de6dce205646d9e21ced8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8dd1edea76de6dce205646d9e21ced8">it_entries</a> = <a class="el" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>&lt;<a class="el" href="#ac1c9491064940299092c5a7cca719daa">entries_t</a>&amp;&gt;</td></tr>
-<tr class="separator:ae8dd1edea76de6dce205646d9e21ced8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898848e857afed94ac4925850c24858b" id="r_a898848e857afed94ac4925850c24858b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a898848e857afed94ac4925850c24858b">it_const_entries</a> = <a class="el" href="namespaceLIEF.html#a8b00ff0290a3d7cdef2fb6502bb54767">const_ref_iterator</a>&lt;const <a class="el" href="#ac1c9491064940299092c5a7cca719daa">entries_t</a>&amp;&gt;</td></tr>
-<tr class="separator:a898848e857afed94ac4925850c24858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed78b55281410c9321e7ffe64de387c0" id="r_aed78b55281410c9321e7ffe64de387c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed78b55281410c9321e7ffe64de387c0">entries_t</a> = std::vector&lt;std::unique_ptr&lt;<a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&gt;&gt;</td></tr>
+<tr class="separator:aed78b55281410c9321e7ffe64de387c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a03b04c4a339a77c46f21f348ef1c5" id="r_a71a03b04c4a339a77c46f21f348ef1c5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a03b04c4a339a77c46f21f348ef1c5">it_entries</a> = <a class="el" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>&lt;<a class="el" href="#aed78b55281410c9321e7ffe64de387c0">entries_t</a>&amp;, <a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>*&gt;</td></tr>
+<tr class="separator:a71a03b04c4a339a77c46f21f348ef1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6455a3c2f9d477e3f9d48cf8da4504" id="r_a9c6455a3c2f9d477e3f9d48cf8da4504"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6455a3c2f9d477e3f9d48cf8da4504">it_const_entries</a> = <a class="el" href="namespaceLIEF.html#a8b00ff0290a3d7cdef2fb6502bb54767">const_ref_iterator</a>&lt;const <a class="el" href="#aed78b55281410c9321e7ffe64de387c0">entries_t</a>&amp;, const <a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>*&gt;</td></tr>
+<tr class="separator:a9c6455a3c2f9d477e3f9d48cf8da4504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classLIEF_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
 <tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object" id="r_abca8d15eca2d1a8ee56d4fdfd4aa7155"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:abca8d15eca2d1a8ee56d4fdfd4aa7155 inherit pub_types_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a> = add_pointer_t&lt;decay_t&lt;T&gt;&gt;</td></tr>
@@ -147,24 +147,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab47d0c9c8921b7c8f1becfd6f783479b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a17fd029fccf788368216554955d564" id="r_a1a17fd029fccf788368216554955d564"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a17fd029fccf788368216554955d564">~Import</a> () override=default</td></tr>
 <tr class="separator:a1a17fd029fccf788368216554955d564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7308accbe37c3d1037fec4a6a6c14da5" id="r_a7308accbe37c3d1037fec4a6a6c14da5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7308accbe37c3d1037fec4a6a6c14da5">Import</a> (const <a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;other)=default</td></tr>
-<tr class="separator:a7308accbe37c3d1037fec4a6a6c14da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35355687a119cbf96abbb10bc4c1b7ab" id="r_a35355687a119cbf96abbb10bc4c1b7ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35355687a119cbf96abbb10bc4c1b7ab">Import</a> (const <a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;other)</td></tr>
+<tr class="separator:a35355687a119cbf96abbb10bc4c1b7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731fa68cdf863c77bc96c97de874511a" id="r_a731fa68cdf863c77bc96c97de874511a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a731fa68cdf863c77bc96c97de874511a">operator=</a> (const <a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;other)</td></tr>
+<tr class="separator:a731fa68cdf863c77bc96c97de874511a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e477ae34857f4b5b8d54c90c8ea145" id="r_a82e477ae34857f4b5b8d54c90c8ea145"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82e477ae34857f4b5b8d54c90c8ea145">Import</a> (<a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="separator:a82e477ae34857f4b5b8d54c90c8ea145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6faa8e88e23fed53874c26e3f267202b" id="r_a6faa8e88e23fed53874c26e3f267202b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6faa8e88e23fed53874c26e3f267202b">operator=</a> (<a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="separator:a6faa8e88e23fed53874c26e3f267202b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8940f1a40c0a2bf7010cc296e410d847" id="r_a8940f1a40c0a2bf7010cc296e410d847"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8940f1a40c0a2bf7010cc296e410d847">operator=</a> (const <a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;other)=default</td></tr>
-<tr class="separator:a8940f1a40c0a2bf7010cc296e410d847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5304847f49b1e6fb60ca59e3d8cb9eb7" id="r_a5304847f49b1e6fb60ca59e3d8cb9eb7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5304847f49b1e6fb60ca59e3d8cb9eb7">forwarder_chain</a> () const</td></tr>
 <tr class="memdesc:a5304847f49b1e6fb60ca59e3d8cb9eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the first forwarder reference.  <br /></td></tr>
 <tr class="separator:a5304847f49b1e6fb60ca59e3d8cb9eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b06ac14366a8e2d5cfbe9452bd39da0" id="r_a8b06ac14366a8e2d5cfbe9452bd39da0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b06ac14366a8e2d5cfbe9452bd39da0">timedatestamp</a> () const</td></tr>
 <tr class="memdesc:a8b06ac14366a8e2d5cfbe9452bd39da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stamp that is set to zero until the image is bound. After the image is bound, this field is set to the time/data stamp of the DLL.  <br /></td></tr>
 <tr class="separator:a8b06ac14366a8e2d5cfbe9452bd39da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f60ab9070430fd8c8b4a901159f1a82" id="r_a3f60ab9070430fd8c8b4a901159f1a82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a898848e857afed94ac4925850c24858b">it_const_entries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f60ab9070430fd8c8b4a901159f1a82">entries</a> () const</td></tr>
+<tr class="memitem:a3f60ab9070430fd8c8b4a901159f1a82" id="r_a3f60ab9070430fd8c8b4a901159f1a82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a9c6455a3c2f9d477e3f9d48cf8da4504">it_const_entries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f60ab9070430fd8c8b4a901159f1a82">entries</a> () const</td></tr>
 <tr class="memdesc:a3f60ab9070430fd8c8b4a901159f1a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator over the <a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html" title="Class that represents an entry (i.e. an import) in the import table (Import).">PE::ImportEntry</a>.  <br /></td></tr>
 <tr class="separator:a3f60ab9070430fd8c8b4a901159f1a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29fbdb2e87a2d4e6c38c232eb3310d6c" id="r_a29fbdb2e87a2d4e6c38c232eb3310d6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae8dd1edea76de6dce205646d9e21ced8">it_entries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fbdb2e87a2d4e6c38c232eb3310d6c">entries</a> ()</td></tr>
+<tr class="memitem:a29fbdb2e87a2d4e6c38c232eb3310d6c" id="r_a29fbdb2e87a2d4e6c38c232eb3310d6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a71a03b04c4a339a77c46f21f348ef1c5">it_entries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fbdb2e87a2d4e6c38c232eb3310d6c">entries</a> ()</td></tr>
 <tr class="separator:a29fbdb2e87a2d4e6c38c232eb3310d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80c71bc2f7edb0166988cde888cf2ced" id="r_a80c71bc2f7edb0166988cde888cf2ced"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80c71bc2f7edb0166988cde888cf2ced">import_address_table_rva</a> () const</td></tr>
 <tr class="memdesc:a80c71bc2f7edb0166988cde888cf2ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">The RVA of the import address table (<code>IAT</code>). The content of this table is <b>identical</b> to the content of the <a class="el" href="classLIEF_1_1PE_1_1Import.html" title="Class that represents a PE import.">Import</a> Lookup Table (<code>ILT</code>) until the image is bound.  <br /></td></tr>
@@ -186,6 +186,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad937618c5242c7a5306443abc8b9b4ae" id="r_ad937618c5242c7a5306443abc8b9b4ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad937618c5242c7a5306443abc8b9b4ae">name</a> (std::string name)</td></tr>
 <tr class="memdesc:ad937618c5242c7a5306443abc8b9b4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current import name.  <br /></td></tr>
 <tr class="separator:ad937618c5242c7a5306443abc8b9b4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cac067824ee92877d10c57004712974" id="r_a2cac067824ee92877d10c57004712974"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cac067824ee92877d10c57004712974">name_rva</a> () const</td></tr>
+<tr class="memdesc:a2cac067824ee92877d10c57004712974"><td class="mdescLeft">&#160;</td><td class="mdescRight">The original name rva.  <br /></td></tr>
+<tr class="separator:a2cac067824ee92877d10c57004712974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310c366668c424e299380b6d51a02e08" id="r_a310c366668c424e299380b6d51a02e08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html">DataDirectory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310c366668c424e299380b6d51a02e08">directory</a> ()</td></tr>
 <tr class="memdesc:a310c366668c424e299380b6d51a02e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html" title="Class that represents a PE data directory entry.">PE::DataDirectory</a> associated with this import. It should be the one at index <a class="el" href="classLIEF_1_1PE_1_1DataDirectory.html#abc50978a5afaff445650cf12221fe879af2d38be552c367cab91be62244d8c893">PE::DataDirectory::TYPES::IMPORT_TABLE</a>.  <br /></td></tr>
 <tr class="separator:a310c366668c424e299380b6d51a02e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +205,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c2c4cea19c26cb86e83c31b88ff81e6" id="r_a4c2c4cea19c26cb86e83c31b88ff81e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c2c4cea19c26cb86e83c31b88ff81e6">add_entry</a> (const std::string &amp;<a class="el" href="#ab1799cce36346c95e8bee77b526e95b8">name</a>)</td></tr>
 <tr class="memdesc:a4c2c4cea19c26cb86e83c31b88ff81e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new import entry with the given name (i.e. an imported function)  <br /></td></tr>
 <tr class="separator:a4c2c4cea19c26cb86e83c31b88ff81e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42227998843b2d6c413b3c556d3f7833" id="r_a42227998843b2d6c413b3c556d3f7833"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42227998843b2d6c413b3c556d3f7833">remove_entry</a> (const std::string &amp;<a class="el" href="#ab1799cce36346c95e8bee77b526e95b8">name</a>)</td></tr>
+<tr class="memdesc:a42227998843b2d6c413b3c556d3f7833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the import entry with the given name.  <br /></td></tr>
+<tr class="separator:a42227998843b2d6c413b3c556d3f7833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685ebe60668386f04c4239014d27636c" id="r_a685ebe60668386f04c4239014d27636c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a685ebe60668386f04c4239014d27636c">remove_entry</a> (uint32_t ordinal)</td></tr>
+<tr class="memdesc:a685ebe60668386f04c4239014d27636c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the import entry with the given ordinal number.  <br /></td></tr>
+<tr class="separator:a685ebe60668386f04c4239014d27636c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50baec9e7b568b143b099bbac05d60ef" id="r_a50baec9e7b568b143b099bbac05d60ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50baec9e7b568b143b099bbac05d60ef">import_lookup_table_rva</a> (uint32_t rva)</td></tr>
 <tr class="separator:a50baec9e7b568b143b099bbac05d60ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a45831cdd83e89114d2863fe5ddf6b9" id="r_a6a45831cdd83e89114d2863fe5ddf6b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a45831cdd83e89114d2863fe5ddf6b9">import_address_table_rva</a> (uint32_t rva)</td></tr>
@@ -215,6 +224,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,42 +244,42 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents a <a class="el" href="namespaceLIEF_1_1PE.html" title="Namespace related to the LIEF&#39;s PE module.">PE</a> import. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ac1c9491064940299092c5a7cca719daa" name="ac1c9491064940299092c5a7cca719daa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1c9491064940299092c5a7cca719daa">&#9670;&#160;</a></span>entries_t</h2>
+<a id="aed78b55281410c9321e7ffe64de387c0" name="aed78b55281410c9321e7ffe64de387c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed78b55281410c9321e7ffe64de387c0">&#9670;&#160;</a></span>entries_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ac1c9491064940299092c5a7cca719daa">LIEF::PE::Import::entries_t</a> = std::vector&lt;<a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&gt;</td>
+          <td class="memname">using <a class="el" href="#aed78b55281410c9321e7ffe64de387c0">LIEF::PE::Import::entries_t</a> = std::vector&lt;std::unique_ptr&lt;<a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a898848e857afed94ac4925850c24858b" name="a898848e857afed94ac4925850c24858b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a898848e857afed94ac4925850c24858b">&#9670;&#160;</a></span>it_const_entries</h2>
+<a id="a9c6455a3c2f9d477e3f9d48cf8da4504" name="a9c6455a3c2f9d477e3f9d48cf8da4504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6455a3c2f9d477e3f9d48cf8da4504">&#9670;&#160;</a></span>it_const_entries</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a898848e857afed94ac4925850c24858b">LIEF::PE::Import::it_const_entries</a> = <a class="el" href="namespaceLIEF.html#a8b00ff0290a3d7cdef2fb6502bb54767">const_ref_iterator</a>&lt;const <a class="el" href="#ac1c9491064940299092c5a7cca719daa">entries_t</a>&amp;&gt;</td>
+          <td class="memname">using <a class="el" href="#a9c6455a3c2f9d477e3f9d48cf8da4504">LIEF::PE::Import::it_const_entries</a> = <a class="el" href="namespaceLIEF.html#a8b00ff0290a3d7cdef2fb6502bb54767">const_ref_iterator</a>&lt;const <a class="el" href="#aed78b55281410c9321e7ffe64de387c0">entries_t</a>&amp;, const <a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>*&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae8dd1edea76de6dce205646d9e21ced8" name="ae8dd1edea76de6dce205646d9e21ced8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8dd1edea76de6dce205646d9e21ced8">&#9670;&#160;</a></span>it_entries</h2>
+<a id="a71a03b04c4a339a77c46f21f348ef1c5" name="a71a03b04c4a339a77c46f21f348ef1c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a03b04c4a339a77c46f21f348ef1c5">&#9670;&#160;</a></span>it_entries</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ae8dd1edea76de6dce205646d9e21ced8">LIEF::PE::Import::it_entries</a> = <a class="el" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>&lt;<a class="el" href="#ac1c9491064940299092c5a7cca719daa">entries_t</a>&amp;&gt;</td>
+          <td class="memname">using <a class="el" href="#a71a03b04c4a339a77c46f21f348ef1c5">LIEF::PE::Import::it_entries</a> = <a class="el" href="classLIEF_1_1ref__iterator.html">ref_iterator</a>&lt;<a class="el" href="#aed78b55281410c9321e7ffe64de387c0">entries_t</a>&amp;, <a class="el" href="classLIEF_1_1PE_1_1ImportEntry.html">ImportEntry</a>*&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -366,14 +379,11 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7308accbe37c3d1037fec4a6a6c14da5" name="a7308accbe37c3d1037fec4a6a6c14da5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7308accbe37c3d1037fec4a6a6c14da5">&#9670;&#160;</a></span>Import() <span class="overload">[4/5]</span></h2>
+<a id="a35355687a119cbf96abbb10bc4c1b7ab" name="a35355687a119cbf96abbb10bc4c1b7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35355687a119cbf96abbb10bc4c1b7ab">&#9670;&#160;</a></span>Import() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LIEF::PE::Import::Import </td>
@@ -382,11 +392,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -561,7 +566,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ae8dd1edea76de6dce205646d9e21ced8">it_entries</a> LIEF::PE::Import::entries </td>
+          <td class="memname"><a class="el" href="#a71a03b04c4a339a77c46f21f348ef1c5">it_entries</a> LIEF::PE::Import::entries </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -586,7 +591,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a898848e857afed94ac4925850c24858b">it_const_entries</a> LIEF::PE::Import::entries </td>
+          <td class="memname"><a class="el" href="#a9c6455a3c2f9d477e3f9d48cf8da4504">it_const_entries</a> LIEF::PE::Import::entries </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -907,8 +912,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8940f1a40c0a2bf7010cc296e410d847" name="a8940f1a40c0a2bf7010cc296e410d847"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8940f1a40c0a2bf7010cc296e410d847">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a2cac067824ee92877d10c57004712974" name="a2cac067824ee92877d10c57004712974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cac067824ee92877d10c57004712974">&#9670;&#160;</a></span>name_rva()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -917,17 +922,36 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
+          <td class="memname">uint32_t LIEF::PE::Import::name_rva </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The original name rva. </p>
+
+</div>
+</div>
+<a id="a731fa68cdf863c77bc96c97de874511a" name="a731fa68cdf863c77bc96c97de874511a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731fa68cdf863c77bc96c97de874511a">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
           <td class="memname"><a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp; LIEF::PE::Import::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classLIEF_1_1PE_1_1Import.html">Import</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -954,6 +978,46 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42227998843b2d6c413b3c556d3f7833" name="a42227998843b2d6c413b3c556d3f7833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42227998843b2d6c413b3c556d3f7833">&#9670;&#160;</a></span>remove_entry() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Import::remove_entry </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the import entry with the given name. </p>
+<p>Return true if the deletion succeed, false otherwise </p>
+
+</div>
+</div>
+<a id="a685ebe60668386f04c4239014d27636c" name="a685ebe60668386f04c4239014d27636c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685ebe60668386f04c4239014d27636c">&#9670;&#160;</a></span>remove_entry() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LIEF::PE::Import::remove_entry </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ordinal</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the import entry with the given ordinal number. </p>
+<p>Return true if the deletion succeed, false otherwise </p>
 
 </div>
 </div>

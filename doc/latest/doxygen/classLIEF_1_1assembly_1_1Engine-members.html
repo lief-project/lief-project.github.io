@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -94,8 +94,10 @@ $(function(){ initResizable(false); });
 
 <p>This is the complete list of members for <a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#a8dee0f87d1408b0b8fe4f9f20b5172b8">assemble</a>(uint64_t address, const std::string &amp;Asm)</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#a56b98d116a146e87420ae1edded23721">assemble</a>(uint64_t address, const std::string &amp;Asm, LIEF::Binary &amp;bin)</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#ad62de25474053dba6b8e27fe1afd61b6">assemble</a>(uint64_t address, const std::string &amp;Asm, AssemblerConfig &amp;config=AssemblerConfig::default_config())</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#abb5750599366d3f7083f7bc6c48f821c">assemble</a>(uint64_t address, const std::string &amp;Asm, LIEF::Binary &amp;bin, AssemblerConfig &amp;config=AssemblerConfig::default_config())</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#acdcb51056e01d5a16f687af765d8e602">assemble</a>(uint64_t address, const llvm::MCInst &amp;inst, LIEF::Binary &amp;bin)</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#ae5581df467bbeab0fd8d6aa839bde23a">assemble</a>(uint64_t address, const std::vector&lt; llvm::MCInst &gt; &amp;inst, LIEF::Binary &amp;bin)</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#ac8a567177ebcf9ab59efca92062093ef">disassemble</a>(const uint8_t *buffer, size_t size, uint64_t addr)</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#a1838b12141ee131e47fe9d3252970bc6">disassemble</a>(const std::vector&lt; uint8_t &gt; &amp;bytes, uint64_t addr)</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html#a59960f86046baed3d850d75a3782551e">Engine</a>()=delete</td><td class="entry"><a class="el" href="classLIEF_1_1assembly_1_1Engine.html">LIEF::assembly::Engine</a></td><td class="entry"></td></tr>

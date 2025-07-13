@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -200,7 +200,9 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a2bfb0c26b5242030337116bef725445f">DYLD_EXPORTS_TRIE</a> = 0x80000033u
 , <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a43421aa3f39ed767ac14308f083fec09">DYLD_CHAINED_FIXUPS</a> = 0x80000034u
 , <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1abb5507cbd8f714f00428e09c76c72787">FILESET_ENTRY</a> = 0x80000035u
-, <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a6acb7808b348218dec2274b1382a33fb">LIEF_UNKNOWN</a> = 0xffee0001u
+, <a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a336e12fbb309dcdd0adae25d7b68e3ae">ATOM_INFO</a> = 0x00000036u
+, <br />
+&#160;&#160;<a class="el" href="classLIEF_1_1MachO_1_1LoadCommand.html#ae233a759e54dbc70715dcfb6465637b1a6acb7808b348218dec2274b1382a33fb">LIEF_UNKNOWN</a> = 0xffee0001u
 <br />
  }</td></tr>
 <tr class="separator:ae233a759e54dbc70715dcfb6465637b1 inherit pub_types_classLIEF_1_1MachO_1_1LoadCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,6 +233,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb9e4624a9e9c1475dacb6558862a254" id="r_afb9e4624a9e9c1475dacb6558862a254"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb9e4624a9e9c1475dacb6558862a254">name</a> () const</td></tr>
 <tr class="memdesc:afb9e4624a9e9c1475dacb6558862a254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library name.  <br /></td></tr>
 <tr class="separator:afb9e4624a9e9c1475dacb6558862a254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2786801daaa7529c5c8ccd6a027ee60" id="r_af2786801daaa7529c5c8ccd6a027ee60"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2786801daaa7529c5c8ccd6a027ee60">name_offset</a> () const</td></tr>
+<tr class="memdesc:af2786801daaa7529c5c8ccd6a027ee60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Original string offset of the name.  <br /></td></tr>
+<tr class="separator:af2786801daaa7529c5c8ccd6a027ee60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5d1be9296682dc63158a40e54c8616" id="r_a1b5d1be9296682dc63158a40e54c8616"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b5d1be9296682dc63158a40e54c8616">timestamp</a> () const</td></tr>
 <tr class="memdesc:a1b5d1be9296682dc63158a40e54c8616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date and Time when the shared library was built.  <br /></td></tr>
 <tr class="separator:a1b5d1be9296682dc63158a40e54c8616"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,9 +249,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acc89dbb21ead3507c6ab1a68a79003e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e87b21830ae037214c59b93468cba5" id="r_a11e87b21830ae037214c59b93468cba5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11e87b21830ae037214c59b93468cba5">timestamp</a> (uint32_t timestamp)</td></tr>
 <tr class="separator:a11e87b21830ae037214c59b93468cba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a065db2cf0eeb44600e21b7934874c9ca" id="r_a065db2cf0eeb44600e21b7934874c9ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a065db2cf0eeb44600e21b7934874c9ca">current_version</a> (<a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a> version)</td></tr>
+<tr class="memitem:a065db2cf0eeb44600e21b7934874c9ca" id="r_a065db2cf0eeb44600e21b7934874c9ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a065db2cf0eeb44600e21b7934874c9ca">current_version</a> (<a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a> <a class="el" href="namespaceLIEF.html#a5e66d3cc97ce43600817fa7c1e7828b6">version</a>)</td></tr>
 <tr class="separator:a065db2cf0eeb44600e21b7934874c9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd2183a6806509b2fe9aa7770b250038" id="r_abd2183a6806509b2fe9aa7770b250038"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd2183a6806509b2fe9aa7770b250038">compatibility_version</a> (<a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a> version)</td></tr>
+<tr class="memitem:abd2183a6806509b2fe9aa7770b250038" id="r_abd2183a6806509b2fe9aa7770b250038"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd2183a6806509b2fe9aa7770b250038">compatibility_version</a> (<a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a> <a class="el" href="namespaceLIEF.html#a5e66d3cc97ce43600817fa7c1e7828b6">version</a>)</td></tr>
 <tr class="separator:abd2183a6806509b2fe9aa7770b250038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3359469da72293956635ed3b68e21085" id="r_a3359469da72293956635ed3b68e21085"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3359469da72293956635ed3b68e21085">print</a> (std::ostream &amp;os) const override</td></tr>
 <tr class="separator:a3359469da72293956635ed3b68e21085"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -302,6 +307,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,10 +326,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a51ecb4971808f9c6f7961be09072d5df" id="r_a51ecb4971808f9c6f7961be09072d5df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51ecb4971808f9c6f7961be09072d5df">int2version</a> (uint32_t version)</td></tr>
+<tr class="memitem:a51ecb4971808f9c6f7961be09072d5df" id="r_a51ecb4971808f9c6f7961be09072d5df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51ecb4971808f9c6f7961be09072d5df">int2version</a> (uint32_t <a class="el" href="namespaceLIEF.html#a5e66d3cc97ce43600817fa7c1e7828b6">version</a>)</td></tr>
 <tr class="memdesc:a51ecb4971808f9c6f7961be09072d5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to convert an integer into a version array.  <br /></td></tr>
 <tr class="separator:a51ecb4971808f9c6f7961be09072d5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bac2652dcc677c6bcaa09124e0d28d8" id="r_a3bac2652dcc677c6bcaa09124e0d28d8"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bac2652dcc677c6bcaa09124e0d28d8">version2int</a> (<a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a> version)</td></tr>
+<tr class="memitem:a3bac2652dcc677c6bcaa09124e0d28d8" id="r_a3bac2652dcc677c6bcaa09124e0d28d8"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bac2652dcc677c6bcaa09124e0d28d8">version2int</a> (<a class="el" href="#a3cf3b78ff9466c7402ab91b157104f83">version_t</a> <a class="el" href="namespaceLIEF.html#a5e66d3cc97ce43600817fa7c1e7828b6">version</a>)</td></tr>
 <tr class="memdesc:a3bac2652dcc677c6bcaa09124e0d28d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to convert a version array into an integer.  <br /></td></tr>
 <tr class="separator:a3bac2652dcc677c6bcaa09124e0d28d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab06cf7a97e13d705d1f034ac4097bfa0" id="r_ab06cf7a97e13d705d1f034ac4097bfa0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLIEF_1_1MachO_1_1DylibCommand.html">DylibCommand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06cf7a97e13d705d1f034ac4097bfa0">weak_dylib</a> (const std::string &amp;<a class="el" href="#afb9e4624a9e9c1475dacb6558862a254">name</a>, uint32_t <a class="el" href="#a1b5d1be9296682dc63158a40e54c8616">timestamp</a>=0, uint32_t <a class="el" href="#a9ea5c6306b0071eab337581b5ff62805">current_version</a>=0, uint32_t compat_version=0)</td></tr>
@@ -883,6 +892,33 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2786801daaa7529c5c8ccd6a027ee60" name="af2786801daaa7529c5c8ccd6a027ee60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2786801daaa7529c5c8ccd6a027ee60">&#9670;&#160;</a></span>name_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LIEF::MachO::DylibCommand::name_offset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Original string offset of the name. </p>
 
 </div>
 </div>

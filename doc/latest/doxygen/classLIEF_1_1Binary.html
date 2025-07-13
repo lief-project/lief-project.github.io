@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -288,11 +288,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1e6ea79071ddbf5480e173bce6954794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89d49c7f58eccd6c4a5762e34eed2ef8" id="r_a89d49c7f58eccd6c4a5762e34eed2ef8"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89d49c7f58eccd6c4a5762e34eed2ef8">print</a> (std::ostream &amp;os) const</td></tr>
 <tr class="separator:a89d49c7f58eccd6c4a5762e34eed2ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5eb2aa9e7dcc80f5e1d1bf11786ddf" id="r_a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c5eb2aa9e7dcc80f5e1d1bf11786ddf">write</a> (const std::string &amp;name)=0</td></tr>
-<tr class="memdesc:a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build &amp; transform the <a class="el" href="classLIEF_1_1Binary.html" title="Abstract binary that exposes an uniform API for the different executable file formats.">Binary</a> object representation into a <em>real</em> executable.  <br /></td></tr>
-<tr class="separator:a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af19982ac1dff060fd3f5441282de847e" id="r_af19982ac1dff060fd3f5441282de847e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af19982ac1dff060fd3f5441282de847e">write</a> (std::ostream &amp;os)=0</td></tr>
-<tr class="separator:af19982ac1dff060fd3f5441282de847e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5568087eb278ec952fb3ac7b8021ab5" id="r_ac5568087eb278ec952fb3ac7b8021ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1DebugInfo.html">DebugInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5568087eb278ec952fb3ac7b8021ab5">debug_info</a> () const</td></tr>
 <tr class="memdesc:ac5568087eb278ec952fb3ac7b8021ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the debug info if present. It can be either a <a class="el" href="classLIEF_1_1dwarf_1_1DebugInfo.html" title="This class represents a DWARF debug information. It can embed different compilation units which can b...">LIEF::dwarf::DebugInfo</a> or a <a class="el" href="classLIEF_1_1pdb_1_1DebugInfo.html" title="This class provides an interface for PDB files. One can instantiate this class using LIEF::pdb::load(...">LIEF::pdb::DebugInfo</a>.  <br /></td></tr>
 <tr class="separator:ac5568087eb278ec952fb3ac7b8021ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,9 +310,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeadea71d8429f6451b706c12425df742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5117be3318002b62e7d40efd69d214f" id="r_ae5117be3318002b62e7d40efd69d214f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab82d8809955b1223cc3c557b6817f4b7">instructions_it</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5117be3318002b62e7d40efd69d214f">disassemble</a> (<a class="el" href="namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305">LIEF::span</a>&lt; uint8_t &gt; buffer, uint64_t address=0) const</td></tr>
 <tr class="separator:ae5117be3318002b62e7d40efd69d214f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f8e4d8c54d3f0bd58d860052432e8f3" id="r_a4f8e4d8c54d3f0bd58d860052432e8f3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f8e4d8c54d3f0bd58d860052432e8f3">assemble</a> (uint64_t address, const std::string &amp;Asm)</td></tr>
-<tr class="memdesc:a4f8e4d8c54d3f0bd58d860052432e8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble <b>and patch</b> the provided assembly code at the specified address.  <br /></td></tr>
-<tr class="separator:a4f8e4d8c54d3f0bd58d860052432e8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e53b554e9d23f92383cfdf5bd17bcf6" id="r_a8e53b554e9d23f92383cfdf5bd17bcf6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e53b554e9d23f92383cfdf5bd17bcf6">assemble</a> (uint64_t address, const std::string &amp;Asm, <a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html">assembly::AssemblerConfig</a> &amp;config=<a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html#a20ed754d9fd884e37e1226bb2feefcbd">assembly::AssemblerConfig::default_config</a>())</td></tr>
+<tr class="memdesc:a8e53b554e9d23f92383cfdf5bd17bcf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble <b>and patch</b> the provided assembly code at the specified address.  <br /></td></tr>
+<tr class="separator:a8e53b554e9d23f92383cfdf5bd17bcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab666e6e95a2536619e0e2794e1c089b9" id="r_ab666e6e95a2536619e0e2794e1c089b9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab666e6e95a2536619e0e2794e1c089b9">assemble</a> (uint64_t address, const llvm::MCInst &amp;inst)</td></tr>
+<tr class="memdesc:ab666e6e95a2536619e0e2794e1c089b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble <b>and patch</b> the address with the given LLVM MCInst.  <br /></td></tr>
+<tr class="separator:ab666e6e95a2536619e0e2794e1c089b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a69f1679c3c6769a32d9206d6762749" id="r_a9a69f1679c3c6769a32d9206d6762749"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a69f1679c3c6769a32d9206d6762749">assemble</a> (uint64_t address, const std::vector&lt; llvm::MCInst &gt; &amp;insts)</td></tr>
+<tr class="memdesc:a9a69f1679c3c6769a32d9206d6762749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble <b>and patch</b> the address with the given LLVM MCInst.  <br /></td></tr>
+<tr class="separator:a9a69f1679c3c6769a32d9206d6762749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f09bab9e9d6f22467bc1da521ea9ad" id="r_a82f09bab9e9d6f22467bc1da521ea9ad"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82f09bab9e9d6f22467bc1da521ea9ad">page_size</a> () const</td></tr>
+<tr class="memdesc:a82f09bab9e9d6f22467bc1da521ea9ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default memory page size according to the architecture and the format of the current binary.  <br /></td></tr>
+<tr class="separator:a82f09bab9e9d6f22467bc1da521ea9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLIEF_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classLIEF_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLIEF_1_1Object.html">LIEF::Object</a></td></tr>
 <tr class="memitem:a6a28bc32d8d9069658636bbfec8b2c8c inherit pub_methods_classLIEF_1_1Object" id="r_a6a28bc32d8d9069658636bbfec8b2c8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6a28bc32d8d9069658636bbfec8b2c8c">Object</a> ()</td></tr>
 <tr class="separator:a6a28bc32d8d9069658636bbfec8b2c8c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,6 +329,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -686,8 +694,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f8e4d8c54d3f0bd58d860052432e8f3" name="a4f8e4d8c54d3f0bd58d860052432e8f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f8e4d8c54d3f0bd58d860052432e8f3">&#9670;&#160;</a></span>assemble()</h2>
+<a id="ab666e6e95a2536619e0e2794e1c089b9" name="ab666e6e95a2536619e0e2794e1c089b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab666e6e95a2536619e0e2794e1c089b9">&#9670;&#160;</a></span>assemble() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,7 +708,36 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>Asm</em></span>&#160;)</td>
+          <td class="paramtype">const llvm::MCInst &amp;</td>          <td class="paramname"><span class="paramname"><em>inst</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assemble <b>and patch</b> the address with the given LLVM MCInst. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Because of ABI compatibility, this MCInst can <b>only be used</b> with the <b>same</b> version of LLVM used by <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a> (see documentation) </dd></dl>
+
+</div>
+</div>
+<a id="a8e53b554e9d23f92383cfdf5bd17bcf6" name="a8e53b554e9d23f92383cfdf5bd17bcf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e53b554e9d23f92383cfdf5bd17bcf6">&#9670;&#160;</a></span>assemble() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; LIEF::Binary::assemble </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>Asm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html">assembly::AssemblerConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html#a20ed754d9fd884e37e1226bb2feefcbd">assembly::AssemblerConfig::default_config</a>()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -711,7 +748,32 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="stringliteral">  xor rax, rbx;</span></div>
 <div class="line"><span class="stringliteral">  mov rcx, rax;</span></div>
 <div class="line"><span class="stringliteral">)asm&quot;);</span></div>
-</div><!-- fragment --> 
+</div><!-- fragment --><p>If you need to configure the assembly engine or to define addresses for symbols, you can provide your own <a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html" title="This class exposes the different elements that can be configured to assemble code.">assembly::AssemblerConfig</a>. </p>
+
+</div>
+</div>
+<a id="a9a69f1679c3c6769a32d9206d6762749" name="a9a69f1679c3c6769a32d9206d6762749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a69f1679c3c6769a32d9206d6762749">&#9670;&#160;</a></span>assemble() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; LIEF::Binary::assemble </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; llvm::MCInst &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>insts</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assemble <b>and patch</b> the address with the given LLVM MCInst. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Because of ABI compatibility, this MCInst can <b>only be used</b> with the <b>same</b> version of LLVM used by <a class="el" href="namespaceLIEF.html" title="LIEF namespace.">LIEF</a> (see documentation) </dd></dl>
+
 </div>
 </div>
 <a id="aa2d3bf61e8f72b5a16f2010600493237" name="aa2d3bf61e8f72b5a16f2010600493237"></a>
@@ -1506,6 +1568,35 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a82f09bab9e9d6f22467bc1da521ea9ad" name="a82f09bab9e9d6f22467bc1da521ea9ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f09bab9e9d6f22467bc1da521ea9ad">&#9670;&#160;</a></span>page_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t LIEF::Binary::page_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the default memory page size according to the architecture and the format of the current binary. </p>
+
+<p>Reimplemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a9843b38842d796382e2b67c8945db43f">LIEF::ELF::Binary</a>.</p>
+
+</div>
+</div>
 <a id="a0a5f897d90c6f1b4d42160c17a5bf7b3" name="a0a5f897d90c6f1b4d42160c17a5bf7b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a5f897d90c6f1b4d42160c17a5bf7b3">&#9670;&#160;</a></span>patch_address() <span class="overload">[1/2]</span></h2>
 
@@ -1548,7 +1639,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#ae1573ba45465f71a00bddd4a9290a4e7">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aca1817f407d6b8b7ae68045cddc174a7">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#ae17ca96521ef2b347b0fbde1b0ab2560">LIEF::PE::Binary</a>.</p>
+<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#ae1573ba45465f71a00bddd4a9290a4e7">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aca1817f407d6b8b7ae68045cddc174a7">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a8024797fb3b0f264a2ad124c0f72c608">LIEF::PE::Binary</a>.</p>
 
 </div>
 </div>
@@ -1600,7 +1691,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a4ff318eb3c847f36a217c8c8c7c08773">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aabb5e6faf53a192fdd95d754de7945f6">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a4ea8b4d3ba3c1e9c1e1e6e4a080f7df5">LIEF::PE::Binary</a>.</p>
+<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a4ff318eb3c847f36a217c8c8c7c08773">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#aabb5e6faf53a192fdd95d754de7945f6">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a1dde9d02549468e93c69e7f353c39420">LIEF::PE::Binary</a>.</p>
 
 </div>
 </div>
@@ -1821,62 +1912,6 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Return an iterator over the abstracted symbols in which the elements <b>can't</b> be modified. </p>
-
-</div>
-</div>
-<a id="a3c5eb2aa9e7dcc80f5e1d1bf11786ddf" name="a3c5eb2aa9e7dcc80f5e1d1bf11786ddf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c5eb2aa9e7dcc80f5e1d1bf11786ddf">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void LIEF::Binary::write </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Build &amp; transform the <a class="el" href="classLIEF_1_1Binary.html" title="Abstract binary that exposes an uniform API for the different executable file formats.">Binary</a> object representation into a <em>real</em> executable. </p>
-
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#a15a0f1e7791e330db816f28085e2bc7d">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#a24941b4e9eeb0dc0f0702c38b29acc19">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#aedd09eb96deccc5ad91675186c6801b5">LIEF::PE::Binary</a>.</p>
-
-</div>
-</div>
-<a id="af19982ac1dff060fd3f5441282de847e" name="af19982ac1dff060fd3f5441282de847e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af19982ac1dff060fd3f5441282de847e">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void LIEF::Binary::write </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classLIEF_1_1ELF_1_1Binary.html#ad5c814805c9b3b86ccf36e425e6672ae">LIEF::ELF::Binary</a>, <a class="el" href="classLIEF_1_1MachO_1_1Binary.html#af664c5e0c30591468309ce9251fad96a">LIEF::MachO::Binary</a>, and <a class="el" href="classLIEF_1_1PE_1_1Binary.html#a6ae24a1e2e813dbd839992719bad0cf5">LIEF::PE::Binary</a>.</p>
 
 </div>
 </div>

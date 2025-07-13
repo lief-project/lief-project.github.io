@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -127,10 +127,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1838b12141ee131e47fe9d3252970bc6" id="r_a1838b12141ee131e47fe9d3252970bc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abe92261c09fbf8b46ae935f0ba938039">instructions_it</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1838b12141ee131e47fe9d3252970bc6">disassemble</a> (const std::vector&lt; uint8_t &gt; &amp;bytes, uint64_t addr)</td></tr>
 <tr class="memdesc:a1838b12141ee131e47fe9d3252970bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disassemble the given vector of bytes with the address specified in the second parameter.  <br /></td></tr>
 <tr class="separator:a1838b12141ee131e47fe9d3252970bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dee0f87d1408b0b8fe4f9f20b5172b8" id="r_a8dee0f87d1408b0b8fe4f9f20b5172b8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dee0f87d1408b0b8fe4f9f20b5172b8">assemble</a> (uint64_t address, const std::string &amp;Asm)</td></tr>
-<tr class="separator:a8dee0f87d1408b0b8fe4f9f20b5172b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b98d116a146e87420ae1edded23721" id="r_a56b98d116a146e87420ae1edded23721"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56b98d116a146e87420ae1edded23721">assemble</a> (uint64_t address, const std::string &amp;Asm, <a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> &amp;bin)</td></tr>
-<tr class="separator:a56b98d116a146e87420ae1edded23721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62de25474053dba6b8e27fe1afd61b6" id="r_ad62de25474053dba6b8e27fe1afd61b6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad62de25474053dba6b8e27fe1afd61b6">assemble</a> (uint64_t address, const std::string &amp;Asm, <a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html">AssemblerConfig</a> &amp;config=<a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html#a20ed754d9fd884e37e1226bb2feefcbd">AssemblerConfig::default_config</a>())</td></tr>
+<tr class="separator:ad62de25474053dba6b8e27fe1afd61b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5750599366d3f7083f7bc6c48f821c" id="r_abb5750599366d3f7083f7bc6c48f821c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb5750599366d3f7083f7bc6c48f821c">assemble</a> (uint64_t address, const std::string &amp;Asm, <a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> &amp;bin, <a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html">AssemblerConfig</a> &amp;config=<a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html#a20ed754d9fd884e37e1226bb2feefcbd">AssemblerConfig::default_config</a>())</td></tr>
+<tr class="separator:abb5750599366d3f7083f7bc6c48f821c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcb51056e01d5a16f687af765d8e602" id="r_acdcb51056e01d5a16f687af765d8e602"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdcb51056e01d5a16f687af765d8e602">assemble</a> (uint64_t address, const llvm::MCInst &amp;inst, <a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> &amp;bin)</td></tr>
+<tr class="separator:acdcb51056e01d5a16f687af765d8e602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5581df467bbeab0fd8d6aa839bde23a" id="r_ae5581df467bbeab0fd8d6aa839bde23a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5581df467bbeab0fd8d6aa839bde23a">assemble</a> (uint64_t address, const std::vector&lt; llvm::MCInst &gt; &amp;inst, <a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> &amp;bin)</td></tr>
+<tr class="separator:ae5581df467bbeab0fd8d6aa839bde23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7fa05597f2e0d33e5c83a755ab49356" id="r_ad7fa05597f2e0d33e5c83a755ab49356"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7fa05597f2e0d33e5c83a755ab49356">~Engine</a> ()</td></tr>
 <tr class="separator:ad7fa05597f2e0d33e5c83a755ab49356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -264,8 +268,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8dee0f87d1408b0b8fe4f9f20b5172b8" name="a8dee0f87d1408b0b8fe4f9f20b5172b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dee0f87d1408b0b8fe4f9f20b5172b8">&#9670;&#160;</a></span>assemble() <span class="overload">[1/2]</span></h2>
+<a id="acdcb51056e01d5a16f687af765d8e602" name="acdcb51056e01d5a16f687af765d8e602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcb51056e01d5a16f687af765d8e602">&#9670;&#160;</a></span>assemble() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,15 +282,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>Asm</em></span>&#160;)</td>
+          <td class="paramtype">const llvm::MCInst &amp;</td>          <td class="paramname"><span class="paramname"><em>inst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bin</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a56b98d116a146e87420ae1edded23721" name="a56b98d116a146e87420ae1edded23721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56b98d116a146e87420ae1edded23721">&#9670;&#160;</a></span>assemble() <span class="overload">[2/2]</span></h2>
+<a id="ad62de25474053dba6b8e27fe1afd61b6" name="ad62de25474053dba6b8e27fe1afd61b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62de25474053dba6b8e27fe1afd61b6">&#9670;&#160;</a></span>assemble() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,6 +309,63 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>Asm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html">AssemblerConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html#a20ed754d9fd884e37e1226bb2feefcbd">AssemblerConfig::default_config</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb5750599366d3f7083f7bc6c48f821c" name="abb5750599366d3f7083f7bc6c48f821c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5750599366d3f7083f7bc6c48f821c">&#9670;&#160;</a></span>assemble() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; LIEF::assembly::Engine::assemble </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>Asm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1Binary.html">LIEF::Binary</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html">AssemblerConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classLIEF_1_1assembly_1_1AssemblerConfig.html#a20ed754d9fd884e37e1226bb2feefcbd">AssemblerConfig::default_config</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5581df467bbeab0fd8d6aa839bde23a" name="ae5581df467bbeab0fd8d6aa839bde23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5581df467bbeab0fd8d6aa839bde23a">&#9670;&#160;</a></span>assemble() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; LIEF::assembly::Engine::assemble </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; llvm::MCInst &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

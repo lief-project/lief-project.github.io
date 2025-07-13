@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.16.0</span>
+   <div id="projectname">LIEF: Library to Instrument Executable Formats<span id="projectnumber">&#160;Version 0.17.0</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classLIEF_1_1ELF_1_1SymbolVersion-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LIEF::ELF::SymbolVersion Class Reference</div></div>
 </div><!--header-->
@@ -147,6 +148,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf1c11a1b49055b22af39621d1b079b9" id="r_abf1c11a1b49055b22af39621d1b079b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1c11a1b49055b22af39621d1b079b9">symbol_version_auxiliary</a> (<a class="el" href="classLIEF_1_1ELF_1_1SymbolVersionAuxRequirement.html">SymbolVersionAuxRequirement</a> &amp;svauxr)</td></tr>
 <tr class="memdesc:abf1c11a1b49055b22af39621d1b079b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the version's auxiliary requirement The given <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersionAuxRequirement.html">SymbolVersionAuxRequirement</a> must be an existing reference in the <a class="el" href="classLIEF_1_1ELF_1_1Binary.html" title="Class which represents an ELF binary.">ELF::Binary</a>.  <br /></td></tr>
 <tr class="separator:abf1c11a1b49055b22af39621d1b079b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b7ce4ac8e7dea122188c21d2fce344" id="r_a50b7ce4ac8e7dea122188c21d2fce344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50b7ce4ac8e7dea122188c21d2fce344">drop_version</a> (uint16_t <a class="el" href="#afa196ae343fc7cc0b9ee8e0642df28bd">value</a>)</td></tr>
+<tr class="memdesc:a50b7ce4ac8e7dea122188c21d2fce344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop the versioning requirement and replace the value (local/global)  <br /></td></tr>
+<tr class="separator:a50b7ce4ac8e7dea122188c21d2fce344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad221e40cb5dadab538be4832c3fda879" id="r_ad221e40cb5dadab538be4832c3fda879"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad221e40cb5dadab538be4832c3fda879">as_global</a> ()</td></tr>
+<tr class="memdesc:ad221e40cb5dadab538be4832c3fda879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefine this version as global by dropping its auxiliary version.  <br /></td></tr>
+<tr class="separator:ad221e40cb5dadab538be4832c3fda879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff109df95ac0ba2f8a446241adbc014" id="r_acff109df95ac0ba2f8a446241adbc014"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff109df95ac0ba2f8a446241adbc014">as_local</a> ()</td></tr>
+<tr class="memdesc:acff109df95ac0ba2f8a446241adbc014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefine this version as local by dropping its auxiliary version.  <br /></td></tr>
+<tr class="separator:acff109df95ac0ba2f8a446241adbc014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1d263ea68d317fcea1f3ae911140e5" id="r_ade1d263ea68d317fcea1f3ae911140e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade1d263ea68d317fcea1f3ae911140e5">value</a> (uint16_t v)</td></tr>
 <tr class="separator:ade1d263ea68d317fcea1f3ae911140e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa52ae989bb17b7a6d2d12bf3e502d9f2" id="r_aa52ae989bb17b7a6d2d12bf3e502d9f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa52ae989bb17b7a6d2d12bf3e502d9f2">accept</a> (<a class="el" href="classLIEF_1_1Visitor.html">Visitor</a> &amp;visitor) const override</td></tr>
@@ -158,6 +168,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275f1a7e38605e3fa1b83b9df8d81c3a inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object" id="r_a8c0a1846d54bf97c48fbaef44308fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a8c0a1846d54bf97c48fbaef44308fb6c">operator=</a> (const <a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;other)</td></tr>
 <tr class="separator:a8c0a1846d54bf97c48fbaef44308fb6c inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object" id="r_ae87280d65682472b3d4ba3592200ad4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#ae87280d65682472b3d4ba3592200ad4d">Object</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae87280d65682472b3d4ba3592200ad4d inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object" id="r_a6e7794006982d4f24a37c86227c78014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a6e7794006982d4f24a37c86227c78014">operator=</a> (<a class="el" href="classLIEF_1_1Object.html">Object</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a6e7794006982d4f24a37c86227c78014 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object" id="r_a5969bd8a4caf39f9de98c361c69a5544"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLIEF_1_1Object.html#abca8d15eca2d1a8ee56d4fdfd4aa7155">output_t</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLIEF_1_1Object.html#a5969bd8a4caf39f9de98c361c69a5544">as</a> ()</td></tr>
 <tr class="separator:a5969bd8a4caf39f9de98c361c69a5544 inherit pub_methods_classLIEF_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +193,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac3292ad165bd98b92381ebbbd6c7689b" id="r_ac3292ad165bd98b92381ebbbd6c7689b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersion.html">SymbolVersion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3292ad165bd98b92381ebbbd6c7689b">global</a> ()</td></tr>
 <tr class="memdesc:ac3292ad165bd98b92381ebbbd6c7689b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a <em>global</em> <a class="el" href="classLIEF_1_1ELF_1_1SymbolVersion.html" title="Class which represents an entry defined in the DT_VERSYM dynamic entry.">SymbolVersion</a>.  <br /></td></tr>
 <tr class="separator:ac3292ad165bd98b92381ebbbd6c7689b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a8bfc3f2ada18109f0d43d6caea5f53f1" id="r_a8bfc3f2ada18109f0d43d6caea5f53f1"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bfc3f2ada18109f0d43d6caea5f53f1">LOCAL_VERSION</a> = 0</td></tr>
+<tr class="separator:a8bfc3f2ada18109f0d43d6caea5f53f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8184a182de7029f8b6d9dbb7d5e051" id="r_a3b8184a182de7029f8b6d9dbb7d5e051"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b8184a182de7029f8b6d9dbb7d5e051">GLOBAL_VERSION</a> = 1</td></tr>
+<tr class="separator:a3b8184a182de7029f8b6d9dbb7d5e051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -318,6 +339,89 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classLIEF_1_1Object.html#a117a59566f66ec953de6bef4526f98b2">LIEF::Object</a>.</p>
+
+</div>
+</div>
+<a id="ad221e40cb5dadab538be4832c3fda879" name="ad221e40cb5dadab538be4832c3fda879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad221e40cb5dadab538be4832c3fda879">&#9670;&#160;</a></span>as_global()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LIEF::ELF::SymbolVersion::as_global </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redefine this version as global by dropping its auxiliary version. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#acff109df95ac0ba2f8a446241adbc014" title="Redefine this version as local by dropping its auxiliary version.">as_local()</a> <a class="el" href="#a50b7ce4ac8e7dea122188c21d2fce344" title="Drop the versioning requirement and replace the value (local/global)">drop_version()</a> </dd></dl>
+
+</div>
+</div>
+<a id="acff109df95ac0ba2f8a446241adbc014" name="acff109df95ac0ba2f8a446241adbc014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff109df95ac0ba2f8a446241adbc014">&#9670;&#160;</a></span>as_local()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LIEF::ELF::SymbolVersion::as_local </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redefine this version as local by dropping its auxiliary version. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad221e40cb5dadab538be4832c3fda879" title="Redefine this version as global by dropping its auxiliary version.">as_global()</a> <a class="el" href="#a50b7ce4ac8e7dea122188c21d2fce344" title="Drop the versioning requirement and replace the value (local/global)">drop_version()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a50b7ce4ac8e7dea122188c21d2fce344" name="a50b7ce4ac8e7dea122188c21d2fce344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50b7ce4ac8e7dea122188c21d2fce344">&#9670;&#160;</a></span>drop_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LIEF::ELF::SymbolVersion::drop_version </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drop the versioning requirement and replace the value (local/global) </p>
 
 </div>
 </div>
@@ -550,6 +654,51 @@ Additional Inherited Members</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3b8184a182de7029f8b6d9dbb7d5e051" name="a3b8184a182de7029f8b6d9dbb7d5e051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8184a182de7029f8b6d9dbb7d5e051">&#9670;&#160;</a></span>GLOBAL_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::ELF::SymbolVersion::GLOBAL_VERSION = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bfc3f2ada18109f0d43d6caea5f53f1" name="a8bfc3f2ada18109f0d43d6caea5f53f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bfc3f2ada18109f0d43d6caea5f53f1">&#9670;&#160;</a></span>LOCAL_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LIEF::ELF::SymbolVersion::LOCAL_VERSION = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
