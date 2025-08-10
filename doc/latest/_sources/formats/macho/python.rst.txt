@@ -128,6 +128,17 @@ MainCommand
 ----------
 
 
+NoteCommand
+***********
+
+.. lief-inheritance:: lief._lief.MachO.NoteCommand
+  :top-classes: lief._lief.MachO.LoadCommand
+  :parts: 2
+
+.. autoclass:: lief.MachO.NoteCommand
+
+----------
+
 Symbol
 ******
 
@@ -184,6 +195,30 @@ Function starts
 
 
 .. autoclass:: lief.MachO.FunctionStarts
+
+----------
+
+Function Variants
+*****************
+
+.. lief-inheritance:: lief._lief.MachO.FunctionVariants
+  :top-classes: lief._lief.MachO.LoadCommand
+  :parts: 2
+
+
+.. autoclass:: lief.MachO.FunctionVariants
+
+----------
+
+Function Variant Fixups
+***********************
+
+.. lief-inheritance:: lief._lief.MachO.FunctionVariantFixups
+  :top-classes: lief._lief.MachO.LoadCommand
+  :parts: 2
+
+
+.. autoclass:: lief.MachO.FunctionVariantFixups
 
 ----------
 
@@ -386,7 +421,6 @@ Sub Framework
 .. autoclass:: lief.MachO.SubFramework
 
 ----------
-
 
 Sub Client
 **********

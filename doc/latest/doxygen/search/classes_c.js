@@ -10,7 +10,7 @@ var searchData=
   ['mapitem_7',['MapItem',['../classLIEF_1_1DEX_1_1MapItem.html',1,'LIEF::DEX']]],
   ['maplist_8',['MapList',['../classLIEF_1_1DEX_1_1MapList.html',1,'LIEF::DEX']]],
   ['mappinginfo_9',['MappingInfo',['../classLIEF_1_1dsc_1_1MappingInfo.html',1,'LIEF::dsc']]],
-  ['member_10',['Member',['../classLIEF_1_1dwarf_1_1types_1_1ClassLike_1_1Member.html',1,'LIEF::dwarf::types::ClassLike']]],
+  ['member_10',['Member',['../classLIEF_1_1dwarf_1_1editor_1_1StructType_1_1Member.html',1,'LIEF::dwarf::editor::StructType::Member'],['../classLIEF_1_1dwarf_1_1types_1_1ClassLike_1_1Member.html',1,'LIEF::dwarf::types::ClassLike::Member']]],
   ['memory_11',['Memory',['../classLIEF_1_1assembly_1_1aarch64_1_1operands_1_1Memory.html',1,'LIEF::assembly::aarch64::operands::Memory'],['../classLIEF_1_1assembly_1_1x86_1_1operands_1_1Memory.html',1,'LIEF::assembly::x86::operands::Memory']]],
   ['memorystream_12',['MemoryStream',['../classLIEF_1_1MemoryStream.html',1,'LIEF']]],
   ['metadata_13',['Metadata',['../classLIEF_1_1objc_1_1Metadata.html',1,'LIEF::objc']]],
