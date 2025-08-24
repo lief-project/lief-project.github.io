@@ -45,3 +45,13 @@ SubCache
 ********
 
 .. doxygenclass:: LIEF::dsc::SubCache
+
+
+Utilities
+*********
+
+.. doxygenfunction:: LIEF::dsc::is_shared_cache(BinaryStream&)
+
+.. doxygenfunction:: LIEF::dsc::is_shared_cache(const std::vector< uint8_t > &)
+
+.. doxygenfunction:: LIEF::dsc::is_shared_cache(const uint8_t *, size_t)
