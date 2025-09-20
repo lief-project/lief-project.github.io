@@ -3,6 +3,11 @@
 :fa:`brands fa-rust` Rust
 ======================================
 
+.. note::
+
+  The API is documented here |lief-rust-doc| and the nightly doc is
+  here: |lief-rust-doc-nightly|.
+
 .. code-block:: toml
 
   [package]
@@ -13,8 +18,12 @@
   [dependencies]
   lief = { git = "https://github.com/lief-project/LIEF", branch = "main" }
 
-The API is documented here: https://docs.rs/crate/lief/latest and the nightly
-documentation is available here: https://lief-rs.s3.fr-par.scw.cloud/doc/latest/lief/index.html
+
+.. warning::
+
+   LIEF rust bindings are not on ``docs.rs`` because of network restrictions:
+   https://github.com/rust-lang/docs.rs/issues/2563
+
 
 Precompiled FFI Bindings
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,6 +45,8 @@ To avoid waiting on tasks that can be pre-computed, LIEF pre-compiles these elem
 and download them either from Github (for release) or a S3 bucket for nightly
 builds.
 
+
+.. _lief-rust-precompiled:
 
 ``LIEF_RUST_PRECOMPILED``
 --------------------------
@@ -61,23 +72,35 @@ This variable can also be used while building with in **offline** mode (e.g.
 
 As of now, the following targets are supported with pre-compilation:
 
-+--------------------------------+--------------------------------------------------------+
-| Target                         | Description                                            |
-+================================+========================================================+
-| ``x86_64-unknown-linux-gnu``   | Regular Linux x86-64 (Ubuntu 20.04, Debian 11.5, ...)  |
-+--------------------------------+--------------------------------------------------------+
-| ``aarch64-unknown-linux-gnu``  | Linux aarch64 (Debian 12+)                             |
-+--------------------------------+--------------------------------------------------------+
-| ``x86_64-apple-darwin``        | macOS 11+ x86-64                                       |
-+--------------------------------+--------------------------------------------------------+
-| ``aarch64-apple-darwin``       | macOS 11+ arm64 (Apple Silicon)                        |
-+--------------------------------+--------------------------------------------------------+
-| ``aarch64-apple-ios``          | iOS 12+                                                |
-+--------------------------------+--------------------------------------------------------+
-| ``x86_64-pc-windows-msvc[MT]`` | Regular Windows x86-64 (static UCRT runtime)           |
-+--------------------------------+--------------------------------------------------------+
-| ``x86_64-pc-windows-msvc[MD]`` | Regular Windows x86-64 (dynamic UCRT runtime ``.dll``) |
-+--------------------------------+--------------------------------------------------------+
++---------------------------------+--------------------------------------------------------+
+| Target                          | Description                                            |
++=================================+========================================================+
+| ``x86_64-unknown-linux-gnu``    | Regular Linux x86-64 (Ubuntu 19.10, Debian 10, ...)    |
++---------------------------------+--------------------------------------------------------+
+| ``i686-unknown-linux-gnu``      | Regular Linux i686 (Ubuntu 19.10, Debian 10, ...)      |
++---------------------------------+--------------------------------------------------------+
+| ``x86_64-unknown-linux-musl``   | Musl target that allows full static build              |
++---------------------------------+--------------------------------------------------------+
+| ``i686-unknown-linux-musl``     | Linux i686 with Musl                                   |
++---------------------------------+--------------------------------------------------------+
+| ``aarch64-unknown-linux-gnu``   | Linux aarch64 (Debian 12+)                             |
++---------------------------------+--------------------------------------------------------+
+| ``aarch64-unknown-linux-musl``  | Linux aarch64 with Musl                                |
++---------------------------------+--------------------------------------------------------+
+| ``x86_64-apple-darwin``         | macOS 11+ x86-64                                       |
++---------------------------------+--------------------------------------------------------+
+| ``aarch64-apple-darwin``        | macOS 11+ arm64 (Apple Silicon)                        |
++---------------------------------+--------------------------------------------------------+
+| ``aarch64-apple-ios``           | iOS 12+                                                |
++---------------------------------+--------------------------------------------------------+
+| ``x86_64-pc-windows-msvc[MT]``  | Regular Windows x86-64 (static UCRT runtime)           |
++---------------------------------+--------------------------------------------------------+
+| ``x86_64-pc-windows-msvc[MD]``  | Regular Windows x86-64 (dynamic UCRT runtime ``.dll``) |
++---------------------------------+--------------------------------------------------------+
+| ``aarch64-pc-windows-msvc[MT]`` | Regular Windows arm64 (static UCRT runtime)            |
++---------------------------------+--------------------------------------------------------+
+| ``aarch64-pc-windows-msvc[MD]`` | Regular Windows arm64 (dynamic UCRT runtime ``.dll``)  |
++---------------------------------+--------------------------------------------------------+
 
 Precompilation
 --------------

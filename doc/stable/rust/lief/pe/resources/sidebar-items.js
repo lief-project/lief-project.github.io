@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Node"],"struct":["Data","Directory","Manager"],"trait":["NodeBase"],"type":["Children"]};
+window.SIDEBAR_ITEMS = {"enum":["Node","Types"],"struct":["Data","Directory","Manager"],"trait":["NodeBase"],"type":["Children"]};

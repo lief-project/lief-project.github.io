@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["DynamicSymbolCommand"]};
+window.SIDEBAR_ITEMS = {"struct":["DynamicSymbolCommand"],"type":["IndirectSymbols"]};
