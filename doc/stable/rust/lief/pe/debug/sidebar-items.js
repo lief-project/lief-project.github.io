@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Entries","Type"],"struct":["CodeView","CodeViewPDB","Generic","Pogo","PogoEntry","Repro"],"trait":["DebugEntry"],"type":["PogoEntries"]};
+window.SIDEBAR_ITEMS = {"enum":["ChecksumAlgorithm","Entries","Type"],"struct":["CodeView","CodeViewPDB","ExDllCharacteristics","ExtendedDLLCharacteristics","FPO","FPOEntry","Generic","PDBChecksum","Pogo","PogoEntry","Repro","VCFeature"],"trait":["DebugEntry"],"type":["FPOEntries","PogoEntries"]};
