@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+  <meta name="Description" content="LIEF Documentation">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  
+
+  <script src="../../../../_static/javascripts/vendor.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  
+  
+    <link rel="apple-touch-icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <title>Ghidra - Analyzers - Exceptions &#8212; LIEF Documentation</title>
+  <link rel="stylesheet" href="../../../../_static/fonts/material-icons.css"/>
+  <link rel="stylesheet" href="../../../../_static/stylesheets/vendor.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js" ></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=d8a2add5" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/basic.css?v=29da98fa" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=968db012" />
+    <script src="../../../../_static/documentation_options.js?v=8d563738"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="BinaryNinja" href="../../../binaryninja/index.html" />
+    <link rel="prev" title="Ghidra - Analyzers - IMAGE_LOAD_CONFIG_DIRECTORY" href="../loadconfig-analyzer/index.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/stylesheets/theme.css"/>
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=cyan>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" role="navigation">
+  <a href="../../../../index.html" class="navbar-brand">LIEF Documentation</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center mt-2 mt-lg-0" id="navbar-collapse">
+    <ul class="navbar-nav position-relative px-lg-6 px-xl-8">
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re">
+                <i class="fa-solid fa-house mr-3"></i>Home
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/blog">
+                <i class="fa-solid fa-rss mr-3"></i>Blog
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/download">
+                <i class="fa-solid fa-download mr-3"></i>Download
+              </a>
+          </li>
+        <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-book mr-3"></i>Documentation
+            </a>
+            <div class="dropdown-menu" role="menu">
+             <a class="dropdown-item" href="https://lief.re/doc/latest/doxygen">Doxygen</a>
+            </div>
+          </li>
+        
+          
+          <li class="nav-item">
+              <a class="nav-link" href="https://lief.re/about">
+                <i class="fa-solid fa-bars-staggered mr-3"></i>About
+              </a>
+          </li>
+        <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+          <a class="hover-lift-light mt-1" href="https://discord.gg/jGQtyAYChJ" target="_blank">
+            <i class="fab fa-2x fa-discord text-darkblue  mr-3"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/sponsors/lief-project" class="btn btn-outline-pink"
+            target="_blank">
+            <i class="fa-solid fa-heart mr-3"></i>
+            Sponsor
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="container-fluid container-docs">
+    <div class="row">
+      
+<div class="col-12 col-lg-3 col-xl-2 border-lg-right py-lg-5 pl-lg-4 docs-sidebar docs-sidebar-left">
+  <div class="collapse d-lg-block mb-6 mb-lg-0" id="sidebar-collapse">
+    <form action="../../../../search.html" method="GET" name="search">
+      <input type="text" class="form-control" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active" name="q">
+    </form>
+
+    
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-door-open"></em> Introduction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../installation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-gears"></em> Installation and Integration</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../compilation.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-laptop-code"></em> Compilation</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-sitemap"> </i>Formats</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../formats/elf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-linux"></em> ELF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../formats/macho/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em>  Mach-O</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../formats/pe/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  PE</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../formats/coff/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em>  COFF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../formats/android/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-android"></em> Android</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-code"> </i>API</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../api/binary_abstraction/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-uncharted"></em> Binary Abstraction</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../api/utilities/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-hand-holding-hand"></em> Utilities</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../api/error_handling/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-triangle-exclamation"></em> Error Handling</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../api/logging/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-rectangle-list"></em> Logging</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../api/cpp/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-regular fa-file-code"></em> C++</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../api/rust/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-rust"></em> Rust</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-hat-wizard"> </i>LIEF Extended</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/intro.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-cubes"></em> What is LIEF Extended?</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/debug_info/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-magnifying-glass"></em> Debug Info</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/dwarf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-bars-staggered"></em> DWARF</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/pdb/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-windows"></em> PDB</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/objc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-brands fa-apple"></em> Objective-C</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/dsc/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-diagram-predecessor"></em> Dyld Shared Cache</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/disassembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dna"></em> Disassembler</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../extended/assembler/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-secret"></em> Assembler</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-puzzle-piece"> </i>Plugins</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-dragon"></em> Ghidra</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../binaryninja/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-user-ninja"></em> BinaryNinja</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-toolbox"> </i>Tools</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tools/lief-patchelf/index.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-screwdriver-wrench"></em> lief-patchelf</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-solid fa-layer-group"> </i>Tutorials</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/01_play_with_formats.html" class="text-darkblue font-size-sm d-block mb-2">01 - Parse and manipulate formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/02_pe_from_scratch.html" class="text-darkblue font-size-sm d-block mb-2">02 - Create a PE from scratch (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/03_elf_change_symbols.html" class="text-darkblue font-size-sm d-block mb-2">03 - Play with ELF symbols</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/04_elf_hooking.html" class="text-darkblue font-size-sm d-block mb-2">04 - ELF Hooking</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/05_elf_infect_plt_got.html" class="text-darkblue font-size-sm d-block mb-2">05 - Infecting the plt/got</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/06_pe_hooking.html" class="text-darkblue font-size-sm d-block mb-2">06 - PE Hooking (Deprecated)</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/07_pe_resource.html" class="text-darkblue font-size-sm d-block mb-2">07 - PE Resources</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/08_elf_bin2lib.html" class="text-darkblue font-size-sm d-block mb-2">08 - Transforming an ELF executable into a library</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/09_frida_lief.html" class="text-darkblue font-size-sm d-block mb-2">09 - How to use frida on a non-rooted device</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/10_android_formats.html" class="text-darkblue font-size-sm d-block mb-2">10 - Android formats</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/11_macho_modification.html" class="text-darkblue font-size-sm d-block mb-2">11 - Mach-O Modification</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/12_elf_coredump.html" class="text-darkblue font-size-sm d-block mb-2">12 - ELF Coredump</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../tutorials/13_pe_authenticode.html" class="text-darkblue font-size-sm d-block mb-2">13 - PE Authenticode</a></li>
+          
+        </ul>
+      
+
+      
+        <div class="text-darkblue text-uppercase font-size-normal font-weight-bolder mt-4 pt-2 mb-2">
+          <span class="caption-text"><i class="fa-brands fa-space-awesome"> </i>Extra Information</span>
+        </div>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../references.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-fa-solid fa-book-bookmark"></em> References</a></li>
+          
+        </ul>
+      
+
+      
+        <ul class="list-unstyled mt-3">
+          <li><a href="../../../../changelog.html" class="text-darkblue font-size-sm d-block mb-2"><em class="fa fa-solid fa-code-compare"></em> Changelog</a></li>
+          
+        </ul>
+      
+  </div>
+  <hr />
+  <span class="svg-icon text-purple mr-1 relative-top--1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-d</title><circle cx="160" cy="96" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><circle cx="160" cy="416" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><line x1="160" y1="368" x2="160" y2="144" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><circle cx="352" cy="160" r="48" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></circle><path d="M352,208c0,128-192,48-192,160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+  </span>
+  <a href="https://github.com/lief-project/LIEF/commits/5e10f16d" class="text-darkblue">1.0.0 (5e10f16d)</a>
+    <br>
+    Updated on 01/11/2025, 19:38:22.
+</div>
+
+
+
+      <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-lg-5 px-lg-6 mb-8">
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item">
+              <a href="../../../../index.html" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+            </li>
+                
+                <li class="breadcrumb-item"><a href="../../index.html"><em class="fa fa-solid fa-dragon"></em> Ghidra</a></li>
+                
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"><em class="fa fa-solid fa-object-ungroup"></em> Ghidra - Analyzers - Exceptions</a></li>
+          </ol>
+        </nav>
+        
+        
+  <section id="ghidra-analyzers-exceptions">
+<span id="plugins-ghidra-analyzers-exceptions"></span><h1 id="plugins-ghidra-analyzers-exceptions-analyzer-index--page-root"><em class="fa fa-solid fa-object-ungroup"></em> Ghidra - Analyzers - Exceptions<a class="headerlink" href="#plugins-ghidra-analyzers-exceptions-analyzer-index--page-root" title="Link to this heading">¶</a></h1>
+<p>This analyzer improves the representation and underlying data of PE exceptions
+metadata, primarily for ARM64 and ARM64EC binaries.</p>
+<img-comparison-slider class="img-comparison-slider-div" style="margin-bottom:6px;">
+<div slot="first"><?xml version="1.0" ?>
+<svg height="583" viewbox="0 0 1153 583" width="1153" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g font-family="JetBrains Mono" font-size="12px" font-weight="600">
+<rect fill="#1c1d1e" height="583" width="1153" x="0" y="0"></rect>
+<text x="22" xml:space="preserve" y="22"><tspan fill="#d3d3d3">140017000</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="39"><tspan fill="#d3d3d3">140017001</tspan><tspan fill="#87cefa"> 10</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">10h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="56"><tspan fill="#d3d3d3">140017002</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="73"><tspan fill="#d3d3d3">140017003</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="90"><tspan fill="#d3d3d3">140017004</tspan><tspan fill="#87cefa"> 40</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">40h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">@</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="107"><tspan fill="#d3d3d3">140017005</tspan><tspan fill="#87cefa"> 27</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">27h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">'</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="124"><tspan fill="#d3d3d3">140017006</tspan><tspan fill="#87cefa"> 01</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">01h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="141"><tspan fill="#d3d3d3">140017007</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="158"><tspan fill="#d3d3d3">140017008</tspan><tspan fill="#87cefa"> 20</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">20h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="175"><tspan fill="#d3d3d3">140017009</tspan><tspan fill="#87cefa"> 10</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">10h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="192"><tspan fill="#d3d3d3">14001700a</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="209"><tspan fill="#d3d3d3">14001700b</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="226"><tspan fill="#d3d3d3">14001700c</tspan><tspan fill="#87cefa"> 4c</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">4Ch</tspan><tspan>    </tspan><tspan fill="#d3d3d3">L</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="243"><tspan fill="#d3d3d3">14001700d</tspan><tspan fill="#87cefa"> 27</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">27h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">'</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="260"><tspan fill="#d3d3d3">14001700e</tspan><tspan fill="#87cefa"> 01</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">01h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="277"><tspan fill="#d3d3d3">14001700f</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="294"><tspan fill="#d3d3d3">140017010</tspan><tspan fill="#87cefa"> 60</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">60h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">`</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="311"><tspan fill="#d3d3d3">140017011</tspan><tspan fill="#87cefa"> 10</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">10h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="328"><tspan fill="#d3d3d3">140017012</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="345"><tspan fill="#d3d3d3">140017013</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="362"><tspan fill="#d3d3d3">140017014</tspan><tspan fill="#87cefa"> 5c</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">5Ch</tspan><tspan>    </tspan><tspan fill="#d3d3d3">\</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="379"><tspan fill="#d3d3d3">140017015</tspan><tspan fill="#87cefa"> 27</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">27h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">'</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="396"><tspan fill="#d3d3d3">140017016</tspan><tspan fill="#87cefa"> 01</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">01h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="413"><tspan fill="#d3d3d3">140017017</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="430"><tspan fill="#d3d3d3">140017018</tspan><tspan fill="#87cefa"> 80</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">80h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="447"><tspan fill="#d3d3d3">140017019</tspan><tspan fill="#87cefa"> 10</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">10h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="464"><tspan fill="#d3d3d3">14001701a</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="481"><tspan fill="#d3d3d3">14001701b</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="498"><tspan fill="#d3d3d3">14001701c</tspan><tspan fill="#87cefa"> 6c</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">6Ch</tspan><tspan>    </tspan><tspan fill="#d3d3d3">l</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="515"><tspan fill="#d3d3d3">14001701d</tspan><tspan fill="#87cefa"> 27</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">27h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">'</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="532"><tspan fill="#d3d3d3">14001701e</tspan><tspan fill="#87cefa"> 01</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">01h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="549"><tspan fill="#d3d3d3">14001701f</tspan><tspan fill="#87cefa"> 00</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="566"><tspan fill="#d3d3d3">140017020</tspan><tspan fill="#87cefa"> e0</tspan><tspan>            </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>                         </tspan><tspan fill="#70c070">E0h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="583"></text>
+</g>
+</svg>
+</div>
+<div slot="second"><?xml version="1.0" ?>
+<svg height="583" viewbox="0 0 1153 583" width="1153" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g font-family="JetBrains Mono" font-size="12px" font-weight="600">
+<rect fill="#1c1d1e" height="583" width="1153" x="0" y="0"></rect>
+<text x="22" xml:space="preserve" y="22"><tspan fill="#d3d3d3">140017000</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 40</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="39"><tspan>      </tspan><tspan fill="#d3d3d3">140017000</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001000</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan>     </tspan><tspan fill="#70a070">XREF[2]:   14000029c(*), 140011238</tspan><tspan fill="#d3d3d3">(</tspan><tspan fill="#d3d3d3">*</tspan><tspan fill="#d3d3d3">)</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="56"><tspan>      </tspan><tspan fill="#d3d3d3">140017004</tspan><tspan fill="#87cefa"> 40</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012740</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="73"><tspan fill="#d3d3d3">140017008</tspan><tspan fill="#87cefa"> 20</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 4c</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="90"><tspan>      </tspan><tspan fill="#d3d3d3">140017008</tspan><tspan fill="#87cefa"> 20</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001020</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="107"><tspan>      </tspan><tspan fill="#d3d3d3">14001700c</tspan><tspan fill="#87cefa"> 4c</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_14001274c</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="124"><tspan fill="#d3d3d3">140017010</tspan><tspan fill="#87cefa"> 60</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 5c</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="141"><tspan>      </tspan><tspan fill="#d3d3d3">140017010</tspan><tspan fill="#87cefa"> 60</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001060</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="158"><tspan>      </tspan><tspan fill="#d3d3d3">140017014</tspan><tspan fill="#87cefa"> 5c</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_14001275c</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="175"><tspan fill="#d3d3d3">140017018</tspan><tspan fill="#87cefa"> 80</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 6c</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="192"><tspan>      </tspan><tspan fill="#d3d3d3">140017018</tspan><tspan fill="#87cefa"> 80</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001080</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="209"><tspan>      </tspan><tspan fill="#d3d3d3">14001701c</tspan><tspan fill="#87cefa"> 6c</tspan><tspan fill="#87cefa"> 27</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_14001276c</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="226"><tspan fill="#d3d3d3">140017020</tspan><tspan fill="#87cefa"> e0</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 18</tspan><tspan fill="#87cefa"> 29</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="243"><tspan>      </tspan><tspan fill="#d3d3d3">140017020</tspan><tspan fill="#87cefa"> e0</tspan><tspan fill="#87cefa"> 10</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@1400010e0</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="260"><tspan>      </tspan><tspan fill="#d3d3d3">140017024</tspan><tspan fill="#87cefa"> 18</tspan><tspan fill="#87cefa"> 29</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012918</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="277"><tspan fill="#d3d3d3">140017028</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> c0</tspan><tspan fill="#87cefa"> 2a</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="294"><tspan>      </tspan><tspan fill="#d3d3d3">140017028</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001100</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="311"><tspan>      </tspan><tspan fill="#d3d3d3">14001702c</tspan><tspan fill="#87cefa"> c0</tspan><tspan fill="#87cefa"> 2a</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012ac0</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="328"><tspan fill="#d3d3d3">140017030</tspan><tspan fill="#87cefa"> 18</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> cc</tspan><tspan fill="#87cefa"> 2a</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="345"><tspan>      </tspan><tspan fill="#d3d3d3">140017030</tspan><tspan fill="#87cefa"> 18</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001118</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="362"><tspan>      </tspan><tspan fill="#d3d3d3">140017034</tspan><tspan fill="#87cefa"> cc</tspan><tspan fill="#87cefa"> 2a</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012acc</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="379"><tspan fill="#d3d3d3">140017038</tspan><tspan fill="#87cefa"> 50</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> e4</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="396"><tspan>      </tspan><tspan fill="#d3d3d3">140017038</tspan><tspan fill="#87cefa"> 50</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001150</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="413"><tspan>      </tspan><tspan fill="#d3d3d3">14001703c</tspan><tspan fill="#87cefa"> e4</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012ce4</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="430"><tspan fill="#d3d3d3">140017040</tspan><tspan fill="#87cefa"> 80</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> ec</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="447"><tspan>      </tspan><tspan fill="#d3d3d3">140017040</tspan><tspan fill="#87cefa"> 80</tspan><tspan fill="#87cefa"> 11</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001180</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="464"><tspan>      </tspan><tspan fill="#d3d3d3">140017044</tspan><tspan fill="#87cefa"> ec</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012cec</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="481"><tspan fill="#d3d3d3">140017048</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 12</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> f4</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="498"><tspan>      </tspan><tspan fill="#d3d3d3">140017048</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 12</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001200</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="515"><tspan>      </tspan><tspan fill="#d3d3d3">14001704c</tspan><tspan fill="#87cefa"> f4</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012cf4</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="532"><tspan fill="#d3d3d3">140017050</tspan><tspan fill="#87cefa"> 80</tspan><tspan fill="#87cefa"> 12</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> fc</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_UNPACKED_ENTRY</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="549"><tspan>      </tspan><tspan fill="#d3d3d3">140017050</tspan><tspan fill="#87cefa"> 80</tspan><tspan fill="#87cefa"> 12</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">__aarch64_function@140001280</tspan><tspan>                           </tspan><tspan fill="#d3d3d3">B</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="566"><tspan>      </tspan><tspan fill="#d3d3d3">140017054</tspan><tspan fill="#87cefa"> fc</tspan><tspan fill="#87cefa"> 2c</tspan><tspan fill="#87cefa"> 01</tspan><tspan fill="#87cefa"> 00</tspan><tspan>           </tspan><tspan fill="#add8e6">ibo32</tspan><tspan>  </tspan><tspan fill="#87cefa">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA_140012cfc</tspan><tspan>     </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">A</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="583"></text>
+</g>
+</svg>
+</div>
+</img-comparison-slider>
+<img-comparison-slider class="img-comparison-slider-div" style="margin-bottom:6px;">
+<div slot="first"><?xml version="1.0" ?>
+<svg height="651" viewbox="0 0 1125 651" width="1125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g font-family="JetBrains Mono" font-size="12px" font-weight="600">
+<rect fill="#1c1d1e" height="651" width="1125" x="0" y="0"></rect>
+<text x="22" xml:space="preserve" y="22"><tspan fill="#d3d3d3">140012710</tspan><tspan fill="#87cefa"> 0b</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">0Bh</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="39"><tspan fill="#d3d3d3">140012711</tspan><tspan fill="#87cefa"> 00</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="56"><tspan fill="#d3d3d3">140012712</tspan><tspan fill="#87cefa"> 20</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">20h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="73"><tspan fill="#d3d3d3">140012713</tspan><tspan fill="#87cefa"> 08</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">08h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="90"><tspan fill="#d3d3d3">140012714</tspan><tspan fill="#87cefa"> 81</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">81h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="107"><tspan fill="#d3d3d3">140012715</tspan><tspan fill="#87cefa"> e4</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E4h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="124"><tspan fill="#d3d3d3">140012716</tspan><tspan fill="#87cefa"> e3</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="141"><tspan fill="#d3d3d3">140012717</tspan><tspan fill="#87cefa"> e3</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="158"><tspan fill="#d3d3d3">140012718</tspan><tspan fill="#87cefa"> 14</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">14h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="175"><tspan fill="#d3d3d3">140012719</tspan><tspan fill="#87cefa"> 00</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="192"><tspan fill="#d3d3d3">14001271a</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">40h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">@</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="209"><tspan fill="#d3d3d3">14001271b</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">40h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">@</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="226"><tspan fill="#d3d3d3">14001271c</tspan><tspan fill="#87cefa"> 0a</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">0Ah</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="243"><tspan fill="#d3d3d3">14001271d</tspan><tspan fill="#87cefa"> 00</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">00h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="260"><tspan fill="#d3d3d3">14001271e</tspan><tspan fill="#87cefa"> c0</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">C0h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="277"><tspan fill="#d3d3d3">14001271f</tspan><tspan fill="#87cefa"> 02</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">02h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="294"><tspan fill="#d3d3d3">140012720</tspan><tspan fill="#87cefa"> e1</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E1h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="311"><tspan fill="#d3d3d3">140012721</tspan><tspan fill="#87cefa"> 81</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">81h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="328"><tspan fill="#d3d3d3">140012722</tspan><tspan fill="#87cefa"> e6</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="345"><tspan fill="#d3d3d3">140012723</tspan><tspan fill="#87cefa"> e6</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="362"><tspan fill="#d3d3d3">140012724</tspan><tspan fill="#87cefa"> e6</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="379"><tspan fill="#d3d3d3">140012725</tspan><tspan fill="#87cefa"> e6</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="396"><tspan fill="#d3d3d3">140012726</tspan><tspan fill="#87cefa"> e7</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="413"><tspan fill="#d3d3d3">140012727</tspan><tspan fill="#87cefa"> 66</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">66h</tspan><tspan>    </tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="430"><tspan fill="#d3d3d3">140012728</tspan><tspan fill="#87cefa"> 89</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">89h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="447"><tspan fill="#d3d3d3">140012729</tspan><tspan fill="#87cefa"> fc</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">FCh</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="464"><tspan fill="#d3d3d3">14001272a</tspan><tspan fill="#87cefa"> e4</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E4h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="481"><tspan fill="#d3d3d3">14001272b</tspan><tspan fill="#87cefa"> 81</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">81h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="498"><tspan fill="#d3d3d3">14001272c</tspan><tspan fill="#87cefa"> e7</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="515"><tspan fill="#d3d3d3">14001272d</tspan><tspan fill="#87cefa"> 4e</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">4Eh</tspan><tspan>    </tspan><tspan fill="#d3d3d3">N</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="532"><tspan fill="#d3d3d3">14001272e</tspan><tspan fill="#87cefa"> 88</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">88h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="549"><tspan fill="#d3d3d3">14001272f</tspan><tspan fill="#87cefa"> e7</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="566"><tspan fill="#d3d3d3">140012730</tspan><tspan fill="#87cefa"> 4c</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">4Ch</tspan><tspan>    </tspan><tspan fill="#d3d3d3">L</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="583"><tspan fill="#d3d3d3">140012731</tspan><tspan fill="#87cefa"> 86</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">86h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="600"><tspan fill="#d3d3d3">140012732</tspan><tspan fill="#87cefa"> e7</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="617"><tspan fill="#d3d3d3">140012733</tspan><tspan fill="#87cefa"> 4a</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">4Ah</tspan><tspan>    </tspan><tspan fill="#d3d3d3">J</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="634"><tspan fill="#d3d3d3">140012734</tspan><tspan fill="#87cefa"> 84</tspan><tspan>                </tspan><tspan fill="#add8e6">?</tspan><tspan fill="#add8e6">?</tspan><tspan>        </tspan><tspan fill="#70c070">84h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="651"></text>
+</g>
+</svg>
+</div>
+<div slot="second"><?xml version="1.0" ?>
+<svg height="651" viewbox="0 0 1125 651" width="1125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g font-family="JetBrains Mono" font-size="12px" font-weight="600">
+<rect fill="#1c1d1e" height="651" width="1125" x="0" y="0"></rect>
+<text x="22" xml:space="preserve" y="22"><tspan fill="#d3d3d3">140012710</tspan><tspan fill="#87cefa"> 0b</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 20</tspan><tspan fill="#87cefa"> 08</tspan><tspan>                                  </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="39"><tspan>      </tspan><tspan fill="#d3d3d3">140012710</tspan><tspan fill="#87cefa"> 0b</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 20</tspan><tspan>                                </tspan><tspan fill="#add8e6">dword:18</tspan><tspan>                  </tspan><tspan fill="#70c070">Bh</tspan><tspan>                </tspan><tspan fill="#d3d3d3">F</tspan><tspan fill="#d3d3d3">u</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">L</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">h</tspan><tspan>             </tspan><tspan fill="#70a070">XREF[1]:   140017a14</tspan><tspan fill="#d3d3d3">(</tspan><tspan fill="#d3d3d3">*</tspan><tspan fill="#d3d3d3">)</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="56"><tspan>      </tspan><tspan fill="#d3d3d3">140012712</tspan><tspan fill="#87cefa"> 20</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:2</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="73"><tspan>      </tspan><tspan fill="#d3d3d3">140012712</tspan><tspan fill="#87cefa"> 20</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:1</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">D</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">P</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="90"><tspan>      </tspan><tspan fill="#d3d3d3">140012712</tspan><tspan fill="#87cefa"> 20</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:1</tspan><tspan>                   </tspan><tspan fill="#70c070">1h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">l</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">H</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="107"><tspan>      </tspan><tspan fill="#d3d3d3">140012712</tspan><tspan fill="#87cefa"> 20</tspan><tspan fill="#87cefa"> 08</tspan><tspan>                                   </tspan><tspan fill="#add8e6">dword:5</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">l</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">C</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">u</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="124"><tspan>      </tspan><tspan fill="#d3d3d3">140012713</tspan><tspan fill="#87cefa"> 08</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:5</tspan><tspan>                   </tspan><tspan fill="#70c070">1h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">C</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">W</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="141"><tspan>                    </tspan><tspan fill="#87cefa">__arm64_unwind_code@140012714</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="158"><tspan fill="#d3d3d3">140012714</tspan><tspan fill="#87cefa"> 81</tspan><tspan fill="#87cefa"> e4</tspan><tspan fill="#87cefa"> e3</tspan><tspan fill="#87cefa"> e3</tspan><tspan>                                 </tspan><tspan fill="#add8e6"> db[4]</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="175"><tspan>   </tspan><tspan fill="#d3d3d3">140012714</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">0</tspan><tspan fill="#d3d3d3">]</tspan><tspan>           </tspan><tspan fill="#70c070">81h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E4h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="192"><tspan>                    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA</tspan><tspan>  </tspan><tspan fill="#70a070">XREF[1]:   140017a1c</tspan><tspan fill="#d3d3d3">(</tspan><tspan fill="#d3d3d3">*</tspan><tspan fill="#d3d3d3">)</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="209"><tspan fill="#d3d3d3">140012718</tspan><tspan fill="#87cefa"> 14</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 40</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                  </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="226"><tspan>      </tspan><tspan fill="#d3d3d3">140012718</tspan><tspan fill="#87cefa"> 14</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                </tspan><tspan fill="#add8e6">dword:18</tspan><tspan>                  </tspan><tspan fill="#70c070">14h</tspan><tspan>               </tspan><tspan fill="#d3d3d3">F</tspan><tspan fill="#d3d3d3">u</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">L</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">h</tspan><tspan>             </tspan><tspan fill="#70a070">XREF[1]:   140017a1c</tspan><tspan fill="#d3d3d3">(</tspan><tspan fill="#d3d3d3">*</tspan><tspan fill="#d3d3d3">)</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="243"><tspan>      </tspan><tspan fill="#d3d3d3">14001271a</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:2</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">V</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="260"><tspan>      </tspan><tspan fill="#d3d3d3">14001271a</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:1</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">D</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">P</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="277"><tspan>      </tspan><tspan fill="#d3d3d3">14001271a</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:1</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">l</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">I</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">H</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="294"><tspan>      </tspan><tspan fill="#d3d3d3">14001271a</tspan><tspan fill="#87cefa"> 40</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                   </tspan><tspan fill="#add8e6">dword:5</tspan><tspan>                   </tspan><tspan fill="#70c070">1h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">l</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">g</tspan><tspan fill="#d3d3d3">C</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">u</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="311"><tspan>      </tspan><tspan fill="#d3d3d3">14001271b</tspan><tspan fill="#87cefa"> 40</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:5</tspan><tspan>                   </tspan><tspan fill="#70c070">8h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">C</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">W</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">d</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="328"><tspan>                    </tspan><tspan fill="#87cefa">__arm64_epilog_scopes@14001271c</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="345"><tspan fill="#d3d3d3">14001271c</tspan><tspan fill="#87cefa"> 0a</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> c0</tspan><tspan fill="#87cefa"> 02</tspan><tspan>                                  </tspan><tspan fill="#add8e6">EpilogScope[1]</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="362"><tspan>      </tspan><tspan fill="#d3d3d3">14001271c</tspan><tspan fill="#87cefa"> 0a</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> c0</tspan><tspan fill="#87cefa"> 02</tspan><tspan>                             </tspan><tspan fill="#add8e6">EpilogScope</tspan><tspan>                                 </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">0</tspan><tspan fill="#d3d3d3">]</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="379"><tspan>         </tspan><tspan fill="#d3d3d3">14001271c</tspan><tspan fill="#87cefa"> 0a</tspan><tspan fill="#87cefa"> 00</tspan><tspan fill="#87cefa"> c0</tspan><tspan>                                </tspan><tspan fill="#add8e6">dword:18</tspan><tspan>                  </tspan><tspan fill="#70c070">Ah</tspan><tspan>                </tspan><tspan fill="#d3d3d3">S</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">O</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">f</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="396"><tspan>         </tspan><tspan fill="#d3d3d3">14001271e</tspan><tspan fill="#87cefa"> c0</tspan><tspan>                                      </tspan><tspan fill="#add8e6">dword:4</tspan><tspan>                   </tspan><tspan fill="#70c070">0h</tspan><tspan>                </tspan><tspan fill="#d3d3d3">R</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="413"><tspan>         </tspan><tspan fill="#d3d3d3">14001271e</tspan><tspan fill="#87cefa"> c0</tspan><tspan fill="#87cefa"> 02</tspan><tspan>                                   </tspan><tspan fill="#add8e6">dword:10</tspan><tspan>                  </tspan><tspan fill="#70c070">Bh</tspan><tspan>                </tspan><tspan fill="#d3d3d3">E</tspan><tspan fill="#d3d3d3">x</tspan><tspan fill="#d3d3d3">c</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">p</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">i</tspan><tspan fill="#d3d3d3">o</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">D</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3">a</tspan><tspan fill="#d3d3d3">P</tspan><tspan fill="#d3d3d3">r</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">s</tspan><tspan fill="#d3d3d3">e</tspan><tspan fill="#d3d3d3">n</tspan><tspan fill="#d3d3d3">t</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="430"><tspan>                    </tspan><tspan fill="#87cefa">__arm64_unwind_code@140012720</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="447"><tspan fill="#d3d3d3">140012720</tspan><tspan fill="#87cefa"> e1</tspan><tspan fill="#87cefa"> 81</tspan><tspan fill="#87cefa"> e6</tspan><tspan fill="#87cefa"> e6</tspan><tspan fill="#87cefa"> e6</tspan><tspan fill="#87cefa"> e6</tspan><tspan fill="#87cefa"> e7</tspan><tspan fill="#87cefa"> 66</tspan><tspan fill="#87cefa"> 89</tspan><tspan fill="#87cefa"> fc</tspan><tspan fill="#87cefa"> e4</tspan><tspan fill="#87cefa"> 81</tspan><tspan fill="#87cefa"> e7</tspan><tspan>      </tspan><tspan fill="#add8e6"> db[32]</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="464"><tspan>         </tspan><tspan fill="#87cefa"> 4e</tspan><tspan fill="#87cefa"> 88</tspan><tspan fill="#87cefa"> e7</tspan><tspan fill="#87cefa"> 4c</tspan><tspan fill="#87cefa"> 86</tspan><tspan fill="#87cefa"> e7</tspan><tspan fill="#87cefa"> 4a</tspan><tspan fill="#87cefa"> 84</tspan><tspan fill="#87cefa"> e7</tspan><tspan fill="#87cefa"> 48</tspan><tspan fill="#87cefa"> 82</tspan><tspan fill="#87cefa"> e7</tspan><tspan fill="#87cefa"> 66</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="481"><tspan>         </tspan><tspan fill="#87cefa"> 89</tspan><tspan fill="#87cefa"> fc</tspan><tspan fill="#87cefa"> e3</tspan><tspan fill="#87cefa"> e3</tspan><tspan fill="#87cefa"> e4</tspan><tspan fill="#87cefa"> e3</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="498"><tspan>   </tspan><tspan fill="#d3d3d3">140012720</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">0</tspan><tspan fill="#d3d3d3">]</tspan><tspan>           </tspan><tspan fill="#70c070">E1h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">81h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="515"><tspan>   </tspan><tspan fill="#d3d3d3">140012724</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">4</tspan><tspan fill="#d3d3d3">]</tspan><tspan>           </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E6h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">66h</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="532"><tspan>   </tspan><tspan fill="#d3d3d3">140012728</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">8</tspan><tspan fill="#d3d3d3">]</tspan><tspan>           </tspan><tspan fill="#70c070">89h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">FCh</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E4h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">81h</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="549"><tspan>   </tspan><tspan fill="#d3d3d3">14001272c</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">1</tspan><tspan fill="#d3d3d3">2</tspan><tspan fill="#d3d3d3">]</tspan><tspan>          </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">4Eh</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">88h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="566"><tspan>   </tspan><tspan fill="#d3d3d3">140012730</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">1</tspan><tspan fill="#d3d3d3">6</tspan><tspan fill="#d3d3d3">]</tspan><tspan>          </tspan><tspan fill="#70c070">4Ch</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">86h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">4Ah</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="583"><tspan>   </tspan><tspan fill="#d3d3d3">140012734</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">2</tspan><tspan fill="#d3d3d3">0</tspan><tspan fill="#d3d3d3">]</tspan><tspan>          </tspan><tspan fill="#70c070">84h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">48h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">82h</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="600"><tspan>   </tspan><tspan fill="#d3d3d3">140012738</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">2</tspan><tspan fill="#d3d3d3">4</tspan><tspan fill="#d3d3d3">]</tspan><tspan>          </tspan><tspan fill="#70c070">E7h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">66h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">89h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">FCh</tspan><tspan fill="#d3d3d3">,</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="617"><tspan>   </tspan><tspan fill="#d3d3d3">14001273c</tspan><tspan> </tspan><tspan fill="#d3d3d3">[</tspan><tspan fill="#d3d3d3">2</tspan><tspan fill="#d3d3d3">8</tspan><tspan fill="#d3d3d3">]</tspan><tspan>          </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E4h</tspan><tspan fill="#d3d3d3">,</tspan><tspan> </tspan><tspan fill="#70c070">E3h</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="634"><tspan>                    </tspan><tspan fill="#add8e6">IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA</tspan><tspan>  </tspan><tspan fill="#70a070">XREF[1]:   140017004</tspan><tspan fill="#d3d3d3">(</tspan><tspan fill="#d3d3d3">*</tspan><tspan fill="#d3d3d3">)</tspan><tspan fill="#d3d3d3"></tspan></text>
+<text x="22" xml:space="preserve" y="651"></text>
+</g>
+</svg>
+</div>
+</img-comparison-slider>
+</section>
+
+
+      </div>
+      
+
+<div class="col-xl-2 d-none d-xl-block px-0 py-5 docs-sidebar docs-sidebar-right">
+</div>
+    </div>
+  </div>
+  </body>
+</html>
