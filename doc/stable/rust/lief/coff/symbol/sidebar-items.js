@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AuxiliarySymbols","BaseType","Characteristics","ComdatSelection","ComplexType","StorageClass"],"struct":["AuxiliaryBfAndEf","AuxiliaryCLRToken","AuxiliaryFile","AuxiliaryFunctionDefinition","AuxiliarySectionDefinition","AuxiliarySymbol","AuxiliaryWeakExternal","Symbol"],"type":["ItAuxiliarySymbols"]};
