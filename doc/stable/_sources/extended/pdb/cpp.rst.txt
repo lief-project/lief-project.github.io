@@ -31,6 +31,13 @@ CompilationUnit
 
 ----------
 
+BuildMetadata
+*************
+
+.. doxygenclass:: LIEF::pdb::BuildMetadata
+
+----------
+
 Function
 ********
 
@@ -141,10 +148,8 @@ Union
 
 .. doxygenclass:: LIEF::pdb::types::Union
 
-----------
 
-debug_location_t
-****************
+Utilities
+*********
 
-.. doxygenstruct:: LIEF::debug_location_t
-
+.. doxygenfunction:: LIEF::pdb::is_pdb(const std::string&)
