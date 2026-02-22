@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Entry","Export"],"type":["ExportEntries"]};
+window.SIDEBAR_ITEMS = {"struct":["Entry","Export","ForwardInfo"],"type":["ExportEntries"]};

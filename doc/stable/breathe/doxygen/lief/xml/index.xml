@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="en-US">
   <compound refid="struct_elf___binary__t" kind="struct"><name>Elf_Binary_t</name>
     <member refid="struct_elf___binary__t_1ae695b73fcf79b131d78cb6a11539ca92" kind="variable"><name>handler</name></member>
     <member refid="struct_elf___binary__t_1a9426da861b49ec60f95949a7ed6f361c" kind="variable"><name>interpreter</name></member>
@@ -94,8 +94,8 @@
     <member refid="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" kind="variable"><name>shndx</name></member>
     <member refid="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" kind="variable"><name>value</name></member>
     <member refid="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" kind="variable"><name>size</name></member>
-    <member refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" kind="variable"><name>is_exported</name></member>
-    <member refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" kind="variable"><name>is_imported</name></member>
+    <member refid="struct_elf___symbol__t_1aeb94f4f3a8f6ae805820d912c95515b5" kind="variable"><name>is_exported</name></member>
+    <member refid="struct_elf___symbol__t_1a7d4a50d31c1aea87aee30efba8c81078" kind="variable"><name>is_imported</name></member>
   </compound>
   <compound refid="struct_macho___binary__t" kind="struct"><name>Macho_Binary_t</name>
     <member refid="struct_macho___binary__t_1a404b8e039cd82f0527c3062be79e9b55" kind="variable"><name>handler</name></member>
@@ -212,7 +212,7 @@
     <member refid="struct_pe___import__t_1a4a5f9239e34227d5370b938d353f947b" kind="variable"><name>import_lookup_table_rva</name></member>
   </compound>
   <compound refid="struct_pe___import_entry__t" kind="struct"><name>Pe_ImportEntry_t</name>
-    <member refid="struct_pe___import_entry__t_1adaa3d1932e7fa6b937d2f077f6b99d6f" kind="variable"><name>is_ordinal</name></member>
+    <member refid="struct_pe___import_entry__t_1a90a74b9cc5b4ff2ee56f66d57a8ffb9b" kind="variable"><name>is_ordinal</name></member>
     <member refid="struct_pe___import_entry__t_1a8e8a5c16ddb29eb0c7936e57d4526928" kind="variable"><name>name</name></member>
     <member refid="struct_pe___import_entry__t_1afea21fad413906ef392d4584820301c5" kind="variable"><name>ordinal</name></member>
     <member refid="struct_pe___import_entry__t_1abdd07944f2ec0a94a4d94049f1485e36" kind="variable"><name>hint_name_rva</name></member>
@@ -222,7 +222,7 @@
     <member refid="struct_pe___import_entry__t_1ac62e6ffcafacdd82fe21af0856d5a044" kind="variable"><name>iat_address</name></member>
   </compound>
   <compound refid="struct_pe___optional_header__t" kind="struct"><name>Pe_OptionalHeader_t</name>
-    <member refid="struct_pe___optional_header__t_1afa4db7d8b9ef419948106617bb223b44" kind="variable"><name>magic</name></member>
+    <member refid="struct_pe___optional_header__t_1a333d448357c1f0308dee6a8f9fc409db" kind="variable"><name>magic</name></member>
     <member refid="struct_pe___optional_header__t_1a2a1c45e0e11975a0fe32bd1bcc72f9d4" kind="variable"><name>major_linker_version</name></member>
     <member refid="struct_pe___optional_header__t_1a8d85b5882f5edd3858c190bfb5f1ba20" kind="variable"><name>minor_linker_version</name></member>
     <member refid="struct_pe___optional_header__t_1ac840bc0bfa0ad5d90db721869a117d4c" kind="variable"><name>sizeof_code</name></member>
@@ -290,7 +290,7 @@
     <member refid="_mach_o_2_symbol_8h_1abbd5ff3c31c27453e94b1f27c6355cd8" kind="typedef"><name>Macho_Symbol_t</name></member>
   </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
-    <member refid="utils_8h_1a8bef2268c0b58f5d3f4771c02ce4313d" kind="function"><name>is_elf</name></member>
+    <member refid="utils_8h_1aed04a5e486427da0fbe4ce413f53a306" kind="function"><name>is_elf</name></member>
   </compound>
   <compound refid="_l_i_e_f_8h" kind="file"><name>LIEF.h</name>
   </compound>
@@ -347,7 +347,6 @@
     <member refid="_dos_header_8h_1a96d6b2bd3262be00a3ee5b99b702f7ce" kind="typedef"><name>Pe_DosHeader_t</name></member>
   </compound>
   <compound refid="_e_l_f_2enums_8h" kind="file"><name>enums.h</name>
-    <member refid="_e_l_f_2enums_8h_1a6d37a8bc050b0c8cfc77bc4a89cd7ccd" kind="define"><name>ELF_RELOC</name></member>
     <member refid="_e_l_f_2enums_8h_1a1a8cd709ad0f955b3c5afb75922bbc87" kind="enum"><name>LIEF_IDENTITY</name></member>
     <member refid="_e_l_f_2enums_8h_1a1a8cd709ad0f955b3c5afb75922bbc87a2fa708554efc160222a9aaadd0bfe073" kind="enumvalue"><name>LIEF_EI_MAG0</name></member>
     <member refid="_e_l_f_2enums_8h_1a1a8cd709ad0f955b3c5afb75922bbc87a9932ea3f6f878d6958e709a3adb43328" kind="enumvalue"><name>LIEF_EI_MAG1</name></member>
@@ -583,16 +582,27 @@
     <member refid="_e_l_f_2enums_8h_1a56b6d0579cd99a404be20bab89a0ba50a8b3e913afe4a3647e908f3d31a35a5f6" kind="enumvalue"><name>LIEF_OSABI_ARM</name></member>
     <member refid="_e_l_f_2enums_8h_1a56b6d0579cd99a404be20bab89a0ba50a5931b4f8762ba9bdd98eff0480517636" kind="enumvalue"><name>LIEF_OSABI_STANDALONE</name></member>
     <member refid="_e_l_f_2enums_8h_1a5057f0e5bbc3fc1e843bd3b8b865c98e" kind="enum"><name>LIEF_RELOC_x86_64</name></member>
+    <member refid="_e_l_f_2enums_8h_1a5057f0e5bbc3fc1e843bd3b8b865c98eaf58d347b53f5f1277fe86bff65404444" kind="enumvalue"><name>LIEF_RELOC_x86_64_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1ad5e7c0d89a443a9a36bb310c8fd12b31" kind="enum"><name>RELOC_i386</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad5e7c0d89a443a9a36bb310c8fd12b31a10d4750bbe75e5ecaf4c92fd9b4415b1" kind="enumvalue"><name>LIEF_RELOC_i386_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a7ec1927cfcf568e6e5f6d43dd2644f4d" kind="enum"><name>LIEF_RELOC_POWERPC32</name></member>
+    <member refid="_e_l_f_2enums_8h_1a7ec1927cfcf568e6e5f6d43dd2644f4dac15d50cd24aa178b3ee582b8bcb0297a" kind="enumvalue"><name>LIEF_RELOC_POWERPC32_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a50979c0ca39dbfbe6b385c7c9355c39f" kind="enum"><name>LIEF_RELOC_POWERPC64</name></member>
+    <member refid="_e_l_f_2enums_8h_1a50979c0ca39dbfbe6b385c7c9355c39fa64d82ecd3ccd2f989ec3f1080ae09d9c" kind="enumvalue"><name>LIEF_RELOC_POWERPC64_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a0990099dbab53d56c05fb8f39973b818" kind="enum"><name>LIEF_RELOC_AARCH64</name></member>
+    <member refid="_e_l_f_2enums_8h_1a0990099dbab53d56c05fb8f39973b818a80f9a2bf3df0b849e563654a4a667bd6" kind="enumvalue"><name>LIEF_RELOC_AARCH64_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a3122c44d48a6f5b1491c5a8f120b8c79" kind="enum"><name>LIEF_RELOC_ARM</name></member>
+    <member refid="_e_l_f_2enums_8h_1a3122c44d48a6f5b1491c5a8f120b8c79addebf28114050be4171cb1041eedcec6" kind="enumvalue"><name>LIEF_RELOC_ARM_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a26ef0a262ee031aea44bbe095b4d6c5d" kind="enum"><name>LIEF_RELOC_MIPS</name></member>
+    <member refid="_e_l_f_2enums_8h_1a26ef0a262ee031aea44bbe095b4d6c5da5c126aade155ed04232d8beaa4dae6a4" kind="enumvalue"><name>LIEF_RELOC_MIPS_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a00e00f1b42a45f8bd5061844721c9a2d" kind="enum"><name>LIEF_RELOC_HEXAGON</name></member>
+    <member refid="_e_l_f_2enums_8h_1a00e00f1b42a45f8bd5061844721c9a2daaf6b6c17ced20a2519a47879a1b1c631" kind="enumvalue"><name>LIEF_RELOC_HEXAGON_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a95582797cfe3e070f16600afc569bfa5" kind="enum"><name>LIEF_RELOC_SYSTEMZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1a95582797cfe3e070f16600afc569bfa5ab5b0793dc98d182647bd21e892369c35" kind="enumvalue"><name>LIEF_RELOC_SYSTEMZ_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a5c151e9955f07d7705f3b1e3fb14ba63" kind="enum"><name>LIEF_RELOC_SPARC</name></member>
+    <member refid="_e_l_f_2enums_8h_1a5c151e9955f07d7705f3b1e3fb14ba63a712eaabcf4eec4deb4069003d246bff0" kind="enumvalue"><name>LIEF_RELOC_SPARC_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a217712e242c37352bcdb813fe0f72246" kind="enum"><name>LIEF_RELOC_LOONGARCH</name></member>
+    <member refid="_e_l_f_2enums_8h_1a217712e242c37352bcdb813fe0f72246aeeb6eabf98f04e0bd40ef0dad0add9a2" kind="enumvalue"><name>LIEF_RELOC_LOONGARCH_NOT_SUPPORTED</name></member>
     <member refid="_e_l_f_2enums_8h_1a043c4458b127bd9b175747182a6a2288" kind="enum"><name>LIEF_PPC64_EFLAGS</name></member>
     <member refid="_e_l_f_2enums_8h_1a043c4458b127bd9b175747182a6a2288aaaddd075a0bfc79d5647f1a184611893" kind="enumvalue"><name>LIEF_EF_PPC64_ABI</name></member>
     <member refid="_e_l_f_2enums_8h_1a6e5c03bf8a5702cf639a8777bdcd0763" kind="enum"><name>LIEF_ARM_EFLAGS</name></member>
@@ -843,6 +853,10 @@
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca6628a75d312428aee99c925dbca44c77" kind="enumvalue"><name>LIEF_DT_ENCODING</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac7ab74dc282e4145ed27b5b780a600e5" kind="enumvalue"><name>LIEF_DT_PREINIT_ARRAY</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac817d4f95c11039841566a00da9766e7" kind="enumvalue"><name>LIEF_DT_PREINIT_ARRAYSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8889e9d77192369a624a4946f9d0f744" kind="enumvalue"><name>LIEF_DT_SYMTAB_SHNDX</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab278b543d1cb4db823565ad230933329" kind="enumvalue"><name>LIEF_DT_RELRSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8a5e38ca3691fbc122255cc7e2451f22" kind="enumvalue"><name>LIEF_DT_RELR</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad87650ef5065a4e3e4adf81990fefa79" kind="enumvalue"><name>LIEF_DT_RELRENT</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caaaea3f610d6818460ff2b5da902354ad" kind="enumvalue"><name>LIEF_DT_LOOS</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca605d77e7a4565a5010d309028ac8c54e" kind="enumvalue"><name>LIEF_DT_HIOS</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca86c473c8e0e6eeb5a25f575fb6e997ea" kind="enumvalue"><name>LIEF_DT_LOPROC</name></member>
@@ -891,8 +905,6 @@
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8f5062584f2653d87093c0a8daf88b96" kind="enumvalue"><name>LIEF_DT_MIPS_HIDDEN_GOTIDX</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caf3460ecc48d72185f6f0139c1e431220" kind="enumvalue"><name>LIEF_DT_MIPS_PROTECTED_GOTIDX</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caafeb160c6055a07845f7eb44fb0a2dbe" kind="enumvalue"><name>LIEF_DT_MIPS_OPTIONS</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca31ec0cc990f59a973fff1dfc1358d100" kind="enumvalue"><name>LIEF_DT_MIPS_INTERFACE</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca6e38a9dd84a4ad3fc67cb6d959e86495" kind="enumvalue"><name>LIEF_DT_MIPS_DYNSTR_ALIGN</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab2d099559e22a4f38724d1d1f9a4aebc" kind="enumvalue"><name>LIEF_DT_MIPS_INTERFACE_SIZE</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac1ab5d24be9d99c2e435707b732a6628" kind="enumvalue"><name>LIEF_DT_MIPS_RLD_TEXT_RESOLVE_ADDR</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca40332437537e4fddf41440cd94ae0ccc" kind="enumvalue"><name>LIEF_DT_MIPS_PERF_SUFFIX</name></member>
@@ -901,16 +913,37 @@
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca4ec215c0a279a98c614469e85956e887" kind="enumvalue"><name>LIEF_DT_MIPS_AUX_DYNAMIC</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca90bdc9fddf21a7d34460eaf7d8f6647c" kind="enumvalue"><name>LIEF_DT_MIPS_PLTGOT</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac23d49f3a97da79191a397ba6bca91d1" kind="enumvalue"><name>LIEF_DT_MIPS_RWPLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca14b6a0b4cb39ab5805f992a7874449c9" kind="enumvalue"><name>LIEF_DT_MIPS_RLD_MAP_REL</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca3b0ef7a82f2d9b5a861762e27494a9c7" kind="enumvalue"><name>LIEF_DT_MIPS_XHASH</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7817051a826bdfd6ba08e39501b99656" kind="enumvalue"><name>LIEF_DT_ANDROID_REL_OFFSET</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2f0e806c2f0e093838ea95265cb7a6cf" kind="enumvalue"><name>LIEF_DT_ANDROID_REL_SIZE</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca45fd70d72f0b156b808a47d6f7725dee" kind="enumvalue"><name>LIEF_DT_ANDROID_REL</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cae0b6a91bffd191ad76b54e98bb295320" kind="enumvalue"><name>LIEF_DT_ANDROID_RELSZ</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca6800fe5595f498e4a8f8d4cb999253f8" kind="enumvalue"><name>LIEF_DT_ANDROID_RELA</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca0f0f7025d9b89b0603571feb0599f68d" kind="enumvalue"><name>LIEF_DT_ANDROID_RELASZ</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8a5e38ca3691fbc122255cc7e2451f22" kind="enumvalue"><name>LIEF_DT_RELR</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab278b543d1cb4db823565ad230933329" kind="enumvalue"><name>LIEF_DT_RELRSZ</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad87650ef5065a4e3e4adf81990fefa79" kind="enumvalue"><name>LIEF_DT_RELRENT</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cad2b7831f5113f2ea71b934b41def1856" kind="enumvalue"><name>LIEF_DT_RELRCOUNT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cade688ee17ebe272f0bc805b70b8b5f5c" kind="enumvalue"><name>LIEF_DT_ANDROID_RELR</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7b12469bc0356536e4bae4e21cba671c" kind="enumvalue"><name>LIEF_DT_ANDROID_RELRSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca08a04398d28caff149eda795abed89fe" kind="enumvalue"><name>LIEF_DT_ANDROID_RELRENT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca1ade8cf973fef8189d1a190295b8779f" kind="enumvalue"><name>LIEF_DT_ANDROID_RELRCOUNT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca38384289ebf235e636fd09d839461329" kind="enumvalue"><name>LIEF_DT_AARCH64_BTI_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca5e9d6d6b95ad605a88da0c27a19bbfff" kind="enumvalue"><name>LIEF_DT_AARCH64_PAC_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2953a38c460311b73fdcac5a8cb530a8" kind="enumvalue"><name>LIEF_DT_AARCH64_VARIANT_PCS</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca351d8aa20a48593647cbb47d7332b422" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_MODE</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cade7503a33a8b0017b654a43d7da2a35e" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_HEAP</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca77d504b8bff3f71d46c6e8e1b08c6b84" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_STACK</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca4256ed649054a398c5096cd402049204" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_GLOBALS</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca9bd729a0a444b267ab62a2e5c0d9ce5e" kind="enumvalue"><name>LIEF_DT_AARCH64_MEMTAG_GLOBALSSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca2fcfdd42d1d2f074cf486c2deca69f08" kind="enumvalue"><name>LIEF_DT_HEXAGON_SYMSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca5e5721b02bccde0d1e7c294ace793078" kind="enumvalue"><name>LIEF_DT_HEXAGON_VER</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca22ab95461f9e769e22f09d1ad4c5ae06" kind="enumvalue"><name>LIEF_DT_HEXAGON_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca53772bd7b845eb372b218efa1d4b1d56" kind="enumvalue"><name>LIEF_DT_PPC_GOT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca0a08641f62200921e99d1b381d3bc890" kind="enumvalue"><name>LIEF_DT_PPC_OPT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca7433aa502a84ebcad9be4d5f0cdc5e3d" kind="enumvalue"><name>LIEF_DT_PPC64_GLINK</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca70bba76ba42dc21b0c58a3d50cdb51a3" kind="enumvalue"><name>LIEF_DT_PPC64_OPT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caf66d062d060b0382233cb19edc6bdecf" kind="enumvalue"><name>LIEF_DT_RISCV_VARIANT_CC</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca15c14e30641e21f09831a978c43cff40" kind="enumvalue"><name>LIEF_DT_X86_64_PLT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca3debdc16d5ac9cc7e2e4ef18622037f8" kind="enumvalue"><name>LIEF_DT_X86_64_PLTSZ</name></member>
+    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caa158625763152705948dacd3da09fcdd" kind="enumvalue"><name>LIEF_DT_X86_64_PLTENT</name></member>
     <member refid="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229" kind="enum"><name>LIEF_DYNAMIC_FLAGS</name></member>
     <member refid="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229a908c029d7cd67097673b8e21346eac89" kind="enumvalue"><name>LIEF_DF_ORIGIN</name></member>
     <member refid="_e_l_f_2enums_8h_1ab2c2b9c84d5e401513154e1def14e229a5317cbdd4260dae6b048803bcf47dff5" kind="enumvalue"><name>LIEF_DF_SYMBOLIC</name></member>
@@ -945,38 +978,38 @@
     <member refid="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9ab8372ac608a31c7106d8ef9804197bb2" kind="enumvalue"><name>LIEF_DF_1_GLOBAUDIT</name></member>
     <member refid="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9a0a98715857937e97d27bdef8a126ecd2" kind="enumvalue"><name>LIEF_DF_1_SINGLETON</name></member>
     <member refid="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9a3ba3f4ab180908f0dd3706f3131ae5df" kind="enumvalue"><name>LIEF_DF_1_PIE</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name></name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bac32cef1755b3566486b52fa0bd6a4381" kind="enumvalue"><name>LIEF_RHF_NONE</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba1fec4700c2a85fd9a207d9c84502813c" kind="enumvalue"><name>LIEF_RHF_QUICKSTART</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55baa0733db5e00f071ef102facb9fa9dd45" kind="enumvalue"><name>LIEF_RHF_NOTPOT</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5d07380891dd1a5904b4c763961444fa" kind="enumvalue"><name>LIEF_RHS_NO_LIBRARY_REPLACEMENT</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bac850403fc1bfc6093b186ba420eb813f" kind="enumvalue"><name>LIEF_RHF_NO_MOVE</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba47d30ec86c89da211cea3d976d650af7" kind="enumvalue"><name>LIEF_RHF_SGI_ONLY</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bab90f8e4c0962681f21b64e20233719a8" kind="enumvalue"><name>LIEF_RHF_GUARANTEE_INIT</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba86bba00f79ca3c028faef47752e3a3df" kind="enumvalue"><name>LIEF_RHF_DELTA_C_PLUS_PLUS</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55baab3317f667c501cac78d0f961ced4e1d" kind="enumvalue"><name>LIEF_RHF_GUARANTEE_START_INIT</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba38ed505bf62e6f1fa0a6c5ad370af768" kind="enumvalue"><name>LIEF_RHF_PIXIE</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba113626f65c46397505f725c8c0e77b8c" kind="enumvalue"><name>LIEF_RHF_DEFAULT_DELAY_LOAD</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55bacd0343227884ce7938cbd0cecda2780e" kind="enumvalue"><name>LIEF_RHF_REQUICKSTART</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba033c1350282ab4fa04faf85166adb010" kind="enumvalue"><name>LIEF_RHF_REQUICKSTARTED</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55badb46a660ad246dcdd0737cf40ae80915" kind="enumvalue"><name>LIEF_RHF_CORD</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55ba080b5e07b20050db9307edc7b54fca55" kind="enumvalue"><name>LIEF_RHF_NO_UNRES_UNDEF</name></member>
-    <member refid="_e_l_f_2enums_8h_1a06fc87d81c62e9abb8790b6e5713c55baab3ab8ae5818394492906248f9655865" kind="enumvalue"><name>LIEF_RHF_RLD_ORDER_SAFE</name></member>
-    <member refid="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7" kind="enum"><name></name></member>
-    <member refid="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7a7564ef6f0021427eb06749afac35193e" kind="enumvalue"><name>LIEF_VER_DEF_NONE</name></member>
-    <member refid="_e_l_f_2enums_8h_1adf764cbdea00d65edcd07bb9953ad2b7a0464a6eff9ab3c825f3fa9b20136565b" kind="enumvalue"><name>LIEF_VER_DEF_CURRENT</name></member>
-    <member refid="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5" kind="enum"><name></name></member>
-    <member refid="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5a5eac79f8b645ecac9d24e5b631a1abb2" kind="enumvalue"><name>LIEF_VER_FLG_BASE</name></member>
-    <member refid="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5a6fd7ae129cc9afc39b0280ef8e45c67e" kind="enumvalue"><name>LIEF_VER_FLG_WEAK</name></member>
-    <member refid="_e_l_f_2enums_8h_1a99fb83031ce9923c84392b4e92f956b5a21fe0cf228ccb2e3f71e31571dc60d48" kind="enumvalue"><name>LIEF_VER_FLG_INFO</name></member>
-    <member refid="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04" kind="enum"><name></name></member>
-    <member refid="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04aa9d7f1b4cf3f3db096d5c4fac56ee1c5" kind="enumvalue"><name>LIEF_VER_NDX_LOCAL</name></member>
-    <member refid="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04aae2a1c4de9bfe86439a4bc98ef8b2af3" kind="enumvalue"><name>LIEF_VER_NDX_GLOBAL</name></member>
-    <member refid="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04af61e33f34ac3bb7c9f984b3295d3e3c1" kind="enumvalue"><name>LIEF_VERSYM_VERSION</name></member>
-    <member refid="_e_l_f_2enums_8h_1abc6126af1d45847bc59afa0aa3216b04ad7eb87f34e2261153b842fa60260a432" kind="enumvalue"><name>LIEF_VERSYM_HIDDEN</name></member>
-    <member refid="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06c" kind="enum"><name></name></member>
-    <member refid="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06cad44b9245cf203718f3e8e6fc9a7ce843" kind="enumvalue"><name>LIEF_VER_NEED_NONE</name></member>
-    <member refid="_e_l_f_2enums_8h_1adc29c2ff13d900c2f185ee95427fb06ca9aaa459377dcb2106226615581ad6bb9" kind="enumvalue"><name>LIEF_VER_NEED_CURRENT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4f" kind="enum"><name>@070364226017053140260333220305256255321332035076</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fac32cef1755b3566486b52fa0bd6a4381" kind="enumvalue"><name>LIEF_RHF_NONE</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa1fec4700c2a85fd9a207d9c84502813c" kind="enumvalue"><name>LIEF_RHF_QUICKSTART</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4faa0733db5e00f071ef102facb9fa9dd45" kind="enumvalue"><name>LIEF_RHF_NOTPOT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa5d07380891dd1a5904b4c763961444fa" kind="enumvalue"><name>LIEF_RHS_NO_LIBRARY_REPLACEMENT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fac850403fc1bfc6093b186ba420eb813f" kind="enumvalue"><name>LIEF_RHF_NO_MOVE</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa47d30ec86c89da211cea3d976d650af7" kind="enumvalue"><name>LIEF_RHF_SGI_ONLY</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fab90f8e4c0962681f21b64e20233719a8" kind="enumvalue"><name>LIEF_RHF_GUARANTEE_INIT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa86bba00f79ca3c028faef47752e3a3df" kind="enumvalue"><name>LIEF_RHF_DELTA_C_PLUS_PLUS</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4faab3317f667c501cac78d0f961ced4e1d" kind="enumvalue"><name>LIEF_RHF_GUARANTEE_START_INIT</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa38ed505bf62e6f1fa0a6c5ad370af768" kind="enumvalue"><name>LIEF_RHF_PIXIE</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa113626f65c46397505f725c8c0e77b8c" kind="enumvalue"><name>LIEF_RHF_DEFAULT_DELAY_LOAD</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4facd0343227884ce7938cbd0cecda2780e" kind="enumvalue"><name>LIEF_RHF_REQUICKSTART</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa033c1350282ab4fa04faf85166adb010" kind="enumvalue"><name>LIEF_RHF_REQUICKSTARTED</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fadb46a660ad246dcdd0737cf40ae80915" kind="enumvalue"><name>LIEF_RHF_CORD</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4fa080b5e07b20050db9307edc7b54fca55" kind="enumvalue"><name>LIEF_RHF_NO_UNRES_UNDEF</name></member>
+    <member refid="_e_l_f_2enums_8h_1ad75ebc17a0d3e367f9393327eb29cd4faab3ab8ae5818394492906248f9655865" kind="enumvalue"><name>LIEF_RHF_RLD_ORDER_SAFE</name></member>
+    <member refid="_e_l_f_2enums_8h_1acf389db1d0c62862c711922e9edd3acb" kind="enum"><name>@003201264060104062013112370104353315161164150044</name></member>
+    <member refid="_e_l_f_2enums_8h_1acf389db1d0c62862c711922e9edd3acba7564ef6f0021427eb06749afac35193e" kind="enumvalue"><name>LIEF_VER_DEF_NONE</name></member>
+    <member refid="_e_l_f_2enums_8h_1acf389db1d0c62862c711922e9edd3acba0464a6eff9ab3c825f3fa9b20136565b" kind="enumvalue"><name>LIEF_VER_DEF_CURRENT</name></member>
+    <member refid="_e_l_f_2enums_8h_1aa4803068089bd04637db8e9aa39fb1f4" kind="enum"><name>@222314006354250072342336341160243157076276357047</name></member>
+    <member refid="_e_l_f_2enums_8h_1aa4803068089bd04637db8e9aa39fb1f4a5eac79f8b645ecac9d24e5b631a1abb2" kind="enumvalue"><name>LIEF_VER_FLG_BASE</name></member>
+    <member refid="_e_l_f_2enums_8h_1aa4803068089bd04637db8e9aa39fb1f4a6fd7ae129cc9afc39b0280ef8e45c67e" kind="enumvalue"><name>LIEF_VER_FLG_WEAK</name></member>
+    <member refid="_e_l_f_2enums_8h_1aa4803068089bd04637db8e9aa39fb1f4a21fe0cf228ccb2e3f71e31571dc60d48" kind="enumvalue"><name>LIEF_VER_FLG_INFO</name></member>
+    <member refid="_e_l_f_2enums_8h_1a9c0e9a6a450c5b7252fc7e13c9533005" kind="enum"><name>@275067152357270166270226200225111264323330064321</name></member>
+    <member refid="_e_l_f_2enums_8h_1a9c0e9a6a450c5b7252fc7e13c9533005aa9d7f1b4cf3f3db096d5c4fac56ee1c5" kind="enumvalue"><name>LIEF_VER_NDX_LOCAL</name></member>
+    <member refid="_e_l_f_2enums_8h_1a9c0e9a6a450c5b7252fc7e13c9533005aae2a1c4de9bfe86439a4bc98ef8b2af3" kind="enumvalue"><name>LIEF_VER_NDX_GLOBAL</name></member>
+    <member refid="_e_l_f_2enums_8h_1a9c0e9a6a450c5b7252fc7e13c9533005af61e33f34ac3bb7c9f984b3295d3e3c1" kind="enumvalue"><name>LIEF_VERSYM_VERSION</name></member>
+    <member refid="_e_l_f_2enums_8h_1a9c0e9a6a450c5b7252fc7e13c9533005ad7eb87f34e2261153b842fa60260a432" kind="enumvalue"><name>LIEF_VERSYM_HIDDEN</name></member>
+    <member refid="_e_l_f_2enums_8h_1abd364436145272a4e169182e6d428fd3" kind="enum"><name>@363344067075051224102247074240252223342363146065</name></member>
+    <member refid="_e_l_f_2enums_8h_1abd364436145272a4e169182e6d428fd3ad44b9245cf203718f3e8e6fc9a7ce843" kind="enumvalue"><name>LIEF_VER_NEED_NONE</name></member>
+    <member refid="_e_l_f_2enums_8h_1abd364436145272a4e169182e6d428fd3a9aaa459377dcb2106226615581ad6bb9" kind="enumvalue"><name>LIEF_VER_NEED_CURRENT</name></member>
     <member refid="_e_l_f_2enums_8h_1a2e0e9b63108329d518739bc8da2babbb" kind="enum"><name>LIEF_AUX_TYPE</name></member>
     <member refid="_e_l_f_2enums_8h_1a2e0e9b63108329d518739bc8da2babbba4ea77d1ce021fb404273466ca45039e9" kind="enumvalue"><name>LIEF_AT_NULL</name></member>
     <member refid="_e_l_f_2enums_8h_1a2e0e9b63108329d518739bc8da2babbba4ac43e28ef160a26f8d242411919efad" kind="enumvalue"><name>LIEF_AT_IGNORE</name></member>
@@ -1096,6 +1129,7 @@
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a33923e4fe6750d684e92a41791a1de0d" kind="enumvalue"><name>LIEF_PE_MACHINE_MIPSFPU16</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a4a11fd57e645835a01d89417fc8ecb5a" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPC</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a611dc44ad91d7302d5567eaec846f745" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPCFP</name></member>
+    <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a68925bcb0a623594b473f51fb699be6b" kind="enumvalue"><name>LIEF_PE_MACHINE_POWERPCBE</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a2f3c22354dacdcfed81650370fd820c7" kind="enumvalue"><name>LIEF_PE_MACHINE_R4000</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a1fe3eab4f18d54fcc966636000adbe6c" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV32</name></member>
     <member refid="_p_e_2_header_8h_1a1ca4d0aeeb10edff1daffd454e943704a30bd55d27f725d54f6b887e7c7d2ecb6" kind="enumvalue"><name>LIEF_PE_MACHINE_RISCV64</name></member>

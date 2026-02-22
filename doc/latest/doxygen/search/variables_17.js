@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['zero_0',['zero',['../structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html#a921847b4710af71bfc001f8872f2c652',1,'LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_arm64e_bind_t::zero'],['../structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind__t.html#a68e93bdac819e82dd79c4c26cd35b0ba',1,'LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_arm64e_auth_bind_t::zero'],['../structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind24__t.html#a43525858ee24f4e5ec73c7beb349a1d9',1,'LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_arm64e_bind24_t::zero'],['../structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind24__t.html#a87202f639118a26fb325362e96ead161',1,'LIEF::MachO::ChainedPointerAnalysis::dyld_chained_ptr_arm64e_auth_bind24_t::zero']]],
-  ['zombie_1',['zombie',['../structLIEF_1_1ELF_1_1CorePrPsInfo_1_1info__t.html#aefe79468cdee9b4a35a41f848cd981fc',1,'LIEF::ELF::CorePrPsInfo::info_t']]]
+  ['x64_0',['X64',['../classLIEF_1_1COFF_1_1Relocation.html#a355c1890f7df9973bd77fcbba7f83eab',1,'LIEF::COFF::Relocation']]],
+  ['x86_5f64_5fdisc_1',['X86_64_DISC',['../classLIEF_1_1ELF_1_1DynamicEntry.html#af742f858f0165470c1f0b753ea1cd230',1,'LIEF::ELF::DynamicEntry']]],
+  ['x_5frb_5fptr_2',['x_rb_ptr',['../structLIEF_1_1ART_1_1details_1_1ART__17_1_1Java_1_1brooks__read__barrier__t.html#ad9529b4f9c35ec7f495ef576f8565ae4',1,'LIEF::ART::details::ART_17::Java::brooks_read_barrier_t']]],
+  ['x_5fxpadding_3',['x_xpadding',['../structLIEF_1_1ART_1_1details_1_1ART__17_1_1Java_1_1brooks__read__barrier__t.html#ae1166b3819bff936271c4c6514d33333',1,'LIEF::ART::details::ART_17::Java::brooks_read_barrier_t']]]
 ];

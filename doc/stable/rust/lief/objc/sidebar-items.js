@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"mod":["class","ivar","metadata","method","property","protocol"],"struct":["Class","IVar","Metadata","Method","Property","Protocol"]};
+window.SIDEBAR_ITEMS = {"mod":["class","decl_opt","ivar","metadata","method","property","protocol"],"struct":["Class","DeclOpt","IVar","Metadata","Method","Property","Protocol"]};

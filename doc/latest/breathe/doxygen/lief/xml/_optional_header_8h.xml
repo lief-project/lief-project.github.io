@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="_optional_header_8h" kind="file" language="C++">
     <compoundname>OptionalHeader.h</compoundname>
     <includes local="no">inttypes.h</includes>
@@ -14,7 +14,7 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -22,16 +22,11 @@
         <link refid="_p_e_2enums_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>LIEF/PE/enums.inc</label>
       </node>
       <node id="4">
-        <label>LIEF/PE/undef.h</label>
+        <label>LIEF/PE/enums.inc</label>
       </node>
-      <node id="6">
+      <node id="5">
         <label>LIEF/visibility.h</label>
       </node>
       <node id="2">
@@ -303,13 +298,21 @@
 <para>A BCD application. </para>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ead4136db380fe8c68ec99355f956bd0f8" prot="public">
+          <name>LIEF_PE_SUBSYSTEM_XBOX_CODE_CATALOG</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="41" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="41" bodyend="56"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="41" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="41" bodyend="57"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -324,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="91" column="34" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="91" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="92" column="34" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" bodystart="92" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -343,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="93" column="13" declfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" declline="93" declcolumn="13"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" line="94" column="13" declfile="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h" declline="94" declcolumn="13"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -351,8 +354,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2026<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2026<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -405,51 +408,52 @@
 <codeline lineno="52"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_EFI_RUNTIME_DRIVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,<sp/></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_EFI_ROM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,<sp/></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_XBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,<sp/></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION<sp/>=<sp/>16<sp/><sp/></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="struct_pe___optional_header__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_PE_TYPES<sp/><sp/>magic;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_linker_version;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_linker_version;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_code;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_initialized_data;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_uninitialized_data;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>addressof_entrypoint;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseof_code;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseof_data;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>section_alignment;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>file_alignment;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_operating_system_version;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_operating_system_version;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_image_version;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_image_version;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_subsystem_version;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_subsystem_version;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>win32_version_value;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_image;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_headers;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>checksum;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>subsystem;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>dll_characteristics;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_stack_reserve;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_stack_commit;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_heap_reserve;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_heap_commit;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>loader_flags;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>numberof_rva_and_size;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref><sp/><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lief_pe_subsytem_str(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>e);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION<sp/>=<sp/>16,<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>LIEF_PE_SUBSYSTEM_XBOX_CODE_CATALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct_pe___optional_header__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>magic;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_linker_version;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_linker_version;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_code;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_initialized_data;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_uninitialized_data;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>addressof_entrypoint;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseof_code;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseof_data;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>section_alignment;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>file_alignment;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_operating_system_version;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_operating_system_version;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_image_version;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_image_version;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>major_subsystem_version;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>minor_subsystem_version;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>win32_version_value;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_image;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_headers;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>checksum;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>subsystem;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>dll_characteristics;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_stack_reserve;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_stack_commit;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_heap_reserve;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof_heap_commit;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>loader_flags;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>numberof_rva_and_size;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref><sp/><ref refid="struct_pe___optional_header__t" kindref="compound">Pe_OptionalHeader_t</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">LIEF_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lief_pe_subsytem_str(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>LIEF_PE_SUBSYSTEM<sp/>e);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/builds/LIEF/lief/api/c/include/LIEF/PE/OptionalHeader.h"/>
   </compounddef>

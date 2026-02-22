@@ -17,6 +17,13 @@ CompilationUnit
 
 ----------
 
+BuildMetadata
+*************
+
+.. autoclass:: lief.pdb.BuildMetadata
+
+----------
+
 PublicSymbol
 ************
 
@@ -201,7 +208,7 @@ Union
 
 ----------
 
-debug_location_t
-****************
+Utilities
+*********
 
-.. autoclass:: lief.debug_location_t
+.. autofunction:: lief.is_pdb

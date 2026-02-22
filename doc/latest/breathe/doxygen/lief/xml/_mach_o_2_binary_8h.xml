@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="_mach_o_2_binary_8h" kind="file" language="C++">
     <compoundname>Binary.h</compoundname>
     <includes local="no">stdint.h</includes>
@@ -20,13 +20,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -37,7 +37,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>LIEF/MachO/LoadCommand.h</label>
         <link refid="_load_command_8h_source"/>
         <childnode refid="5" relation="include">
@@ -45,7 +45,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="10">
         <label>LIEF/MachO/Section.h</label>
         <link refid="_mach_o_2_section_8h_source"/>
         <childnode refid="5" relation="include">
@@ -53,17 +53,17 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="11">
         <label>LIEF/MachO/Segment.h</label>
         <link refid="_mach_o_2_segment_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>LIEF/MachO/Symbol.h</label>
         <link refid="_mach_o_2_symbol_8h_source"/>
         <childnode refid="5" relation="include">
@@ -76,14 +76,9 @@
         <link refid="_mach_o_2enums_8h_source"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>LIEF/MachO/enums.inc</label>
       </node>
       <node id="7">
-        <label>LIEF/MachO/undef.h</label>
+        <label>LIEF/MachO/enums.inc</label>
       </node>
       <node id="3">
         <label>LIEF/visibility.h</label>
@@ -171,8 +166,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>R.<sp/>Thomas</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2024<sp/>Quarkslab</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>2017<sp/>-<sp/>2026<sp/>R.<sp/>Thomas</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2017<sp/>-<sp/>2026<sp/>Quarkslab</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -206,11 +201,11 @@
 <codeline lineno="34" refid="struct_macho___binary__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_macho___binary__t" kindref="compound">Macho_Binary_t</ref><sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagebase;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/>Macho_Header_t<sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/>Macho_Command_t**<sp/><sp/><sp/>commands;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/>Macho_Symbol_t**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/>Macho_Section_t**<sp/><sp/><sp/>sections;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/>Macho_Segment_t**<sp/><sp/><sp/>segments;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___header__t" kindref="compound">Macho_Header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>header;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___command__t" kindref="compound">Macho_Command_t</ref>**<sp/><sp/><sp/>commands;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___symbol__t" kindref="compound">Macho_Symbol_t</ref>**<sp/><sp/><sp/><sp/>symbols;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___section__t" kindref="compound">Macho_Section_t</ref>**<sp/><sp/><sp/>sections;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="struct_macho___segment__t" kindref="compound">Macho_Segment_t</ref>**<sp/><sp/><sp/>segments;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>

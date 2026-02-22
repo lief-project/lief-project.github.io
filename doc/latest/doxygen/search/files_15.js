@@ -11,7 +11,8 @@ var searchData=
   ['x86_2foperands_2fpcrelative_2ehpp_8',['PCRelative.hpp',['../x86_2operands_2PCRelative_8hpp.html',1,'']]],
   ['x86_2foperands_2fregister_2ehpp_9',['Register.hpp',['../x86_2operands_2Register_8hpp.html',1,'']]],
   ['x86_2fregisters_2ehpp_10',['registers.hpp',['../x86_2registers_8hpp.html',1,'']]],
-  ['x86_5f64_2edef_11',['x86_64.def',['../x86__64_8def.html',1,'']]],
-  ['x86feature_2ehpp_12',['X86Feature.hpp',['../X86Feature_8hpp.html',1,'']]],
-  ['x86isa_2ehpp_13',['X86ISA.hpp',['../X86ISA_8hpp.html',1,'']]]
+  ['x86_5f64_2edef_11',['X86_64.def',['../X86__64_8def.html',1,'']]],
+  ['x86_5f64_2edef_12',['x86_64.def',['../x86__64_8def.html',1,'']]],
+  ['x86feature_2ehpp_13',['X86Feature.hpp',['../X86Feature_8hpp.html',1,'']]],
+  ['x86isa_2ehpp_14',['X86ISA.hpp',['../X86ISA_8hpp.html',1,'']]]
 ];

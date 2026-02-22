@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="en-US">
   <compound refid="struct_elf___binary__t" kind="struct"><name>Elf_Binary_t</name>
     <member refid="struct_elf___binary__t_1ae695b73fcf79b131d78cb6a11539ca92" kind="variable"><name>handler</name></member>
     <member refid="struct_elf___binary__t_1a9426da861b49ec60f95949a7ed6f361c" kind="variable"><name>interpreter</name></member>
@@ -94,8 +94,8 @@
     <member refid="struct_elf___symbol__t_1afebc03abe4c42ea12aa0795e6f389f4a" kind="variable"><name>shndx</name></member>
     <member refid="struct_elf___symbol__t_1abb6e325da98e411a74f4fa6115c5d41c" kind="variable"><name>value</name></member>
     <member refid="struct_elf___symbol__t_1a4b512d88cd070cd96ea3cff037343e3b" kind="variable"><name>size</name></member>
-    <member refid="struct_elf___symbol__t_1adef9075f9d3da985e4dd244f2818e237" kind="variable"><name>is_exported</name></member>
-    <member refid="struct_elf___symbol__t_1a63a5120f852cd3973d1cc94472552d1a" kind="variable"><name>is_imported</name></member>
+    <member refid="struct_elf___symbol__t_1aeb94f4f3a8f6ae805820d912c95515b5" kind="variable"><name>is_exported</name></member>
+    <member refid="struct_elf___symbol__t_1a7d4a50d31c1aea87aee30efba8c81078" kind="variable"><name>is_imported</name></member>
   </compound>
   <compound refid="struct_macho___binary__t" kind="struct"><name>Macho_Binary_t</name>
     <member refid="struct_macho___binary__t_1a404b8e039cd82f0527c3062be79e9b55" kind="variable"><name>handler</name></member>
@@ -212,7 +212,7 @@
     <member refid="struct_pe___import__t_1a4a5f9239e34227d5370b938d353f947b" kind="variable"><name>import_lookup_table_rva</name></member>
   </compound>
   <compound refid="struct_pe___import_entry__t" kind="struct"><name>Pe_ImportEntry_t</name>
-    <member refid="struct_pe___import_entry__t_1adaa3d1932e7fa6b937d2f077f6b99d6f" kind="variable"><name>is_ordinal</name></member>
+    <member refid="struct_pe___import_entry__t_1a90a74b9cc5b4ff2ee56f66d57a8ffb9b" kind="variable"><name>is_ordinal</name></member>
     <member refid="struct_pe___import_entry__t_1a8e8a5c16ddb29eb0c7936e57d4526928" kind="variable"><name>name</name></member>
     <member refid="struct_pe___import_entry__t_1afea21fad413906ef392d4584820301c5" kind="variable"><name>ordinal</name></member>
     <member refid="struct_pe___import_entry__t_1abdd07944f2ec0a94a4d94049f1485e36" kind="variable"><name>hint_name_rva</name></member>
@@ -222,7 +222,7 @@
     <member refid="struct_pe___import_entry__t_1ac62e6ffcafacdd82fe21af0856d5a044" kind="variable"><name>iat_address</name></member>
   </compound>
   <compound refid="struct_pe___optional_header__t" kind="struct"><name>Pe_OptionalHeader_t</name>
-    <member refid="struct_pe___optional_header__t_1afa4db7d8b9ef419948106617bb223b44" kind="variable"><name>magic</name></member>
+    <member refid="struct_pe___optional_header__t_1a333d448357c1f0308dee6a8f9fc409db" kind="variable"><name>magic</name></member>
     <member refid="struct_pe___optional_header__t_1a2a1c45e0e11975a0fe32bd1bcc72f9d4" kind="variable"><name>major_linker_version</name></member>
     <member refid="struct_pe___optional_header__t_1a8d85b5882f5edd3858c190bfb5f1ba20" kind="variable"><name>minor_linker_version</name></member>
     <member refid="struct_pe___optional_header__t_1ac840bc0bfa0ad5d90db721869a117d4c" kind="variable"><name>sizeof_code</name></member>
@@ -278,7 +278,7 @@
     <member refid="_dynamic_entry_8h_1adf80b7a3d4c9a2ac6f1e0e1c92f6c32f" kind="typedef"><name>Elf_DynamicEntry_Flags_t</name></member>
   </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
-    <member refid="utils_8h_1a8bef2268c0b58f5d3f4771c02ce4313d" kind="function"><name>is_elf</name></member>
+    <member refid="utils_8h_1aed04a5e486427da0fbe4ce413f53a306" kind="function"><name>is_elf</name></member>
   </compound>
   <compound refid="_l_i_e_f_8h" kind="file"><name>LIEF.h</name>
   </compound>
@@ -905,8 +905,6 @@
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca8f5062584f2653d87093c0a8daf88b96" kind="enumvalue"><name>LIEF_DT_MIPS_HIDDEN_GOTIDX</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caf3460ecc48d72185f6f0139c1e431220" kind="enumvalue"><name>LIEF_DT_MIPS_PROTECTED_GOTIDX</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8caafeb160c6055a07845f7eb44fb0a2dbe" kind="enumvalue"><name>LIEF_DT_MIPS_OPTIONS</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca31ec0cc990f59a973fff1dfc1358d100" kind="enumvalue"><name>LIEF_DT_MIPS_INTERFACE</name></member>
-    <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca6e38a9dd84a4ad3fc67cb6d959e86495" kind="enumvalue"><name>LIEF_DT_MIPS_DYNSTR_ALIGN</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cab2d099559e22a4f38724d1d1f9a4aebc" kind="enumvalue"><name>LIEF_DT_MIPS_INTERFACE_SIZE</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8cac1ab5d24be9d99c2e435707b732a6628" kind="enumvalue"><name>LIEF_DT_MIPS_RLD_TEXT_RESOLVE_ADDR</name></member>
     <member refid="_e_l_f_2enums_8h_1ab0a30ff7846851a50a61cc8e5c219a8ca40332437537e4fddf41440cd94ae0ccc" kind="enumvalue"><name>LIEF_DT_MIPS_PERF_SUFFIX</name></member>
@@ -980,7 +978,7 @@
     <member refid="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9ab8372ac608a31c7106d8ef9804197bb2" kind="enumvalue"><name>LIEF_DF_1_GLOBAUDIT</name></member>
     <member refid="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9a0a98715857937e97d27bdef8a126ecd2" kind="enumvalue"><name>LIEF_DF_1_SINGLETON</name></member>
     <member refid="_e_l_f_2enums_8h_1a746da11990e3c7289eda217664fc70c9a3ba3f4ab180908f0dd3706f3131ae5df" kind="enumvalue"><name>LIEF_DF_1_PIE</name></member>
-    <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79" kind="enum"><name></name></member>
+    <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79" kind="enum"><name>@076175124355044330374144361272155235162037164115</name></member>
     <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79ac32cef1755b3566486b52fa0bd6a4381" kind="enumvalue"><name>LIEF_RHF_NONE</name></member>
     <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79a1fec4700c2a85fd9a207d9c84502813c" kind="enumvalue"><name>LIEF_RHF_QUICKSTART</name></member>
     <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79aa0733db5e00f071ef102facb9fa9dd45" kind="enumvalue"><name>LIEF_RHF_NOTPOT</name></member>
@@ -997,19 +995,19 @@
     <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79adb46a660ad246dcdd0737cf40ae80915" kind="enumvalue"><name>LIEF_RHF_CORD</name></member>
     <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79a080b5e07b20050db9307edc7b54fca55" kind="enumvalue"><name>LIEF_RHF_NO_UNRES_UNDEF</name></member>
     <member refid="_e_l_f_2enums_8h_1ad7f05b66d24405302586b05e0197ed79aab3ab8ae5818394492906248f9655865" kind="enumvalue"><name>LIEF_RHF_RLD_ORDER_SAFE</name></member>
-    <member refid="_e_l_f_2enums_8h_1a6f5420d36072d203a103f66709e06f6b" kind="enum"><name></name></member>
+    <member refid="_e_l_f_2enums_8h_1a6f5420d36072d203a103f66709e06f6b" kind="enum"><name>@026115247003053272206344224152221056135243345166</name></member>
     <member refid="_e_l_f_2enums_8h_1a6f5420d36072d203a103f66709e06f6ba7564ef6f0021427eb06749afac35193e" kind="enumvalue"><name>LIEF_VER_DEF_NONE</name></member>
     <member refid="_e_l_f_2enums_8h_1a6f5420d36072d203a103f66709e06f6ba0464a6eff9ab3c825f3fa9b20136565b" kind="enumvalue"><name>LIEF_VER_DEF_CURRENT</name></member>
-    <member refid="_e_l_f_2enums_8h_1a4f4371ad8326f600f6eed6ed6e3aec8f" kind="enum"><name></name></member>
+    <member refid="_e_l_f_2enums_8h_1a4f4371ad8326f600f6eed6ed6e3aec8f" kind="enum"><name>@302315104226310165171106155010133311126115025025</name></member>
     <member refid="_e_l_f_2enums_8h_1a4f4371ad8326f600f6eed6ed6e3aec8fa5eac79f8b645ecac9d24e5b631a1abb2" kind="enumvalue"><name>LIEF_VER_FLG_BASE</name></member>
     <member refid="_e_l_f_2enums_8h_1a4f4371ad8326f600f6eed6ed6e3aec8fa6fd7ae129cc9afc39b0280ef8e45c67e" kind="enumvalue"><name>LIEF_VER_FLG_WEAK</name></member>
     <member refid="_e_l_f_2enums_8h_1a4f4371ad8326f600f6eed6ed6e3aec8fa21fe0cf228ccb2e3f71e31571dc60d48" kind="enumvalue"><name>LIEF_VER_FLG_INFO</name></member>
-    <member refid="_e_l_f_2enums_8h_1a65793cfb19bb820e18602611e3e7385f" kind="enum"><name></name></member>
+    <member refid="_e_l_f_2enums_8h_1a65793cfb19bb820e18602611e3e7385f" kind="enum"><name>@371136147210156300303304357001315325332255223144</name></member>
     <member refid="_e_l_f_2enums_8h_1a65793cfb19bb820e18602611e3e7385faa9d7f1b4cf3f3db096d5c4fac56ee1c5" kind="enumvalue"><name>LIEF_VER_NDX_LOCAL</name></member>
     <member refid="_e_l_f_2enums_8h_1a65793cfb19bb820e18602611e3e7385faae2a1c4de9bfe86439a4bc98ef8b2af3" kind="enumvalue"><name>LIEF_VER_NDX_GLOBAL</name></member>
     <member refid="_e_l_f_2enums_8h_1a65793cfb19bb820e18602611e3e7385faf61e33f34ac3bb7c9f984b3295d3e3c1" kind="enumvalue"><name>LIEF_VERSYM_VERSION</name></member>
     <member refid="_e_l_f_2enums_8h_1a65793cfb19bb820e18602611e3e7385fad7eb87f34e2261153b842fa60260a432" kind="enumvalue"><name>LIEF_VERSYM_HIDDEN</name></member>
-    <member refid="_e_l_f_2enums_8h_1a8f19203379f6e2e8bfc62d8049283dd0" kind="enum"><name></name></member>
+    <member refid="_e_l_f_2enums_8h_1a8f19203379f6e2e8bfc62d8049283dd0" kind="enum"><name>@220222131347017037133071135110127012063262270365</name></member>
     <member refid="_e_l_f_2enums_8h_1a8f19203379f6e2e8bfc62d8049283dd0ad44b9245cf203718f3e8e6fc9a7ce843" kind="enumvalue"><name>LIEF_VER_NEED_NONE</name></member>
     <member refid="_e_l_f_2enums_8h_1a8f19203379f6e2e8bfc62d8049283dd0a9aaa459377dcb2106226615581ad6bb9" kind="enumvalue"><name>LIEF_VER_NEED_CURRENT</name></member>
     <member refid="_e_l_f_2enums_8h_1a2e0e9b63108329d518739bc8da2babbb" kind="enum"><name>LIEF_AUX_TYPE</name></member>
@@ -1197,6 +1195,7 @@
     <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ea480ea8bcff6d0ea9f15b30762f1c89b8" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_EFI_ROM</name></member>
     <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634eabe444ab8aa82c6c92b090cb6099eb266" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_XBOX</name></member>
     <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ead82002ecd14b0b3632c7cc0349a5072d" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION</name></member>
+    <member refid="_optional_header_8h_1a31c7012d573db52c18b320937ca7634ead4136db380fe8c68ec99355f956bd0f8" kind="enumvalue"><name>LIEF_PE_SUBSYSTEM_XBOX_CODE_CATALOG</name></member>
     <member refid="_optional_header_8h_1a736ab4f34133218fb8d48ae6e31e8c73" kind="typedef"><name>Pe_OptionalHeader_t</name></member>
     <member refid="_optional_header_8h_1aa62938db48a666994f543a3e81bec6b6" kind="function"><name>lief_pe_subsytem_str</name></member>
   </compound>

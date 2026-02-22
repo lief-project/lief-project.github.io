@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Header"],"fn":["is_coff","parse"],"mod":["binary","header","relocation","section","string","symbol"],"struct":["BigObjHeader","Binary","RegularHeader","Relocation","Section","String","Symbol"]};

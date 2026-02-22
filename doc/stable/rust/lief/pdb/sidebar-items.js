@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Type"],"fn":["load"],"mod":["compilation_unit","debug_info","function","public_symbol","types"],"struct":["CompilationUnit","DebugInfo","Function","PublicSymbol"]};
+window.SIDEBAR_ITEMS = {"enum":["Type"],"fn":["is_pdb","load"],"mod":["build_metadata","compilation_unit","debug_info","function","public_symbol","types"],"struct":["BuildMetadata","CompilationUnit","DebugInfo","Function","PublicSymbol"]};

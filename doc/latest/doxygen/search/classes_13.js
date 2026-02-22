@@ -10,6 +10,7 @@ var searchData=
   ['tls_7',['TLS',['../classLIEF_1_1PE_1_1TLS.html',1,'LIEF::PE']]],
   ['toggleendianness_8',['ToggleEndianness',['../classLIEF_1_1ToggleEndianness.html',1,'LIEF']]],
   ['twolevelhints_9',['TwoLevelHints',['../classLIEF_1_1MachO_1_1TwoLevelHints.html',1,'LIEF::MachO']]],
-  ['type_10',['Type',['../classLIEF_1_1DEX_1_1Type.html',1,'LIEF::DEX::Type'],['../classLIEF_1_1dwarf_1_1Type.html',1,'LIEF::dwarf::Type'],['../classLIEF_1_1pdb_1_1Type.html',1,'LIEF::pdb::Type']]],
-  ['typedef_11',['Typedef',['../classLIEF_1_1dwarf_1_1types_1_1Typedef.html',1,'LIEF::dwarf::types']]]
+  ['type_10',['Type',['../classLIEF_1_1DEX_1_1Type.html',1,'LIEF::DEX::Type'],['../classLIEF_1_1dwarf_1_1editor_1_1Type.html',1,'LIEF::dwarf::editor::Type'],['../classLIEF_1_1dwarf_1_1Type.html',1,'LIEF::dwarf::Type'],['../classLIEF_1_1pdb_1_1Type.html',1,'LIEF::pdb::Type']]],
+  ['typedef_11',['TypeDef',['../classLIEF_1_1dwarf_1_1editor_1_1TypeDef.html',1,'LIEF::dwarf::editor']]],
+  ['typedef_12',['Typedef',['../classLIEF_1_1dwarf_1_1types_1_1Typedef.html',1,'LIEF::dwarf::types']]]
 ];

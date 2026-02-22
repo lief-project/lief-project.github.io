@@ -1,34 +1,37 @@
 <map id="ContentInfo.hpp" name="ContentInfo.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="106,5,232,31"/>
-<area shape="rect" id="Node000002" href="$GenericContent_8hpp.html" title=" " alt="" coords="39,225,190,251"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,40,113,57,97,80,90,99,87,119,90,160,100,197,111,224,106,226,95,199,85,161,82,119,85,98,92,77,110,54,132,36"/>
-<area shape="rect" id="Node000003" href="$PE_8hpp.html" title=" " alt="" coords="401,299,468,324"/>
-<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="134,40,108,58,84,80,47,125,18,167,10,187,9,207,14,227,28,249,54,267,93,281,143,292,199,299,311,307,401,308,400,313,311,312,198,304,142,297,92,286,51,272,24,253,9,230,3,207,5,186,14,164,43,122,80,77,104,53,131,35"/>
-<area shape="rect" id="Node000006" href="$MsCounterSign_8hpp.html" title=" " alt="" coords="151,152,299,177"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="181,43,223,151,218,153,176,45"/>
-<area shape="rect" id="Node000008" href="$PKCS9TSTInfo_8hpp.html" title=" " alt="" coords="214,225,354,251"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="157,44,143,73,132,107,129,143,133,160,141,176,155,192,173,205,215,223,213,228,170,210,151,196,136,179,128,162,124,144,127,106,138,71,152,42"/>
-<area shape="rect" id="Node000009" href="$Signature_8hpp.html" title=" " alt="" coords="568,79,680,104"/>
-<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="247,29,568,79,567,84,246,34"/>
-<area shape="rect" id="Node000013" href="$SpcIndirectData_8hpp.html" title=" " alt="" coords="732,79,886,104"/>
-<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="246,25,733,79,732,84,246,30"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,251,401,300,400,305,178,256"/>
-<area shape="rect" id="Node000004" href="$LIEF_8hpp.html" title=" " alt="" coords="342,372,417,397"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="419,337,391,374,386,370,415,333"/>
-<area shape="rect" id="Node000005" href="$to__json_8hpp.html" title=" " alt="" coords="442,372,539,397"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="454,333,483,370,479,374,450,337"/>
-<area shape="rect" id="Node000007" href="$attributes_8hpp.html" title=" " alt="" coords="378,225,491,251"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="273,179,401,223,400,228,271,184"/>
-<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="437,264,437,299,432,299,432,264"/>
-<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="321,254,411,296,409,301,319,259"/>
-<area shape="poly" id="edge16_Node000009_Node000003" title=" " alt="" coords="679,107,710,124,734,151,739,166,738,182,725,213,706,239,692,253,665,270,636,284,574,302,516,311,468,313,468,308,515,305,573,297,634,279,662,265,689,249,702,235,721,211,733,181,734,167,729,153,706,129,677,111"/>
-<area shape="rect" id="Node000010" href="$PE_2Binary_8hpp.html" title=" " alt="" coords="588,225,678,251"/>
-<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="667,108,692,126,713,151,716,163,715,175,703,196,682,214,659,227,656,223,678,209,699,193,710,173,711,163,708,153,689,130,664,113"/>
-<area shape="rect" id="Node000011" href="$MsSpcNestedSignature_8hpp.html" title=" " alt="" coords="324,152,524,177"/>
-<area shape="poly" id="edge14_Node000009_Node000011" title=" " alt="" coords="579,111,457,154,455,149,578,106"/>
-<area shape="rect" id="Node000012" href="$SignatureParser_8hpp.html" title=" " alt="" coords="548,152,699,177"/>
-<area shape="poly" id="edge17_Node000009_Node000012" title=" " alt="" coords="626,118,626,152,621,152,621,118"/>
-<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="589,258,468,301,466,296,587,253"/>
-<area shape="poly" id="edge15_Node000011_Node000007" title=" " alt="" coords="430,191,435,225,430,226,425,192"/>
-<area shape="poly" id="edge19_Node000013_Node000003" title=" " alt="" coords="805,118,794,149,777,186,754,222,723,253,702,264,675,273,605,289,468,309,468,304,604,284,673,268,700,259,719,249,749,219,772,183,789,147,800,116"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="210,5,335,33"/>
+<area shape="rect" id="Node000002" href="$GenericContent_8hpp.html" title=" " alt="" coords="38,232,188,260"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,41,167,58,140,83,121,121,113,163,111,202,114,232,108,231,106,202,107,162,116,119,136,79,164,54,200,37"/>
+<area shape="rect" id="Node000003" href="$PE_8hpp.html" title=" " alt="" coords="571,308,636,336"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="197,40,157,58,118,83,67,126,26,169,13,190,8,212,13,235,28,258,56,272,111,283,268,301,441,312,573,319,568,320,441,317,268,306,110,289,54,277,24,262,8,237,3,212,8,188,21,166,64,122,115,79,155,53,201,36"/>
+<area shape="rect" id="Node000006" href="$MsCounterSign_8hpp.html" title=" " alt="" coords="252,157,400,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="287,44,303,80,326,157,320,156,298,82,286,50"/>
+<area shape="rect" id="Node000008" href="$PKCS9TSTInfo_8hpp.html" title=" " alt="" coords="150,81,289,109"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="253,48,231,82,227,79,256,44"/>
+<area shape="rect" id="Node000009" href="$Signature_8hpp.html" title=" " alt="" coords="666,81,778,109"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="351,31,668,83,664,86,351,36"/>
+<area shape="rect" id="Node000014" href="$SpcIndirectData_8hpp.html" title=" " alt="" coords="862,81,1014,109"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="351,26,863,83,860,87,351,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,258,572,313,569,318,203,264"/>
+<area shape="rect" id="Node000004" href="$LIEF_8hpp.html" title=" " alt="" coords="512,384,586,411"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="587,347,560,386,557,381,582,350"/>
+<area shape="rect" id="Node000005" href="$to__json_8hpp.html" title=" " alt="" coords="610,384,706,411"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="624,346,651,384,646,382,621,351"/>
+<area shape="rect" id="Node000007" href="$attributes_8hpp.html" title=" " alt="" coords="467,232,580,260"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="376,188,491,231,486,232,376,193"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="550,268,592,308,587,307,548,273"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="220,122,228,154,243,183,279,216,321,244,366,266,413,284,501,306,573,318,568,318,500,311,411,289,364,271,318,249,276,221,239,186,223,156,219,127"/>
+<area shape="poly" id="edge18_Node000009_Node000003" title=" " alt="" coords="793,99,848,108,898,123,917,134,929,149,933,166,926,186,898,221,864,250,825,273,784,290,702,312,637,321,636,316,701,307,782,285,823,268,861,245,894,217,921,183,927,165,924,151,913,139,896,128,847,113,794,104"/>
+<area shape="rect" id="Node000010" href="$PE_2Binary_8hpp.html" title=" " alt="" coords="821,157,911,184"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="762,113,843,156,838,156,761,119"/>
+<area shape="rect" id="Node000012" href="$MsSpcNestedSignature_8hpp.html" title=" " alt="" coords="424,157,623,184"/>
+<area shape="poly" id="edge16_Node000009_Node000012" title=" " alt="" coords="670,116,560,159,558,154,675,113"/>
+<area shape="rect" id="Node000013" href="$SignatureParser_8hpp.html" title=" " alt="" coords="647,157,797,184"/>
+<area shape="poly" id="edge19_Node000009_Node000013" title=" " alt="" coords="724,122,724,158,720,155,721,127"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="841,193,797,229,745,262,689,290,637,311,636,306,687,285,742,258,794,225,836,195"/>
+<area shape="rect" id="Node000011" href="$Factory_8hpp.html" title=" " alt="" coords="638,232,732,260"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="822,190,718,234,716,229,817,191"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="662,269,619,310,617,305,657,272"/>
+<area shape="poly" id="edge17_Node000012_Node000007" title=" " alt="" coords="525,198,526,233,521,230,522,202"/>
+<area shape="poly" id="edge21_Node000014_Node000003" title=" " alt="" coords="948,122,952,153,947,185,936,212,923,231,906,247,882,262,818,292,750,310,687,319,637,323,636,317,687,314,749,304,816,286,879,258,903,242,919,227,931,209,942,184,947,153,944,126"/>
 </map>

@@ -1,17 +1,19 @@
 <map id="LIEF::Relocation" name="LIEF::Relocation">
-<area shape="rect" id="Node000001" title="Class which represents an abstracted Relocation." alt="" coords="152,55,277,80"/>
-<area shape="rect" id="Node000003" href="$classLIEF_1_1ELF_1_1Relocation.html" title="Class that represents an ELF relocation." alt="" coords="339,5,494,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="280,49,363,28,364,33,281,54"/>
-<area shape="rect" id="Node000004" href="$classLIEF_1_1MachO_1_1Relocation.html" title="Class that represents a Mach&#45;O relocation." alt="" coords="327,55,506,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="291,65,327,65,327,70,291,70"/>
-<area shape="rect" id="Node000008" href="$classLIEF_1_1PE_1_1RelocationEntry.html" title="Class which represents an entry of the PE relocation table." alt="" coords="325,104,508,129"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="281,81,364,101,363,107,280,86"/>
-<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,55,104,80"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,65,152,65,152,70,117,70"/>
-<area shape="rect" id="Node000005" href="$classLIEF_1_1MachO_1_1RelocationDyld.html" title="Class that represents a relocation found in the DyldInfo structure." alt="" coords="562,5,770,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="494,49,600,28,601,33,495,55"/>
-<area shape="rect" id="Node000006" href="$classLIEF_1_1MachO_1_1RelocationFixup.html" title="Class that represents a rebase relocation found in the LC_DYLD_CHAINED_FIXUPS command." alt="" coords="559,55,773,80"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="519,65,559,65,559,70,519,70"/>
-<area shape="rect" id="Node000007" href="$classLIEF_1_1MachO_1_1RelocationObject.html" title="Class that represents a relocation presents in the MachO object file (.o). Usually,..." alt="" coords="556,104,776,129"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="495,80,601,101,600,107,494,85"/>
+<area shape="rect" id="Node000001" title="Class which represents an abstracted Relocation." alt="" coords="152,80,277,105"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1COFF_1_1Relocation.html" title="This class represents a COFF relocation." alt="" coords="333,5,500,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,71,324,40,361,28,362,33,326,44,253,76"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1ELF_1_1Relocation.html" title="Class that represents an ELF relocation." alt="" coords="339,55,494,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="291,80,339,74,339,80,291,86"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1MachO_1_1Relocation.html" title="Class that represents a Mach&#45;O relocation." alt="" coords="327,104,506,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="291,99,327,103,327,109,291,104"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1PE_1_1RelocationEntry.html" title="Class which represents an entry of the PE relocation table." alt="" coords="325,153,508,179"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="254,109,326,139,362,151,361,156,324,145,252,114"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,80,104,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,90,152,90,152,95,117,95"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1MachO_1_1RelocationDyld.html" title="Class that represents a relocation found in the DyldInfo structure." alt="" coords="562,55,770,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="494,99,600,77,601,83,495,104"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1MachO_1_1RelocationFixup.html" title="Class that represents a rebase relocation found in the LC_DYLD_CHAINED_FIXUPS command." alt="" coords="559,104,773,129"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="519,114,559,114,559,119,519,119"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1MachO_1_1RelocationObject.html" title="Class that represents a relocation presents in the MachO object file (.o). Usually,..." alt="" coords="556,153,776,179"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="495,129,601,151,600,156,494,135"/>
 </map>

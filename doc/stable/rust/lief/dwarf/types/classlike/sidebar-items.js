@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Class","Member","Structure","Union"],"trait":["ClassLike"],"type":["Members"]};
+window.SIDEBAR_ITEMS = {"struct":["Class","Member","Packed","Structure","Union"],"trait":["ClassLike"],"type":["Functions","Members"]};

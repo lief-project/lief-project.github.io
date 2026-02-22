@@ -1,3 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structLIEF_1_1PE_1_1ParserConfig.html" title="This structure is used to tweak the PE Parser (PE::Parser)" alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000000" href="$classLIEF_1_1Parser.html" title="Main interface to parse an executable regardless of its format." alt="" coords="5,80,101,105"/>
+<area shape="rect" id="Node000001" href="$classLIEF_1_1ELF_1_1Parser.html" title="Class which parses and transforms an ELF file into a ELF::Binary object." alt="" coords="181,5,308,31"/>
+<area shape="poly" id="edge262_Node000000_Node000001" title=" " alt="" coords="85,71,148,40,184,28,185,33,150,44,88,75"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1MachO_1_1BinaryParser.html" title="Class used to parse a single binary (i.e. non&#45;FAT)." alt="" coords="149,55,340,80"/>
+<area shape="poly" id="edge264_Node000000_Node000003" title=" " alt="" coords="115,82,149,77,149,83,115,87"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1MachO_1_1Parser.html" title="The main interface to parse a Mach&#45;O binary." alt="" coords="170,104,319,129"/>
+<area shape="poly" id="edge265_Node000000_Node000004" title=" " alt="" coords="116,98,170,105,169,110,115,103"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1Parser.html" title="Main interface to parse PE binaries. In particular the static functions: Parser::parse should be used..." alt="" coords="185,153,305,179"/>
+<area shape="poly" id="edge266_Node000000_Node000005" title=" " alt="" coords="90,110,150,138,189,151,188,156,148,143,88,114"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1OAT_1_1Parser.html" title="Class to parse an OAT file to produce an OAT::Binary." alt="" coords="388,5,517,31"/>
+<area shape="poly" id="edge263_Node000001_Node000002" title=" " alt="" coords="322,15,388,15,388,21,322,21"/>
 </map>

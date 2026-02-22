@@ -1,29 +1,33 @@
 <map id="LIEF::MachO::ChainedPointerAnalysis::union_pointer_t" name="LIEF::MachO::ChainedPointerAnalysis::union_pointer_t">
-<area shape="rect" id="Node000001" title=" " alt="" coords="423,485,631,525"/>
-<area shape="rect" id="Node000002" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__rebase__t.html" title=" " alt="" coords="5,5,213,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,31,272,38,318,50,362,70,400,97,440,143,470,194,492,250,508,307,518,362,525,412,528,485,523,485,519,412,513,363,503,308,487,252,465,197,435,146,397,101,359,74,317,55,271,43,227,36"/>
-<area shape="rect" id="Node000003" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html" title=" " alt="" coords="5,84,213,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,115,272,123,318,137,361,157,400,184,433,218,459,258,480,301,496,344,517,425,526,484,521,485,512,426,491,346,475,303,454,261,428,222,397,188,359,161,316,142,271,128,226,120"/>
-<area shape="rect" id="Node000004" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__rebase__t.html" title=" " alt="" coords="5,163,213,217"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,201,272,211,317,227,361,247,400,273,426,297,448,324,483,383,508,440,522,484,517,485,503,442,479,386,443,327,422,301,397,277,358,252,315,232,270,217,226,206"/>
-<area shape="rect" id="Node000005" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind__t.html" title=" " alt="" coords="5,241,213,296"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="227,288,315,316,359,335,400,358,437,388,469,422,515,483,511,486,465,425,433,392,397,363,357,340,313,321,226,293"/>
-<area shape="rect" id="Node000006" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__rebase__t.html" title=" " alt="" coords="5,320,213,375"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="227,373,313,398,400,430,451,456,496,482,493,487,449,461,398,435,311,403,226,378"/>
-<area shape="rect" id="Node000007" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind24__t.html" title=" " alt="" coords="5,399,213,453"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="227,445,423,483,422,488,227,451"/>
-<area shape="rect" id="Node000008" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind24__t.html" title=" " alt="" coords="5,477,213,532"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="227,502,422,502,422,507,227,507"/>
-<area shape="rect" id="Node000009" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__bind__t.html" title=" " alt="" coords="5,556,213,611"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="227,559,422,522,423,527,227,564"/>
-<area shape="rect" id="Node000010" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__kernel__cache__rebase__t.html" title=" " alt="" coords="5,635,213,689"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="226,642,312,621,398,590,455,557,501,523,504,527,458,562,400,595,313,626,227,647"/>
-<area shape="rect" id="Node000011" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__rebase__t.html" title=" " alt="" coords="5,713,213,768"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="226,723,313,700,357,682,397,660,435,628,468,591,512,524,517,526,472,594,439,632,400,664,359,687,315,705,227,729"/>
-<area shape="rect" id="Node000012" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__bind__t.html" title=" " alt="" coords="5,792,213,847"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="226,808,270,799,315,785,358,766,397,741,423,717,445,689,480,628,504,569,518,524,523,526,509,571,485,631,449,692,427,721,400,745,361,771,317,790,271,804,227,813"/>
-<area shape="rect" id="Node000013" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__cache__rebase__t.html" title=" " alt="" coords="5,871,213,925"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="226,892,271,884,316,872,359,853,397,827,429,792,455,753,476,710,492,666,513,584,521,525,526,525,518,585,497,668,481,712,460,756,433,796,400,831,361,858,318,877,272,890,227,897"/>
-<area shape="rect" id="Node000014" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__firmware__rebase__t.html" title=" " alt="" coords="5,949,213,1004"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="227,975,271,969,317,957,359,939,397,912,436,867,466,816,488,760,504,703,514,649,520,598,523,525,528,525,525,599,519,649,509,705,493,762,471,818,440,871,400,916,362,943,318,962,272,974,227,980"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,581,720,621"/>
+<area shape="rect" id="Node000002" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__rebase__t.html" title=" " alt="" coords="31,23,239,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,27,312,24,375,30,436,48,464,62,490,81,504,97,518,119,542,176,562,246,579,324,603,475,615,581,610,581,598,476,574,325,557,248,537,178,513,121,500,100,486,85,461,67,434,53,374,35,312,30,252,32"/>
+<area shape="rect" id="Node000003" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind__t.html" title=" " alt="" coords="31,102,239,157"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,108,312,107,375,114,436,132,464,146,490,165,514,196,536,243,556,301,573,365,600,491,614,581,609,582,594,492,568,366,551,302,531,245,510,199,486,169,461,151,434,137,374,119,312,113,252,114"/>
+<area shape="rect" id="Node000004" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__rebase__t.html" title=" " alt="" coords="31,181,239,235"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="253,192,312,193,375,202,435,220,464,235,490,253,526,289,554,332,576,378,592,426,611,516,617,581,611,581,605,517,587,428,571,380,550,334,522,292,486,257,461,239,433,225,373,207,312,198,253,197"/>
+<area shape="rect" id="Node000005" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind__t.html" title=" " alt="" coords="31,259,239,314"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="253,278,311,281,373,292,434,312,490,343,518,369,542,399,562,432,579,466,602,531,614,580,609,582,597,533,574,468,558,435,538,402,514,373,486,347,432,317,372,297,311,287,252,283"/>
+<area shape="rect" id="Node000006" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__rebase__t.html" title=" " alt="" coords="31,338,239,393"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="253,365,310,372,372,384,433,404,489,432,530,466,564,507,590,547,608,580,603,582,586,550,560,510,527,470,487,437,431,409,370,390,309,377,252,370"/>
+<area shape="rect" id="Node000007" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__bind24__t.html" title=" " alt="" coords="31,417,239,471"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="253,454,369,475,430,492,489,514,547,545,593,579,590,583,544,550,487,518,428,497,368,481,252,459"/>
+<area shape="rect" id="Node000008" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__bind24__t.html" title=" " alt="" coords="31,495,239,550"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="253,535,488,571,528,579,527,584,488,576,252,540"/>
+<area shape="rect" id="Node000009" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__bind__t.html" title=" " alt="" coords="31,574,239,629"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="252,599,512,599,512,604,252,604"/>
+<area shape="rect" id="Node000010" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__64__kernel__cache__rebase__t.html" title=" " alt="" coords="31,653,239,707"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="252,675,367,666,487,647,530,634,570,619,571,624,532,639,489,652,367,672,253,681"/>
+<area shape="rect" id="Node000011" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__rebase__t.html" title=" " alt="" coords="31,731,239,786"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="252,753,308,747,368,738,429,723,487,702,519,684,548,662,594,620,598,624,552,667,522,689,489,706,431,728,369,743,309,753,253,758"/>
+<area shape="rect" id="Node000012" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__bind__t.html" title=" " alt="" coords="31,810,239,865"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="252,839,310,834,370,824,431,806,487,779,529,743,563,700,588,656,604,620,609,623,593,658,567,703,533,747,489,784,433,811,372,829,310,839,252,844"/>
+<area shape="rect" id="Node000013" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__cache__rebase__t.html" title=" " alt="" coords="31,889,239,943"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="252,924,311,922,372,913,432,894,460,881,486,865,515,839,539,808,560,774,576,739,598,672,609,621,614,622,603,673,581,741,564,776,544,811,519,842,490,869,463,886,434,899,373,918,311,927,252,929"/>
+<area shape="rect" id="Node000014" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__32__firmware__rebase__t.html" title=" " alt="" coords="31,967,239,1022"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="253,1008,312,1008,373,1001,433,983,461,970,486,953,522,917,551,874,572,827,588,778,606,687,612,621,617,622,612,688,594,780,577,829,555,876,526,920,490,957,463,974,435,988,374,1006,312,1014,253,1013"/>
+<area shape="rect" id="Node000015" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__segmented__rebase__t.html" title=" " alt="" coords="23,1046,246,1101"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="260,1081,328,1083,394,1081,450,1073,471,1067,486,1058,511,1027,534,978,553,917,571,849,596,716,610,621,615,622,601,717,576,851,559,919,539,980,516,1030,490,1062,473,1071,451,1078,394,1086,328,1088,260,1086"/>
+<area shape="rect" id="Node000016" href="$structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1dyld__chained__ptr__arm64e__auth__segmented__rebase__t.html" title=" " alt="" coords="5,1125,264,1179"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="268,1178,325,1181,382,1177,438,1162,463,1149,486,1133,501,1117,514,1096,538,1038,559,965,576,886,599,730,610,621,616,622,604,730,581,887,564,967,543,1039,519,1098,505,1120,490,1137,466,1154,440,1167,383,1182,325,1187,268,1184"/>
 </map>
