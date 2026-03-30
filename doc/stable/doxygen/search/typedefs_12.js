@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['time_5ft_0',['time_t',['../classLIEF_1_1PE_1_1PKCS9SigningTime.html#a27e9f21e3cbb0ca3f376fb117610fe14',1,'LIEF::PE::PKCS9SigningTime::time_t'],['../classLIEF_1_1PE_1_1SignatureParser.html#a76d7280734f1df925b12827e6f4282ec',1,'LIEF::PE::SignatureParser::time_t']]],
-  ['tools_5flist_5ft_1',['tools_list_t',['../classLIEF_1_1MachO_1_1BuildVersion.html#a19bf5edc8afc7e6c697904523f7a934d',1,'LIEF::MachO::BuildVersion']]],
-  ['types_5fit_2',['types_it',['../classLIEF_1_1dwarf_1_1CompilationUnit.html#a809c2f6b45ac121164d9a2cabb6efad3',1,'LIEF::dwarf::CompilationUnit::types_it'],['../classLIEF_1_1pdb_1_1DebugInfo.html#a0bc9b40b12513c6b30717c04057f1ec0',1,'LIEF::pdb::DebugInfo::types_it']]],
-  ['types_5ft_3',['types_t',['../classLIEF_1_1DEX_1_1File.html#a068f3f454ee33137ffbef1a64fd1cf00',1,'LIEF::DEX::File']]]
+  ['sc_5fuuid_5ft_0',['sc_uuid_t',['../namespaceLIEF_1_1dsc.html#a1605afbfd0acd135b64bbcd334fa2cca',1,'LIEF::dsc']]],
+  ['sections_5fcache_5ft_1',['sections_cache_t',['../classLIEF_1_1MachO_1_1Binary.html#adcb23f55ab626ee58ee354a259d0750a',1,'LIEF::MachO::Binary']]],
+  ['sections_5ft_2',['sections_t',['../classLIEF_1_1Binary.html#a70144f053e16345d1d6c3e0a77b22ce2',1,'LIEF::Binary::sections_t'],['../classLIEF_1_1COFF_1_1Binary.html#af398574f4da26f123edca01690ccf100',1,'LIEF::COFF::Binary::sections_t'],['../classLIEF_1_1ELF_1_1Binary.html#aaf4ec49665cb4153ee2cdbc7c6f450e0',1,'LIEF::ELF::Binary::sections_t'],['../classLIEF_1_1ELF_1_1Segment.html#a05c47ef35f8b4c6248cdd44390af1fda',1,'LIEF::ELF::Segment::sections_t'],['../classLIEF_1_1MachO_1_1SegmentCommand.html#a38761bad1efe463d0df8e6dee82059f9',1,'LIEF::MachO::SegmentCommand::sections_t'],['../classLIEF_1_1PE_1_1Binary.html#a2183b71352258179e002c2feabbd8e6d',1,'LIEF::PE::Binary::sections_t']]],
+  ['segment_5fcallback_5ft_3',['segment_callback_t',['../namespaceLIEF_1_1MachO.html#a0f6df0bbf0b17ad16209454a4ee67d7e',1,'LIEF::MachO']]],
+  ['segments_5fcache_5ft_4',['segments_cache_t',['../classLIEF_1_1MachO_1_1Binary.html#a352a0306e4bad40ad319efcd33022d7e',1,'LIEF::MachO::Binary']]],
+  ['segments_5ft_5',['segments_t',['../classLIEF_1_1ELF_1_1Binary.html#a4e1dc411b503347df93c180875fffd75',1,'LIEF::ELF::Binary::segments_t'],['../classLIEF_1_1ELF_1_1Section.html#a363b60572e061e9b255c903d4dcf247e',1,'LIEF::ELF::Section::segments_t']]],
+  ['short_5fid_5ft_6',['short_id_t',['../classLIEF_1_1PE_1_1EnclaveImport.html#a79e674eebfecf9fc906f2d948758ee63',1,'LIEF::PE::EnclaveImport']]],
+  ['signature_5ft_7',['signature_t',['../classLIEF_1_1DEX_1_1Header.html#abec4bbbb44640d4c399ac5a1f9f4d729',1,'LIEF::DEX::Header::signature_t'],['../classLIEF_1_1PE_1_1CodeViewPDB.html#a67aae23e8cd1d65418073f1b7e38e8d0',1,'LIEF::PE::CodeViewPDB::signature_t'],['../classLIEF_1_1PE_1_1Header.html#a979c2edb3104a2989d1c792b0985051c',1,'LIEF::PE::Header::signature_t']]],
+  ['signatures_5ft_8',['signatures_t',['../classLIEF_1_1PE_1_1Binary.html#a70d78b71fedc512ea7e19b548a696394',1,'LIEF::PE::Binary']]],
+  ['signer_5finfos_5ft_9',['signer_infos_t',['../classLIEF_1_1PE_1_1SignatureParser.html#a5d40c6a2e729922f8e975d79a1e8b05a',1,'LIEF::PE::SignatureParser']]],
+  ['signers_5ft_10',['signers_t',['../classLIEF_1_1PE_1_1MsCounterSign.html#afa538b6788133547f6b963bdca8a1d96',1,'LIEF::PE::MsCounterSign']]],
+  ['sources_5fiterator_11',['sources_iterator',['../classLIEF_1_1pdb_1_1CompilationUnit.html#a10aabaa1f7fa9894fb48b93e018d188e',1,'LIEF::pdb::CompilationUnit']]],
+  ['span_12',['span',['../namespaceLIEF.html#a3c570bf1c62cc0e435c9fd3b5fa90305',1,'LIEF']]],
+  ['string_5flist_5ft_13',['string_list_t',['../classLIEF_1_1ELF_1_1Binary.html#a7d376ca7ed60326e0bf7c7b7185b6d46',1,'LIEF::ELF::Binary']]],
+  ['strings_5ft_14',['strings_t',['../classLIEF_1_1DEX_1_1File.html#a4129be9a2bc11dd0c16cc97a922dfa02',1,'LIEF::DEX::File']]],
+  ['strings_5ftable_5ft_15',['strings_table_t',['../classLIEF_1_1COFF_1_1Binary.html#ae6feaefd3b99217f6340b8652face25d',1,'LIEF::COFF::Binary::strings_table_t'],['../classLIEF_1_1PE_1_1Binary.html#a885df81c0ea89eab4279fa5cca697f53',1,'LIEF::PE::Binary::strings_table_t'],['../classLIEF_1_1PE_1_1ResourcesManager.html#a5ce6b80875d6621ed0b9709bed914574',1,'LIEF::PE::ResourcesManager::strings_table_t']]],
+  ['stub_5fiterator_16',['stub_iterator',['../classLIEF_1_1MachO_1_1Binary.html#aec697d886eec4b1da012b19474d60ce8',1,'LIEF::MachO::Binary']]],
+  ['subcache_5fiterator_17',['subcache_iterator',['../classLIEF_1_1dsc_1_1DyldSharedCache.html#aed7b35a4a8f882389afe91c08304673b',1,'LIEF::dsc::DyldSharedCache']]],
+  ['symbols_5ft_18',['symbols_t',['../classLIEF_1_1Binary.html#a44c72806308e4bfeed1d5d9399dd7fc0',1,'LIEF::Binary::symbols_t'],['../classLIEF_1_1COFF_1_1Binary.html#a026a8fe71b4c927ddf7eb436653ab236',1,'LIEF::COFF::Binary::symbols_t'],['../classLIEF_1_1COFF_1_1Section.html#a1a31217020feeb0e8bf3f8e329786317',1,'LIEF::COFF::Section::symbols_t'],['../classLIEF_1_1ELF_1_1Binary.html#a10c11658ce99cde0460f39782a94f63e',1,'LIEF::ELF::Binary::symbols_t'],['../classLIEF_1_1MachO_1_1Binary.html#aa9da2e1a3954da591a6ce55009859d0e',1,'LIEF::MachO::Binary::symbols_t'],['../classLIEF_1_1PE_1_1Binary.html#a5e8717f6fe62a6978a9c96d03c7c8fbd',1,'LIEF::PE::Binary::symbols_t']]],
+  ['symbols_5fversion_5fdefinition_5ft_19',['symbols_version_definition_t',['../classLIEF_1_1ELF_1_1Binary.html#abca90586d58063fb0798f0ab57c43215',1,'LIEF::ELF::Binary']]],
+  ['symbols_5fversion_5frequirement_5ft_20',['symbols_version_requirement_t',['../classLIEF_1_1ELF_1_1Binary.html#aefdeb6e6e122cd36fa6d6bd3b7c5a52b',1,'LIEF::ELF::Binary']]],
+  ['symbols_5fversion_5ft_21',['symbols_version_t',['../classLIEF_1_1ELF_1_1Binary.html#a408d4112921363e70033648e10825335',1,'LIEF::ELF::Binary']]],
+  ['symsecmap_22',['SymSecMap',['../classLIEF_1_1COFF_1_1Parser.html#a817338c3696d2e2a72c5826659442e55',1,'LIEF::COFF::Parser']]]
 ];

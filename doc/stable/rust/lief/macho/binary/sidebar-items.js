@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Binary"]};
+window.SIDEBAR_ITEMS = {"struct":["Binary"],"type":["BindingsInfo","Notes","Stubs"]};
