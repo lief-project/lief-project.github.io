@@ -16,14 +16,14 @@
 Introduction
 ************
 
-Mach-O binaries can be parsed with LIEF using the |lief-macho-parse| function.
+Mach-O binaries can be parsed using the |lief-macho-parse| function.
 
 .. note::
 
-  The Mach-O format defines the notion of FAT binaries which can embed different
+  The Mach-O format defines FAT binaries, which can embed different
   architectures into a single file. |lief-macho-parse| always returns a
-  |lief-macho-fatbinary| with the assumption that a non-fat Mach-O can be
-  represented as a |lief-macho-fatbinary| with **one** architecture.
+  |lief-macho-fatbinary|, assuming that a non-FAT Mach-O can be represented as
+  a |lief-macho-fatbinary| containing a single architecture.
 
 .. tabs::
 
@@ -98,13 +98,13 @@ different |lief-macho-binary| or pick/take a specific one:
           std::cout << macho.commands().size() << '\n';
         }
 
-        // Pick one at the specified index (without take the ownership)
+        // Pick one at the specified index (without taking ownership)
         const LIEF::MachO::Binary* macho = fat->at(0);
 
-        // Pick one at the specified index and take the ownership
+        // Pick one at the specified index and taking ownership
         const LIEF::MachO::Binary* macho = fat->take(0);
 
-        // Pick one with the given arch and take the ownership
+        // Pick one with the given arch and taking ownership
         const LIEF::MachO::Binary* macho = fat->take(LIEF::MachO::Header::CPU_TYPE::ARM64);
 
   .. tab:: :fa:`brands fa-rust` Rust
@@ -118,9 +118,9 @@ different |lief-macho-binary| or pick/take a specific one:
             println!("{}", macho.entrypoint());
         }
 
-Upon a |lief-macho-binary| or |lief-macho-fatbinary| modification, one can use
-either |lief-macho-binary-write| or |lief-macho-fatbinary-write| to write back
-the (FAT) MachO binary object into a raw MachO file.
+After modifying a |lief-macho-binary| or |lief-macho-fatbinary| object, you can
+use either |lief-macho-binary-write| or |lief-macho-fatbinary-write| to write
+it back to a raw Mach-O file.
 
 .. tabs::
 
@@ -142,19 +142,49 @@ the (FAT) MachO binary object into a raw MachO file.
         macho->at(LIEF::MachO::Header::CPU_TYPE::ARM64)->write("fit.macho");
         macho->write("fat.macho");
 
-Advance Parsing/Writing
-***********************
+You can also use |lief-macho-binary-write_to_bytes| to get the new Mach-O binary
+as a buffer of bytes:
+
+.. note::
+
+   This API can also take an extra |lief-macho-builder-config| parameter.
+
+.. tabs::
+
+  .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        macho: lief.MachO.Binary = ...
+        new_macho: bytes = macho.write_to_bytes()
+
+  .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::MachO::Binary> macho;
+
+        std::ostringstream os;
+        macho->write(os);
+        std::string buffer = os.str();
+
+        const auto* start = reinterpret_cast<const uint8_t*>(buffer.data());
+        size_t size = buffer.size();
+
+
+Advanced Parsing/Writing
+************************
 
 |lief-macho-parse| can take an extra |lief-macho-parser-config| parameter to specify
-some parts of the MachO format to skip during parsing.
+parts of the Mach-O format to skip during parsing.
 
 .. warning::
 
-   Generally speaking, |lief-macho-binary-write| and |lief-macho-fatbinary-write|
-   require a **complete** initial parsing of the MachO file.
+   Generally, |lief-macho-binary-write| and |lief-macho-fatbinary-write|
+   require a **complete** initial parsing of the Mach-O file.
 
 Similarly, |lief-macho-binary-write| can also take an extra |lief-macho-builder-config|
-to specify which parts of the MachO should be re-built or not.
+to specify which parts of the Mach-O should be rebuilt.
 
 .. tabs::
 
@@ -190,15 +220,141 @@ to specify which parts of the MachO should be re-built or not.
 
   :ref:`binary-abstraction`
 
+.. _format-macho-rpath:
+
+RPath and Library Path Modification
+***********************************
+
+Sometimes, we need to modify the Mach-O RPath commands or the (absolute) path of
+a linked library in an executable. When recompiling or linking the executable
+is not possible, LIEF can be used for these modifications.
+
+For example, let's consider a binary with the following dependencies:
+
+.. code-block:: bash
+
+  $ otool -L hello.bin
+  hello:
+        /Users/romain/dev/libmylib.dylib (compatibility version 0.0.0, current version 0.0.0)
+        /usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 1700.255.0)
+        /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1345.100.2)
+
+One can change the directory of ``libmylib.dylib`` with the following code:
+
+.. tabs::
+
+  .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        macho = lief.MachO.parse("hello.bin")
+        lib: lief.MachO.DylibCommand = macho.find_library("libmylib.dylib")
+        lib.name = "/opt/homebrew/my_package/libmylib.dylib"
+
+        macho.write("hello_fixed.bin")
+
+  .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::MachO::Binary> macho = LIEF::MachO::Parser::parse("hello.bin").take(0);
+        LIEF::MachO::DylibCommand* lib = macho->find_library("libmylib.dylib");
+        lib->name("/opt/homebrew/my_package/libmylib.dylib");
+
+        macho->write("hello_fixed.bin");
+
+  .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        let fat = lief::macho::FatBinary::parse("hello.bin").unwrap();
+        let mut binary = fat.iter().next().unwrap();
+
+        let mut lib = binary.find_library("libmylib.dylib").unwrap();
+        lib.set_name("/opt/homebrew/my_package/libmylib.dylib");
+
+        binary.write("hello_fixed.bin");
+
+.. note::
+
+   It is worth mentioning that LIEF doesn't impose restrictions on the length of modified library
+   paths. LIEF manages all internal modifications to support both longer and
+   shorter library paths.
+
+
+This type of modification can be used in conjunction with the ``@rpath``
+feature of Mach-O binaries:
+
+1. We can add an extra ``LC_RPATH`` (|lief-macho-rpath|) command to ``hello.bin``:
+
+.. tabs::
+
+  .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        macho = lief.MachO.parse("hello.bin")
+        rpath = lief.MachO.RPathCommand.create("/opt/homebrew/my_package")
+        macho.add(rpath)
+
+  .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::MachO::Binary> macho = LIEF::MachO::Parser::parse("hello.bin").take(0);
+        auto rpath = LIEF::MachO::RPathCommand::create("/opt/homebrew/my_package");
+        macho->add(*rpath);
+
+  .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        let fat = lief::macho::FatBinary::parse("hello.bin").unwrap();
+        let mut binary = fat.iter().next().unwrap();
+
+        let rpath = RPath::new("/opt/homebrew/my_package");
+        binary.add_command(rpath);
+
+2. Then, we can change the library path of ``libmylib.dylib`` to include the RPath prefix:
+
+.. tabs::
+
+  .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        lib: lief.MachO.DylibCommand = macho.find_library("libmylib.dylib")
+        lib.name = "@rpath/libmylib.dylib"
+
+        macho.write("hello_fixed.bin")
+
+  .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        LIEF::MachO::DylibCommand* lib = macho->find_library("libmylib.dylib");
+        lib->name("@rpath/libmylib.dylib");
+
+        macho->write("hello_fixed.bin");
+
+  .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        let mut lib = binary.find_library("libmylib.dylib").unwrap();
+        lib.set_name("@rpath/libmylib.dylib");
+
+        binary.write("hello_fixed.bin");
+
 Objective-C Support
 ********************
 
-If a Mach-O binary is compiled from Objetive-C sources, it could contain
-metadata which are represented by the |lief-objc-metadata| object.
+If a Mach-O binary is compiled from Objective-C sources, it may contain
+metadata represented by the |lief-objc-metadata| object.
 
-This metadata can help understand the underlying structures of the binary and
-:ref:`LIEF extended <extended-intro>` provides the support for accessing this
-information through: |lief-macho-binary-objc-metadata|.
+This metadata can help understand the underlying structures of the binary, and
+:ref:`LIEF Extended <extended-intro>` provides support for accessing this
+information through |lief-macho-binary-objc-metadata|.
 
 For more details, you can check the :ref:`Obj-C section <extended-objc>`.
 

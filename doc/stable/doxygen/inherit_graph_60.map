@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structLIEF_1_1ELF_1_1Builder_1_1config__t.html" title="Configuration options to tweak the building process." alt="" coords="5,5,137,45"/>
+<area shape="rect" id="Node000000" href="$classLIEF_1_1DebugInfo.html" title="This class provides a generic interface for accessing debug information from different formats such a..." alt="" coords="5,32,128,60"/>
+<area shape="rect" id="Node000001" href="$classLIEF_1_1dwarf_1_1DebugInfo.html" title="This class represents a DWARF debug information. It can embed different compilation units which can b..." alt="" coords="176,5,342,33"/>
+<area shape="poly" id="edge29_Node000000_Node000001" title=" " alt="" coords="142,33,178,30,173,31,143,38"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1pdb_1_1DebugInfo.html" title="This class provides an interface for PDB files. One can instantiate this class using LIEF::pdb::load(..." alt="" coords="182,57,336,85"/>
+<area shape="poly" id="edge30_Node000000_Node000002" title=" " alt="" coords="143,53,184,61,179,61,143,59"/>
 </map>

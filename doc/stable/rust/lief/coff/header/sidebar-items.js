@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Header"],"struct":["BigObjHeader","RegularHeader"],"trait":["GenericHeader"]};
