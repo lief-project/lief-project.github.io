@@ -4,5 +4,5 @@ var searchData=
   ['macho_5ftypes_1',['MACHO_TYPES',['../namespaceLIEF_1_1MachO.html#a5e64b90420e0320b1fe1c17c914fbd2f',1,'LIEF::MachO']]],
   ['memoryaccess_2',['MemoryAccess',['../classLIEF_1_1assembly_1_1Instruction.html#a5eebb5c42c15c73d5f7a74d175c6cc0c',1,'LIEF::assembly::Instruction']]],
   ['method_5ftypes_3',['METHOD_TYPES',['../namespaceLIEF_1_1DEX.html#abc503bb5c2f3d7f3a11cecf685cc0574',1,'LIEF::DEX']]],
-  ['modes_4',['MODES',['../classLIEF_1_1Header.html#ac67c05d4958013a1554ae94b6fd75b4c',1,'LIEF::Header']]]
+  ['modes_4',['MODES',['../classLIEF_1_1Header.html#ac67c05d4958013a1554ae94b6fd75b4c',1,'LIEF::Header::MODES'],['../classLIEF_1_1pdb_1_1types_1_1Simple.html#a30a4a13c79c26587052deb4a7edba4fd',1,'LIEF::pdb::types::Simple::MODES']]]
 ];

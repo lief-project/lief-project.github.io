@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="struct_pe___import_entry__t" kind="struct" language="C++" prot="public">
     <compoundname>Pe_ImportEntry_t</compoundname>
     <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="struct_pe___import_entry__t_1adaa3d1932e7fa6b937d2f077f6b99d6f" prot="public" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool Pe_ImportEntry_t::is_ordinal</definition>
+      <memberdef kind="variable" id="struct_pe___import_entry__t_1a90a74b9cc5b4ff2ee56f66d57a8ffb9b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Pe_ImportEntry_t::is_ordinal</definition>
         <argsstring></argsstring>
         <name>is_ordinal</name>
         <qualifiedname>Pe_ImportEntry_t::is_ordinal</qualifiedname>
@@ -127,7 +127,7 @@
       <member refid="struct_pe___import_entry__t_1abdd07944f2ec0a94a4d94049f1485e36" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>hint_name_rva</name></member>
       <member refid="struct_pe___import_entry__t_1ac62e6ffcafacdd82fe21af0856d5a044" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>iat_address</name></member>
       <member refid="struct_pe___import_entry__t_1affba22b6800d4db0a09eaa1aef97de1f" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>iat_value</name></member>
-      <member refid="struct_pe___import_entry__t_1adaa3d1932e7fa6b937d2f077f6b99d6f" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>is_ordinal</name></member>
+      <member refid="struct_pe___import_entry__t_1a90a74b9cc5b4ff2ee56f66d57a8ffb9b" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>is_ordinal</name></member>
       <member refid="struct_pe___import_entry__t_1a8e8a5c16ddb29eb0c7936e57d4526928" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>name</name></member>
       <member refid="struct_pe___import_entry__t_1afea21fad413906ef392d4584820301c5" prot="public" virt="non-virtual"><scope>Pe_ImportEntry_t</scope><name>ordinal</name></member>
     </listofallmembers>

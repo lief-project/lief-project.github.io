@@ -3,13 +3,26 @@
 :fa:`solid fa-bars-staggered` DWARF
 -----------------------------------
 
-DWARF debug info can be embedded in the binary itself (default behavior for ELF)
-or externalized in a dedicated file.
+.. toctree::
+  :caption: <i class="fa-solid fa-code">&nbsp;</i>API
+  :maxdepth: 1
 
-If the DWARF debug info are embedded in the binary itself, one can use the
-attribute: :attr:`lief.Binary.debug_info` or :cpp:func:`LIEF::Binary::debug_info`
-to access an instance of :class:`lief.dwarf.DebugInfo` or
-:cpp:class:`LIEF::dwarf::DebugInfo`:
+  cpp
+  python
+  rust
+
+----
+
+Introduction
+************
+
+DWARF debug information can be included directly in the binary
+(which is the default behavior for ELF binaries) or stored in a separate
+dedicated file.
+
+When the DWARF debug information is embedded within the binary,
+you can access it using the following attribute: |lief-dwarf-binary-debug-info|.
+This attribute returns a |lief-dwarf-debug-info|:
 
 .. tabs::
 
@@ -44,9 +57,8 @@ to access an instance of :class:`lief.dwarf.DebugInfo` or
             // DWARF debug info
         }
 
-On the other hand, we can also use the function: :cpp:func:`LIEF::dwarf::load`
-or :func:`lief.dwarf.load` to load a DWARF file regardless whether it is
-embedded or not:
+Additionally, we can use the function: |lief-dwarf-load| to load a
+DWARF file, regardless of whether it is embedded or not:
 
 .. tabs::
 
@@ -76,8 +88,8 @@ embedded or not:
         let dbg = lief::dwarf::load("external_dwarf");
         let dbg = lief::dwarf::load("debug.dwo");
 
-At this point, one can use all the API exposed in :class:`lief.dwarf.DebugInfo` or
-:cpp:class:`LIEF::dwarf::DebugInfo` on the instantiated debug info:
+At this point, one can use all the API exposed in |lief-dwarf-debug-info| on the
+instantiated debug info:
 
 .. tabs::
 
@@ -172,7 +184,215 @@ At this point, one can use all the API exposed in :class:`lief.dwarf.DebugInfo` 
         dbg.variable_by_name("std::out_of_range::out_of_range(char const*)");
         dbg.variable_by_addr(0x137a70);
 
+
+.. _extended-dwarf-load-ext:
+
+In the case of an external DWARF file, you can bind this debug file to
+a |lief-abstract-binary| by using the function: |lief-abstract-binary-load_debug_info|.
+
+Here's an example:
+
+.. tabs::
+
+   .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        import lief
+
+        binary: lief.Binary = ... # Can be an ELF/PE/Mach-O [...]
+
+        dbg: lief.DebugInfo = binary.load_debug_info("/home/romain/dev/LIEF/some.dwo")
+
+   .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::Binary> binary; // Can be an ELF/PE/Mach-O
+
+        binary->load_debug_info("/home/romain/dev/LIEF/some.dwo");
+
+   .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        bin: &mut dyn lief::generic::Binary = ...;
+
+        let path = PathBuf::from("/home/romain/dev/LIEF/some.dwo");
+
+        bin.load_debug_info(&path);
+
+This external loading API is useful for adding debug information that might not
+already be present in the binary. For instance, the |lief-disassemble| function
+can leverage this additional debug information to disassemble functions
+defined in the debug file previously loaded:
+
+.. tabs::
+
+   .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        import lief
+
+        binary: lief.Binary = ... # Can be an ELF/PE/Mach-O [...]
+
+        dbg: lief.DebugInfo = binary.load_debug_info("/home/romain/dev/LIEF/some.dwo")
+
+        # The location (address/size) of `my_function` is defined in some.dwo
+        for inst in binary.disassemble("my_function"):
+            print(inst)
+
+   .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::Binary> binary; // Can be an ELF/PE/Mach-O
+
+        binary->load_debug_info("/home/romain/dev/LIEF/some.dwo");
+
+        // The location (address/size) of `my_function` is defined in some.dwo
+        for (std::unique_ptr<LIEF::asm::Instruction> inst : binary->disassemble("my_function")) {
+          std::cout << *inst << '\n';
+        }
+
+   .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        bin: &mut dyn lief::generic::Binary = ...;
+
+        let path = PathBuf::from("/home/romain/dev/LIEF/some.dwo");
+
+        bin.load_debug_info(&path);
+
+        // The location (address/size) of `my_function` is defined in some.dwo
+        for inst in bin.disassemble_symbol("my_function") {
+            println!("{inst}");
+        }
+
+Additionally, you may want to check out the
+:ref:`BinaryNinja <plugins-binaryninja-dwarf>` and
+:ref:`Ghidra <plugins-ghidra-dwarf>` DWARF export plugin which can generate
+debug information based on the analyses performed by these frameworks.
+
+.. _extended-dwarf-editor:
+
+DWARF Editor
+************
+
+.. admonition:: Editing Existing DWARF
+  :class: warning
+
+  Currently, LIEF **does not** support modifying an **existing** DWARF file
+
+LIEF provides a comprehensive high-level API to create DWARF files programmatically.
+This works by using the |lief-dwarf-editor| interface that can be instantiated using
+|lief-dwarf-editor-from_binary|:
+
+.. tabs::
+
+   .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        import lief
+
+        pe = lief.PE.parse("demo.exe")
+
+        editor: lief.dwarf.Editor = lief.dwarf.Editor.from_binary(pe)
+
+   .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::PE::Binary> pe = LIEF::PE::Parser::parse("demo.exe");
+
+        std::unique_ptr<LIEF::dwarf::Editor> editor =
+          LIEF::dwarf::Editor::from_binary(*pe);
+
+
+   .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        let mut bin = lief::pe::Binary::parse(&path).unwrap();
+        let editor = lief::dwarf::Editor::from_binary(&mut bin);
+
+
+Given this |lief-dwarf-editor|, one can create one or several |lief-dwarf-editor-CompilationUnit|
+that own the different |lief-dwarf-editor-Function|, |lief-dwarf-editor-Variable|, |lief-dwarf-editor-Type|
+
+.. tabs::
+
+   .. tab:: :fa:`brands fa-python` Python
+
+      .. code-block:: python
+
+        unit: lief.dwarf.editor.CompilationUnit = editor.create_compilation_unit()
+        unit.set_producer("LIEF")
+
+        func: lief.dwarf.editor.Function = unit.create_function("hello")
+        func.set_address(0x123)
+        func.set_return_type(
+            unit.create_structure("my_struct_t").pointer_to()
+        )
+
+        var: lief.dwarf.editor.Variable = func.create_stack_variable("local_var")
+        var.set_stack_offset(8)
+
+        editor.write("/tmp/out.debug")
+
+   .. tab:: :fa:`regular fa-file-code` C++
+
+      .. code-block:: cpp
+
+        std::unique_ptr<LIEF::dwarf::editor::CompilationUnit>
+          unit = editor->create_compilation_unit();
+        unit->set_producer("LIEF");
+
+        std::unique_ptr<LIEF::dwarf::editor::Function>
+          func = unit->create_function("hello");
+        func->set_address(0x123);
+
+        func->set_return_type(
+          *unit->create_structure("my_struct_t")->pointer_to()
+        );
+
+        std::unique_ptr<LIEF::dwarf::editor::Variable> var =
+          func->create_stack_variable("local_var");
+
+        var->set_stack_offset(8);
+        editor->write("/tmp/out.debug");
+
+   .. tab:: :fa:`brands fa-rust` Rust
+
+      .. code-block:: rust
+
+        let mut unit = editor.create_compile_unit().unwrap();
+        unit.set_producer("LIEF");
+
+        let mut func = unit.create_function("hello").unwrap();
+        func.set_address(0x123);
+        func.set_return_type(
+            &unit.create_structure("my_struct_t").pointer_to()
+        );
+
+        let mut var = func.create_stack_variable("local_var");
+        var.set_stack_offset(8);
+
+        editor.write("/tmp/out.debug");
+
+.. admonition:: BinaryNinja & Ghidra
+  :class: note
+
+  This feature is provided as a plugin for: :ref:`BinaryNinja <plugins-binaryninja-dwarf>`
+  and :ref:`Ghidra <plugins-binaryninja>`
+
 ----
+
+API
+****
 
 You can find the documentation of the API for the different languages here:
 
@@ -180,4 +400,6 @@ You can find the documentation of the API for the different languages here:
 
 :fa:`regular fa-file-code` :doc:`C++ API <cpp>`
 
-:fa:`brands fa-rust` Rust API: |lief-rust-doc-nightly|
+:fa:`brands fa-rust` Rust API: :rust:module:`lief::dwarf`
+
+.. include:: ../../_cross_api.rst

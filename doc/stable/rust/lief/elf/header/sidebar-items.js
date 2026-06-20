@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Class","ElfData","FileType","OsAbi","Version"],"struct":["Header"]};
+window.SIDEBAR_ITEMS = {"enum":["Arch","Class","ElfData","FileType","OsAbi","Version"],"struct":["Header"]};

@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["BINDING_CLASS","BIND_TYPES","BindingInfo","CHAINED_FORMAT"],"struct":["Chained","Dyld","Generic"],"trait":["AsGeneric"]};
+window.SIDEBAR_ITEMS = {"enum":["BINDING_CLASS","BIND_TYPES","BindingInfo","CHAINED_FORMAT"],"struct":["Chained","Dyld","Generic","Indirect"],"trait":["AsGeneric"]};
