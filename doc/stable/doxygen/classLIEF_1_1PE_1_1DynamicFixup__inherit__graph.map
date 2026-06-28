@@ -1,0 +1,15 @@
+<map id="LIEF::PE::DynamicFixup" name="LIEF::PE::DynamicFixup">
+<area shape="rect" id="Node000001" title="This is the base class for any fixups located in DynamicRelocation." alt="" coords="5,164,178,192"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1PE_1_1DynamicFixupARM64Kernel.html" title="This class wraps fixups associated with the (special) symbol value: IMAGE_DYNAMIC_RELOCATION_ARM64_KE..." alt="" coords="233,5,452,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,151,162,105,192,81,224,60,253,49,249,52,227,65,195,85,165,109,118,155"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1PE_1_1DynamicFixupARM64X.html" title="This class represents IMAGE_DYNAMIC_RELOCATION_ARM64X." alt="" coords="229,74,456,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,154,174,131,225,110,266,101,261,103,227,116,177,136,132,159"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1PE_1_1DynamicFixupControlTransfer.html" title="This class wraps fixups associated with the (special) symbol value: IMAGE_DYNAMIC_RELOCATION_GUARD_IM..." alt="" coords="233,125,452,170"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,163,235,160,230,162,194,168"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1DynamicFixupGeneric.html" title="This class represents a generic entry where fixups are regular relocations (LIEF::PE::Relocation)." alt="" coords="231,194,454,222"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="193,188,233,194,228,195,194,193"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1PE_1_1DynamicFixupUnknown.html" title="This class represents an special dynamic relocation where the format of the fixups is not supported b..." alt="" coords="226,246,459,274"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="137,196,227,230,273,245,268,246,225,236,137,201"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1PE_1_1FunctionOverride.html" title="This class represents IMAGE_DYNAMIC_RELOCATION_FUNCTION_OVERRIDE." alt="" coords="247,298,438,326"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="117,201,166,243,196,265,227,283,261,297,255,297,225,287,193,269,163,248,116,206"/>
+</map>

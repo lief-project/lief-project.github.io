@@ -1,0 +1,19 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classLIEF_1_1PE_1_1unwind__x64_1_1Code.html" title="Base class for all unwind operations." alt="" coords="5,248,163,293"/>
+<area shape="rect" id="Node000001" href="$classLIEF_1_1PE_1_1unwind__x64_1_1Alloc.html" title="This class represents a stack&#45;allocation operation (UNWIND_OPCODES::ALLOC_SMALL or UNWIND_OPCODES::AL..." alt="" coords="211,5,368,50"/>
+<area shape="poly" id="edge294_Node000000_Node000001" title=" " alt="" coords="97,233,115,193,139,148,171,101,209,60,229,48,225,53,212,64,175,105,144,150,119,196,102,235"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1PE_1_1unwind__x64_1_1Epilog.html" title="Describes the function&#39;s epilog." alt="" coords="211,75,368,119"/>
+<area shape="poly" id="edge295_Node000000_Node000002" title=" " alt="" coords="108,234,152,181,180,154,209,129,232,118,228,122,212,134,183,158,156,185,113,237"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1PE_1_1unwind__x64_1_1PushMachFrame.html" title="Push a machine frame." alt="" coords="211,144,368,189"/>
+<area shape="poly" id="edge296_Node000000_Node000003" title=" " alt="" coords="136,238,209,199,237,187,233,191,212,203,139,242"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1PE_1_1unwind__x64_1_1PushNonVol.html" title="Push a nonvolatile integer register, decrementing RSP by 8." alt="" coords="211,213,368,258"/>
+<area shape="poly" id="edge297_Node000000_Node000004" title=" " alt="" coords="177,252,212,247,208,251,179,257"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1unwind__x64_1_1SaveNonVolatile.html" title="Save a nonvolatile integer register on the stack using a MOV instead of a PUSH." alt="" coords="211,283,368,327"/>
+<area shape="poly" id="edge298_Node000000_Node000005" title=" " alt="" coords="177,284,212,291,208,293,179,289"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1PE_1_1unwind__x64_1_1SaveXMM128.html" title=" " alt="" coords="211,352,368,397"/>
+<area shape="poly" id="edge299_Node000000_Node000006" title=" " alt="" coords="138,298,212,337,238,351,233,352,209,342,138,303"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1PE_1_1unwind__x64_1_1SetFPReg.html" title="Establish the frame pointer register by setting the register to some offset of the current RSP." alt="" coords="211,421,368,466"/>
+<area shape="poly" id="edge300_Node000000_Node000007" title=" " alt="" coords="111,303,156,356,183,383,212,407,233,421,227,421,209,411,180,387,152,359,110,308"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1PE_1_1unwind__x64_1_1Spare.html" title=" " alt="" coords="211,491,368,535"/>
+<area shape="poly" id="edge301_Node000000_Node000008" title=" " alt="" coords="100,304,119,345,144,390,175,436,212,476,230,490,224,490,209,480,171,439,139,393,115,347,99,310"/>
+</map>

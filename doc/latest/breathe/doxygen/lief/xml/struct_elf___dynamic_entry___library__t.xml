@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="struct_elf___dynamic_entry___library__t" kind="struct" language="C++" prot="public">
     <compoundname>Elf_DynamicEntry_Library_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="31" column="15" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="31" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="31" column="12" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___dynamic_entry___library__t_1a38401b8b93dada9688c2d8cb95502073" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="32" column="15" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="32" bodyend="-1"/>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="32" column="12" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_elf___dynamic_entry___library__t_1a5228d20b6ea6da7aa695ceb321de1840" prot="public" static="no" mutable="no">
         <type>const char *</type>

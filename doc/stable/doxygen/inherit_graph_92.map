@@ -1,3 +1,59 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classLIEF_1_1objc_1_1Protocol.html" title="This class represents an Objective&#45;C @protocol" alt="" coords="5,5,149,31"/>
+<area shape="rect" id="Node000000" href="$classLIEF_1_1dwarf_1_1Type.html" title="This class represents a DWARF Type which includes:" alt="" coords="5,811,135,839"/>
+<area shape="rect" id="Node000001" href="$classLIEF_1_1dwarf_1_1types_1_1Array.html" title="This class represents a DW_TAG_array_type." alt="" coords="187,5,322,50"/>
+<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="69,795,76,645,93,427,107,314,126,209,150,122,165,88,181,61,195,48,193,53,185,64,169,90,155,124,132,211,113,315,99,427,81,645,75,796"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1dwarf_1_1types_1_1Atomic.html" title="This class represents a DW_TAG_atomic_type." alt="" coords="187,75,322,119"/>
+<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="70,795,78,657,97,460,111,358,130,264,153,186,166,154,181,130,196,117,194,122,185,133,171,157,158,187,135,265,117,359,102,460,83,658,75,796"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1dwarf_1_1types_1_1Base.html" title="This class wraps the DW_TAG_base_type type which can be used – for instance – to represent integers o..." alt="" coords="187,144,322,189"/>
+<area shape="poly" id="edge43_Node000000_Node000003" title=" " alt="" coords="70,795,80,669,101,492,115,402,133,318,155,249,181,199,196,187,194,191,185,203,160,251,139,320,121,403,106,493,86,670,76,796"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1dwarf_1_1types_1_1ClassLike.html" title="This class abstracts a DWARF aggregate: DW_TAG_structure_type, DW_TAG_class_type, DW_TAG_union_type." alt="" coords="187,213,322,258"/>
+<area shape="poly" id="edge44_Node000000_Node000004" title=" " alt="" coords="71,796,83,683,105,526,119,446,137,373,157,312,181,269,196,256,194,261,185,272,162,314,142,375,125,448,110,527,88,683,76,796"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1dwarf_1_1types_1_1Coarray.html" title="This class represents a DW_TAG_coarray_type." alt="" coords="187,283,322,327"/>
+<area shape="poly" id="edge49_Node000000_Node000009" title=" " alt="" coords="72,795,86,695,109,559,141,428,160,375,181,338,196,325,194,330,185,341,164,377,146,429,114,560,91,695,77,796"/>
+<area shape="rect" id="Node000010" href="$classLIEF_1_1dwarf_1_1types_1_1Const.html" title="This class represents a DW_TAG_const_type." alt="" coords="187,352,322,397"/>
+<area shape="poly" id="edge50_Node000000_Node000010" title=" " alt="" coords="69,795,73,720,89,618,103,563,122,508,148,455,181,407,197,395,194,400,185,411,152,458,127,510,108,564,94,619,78,721,74,795"/>
+<area shape="rect" id="Node000011" href="$classLIEF_1_1dwarf_1_1types_1_1Dynamic.html" title="This class represents a DW_TAG_dynamic_type." alt="" coords="187,421,322,466"/>
+<area shape="poly" id="edge51_Node000000_Node000011" title=" " alt="" coords="71,795,78,731,97,648,111,603,129,558,152,515,181,477,197,464,195,469,185,480,157,518,134,560,116,604,102,649,84,732,76,796"/>
+<area shape="rect" id="Node000012" href="$classLIEF_1_1dwarf_1_1types_1_1Enum.html" title="This class represents a DW_TAG_enumeration_type." alt="" coords="187,491,322,535"/>
+<area shape="poly" id="edge52_Node000000_Node000012" title=" " alt="" coords="73,795,85,744,105,678,136,608,157,576,181,546,198,534,195,538,185,550,161,579,141,611,110,680,90,745,79,796"/>
+<area shape="rect" id="Node000013" href="$classLIEF_1_1dwarf_1_1types_1_1File.html" title="This class represents a DW_TAG_file_type." alt="" coords="187,560,322,605"/>
+<area shape="poly" id="edge53_Node000000_Node000013" title=" " alt="" coords="77,796,92,757,114,709,144,659,181,615,199,603,196,608,185,619,148,663,119,711,97,759,83,798"/>
+<area shape="rect" id="Node000014" href="$classLIEF_1_1dwarf_1_1types_1_1Immutable.html" title="This class represents a DW_TAG_immutable_type." alt="" coords="187,629,322,674"/>
+<area shape="poly" id="edge54_Node000000_Node000014" title=" " alt="" coords="85,797,125,741,152,711,181,684,201,672,199,677,184,688,156,715,130,744,90,799"/>
+<area shape="rect" id="Node000015" href="$classLIEF_1_1dwarf_1_1types_1_1Interface.html" title="This class represents a DW_TAG_interface_type." alt="" coords="187,699,322,743"/>
+<area shape="poly" id="edge55_Node000000_Node000015" title=" " alt="" coords="104,801,181,753,207,742,203,746,184,758,108,804"/>
+<area shape="rect" id="Node000016" href="$classLIEF_1_1dwarf_1_1types_1_1Pointer.html" title="This class represents a DW_TAG_pointer_type DWARF type." alt="" coords="187,768,322,813"/>
+<area shape="poly" id="edge56_Node000000_Node000016" title=" " alt="" coords="148,808,188,801,184,805,152,812"/>
+<area shape="rect" id="Node000017" href="$classLIEF_1_1dwarf_1_1types_1_1PointerToMember.html" title="This class represents a DW_TAG_ptr_to_member_type." alt="" coords="183,837,326,882"/>
+<area shape="poly" id="edge57_Node000000_Node000017" title=" " alt="" coords="148,838,185,845,180,848,151,842"/>
+<area shape="rect" id="Node000018" href="$classLIEF_1_1dwarf_1_1types_1_1RValueReference.html" title="This class represents a DW_TAG_rvalue_reference_type." alt="" coords="184,907,324,951"/>
+<area shape="poly" id="edge58_Node000000_Node000018" title=" " alt="" coords="105,845,184,892,207,905,203,907,181,897,107,850"/>
+<area shape="rect" id="Node000019" href="$classLIEF_1_1dwarf_1_1types_1_1Reference.html" title="This class represents a DW_TAG_reference_type." alt="" coords="187,976,322,1021"/>
+<area shape="poly" id="edge59_Node000000_Node000019" title=" " alt="" coords="87,850,130,906,156,935,184,962,202,974,197,976,181,966,152,939,125,909,88,855"/>
+<area shape="rect" id="Node000020" href="$classLIEF_1_1dwarf_1_1types_1_1Restrict.html" title="This class represents a DW_TAG_restrict_type." alt="" coords="187,1045,322,1090"/>
+<area shape="poly" id="edge60_Node000000_Node000020" title=" " alt="" coords="80,850,97,891,119,939,148,987,185,1031,200,1044,195,1046,181,1035,144,991,114,941,92,893,80,856"/>
+<area shape="rect" id="Node000021" href="$classLIEF_1_1dwarf_1_1types_1_1SetTy.html" title="This class represents a DW_TAG_set_type." alt="" coords="187,1115,322,1159"/>
+<area shape="poly" id="edge61_Node000000_Node000021" title=" " alt="" coords="76,851,90,905,110,970,141,1039,161,1071,185,1100,199,1113,194,1115,181,1104,157,1074,136,1042,105,972,85,906,76,857"/>
+<area shape="rect" id="Node000022" href="$classLIEF_1_1dwarf_1_1types_1_1Shared.html" title="This class represents a DW_TAG_shared_type." alt="" coords="187,1184,322,1229"/>
+<area shape="poly" id="edge62_Node000000_Node000022" title=" " alt="" coords="73,852,84,918,102,1001,116,1046,134,1090,157,1132,185,1170,198,1183,193,1184,181,1173,152,1135,129,1092,111,1047,97,1002,78,919,73,857"/>
+<area shape="rect" id="Node000023" href="$classLIEF_1_1dwarf_1_1types_1_1StringTy.html" title="This class represents a DW_TAG_string_type." alt="" coords="187,1253,322,1298"/>
+<area shape="poly" id="edge63_Node000000_Node000023" title=" " alt="" coords="71,852,78,929,94,1031,108,1086,127,1140,152,1192,185,1239,198,1252,193,1253,181,1243,148,1195,122,1142,103,1087,89,1032,73,930,71,857"/>
+<area shape="rect" id="Node000024" href="$classLIEF_1_1dwarf_1_1types_1_1Subroutine.html" title="This class represents a DW_TAG_subroutine_type." alt="" coords="187,1323,322,1367"/>
+<area shape="poly" id="edge64_Node000000_Node000024" title=" " alt="" coords="75,852,91,955,114,1090,146,1221,164,1273,185,1309,198,1322,193,1323,181,1312,160,1275,141,1222,109,1091,86,955,75,857"/>
+<area shape="rect" id="Node000025" href="$classLIEF_1_1dwarf_1_1types_1_1TemplateAlias.html" title="This class represents a DW_TAG_template_alias." alt="" coords="187,1392,322,1437"/>
+<area shape="poly" id="edge65_Node000000_Node000025" title=" " alt="" coords="74,851,88,967,110,1123,125,1202,142,1275,162,1336,185,1378,198,1391,192,1392,181,1381,157,1338,137,1277,119,1204,105,1124,83,967,74,857"/>
+<area shape="rect" id="Node000026" href="$classLIEF_1_1dwarf_1_1types_1_1Thrown.html" title="This class represents a DW_TAG_thrown_type." alt="" coords="187,1461,322,1506"/>
+<area shape="poly" id="edge66_Node000000_Node000026" title=" " alt="" coords="73,852,86,980,106,1157,121,1247,139,1330,160,1399,185,1447,198,1461,192,1461,181,1451,155,1401,133,1332,115,1248,101,1158,80,981,73,857"/>
+<area shape="rect" id="Node000027" href="$classLIEF_1_1dwarf_1_1types_1_1Typedef.html" title="This class represents a DW_TAG_typedef type." alt="" coords="187,1531,322,1575"/>
+<area shape="poly" id="edge67_Node000000_Node000027" title=" " alt="" coords="73,852,83,992,102,1190,117,1291,135,1385,158,1463,171,1493,185,1517,198,1531,192,1530,181,1520,166,1496,153,1464,130,1386,111,1292,97,1190,78,993,72,857"/>
+<area shape="rect" id="Node000028" href="$classLIEF_1_1dwarf_1_1types_1_1Volatile.html" title="This class represents a DW_TAG_volatile_type." alt="" coords="187,1600,322,1645"/>
+<area shape="poly" id="edge68_Node000000_Node000028" title=" " alt="" coords="72,852,81,1005,99,1223,113,1335,132,1439,155,1526,169,1560,185,1586,197,1600,192,1599,181,1589,165,1562,150,1528,126,1441,107,1336,93,1223,76,1005,72,857"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1dwarf_1_1types_1_1Class.html" title="This class represents a DWARF class type (DW_TAG_class_type)." alt="" coords="374,109,509,154"/>
+<area shape="poly" id="edge45_Node000004_Node000005" title=" " alt="" coords="316,204,325,199,373,164,396,152,393,157,375,169,327,203,320,207"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1dwarf_1_1types_1_1Packed.html" title="This class represents a DWARF packed type (DW_TAG_packed_type)." alt="" coords="374,179,509,223"/>
+<area shape="poly" id="edge46_Node000004_Node000006" title=" " alt="" coords="335,218,376,212,372,215,339,222"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1dwarf_1_1types_1_1Structure.html" title="This class represents a DWARF struct type (DW_TAG_structure_type)." alt="" coords="374,248,509,293"/>
+<area shape="poly" id="edge47_Node000004_Node000007" title=" " alt="" coords="336,249,376,256,372,259,338,253"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1dwarf_1_1types_1_1Union.html" title="This class represents a DWARF class type (DW_TAG_union_type)." alt="" coords="374,317,509,362"/>
+<area shape="poly" id="edge48_Node000004_Node000008" title=" " alt="" coords="317,263,327,268,375,303,397,316,392,318,373,307,325,273,319,268"/>
 </map>

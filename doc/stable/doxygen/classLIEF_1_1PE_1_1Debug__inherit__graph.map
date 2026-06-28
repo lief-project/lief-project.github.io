@@ -1,13 +1,21 @@
 <map id="LIEF::PE::Debug" name="LIEF::PE::Debug">
-<area shape="rect" id="Node000001" title="This class represents a generic entry in the debug data directory. For known types,..." alt="" coords="183,79,306,104"/>
-<area shape="rect" id="Node000003" href="$classLIEF_1_1PE_1_1CodeView.html" title="Interface for the (generic) Debug CodeView (IMAGE_DEBUG_TYPE_CODEVIEW)" alt="" coords="19,152,164,177"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,112,118,154,115,149,207,107"/>
-<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1Pogo.html" title="This class represents a Profile Guided Optimization entry from the debug directory (IMAGE_DEBUG_TYPE_..." alt="" coords="189,152,301,177"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="247,118,247,152,242,152,242,118"/>
-<area shape="rect" id="Node000006" href="$classLIEF_1_1PE_1_1Repro.html" title="This class represents a reproducible build entry from the debug directory. (IMAGE_DEBUG_TYPE_REPRO)...." alt="" coords="324,152,443,177"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="280,108,362,149,359,154,278,113"/>
-<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="195,5,294,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,44,247,79,242,79,242,44"/>
-<area shape="rect" id="Node000004" href="$classLIEF_1_1PE_1_1CodeViewPDB.html" title="CodeView PDB specialization." alt="" coords="5,225,177,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,191,94,225,89,225,89,191"/>
+<area shape="rect" id="Node000001" title="This class represents a generic entry in the debug data directory. For known types,..." alt="" coords="151,161,272,189"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1PE_1_1CodeView.html" title="Interface for the (generic) Debug CodeView (IMAGE_DEBUG_TYPE_CODEVIEW)." alt="" coords="353,5,497,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,146,263,94,289,67,319,44,355,30,350,33,321,48,293,71,268,97,230,150"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1PE_1_1ExDllCharacteristics.html" title="This class represents the IMAGE_DEBUG_TYPE_EX_DLLCHARACTERISTICS debug entry." alt="" coords="320,57,530,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="239,149,275,121,319,95,355,84,350,87,321,100,278,125,242,153"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1PE_1_1FPO.html" title="This class represents the IMAGE_DEBUG_TYPE_FPO debug entry." alt="" coords="372,109,478,137"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="285,155,375,135,370,137,287,160"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1PE_1_1PDBChecksum.html" title="This class represents the PDB Checksum debug entry which is essentially an array of bytes representin..." alt="" coords="338,161,512,189"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="287,173,340,174,335,176,288,178"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1PE_1_1Pogo.html" title="This class represents a Profile Guided Optimization entry from the debug directory (IMAGE_DEBUG_TYPE_..." alt="" coords="370,213,481,241"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="286,191,372,213,366,214,286,196"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1PE_1_1Repro.html" title="This class represents a reproducible build entry from the debug directory. (IMAGE_DEBUG_TYPE_REPRO)...." alt="" coords="366,265,484,293"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="241,197,278,225,321,250,369,268,363,268,319,255,275,229,240,202"/>
+<area shape="rect" id="Node000010" href="$classLIEF_1_1PE_1_1VCFeature.html" title="This class represents the IMAGE_DEBUG_TYPE_VC_FEATURE debug entry." alt="" coords="352,317,498,345"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="229,200,268,253,293,280,321,302,354,319,349,319,319,307,289,284,263,257,227,205"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,161,103,189"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,173,152,174,148,177,119,178"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1PE_1_1CodeViewPDB.html" title="CodeView PDB specialization." alt="" coords="578,5,750,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="512,17,580,18,575,20,514,22"/>
 </map>

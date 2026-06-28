@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="struct_elf___dynamic_entry___auxiliary__t" kind="struct" language="C++" prot="public">
+    <compoundname>Elf_DynamicEntry_Auxiliary_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_elf___dynamic_entry___auxiliary__t_1ad50ec3e6aa40422ff36bcb63ab840656" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_DynamicEntry_Auxiliary_t::tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <qualifiedname>Elf_DynamicEntry_Auxiliary_t::tag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="43" column="12" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___dynamic_entry___auxiliary__t_1aa88e4617ac559e5cd3fdf5ef561a6fd9" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Elf_DynamicEntry_Auxiliary_t::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>Elf_DynamicEntry_Auxiliary_t::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="44" column="12" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_elf___dynamic_entry___auxiliary__t_1a1a66cfd867939f8f097d2d04dfca6792" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Elf_DynamicEntry_Auxiliary_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Elf_DynamicEntry_Auxiliary_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="45" column="14" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" line="42" column="1" bodyfile="/builds/LIEF/lief/api/c/include/LIEF/ELF/DynamicEntry.h" bodystart="42" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct_elf___dynamic_entry___auxiliary__t_1a1a66cfd867939f8f097d2d04dfca6792" prot="public" virt="non-virtual"><scope>Elf_DynamicEntry_Auxiliary_t</scope><name>name</name></member>
+      <member refid="struct_elf___dynamic_entry___auxiliary__t_1ad50ec3e6aa40422ff36bcb63ab840656" prot="public" virt="non-virtual"><scope>Elf_DynamicEntry_Auxiliary_t</scope><name>tag</name></member>
+      <member refid="struct_elf___dynamic_entry___auxiliary__t_1aa88e4617ac559e5cd3fdf5ef561a6fd9" prot="public" virt="non-virtual"><scope>Elf_DynamicEntry_Auxiliary_t</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
