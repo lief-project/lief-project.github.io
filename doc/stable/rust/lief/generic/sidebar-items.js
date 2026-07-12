@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"trait":["Binary","DebugInfo","Relocation","Section","Symbol"]};
+window.SIDEBAR_ITEMS = {"struct":["Function","FunctionFlags"],"trait":["Binary","DebugInfo","Relocation","Section","Symbol"],"type":["Functions","InstructionsIt"]};

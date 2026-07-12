@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Function"]};
+window.SIDEBAR_ITEMS = {"struct":["Function"],"type":["ParametersIt"]};

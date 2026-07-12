@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Type"],"fn":["load"],"mod":["compilation_unit","debug_info","function","scope","types","variable"],"struct":["CompilationUnit","DebugInfo","Function","Scope","Variable"]};
+window.SIDEBAR_ITEMS = {"enum":["Parameters","Type"],"fn":["load"],"mod":["compilation_unit","debug_info","editor","function","lexical_block","parameters","scope","types","variable"],"struct":["CompilationUnit","DebugInfo","Editor","Function","LexicalBlock","Scope","Variable"],"trait":["Parameter"]};

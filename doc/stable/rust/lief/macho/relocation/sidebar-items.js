@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Relocation"],"struct":["Dyld","Fixup","Generic","Object"],"trait":["RelocationBase"],"type":["Relocations"]};
+window.SIDEBAR_ITEMS = {"enum":["Origin","Relocation"],"struct":["Dyld","Fixup","Generic","Object"],"trait":["RelocationBase"],"type":["Relocations"]};

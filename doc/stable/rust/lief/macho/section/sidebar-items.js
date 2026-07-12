@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Type"],"struct":["Flags","Section"],"type":["Relocations","Sections"]};
+window.SIDEBAR_ITEMS = {"enum":["Section","Type"],"struct":["Flags","Generic"],"trait":["MachOSection"],"type":["Relocations","Sections"]};

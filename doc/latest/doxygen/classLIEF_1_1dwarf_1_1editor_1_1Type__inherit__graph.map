@@ -1,0 +1,17 @@
+<map id="LIEF::dwarf::editor::Type" name="LIEF::dwarf::editor::Type">
+<area shape="rect" id="Node000001" title="This class is the base class for any types created when editing DWARF debug info." alt="" coords="5,197,144,237"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1dwarf_1_1editor_1_1ArrayType.html" title="This class represents an array type (DW_TAG_array_type)." alt="" coords="192,5,331,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,184,131,120,159,86,190,55,208,43,211,48,194,59,163,89,136,123,95,187"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1dwarf_1_1editor_1_1BaseType.html" title="This class represents a primitive type like int, char." alt="" coords="192,69,331,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,186,145,152,191,119,212,107,214,112,193,124,148,156,109,190"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1dwarf_1_1editor_1_1EnumType.html" title="This class represents an editable enum type (DW_TAG_enumeration_type)." alt="" coords="192,133,331,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="145,190,202,171,203,176,147,195"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1dwarf_1_1editor_1_1FunctionType.html" title="This class represents a function type (DW_TAG_subroutine_type)." alt="" coords="192,197,331,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="158,215,191,215,191,220,158,220"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1dwarf_1_1editor_1_1PointerType.html" title="This class represents a pointer to another type." alt="" coords="192,261,331,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="147,239,203,259,202,264,145,244"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1dwarf_1_1editor_1_1StructType.html" title="This class represents a struct&#45;like type which can be:" alt="" coords="192,325,331,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="109,245,148,278,193,311,214,323,212,327,191,316,145,282,105,249"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1dwarf_1_1editor_1_1TypeDef.html" title="This class represents a typedef (DW_TAG_typedef)." alt="" coords="192,389,331,429"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="95,248,136,311,163,345,194,375,211,387,208,391,190,379,159,349,131,315,91,251"/>
+</map>

@@ -1,5 +1,5 @@
-C++
--------
+:fa:`regular fa-file-code` C++
+--------------------------------
 
 .. note::
 
@@ -31,6 +31,35 @@ Function
 
 ----------
 
+Parameter
+*********
+
+.. doxygenclass:: LIEF::dwarf::Parameter
+
+----------
+
+
+Formal Parameter
+****************
+
+.. doxygenclass:: LIEF::dwarf::parameters::Formal
+
+----------
+
+Template Value Parameter
+************************
+
+.. doxygenclass:: LIEF::dwarf::parameters::TemplateValue
+
+----------
+
+Template Type Parameter
+************************
+
+.. doxygenclass:: LIEF::dwarf::parameters::TemplateType
+
+----------
+
 Scope
 ******
 
@@ -43,6 +72,13 @@ Variable
 ********
 
 .. doxygenclass:: LIEF::dwarf::Variable
+
+----------
+
+LexicalBlock
+************
+
+.. doxygenclass:: LIEF::dwarf::LexicalBlock
 
 ----------
 
@@ -99,6 +135,13 @@ Union
 
 ----------
 
+Packed
+******
+
+.. doxygenclass:: LIEF::dwarf::types::Packed
+
+----------
+
 Const
 *****
 
@@ -113,7 +156,221 @@ Pointer
 
 ----------
 
-debug_location_t
+Typedef
+*******
+
+.. doxygenclass:: LIEF::dwarf::types::Typedef
+
+----------
+
+Atomic
+******
+
+.. doxygenclass:: LIEF::dwarf::types::Atomic
+
+----------
+
+Coarray
+*******
+
+.. doxygenclass:: LIEF::dwarf::types::Coarray
+
+----------
+
+Dynamic
+*******
+
+.. doxygenclass:: LIEF::dwarf::types::Dynamic
+
+----------
+
+Enum
+****
+
+.. doxygenclass:: LIEF::dwarf::types::Enum
+
+----------
+
+File
+****
+
+.. doxygenclass:: LIEF::dwarf::types::File
+
+----------
+
+Immutable
+*********
+
+.. doxygenclass:: LIEF::dwarf::types::Immutable
+
+----------
+
+Interface
+*********
+
+.. doxygenclass:: LIEF::dwarf::types::Interface
+
+----------
+
+PointerToMember
+***************
+
+.. doxygenclass:: LIEF::dwarf::types::PointerToMember
+
+----------
+
+RValueReference
+***************
+
+.. doxygenclass:: LIEF::dwarf::types::RValueReference
+
+----------
+
+Reference
+*********
+
+.. doxygenclass:: LIEF::dwarf::types::Reference
+
+----------
+
+Restrict
+********
+
+.. doxygenclass:: LIEF::dwarf::types::Restrict
+
+----------
+
+SetTy
+******
+
+.. doxygenclass:: LIEF::dwarf::types::SetTy
+
+----------
+
+Shared
+******
+
+.. doxygenclass:: LIEF::dwarf::types::Shared
+
+----------
+
+StringTy
+********
+
+.. doxygenclass:: LIEF::dwarf::types::StringTy
+
+----------
+
+Subroutine
+**********
+
+.. doxygenclass:: LIEF::dwarf::types::Subroutine
+
+----------
+
+TemplateAlias
+*************
+
+.. doxygenclass:: LIEF::dwarf::types::TemplateAlias
+
+----------
+
+Thrown
+******
+
+.. doxygenclass:: LIEF::dwarf::types::Thrown
+
+----------
+
+Volatile
+********
+
+.. doxygenclass:: LIEF::dwarf::types::Volatile
+
+
+----------
+
+Editor
+******
+
+.. doxygenclass:: LIEF::dwarf::Editor
+
+----------
+
+Editor - CompilationUnit
+************************
+
+.. doxygenclass:: LIEF::dwarf::editor::CompilationUnit
+
+----------
+
+Editor - Function
+*****************
+
+.. doxygenclass:: LIEF::dwarf::editor::Function
+
+----------
+
+Editor - Variable
+*****************
+
+.. doxygenclass:: LIEF::dwarf::editor::Variable
+
+
+----------
+
+Editor - Type
+**************
+
+.. doxygenclass:: LIEF::dwarf::editor::Type
+
+----------
+
+Editor - PointerType
+********************
+
+.. doxygenclass:: LIEF::dwarf::editor::PointerType
+
+----------
+
+Editor - EnumType
+*****************
+
+.. doxygenclass:: LIEF::dwarf::editor::EnumType
+
+----------
+
+Editor - BaseType
+*****************
+
+.. doxygenclass:: LIEF::dwarf::editor::BaseType
+
+----------
+
+Editor - ArrayType
+******************
+
+.. doxygenclass:: LIEF::dwarf::editor::ArrayType
+
+----------
+
+Editor - FunctionType
+*********************
+
+.. doxygenclass:: LIEF::dwarf::editor::FunctionType
+
+
+----------
+
+Editor - TypeDef
 ****************
 
-.. doxygenstruct:: LIEF::debug_location_t
+.. doxygenclass:: LIEF::dwarf::editor::TypeDef
+
+
+----------
+
+Editor - StructType
+*******************
+
+.. doxygenclass:: LIEF::dwarf::editor::StructType

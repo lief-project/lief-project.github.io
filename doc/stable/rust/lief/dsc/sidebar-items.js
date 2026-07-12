@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["enable_cache","enable_cache_from_dir","is_shared_cache","load_from_files","load_from_path"],"mod":["dyld_shared_cache","dylib","mapping_info","subcache","uuid"],"struct":["DyldSharedCache","Dylib","MappingInfo","SubCache"],"type":["UUID"]};

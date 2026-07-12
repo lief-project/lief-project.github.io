@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Protocol"],"type":["OptionalMethods","Properties","RequiredMethods"]};
+window.SIDEBAR_ITEMS = {"struct":["Protocol"],"type":["OptionalMethods","Properties","Protocols","RequiredMethods"]};

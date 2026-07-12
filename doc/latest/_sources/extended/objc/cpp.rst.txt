@@ -21,6 +21,14 @@ Class
 ----------
 
 
+Category
+********
+
+.. doxygenclass:: LIEF::objc::Category
+
+----------
+
+
 Protocol
 ********
 

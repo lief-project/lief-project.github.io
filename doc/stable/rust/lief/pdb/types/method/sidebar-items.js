@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Method"],"type":["Methods"]};
+window.SIDEBAR_ITEMS = {"enum":["MethodAccess","MethodType"],"struct":["Method"],"type":["Methods"]};

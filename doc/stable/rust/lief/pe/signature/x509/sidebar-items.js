@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["KeyType"],"struct":["X509"],"type":["Certificates"]};
+window.SIDEBAR_ITEMS = {"enum":["KeyType","KeyUsage"],"struct":["VerificationFlags","X509"],"type":["Certificates"]};

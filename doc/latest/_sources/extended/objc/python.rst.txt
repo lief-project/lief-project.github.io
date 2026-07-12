@@ -16,6 +16,14 @@ Class
 ----------
 
 
+Category
+********
+
+.. autoclass:: lief.objc.Category
+
+----------
+
+
 Protocol
 ********
 

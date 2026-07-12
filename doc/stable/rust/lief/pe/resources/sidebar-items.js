@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Node"],"struct":["Data","Directory","Manager"],"trait":["NodeBase"],"type":["Children"]};
+window.SIDEBAR_ITEMS = {"enum":["Node","Types"],"struct":["Accelerator","Data","Directory","FixedFileInfo","Icon","Manager","ResourceVar","StringEntry","StringFileInfo","VarFileInfo","Version","VersionStringTable","VersionStringTableEntry"],"trait":["NodeBase"],"type":["Accelerators","Children","Icons","StringFileInfoChildren","StringTableEntries","VarFileInfoVars","VersionStringTableEntries","Versions"]};

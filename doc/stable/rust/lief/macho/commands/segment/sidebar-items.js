@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Segment"],"type":["Relocations","Sections","Segments"]};
+window.SIDEBAR_ITEMS = {"struct":["Flags","Segment","VmProtections"],"type":["Relocations","Sections","Segments"]};

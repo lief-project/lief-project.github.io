@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Location","Parameters"],"struct":["Formal","RegisterLocation","TemplateType","TemplateValue"],"trait":["Parameter"]};

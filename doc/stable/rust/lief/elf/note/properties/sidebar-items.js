@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AArch64FeatureFlag","NeedFlag","Properties","PropertyType","X86Feature","X86FeatureFlag","X86ISAFlag","X86ISAValue"],"struct":["AArch64Feature","AArch64PAuth","GenericProperty","Needed","NoCopyOnProtected","StackSize","X86Features","X86ISA"],"trait":["NoteProperty"]};
