@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Metadata"],"type":["Classes","Protocols"]};
+window.SIDEBAR_ITEMS = {"struct":["Metadata"],"type":["Categories","Classes","Protocols"]};

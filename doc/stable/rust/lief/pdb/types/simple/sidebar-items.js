@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Simple"]};
+window.SIDEBAR_ITEMS = {"enum":["SimpleMode","SimpleType"],"struct":["Simple"]};

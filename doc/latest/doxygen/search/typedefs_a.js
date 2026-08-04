@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['libraries_5fcache_5ft_0',['libraries_cache_t',['../classLIEF_1_1MachO_1_1Binary.html#a2a1905f2708703857a01198d3ceee717',1,'LIEF::MachO::Binary']]],
-  ['location_5ft_1',['location_t',['../classLIEF_1_1DEX_1_1Header.html#a467c3871b2a113cebc656997cd8c28a0',1,'LIEF::DEX::Header']]]
+  ['key_5fvalues_5ft_0',['key_values_t',['../classLIEF_1_1OAT_1_1Header.html#af4876fc5f91046fe5c548c40af2a673b',1,'LIEF::OAT::Header']]],
+  ['keys_5ft_1',['keys_t',['../classLIEF_1_1OAT_1_1Header.html#aa531b9673d988e6a1b657867e14d12be',1,'LIEF::OAT::Header']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['lang_0',['LANG',['../classLIEF_1_1dwarf_1_1CompilationUnit_1_1Language.html#ae7675a3200be06df35684412afc79166',1,'LIEF::dwarf::CompilationUnit::Language']]],
-  ['level_1',['LEVEL',['../namespaceLIEF_1_1logging.html#a97f9c925ad44f6fdc1f67552a2663540',1,'LIEF::logging']]],
+  ['lang_0',['LANG',['../classLIEF_1_1dwarf_1_1CompilationUnit_1_1Language.html#ae7675a3200be06df35684412afc79166',1,'LIEF::dwarf::CompilationUnit::Language::LANG'],['../classLIEF_1_1pdb_1_1BuildMetadata.html#a38f6161dea880b3b4770c146ba535771',1,'LIEF::pdb::BuildMetadata::LANG']]],
+  ['level_1',['LEVEL',['../namespaceLIEF_1_1logging.html#a230493bc81492dbab126e605538624f6',1,'LIEF::logging']]],
   ['lief_5farch_2',['LIEF_ARCH',['../ELF_2enums_8h.html#a3d6cfed3c61112a0061c8af90fa13702',1,'enums.h']]],
   ['lief_5farm_5feflags_3',['LIEF_ARM_EFLAGS',['../ELF_2enums_8h.html#a6e5c03bf8a5702cf639a8777bdcd0763',1,'enums.h']]],
   ['lief_5faux_5ftype_4',['LIEF_AUX_TYPE',['../ELF_2enums_8h.html#a2e0e9b63108329d518739bc8da2babbb',1,'enums.h']]],

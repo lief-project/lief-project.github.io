@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["RPath"]};
+window.SIDEBAR_ITEMS = {"struct":["RPath"],"type":["RPaths"]};

@@ -1,4 +1,15 @@
 var searchData=
 [
-  ['quick_5fcode_5ft_0',['quick_code_t',['../classLIEF_1_1OAT_1_1Method.html#a2f1fee77bd29b1ed06de53dbae1697f3',1,'LIEF::OAT::Method']]]
+  ['parameters_5ft_0',['parameters_t',['../classLIEF_1_1dwarf_1_1Function.html#a1178769dd9d42630c7668252a6a83225',1,'LIEF::dwarf::Function::parameters_t'],['../classLIEF_1_1dwarf_1_1types_1_1Subroutine.html#abb4089d65d024c880eb384e2de694215',1,'LIEF::dwarf::types::Subroutine::parameters_t'],['../classLIEF_1_1dwarf_1_1types_1_1TemplateAlias.html#a8ef8aa55d19518545b2942068dd5a795',1,'LIEF::dwarf::types::TemplateAlias::parameters_t'],['../classLIEF_1_1pdb_1_1types_1_1Function.html#ac5b9692ba223e444369a92f242de9218',1,'LIEF::pdb::types::Function::parameters_t']]],
+  ['parameters_5ftype_5ft_1',['parameters_type_t',['../classLIEF_1_1DEX_1_1Prototype.html#a8f2d61ff25f7a0bf640fe3aea67b4b72',1,'LIEF::DEX::Prototype']]],
+  ['pointer_2',['pointer',['../classLIEF_1_1ref__iterator.html#acbfe37fbb0bffa2e534d57a2c8f02ad1',1,'LIEF::ref_iterator::pointer'],['../classLIEF_1_1filter__iterator.html#a74d16621720f727a0d1e8986b832502b',1,'LIEF::filter_iterator::pointer'],['../classLIEF_1_1iterator__facade__base.html#a969488eda1e1903968e1d4dfc0c94a86',1,'LIEF::iterator_facade_base::pointer']]],
+  ['pointer_5ft_3',['pointer_t',['../classLIEF_1_1ref__iterator.html#ae5ce86b6392fec1e2bc0950b09a29329',1,'LIEF::ref_iterator::pointer_t'],['../classLIEF_1_1filter__iterator.html#a6856d749299612ec38d0947370508684',1,'LIEF::filter_iterator::pointer_t']]],
+  ['pos_5ftype_4',['pos_type',['../classLIEF_1_1vector__iostream.html#a98ebeb79872fea2e008207c1a2076ecd',1,'LIEF::vector_iostream']]],
+  ['prop_5finfo_5',['prop_info',['../runtime_2android_2Property_8hpp.html#ad144c3a2f0714ae0b767175c16a60dae',1,'Property.hpp']]],
+  ['properties_5fit_6',['properties_it',['../classLIEF_1_1objc_1_1Protocol.html#aedf6cb5bdafb4f5bc8018369cd76e8e1',1,'LIEF::objc::Protocol']]],
+  ['properties_5ft_7',['properties_t',['../classLIEF_1_1ELF_1_1NoteGnuProperty.html#a0de38032ecd965eeb7939a9033e281af',1,'LIEF::ELF::NoteGnuProperty::properties_t'],['../classLIEF_1_1objc_1_1Category.html#a014a639fdcb3defdc857a6e984bfdd34',1,'LIEF::objc::Category::properties_t'],['../classLIEF_1_1objc_1_1Class.html#a85e1ce31268e8a3662ed90205050db2e',1,'LIEF::objc::Class::properties_t'],['../classLIEF_1_1runtime_1_1android_1_1Process.html#aeb7e2306c005e1d17f96753396844af9',1,'LIEF::runtime::android::Process::properties_t']]],
+  ['protocols_5fit_8',['protocols_it',['../classLIEF_1_1objc_1_1Metadata.html#a1cf82f78635e9edef5cd319afcdb4941',1,'LIEF::objc::Metadata::protocols_it'],['../classLIEF_1_1objc_1_1Protocol.html#a17aa636ca419a3fbbf98b5d8d33706db',1,'LIEF::objc::Protocol::protocols_it']]],
+  ['protocols_5ft_9',['protocols_t',['../classLIEF_1_1objc_1_1Category.html#ada5d109505b45259aee0d159fc9cffcf',1,'LIEF::objc::Category::protocols_t'],['../classLIEF_1_1objc_1_1Class.html#ac1ebe1aa827dc2249007065b6411910c',1,'LIEF::objc::Class::protocols_t']]],
+  ['prototypes_5ft_10',['prototypes_t',['../classLIEF_1_1DEX_1_1File.html#ae6c46f08b67df73f838a3044ee0aa317',1,'LIEF::DEX::File']]],
+  ['public_5fsymbols_5fit_11',['public_symbols_it',['../classLIEF_1_1pdb_1_1DebugInfo.html#a10b3f40e236cff521736e9b4b3b945a9',1,'LIEF::pdb::DebugInfo']]]
 ];
