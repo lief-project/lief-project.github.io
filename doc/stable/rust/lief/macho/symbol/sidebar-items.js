@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Category","Origin"],"struct":["Symbol"],"type":["Symbols"]};
+window.SIDEBAR_ITEMS = {"enum":["Category","Origin","Type"],"struct":["Symbol"],"type":["ExportedSymbols","Symbols"]};

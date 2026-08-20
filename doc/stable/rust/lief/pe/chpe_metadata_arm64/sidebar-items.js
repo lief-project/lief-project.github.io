@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["RangeType"],"struct":["CHPEMetadata","CodeRangeEntrypoint","RangeEntry","RedirectionEntry"],"type":["CodeRangeEntrypoints","CodeRanges","Redirections"]};

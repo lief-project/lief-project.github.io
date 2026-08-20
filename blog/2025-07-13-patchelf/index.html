@@ -1,0 +1,106 @@
+<!doctype html><html lang=en-US><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="This blog post introduces a modern LIEF-based version of patchelf"><meta name=author content="Romain Thomas"><meta name=google-site-verification content="OcWjYs0PdsQZtqu1ms5QSr5FplDf_t5GEneU---wWzM"><meta name=robots content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta property="og:type" content="article"><meta property="og:title" content="LIEF patchelf · LIEF"><meta property="og:description" content="This blog post introduces a modern LIEF-based version of patchelf"><meta property="og:site_name" content="LIEF"><meta property="og:url" content="https://lief.re/blog/2025-07-13-patchelf/"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://lief.re/blog/2025-07-13-patchelf/featured.webp"><meta property="og:image:secure_url" content="https://lief.re/blog/2025-07-13-patchelf/featured.webp"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1749"><meta property="og:image:height" content="719"><meta property="og:image:alt" content="LIEF patchelf - LIEF"><meta property="article:published_time" content="2025-07-13T00:00:00Z"><meta property="article:modified_time" content="2026-08-02T11:53:40+02:00"><meta property="article:section" content="LIEF technical blog"><meta property="article:author" content="https://www.romainthomas.fr"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@lief_project"><meta name=twitter:title content="LIEF patchelf · LIEF"><meta name=twitter:description content="This blog post introduces a modern LIEF-based version of patchelf"><meta name=twitter:image content="https://lief.re/blog/2025-07-13-patchelf/featured.webp"><meta name=twitter:image:alt content="LIEF patchelf - LIEF"><title>LIEF patchelf · LIEF</title><link rel=canonical href=https://lief.re/blog/2025-07-13-patchelf/><link rel=alternate type=application/rss+xml title="LIEF technical blog RSS" href=https://lief.re/blog/index.xml><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://lief.re/#organization","@type":"Organization","logo":{"@type":"ImageObject","height":515,"url":"https://lief.re/lief.png","width":512},"name":"LIEF Project","sameAs":["https://github.com/lief-project/LIEF","https://infosec.exchange/@rh0main","https://x.com/lief_project"],"url":"https://lief.re/"},{"@id":"https://lief.re/#website","@type":"WebSite","alternateName":"Library to Instrument Executable Formats","description":"LIEF is a cross-platform C++, Python, and Rust library to parse, analyze, modify, assemble, disassemble, and rewrite ELF, PE, Mach-O, and other executable formats.","inLanguage":"en-US","name":"LIEF","publisher":{"@id":"https://lief.re/#organization"},"url":"https://lief.re/"},{"@id":"https://lief.re/blog/2025-07-13-patchelf/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lief.re/","name":"LIEF","position":1},{"@type":"ListItem","item":"https://lief.re/blog/","name":"Latest News","position":2},{"@type":"ListItem","item":"https://lief.re/blog/2025-07-13-patchelf/","name":"LIEF patchelf","position":3}]},{"@id":"https://lief.re/blog/2025-07-13-patchelf/#article","@type":"BlogPosting","author":{"@type":"Person","name":"Romain Thomas","url":"https://www.romainthomas.fr"},"breadcrumb":{"@id":"https://lief.re/blog/2025-07-13-patchelf/#breadcrumb"},"dateModified":"2026-08-02T11:53:40+02:00","datePublished":"2025-07-13T00:00:00Z","description":"This blog post introduces a modern LIEF-based version of patchelf","headline":"LIEF patchelf","image":"https://lief.re/blog/2025-07-13-patchelf/featured.webp","inLanguage":"en-US","isAccessibleForFree":true,"isPartOf":{"@id":"https://lief.re/#website"},"mainEntityOfPage":{"@id":"https://lief.re/blog/2025-07-13-patchelf/","@type":"WebPage"},"publisher":{"@id":"https://lief.re/#organization"},"timeRequired":"PT3M","url":"https://lief.re/blog/2025-07-13-patchelf/","wordCount":568}]}</script><meta name=color-scheme content="light dark"><meta name=theme-color content="#ffffff" media="(prefers-color-scheme: light)"><meta name=theme-color content="#08111f" media="(prefers-color-scheme: dark)"><script>(()=>{const t="lief-color-scheme";let e="auto";try{e=localStorage.getItem(t)||e}catch{}const n=e==="dark"||e==="auto"&&matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.theme=n?"dark":"light",document.documentElement.dataset.themePreference=e})()</script><link rel=stylesheet href=/css/lief.css><link rel=icon href=/favicon.ico sizes=any><link rel=apple-touch-icon href=/lief.png></head><body class="site-body kind-page section-blog"><a class=skip-link href=#main-content>Skip to content</a><header class=site-header><div class=site-header__inner><a class=brand href=/ aria-label="LIEF home"><span class=brand__logo aria-hidden=true><img class=brand__logo-light src=/light_transparent_90.png alt width=90 height=94>
+<img class=brand__logo-dark src=/dark_transparent_90.png alt width=90 height=94>
+</span><span class=brand__name>LIEF</span>
+</a><button class="icon-button menu-button" type=button aria-label="Open navigation" aria-controls=site-navigation aria-expanded=false data-menu-toggle>
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class=header-navigation id=site-navigation data-menu><nav class=top-nav aria-label=Project><a href=/>Home</a>
+<a href=/blog/ aria-current=page>Blog</a>
+<a href=/download/>Download</a><details class=top-nav__dropdown><summary>Documentation</summary><div class=top-nav__menu><a href=/doc/latest/>Documentation overview</a>
+<a href=/doc/latest/doxygen>Doxygen</a></div></details><a href=/about/>About</a></nav><div class=header-actions><a class="header-cta header-extended" href=https://extended.lief.re/ aria-label="Access LIEF Extended"><i class="fa-solid fa-cubes" aria-hidden=true></i>
+<span>Extended</span>
+</a><a class="header-cta header-contribute" href=https://github.com/sponsors/lief-project/><i class="fa-solid fa-heart" aria-hidden=true></i>
+<span>Sponsor</span>
+</a><a class="icon-button header-repo" href=https://github.com/lief-project/LIEF aria-label="LIEF on GitHub"><i class="fa-brands fa-github" aria-hidden=true></i>
+</a><button class="icon-button theme-toggle" type=button aria-label="Use dark theme" title="Change color theme" data-theme-toggle>
+<svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+<svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.3A8.5 8.5.0 018.7 3.8 8.6 8.6.0 1020.2 15.3z"/></svg></button></div></div></div></header><main id=main-content><article><header class=article-header><div class=article-header__inner data-reveal><a class=eyebrow href=/blog/>LIEF blog</a><h1>LIEF patchelf</h1><div class=article-meta><time datetime=2025-07-13>July 13, 2025</time>
+<span>3 min read</span></div><p class=article-deck>This blog post introduces a modern LIEF-based version of patchelf</p><a class=author-card href=https://www.romainthomas.fr><img src=/img/avatar/romain.png alt width=40 height=40>
+<span>Written by<strong>Romain Thomas</strong></span></a></div></header><div class=article-cover data-reveal><img src=/blog/2025-07-13-patchelf/featured.webp alt="Featured image for LIEF patchelf" width=1749 height=719 decoding=async fetchpriority=high></div><div class=article-layout><div class=prose><p><img src=/blog/2025-07-13-patchelf/featured.webp alt="Featuring Image" width=1749 height=719 loading=lazy decoding=async><br><br></p><h2 id=introduction>Introduction</h2><p><a href=https://github.com/NixOS/patchelf>patchelf</a> is a utility developed by the NixOS community
+to facilitate modifications of some parts of an ELF binary.</p><p>The features offered by patchelf include, but are not limited to:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl><span class=c1># Change the interpreter path</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>$ patchelf --set-interpreter /lib/my-ld-linux.so.2 my-program
+</span></span><span class=line><span class=ln>3</span><span class=cl>
+</span></span><span class=line><span class=ln>4</span><span class=cl><span class=c1># Add a new dependency</span>
+</span></span><span class=line><span class=ln>5</span><span class=cl>$ patchelf --add-needed libfoo.so.1 my-program
+</span></span><span class=line><span class=ln>6</span><span class=cl>
+</span></span><span class=line><span class=ln>7</span><span class=cl><span class=c1># Change RUN/RPATH values</span>
+</span></span><span class=line><span class=ln>8</span><span class=cl>$ patchelf --set-rpath /opt/my-libs/lib:/other-libs my-program
+</span></span></code></pre></div><p>In addition to its use in NixOS, many projects leverage patchelf to perform
+post-compilation modifications. For example, <a href=https://github.com/pypa/auditwheel>pypa/auditwheel</a>
+uses <code>patchelf</code> to change the rpath value and/or change the names of <code>DT_NEEDED</code> libraries.</p><h2 id=lief--patchelf>LIEF & Patchelf</h2><p>In comparison to LIEF, patchelf is not a library, and the current version (0.18.0)
+can only be accessed via the command line.
+The source code of patchelf is relatively small (around 3,000 lines of code)
+and is focused on specific modifications such as renaming/removing <code>DT_NEEDED</code>
+entries and changing/removing/adding <code>DT_RPATH/DT_RUNPATH</code>.</p><p>When it comes to design decisions for modifying ELF binaries, there is a significant
+difference between patchelf and LIEF:</p><div class="admonition danger"><p class=admonition-title>Section vs Segments</p><p><b>Patchelf relies on the section layout to modify and rewrite ELF binaries,
+while LIEF uses segments representation.
+This distinction makes patchelf less reliable for ELF binaries that have a
+non-standard section layout, whereas the representation used by LIEF corresponds
+to how binaries are loaded, making it less prone to errors during modifications.</b></div><h2 id=lief-based-patchelf>LIEF-based patchelf</h2><p>LIEF already had (almost) all the internal features to provide the same functionalities as
+<code>patchelf</code>. However, LIEF does not offer a comprehensive command-line tool like
+patchelf does. To create a drop-in replacement for patchelf using the LIEF backend,
+we had to ensure compatibility with the current state of patchelf, including:</p><ol><li>A command-line interface</li><li>Completion for <code>zsh</code> (at least)</li><li>A man-page</li></ol><p>Thanks to the recent LIEF&rsquo;s Rust bindings, we can leverage the Rust ecosystem to
+simplify the development of this command-line tool:</p><ul><li>The crate <a href=https://docs.rs/clap/latest/clap/>clap-rs/clap</a> provides all the features
+to create a command-line interface with a man-page and completion for the main shells.</li><li>Cargo and its dependencies management are convenient for generating an executable.</li></ul><p><img src=/blog/2025-07-13-patchelf/bindings.webp alt="Rust, clap-rs, and LIEF components used to build lief-patchelf" width=2135 height=733 loading=lazy decoding=async></p><p>The source code is available here: <a href=https://github.com/lief-project/LIEF/tree/main/tools/lief-patchelf>lief-project/LIEF/tools/lief-patchelf</a>
+and it is worth mentioning that this LIEF-based implementation has the <strong>exact</strong> same command
+line interface as the original <code>patchelf</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln> 1</span><span class=cl>$ lief-patchelf --help
+</span></span><span class=line><span class=ln> 2</span><span class=cl>Patchelf based on LIEF
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>Usage: lief-patchelf <span class=o>[</span>OPTIONS<span class=o>]</span> <span class=o>[</span>filenames<span class=o>]</span>...
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>Arguments:
+</span></span><span class=line><span class=ln> 7</span><span class=cl>  <span class=o>[</span>filenames<span class=o>]</span>...
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>Options:
+</span></span><span class=line><span class=ln>10</span><span class=cl>      --set-interpreter &lt;INTERPRETER&gt;
+</span></span><span class=line><span class=ln>11</span><span class=cl>          Change the dynamic loader <span class=o>(</span><span class=s1>&#39;ELF interpreter&#39;</span><span class=o>)</span> of executable given to INTERPRETER.
+</span></span><span class=line><span class=ln>12</span><span class=cl>
+</span></span><span class=line><span class=ln>13</span><span class=cl>      --page-size &lt;SIZE&gt;
+</span></span><span class=line><span class=ln>14</span><span class=cl>          Uses the given page size instead of the default
+</span></span><span class=line><span class=ln>15</span><span class=cl>
+</span></span><span class=line><span class=ln>16</span><span class=cl>      --print-interpreter
+</span></span><span class=line><span class=ln>17</span><span class=cl>          Prints the ELF interpreter of the executable. <span class=o>(</span>e.g. <span class=sb>`</span>/lib64/ld-linux-x86-64.so.2<span class=sb>`</span><span class=o>)</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl>
+</span></span><span class=line><span class=ln>19</span><span class=cl>      --print-os-abi
+</span></span><span class=line><span class=ln>20</span><span class=cl>          Prints the OS ABI of the executable <span class=o>(</span><span class=sb>`</span>EI_OSABI<span class=sb>`</span> field of an ELF file<span class=o>)</span>.
+</span></span></code></pre></div><p>Moreover, it passes<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> all the original patchelf&rsquo;s test suite except one
+test related to the <code>IA-64</code> architecture support:</p><pre tabindex=0><code>PASS: set-interpreter-same.sh
+PASS: no-rpath-alpha.sh
+PASS: no-rpath-amd64.sh
+PASS: no-rpath-armel.sh
+PASS: no-rpath-armhf.sh
+PASS: no-rpath-hurd-i386.sh
+PASS: no-rpath-i386.sh
+FAIL: no-rpath-ia64.sh
+PASS: no-rpath-kfreebsd-amd64.sh
+PASS: no-rpath-kfreebsd-i386.sh
+PASS: no-rpath-mips.sh
+PASS: no-rpath-mipsel.sh
+PASS: no-rpath-powerpc.sh
+PASS: no-rpath-s390.sh
+PASS: no-rpath-sh4.sh
+PASS: no-rpath-sparc.sh
+============================================================================
+Testsuite summary for patchelf 0.18.0 (based on LIEF 0.17.0)
+============================================================================
+# TOTAL: 58
+# PASS:  55
+# SKIP:  2
+# XFAIL: 0
+# FAIL:  1
+# XPASS: 0
+# ERROR: 0
+</code></pre><h2 id=download>Download</h2><p>If you want to test this new LIEF-based implementation, you can download the compiled version here:</p><ul><li><i class="fa-brands fa-apple"></i> <a href=./lief-tools-aarch64-apple-darwin.zip><code>lief-tools-aarch64-apple-darwin.zip</code></a></li><li><i class="fa-brands fa-windows"></i> <a href=./lief-tools-aarch64-pc-windows-msvc.zip><code>lief-tools-aarch64-pc-windows-msvc.zip</code></a></li><li><i class="fa-brands fa-linux"></i> <a href=./lief-tools-aarch64-unknown-linux-gnu.zip><code>lief-tools-aarch64-unknown-linux-gnu.zip</code></a></li><li><i class="fa-brands fa-linux"></i> <a href=./lief-tools-aarch64-unknown-linux-musl.zip><code>lief-tools-aarch64-unknown-linux-musl.zip</code></a></li><li><i class="fa-brands fa-linux"></i> <a href=./lief-tools-i686-unknown-linux-musl.zip><code>lief-tools-i686-unknown-linux-musl.zip</code></a></li><li><i class="fa-brands fa-apple"></i> <a href=./lief-tools-x86_64-apple-darwin.zip><code>lief-tools-x86_64-apple-darwin.zip</code></a></li><li><i class="fa-brands fa-windows"></i> <a href=./lief-tools-x86_64-pc-windows-msvc.zip><code>lief-tools-x86_64-pc-windows-msvc.zip</code></a></li><li><i class="fa-brands fa-linux"></i> <a href=./lief-tools-x86_64-unknown-linux-gnu.zip><code>lief-tools-x86_64-unknown-linux-gnu.zip</code></a></li><li><i class="fa-brands fa-linux"></i> <a href=./lief-tools-x86_64-unknown-linux-musl.zip><code>lief-tools-x86_64-unknown-linux-musl.zip</code></a></li></ul><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>Since LIEF performs in-depth modifications and can raise
+different error messages, I had to make minor changes on some checks:
+<a href=https://gist.github.com/romainthomas/2332cddd164cf8bfa3fc65cd61496c9a>patchelf-test-lief.diff</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><aside class=article-aside aria-label="Article links"><span>Keep exploring</span>
+<a href=/blog/>All articles</a>
+<a href=/doc/latest/>API documentation</a>
+<a href=https://github.com/lief-project/LIEF>Source on GitHub</a>
+<a href=https://github.com/sponsors/lief-project/>Sponsor LIEF</a></aside></div></article></main><footer class=site-footer><div class="shell footer-grid"><div class=footer-intro><a class="brand footer-brand" href=/><span class=brand__logo aria-hidden=true><img class=brand__logo-light src=/light_transparent_90.png alt width=90 height=94>
+<img class=brand__logo-dark src=/dark_transparent_90.png alt width=90 height=94>
+</span><span class=brand__name>LIEF</span></a><p>One API to inspect, modify, and build executable formats across platforms.</p><span class=footer-license><i class="fa-solid fa-check" aria-hidden=true></i>Apache-2.0 licensed</span></div><nav class=footer-nav aria-label="Project links"><div><h2><i class="fa-solid fa-layer-group" aria-hidden=true></i>Project</h2><a href=/download/><i class="fa-solid fa-download" aria-hidden=true></i>Download</a>
+<a href=/blog/><i class="fa-solid fa-pen-to-square" aria-hidden=true></i>Blog</a>
+<a href=/about/><i class="fa-solid fa-face-smile" aria-hidden=true></i>About</a></div><div><h2><i class="fa-solid fa-terminal" aria-hidden=true></i>Developers</h2><a href=/doc/latest/><i class="fa-solid fa-code" aria-hidden=true></i>API docs</a>
+<a href=/doc/latest/doxygen/><i class="fa-solid fa-file-binary" aria-hidden=true></i>Doxygen</a>
+<a href=https://github.com/lief-project/LIEF><i class="fa-brands fa-github" aria-hidden=true></i>Source</a></div><div><h2><i class="fa-solid fa-handshake" aria-hidden=true></i>Community</h2><a href=https://discord.gg/jGQtyAYChJ><i class="fa-brands fa-discord" aria-hidden=true></i>Discord</a>
+<a href=https://github.com/sponsors/lief-project/><i class="fa-solid fa-heart" aria-hidden=true></i>Sponsor</a></div></nav></div><div class="shell footer-bottom"><span>© 2026 LIEF project</span><div><a href=https://pypi.org/project/lief/><i class="fa-brands fa-python" aria-hidden=true></i>PyPI</a>
+<a href=https://crates.io/crates/lief><i class="fa-brands fa-rust" aria-hidden=true></i>crates.io</a>
+<a href=https://extended.lief.re/><i class="fa-solid fa-cubes" aria-hidden=true></i>LIEF Extended</a></div></div></footer><script src=/js/lief.js defer></script></body></html>

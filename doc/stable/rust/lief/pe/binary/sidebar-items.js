@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Binary"],"type":["DebugEntries"]};
+window.SIDEBAR_ITEMS = {"struct":["Binary"],"type":["COFFStrings","DebugEntries","Exceptions","Symbols"]};

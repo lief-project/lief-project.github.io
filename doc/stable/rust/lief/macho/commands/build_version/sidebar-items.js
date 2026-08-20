@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["Platform"],"struct":["BuildVersion"]};
+window.SIDEBAR_ITEMS = {"enum":["Platform","Tool"],"struct":["BuildToolVersion","BuildVersion"],"type":["BuildTools"]};

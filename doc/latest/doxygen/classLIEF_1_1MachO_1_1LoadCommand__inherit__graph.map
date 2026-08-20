@@ -1,65 +1,75 @@
 <map id="LIEF::MachO::LoadCommand" name="LIEF::MachO::LoadCommand">
-<area shape="rect" id="Node000001" title="Based class for the Mach&#45;O load commands." alt="" coords="152,728,359,753"/>
-<area shape="rect" id="Node000003" href="$classLIEF_1_1MachO_1_1BuildVersion.html" title=" " alt="" coords="430,5,621,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,714,269,574,296,371,316,267,341,171,370,93,387,63,405,40,428,24,431,29,408,44,391,66,375,95,346,173,321,268,302,372,274,575,261,715"/>
-<area shape="rect" id="Node000004" href="$classLIEF_1_1MachO_1_1CodeSignature.html" title=" " alt="" coords="423,55,627,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="256,714,271,582,300,394,320,298,344,210,372,138,388,110,405,89,422,77,425,81,409,93,392,113,377,140,349,212,325,299,305,395,276,583,262,714"/>
-<area shape="rect" id="Node000005" href="$classLIEF_1_1MachO_1_1CodeSignatureDir.html" title=" " alt="" coords="414,104,637,129"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="257,714,273,591,303,418,323,330,347,249,374,183,389,158,405,139,421,127,424,132,408,143,393,161,379,186,352,251,328,331,308,419,278,592,262,715"/>
-<area shape="rect" id="Node000006" href="$classLIEF_1_1MachO_1_1DataInCode.html" title="Interface of the LC_DATA_IN_CODE command This command is used to list slices of code sections that co..." alt="" coords="433,153,618,179"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="258,714,275,600,307,443,327,362,350,289,376,230,405,189,431,173,434,177,408,193,381,232,355,291,332,364,312,444,281,601,263,714"/>
-<area shape="rect" id="Node000007" href="$classLIEF_1_1MachO_1_1DyldChainedFixups.html" title="Class that represents the LC_DYLD_CHAINED_FIXUPS command." alt="" coords="429,203,621,243"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="254,714,259,626,267,568,280,503,298,436,325,371,360,309,405,255,427,239,431,243,408,259,364,312,330,373,303,438,285,504,272,568,265,627,259,714"/>
-<area shape="rect" id="Node000008" href="$classLIEF_1_1MachO_1_1DyldEnvironment.html" title="Class that represents a LC_DYLD_ENVIRONMENT command which is used by the Mach&#45;O linker/loader to init..." alt="" coords="414,268,637,293"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="255,714,262,634,270,581,284,523,303,463,329,405,362,351,405,304,424,291,427,296,408,308,366,354,333,407,308,465,289,524,276,582,267,635,260,715"/>
-<area shape="rect" id="Node000009" href="$classLIEF_1_1MachO_1_1DyldExportsTrie.html" title="Class that represents the LC_DYLD_EXPORTS_TRIE command." alt="" coords="420,317,631,343"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="256,714,266,642,290,544,309,492,334,441,366,394,405,353,425,341,428,345,408,357,370,397,339,444,314,494,295,546,271,643,261,715"/>
-<area shape="rect" id="Node000010" href="$classLIEF_1_1MachO_1_1DyldInfo.html" title="Class that represents the LC_DYLD_INFO and LC_DYLD_INFO_ONLY commands." alt="" coords="443,367,607,392"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="258,714,271,650,297,566,316,521,340,477,370,437,405,403,423,391,442,384,444,389,425,396,408,407,374,441,345,480,321,523,302,567,276,651,263,715"/>
-<area shape="rect" id="Node000011" href="$classLIEF_1_1MachO_1_1DylibCommand.html" title="Class which represents a library dependency." alt="" coords="420,416,631,441"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="260,714,276,659,304,587,323,550,346,514,374,480,405,452,427,439,430,444,408,456,377,484,351,517,328,553,309,589,281,660,265,715"/>
-<area shape="rect" id="Node000012" href="$classLIEF_1_1MachO_1_1DylinkerCommand.html" title="Class that represents the Mach&#45;O linker, also named loader. Most of the time, DylinkerCommand::name()..." alt="" coords="410,465,641,491"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="263,714,282,668,311,610,352,551,377,524,405,501,430,488,432,493,408,506,381,528,356,554,316,612,286,670,268,716"/>
-<area shape="rect" id="Node000013" href="$classLIEF_1_1MachO_1_1DynamicSymbolCommand.html" title="Class that represents the LC_DYSYMTAB command." alt="" coords="417,515,633,555"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="269,714,323,641,361,601,405,566,431,553,434,558,408,571,365,605,327,644,274,717"/>
-<area shape="rect" id="Node000014" href="$classLIEF_1_1MachO_1_1EncryptionInfo.html" title="Class that represents the LC_ENCRYPTION_INFO / LC_ENCRYPTION_INFO_64 commands." alt="" coords="424,580,627,605"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="276,716,331,665,367,638,406,616,440,603,442,608,408,620,370,643,334,669,279,720"/>
-<area shape="rect" id="Node000015" href="$classLIEF_1_1MachO_1_1FilesetCommand.html" title="Class associated with the LC_FILESET_ENTRY commands." alt="" coords="416,629,635,655"/>
-<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="289,719,343,691,406,665,451,652,453,657,408,670,345,696,291,724"/>
-<area shape="rect" id="Node000016" href="$classLIEF_1_1MachO_1_1FunctionStarts.html" title="Class which represents the LC_FUNCTION_STARTS command." alt="" coords="424,679,627,704"/>
-<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="338,723,454,701,455,707,339,728"/>
-<area shape="rect" id="Node000017" href="$classLIEF_1_1MachO_1_1LinkerOptHint.html" title="Class which represents the LC_LINKER_OPTIMIZATION_HINT command." alt="" coords="426,728,625,753"/>
-<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="372,738,426,738,426,743,372,743"/>
-<area shape="rect" id="Node000018" href="$classLIEF_1_1MachO_1_1MainCommand.html" title="Class that represent the LC_MAIN command. This kind of command can be used to determine the entrypoin..." alt="" coords="421,777,629,803"/>
-<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="339,753,455,775,454,780,338,758"/>
-<area shape="rect" id="Node000019" href="$classLIEF_1_1MachO_1_1RPathCommand.html" title="Class that represents the LC_RPATH command." alt="" coords="419,827,632,852"/>
-<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="291,758,345,786,408,813,448,824,446,829,406,818,342,791,288,762"/>
-<area shape="rect" id="Node000020" href="$classLIEF_1_1MachO_1_1Routine.html" title="Class that represents the LC_ROUTINE/LC_ROUTINE64 commands. Accodring to the Mach&#45;O loader...." alt="" coords="446,876,605,901"/>
-<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="279,761,334,813,369,840,408,862,447,876,445,881,406,867,367,844,331,817,275,765"/>
-<area shape="rect" id="Node000021" href="$classLIEF_1_1MachO_1_1SegmentCommand.html" title="Class which represents a LoadCommand::TYPE::SEGMENT / LoadCommand::TYPE::SEGMENT_64 command." alt="" coords="408,925,643,951"/>
-<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="273,764,295,798,326,838,364,879,408,912,433,923,430,928,405,916,360,883,321,842,290,801,268,767"/>
-<area shape="rect" id="Node000023" href="$classLIEF_1_1MachO_1_1SegmentSplitInfo.html" title="Class that represents the LoadCommand::TYPE::SEGMENT_SPLIT_INFO command." alt="" coords="415,975,636,1000"/>
-<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="269,766,288,809,318,863,358,917,382,941,408,961,430,972,427,977,405,966,378,945,354,920,314,866,284,812,264,768"/>
-<area shape="rect" id="Node000024" href="$classLIEF_1_1MachO_1_1SourceVersion.html" title="Class that represents the MachO LoadCommand::TYPE::SOURCE_VERSION This command is used to provide the..." alt="" coords="425,1024,626,1049"/>
-<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="266,766,282,818,311,885,352,954,378,984,408,1010,428,1021,425,1026,405,1015,375,988,348,957,306,888,277,820,261,767"/>
-<area shape="rect" id="Node000025" href="$classLIEF_1_1MachO_1_1SubClient.html" title="Class that represents the SubClient command. Accodring to the Mach&#45;O loader.h documentation:" alt="" coords="440,1073,611,1099"/>
-<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="263,766,277,828,304,908,323,950,346,991,375,1028,408,1060,441,1076,438,1081,405,1064,371,1031,342,994,318,952,299,910,272,829,258,768"/>
-<area shape="rect" id="Node000026" href="$classLIEF_1_1MachO_1_1SubFramework.html" title="Class that represents the SubFramework command. Accodring to the Mach&#45;O loader.h documentation:" alt="" coords="422,1123,629,1148"/>
-<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="262,767,272,836,297,930,316,979,341,1027,371,1071,408,1109,425,1120,423,1125,405,1113,367,1075,336,1030,311,981,292,931,267,838,256,768"/>
-<area shape="rect" id="Node000027" href="$classLIEF_1_1MachO_1_1SymbolCommand.html" title="Class that represents the LC_SYMTAB command." alt="" coords="413,1172,638,1197"/>
-<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="260,767,268,845,277,896,290,951,309,1008,335,1064,367,1115,408,1159,425,1170,422,1174,405,1163,363,1118,330,1066,304,1010,285,953,272,897,263,845,255,767"/>
-<area shape="rect" id="Node000028" href="$classLIEF_1_1MachO_1_1ThreadCommand.html" title="Class that represents the LC_THREAD / LC_UNIXTHREAD commands and that can be used to get the binary e..." alt="" coords="415,1221,636,1247"/>
-<area shape="poly" id="edge27_Node000001_Node000028" title=" " alt="" coords="259,767,264,853,271,910,284,972,303,1037,329,1100,364,1158,408,1208,425,1219,422,1223,405,1212,359,1161,324,1102,298,1039,279,974,266,911,259,853,254,767"/>
-<area shape="rect" id="Node000029" href="$classLIEF_1_1MachO_1_1TwoLevelHints.html" title="Class which represents the LC_TWOLEVEL_HINTS command." alt="" coords="424,1271,627,1296"/>
-<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="263,766,282,873,314,1022,334,1097,357,1165,382,1221,409,1257,425,1269,422,1273,405,1261,377,1223,352,1167,329,1099,308,1023,276,874,258,767"/>
-<area shape="rect" id="Node000030" href="$classLIEF_1_1MachO_1_1UUIDCommand.html" title="Class that represents the UUID command." alt="" coords="420,1320,631,1345"/>
-<area shape="poly" id="edge29_Node000001_Node000030" title=" " alt="" coords="263,767,280,883,310,1046,330,1129,354,1205,380,1266,394,1289,408,1307,424,1318,421,1322,405,1311,390,1293,375,1269,349,1207,325,1131,305,1048,274,884,257,767"/>
-<area shape="rect" id="Node000031" href="$classLIEF_1_1MachO_1_1UnknownCommand.html" title="Generic class when the command is not recognized by LIEF." alt="" coords="407,1369,644,1395"/>
-<area shape="poly" id="edge30_Node000001_Node000031" title=" " alt="" coords="262,767,278,892,307,1071,327,1161,351,1244,378,1312,393,1337,409,1356,423,1367,420,1371,405,1360,388,1340,373,1314,346,1246,322,1163,302,1072,272,893,257,768"/>
-<area shape="rect" id="Node000032" href="$classLIEF_1_1MachO_1_1VersionMin.html" title="Class that wraps the LC_VERSION_MIN_MACOSX, LC_VERSION_MIN_IPHONEOS, ... commands." alt="" coords="435,1419,616,1444"/>
-<area shape="poly" id="edge31_Node000001_Node000032" title=" " alt="" coords="261,767,275,901,304,1094,324,1193,348,1283,376,1357,392,1385,408,1405,436,1422,433,1427,405,1409,387,1388,371,1359,343,1285,318,1194,298,1095,270,901,256,767"/>
-<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,728,104,753"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,738,152,738,152,743,118,743"/>
-<area shape="rect" id="Node000022" href="$classLIEF_1_1MachO_1_1LinkEdit.html" title=" " alt="" coords="692,925,853,951"/>
-<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="656,935,692,935,692,941,656,941"/>
+<area shape="rect" id="Node000001" title="Base class for the Mach&#45;O load commands." alt="" coords="152,868,359,893"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1MachO_1_1AtomInfo.html" title="Class which represents the LC_ATOM_INFO command." alt="" coords="441,5,610,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,854,264,690,273,572,287,444,307,317,332,201,364,105,384,68,405,40,421,28,439,20,441,25,423,32,409,44,388,71,369,107,337,202,312,318,293,445,279,572,269,690,260,854"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1MachO_1_1BuildVersion.html" title=" " alt="" coords="430,55,621,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="255,854,266,698,291,468,310,349,335,240,366,150,385,116,405,89,428,74,431,78,408,93,389,118,371,152,340,241,315,350,296,468,271,699,261,854"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1MachO_1_1CodeSignature.html" title=" " alt="" coords="423,104,627,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="256,854,267,706,294,491,313,380,338,278,368,195,386,163,405,139,421,126,425,131,409,143,390,166,373,197,343,280,319,381,299,492,273,707,261,854"/>
+<area shape="rect" id="Node000006" href="$classLIEF_1_1MachO_1_1CodeSignatureDir.html" title=" " alt="" coords="414,153,637,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="256,854,269,715,297,515,317,412,341,318,370,240,387,211,405,188,420,177,423,181,409,192,391,214,375,243,346,319,322,413,302,516,275,716,261,855"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1MachO_1_1DataInCode.html" title="Interface of the LC_DATA_IN_CODE command This command is used to list slices of code sections that co..." alt="" coords="433,203,618,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="257,854,271,724,301,539,321,444,345,358,372,287,388,259,405,239,431,222,434,226,408,243,392,262,377,289,350,359,326,445,306,540,277,725,262,854"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1MachO_1_1DyldChainedFixups.html" title="Class that represents the LC_DYLD_CHAINED_FIXUPS command." alt="" coords="429,253,621,293"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="257,854,275,736,306,571,326,486,349,409,376,346,405,303,428,286,431,291,409,307,380,349,354,411,331,488,311,572,280,737,263,854"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1MachO_1_1DyldEnvironment.html" title="Class that represents a LC_DYLD_ENVIRONMENT command which is used by the Mach&#45;O linker/loader to init..." alt="" coords="414,317,637,343"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="258,854,276,745,308,594,328,517,351,447,377,390,405,352,421,341,424,345,409,356,381,393,356,449,333,519,313,595,281,746,263,855"/>
+<area shape="rect" id="Node000010" href="$classLIEF_1_1MachO_1_1DyldExportsTrie.html" title="Class that represents the LC_DYLD_EXPORTS_TRIE command." alt="" coords="420,367,631,392"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="254,854,258,767,266,709,278,645,297,579,324,514,359,455,405,403,424,390,427,394,408,407,363,458,328,517,302,581,284,646,271,709,264,767,259,854"/>
+<area shape="rect" id="Node000011" href="$classLIEF_1_1MachO_1_1DyldInfo.html" title="Class that represents the LC_DYLD_INFO and LC_DYLD_INFO_ONLY commands." alt="" coords="443,416,607,441"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="255,854,262,775,271,723,285,666,304,608,329,551,363,498,405,452,423,440,442,432,444,437,425,445,408,456,367,501,334,553,309,610,290,668,276,724,268,776,260,855"/>
+<area shape="rect" id="Node000012" href="$classLIEF_1_1MachO_1_1DylibCommand.html" title="Class which represents a library dependency." alt="" coords="420,465,631,491"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="256,854,267,783,291,687,311,636,335,587,367,541,405,501,425,488,428,493,408,505,371,544,340,589,315,638,296,689,272,784,262,855"/>
+<area shape="rect" id="Node000013" href="$classLIEF_1_1MachO_1_1DylinkerCommand.html" title="Class that represents the Mach&#45;O linker, also named loader. Most of the time, DylinkerCommand::name()..." alt="" coords="410,515,641,540"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="258,854,271,791,298,709,317,665,341,623,370,584,405,551,426,538,429,542,408,555,374,588,346,626,322,668,303,711,277,793,263,855"/>
+<area shape="rect" id="Node000014" href="$classLIEF_1_1MachO_1_1DynamicSymbolCommand.html" title="Class that represents the LC_DYSYMTAB command." alt="" coords="417,565,633,605"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="262,854,279,804,309,739,350,673,376,642,405,616,427,603,429,607,408,620,380,646,355,676,313,742,284,806,267,856"/>
+<area shape="rect" id="Node000015" href="$classLIEF_1_1MachO_1_1EncryptionInfo.html" title="Class that represents the LC_ENCRYPTION_INFO / LC_ENCRYPTION_INFO_64 commands." alt="" coords="424,629,627,655"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="265,854,285,812,315,761,355,709,379,685,405,665,431,652,433,657,408,670,383,689,359,712,320,764,289,815,269,856"/>
+<area shape="rect" id="Node000016" href="$classLIEF_1_1MachO_1_1FilesetCommand.html" title="Class associated with the LC_FILESET_ENTRY commands." alt="" coords="416,679,635,704"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="269,855,292,823,323,784,361,746,405,714,435,702,437,707,408,719,365,750,327,788,296,826,274,858"/>
+<area shape="rect" id="Node000017" href="$classLIEF_1_1MachO_1_1FunctionStarts.html" title="Class which represents the LC_FUNCTION_STARTS command." alt="" coords="424,728,627,753"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="277,856,333,809,368,784,406,764,441,751,443,756,408,768,371,789,336,813,281,860"/>
+<area shape="rect" id="Node000018" href="$classLIEF_1_1MachO_1_1FunctionVariantFixups.html" title="Class which represents the LC_FUNCTION_VARIANT_FIXUPS command." alt="" coords="420,778,631,818"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="306,861,406,829,451,816,452,821,407,834,308,866"/>
+<area shape="rect" id="Node000019" href="$classLIEF_1_1MachO_1_1FunctionVariants.html" title="Class representing the LC_FUNCTION_VARIANTS load command." alt="" coords="417,843,634,868"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="372,867,416,863,417,868,373,872"/>
+<area shape="rect" id="Node000020" href="$classLIEF_1_1MachO_1_1LazyLoadDylibInfo.html" title="Class representing the LC_LAZY_LOAD_DYLIB_INFO load command." alt="" coords="411,892,640,917"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="373,888,410,892,410,897,372,894"/>
+<area shape="rect" id="Node000021" href="$classLIEF_1_1MachO_1_1LinkerOptHint.html" title="Class which represents the LC_LINKER_OPTIMIZATION_HINT command." alt="" coords="426,941,625,967"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="305,895,407,927,455,939,454,944,406,933,303,900"/>
+<area shape="rect" id="Node000022" href="$classLIEF_1_1MachO_1_1MainCommand.html" title="Class that represents the LC_MAIN command. This kind of command can be used to determine the entrypoi..." alt="" coords="421,991,629,1016"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="284,900,339,940,373,960,408,977,442,988,441,993,406,982,370,965,336,944,281,904"/>
+<area shape="rect" id="Node000023" href="$classLIEF_1_1MachO_1_1NoteCommand.html" title="Class that represents the LC_NOTE command." alt="" coords="422,1040,629,1065"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="276,903,330,966,367,999,408,1026,435,1038,433,1042,405,1031,363,1003,326,969,272,906"/>
+<area shape="rect" id="Node000024" href="$classLIEF_1_1MachO_1_1RPathCommand.html" title="Class that represents the LC_RPATH command." alt="" coords="419,1089,632,1115"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="270,904,291,943,322,990,361,1037,408,1076,431,1087,429,1092,405,1080,357,1041,317,993,287,946,266,907"/>
+<area shape="rect" id="Node000025" href="$classLIEF_1_1MachO_1_1Routine.html" title="Class that represents the LC_ROUTINE/LC_ROUTINE64 commands. According to the Mach&#45;O loader...." alt="" coords="446,1139,605,1164"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="267,906,285,954,314,1014,355,1075,380,1102,408,1125,426,1135,447,1142,445,1147,424,1140,405,1130,376,1106,351,1078,310,1016,280,956,262,908"/>
+<area shape="rect" id="Node000026" href="$classLIEF_1_1MachO_1_1SegmentCommand.html" title="Class which represents a LoadCommand::TYPE::SEGMENT / LoadCommand::TYPE::SEGMENT_64 command." alt="" coords="408,1188,643,1213"/>
+<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="265,907,280,963,307,1037,327,1075,350,1112,377,1146,408,1175,427,1185,424,1190,405,1179,373,1149,345,1115,322,1078,303,1039,275,965,259,908"/>
+<area shape="rect" id="Node000028" href="$classLIEF_1_1MachO_1_1SegmentSplitInfo.html" title="Class that represents the LoadCommand::TYPE::SEGMENT_SPLIT_INFO command." alt="" coords="415,1237,636,1263"/>
+<area shape="poly" id="edge27_Node000001_Node000028" title=" " alt="" coords="263,907,275,972,300,1059,320,1104,344,1148,373,1189,408,1224,426,1235,423,1239,405,1228,369,1193,339,1151,315,1107,295,1060,270,973,257,908"/>
+<area shape="rect" id="Node000029" href="$classLIEF_1_1MachO_1_1SourceVersion.html" title="Class that represents the MachO LoadCommand::TYPE::SOURCE_VERSION This command is used to provide the..." alt="" coords="425,1287,626,1312"/>
+<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="261,907,270,980,294,1080,313,1133,338,1185,369,1232,408,1273,426,1285,423,1289,405,1277,365,1236,333,1187,308,1135,289,1082,265,981,256,907"/>
+<area shape="rect" id="Node000030" href="$classLIEF_1_1MachO_1_1SubClient.html" title="Class that represents the SubClient command. According to the Mach&#45;O loader.h documentation:" alt="" coords="440,1336,611,1361"/>
+<area shape="poly" id="edge29_Node000001_Node000030" title=" " alt="" coords="260,907,266,989,274,1043,287,1102,306,1162,332,1221,366,1276,408,1323,423,1333,440,1340,438,1345,421,1338,405,1327,361,1279,327,1224,301,1164,282,1103,269,1044,261,989,254,907"/>
+<area shape="rect" id="Node000031" href="$classLIEF_1_1MachO_1_1SubFramework.html" title="Class that represents the SubFramework command. According to the Mach&#45;O loader.h documentation:" alt="" coords="422,1385,629,1411"/>
+<area shape="poly" id="edge30_Node000001_Node000031" title=" " alt="" coords="259,907,262,997,269,1057,281,1123,299,1191,326,1257,362,1319,408,1372,425,1383,421,1388,405,1376,358,1322,321,1260,294,1193,276,1124,264,1058,257,997,253,907"/>
+<area shape="rect" id="Node000032" href="$classLIEF_1_1MachO_1_1SymbolCommand.html" title="Class that represents the LC_SYMTAB command." alt="" coords="413,1435,638,1460"/>
+<area shape="poly" id="edge31_Node000001_Node000032" title=" " alt="" coords="263,907,281,1019,312,1174,332,1253,355,1325,381,1383,409,1421,424,1432,421,1437,405,1425,376,1386,350,1327,327,1255,307,1175,276,1020,258,908"/>
+<area shape="rect" id="Node000033" href="$classLIEF_1_1MachO_1_1ThreadCommand.html" title="Class that represents the LC_THREAD / LC_UNIXTHREAD commands and that can be used to get the binary e..." alt="" coords="415,1484,636,1509"/>
+<area shape="poly" id="edge32_Node000001_Node000033" title=" " alt="" coords="262,907,279,1028,309,1199,329,1285,352,1364,379,1428,393,1453,408,1471,424,1482,421,1486,405,1475,389,1456,374,1431,347,1366,324,1287,304,1200,273,1029,257,908"/>
+<area shape="rect" id="Node000034" href="$classLIEF_1_1MachO_1_1TwoLevelHints.html" title="Class which represents the LC_TWOLEVEL_HINTS command." alt="" coords="424,1533,627,1559"/>
+<area shape="poly" id="edge33_Node000001_Node000034" title=" " alt="" coords="262,907,276,1036,305,1222,325,1317,349,1403,377,1473,392,1500,408,1520,425,1532,422,1536,405,1524,388,1503,372,1476,344,1405,320,1318,300,1223,271,1037,256,907"/>
+<area shape="rect" id="Node000035" href="$classLIEF_1_1MachO_1_1UUIDCommand.html" title="Class that represents the UUID command." alt="" coords="420,1583,631,1608"/>
+<area shape="poly" id="edge34_Node000001_Node000035" title=" " alt="" coords="261,907,275,1045,302,1246,322,1348,346,1442,375,1519,391,1548,409,1569,423,1580,420,1585,405,1573,387,1551,370,1521,341,1444,317,1350,297,1246,269,1046,256,907"/>
+<area shape="rect" id="Node000036" href="$classLIEF_1_1MachO_1_1UnknownCommand.html" title="Generic class when the command is not recognized by LIEF." alt="" coords="407,1632,644,1657"/>
+<area shape="poly" id="edge35_Node000001_Node000036" title=" " alt="" coords="261,907,273,1055,299,1270,319,1380,343,1481,373,1564,390,1595,409,1619,423,1630,420,1634,405,1623,386,1598,368,1566,338,1483,313,1381,294,1270,267,1055,256,908"/>
+<area shape="rect" id="Node000037" href="$classLIEF_1_1MachO_1_1VersionMin.html" title="Class that wraps the LC_VERSION_MIN_MACOSX, LC_VERSION_MIN_IPHONEOS, ... commands." alt="" coords="435,1681,616,1707"/>
+<area shape="poly" id="edge36_Node000001_Node000037" title=" " alt="" coords="261,907,271,1063,296,1293,315,1412,340,1520,371,1609,389,1643,408,1668,436,1685,433,1690,405,1672,385,1646,366,1611,335,1522,310,1413,291,1294,266,1063,255,907"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1Object.html" title=" " alt="" coords="5,868,104,893"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,878,152,878,152,883,118,883"/>
+<area shape="rect" id="Node000027" href="$classLIEF_1_1MachO_1_1LinkEdit.html" title=" " alt="" coords="692,1188,853,1213"/>
+<area shape="poly" id="edge26_Node000026_Node000027" title=" " alt="" coords="656,1198,692,1198,692,1203,656,1203"/>
 </map>
