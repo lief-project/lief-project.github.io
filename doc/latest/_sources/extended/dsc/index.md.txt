@@ -1,3 +1,7 @@
+---
+description: Load Apple Dyld shared caches, inspect and extract libraries as Mach-O files, and configure extraction and caching with LIEF Extended.
+---
+
 (extended-dsc)=
 
 # {fa}`solid fa-diagram-predecessor` Dyld Shared Cache
@@ -14,8 +18,10 @@
 
 ## Introduction
 
-LIEF's Dyld shared cache support enables the inspection and extraction of
-libraries from the Apple Dyld shared cache.
+LIEF Extended can inspect Apple's Dyld shared cache, enumerate its libraries,
+and extract them as Mach-O binaries.
+
+## Load a cache and list its libraries
 
 One can load a shared cache using the {sub-ref}`lief-dsc-load` function:
 
@@ -31,9 +37,10 @@ One can load a shared cache using the {sub-ref}`lief-dsc-load` function:
 :::
 ::::
 
-:::{warning}
-{sub-ref}`lief-dsc-load` takes as input either a directory for loading the **whole**
-shared cache or a set of files to load a subset of the cache.
+:::{note}
+Pass a directory to {sub-ref}`lief-dsc-load` to load the whole cache, or an explicit
+set of files to load a subset. Keep the main cache and its matching subcache files
+together: an extraction may need data from more than one file.
 :::
 
 From this {sub-ref}`lief-dsc-dyldsharedcache` object, we can inspect the embedded
@@ -51,9 +58,11 @@ From this {sub-ref}`lief-dsc-dyldsharedcache` object, we can inspect the embedde
 :::
 ::::
 
-It is worth mentioning that {sub-ref}`lief-dsc-dylib` exposes the {sub-ref}`lief-dsc-dylib-get`
-method, which can be used to **extract** a {sub-ref}`lief-macho-binary` instance from
-Dyld shared cache libraries:
+## Extract a library
+
+Find a {sub-ref}`lief-dsc-dylib`, then use {sub-ref}`lief-dsc-dylib-get` to extract a
+{sub-ref}`lief-macho-binary` for analysis. Check both the library lookup and the
+extraction result before using the Mach-O object:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
@@ -67,8 +76,7 @@ Dyld shared cache libraries:
 :::
 ::::
 
-Finally, we can leverage the {sub-ref}`lief-macho-binary-write` function to write back
-the {sub-ref}`lief-macho-binary` object:
+Use {sub-ref}`lief-macho-binary-write` to save the extracted object to a file:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
@@ -83,9 +91,10 @@ the {sub-ref}`lief-macho-binary` object:
 ::::
 
 :::{warning}
-By default, LIEF **does not** remove Dyld shared cache optimizations.
-To remove some of these optimizations, you can check the {sub-ref}`lief-dsc-dylib-eopt`
-structure.
+By default, LIEF retains Dyld shared cache optimizations. Review
+{sub-ref}`lief-dsc-dylib-eopt` when the extracted library needs references and
+other cache-specific structures recovered. Writing a Mach-O file alone does not
+guarantee it can be loaded independently of the cache.
 :::
 
 ## {fa}`solid fa-stopwatch` Performance Considerations

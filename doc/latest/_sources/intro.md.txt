@@ -109,9 +109,15 @@ Additional practical examples are available in the
 
 ## {fa}`cubes` Extended Version
 
-For those seeking enhanced support for {ref}`PDB <extended-pdb>`,
-{ref}`DWARF <extended-dwarf>`, or {ref}`Objective-C <extended-objc>` (and more),
-check out the {ref}`extended section <extended-intro>`.
+{ref}`LIEF Extended <extended-intro>` adds {ref}`PDB <extended-pdb>` and
+{ref}`DWARF <extended-dwarf>` analysis, {ref}`Objective-C metadata <extended-objc>`,
+{ref}`Dyld shared caches <extended-dsc>`, and
+{ref}`assembly <extended-assembler>`/{ref}`disassembly <extended-disassembler>`.
+
+## {fa}`solid fa-wand-magic-sparkles` Runtime
+
+The optional {ref}`runtime API <runtime-intro>` inspects the process running LIEF:
+its host, loaded modules, and memory. Start with the
 
 ## {fa}`solid fa-book` Additional Documentation
 

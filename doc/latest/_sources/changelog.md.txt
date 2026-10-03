@@ -27,6 +27,11 @@
 
 :ELF:
 
+  * Enhance the symbol-version API with the masked version index
+    (|lief-elf-symbol-version-version|), local/global classification
+    (|lief-elf-symbol-version-is_local| / |lief-elf-symbol-version-is_global|),
+    and support for inspecting the GNU ``VERSYM_HIDDEN`` bit
+    (|lief-elf-symbol-version-is_hidden| / |lief-elf-symbol-version-set_hidden|).
   * Fix the layout of the segments added by LIEF for the architectures that
     can use pages larger than 4K (:issue:`1366`)
   * Fix the modification of binaries that have already been modified by LIEF.
@@ -66,8 +71,9 @@
   * Add |lief-runtime-memory-mmap_hint| to allocate memory close to a given
     address.
   * Add |lief-runtime-memorylayout| to inspect the memory layout of the current
-    process. |lief-runtime-memory_layout| iterates over the mapped
-    |lief-runtime-memorylayout-region| (:ref:`documentation <runtime_memory_layout>`):
+    process on Linux, Android, macOS, and Windows. |lief-runtime-memory_layout|
+    iterates over the mapped |lief-runtime-memorylayout-region|
+    (:ref:`documentation <runtime_memory_layout>`):
 
     .. code-block:: python
 
@@ -92,6 +98,8 @@
 :Dependencies:
 
   * Update nanobind to version ``3.0.1``
+  * Update frozen to commit ``1a6065f``
+  * Update mbedtls to version ``4.2.0``
 
 :Python:
 

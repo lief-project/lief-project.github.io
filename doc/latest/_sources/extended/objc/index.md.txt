@@ -1,3 +1,7 @@
+---
+description: Inspect Objective-C classes, methods, properties, and protocols in Mach-O files and generate header-like declarations with LIEF Extended.
+---
+
 (extended-objc)=
 
 # {fa}`brands fa-apple` Objective-C
@@ -14,8 +18,13 @@
 
 ## Introduction
 
-This module enables inspecting Objective-C metadata within a Mach-O
-binary.
+LIEF Extended reads Objective-C classes, methods, properties, and protocols from
+Mach-O metadata. It can also generate header-like declarations.
+
+This information comes from Objective-C runtime metadata in the file, so it can
+be present even when source-level debug information is unavailable.
+
+## Inspect metadata
 
 If a Mach-O binary embeds Objective-C metadata, it can be accessed through
 {sub-ref}`lief-macho-binary-objc-metadata`:
@@ -32,9 +41,7 @@ If a Mach-O binary embeds Objective-C metadata, it can be accessed through
 :::
 ::::
 
-At this point, one can use the API exposed by the {sub-ref}`lief-objc-metadata` class
-to inspect the Objective-C metadata.
-
+When metadata is present, use {sub-ref}`lief-objc-metadata` to inspect it.
 In particular, the {sub-ref}`lief-objc-metadata-to_decl` function can be used to generate
 a header-like output of all the Objective-C metadata found in the binary.
 
@@ -52,9 +59,9 @@ a header-like output of all the Objective-C metadata found in the binary.
 
 ## Class Dump
 
-When performing binary analysis, it can be useful to generate header-like
-information to get a global overview of the structures present in the
-Objective-C metadata.
+Generate header-like declarations to review the classes and protocols found in
+the binary. The output describes the recorded metadata, including method
+signatures. It does not recover method implementations or the original headers.
 
 ```{image} ../../_static/objc-class-dump.webp
 :alt: Objective-C class dump based on LIEF & LLVM

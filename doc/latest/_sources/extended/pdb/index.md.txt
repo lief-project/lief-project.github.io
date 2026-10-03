@@ -1,3 +1,7 @@
+---
+description: Locate and load PDB debug information, associate it with a PE binary, inspect symbols and types, and generate C++ declarations with LIEF Extended.
+---
+
 (extended-pdb)=
 
 # {fa}`brands fa-windows` PDB
@@ -52,6 +56,8 @@ the PDB debug information:
 ::::
 
 (extended-pdb-load-ext)=
+
+## Attach a PDB to a binary
 
 You can also use the {sub-ref}`lief-abstract-binary-load_debug_info` function to bind
 a PDB file to an existing {sub-ref}`lief-abstract-binary`:

@@ -1,3 +1,7 @@
+---
+description: Read DWARF functions, types, and variables, attach external debug files, generate declarations, and create new DWARF files with LIEF Extended.
+---
+
 (extended-dwarf)=
 
 # {fa}`solid fa-bars-staggered` DWARF
@@ -14,8 +18,16 @@
 
 ## Introduction
 
-DWARF debug information can be embedded directly within a binary
-(the default for ELF files) or stored in a separate, dedicated file.
+LIEF Extended can read DWARF functions, variables, types, and source locations,
+generate C/C++ declarations, and create new debug files.
+
+DWARF debug information can be embedded in a binary or stored in a separate file.
+To inspect compiler-generated DWARF, build with debug information and preserve
+it when stripping the binary. Debug files can also be generated from analysis
+results with the {ref}`DWARF editor <extended-dwarf-editor>`. For an overview of
+loading and associating debug files, see {ref}`debug-info`.
+
+## Load and inspect DWARF
 
 When DWARF debug information is embedded within the binary,
 you can access it using the {sub-ref}`lief-dwarf-binary-debug-info` attribute.
@@ -48,6 +60,10 @@ DWARF file, whether it is embedded or standalone:
 :::
 ::::
 
+For a macOS `.dSYM` bundle, pass the path to the DWARF object inside
+`Contents/Resources/DWARF/`. Check the loader's return value before accessing
+compilation units or searching for a function or type.
+
 Once loaded, you can use the {sub-ref}`lief-dwarf-debug-info` API to interact with the
 debug information:
 
@@ -64,6 +80,8 @@ debug information:
 ::::
 
 (extended-dwarf-load-ext)=
+
+## Attach an external debug file
 
 In the case of an external DWARF file, you can bind this debug file to
 a {sub-ref}`lief-abstract-binary` using the {sub-ref}`lief-abstract-binary-load_debug_info`
@@ -83,10 +101,10 @@ Here's an example:
 :::
 ::::
 
-This external loading API is useful for adding debug information that might not
-already be present in the binary. For instance, the {sub-ref}`lief-disassemble` function
-can leverage this additional debug information to disassemble functions
-defined in the debug file previously loaded:
+Use a debug file produced by the same build as the binary. Attaching it updates
+LIEF's analysis object. It does not insert DWARF sections into the executable.
+The {sub-ref}`lief-disassemble` function can then resolve functions defined by
+that debug file while reading their machine code from the binary:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
@@ -109,8 +127,8 @@ debug information based on the analysis performed by these frameworks.
 
 ## Generating C/C++ Definitions
 
-DWARF functions, variables, types and compilation units can be turned back into
-a C/C++ definition thanks to the `to_decl()` function:
+DWARF functions, variables, types, and compilation units can be rendered as
+C/C++ declarations using:
 
 - {sub-ref}`lief-dwarf-function-to_decl`
 - {sub-ref}`lief-dwarf-variable-to_decl`
