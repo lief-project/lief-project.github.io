@@ -1,3 +1,7 @@
+---
+description: Enable LIEF's runtime API and inspect the current process, loaded modules, host information, and memory in Python, C++, and Rust.
+---
+
 (runtime-intro)=
 
 # {fa}`solid fa-wand-magic-sparkles` Runtime
@@ -96,3 +100,16 @@ The runtime features are split in the following components:
   components/memory_layout
   components/modules
 ```
+
+## API reference
+
+```{eval-rst}
+.. toctree::
+  :maxdepth: 1
+
+  cpp
+  python
+  rust
+```
+
+{{ cross_api }}

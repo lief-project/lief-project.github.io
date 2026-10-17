@@ -1,25 +1,5 @@
 var searchData=
 [
-  ['aarch64feature_0',['AArch64Feature',['../classLIEF_1_1ELF_1_1AArch64Feature.html',1,'LIEF::ELF']]],
-  ['aarch64pauth_1',['AArch64PAuth',['../classLIEF_1_1ELF_1_1AArch64PAuth.html',1,'LIEF::ELF']]],
-  ['abstracthash_2',['AbstractHash',['../classLIEF_1_1AbstractHash.html',1,'LIEF']]],
-  ['alloc_3',['Alloc',['../classLIEF_1_1PE_1_1unwind__x64_1_1Alloc.html',1,'LIEF::PE::unwind_x64']]],
-  ['androidident_4',['AndroidIdent',['../classLIEF_1_1ELF_1_1AndroidIdent.html',1,'LIEF::ELF']]],
-  ['arm64_5fepilog_5fscope_5ft_5',['arm64_epilog_scope_t',['../structLIEF_1_1PE_1_1details_1_1arm64__epilog__scope__t.html',1,'LIEF::PE::details']]],
-  ['arm64_5fpacked_5ft_6',['arm64_packed_t',['../structLIEF_1_1PE_1_1details_1_1arm64__packed__t.html',1,'LIEF::PE::details']]],
-  ['arm64_5funpacked_5ft_7',['arm64_unpacked_t',['../structLIEF_1_1PE_1_1details_1_1arm64__unpacked__t.html',1,'LIEF::PE::details']]],
-  ['array_8',['Array',['../classLIEF_1_1dwarf_1_1types_1_1Array.html',1,'LIEF::dwarf::types::Array'],['../classLIEF_1_1pdb_1_1types_1_1Array.html',1,'LIEF::pdb::types::Array']]],
-  ['arraytype_9',['ArrayType',['../classLIEF_1_1dwarf_1_1editor_1_1ArrayType.html',1,'LIEF::dwarf::editor']]],
-  ['asn1reader_10',['ASN1Reader',['../classLIEF_1_1ASN1Reader.html',1,'LIEF']]],
-  ['assemblerconfig_11',['AssemblerConfig',['../classLIEF_1_1assembly_1_1AssemblerConfig.html',1,'LIEF::assembly']]],
-  ['atomic_12',['Atomic',['../classLIEF_1_1dwarf_1_1types_1_1Atomic.html',1,'LIEF::dwarf::types']]],
-  ['atominfo_13',['AtomInfo',['../classLIEF_1_1MachO_1_1AtomInfo.html',1,'LIEF::MachO']]],
-  ['attribute_14',['Attribute',['../classLIEF_1_1pdb_1_1types_1_1Attribute.html',1,'LIEF::pdb::types::Attribute'],['../classLIEF_1_1PE_1_1Attribute.html',1,'LIEF::PE::Attribute']]],
-  ['auxiliarybfandefsymbol_15',['AuxiliarybfAndefSymbol',['../classLIEF_1_1COFF_1_1AuxiliarybfAndefSymbol.html',1,'LIEF::COFF']]],
-  ['auxiliaryclrtoken_16',['AuxiliaryCLRToken',['../classLIEF_1_1COFF_1_1AuxiliaryCLRToken.html',1,'LIEF::COFF']]],
-  ['auxiliaryfile_17',['AuxiliaryFile',['../classLIEF_1_1COFF_1_1AuxiliaryFile.html',1,'LIEF::COFF']]],
-  ['auxiliaryfunctiondefinition_18',['AuxiliaryFunctionDefinition',['../classLIEF_1_1COFF_1_1AuxiliaryFunctionDefinition.html',1,'LIEF::COFF']]],
-  ['auxiliarysectiondefinition_19',['AuxiliarySectionDefinition',['../classLIEF_1_1COFF_1_1AuxiliarySectionDefinition.html',1,'LIEF::COFF']]],
-  ['auxiliarysymbol_20',['AuxiliarySymbol',['../classLIEF_1_1COFF_1_1AuxiliarySymbol.html',1,'LIEF::COFF']]],
-  ['auxiliaryweakexternal_21',['AuxiliaryWeakExternal',['../classLIEF_1_1COFF_1_1AuxiliaryWeakExternal.html',1,'LIEF::COFF']]]
+  ['_5bstruct_5d_2eopcode_0',['[struct].opcode',['../structLIEF_1_1PE_1_1details_1_1unwind__code__t_1_1_0fstruct_0e_8opcode.html',1,'LIEF::PE::details::unwind_code_t']]],
+  ['_5bunion_5d_2e_5f_5funnamed0_5f_5f_1',['[union].__unnamed0__',['../unionLIEF_1_1assembly_1_1aarch64_1_1operands_1_1Memory_1_1offset__t_1_1_0funion_0e_8____unnamed0____.html',1,'LIEF::assembly::aarch64::operands::Memory::offset_t::[union].__unnamed0__'],['../unionLIEF_1_1assembly_1_1aarch64_1_1operands_1_1Register_1_1reg__t_1_1_0funion_0e_8____unnamed0____.html',1,'LIEF::assembly::aarch64::operands::Register::reg_t::[union].__unnamed0__'],['../unionLIEF_1_1assembly_1_1mips_1_1operands_1_1Memory_1_1offset__t_1_1_0funion_0e_8____unnamed0____.html',1,'LIEF::assembly::mips::operands::Memory::offset_t::[union].__unnamed0__'],['../unionLIEF_1_1assembly_1_1powerpc_1_1operands_1_1Memory_1_1offset__t_1_1_0funion_0e_8____unnamed0____.html',1,'LIEF::assembly::powerpc::operands::Memory::offset_t::[union].__unnamed0__'],['../unionLIEF_1_1assembly_1_1riscv_1_1operands_1_1Register_1_1reg__t_1_1_0funion_0e_8____unnamed0____.html',1,'LIEF::assembly::riscv::operands::Register::reg_t::[union].__unnamed0__'],['../unionLIEF_1_1MachO_1_1DyldChainedFixupsCreator_1_1binding__rebase__t_1_1_0funion_0e_8____unnamed0____.html',1,'LIEF::MachO::DyldChainedFixupsCreator::binding_rebase_t::[union].__unnamed0__']]]
 ];

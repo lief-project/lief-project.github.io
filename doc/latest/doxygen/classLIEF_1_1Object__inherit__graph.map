@@ -1,0 +1,199 @@
+<map id="LIEF::Object" name="LIEF::Object">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,1713,104,1739"/>
+<area shape="rect" id="Node000002" href="$classLIEF_1_1ART_1_1File.html" title=" " alt="" coords="205,5,315,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,1699,63,1361,82,817,96,540,112,299,129,123,139,68,150,40,175,23,204,15,205,20,177,27,154,44,144,70,135,124,117,300,101,540,88,817,68,1362,59,1700"/>
+<area shape="rect" id="Node000003" href="$classLIEF_1_1ART_1_1Header.html" title=" " alt="" coords="193,55,327,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="54,1699,63,1369,83,841,97,573,112,340,130,170,139,117,150,90,169,75,191,66,193,71,172,79,154,93,145,118,135,171,118,341,102,574,89,842,69,1369,59,1699"/>
+<area shape="rect" id="Node000004" href="$classLIEF_1_1Binary.html" title="Generic interface representing a binary executable." alt="" coords="211,104,309,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="53,1699,53,1389,61,892,72,636,90,408,101,313,115,234,131,175,150,139,163,128,178,120,210,113,211,118,180,125,166,132,154,142,136,177,120,236,107,314,95,409,78,636,66,892,58,1389,58,1699"/>
+<area shape="rect" id="Node000009" href="$classLIEF_1_1DEX_1_1Class.html" title="Class which represents a DEX Class (i.e. a Java/Kotlin class)." alt="" coords="197,153,323,179"/>
+<area shape="poly" id="edge7_Node000001_Node000009" title=" " alt="" coords="53,1699,53,1398,62,917,74,669,91,449,103,357,116,281,132,224,150,188,171,172,195,164,197,169,173,177,154,192,137,225,121,282,108,357,96,449,79,669,68,917,59,1399,58,1699"/>
+<area shape="rect" id="Node000010" href="$classLIEF_1_1DEX_1_1CodeInfo.html" title=" " alt="" coords="185,203,335,228"/>
+<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="53,1699,54,1406,64,941,75,701,93,489,104,400,117,327,132,272,150,238,166,225,184,216,186,221,168,229,154,241,137,274,122,328,109,401,98,489,81,702,69,941,59,1407,59,1699"/>
+<area shape="rect" id="Node000011" href="$classLIEF_1_1DEX_1_1Field.html" title="Class which represents a DEX Field." alt="" coords="199,252,321,277"/>
+<area shape="poly" id="edge9_Node000001_Node000011" title=" " alt="" coords="53,1699,55,1416,65,966,77,735,94,530,105,444,118,373,133,320,150,287,172,271,198,263,199,268,174,275,154,290,138,322,123,374,110,445,99,530,82,735,71,966,60,1416,59,1699"/>
+<area shape="rect" id="Node000012" href="$classLIEF_1_1DEX_1_1File.html" title="Class that represents a DEX file." alt="" coords="203,301,317,327"/>
+<area shape="poly" id="edge10_Node000001_Node000012" title=" " alt="" coords="53,1699,55,1424,67,990,79,767,96,570,106,487,119,419,133,368,150,336,174,319,202,311,203,316,176,324,154,340,138,370,124,420,112,488,101,570,84,768,72,990,61,1424,59,1699"/>
+<area shape="rect" id="Node000013" href="$classLIEF_1_1DEX_1_1Header.html" title="Class which represents the DEX header. This is the first structure that begins the DEX format." alt="" coords="191,351,329,376"/>
+<area shape="poly" id="edge11_Node000001_Node000013" title=" " alt="" coords="53,1700,56,1434,68,1015,80,801,97,610,120,465,134,416,150,386,168,371,189,363,191,368,171,376,154,389,139,418,125,467,102,611,85,801,74,1015,61,1434,59,1700"/>
+<area shape="rect" id="Node000014" href="$classLIEF_1_1DEX_1_1MapItem.html" title="Class which represents an element of the MapList object." alt="" coords="185,400,335,425"/>
+<area shape="poly" id="edge12_Node000001_Node000014" title=" " alt="" coords="53,1699,57,1442,70,1039,82,833,98,651,121,512,134,464,150,435,166,422,184,414,186,419,169,426,154,438,139,466,126,513,104,651,87,834,75,1040,62,1442,59,1700"/>
+<area shape="rect" id="Node000015" href="$classLIEF_1_1DEX_1_1MapList.html" title="Class which represents the map_list structure that follows the main DEX header." alt="" coords="189,449,331,475"/>
+<area shape="poly" id="edge13_Node000001_Node000015" title=" " alt="" coords="54,1699,58,1451,71,1064,83,866,100,691,122,558,135,512,150,484,167,470,188,462,190,467,170,475,154,488,140,514,127,559,105,692,89,867,77,1064,63,1451,59,1700"/>
+<area shape="rect" id="Node000016" href="$classLIEF_1_1DEX_1_1Method.html" title="Class which represents a DEX::Method." alt="" coords="190,499,330,524"/>
+<area shape="poly" id="edge14_Node000001_Node000016" title=" " alt="" coords="54,1699,58,1460,73,1089,85,899,101,732,123,604,135,561,150,534,168,519,189,511,191,516,170,524,154,537,140,563,128,605,107,732,90,900,78,1089,64,1460,59,1700"/>
+<area shape="rect" id="Node000017" href="$classLIEF_1_1DEX_1_1Prototype.html" title="Class which represents a DEX method prototype." alt="" coords="183,548,337,573"/>
+<area shape="poly" id="edge15_Node000001_Node000017" title=" " alt="" coords="54,1700,59,1469,74,1113,87,932,103,772,124,650,136,609,150,583,164,571,181,563,183,568,167,575,154,586,141,611,129,651,108,773,92,933,79,1114,64,1469,59,1700"/>
+<area shape="rect" id="Node000018" href="$classLIEF_1_1DEX_1_1Type.html" title="Class which represents a DEX type as described in the format specifications: https://source...." alt="" coords="199,597,321,623"/>
+<area shape="poly" id="edge16_Node000001_Node000018" title=" " alt="" coords="54,1700,60,1478,76,1138,88,966,104,813,125,696,137,657,150,632,172,616,198,608,200,613,175,621,154,636,141,659,130,698,110,814,93,966,81,1139,65,1478,59,1700"/>
+<area shape="rect" id="Node000019" href="$classLIEF_1_1ELF_1_1DynamicEntry.html" title="Class which represents an entry in the dynamic table These entries are located in the ...." alt="" coords="171,647,349,672"/>
+<area shape="poly" id="edge17_Node000001_Node000019" title=" " alt="" coords="54,1699,61,1486,77,1163,90,998,106,853,126,743,137,705,150,682,169,667,172,671,154,685,142,707,131,744,111,854,95,999,82,1163,66,1487,59,1700"/>
+<area shape="rect" id="Node000028" href="$classLIEF_1_1ELF_1_1GnuHash.html" title="Class which provides a view over the GNU Hash implementation. Most of the fields are read&#45;only since ..." alt="" coords="187,696,333,721"/>
+<area shape="poly" id="edge26_Node000001_Node000028" title=" " alt="" coords="54,1699,62,1495,79,1187,91,1031,107,894,127,789,138,753,150,731,167,718,186,710,188,714,169,722,154,734,143,755,132,790,113,894,97,1032,84,1188,67,1495,59,1699"/>
+<area shape="rect" id="Node000029" href="$classLIEF_1_1ELF_1_1Header.html" title="Class which represents the ELF&#39;s header. This class mirrors the raw ELF Elfxx_Ehdr structure." alt="" coords="193,745,327,771"/>
+<area shape="poly" id="edge27_Node000001_Node000029" title=" " alt="" coords="54,1699,62,1504,80,1212,93,1064,109,934,128,835,138,801,150,780,169,765,192,757,194,762,172,770,154,784,143,803,133,836,114,935,98,1065,86,1213,68,1504,60,1699"/>
+<area shape="rect" id="Node000030" href="$classLIEF_1_1ELF_1_1Note.html" title="Class which represents an ELF note. This class can be instantiated using the static Note::create func..." alt="" coords="201,795,319,820"/>
+<area shape="poly" id="edge28_Node000001_Node000030" title=" " alt="" coords="54,1699,63,1513,82,1237,95,1098,110,975,129,881,139,849,150,830,173,813,200,805,202,810,176,818,154,833,144,852,134,883,116,976,100,1098,87,1238,69,1514,60,1700"/>
+<area shape="rect" id="Node000040" href="$classLIEF_1_1ELF_1_1Segment.html" title="Class which represents the ELF segments." alt="" coords="188,844,332,869"/>
+<area shape="poly" id="edge38_Node000001_Node000040" title=" " alt="" coords="55,1699,64,1523,83,1262,96,1131,112,1015,129,928,139,898,150,879,167,866,187,857,189,862,170,870,154,882,144,900,135,929,117,1016,102,1132,89,1263,69,1523,60,1700"/>
+<area shape="rect" id="Node000041" href="$classLIEF_1_1ELF_1_1SymbolVersion.html" title="Class which represents an entry defined in the DT_VERSYM dynamic entry." alt="" coords="169,893,351,919"/>
+<area shape="poly" id="edge39_Node000001_Node000041" title=" " alt="" coords="55,1700,65,1533,85,1288,98,1165,113,1056,130,974,140,946,150,928,167,915,170,919,154,932,145,948,136,975,119,1057,103,1165,90,1288,70,1533,60,1700"/>
+<area shape="rect" id="Node000042" href="$classLIEF_1_1ELF_1_1SymbolVersionAux.html" title="Class which represents an Auxiliary Symbol version." alt="" coords="156,943,364,968"/>
+<area shape="poly" id="edge40_Node000001_Node000042" title=" " alt="" coords="53,1699,54,1552,64,1336,75,1224,93,1121,117,1037,132,1004,150,979,166,966,170,970,154,982,137,1007,122,1039,98,1123,81,1225,69,1336,59,1552,58,1699"/>
+<area shape="rect" id="Node000044" href="$classLIEF_1_1ELF_1_1SymbolVersionDefinition.html" title="Class which represents an entry defined in DT_VERDEF or .gnu.version_d." alt="" coords="169,993,351,1033"/>
+<area shape="poly" id="edge42_Node000001_Node000044" title=" " alt="" coords="53,1700,57,1564,69,1367,81,1266,98,1173,121,1096,134,1066,150,1043,167,1029,170,1033,154,1046,139,1069,126,1098,103,1174,86,1267,74,1368,62,1564,59,1700"/>
+<area shape="rect" id="Node000045" href="$classLIEF_1_1ELF_1_1SymbolVersionRequirement.html" title="Class which represents an entry in the DT_VERNEED or .gnu.version_r table." alt="" coords="169,1057,351,1097"/>
+<area shape="poly" id="edge43_Node000001_Node000045" title=" " alt="" coords="54,1700,59,1575,73,1398,85,1307,102,1224,123,1155,136,1128,150,1107,167,1093,170,1097,154,1110,140,1130,128,1157,107,1225,90,1308,78,1399,64,1576,59,1700"/>
+<area shape="rect" id="Node000046" href="$classLIEF_1_1ELF_1_1SysvHash.html" title="Class which represents the SYSV hash for the symbols resolution." alt="" coords="185,1121,335,1147"/>
+<area shape="poly" id="edge44_Node000001_Node000046" title=" " alt="" coords="54,1700,60,1584,75,1421,87,1337,103,1261,124,1199,136,1175,150,1156,166,1144,183,1136,185,1141,168,1149,154,1160,141,1178,129,1201,108,1263,92,1338,80,1421,65,1584,59,1700"/>
+<area shape="rect" id="Node000047" href="$classLIEF_1_1Header.html" title=" " alt="" coords="209,1171,311,1196"/>
+<area shape="poly" id="edge45_Node000001_Node000047" title=" " alt="" coords="55,1699,62,1592,78,1444,90,1369,106,1300,126,1244,150,1205,177,1188,208,1181,209,1186,179,1193,154,1209,131,1246,111,1302,96,1370,83,1444,67,1592,60,1699"/>
+<area shape="rect" id="Node000048" href="$classLIEF_1_1MachO_1_1BindingInfo.html" title="Class that provides an interface over a binding operation." alt="" coords="169,1220,351,1245"/>
+<area shape="poly" id="edge46_Node000001_Node000048" title=" " alt="" coords="55,1700,64,1602,81,1469,94,1401,109,1340,128,1289,150,1255,167,1242,170,1247,154,1258,133,1292,114,1341,99,1402,86,1469,69,1602,60,1700"/>
+<area shape="rect" id="Node000052" href="$classLIEF_1_1MachO_1_1BuildToolVersion.html" title="Class that represents a tool&#39;s version that was involved in the build of the binary." alt="" coords="152,1269,368,1295"/>
+<area shape="poly" id="edge50_Node000001_Node000052" title=" " alt="" coords="56,1699,66,1610,84,1492,112,1379,130,1334,150,1304,165,1293,169,1297,154,1308,134,1337,117,1380,90,1493,71,1611,61,1700"/>
+<area shape="rect" id="Node000053" href="$classLIEF_1_1MachO_1_1DataCodeEntry.html" title="Interface over an entry in the DataInCode command." alt="" coords="157,1319,363,1344"/>
+<area shape="poly" id="edge51_Node000001_Node000053" title=" " alt="" coords="57,1699,68,1620,88,1516,115,1418,132,1380,150,1353,166,1342,169,1346,154,1357,136,1382,120,1420,93,1518,74,1621,62,1700"/>
+<area shape="rect" id="Node000054" href="$classLIEF_1_1MachO_1_1ExportInfo.html" title="Class that provides an interface over the Dyld export info." alt="" coords="172,1368,348,1393"/>
+<area shape="poly" id="edge52_Node000001_Node000054" title=" " alt="" coords="53,1700,56,1639,69,1559,81,1516,98,1475,121,1436,150,1403,170,1389,173,1394,154,1407,125,1439,103,1477,86,1518,74,1560,61,1639,58,1700"/>
+<area shape="rect" id="Node000055" href="$classLIEF_1_1MachO_1_1Header.html" title="Class that represents the Mach&#45;O header." alt="" coords="182,1417,338,1443"/>
+<area shape="poly" id="edge53_Node000001_Node000055" title=" " alt="" coords="55,1699,61,1647,76,1580,88,1545,104,1511,125,1479,150,1452,181,1435,183,1440,154,1456,129,1483,109,1514,93,1547,81,1581,66,1648,60,1700"/>
+<area shape="rect" id="Node000056" href="$classLIEF_1_1MachO_1_1LoadCommand.html" title="Base class for the Mach&#45;O load commands." alt="" coords="157,1467,363,1492"/>
+<area shape="poly" id="edge54_Node000001_Node000056" title=" " alt="" coords="57,1699,66,1656,83,1602,110,1548,129,1523,150,1501,168,1490,171,1494,154,1505,133,1526,115,1550,88,1604,71,1657,62,1700"/>
+<area shape="rect" id="Node000092" href="$classLIEF_1_1OAT_1_1Class.html" title=" " alt="" coords="198,1516,322,1541"/>
+<area shape="poly" id="edge60_Node000001_Node000092" title=" " alt="" coords="61,1700,72,1666,91,1626,117,1586,150,1552,173,1539,197,1532,199,1537,175,1544,154,1556,121,1589,96,1628,77,1668,66,1701"/>
+<area shape="rect" id="Node000093" href="$classLIEF_1_1OAT_1_1DexFile.html" title=" " alt="" coords="191,1565,329,1591"/>
+<area shape="poly" id="edge61_Node000001_Node000093" title=" " alt="" coords="66,1700,100,1649,123,1623,151,1601,189,1585,191,1589,153,1606,127,1627,104,1653,71,1703"/>
+<area shape="rect" id="Node000094" href="$classLIEF_1_1OAT_1_1Header.html" title=" " alt="" coords="192,1615,328,1640"/>
+<area shape="poly" id="edge62_Node000001_Node000094" title=" " alt="" coords="78,1702,111,1675,151,1650,191,1636,193,1641,153,1655,114,1679,81,1706"/>
+<area shape="rect" id="Node000095" href="$classLIEF_1_1OAT_1_1Method.html" title=" " alt="" coords="191,1664,329,1689"/>
+<area shape="poly" id="edge63_Node000001_Node000095" title=" " alt="" coords="117,1708,151,1699,204,1687,205,1692,153,1705,118,1713"/>
+<area shape="rect" id="Node000096" href="$classLIEF_1_1PE_1_1Attribute.html" title="Interface over PKCS #7 attribute." alt="" coords="191,1713,329,1739"/>
+<area shape="poly" id="edge64_Node000001_Node000096" title=" " alt="" coords="118,1723,191,1723,191,1729,118,1729"/>
+<area shape="rect" id="Node000110" href="$classLIEF_1_1PE_1_1CodeIntegrity.html" title=" " alt="" coords="176,1763,344,1788"/>
+<area shape="poly" id="edge65_Node000001_Node000110" title=" " alt="" coords="117,1740,153,1749,201,1760,200,1765,151,1754,115,1745"/>
+<area shape="rect" id="Node000111" href="$classLIEF_1_1PE_1_1ContentInfo.html" title=" " alt="" coords="182,1812,338,1837"/>
+<area shape="poly" id="edge66_Node000001_Node000111" title=" " alt="" coords="80,1746,113,1774,153,1798,184,1809,182,1814,151,1803,110,1778,77,1750"/>
+<area shape="rect" id="Node000112" href="$classLIEF_1_1PE_1_1ContentInfo_1_1Content.html" title=" " alt="" coords="182,1862,338,1902"/>
+<area shape="poly" id="edge67_Node000001_Node000112" title=" " alt="" coords="71,1749,104,1800,127,1826,153,1848,183,1863,181,1868,151,1852,124,1829,100,1803,67,1752"/>
+<area shape="rect" id="Node000116" href="$classLIEF_1_1PE_1_1DataDirectory.html" title="Class that represents a PE data directory entry." alt="" coords="175,1927,345,1952"/>
+<area shape="poly" id="edge68_Node000001_Node000116" title=" " alt="" coords="64,1751,75,1788,93,1832,119,1875,154,1912,176,1925,173,1929,150,1916,115,1878,89,1834,70,1790,59,1753"/>
+<area shape="rect" id="Node000117" href="$classLIEF_1_1PE_1_1Debug.html" title="This class represents a generic entry in the debug data directory. For known types,..." alt="" coords="199,1976,321,2001"/>
+<area shape="poly" id="edge69_Node000001_Node000117" title=" " alt="" coords="61,1752,69,1798,86,1855,113,1913,131,1940,154,1963,175,1975,199,1983,197,1988,173,1980,150,1967,127,1943,108,1916,81,1857,64,1799,56,1753"/>
+<area shape="rect" id="Node000126" href="$classLIEF_1_1PE_1_1DelayImport.html" title="Class that represents a PE delayed import." alt="" coords="179,2025,341,2051"/>
+<area shape="poly" id="edge70_Node000001_Node000126" title=" " alt="" coords="59,1752,64,1807,79,1877,91,1914,107,1950,128,1983,154,2012,180,2027,178,2032,150,2016,124,1987,102,1953,86,1916,74,1879,59,1808,54,1752"/>
+<area shape="rect" id="Node000127" href="$classLIEF_1_1PE_1_1DosHeader.html" title="Class which represents the DosHeader, the first structure present at the beginning of a PE file." alt="" coords="184,2075,336,2100"/>
+<area shape="poly" id="edge71_Node000001_Node000127" title=" " alt="" coords="58,1752,60,1815,72,1899,84,1943,101,1987,124,2027,154,2061,168,2072,185,2079,183,2084,165,2076,150,2065,120,2030,96,1989,79,1945,67,1900,55,1816,52,1752"/>
+<area shape="rect" id="Node000128" href="$classLIEF_1_1PE_1_1Export.html" title="Class which represents a PE Export." alt="" coords="199,2124,321,2149"/>
+<area shape="poly" id="edge72_Node000001_Node000128" title=" " alt="" coords="62,1752,73,1834,92,1942,119,2045,136,2084,154,2111,175,2125,199,2132,197,2137,172,2129,150,2115,131,2087,114,2047,87,1943,67,1835,56,1753"/>
+<area shape="rect" id="Node000129" href="$classLIEF_1_1PE_1_1Header.html" title="Class that represents the PE header (which follows the DosHeader)." alt="" coords="197,2173,323,2199"/>
+<area shape="poly" id="edge73_Node000001_Node000129" title=" " alt="" coords="61,1752,70,1844,89,1967,101,2028,116,2084,134,2130,154,2160,174,2174,197,2181,196,2186,171,2178,150,2164,129,2132,111,2086,96,2030,83,1968,65,1844,56,1753"/>
+<area shape="rect" id="Node000130" href="$classLIEF_1_1PE_1_1Import.html" title="Class that represents a PE import." alt="" coords="199,2223,321,2248"/>
+<area shape="poly" id="edge74_Node000001_Node000130" title=" " alt="" coords="60,1752,68,1853,85,1991,98,2060,113,2124,132,2175,154,2209,175,2224,199,2231,198,2236,172,2228,150,2213,127,2177,108,2125,93,2061,80,1992,63,1854,55,1753"/>
+<area shape="rect" id="Node000131" href="$classLIEF_1_1PE_1_1LoadConfiguration.html" title="This class represents the load configuration data associated with the IMAGE_LOAD_CONFIG_DIRECTORY." alt="" coords="161,2272,359,2297"/>
+<area shape="poly" id="edge75_Node000001_Node000131" title=" " alt="" coords="60,1752,66,1862,82,2015,94,2092,110,2163,130,2220,154,2259,168,2270,165,2274,150,2262,125,2223,105,2164,89,2093,77,2016,61,1863,54,1753"/>
+<area shape="rect" id="Node000132" href="$classLIEF_1_1PE_1_1OptionalHeader.html" title="Class which represents the PE OptionalHeader structure." alt="" coords="169,2321,351,2347"/>
+<area shape="poly" id="edge76_Node000001_Node000132" title=" " alt="" coords="59,1753,64,1872,79,2039,91,2125,107,2202,128,2266,140,2290,154,2308,170,2320,167,2325,150,2312,136,2293,123,2268,102,2204,86,2125,74,2040,59,1872,54,1753"/>
+<area shape="rect" id="Node000133" href="$classLIEF_1_1PE_1_1PogoEntry.html" title=" " alt="" coords="187,2371,333,2396"/>
+<area shape="poly" id="edge77_Node000001_Node000133" title=" " alt="" coords="59,1753,63,1881,76,2063,88,2156,104,2241,126,2311,139,2338,154,2357,169,2369,187,2377,185,2382,166,2374,150,2361,135,2340,121,2313,99,2243,83,2157,71,2064,57,1881,54,1753"/>
+<area shape="rect" id="Node000134" href="$classLIEF_1_1PE_1_1Relocation.html" title="Class which represents the Base Relocation Block We usually find this structure in the ...." alt="" coords="185,2420,335,2445"/>
+<area shape="poly" id="edge78_Node000001_Node000134" title=" " alt="" coords="59,1753,61,1889,73,2086,85,2188,101,2280,124,2356,138,2385,154,2407,169,2418,186,2426,184,2431,166,2423,150,2411,134,2388,119,2358,96,2281,79,2188,67,2087,56,1889,53,1753"/>
+<area shape="rect" id="Node000135" href="$classLIEF_1_1PE_1_1ResourceAccelerator.html" title=" " alt="" coords="153,2469,367,2495"/>
+<area shape="poly" id="edge79_Node000001_Node000135" title=" " alt="" coords="58,1752,59,1897,70,2109,81,2219,98,2319,122,2401,137,2433,154,2456,167,2467,164,2471,150,2460,133,2435,117,2403,93,2320,76,2220,64,2110,54,1897,53,1752"/>
+<area shape="rect" id="Node000136" href="$classLIEF_1_1PE_1_1ResourceDialog.html" title="This class is the base class for either a regular (legacy) Dialog or an extended Dialog...." alt="" coords="169,2519,351,2544"/>
+<area shape="poly" id="edge80_Node000001_Node000136" title=" " alt="" coords="60,1752,71,1917,91,2157,104,2277,119,2383,136,2463,145,2490,154,2506,170,2518,167,2522,150,2509,140,2492,131,2464,114,2384,99,2278,85,2157,65,1917,55,1753"/>
+<area shape="rect" id="Node000139" href="$classLIEF_1_1PE_1_1ResourceIcon.html" title=" " alt="" coords="177,2568,343,2593"/>
+<area shape="poly" id="edge81_Node000001_Node000139" title=" " alt="" coords="60,1753,70,1927,89,2182,102,2311,118,2424,135,2509,144,2538,154,2555,178,2571,175,2576,150,2558,139,2540,130,2511,112,2425,97,2311,84,2183,64,1927,55,1753"/>
+<area shape="rect" id="Node000140" href="$classLIEF_1_1PE_1_1ResourceNode.html" title="Class which represents a Node in the resource tree." alt="" coords="173,2617,347,2643"/>
+<area shape="poly" id="edge82_Node000001_Node000140" title=" " alt="" coords="60,1752,69,1935,87,2206,100,2343,116,2464,134,2556,144,2586,154,2604,174,2619,171,2623,150,2608,139,2588,129,2557,111,2465,95,2344,82,2207,64,1935,54,1752"/>
+<area shape="rect" id="Node000143" href="$classLIEF_1_1PE_1_1ResourceStringFileInfo.html" title="Representation of the StringFileInfo structure." alt="" coords="171,2667,349,2707"/>
+<area shape="poly" id="edge83_Node000001_Node000143" title=" " alt="" coords="60,1752,69,1944,87,2231,100,2376,116,2504,134,2601,144,2634,154,2654,172,2669,169,2673,150,2657,139,2636,129,2602,110,2505,95,2376,82,2231,63,1944,54,1752"/>
+<area shape="rect" id="Node000144" href="$classLIEF_1_1PE_1_1ResourceStringTable.html" title="This class represents the StringTable structure. This structure can be seen as a dictionary of key&#45;va..." alt="" coords="171,2731,349,2771"/>
+<area shape="poly" id="edge84_Node000001_Node000144" title=" " alt="" coords="59,1752,68,1956,85,2263,98,2419,114,2557,133,2661,143,2696,154,2718,172,2733,169,2737,150,2721,138,2698,127,2662,109,2557,93,2419,80,2264,62,1956,54,1753"/>
+<area shape="rect" id="Node000145" href="$classLIEF_1_1PE_1_1ResourceVarFileInfo.html" title="Representation of the VarFileInfo structure." alt="" coords="155,2796,365,2821"/>
+<area shape="poly" id="edge85_Node000001_Node000145" title=" " alt="" coords="59,1752,66,1968,82,2296,95,2463,111,2610,131,2722,142,2759,154,2782,169,2794,165,2798,150,2785,137,2761,125,2723,106,2611,90,2463,77,2296,61,1968,54,1752"/>
+<area shape="rect" id="Node000146" href="$classLIEF_1_1PE_1_1ResourceVersion.html" title="Representation of the data associated with the RT_VERSION entry." alt="" coords="166,2845,354,2871"/>
+<area shape="poly" id="edge86_Node000001_Node000146" title=" " alt="" coords="59,1753,65,1977,80,2322,93,2497,109,2652,130,2769,141,2809,154,2832,167,2843,164,2848,150,2836,136,2811,124,2771,104,2653,88,2497,75,2322,60,1978,54,1753"/>
+<area shape="rect" id="Node000147" href="$classLIEF_1_1PE_1_1ResourcesManager.html" title="The Resource Manager provides an enhanced API to manipulate the resource tree." alt="" coords="158,2895,362,2920"/>
+<area shape="poly" id="edge87_Node000001_Node000147" title=" " alt="" coords="59,1752,64,1986,79,2346,91,2530,108,2692,129,2816,141,2857,154,2882,167,2893,164,2897,150,2885,136,2859,123,2817,102,2693,86,2530,74,2346,59,1986,54,1752"/>
+<area shape="rect" id="Node000148" href="$classLIEF_1_1PE_1_1RichEntry.html" title="Class which represents an entry associated to the RichHeader." alt="" coords="189,2944,331,2969"/>
+<area shape="poly" id="edge88_Node000001_Node000148" title=" " alt="" coords="59,1752,63,1995,77,2371,90,2563,106,2733,128,2862,140,2905,154,2931,170,2944,190,2951,188,2956,167,2948,150,2934,135,2907,122,2863,101,2733,84,2563,72,2371,58,1995,54,1752"/>
+<area shape="rect" id="Node000149" href="$classLIEF_1_1PE_1_1RichHeader.html" title="Class which represents the not&#45;so&#45;documented rich header." alt="" coords="183,2993,337,3019"/>
+<area shape="poly" id="edge89_Node000001_Node000149" title=" " alt="" coords="59,1752,63,2003,76,2395,88,2596,105,2773,127,2908,140,2953,154,2980,167,2991,184,2999,181,3004,165,2996,150,2984,135,2955,121,2909,99,2774,83,2596,71,2396,57,2004,54,1752"/>
+<area shape="rect" id="Node000150" href="$classLIEF_1_1PE_1_1Signature.html" title="Main interface for the PKCS #7 signature scheme." alt="" coords="189,3043,331,3068"/>
+<area shape="poly" id="edge90_Node000001_Node000150" title=" " alt="" coords="59,1753,62,2013,75,2421,87,2629,103,2814,126,2954,139,3001,154,3030,170,3042,190,3050,188,3055,167,3047,150,3033,134,3003,120,2955,98,2815,81,2630,69,2421,57,2013,53,1753"/>
+<area shape="rect" id="Node000151" href="$classLIEF_1_1PE_1_1SignerInfo.html" title=" " alt="" coords="187,3092,333,3117"/>
+<area shape="poly" id="edge91_Node000001_Node000151" title=" " alt="" coords="59,1752,61,2021,73,2444,85,2661,102,2854,125,3000,139,3049,154,3079,169,3091,187,3099,185,3104,166,3096,150,3082,134,3051,119,3001,96,2855,80,2662,68,2445,56,2021,53,1752"/>
+<area shape="rect" id="Node000152" href="$classLIEF_1_1PE_1_1TLS.html" title="Class which represents the PE Thread Local Storage." alt="" coords="209,3141,311,3167"/>
+<area shape="poly" id="edge92_Node000001_Node000152" title=" " alt="" coords="59,1752,60,2030,72,2469,83,2695,100,2895,111,2978,124,3047,138,3098,154,3128,165,3138,179,3145,209,3152,208,3158,177,3150,162,3143,150,3132,133,3100,119,3048,106,2979,95,2895,78,2695,66,2470,55,2030,53,1753"/>
+<area shape="rect" id="Node000153" href="$classLIEF_1_1PE_1_1x509.html" title="Interface over a x509 certificate." alt="" coords="204,3191,316,3216"/>
+<area shape="poly" id="edge93_Node000001_Node000153" title=" " alt="" coords="59,1752,60,2038,70,2494,82,2727,99,2935,110,3021,123,3093,138,3146,154,3178,177,3194,204,3201,203,3206,174,3198,150,3181,133,3148,118,3094,105,3022,94,2935,76,2728,65,2494,54,2038,53,1752"/>
+<area shape="rect" id="Node000154" href="$classLIEF_1_1Relocation.html" title="Class which represents an abstracted Relocation." alt="" coords="197,3240,323,3265"/>
+<area shape="poly" id="edge94_Node000001_Node000154" title=" " alt="" coords="58,1753,59,2048,69,2519,80,2761,97,2975,109,3065,122,3139,137,3194,154,3227,174,3242,198,3249,196,3255,171,3246,150,3230,132,3196,117,3140,103,3066,92,2976,75,2761,63,2519,54,2048,53,1753"/>
+<area shape="rect" id="Node000162" href="$classLIEF_1_1Section.html" title="Class which represents an abstracted section." alt="" coords="208,3289,312,3315"/>
+<area shape="poly" id="edge95_Node000001_Node000162" title=" " alt="" coords="58,1752,58,2056,67,2543,79,2793,96,3016,107,3109,121,3185,136,3242,154,3276,165,3286,178,3293,209,3300,207,3306,176,3298,162,3291,150,3280,131,3244,116,3186,102,3109,91,3016,73,2793,62,2543,53,2056,53,1752"/>
+<area shape="rect" id="Node000168" href="$classLIEF_1_1Symbol.html" title="This class represents a symbol in an executable format." alt="" coords="207,3339,313,3364"/>
+<area shape="poly" id="edge96_Node000001_Node000168" title=" " alt="" coords="58,1752,58,2065,66,2567,77,2826,94,3056,106,3152,120,3231,136,3290,154,3326,178,3342,207,3350,206,3355,176,3347,150,3329,131,3292,115,3232,101,3153,89,3057,72,2827,61,2568,52,2065,53,1752"/>
+<area shape="rect" id="Node000176" href="$classLIEF_1_1VDEX_1_1File.html" title="Main class for the VDEX module which represents a VDEX file." alt="" coords="199,3388,321,3413"/>
+<area shape="poly" id="edge97_Node000001_Node000176" title=" " alt="" coords="59,1752,69,2085,88,2618,102,2889,117,3125,135,3296,145,3349,154,3375,174,3390,199,3398,198,3403,172,3395,150,3378,139,3351,130,3297,112,3125,96,2889,83,2618,63,2085,54,1753"/>
+<area shape="rect" id="Node000177" href="$classLIEF_1_1VDEX_1_1Header.html" title=" " alt="" coords="187,3437,333,3463"/>
+<area shape="poly" id="edge98_Node000001_Node000177" title=" " alt="" coords="59,1753,68,2094,88,2643,101,2923,117,3166,135,3343,144,3398,154,3424,169,3437,187,3444,185,3449,166,3441,150,3428,139,3399,129,3344,111,3166,96,2923,82,2644,63,2094,54,1753"/>
+<area shape="rect" id="Node000005" href="$classLIEF_1_1ELF_1_1Binary.html" title="Class which represents an ELF binary." alt="" coords="470,55,598,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="323,103,469,76,470,81,324,108"/>
+<area shape="rect" id="Node000007" href="$classLIEF_1_1MachO_1_1Binary.html" title="Class which represents a MachO binary." alt="" coords="459,104,609,129"/>
+<area shape="poly" id="edge5_Node000004_Node000007" title=" " alt="" coords="323,114,458,114,458,119,323,119"/>
+<area shape="rect" id="Node000008" href="$classLIEF_1_1PE_1_1Binary.html" title="Class which represents a PE binary This is the main interface to manage and modify a PE executable." alt="" coords="473,153,595,179"/>
+<area shape="poly" id="edge6_Node000004_Node000008" title=" " alt="" coords="324,125,473,152,472,158,323,131"/>
+<area shape="rect" id="Node000020" href="$classLIEF_1_1ELF_1_1DynamicEntryArray.html" title="Class that represent an Array in the dynamic table. This entry is associated with constructors:" alt="" coords="427,293,641,319"/>
+<area shape="poly" id="edge18_Node000019_Node000020" title=" " alt="" coords="359,638,366,632,381,614,390,595,399,558,396,520,389,482,381,444,379,405,388,366,399,347,414,328,428,317,432,321,418,332,403,350,393,368,384,405,386,443,394,481,402,519,404,558,395,597,385,617,370,636,363,642"/>
+<area shape="rect" id="Node000021" href="$classLIEF_1_1ELF_1_1DynamicEntryAuxiliary.html" title="Class which represents a DT_AUXILIARY entry in the dynamic table This kind of entry is used to specif..." alt="" coords="416,343,652,368"/>
+<area shape="poly" id="edge19_Node000019_Node000021" title=" " alt="" coords="359,638,366,632,387,601,395,570,394,539,389,507,384,474,383,442,392,409,414,377,429,366,432,370,418,381,396,412,388,442,389,474,394,506,399,538,400,571,392,604,370,636,363,642"/>
+<area shape="rect" id="Node000022" href="$classLIEF_1_1ELF_1_1DynamicEntryFilter.html" title="Class which represents a DT_FILTER entry in the dynamic table This kind of entry is used to specify a..." alt="" coords="429,392,639,417"/>
+<area shape="poly" id="edge20_Node000019_Node000022" title=" " alt="" coords="359,638,366,632,384,608,391,583,392,557,389,531,386,505,387,479,395,452,414,427,429,415,432,420,418,431,400,455,392,479,391,505,394,531,397,557,397,584,389,610,370,636,363,642"/>
+<area shape="rect" id="Node000023" href="$classLIEF_1_1ELF_1_1DynamicEntryFlags.html" title=" " alt="" coords="427,441,641,467"/>
+<area shape="poly" id="edge21_Node000019_Node000023" title=" " alt="" coords="360,637,366,632,381,614,388,595,389,556,391,515,398,495,414,476,431,465,434,469,418,480,403,498,396,517,394,556,393,596,385,616,370,636,363,641"/>
+<area shape="rect" id="Node000024" href="$classLIEF_1_1ELF_1_1DynamicEntryLibrary.html" title="Class which represents a DT_NEEDED entry in the dynamic table." alt="" coords="423,491,645,516"/>
+<area shape="poly" id="edge22_Node000019_Node000024" title=" " alt="" coords="358,638,366,632,378,620,384,607,389,580,395,552,402,538,414,525,433,514,435,519,418,529,406,541,400,554,394,581,389,609,382,623,370,636,361,642"/>
+<area shape="rect" id="Node000025" href="$classLIEF_1_1ELF_1_1DynamicEntryRpath.html" title="Class which represents a DT_RPATH entry. This attribute is deprecated (cf. man ld) in favor of DT_RUN..." alt="" coords="426,540,642,565"/>
+<area shape="poly" id="edge23_Node000019_Node000025" title=" " alt="" coords="352,639,366,632,381,618,390,604,398,589,415,574,440,563,442,568,417,579,403,592,394,606,385,622,370,636,354,644"/>
+<area shape="rect" id="Node000026" href="$classLIEF_1_1ELF_1_1DynamicEntryRunPath.html" title="Class that represents a DT_RUNPATH which is used by the loader to resolve libraries (DynamicEntryLibr..." alt="" coords="419,589,649,615"/>
+<area shape="poly" id="edge24_Node000019_Node000026" title=" " alt="" coords="334,641,472,612,473,617,335,646"/>
+<area shape="rect" id="Node000027" href="$classLIEF_1_1ELF_1_1DynamicSharedObject.html" title="Class which represents a DT_SONAME entry in the dynamic table This kind of entry is usually used to n..." alt="" coords="439,639,629,679"/>
+<area shape="poly" id="edge25_Node000019_Node000027" title=" " alt="" coords="363,657,439,657,439,662,363,662"/>
+<area shape="rect" id="Node000031" href="$classLIEF_1_1ELF_1_1AndroidIdent.html" title="Class representing the &quot;.note.android.ident&quot; section." alt="" coords="449,704,619,729"/>
+<area shape="poly" id="edge29_Node000030_Node000031" title=" " alt="" coords="331,793,367,780,381,770,390,759,400,749,415,738,448,726,450,731,417,743,403,753,394,763,384,774,369,784,333,798"/>
+<area shape="rect" id="Node000032" href="$classLIEF_1_1ELF_1_1CoreAuxv.html" title="Class representing core auxv object." alt="" coords="459,753,609,779"/>
+<area shape="poly" id="edge30_Node000030_Node000032" title=" " alt="" coords="332,794,459,775,460,780,333,799"/>
+<area shape="rect" id="Node000033" href="$classLIEF_1_1ELF_1_1CoreFile.html" title="Class representing a core NT_FILE which describes the mapped files of the process." alt="" coords="465,803,603,828"/>
+<area shape="poly" id="edge31_Node000030_Node000033" title=" " alt="" coords="332,807,465,811,465,816,332,812"/>
+<area shape="rect" id="Node000034" href="$classLIEF_1_1ELF_1_1CorePrPsInfo.html" title="Class representing the NT_PRPSINFO core note. This kind of note represents general information about ..." alt="" coords="449,852,619,877"/>
+<area shape="poly" id="edge32_Node000030_Node000034" title=" " alt="" coords="333,820,473,849,472,855,331,825"/>
+<area shape="rect" id="Node000035" href="$classLIEF_1_1ELF_1_1CorePrStatus.html" title="Class representing core PrPsInfo object." alt="" coords="449,901,619,927"/>
+<area shape="poly" id="edge33_Node000030_Node000035" title=" " alt="" coords="333,814,369,829,386,843,394,859,403,873,417,886,450,900,447,905,415,891,398,877,390,861,381,847,367,834,331,819"/>
+<area shape="rect" id="Node000036" href="$classLIEF_1_1ELF_1_1CoreSigInfo.html" title="Class representing a core siginfo object." alt="" coords="453,951,615,976"/>
+<area shape="poly" id="edge34_Node000030_Node000036" title=" " alt="" coords="333,811,352,818,370,829,382,842,389,856,395,884,400,911,406,924,418,936,435,947,454,954,452,959,432,951,414,940,402,927,395,913,389,885,384,858,378,846,366,833,350,823,331,816"/>
+<area shape="rect" id="Node000037" href="$classLIEF_1_1ELF_1_1NoteAbi.html" title="Class that wraps the NT_GNU_ABI_TAG note." alt="" coords="465,1000,603,1025"/>
+<area shape="poly" id="edge35_Node000030_Node000037" title=" " alt="" coords="333,810,353,818,370,829,385,849,393,869,395,909,396,949,403,967,418,985,440,999,465,1008,464,1013,438,1004,414,989,398,970,391,950,389,910,388,870,381,851,366,833,350,822,331,815"/>
+<area shape="rect" id="Node000038" href="$classLIEF_1_1ELF_1_1NoteGnuProperty.html" title="Class that wraps the NT_GNU_PROPERTY_TYPE_0 note." alt="" coords="435,1049,633,1075"/>
+<area shape="poly" id="edge36_Node000030_Node000038" title=" " alt="" coords="333,809,353,817,370,829,389,855,397,882,397,908,395,934,392,960,392,986,400,1010,418,1035,436,1048,433,1052,414,1039,395,1013,387,987,386,960,389,934,392,908,392,882,384,858,366,833,350,822,331,814"/>
+<area shape="rect" id="Node000039" href="$classLIEF_1_1ELF_1_1QNXStack.html" title="Class representing the QNX QNT_STACK note." alt="" coords="459,1099,609,1124"/>
+<area shape="poly" id="edge37_Node000030_Node000039" title=" " alt="" coords="333,809,353,817,370,829,392,862,401,894,400,927,395,959,389,991,389,1023,397,1054,418,1084,437,1098,459,1106,457,1111,434,1102,414,1088,392,1056,383,1023,384,991,389,958,395,926,395,895,387,864,366,833,350,821,331,814"/>
+<area shape="rect" id="Node000043" href="$classLIEF_1_1ELF_1_1SymbolVersionAuxRequirement.html" title=" " alt="" coords="443,1149,625,1189"/>
+<area shape="poly" id="edge41_Node000042_Node000043" title=" " alt="" coords="363,973,370,979,385,998,393,1018,395,1057,397,1096,404,1115,418,1133,444,1151,441,1155,414,1137,399,1118,392,1097,390,1058,388,1019,381,1001,366,983,360,977"/>
+<area shape="rect" id="Node000049" href="$classLIEF_1_1MachO_1_1ChainedBindingInfo.html" title="This class represents a symbol binding operation associated with the LC_DYLD_CHAINED_FIXUPS command." alt="" coords="416,1213,652,1239"/>
+<area shape="poly" id="edge47_Node000048_Node000049" title=" " alt="" coords="365,1227,416,1226,416,1232,365,1233"/>
+<area shape="rect" id="Node000050" href="$classLIEF_1_1MachO_1_1DyldBindingInfo.html" title="This class represents a symbol binding operation associated with the LC_DYLD_INFO bytecode." alt="" coords="427,1263,641,1288"/>
+<area shape="poly" id="edge48_Node000048_Node000050" title=" " alt="" coords="356,1245,452,1260,451,1265,355,1250"/>
+<area shape="rect" id="Node000051" href="$classLIEF_1_1MachO_1_1IndirectBindingInfo.html" title="This class represents a binding operation inferred from the indirect symbol table." alt="" coords="418,1312,650,1337"/>
+<area shape="poly" id="edge49_Node000048_Node000051" title=" " alt="" coords="353,1247,369,1254,384,1265,394,1276,403,1287,417,1297,450,1309,448,1314,415,1302,400,1291,390,1280,381,1269,367,1259,351,1252"/>
+<area shape="rect" id="Node000057" href="$classLIEF_1_1MachO_1_1AtomInfo.html" title="Class which represents the LC_ATOM_INFO command." alt="" coords="449,1368,619,1393"/>
+<area shape="poly" id="edge55_Node000056_Node000057" title=" " alt="" coords="350,1460,367,1452,381,1440,390,1428,399,1415,415,1402,448,1389,450,1394,417,1407,403,1418,394,1431,385,1444,369,1456,353,1464"/>
+<area shape="rect" id="Node000058" href="$classLIEF_1_1MachO_1_1BuildVersion.html" title=" " alt="" coords="439,1417,629,1443"/>
+<area shape="poly" id="edge56_Node000056_Node000058" title=" " alt="" coords="344,1462,462,1440,463,1445,345,1467"/>
+<area shape="rect" id="Node000059" href="$classLIEF_1_1MachO_1_1CodeSignature.html" title=" " alt="" coords="432,1467,636,1492"/>
+<area shape="poly" id="edge57_Node000056_Node000059" title=" " alt="" coords="377,1477,432,1477,432,1482,377,1482"/>
+<area shape="rect" id="Node000060" href="$classLIEF_1_1MachO_1_1CodeSignatureDir.html" title=" " alt="" coords="423,1516,645,1541"/>
+<area shape="poly" id="edge58_Node000056_Node000060" title=" " alt="" coords="345,1492,463,1513,462,1519,344,1497"/>
+<area shape="rect" id="Node000061" href="$classLIEF_1_1MachO_1_1DataInCode.html" title="Interface of the LC_DATA_IN_CODE command This command is used to list slices of code sections that co..." alt="" coords="441,1565,627,1591"/>
+<area shape="poly" id="edge59_Node000056_Node000061" title=" " alt="" coords="356,1494,369,1501,385,1514,394,1527,403,1540,417,1552,443,1563,441,1568,415,1556,399,1544,390,1530,381,1517,367,1506,353,1499"/>
+</map>
