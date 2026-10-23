@@ -142,18 +142,28 @@ For example:
 ```
 
 ```{eval-rst}
-.. doxygenfunction:: LIEF::dump(const std::vector<uint8_t> &data, const std::string &title = "", const std::string &prefix = "", size_t limit = 0)
+.. doxygenfunction:: LIEF::dump(const std::vector<uint8_t> &data, std::string_view title = "", std::string_view prefix = "", size_t limit = 0)
 ```
 
 ```{eval-rst}
-.. doxygenfunction:: LIEF::dump(const uint8_t *buffer, size_t size, const std::string &title = "", const std::string &prefix = "", size_t limit = 0)
+.. doxygenfunction:: LIEF::dump(const uint8_t *buffer, size_t size, std::string_view title = "", std::string_view prefix = "", size_t limit = 0)
 ```
 
 ```{eval-rst}
-.. doxygenfunction:: LIEF::dump(span<const uint8_t> data, const std::string &title = "", const std::string &prefix = "", size_t limit = 0)
+.. doxygenfunction:: LIEF::dump(span<const uint8_t> data, std::string_view title = "", std::string_view prefix = "", size_t limit = 0)
 ```
 
 - {fa}`brands fa-rust` {rust:func}`lief::dump`
 - {fa}`brands fa-rust` {rust:func}`lief::dump_with_limit`
+
+In C++, UTF-16 strings (e.g. PE resource names) can be converted to UTF-8 with:
+
+```{eval-rst}
+.. doxygenfunction:: LIEF::u16tou8(const char16_t *buffer, size_t size, bool remove_null_char = false)
+```
+
+```{eval-rst}
+.. doxygenfunction:: LIEF::u16tou8(const std::u16string &string, bool remove_null_char = false)
+```
 
 {{ cross_api }}

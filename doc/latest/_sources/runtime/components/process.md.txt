@@ -1,3 +1,7 @@
+---
+description: Inspect the current process and thread IDs, page size, environment variables, and platform-specific loader information with LIEF.
+---
+
 (runtime_process)=
 
 # {fa}`solid fa-gears` Process
@@ -6,15 +10,17 @@ The {sub-ref}`lief-runtime-process` interface exposes an API to query informatio
 about the current process. It provides cross-platform API and is extended
 on each platform with additional OS-specific helpers.
 
+## Query the current process
+
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_linux.py", "process") }}
+{{ literalinclude("../../../../api/python/examples/runtime_linux.py", "process") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_linux.cpp", "process") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_linux.rs", "process") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_linux.rs", "process") }}
 :::
 ::::
 
@@ -27,13 +33,13 @@ C Library loaded in the current process:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_linux.py", "process-linux") }}
+{{ literalinclude("../../../../api/python/examples/runtime_linux.py", "process-linux") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_linux.cpp", "process-linux") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_linux.rs", "process-linux") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_linux.rs", "process-linux") }}
 :::
 ::::
 
@@ -47,13 +53,13 @@ process is being debugged, the loader data, the process parameters, ...):
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_windows.py", "process-windows") }}
+{{ literalinclude("../../../../api/python/examples/runtime_windows.py", "process-windows") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_windows.cpp", "process-windows") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_windows.rs", "process-windows") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_windows.rs", "process-windows") }}
 :::
 ::::
 
@@ -64,17 +70,17 @@ the base name and image base, each entry exposes the extended
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_windows.py", "peb-module-details") }}
+{{ literalinclude("../../../../api/python/examples/runtime_windows.py", "peb-module-details") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_windows.cpp", "peb-module-details") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_windows.rs", "peb-module-details") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_windows.rs", "peb-module-details") }}
 :::
 ::::
 
-## {fa}`brands fa-apple` OSX
+## {fa}`brands fa-apple` macOS
 
 On macOS, {sub-ref}`lief-runtime-osx-process` extends the generic interface with
 platform-specific helpers. For instance, {sub-ref}`lief-runtime-osx-process-dyld_version`
@@ -82,13 +88,13 @@ returns the version of `dyld` (the dynamic loader) in the current process:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_osx.py", "process-osx") }}
+{{ literalinclude("../../../../api/python/examples/runtime_osx.py", "process-osx") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_osx.cpp", "process-osx") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_osx.rs", "process-osx") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_osx.rs", "process-osx") }}
 :::
 ::::
 
@@ -99,13 +105,13 @@ some examples of the API:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_android.py", "process-android") }}
+{{ literalinclude("../../../../api/python/examples/runtime_android.py", "process-android") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_android.cpp", "process-android") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_android.rs", "process-android") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_android.rs", "process-android") }}
 :::
 ::::
 

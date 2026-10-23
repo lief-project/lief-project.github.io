@@ -19,7 +19,7 @@
 ```
 
 ```{eval-rst}
-.. doxygenfunction:: LIEF::runtime::assemble(uint64_t, const std::string&, assembly::AssemblerConfig&)
+.. doxygenfunction:: LIEF::runtime::assemble(uint64_t, std::string_view, assembly::AssemblerConfig&)
 ```
 
 ```{eval-rst}
@@ -51,15 +51,19 @@ ______________________________________________________________________
 ```
 
 ```{eval-rst}
-.. doxygenfunction:: LIEF::runtime::module_from_name(const std::string &)
+.. doxygenfunction:: LIEF::runtime::module_from_name(std::string_view)
 ```
 
 ```{eval-rst}
-.. doxygenfunction:: LIEF::runtime::module_from_path(const std::string &)
+.. doxygenfunction:: LIEF::runtime::module_from_path(std::string_view)
 ```
 
 ```{eval-rst}
 .. doxygenfunction:: LIEF::runtime::module_from_addr(uintptr_t)
+```
+
+```{eval-rst}
+.. doxygenfunction:: LIEF::runtime::current_module()
 ```
 
 ______________________________________________________________________
@@ -157,7 +161,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## {fa}`brands fa-apple` OSX
+## {fa}`brands fa-apple` macOS
 
 ### {fa}`solid fa-cubes` Module
 

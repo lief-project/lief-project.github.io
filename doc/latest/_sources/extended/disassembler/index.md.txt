@@ -1,3 +1,7 @@
+---
+description: Disassemble executable code with LIEF Extended, inspect architecture-specific instructions and operands, and use debug information or live memory.
+---
+
 (extended-disassembler)=
 
 # {fa}`solid fa-dna` Disassembler
@@ -17,6 +21,8 @@
 LIEF Extended provides a user-friendly API for disassembling code within various
 parts of executable formats for the following architectures:
 x86/x86-64, ARM, AArch64, RISC-V, MIPS, PowerPC, and eBPF.
+
+## Disassemble a binary
 
 You can begin disassembling code within a binary using the {sub-ref}`lief-disassemble`
 function, which is exposed in the abstraction layer:
@@ -40,6 +46,8 @@ instruction at each address.
 Consequently, when calling `elf.disassemble_address(0x400)`, no disassembly
 occurs until the iterator is advanced.
 
+## Inspect instructions and operands
+
 Instructions are represented by the {sub-ref}`lief-asm-instruction` object,
 which is extended by architecture-specific objects:
 
@@ -51,18 +59,17 @@ which is extended by architecture-specific objects:
 - {sub-ref}`lief-asm-riscv-instruction`
 - {sub-ref}`lief-asm-ebpf-instruction`
 
-In Python, you can check the effective type of
-a {class}`lief.assembly.Instruction` with `isinstance(...)`:
+In Python, use pattern matching or `isinstance(...)` to select an
+architecture-specific {sub-ref}`lief-asm-instruction`:
 
 {{ literalinclude("../../../code/python/disassembler.py", "downcast") }}
 
-In C++, downcasting is performed using the function:
-{cpp:func}`LIEF::assembly::Instruction::as`:
+In C++, use {sub-ref}`lief-asm-instruction-as` to access the architecture-specific
+instruction:
 
 {{ literalinclude("../../../code/cpp/disassembler.cpp", "downcast") }}
 
-In Rust, instructions are represented by the enum {rust:enum}`lief::assembly::Instructions`.
-Thus, you can write:
+In Rust, match the architecture variant of {sub-ref}`lief-asm-instruction`:
 
 {{ literalinclude("../../../code/rust/src/disassembler.rs", "downcast") }}
 
@@ -82,8 +89,10 @@ over an instruction's operands:
 :::
 ::::
 
-You can check the documentation of these architectures for more details about
-the exposed API.
+See the architecture-specific {doc}`Python <python/index>` and
+{doc}`C++ <cpp/index>` references for operand types and instruction properties.
+To write a patch using assembly text, continue with the
+{ref}`assembler guide <extended-assembler>`.
 
 ## x86/x86-64
 
@@ -190,6 +199,8 @@ it **does not expose a standalone API** for disassembling arbitrary code.
 The disassembler is bound to the object from which the API is
 exposed ({sub-ref}`lief-abstract-binary`, {sub-ref}`lief-dwarf-function`,
 {sub-ref}`lief-dsc-dyldsharedcache-disassemble`, etc.).
+
+## API
 
 {fa}`brands fa-python` {doc}`Python API <python/index>`
 

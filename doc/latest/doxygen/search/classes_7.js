@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['hash_0',['Hash',['../classLIEF_1_1ART_1_1Hash.html',1,'LIEF::ART::Hash'],['../classLIEF_1_1DEX_1_1Hash.html',1,'LIEF::DEX::Hash'],['../classLIEF_1_1ELF_1_1Hash.html',1,'LIEF::ELF::Hash'],['../classLIEF_1_1Hash.html',1,'LIEF::Hash'],['../classLIEF_1_1MachO_1_1Hash.html',1,'LIEF::MachO::Hash'],['../classLIEF_1_1OAT_1_1Hash.html',1,'LIEF::OAT::Hash'],['../classLIEF_1_1PE_1_1Hash.html',1,'LIEF::PE::Hash'],['../classLIEF_1_1VDEX_1_1Hash.html',1,'LIEF::VDEX::Hash']]],
-  ['header_1',['Header',['../classLIEF_1_1ART_1_1Header.html',1,'LIEF::ART::Header'],['../classLIEF_1_1COFF_1_1Header.html',1,'LIEF::COFF::Header'],['../classLIEF_1_1DEX_1_1Header.html',1,'LIEF::DEX::Header'],['../classLIEF_1_1ELF_1_1Header.html',1,'LIEF::ELF::Header'],['../classLIEF_1_1Header.html',1,'LIEF::Header'],['../classLIEF_1_1MachO_1_1Header.html',1,'LIEF::MachO::Header'],['../classLIEF_1_1OAT_1_1Header.html',1,'LIEF::OAT::Header'],['../classLIEF_1_1PE_1_1Header.html',1,'LIEF::PE::Header'],['../classLIEF_1_1VDEX_1_1Header.html',1,'LIEF::VDEX::Header']]],
-  ['host_2',['Host',['../classLIEF_1_1runtime_1_1android_1_1Host.html',1,'LIEF::runtime::android::Host'],['../classLIEF_1_1runtime_1_1Host.html',1,'LIEF::runtime::Host'],['../classLIEF_1_1runtime_1_1Linux_1_1Host.html',1,'LIEF::runtime::Linux::Host'],['../classLIEF_1_1runtime_1_1osx_1_1Host.html',1,'LIEF::runtime::osx::Host'],['../classLIEF_1_1runtime_1_1windows_1_1Host.html',1,'LIEF::runtime::windows::Host']]]
+  ['generic_0',['Generic',['../classLIEF_1_1ELF_1_1Generic.html',1,'LIEF::ELF']]],
+  ['genericcontent_1',['GenericContent',['../classLIEF_1_1PE_1_1GenericContent.html',1,'LIEF::PE']]],
+  ['generictype_2',['GenericType',['../classLIEF_1_1PE_1_1GenericType.html',1,'LIEF::PE']]],
+  ['gnuhash_3',['GnuHash',['../classLIEF_1_1ELF_1_1GnuHash.html',1,'LIEF::ELF']]],
+  ['guard_5ffunction_5ft_4',['guard_function_t',['../structLIEF_1_1PE_1_1LoadConfiguration_1_1guard__function__t.html',1,'LIEF::PE::LoadConfiguration']]]
 ];

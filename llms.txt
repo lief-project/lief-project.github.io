@@ -1,0 +1,80 @@
+# LIEF
+
+> LIEF is a cross-platform C++, Python, and Rust library to parse, analyze, modify, assemble, disassemble, and rewrite ELF, PE, Mach-O, and other executable formats.
+
+LIEF (Library to Instrument Executable Formats) is an Apache-2.0-licensed, cross-platform C++, Python, Rust, and C library for parsing, inspecting, modifying, and rebuilding executable formats. It supports ELF, PE, Mach-O, COFF, Android formats, DWARF, PDB, assembly, disassembly, and runtime binary inspection.
+
+Canonical site: https://lief.re/
+Complete site content in one Markdown file: https://lief.re/llms-full.txt
+
+The site pages and technical articles listed below have Markdown twins at the same paths ending in `index.md`, advertised in the HTML head with `<link rel="alternate" type="text/markdown">`. Use the API documentation as the source of truth for interfaces in the matching LIEF version. Use the technical blog for release history, implementation details, and worked binary-engineering examples.
+
+## Site pages
+
+- [LIEF: Library to Instrument Executable Formats](https://lief.re/index.md): LIEF is a cross-platform C++, Python, and Rust library to parse, analyze, modify, assemble, disassemble, and rewrite ELF, PE, Mach-O, and other executable formats.
+- [Download](https://lief.re/download/index.md): Download LIEF SDKs and packages for Linux, Windows, macOS, Android, and iOS, or install the Python and Rust bindings.
+- [About](https://lief.re/about/index.md): Learn how LIEF became a cross-platform executable-format toolkit, meet its maintainers, and explore the open-source project's milestones.
+- [Technical blog index](https://lief.re/blog/index.md): Release notes, executable-format research, reverse-engineering tutorials, and engineering updates from the LIEF maintainers.
+
+## Machine-readable resources
+
+- [Full site content](https://lief.re/llms-full.txt): Every site page and technical article as one Markdown document.
+- [XML sitemap](https://lief.re/sitemap.xml): Canonical crawlable website URLs and modification dates.
+- [JSON content index](https://lief.re/index.json): Document-level full text and metadata for site pages and technical articles.
+- [Heading-level retrieval corpus](https://lief.re/index.chunks.json): Versioned, anchored Markdown and plain-text chunks with stable IDs, neighbour links, and SHA-256 content and corpus hashes.
+- [Technical blog RSS feed](https://lief.re/blog/index.xml): Full-text feed of the most recent LIEF releases and engineering articles.
+
+## API documentation
+
+The technical documentation publishes its own Markdown pages and indexes. Start with its discovery map and fetch the pages relevant to the task. In the latest documentation, replace `.html` with `.md` to read resolved Markdown, including code examples, every language tab, API signatures, and absolute citation links. The `latest` channel tracks development; `stable` tracks the latest release. Match API usage to the installed LIEF version, platform, architecture, and enabled features.
+
+- [Documentation for AI assistants](https://lief.re/doc/latest/ai.md): How to read Markdown pages, choose an index, match documentation versions, and retrieve or update chunks.
+- [Documentation discovery map](https://lief.re/doc/latest/llms.txt): Guides and API references with descriptions and direct Markdown links; start here for documentation tasks.
+- [Documentation JSON content index](https://lief.re/doc/latest/index.json): Search document titles, descriptions, and full text, with documentation versions and canonical and Markdown URLs.
+- [Documentation retrieval corpus](https://lief.re/doc/latest/index.chunks.json): Retrieve sections and API symbols with heading context, canonical citation URLs, stable IDs, neighbour links, and content hashes.
+- [Complete documentation corpus](https://lief.re/doc/latest/llms-full.txt): All exported Sphinx pages, including API references, for local indexing; large references may exceed an assistant's context window.
+- [Development API documentation](https://lief.re/doc/latest/index.md): C++, Python, Rust, C, and LIEF Extended documentation for the development version; API guides also link to the separate Rust and Doxygen references.
+- [Stable API documentation](https://lief.re/doc/stable/): Documentation for the current stable release.
+- [Changelog](https://lief.re/doc/latest/changelog.md): Versioned feature, behavior, and compatibility changes.
+- [Documentation sitemap](https://lief.re/doc/latest/sitemap.xml): Index of every page in the latest API documentation.
+- [Documentation object inventory](https://lief.re/doc/latest/objects.inv): Sphinx inventory mapping API symbols to documentation URLs; readable with sphobjinv or sphinx.ext.intersphinx.
+
+## Project resources
+
+- [Downloads](https://lief.re/download/): SDK archives, Python wheels, Rust packages, and nightly builds.
+- [Source repository](https://github.com/lief-project/LIEF): LIEF source code, issues, releases, and contribution history.
+- [Python package](https://pypi.org/project/lief/): Published Python distributions.
+- [Rust crate](https://crates.io/crates/lief): Published Rust bindings.
+- [LIEF Extended](https://extended.lief.re/): Advanced assembly, disassembly, DWARF, and PDB capabilities.
+
+## Recent articles
+
+Release notes and engineering articles, newest first.
+
+- [LIEF v1.0.0](https://lief.re/blog/2026-07-13-lief-1-0-0/index.md): 2026-07-13 — LIEF 1.0.0: a new cross-platform Runtime API, faster Rust bindings, stable-ABI and free-threaded Python wheels
+- [LIEF v0.17.0](https://lief.re/blog/2025-09-14-lief-0-17-0/index.md): 2025-09-14 — LIEF 0.17.0: Binary Ninja and Ghidra plugins, contextual assembly patching, a refactored PE module with TLS, import, and export editing, lief-patchelf, and COFF support.
+- [LIEF patchelf](https://lief.re/blog/2025-07-13-patchelf/index.md): 2025-07-13 — lief-patchelf: a LIEF-based reimplementation of NixOS patchelf to change the interpreter, add dependencies, and edit RPATH/RUNPATH, with prebuilt binaries.
+- [DWARF as a Shared Reverse Engineering Format](https://lief.re/blog/2025-05-27-dwarf-editor/index.md): 2025-05-27 — Create DWARF debug information with the LIEF Extended DWARF editor and share reverse-engineered types and functions between Binary Ninja and Ghidra plugins.
+- [PE Support Enhancements](https://lief.re/blog/2025-02-16-arm64ec-pe-support/index.md): 2025-02-16 — PE improvements in LIEF: ARM64EC and WoW64 CHPE metadata parsing, a rebuilt PE builder for imports, resources, and TLS, and LIEF-backed ARM64EC support in Binary Ninja.
+- [LIEF v0.16.0](https://lief.re/blog/2024-12-10-lief-0-16-0/index.md): 2024-12-10 — LIEF 0.16.0: rebuilt documentation, an assembler/disassembler in LIEF Extended, dyld shared cache extraction, first mutable Rust APIs, and nanobind 2.4 bindings.
+- [LIEF v0.15.0](https://lief.re/blog/2024-07-21-lief-0.15-0/index.md): 2024-07-21 — LIEF 0.15.0 introduces official Rust bindings and LIEF Extended, with Objective-C, DWARF, PDB, parser performance, and Python wheel updates.
+- [LIEF Rust bindings updates](https://lief.re/blog/2024-06-16-rust-update/index.md): 2024-06-16 — LIEF Rust bindings ahead of 0.15.0: new documentation, more supported architectures, Rust tier 1 and tier 2 coverage, and use cases such as Authenticode checks.
+
+## Optional
+
+Older release notes and articles kept for history; skip them unless a question concerns a specific past version or technique.
+
+- [Rust bindings for LIEF](https://lief.re/blog/2024-04-28-rust/index.md): 2024-04-28 — An introduction to LIEF's Rust bindings, their idiomatic API design, memory-safety model, cross-compilation support, and engineering tradeoffs.
+- [LIEF v0.14.0](https://lief.re/blog/2024-01-20-lief-0-14-0/index.md): 2024-01-21 — LIEF 0.14.0 release highlights: faster Python bindings, updates to ELF and PE, and ongoing work on Rust, DWARF, and PDB support.
+- [LIEF v0.13.0](https://lief.re/blog/2023-04-09-lief-0-13-0/index.md): 2023-04-09 — LIEF 0.13.0: in-memory Mach-O parsing, framed ELF sections, an exception-free and RTTI-free core, PEP 621 Python packaging, and generated .pyi type stubs.
+- [Mach-O Support Enhancements](https://lief.re/blog/2022-05-08-macho/index.md): 2022-05-08 — Mach-O rewriting in LIEF: __LINKEDIT fixes, chained fixups and exports trie support, converting a binary into a dylib, adding exported symbols, and code injection.
+- [LIEF v0.12.0](https://lief.re/blog/2022-03-27-lief-v0-12-0/index.md): 2022-03-27 — LIEF 0.12.0: PE rich header and checksum recomputation, span-based section content with memoryview in Python, and the start of the exception-free refactoring.
+- [LIEF RTTI & Exceptions](https://lief.re/blog/2022-02-13-lief-rtti-exceptions/index.md): 2022-02-13 — Why LIEF is removing C++ exceptions and RTTI: error-handling costs, the has_/get_ pattern, and the move to result-based APIs and LLVM-style RTTI.
+- [New ELF Builder](https://lief.re/blog/2022-01-23-new-elf-builder/index.md): 2022-01-23 — After spending months on refactoring the ELF builder, here are the improvements.
+- [Profiling C++ code with Frida (2nd part)](https://lief.re/blog/2021-04-08-profiling-cpp-code-with-frida-part2/index.md): 2021-04-08 — A practical follow-up on profiling C++ with Frida, including static-library hooks and the limitations introduced by different C++ ABIs.
+- [Profiling C++ code with Frida](https://lief.re/blog/2021-03-10-profiling-cpp-code-with-frida/index.md): 2021-03-10 — Profile C/C++ code with Frida: hook functions through the frida-gum C API and use LIEF to enumerate the functions to instrument, without recompiling the target.
+- [LIEF - Release 0.11.1](https://lief.re/blog/2021-02-22-lief-0-11-1/index.md): 2021-02-22 — LIEF 0.11.1 fixes PE Authentihash computation: section name handling, data directory coverage, and the return value of verify_signature().
+- [LIEF - Release 0.11.0](https://lief.re/blog/2021-01-19-lief-0-11-0/index.md): 2021-01-19 — LIEF 0.11.0: refactored PE Authenticode parsing with signature verification, pefile-compatible imphash, a faster ELF builder, and Ninja-based Windows CI.
+- [LIEF - Release 0.9.0](https://lief.re/blog/2018-06-11-lief-0-9-0/index.md): 2018-06-11 — Major changes in LIEF 0.9, plus work-in-progress features planned for future releases.
+- [Have fun with LIEF and Executable Formats!](https://lief.re/blog/2017-10-30-lief-0-8-3/index.md): 2017-10-30 — LIEF 0.8.3: libFuzzer integration, Dockerlief, ELF symbol renaming and hiding, DT_RUNPATH injection, PE load configuration, and Mach-O dyld info parsing.
+- [LIEF - Library to Instrument Executable Formats](https://lief.re/blog/2017-04-18-lief/index.md): 2017-04-18 — How LIEF was open-sourced to provide a cross-platform API for parsing, inspecting, and modifying ELF, PE, and Mach-O executable formats.

@@ -4,6 +4,7 @@ var searchData=
   ['variant_5findex_1',['variant_index',['../structLIEF_1_1MachO_1_1details_1_1function__variant__fixup__t.html#a545ad8d1f5fb26b4a7213911672b8a65',1,'LIEF::MachO::details::function_variant_fixup_t']]],
   ['vars_2',['vars',['../structLIEF_1_1runtime_1_1Process_1_1EnvVars.html#a304569239310aef641e1d599879236c3',1,'LIEF::runtime::Process::EnvVars']]],
   ['version_3',['version',['../classLIEF_1_1dwarf_1_1CompilationUnit_1_1Language.html#aabfee1669221d0a8fa55ed61c6455321',1,'LIEF::dwarf::CompilationUnit::Language::version'],['../structLIEF_1_1PE_1_1RuntimeFunctionX64_1_1unwind__info__t.html#acddf1efbb086572c9179ac047a601505',1,'LIEF::PE::RuntimeFunctionX64::unwind_info_t::version'],['../structLIEF_1_1PE_1_1FunctionOverride_1_1image__bdd__info__t.html#a60a2878d341252408e9081ea90a24197',1,'LIEF::PE::FunctionOverride::image_bdd_info_t::version']]],
-  ['version_5foffset_4',['version_offset',['../classLIEF_1_1ELF_1_1NoteAbi.html#a06d183c6bc448ab2fab9ffedbd212757',1,'LIEF::ELF::NoteAbi']]],
-  ['version_5fsize_5',['version_size',['../classLIEF_1_1ELF_1_1NoteAbi.html#a06bfea421ee0a98c084288fa7f5a6430',1,'LIEF::ELF::NoteAbi']]]
+  ['version_5fmask_4',['VERSION_MASK',['../classLIEF_1_1ELF_1_1SymbolVersion.html#a50b11b400ec1bc8617ef86f9bceb9985',1,'LIEF::ELF::SymbolVersion']]],
+  ['version_5foffset_5',['version_offset',['../classLIEF_1_1ELF_1_1NoteAbi.html#a06d183c6bc448ab2fab9ffedbd212757',1,'LIEF::ELF::NoteAbi']]],
+  ['version_5fsize_6',['version_size',['../classLIEF_1_1ELF_1_1NoteAbi.html#a06bfea421ee0a98c084288fa7f5a6430',1,'LIEF::ELF::NoteAbi']]]
 ];

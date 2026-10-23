@@ -162,7 +162,9 @@ var searchData=
   ['items_5ft_159',['items_t',['../classLIEF_1_1DEX_1_1MapList.html#a8559c6e9fc02dde25afe77baf89968eb',1,'LIEF::DEX::MapList::items_t'],['../classLIEF_1_1PE_1_1ResourceDialogExtended.html#a04d2e468b60f9ff06a918520c914015e',1,'LIEF::PE::ResourceDialogExtended::items_t'],['../classLIEF_1_1PE_1_1ResourceDialogRegular.html#a1dfabebac72aa375534be47d75a8930a',1,'LIEF::PE::ResourceDialogRegular::items_t']]],
   ['iterator_160',['iterator',['../classLIEF_1_1ELF_1_1CoreFile.html#a3baa192396c817f29d50c1703898f558',1,'LIEF::ELF::CoreFile']]],
   ['iterator_5fcategory_161',['iterator_category',['../classLIEF_1_1ref__iterator.html#a51f4372f6e68c70e042dea3b92164579',1,'LIEF::ref_iterator::iterator_category'],['../classLIEF_1_1filter__iterator.html#a290db8427bcf7b6f92887f7c1afd3d0f',1,'LIEF::filter_iterator::iterator_category'],['../classLIEF_1_1iterator__facade__base.html#ac6a65956263109e45ca41a510fe0581c',1,'LIEF::iterator_facade_base::iterator_category']]],
-  ['iteratordecayty_162',['IteratorDecayTy',['../classLIEF_1_1iterator__range.html#a668c54a551aabcbb74ade980c2ec5fd2',1,'LIEF::iterator_range']]],
-  ['iteratorty_163',['IteratorTy',['../classLIEF_1_1iterator__range.html#aab3e676859987e85fcec3d86bf80458d',1,'LIEF::iterator_range']]],
-  ['ivars_5ft_164',['ivars_t',['../classLIEF_1_1objc_1_1Class.html#ac76142ef7cf8e8a4a7207c4dad4a2985',1,'LIEF::objc::Class']]]
+  ['iterator_5fconcept_162',['iterator_concept',['../classLIEF_1_1ref__iterator.html#ae95e7cbee9e201b6d1e93ca05c2b1aab',1,'LIEF::ref_iterator::iterator_concept'],['../classLIEF_1_1filter__iterator.html#ad3ddef26aaf9759527e21555d95e5832',1,'LIEF::filter_iterator::iterator_concept']]],
+  ['iterator_5fconcept_5ft_163',['iterator_concept_t',['../namespaceLIEF_1_1details.html#aeffd72199ddb888dc93624dd332c2093',1,'LIEF::details']]],
+  ['iteratordecayty_164',['IteratorDecayTy',['../classLIEF_1_1iterator__range.html#a668c54a551aabcbb74ade980c2ec5fd2',1,'LIEF::iterator_range']]],
+  ['iteratorty_165',['IteratorTy',['../classLIEF_1_1iterator__range.html#aab3e676859987e85fcec3d86bf80458d',1,'LIEF::iterator_range']]],
+  ['ivars_5ft_166',['ivars_t',['../classLIEF_1_1objc_1_1Class.html#ac76142ef7cf8e8a4a7207c4dad4a2985',1,'LIEF::objc::Class']]]
 ];
