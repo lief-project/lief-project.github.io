@@ -1,0 +1,169 @@
+# LIEF documentation
+
+> LIEF parses, inspects, modifies, and writes executable formats in C++, Python, and Rust.
+
+Documentation version: 2.0.0. Channel: latest. Canonical documentation: https://lief.re/doc/latest/
+
+Match these references to the installed LIEF version. The latest channel follows development; the stable channel documents the latest release. Check the installation and feature guides for platform, architecture, and build requirements.
+
+LIEF Extended adds debug information, Objective-C metadata, dyld shared cache, assembly, and disassembly features. Basic runtime support is an independent build option; runtime memory-layout enumeration, assembly, and disassembly require Extended.
+
+Each page has a resolved Markdown copy with absolute citation links, expanded code includes, all language tabs, and API signatures. The indexes cover this Sphinx documentation; separate Rustdoc and Doxygen sites are linked from the API guides. Use individual pages or chunks for targeted retrieval; llms-full.txt bundles every page and can be large.
+
+## Machine-readable resources
+
+- [Document index](https://lief.re/doc/latest/index.json): Titles, descriptions, versions, Markdown URLs, and full text.
+- [Retrieval chunks](https://lief.re/doc/latest/index.chunks.json): Heading and API symbol chunks with citation URLs, stable IDs, hashes, and neighbours.
+- [Complete Markdown corpus](https://lief.re/doc/latest/llms-full.txt): Every exported document, including API references.
+- [Sitemap](https://lief.re/doc/latest/sitemap.xml): Canonical HTML pages in this documentation build.
+- [Sphinx symbol inventory](https://lief.re/doc/latest/objects.inv): Resolved cross-reference targets for documented APIs.
+
+## Start here
+
+- [LIEF Documentation - ELF, PE, Mach-O and Binary Analysis](https://lief.re/doc/latest/index.md): LIEF documentation for parsing, inspecting, modifying, and writing ELF, PE, Mach-O, COFF, Android, and other executable formats in C++, Python, and Rust.
+- [Introduction - LIEF Documentation](https://lief.re/doc/latest/intro.md): Introduction. The purpose of this project is to provide a cross-platform library to parse, modify, and abstract the ELF, PE, and Mach-O formats.
+- [Installation and Integration - LIEF Documentation](https://lief.re/doc/latest/installation.md): Installation and Integration. For each platform supported by LIEF, the SDK packages contain:
+- [Compilation - LIEF Documentation](https://lief.re/doc/latest/compilation.md): Compilation. To compile LIEF, you need at least the following:
+- [Documentation for AI - LIEF Documentation](https://lief.re/doc/latest/ai.md): Read LIEF documentation as resolved Markdown or retrieve guides and API symbols from versioned JSON indexes with canonical links and content hashes.
+
+## LIEF Extended
+
+- [What is LIEF Extended? - LIEF Documentation](https://lief.re/doc/latest/extended/intro.md): LIEF Extended features, install Python wheels or C++ and Rust SDKs, verify your build, and find guides for debug information, assembly, Apple metadata, and…
+- [Assembler - LIEF Documentation](https://lief.re/doc/latest/extended/assembler/index.md): Patch executable code with LIEF Extended, choose virtual addresses and patch sizes, and resolve symbols through an assembler configuration.
+- [Assembler C++ API - LIEF Documentation](https://lief.re/doc/latest/extended/assembler/cpp.md): Assembler C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Assembler Python API - LIEF Documentation](https://lief.re/doc/latest/extended/assembler/python.md): Assembler Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Assembler Rust API - LIEF Documentation](https://lief.re/doc/latest/extended/assembler/rust.md): Assembler Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Debug Information - LIEF Documentation](https://lief.re/doc/latest/extended/debug_info/index.md): Load DWARF and PDB debug information, attach matching debug files to binaries, and navigate the shared Python, C++, and Rust APIs.
+- [Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/index.md): Disassemble executable code with LIEF Extended, inspect architecture-specific instructions and operands, and use debug information or live memory.
+- [Disassembler Rust API - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/rust.md): Disassembler Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Disassembler C++ API - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/index.md): Disassembler C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [AArch64 - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/aarch64.md): AArch64 C++ Disassembler. See LIEF::assembly::aarch64::OPCODE in include/asm/aarch64/opcodes.hpp
+- [ARM - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/arm.md): ARM C++ Disassembler. See LIEF::assembly::arm::OPCODE in include/asm/arm/opcodes.hpp
+- [eBPF - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/ebpf.md): eBPF C++ Disassembler. See LIEF::assembly::ebpf::OPCODE in include/asm/ebpf/opcodes.hpp
+- [Mips - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/mips.md): Mips C++ Disassembler. See LIEF::assembly::mips::OPCODE in include/asm/mips/opcodes.hpp
+- [PowerPC - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/powerpc.md): PowerPC C++ Disassembler. See LIEF::assembly::powerpc::OPCODE in include/asm/powerpc/opcodes.hpp
+- [RISC-V - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/riscv.md): RISC-V C++ Disassembler. See LIEF::assembly::riscv::OPCODE in include/asm/riscv/opcodes.hpp
+- [X86/x86-64 - C++ Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/cpp/arch/x86.md): X86/x86-64 C++ Disassembler. See LIEF::assembly::x86::OPCODE in include/asm/x86/opcodes.hpp
+- [Disassembler Python API - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/index.md): Disassembler Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [AArch64 - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/aarch64.md): AArch64 Python Disassembler. See: lief.assembly.aarch64.OPCODE
+- [ARM - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/arm.md): ARM Python Disassembler. See: lief.assembly.arm.OPCODE
+- [eBPF - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/ebpf.md): eBPF Python Disassembler. See: lief.assembly.ebpf.OPCODE
+- [Mips - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/mips.md): Mips Python Disassembler. See: lief.assembly.mips.OPCODE
+- [PowerPC - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/powerpc.md): PowerPC Python Disassembler. See: lief.assembly.powerpc.OPCODE
+- [RISC-V - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/riscv.md): RISC-V Python Disassembler. See: lief.assembly.riscv.OPCODE
+- [x86/x86-64 - Python Disassembler - LIEF Documentation](https://lief.re/doc/latest/extended/disassembler/python/arch/x86.md): x86/x86-64 Python Disassembler. See: lief.assembly.x86.OPCODE
+- [Dyld Shared Cache - LIEF Documentation](https://lief.re/doc/latest/extended/dsc/index.md): Load Apple Dyld shared caches, inspect and extract libraries as Mach-O files, and configure extraction and caching with LIEF Extended.
+- [Dyld Shared Cache C++ API - LIEF Documentation](https://lief.re/doc/latest/extended/dsc/cpp.md): Dyld Shared Cache C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Dyld Shared Cache Python API - LIEF Documentation](https://lief.re/doc/latest/extended/dsc/python.md): Dyld Shared Cache Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Dyld Shared Cache Rust API - LIEF Documentation](https://lief.re/doc/latest/extended/dsc/rust.md): Dyld Shared Cache Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [DWARF - LIEF Documentation](https://lief.re/doc/latest/extended/dwarf/index.md): Read DWARF functions, types, and variables, attach external debug files, generate declarations, and create new DWARF files with LIEF Extended.
+- [DWARF C++ API - LIEF Documentation](https://lief.re/doc/latest/extended/dwarf/cpp.md): DWARF C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [DWARF Python API - LIEF Documentation](https://lief.re/doc/latest/extended/dwarf/python.md): DWARF Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [DWARF Rust API - LIEF Documentation](https://lief.re/doc/latest/extended/dwarf/rust.md): DWARF Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Objective-C - LIEF Documentation](https://lief.re/doc/latest/extended/objc/index.md): Inspect Objective-C classes, methods, properties, and protocols in Mach-O files and generate header-like declarations with LIEF Extended.
+- [Objective-C C++ API - LIEF Documentation](https://lief.re/doc/latest/extended/objc/cpp.md): Objective-C C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Objective-C Python API - LIEF Documentation](https://lief.re/doc/latest/extended/objc/python.md): Objective-C Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Objective-C Rust API - LIEF Documentation](https://lief.re/doc/latest/extended/objc/rust.md): Objective-C Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PDB - LIEF Documentation](https://lief.re/doc/latest/extended/pdb/index.md): Locate and load PDB debug information, associate it with a PE binary, inspect symbols and types, and generate C++ declarations with LIEF Extended.
+- [PDB C++ API - LIEF Documentation](https://lief.re/doc/latest/extended/pdb/cpp.md): PDB C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PDB Python API - LIEF Documentation](https://lief.re/doc/latest/extended/pdb/python.md): PDB Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PDB Rust API - LIEF Documentation](https://lief.re/doc/latest/extended/pdb/rust.md): PDB Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+
+## Runtime
+
+- [Runtime - LIEF Documentation](https://lief.re/doc/latest/runtime/intro.md): Enable LIEF's runtime API and inspect the current process, loaded modules, host information, and memory in Python, C++, and Rust.
+- [Runtime C++ API - LIEF Documentation](https://lief.re/doc/latest/runtime/cpp.md): Runtime C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Runtime Python API - LIEF Documentation](https://lief.re/doc/latest/runtime/python.md): Runtime Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Runtime Rust API - LIEF Documentation](https://lief.re/doc/latest/runtime/rust.md): Runtime Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Host - Runtime - LIEF Documentation](https://lief.re/doc/latest/runtime/components/host.md): Query the hostname, user directories, and platform-specific host information with the LIEF runtime API.
+- [Memory - Runtime - LIEF Documentation](https://lief.re/doc/latest/runtime/components/memory.md): Allocate, read, write, and release process memory with LIEF, then explore platform-specific assembly and disassembly examples.
+- [Memory Layout - Runtime - LIEF Documentation](https://lief.re/doc/latest/runtime/components/memory_layout.md): Inspect mapped memory regions with LIEF Extended, calculate virtual address-space usage, and locate mappings by address or name.
+- [Modules - Runtime - LIEF Documentation](https://lief.re/doc/latest/runtime/components/modules.md): Enumerate loaded modules, resolve symbols, parse files and in-memory images, and interpret live addresses with the LIEF runtime API.
+- [Process - Runtime - LIEF Documentation](https://lief.re/doc/latest/runtime/components/process.md): Inspect the current process and thread IDs, page size, environment variables, and platform-specific loader information with LIEF.
+
+## Formats and API references
+
+- [Binary Abstraction - LIEF Documentation](https://lief.re/doc/latest/api/binary_abstraction/index.md): Binary Abstraction. ELF, PE, Mach-O binaries share similar characteristics, such as an entry point, imported/exported functions, etc.
+- [Binary Abstraction C++ API - LIEF Documentation](https://lief.re/doc/latest/api/binary_abstraction/cpp.md): Binary Abstraction C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Binary Abstraction Python API - LIEF Documentation](https://lief.re/doc/latest/api/binary_abstraction/python.md): Binary Abstraction Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Binary Abstraction Rust API - LIEF Documentation](https://lief.re/doc/latest/api/binary_abstraction/rust.md): Binary Abstraction Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [C++ - LIEF Documentation](https://lief.re/doc/latest/api/cpp/index.md): C++ reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Error Handling - LIEF Documentation](https://lief.re/doc/latest/api/error_handling/index.md): Error Handling reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Logging - LIEF Documentation](https://lief.re/doc/latest/api/logging/index.md): This section details the API for interacting with LIEF’s logging engine.
+- [Rust - LIEF Documentation](https://lief.re/doc/latest/api/rust/index.md): Rust reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Utilities - LIEF Documentation](https://lief.re/doc/latest/api/utilities/index.md): Utilities. LIEF exposes a demangling API for the following formats:
+- [Android - LIEF Documentation](https://lief.re/doc/latest/formats/android/index.md): Android reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [ART - Android - LIEF Documentation](https://lief.re/doc/latest/formats/android/art/index.md): ART in Android. LIEF provides basic support for Android’s ART files. For details about this format, please refer to the Android Formats tutorial.
+- [ART C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/android/art/cpp.md): ART C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [ART Python API - LIEF Documentation](https://lief.re/doc/latest/formats/android/art/python.md): ART Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [DEX - Android - LIEF Documentation](https://lief.re/doc/latest/formats/android/dex/index.md): DEX in Android. LIEF enables parsing Android DEX files as detailed in the tutorial: Android Formats.
+- [DEX C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/android/dex/cpp.md): DEX C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [DEX Python API - LIEF Documentation](https://lief.re/doc/latest/formats/android/dex/python.md): DEX Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [OAT - Android - LIEF Documentation](https://lief.re/doc/latest/formats/android/oat/index.md): OAT in Android. Android OAT files are essentially ELF files, and LIEF exposes a specific API for them. You can check out the Android Formats tutorial for more…
+- [OAT C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/android/oat/cpp.md): OAT C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [OAT Python API - LIEF Documentation](https://lief.re/doc/latest/formats/android/oat/python.md): OAT Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [VDEX - Android - LIEF Documentation](https://lief.re/doc/latest/formats/android/vdex/index.md): VDEX in Android. Android VDEX files are partially supported by LIEF, and you can refer to the Android Formats tutorial for details.
+- [VDEX C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/android/vdex/cpp.md): VDEX C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [VDEX Python API - LIEF Documentation](https://lief.re/doc/latest/formats/android/vdex/python.md): VDEX Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [COFF - LIEF Documentation](https://lief.re/doc/latest/formats/coff/index.md): COFF object files can be parsed using lief.COFF.parse() or the generic lief.parse() function:
+- [COFF C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/coff/cpp.md): COFF C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [COFF Python API - LIEF Documentation](https://lief.re/doc/latest/formats/coff/python.md): COFF Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [COFF Rust API - LIEF Documentation](https://lief.re/doc/latest/formats/coff/rust.md): COFF Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [ELF - LIEF Documentation](https://lief.re/doc/latest/formats/elf/index.md): ELF binaries can be parsed with LIEF using the lief.ELF.parse() function:
+- [ELF C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/elf/cpp.md): ELF C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [ELF Python API - LIEF Documentation](https://lief.re/doc/latest/formats/elf/python.md): ELF Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [ELF Rust API - LIEF Documentation](https://lief.re/doc/latest/formats/elf/rust.md): ELF Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Mach-O - LIEF Documentation](https://lief.re/doc/latest/formats/macho/index.md): Mach-O binaries can be parsed using the lief.MachO.parse() function.
+- [Mach-O C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/macho/cpp.md): Mach-O C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Mach-O Python API - LIEF Documentation](https://lief.re/doc/latest/formats/macho/python.md): Mach-O Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Mach-O Rust API - LIEF Documentation](https://lief.re/doc/latest/formats/macho/rust.md): Mach-O Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PE - LIEF Documentation](https://lief.re/doc/latest/formats/pe/index.md): PE binaries can be parsed using the lief.PE.parse() function.
+- [PE C++ API - LIEF Documentation](https://lief.re/doc/latest/formats/pe/cpp.md): PE C++ API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PE Python API - LIEF Documentation](https://lief.re/doc/latest/formats/pe/python.md): PE Python API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PE Rust API - LIEF Documentation](https://lief.re/doc/latest/formats/pe/rust.md): PE Rust API reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Debug Modification - PE - LIEF Documentation](https://lief.re/doc/latest/formats/pe/modifications/debug.md): Debug Modification in PE. LIEF can create, modify, or delete PE debug information entries.
+- [Exports Modification - PE - LIEF Documentation](https://lief.re/doc/latest/formats/pe/modifications/exports.md): Exports Modification in PE. LIEF provides extensive support for modifying the PE export table, enabling you to add, remove, or modify export entries, or…
+- [Imports Modification - PE - LIEF Documentation](https://lief.re/doc/latest/formats/pe/modifications/imports.md): Imports Modification in PE. This section describes the different operations supported by LIEF to modify the PE import table. Please note that any operation…
+- [Resources Modification - PE - LIEF Documentation](https://lief.re/doc/latest/formats/pe/modifications/resources.md): Resources Modification in PE. LIEF allows you to modify (or create) PE resources at different levels:
+- [TLS Modification - PE - LIEF Documentation](https://lief.re/doc/latest/formats/pe/modifications/tls.md): TLS Modification in PE. LIEF can be used to modify, create, or remove Thread Local Storage (TLS) information.
+
+## Tutorials
+
+- [01 - Parse and manipulate formats - LIEF Documentation](https://lief.re/doc/latest/tutorials/01_play_with_formats.md): 01 - Parse and manipulate formats. The objective of this tutorial is to provide an overview of LIEF’s API for parsing and manipulating formats.
+- [02 - Create a PE from scratch (Deprecated) - LIEF Documentation](https://lief.re/doc/latest/tutorials/02_pe_from_scratch.md): 02 - Create a PE from scratch (Deprecated). In this tutorial, we introduce the LIEF API for creating a simple PE executable from scratch.
+- [03 - Play with ELF symbols - LIEF Documentation](https://lief.re/doc/latest/tutorials/03_elf_change_symbols.md): 03 - Play with ELF symbols. In this tutorial, we will see how to modify dynamic symbols in both an executable and a library.
+- [04 - ELF Hooking - LIEF Documentation](https://lief.re/doc/latest/tutorials/04_elf_hooking.md): 04 - ELF Hooking. The objective of this tutorial is to hook a library function.
+- [05 - Infecting the PLT/GOT - LIEF Documentation](https://lief.re/doc/latest/tutorials/05_elf_infect_plt_got.md): 05 - Infecting the PLT/GOT. The objective of this tutorial is to hook an imported function in an ELF binary.
+- [06 - PE Hooking (Deprecated) - LIEF Documentation](https://lief.re/doc/latest/tutorials/06_pe_hooking.md): 06 - PE Hooking (Deprecated). The objective of this tutorial is to show how to hook imported functions.
+- [07 - PE Resources - LIEF Documentation](https://lief.re/doc/latest/tutorials/07_pe_resource.md): 07 - PE Resources. This tutorial provides an overview of the resource structure in a PE file and explains how to manipulate it using LIEF.
+- [08 - Transforming an ELF executable into a library - LIEF Documentation](https://lief.re/doc/latest/tutorials/08_elf_bin2lib.md): 08 - Transforming an ELF executable into a library. In this tutorial, we will see how to convert a PIE executable into a library.
+- [09 - How to use Frida on a non-rooted device - LIEF Documentation](https://lief.re/doc/latest/tutorials/09_frida_lief.md): 09 - How to use Frida on a non-rooted device. In this tutorial, we will see how to use the Frida gadget on a non-rooted device.
+- [10 - Android formats - LIEF Documentation](https://lief.re/doc/latest/tutorials/10_android_formats.md): 10 - Android formats. This tutorial introduces Android formats and the API for using them. This includes DEX, OAT, VDEX, and ART.
+- [11 - Mach-O Modification - LIEF Documentation](https://lief.re/doc/latest/tutorials/11_macho_modification.md): 11 - Mach-O Modification. This tutorial covers Mach-O format modification and introduces some internal aspects of the format.
+- [12 - ELF Coredump - LIEF Documentation](https://lief.re/doc/latest/tutorials/12_elf_coredump.md): 12 - ELF Coredump. This tutorial introduces the API for analyzing and manipulating ELF coredumps.
+- [13 - PE Authenticode - LIEF Documentation](https://lief.re/doc/latest/tutorials/13_pe_authenticode.md): 13 - PE Authenticode. This tutorial explains how to process and verify PE Authenticode with LIEF.
+
+## Plugins and tools
+
+- [BinaryNinja - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/index.md): Similar to the Ghidra plugin, LIEF can be used as a BinaryNinja plugin.
+- [ELF Analyzers - BinaryNinja - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/elf/index.md): ELF Analyzers in BinaryNinja reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Android JNI - ELF Analyzers - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/elf/android-jni/index.md): Android JNI in ELF Analyzers. This analyzer improves support for JNI functions in Android native libraries. It works by providing a BinaryNinja type library…
+- [Android Packed Relocations - ELF Analyzers - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/elf/android-packed-relocations/index.md): Android Packed Relocations in ELF Analyzers. This analyzer enhances the type definition of Android-specific relocation data (DT_ANDROID_RELA)
+- [Relative Relocations - ELF Analyzers - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/elf/relative-relocations/index.md): Relative Relocations in ELF Analyzers. This analyzer enhances the type definition of relative relocation data (DT_RELR)
+- [Relocations - ELF Analyzers - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/elf/relocations/index.md): Relocations in ELF Analyzers. This analyzer enhances support for binaries that use recent relocation formats not recognized by BinaryNinja (e.g.…
+- [PE Analyzers - BinaryNinja - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/pe/index.md): PE Analyzers in BinaryNinja reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [Exceptions - PE Analyzers - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/pe/exceptions-analyzer/index.md): Exceptions in PE Analyzers. This analyzer improves the representation and underlying data of PE exceptions metadata, primarily for ARM64 and ARM64EC binaries.
+- [LoadConfiguration - PE Analyzers - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/analyzers/pe/loadconfig-analyzer/index.md): LoadConfiguration in PE Analyzers. This analyzer enhances the representation and underlying data of the PE LoadConfiguration structure within BinaryNinja.
+- [BinaryNinja - DWARF Plugin - LIEF Documentation](https://lief.re/doc/latest/plugins/binaryninja/dwarf/index.md): BinaryNinja - DWARF Plugin. To export DWARF information from a BinaryNinja BinaryView representation, use the menu: Plugins > LIEF > Export as DWARF
+- [Ghidra - LIEF Documentation](https://lief.re/doc/latest/plugins/ghidra/index.md): Similar to the BinaryNinja plugin, LIEF can be used as a Ghidra plugin.
+- [Ghidra - Analyzers - Exceptions - LIEF Documentation](https://lief.re/doc/latest/plugins/ghidra/analyzers/exceptions-analyzer/index.md): Ghidra - Analyzers - Exceptions. This analyzer improves the representation and underlying data of PE exceptions metadata, primarily for ARM64 and ARM64EC…
+- [Ghidra - Analyzers - IMAGE_LOAD_CONFIG_DIRECTORY - LIEF Documentation](https://lief.re/doc/latest/plugins/ghidra/analyzers/loadconfig-analyzer/index.md): Ghidra - Analyzers - IMAGE_LOAD_CONFIG_DIRECTORY. This analyzer enhances the representation and underlying data of the PE LoadConfiguration structure within…
+- [Ghidra - DWARF Plugin - LIEF Documentation](https://lief.re/doc/latest/plugins/ghidra/dwarf/index.md): Ghidra - DWARF Plugin. This functionality exports Ghidra’s program information into a DWARF file. This exported information includes function names, types…
+- [lief-dwarfdump - LIEF Documentation](https://lief.re/doc/latest/tools/lief-dwarfdump/index.md): lief-dwarfdump reconstructs C/C++ declarations from the DWARF debug information of a binary. It is a Rust command-line front end for the declaration API.
+- [lief-patchelf - LIEF Documentation](https://lief.re/doc/latest/tools/lief-patchelf/index.md): lief-patchelf is an implementation of the original patchelf created by NixOS (NixOS/patchelf), based on LIEF.
+
+## Optional
+
+- [Changelog - LIEF Documentation](https://lief.re/doc/latest/changelog.md): Changelog. This release contains several security fixes:
+- [References - LIEF Documentation](https://lief.re/doc/latest/references.md): References reference documentation for LIEF, including APIs and examples for parsing, inspecting, modifying, and writing executable formats.
+- [PE Changelog for LIEF 0.17.0 - LIEF Documentation](https://lief.re/doc/latest/changelog/pe-0-17-0.md): PE Changelog for LIEF 0.17.0. Compared to LIEF v0.16.x, version 0.17.0 includes a significant refactoring of the PE parser and builder. These changes were…

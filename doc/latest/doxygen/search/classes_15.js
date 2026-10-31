@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['value_0',['Value',['../classLIEF_1_1dwarf_1_1editor_1_1EnumType_1_1Value.html',1,'LIEF::dwarf::editor::EnumType']]],
-  ['variable_1',['Variable',['../classLIEF_1_1dwarf_1_1editor_1_1Variable.html',1,'LIEF::dwarf::editor::Variable'],['../classLIEF_1_1dwarf_1_1Variable.html',1,'LIEF::dwarf::Variable']]],
-  ['vcfeature_2',['VCFeature',['../classLIEF_1_1PE_1_1VCFeature.html',1,'LIEF::PE']]],
-  ['vector_5fiostream_3',['vector_iostream',['../classLIEF_1_1vector__iostream.html',1,'LIEF']]],
-  ['vectorstream_4',['VectorStream',['../classLIEF_1_1VectorStream.html',1,'LIEF']]],
-  ['version_5ft_5',['version_t',['../structLIEF_1_1pdb_1_1BuildMetadata_1_1version__t.html',1,'LIEF::pdb::BuildMetadata::version_t'],['../structLIEF_1_1runtime_1_1osx_1_1Host_1_1version__t.html',1,'LIEF::runtime::osx::Host::version_t'],['../structLIEF_1_1runtime_1_1windows_1_1Host_1_1version__t.html',1,'LIEF::runtime::windows::Host::version_t']]],
-  ['versionmin_6',['VersionMin',['../classLIEF_1_1MachO_1_1VersionMin.html',1,'LIEF::MachO']]],
-  ['visitor_7',['Visitor',['../classLIEF_1_1Visitor.html',1,'LIEF']]],
-  ['volatile_8',['Volatile',['../classLIEF_1_1dwarf_1_1types_1_1Volatile.html',1,'LIEF::dwarf::types']]],
-  ['volatilemetadata_9',['VolatileMetadata',['../classLIEF_1_1PE_1_1VolatileMetadata.html',1,'LIEF::PE']]]
+  ['unavailableloc_0',['UnavailableLoc',['../classLIEF_1_1dwarf_1_1UnavailableLoc.html',1,'LIEF::dwarf']]],
+  ['union_1',['Union',['../classLIEF_1_1dwarf_1_1types_1_1Union.html',1,'LIEF::dwarf::types::Union'],['../classLIEF_1_1pdb_1_1types_1_1Union.html',1,'LIEF::pdb::types::Union']]],
+  ['union_5fpointer_5ft_2',['union_pointer_t',['../structLIEF_1_1MachO_1_1ChainedPointerAnalysis_1_1union__pointer__t.html',1,'LIEF::MachO::ChainedPointerAnalysis']]],
+  ['unknowncommand_3',['UnknownCommand',['../classLIEF_1_1MachO_1_1UnknownCommand.html',1,'LIEF::MachO']]],
+  ['unpackedfunction_4',['UnpackedFunction',['../classLIEF_1_1PE_1_1unwind__aarch64_1_1UnpackedFunction.html',1,'LIEF::PE::unwind_aarch64']]],
+  ['unwind_5fcode_5ft_5',['unwind_code_t',['../unionLIEF_1_1PE_1_1details_1_1unwind__code__t.html',1,'LIEF::PE::details']]],
+  ['unwind_5finfo_5ft_6',['unwind_info_t',['../structLIEF_1_1PE_1_1RuntimeFunctionX64_1_1unwind__info__t.html',1,'LIEF::PE::RuntimeFunctionX64']]],
+  ['uuidcommand_7',['UUIDCommand',['../classLIEF_1_1MachO_1_1UUIDCommand.html',1,'LIEF::MachO']]]
 ];
