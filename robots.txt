@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
 
+Disallow: /blog/*.zip$
+Disallow: /blog/*.so$
+Disallow: /blog/*.bin$
+Disallow: /blog/*.patched$
+Disallow: /blog/*.debug$
+Disallow: /blog/*.rec$
+Disallow: /blog/*.back$
+
 Sitemap: https://lief.re/sitemap.xml
 Sitemap: https://lief.re/doc/latest/sitemap.xml

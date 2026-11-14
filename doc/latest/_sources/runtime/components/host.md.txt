@@ -1,11 +1,17 @@
+---
+description: Query the hostname, user directories, and platform-specific host information with the LIEF runtime API.
+---
+
 (runtime_host)=
 
 # {fa}`solid fa-server` Host
 
 The {sub-ref}`lief-runtime-host` interface exposes an API to query information about
 the host on which LIEF is running. It provides a cross-platform API for
-common values like the hostname and standard user directories (home, cache, ...).
-Platform-specific information is provided within their own namespace/module.
+common values like the hostname and user directories for configuration, cache,
+and temporary files.
+Use {ref}`Process <runtime_process>` for process-specific information such as
+the PID and page size.
 
 ## {fa}`solid fa-globe` Cross-platform
 
@@ -14,13 +20,13 @@ information that is available on every supported platform:
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_linux.py", "host") }}
+{{ literalinclude("../../../../api/python/examples/runtime_linux.py", "host") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_linux.cpp", "host") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_linux.rs", "host") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_linux.rs", "host") }}
 :::
 ::::
 
@@ -30,13 +36,13 @@ The {sub-ref}`lief-runtime-linux-host` interface exposes Linux-specific host inf
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_linux.py", "host-linux") }}
+{{ literalinclude("../../../../api/python/examples/runtime_linux.py", "host-linux") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_linux.cpp", "host-linux") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_linux.rs", "host-linux") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_linux.rs", "host-linux") }}
 :::
 ::::
 
@@ -48,17 +54,17 @@ information such as the operating system version
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_windows.py", "host-windows") }}
+{{ literalinclude("../../../../api/python/examples/runtime_windows.py", "host-windows") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_windows.cpp", "host-windows") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_windows.rs", "host-windows") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_windows.rs", "host-windows") }}
 :::
 ::::
 
-## {fa}`brands fa-apple` OSX
+## {fa}`brands fa-apple` macOS
 
 The {sub-ref}`lief-runtime-osx-host` interface exposes macOS-specific host
 information such as whether System Integrity
@@ -66,13 +72,13 @@ Protection is enabled ({sub-ref}`lief-runtime-osx-host-is-sip-enabled`):
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_osx.py", "host-osx") }}
+{{ literalinclude("../../../../api/python/examples/runtime_osx.py", "host-osx") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_osx.cpp", "host-osx") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_osx.rs", "host-osx") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_osx.rs", "host-osx") }}
 :::
 ::::
 
@@ -84,13 +90,13 @@ information such as the device's SDK/API level
 
 ::::{tabs}
 :::{tab} {fa}`brands fa-python` Python
-{{ literalinclude("../../../../examples/python/runtime_android.py", "host-android") }}
+{{ literalinclude("../../../../api/python/examples/runtime_android.py", "host-android") }}
 :::
 :::{tab} {fa}`regular fa-file-code` C++
 {{ literalinclude("../../../../examples/cpp/runtime_android.cpp", "host-android") }}
 :::
 :::{tab} {fa}`brands fa-rust` Rust
-{{ literalinclude("../../../../examples/rust/runtime_android.rs", "host-android") }}
+{{ literalinclude("../../../../api/rust/examples/src/bin/runtime_android.rs", "host-android") }}
 :::
 ::::
 

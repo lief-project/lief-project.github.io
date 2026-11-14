@@ -5,10 +5,11 @@ var searchData=
   ['access_5ftable_5ft_2',['access_table_t',['../classLIEF_1_1PE_1_1VolatileMetadata.html#a6346da67b3f12feef3215cf023856ca9',1,'LIEF::PE::VolatileMetadata']]],
   ['add_5fconst_5ft_3',['add_const_t',['../namespaceLIEF.html#ac6269ebc7e8e9a08ef4f57da2450ed86',1,'LIEF']]],
   ['add_5flvalue_5freference_5ft_4',['add_lvalue_reference_t',['../namespaceLIEF.html#aedf13bba70b5388d2aee1119d93ce672',1,'LIEF']]],
-  ['array_5ft_5',['array_t',['../classLIEF_1_1DEX_1_1Type.html#a3fa3a27a8bb58d3c18c3be9aa1343382',1,'LIEF::DEX::Type::array_t'],['../classLIEF_1_1ELF_1_1DynamicEntryArray.html#a73e9ff563c937184734ffb4205b2a8b1',1,'LIEF::ELF::DynamicEntryArray::array_t']]],
-  ['art_5fversion_5ft_6',['art_version_t',['../namespaceLIEF_1_1ART.html#a665112cf18fc65ef7a774553f65aba2d',1,'LIEF::ART']]],
-  ['attributes_5fiterator_7',['attributes_iterator',['../classLIEF_1_1pdb_1_1types_1_1ClassLike.html#a575839dad5e40b907c99bcd2fc0e6104',1,'LIEF::pdb::types::ClassLike']]],
-  ['attributes_5ft_8',['attributes_t',['../classLIEF_1_1PE_1_1SignatureParser.html#a60f4ed64de2eba7a4fb9baeab56c8df8',1,'LIEF::PE::SignatureParser::attributes_t'],['../classLIEF_1_1PE_1_1SignerInfo.html#a8ed3969306a2e29f5d4e01580e6afcfe',1,'LIEF::PE::SignerInfo::attributes_t']]],
-  ['aux_5frequirement_5ft_9',['aux_requirement_t',['../classLIEF_1_1ELF_1_1SymbolVersionRequirement.html#a1dbd827fca6b165773f702c7f685af93',1,'LIEF::ELF::SymbolVersionRequirement']]],
-  ['auxiliary_5fsymbols_5ft_10',['auxiliary_symbols_t',['../classLIEF_1_1COFF_1_1Symbol.html#a588d39fd81dd3c3da2e17de85c6656e3',1,'LIEF::COFF::Symbol']]]
+  ['arg_5ft_5',['arg_t',['../classLIEF_1_1details_1_1container__storage.html#a6b313d150b3e7b2754c96bc40ef76dbd',1,'LIEF::details::container_storage::arg_t'],['../classLIEF_1_1details_1_1container__storage_3_01T_00_01false_01_4.html#a0334496408e87043c3b76e6648af300e',1,'LIEF::details::container_storage&lt; T, false &gt;::arg_t']]],
+  ['array_5ft_6',['array_t',['../classLIEF_1_1DEX_1_1Type.html#a3fa3a27a8bb58d3c18c3be9aa1343382',1,'LIEF::DEX::Type::array_t'],['../classLIEF_1_1ELF_1_1DynamicEntryArray.html#a73e9ff563c937184734ffb4205b2a8b1',1,'LIEF::ELF::DynamicEntryArray::array_t']]],
+  ['art_5fversion_5ft_7',['art_version_t',['../namespaceLIEF_1_1ART.html#a665112cf18fc65ef7a774553f65aba2d',1,'LIEF::ART']]],
+  ['attributes_5fiterator_8',['attributes_iterator',['../classLIEF_1_1pdb_1_1types_1_1ClassLike.html#a575839dad5e40b907c99bcd2fc0e6104',1,'LIEF::pdb::types::ClassLike']]],
+  ['attributes_5ft_9',['attributes_t',['../classLIEF_1_1PE_1_1SignatureParser.html#a60f4ed64de2eba7a4fb9baeab56c8df8',1,'LIEF::PE::SignatureParser::attributes_t'],['../classLIEF_1_1PE_1_1SignerInfo.html#a8ed3969306a2e29f5d4e01580e6afcfe',1,'LIEF::PE::SignerInfo::attributes_t']]],
+  ['aux_5frequirement_5ft_10',['aux_requirement_t',['../classLIEF_1_1ELF_1_1SymbolVersionRequirement.html#a1dbd827fca6b165773f702c7f685af93',1,'LIEF::ELF::SymbolVersionRequirement']]],
+  ['auxiliary_5fsymbols_5ft_11',['auxiliary_symbols_t',['../classLIEF_1_1COFF_1_1Symbol.html#a588d39fd81dd3c3da2e17de85c6656e3',1,'LIEF::COFF::Symbol']]]
 ];

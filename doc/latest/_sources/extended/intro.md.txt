@@ -1,3 +1,7 @@
+---
+description: LIEF Extended features, install Python wheels or C++ and Rust SDKs, verify your build, and find guides for debug information, assembly, Apple metadata, and other extended features.
+---
+
 (extended-intro)=
 
 # {fa}`cubes` What is LIEF Extended?

@@ -7,6 +7,7 @@ var searchData=
   ['line_4',['line',['../structLIEF_1_1debug__location__t.html#ad52691ad0c42c17478b3b7482bbd5aaf',1,'LIEF::debug_location_t']]],
   ['linkedit_5',['linkedit',['../structLIEF_1_1MachO_1_1Builder_1_1config__t.html#a28f44088474fff582fae1c2ad9df2780',1,'LIEF::MachO::Builder::config_t']]],
   ['load_5fconfiguration_6',['load_configuration',['../structLIEF_1_1PE_1_1Builder_1_1config__t.html#a544ae97c7145f8a10b4fec0002424a9f',1,'LIEF::PE::Builder::config_t']]],
-  ['local_5fversion_7',['LOCAL_VERSION',['../classLIEF_1_1ELF_1_1SymbolVersion.html#a8bfc3f2ada18109f0d43d6caea5f53f1',1,'LIEF::ELF::SymbolVersion']]],
-  ['low_8',['low',['../structLIEF_1_1range__t.html#a791b7ef99f97ecf9d78b27a082d5d170',1,'LIEF::range_t']]]
+  ['local_5fversion_7',['LOCAL_VERSION',['../classLIEF_1_1ELF_1_1SymbolVersion.html#a09d9b46df28e5d42ad8638c086438321',1,'LIEF::ELF::SymbolVersion']]],
+  ['location_8',['location',['../structLIEF_1_1dwarf_1_1CompositeLocation_1_1Piece.html#af7fc229fd64aa2bacab985059d9abe0a',1,'LIEF::dwarf::CompositeLocation::Piece::location'],['../structLIEF_1_1dwarf_1_1LocationEntry.html#a2cc0a6644d93431299a534924a2d18bf',1,'LIEF::dwarf::LocationEntry::location']]],
+  ['low_9',['low',['../structLIEF_1_1range__t.html#a791b7ef99f97ecf9d78b27a082d5d170',1,'LIEF::range_t']]]
 ];
