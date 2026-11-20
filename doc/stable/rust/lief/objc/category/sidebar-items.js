@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["Category"],"type":["Methods","Properties","Protocols"]};

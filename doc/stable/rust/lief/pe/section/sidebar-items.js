@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["Characteristics","Section"],"type":["Sections"]};

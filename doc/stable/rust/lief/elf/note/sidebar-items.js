@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Notes","Properties","Type"],"mod":["android_ident","core","gnu_property","note_abi","properties","qnx_stack"],"struct":["AndroidIdent","CoreAuxv","CoreFile","CorePrPsInfo","CorePrStatus","CoreSigInfo","Generic","NoteAbi","NoteGnuProperty","QNXStack"],"trait":["NoteBase"],"type":["ItNotes"]};

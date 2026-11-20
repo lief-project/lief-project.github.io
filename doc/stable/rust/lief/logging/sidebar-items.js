@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Level"],"fn":["disable","enable","get_level","log","reset","set_level","set_path"],"struct":["Scoped"]};

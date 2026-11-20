@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Attribute"],"struct":["ContentType","GenericType","MsCounterSign","MsManifestBinaryID","MsSpcNestedSignature","MsSpcStatementType","PKCS9AtSequenceNumber","PKCS9CounterSignature","PKCS9MessageDigest","PKCS9SigningTime","SigningCertificateV2","SpcRelaxedPeMarkerCheck","SpcSpOpusInfo"],"type":["MsCounterCertificates","MsCounterSigners"]};

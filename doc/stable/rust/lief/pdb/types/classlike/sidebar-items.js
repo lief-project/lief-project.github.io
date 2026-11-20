@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["Class","Interface","Structure"],"trait":["ClassLike"]};

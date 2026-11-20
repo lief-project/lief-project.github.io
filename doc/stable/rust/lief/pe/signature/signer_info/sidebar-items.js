@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AttributeType"],"struct":["SignerInfo"],"type":["AuthenticatedAttributes","Signers","UnAuthenticatedAttributes"]};

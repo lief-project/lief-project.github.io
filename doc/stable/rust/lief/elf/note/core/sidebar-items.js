@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["auxv","file","prpsinfo","prstatus","siginfo"],"struct":["Auxv","File","PrPsInfo","PrStatus","SigInfo"]};

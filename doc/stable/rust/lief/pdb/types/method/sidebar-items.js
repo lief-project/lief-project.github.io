@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["MethodAccess","MethodType"],"struct":["Method"],"type":["Methods"]};
